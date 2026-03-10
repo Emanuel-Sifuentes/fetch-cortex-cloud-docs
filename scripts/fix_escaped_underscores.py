@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-r"""Fix escaped underscores (\_) in markdown source files and regenerate the combined file."""
+r"""Fix escaped underscores (\_) and strip Unicode line separators (U+2028) in markdown source files and regenerate the combined file."""
 
 import argparse
 import glob
@@ -26,9 +26,12 @@ def fix_file(filepath: str, *, dry_run: bool) -> int:
     body = content[body_start:]
 
     new_body = body.replace(r"\_", "_")
-    count = body.count(r"\_")
+    new_body = new_body.replace("\u2028", "")
+    underscore_count = body.count(r"\_")
+    ls_count = body.count("\u2028")
+    total = underscore_count + ls_count
 
-    if count == 0:
+    if total == 0:
         return 0
 
     if not dry_run:
@@ -37,8 +40,13 @@ def fix_file(filepath: str, *, dry_run: bool) -> int:
 
     filename = os.path.basename(filepath)
     prefix = "[DRY RUN] Would fix" if dry_run else "Fixed"
-    print(f"{prefix} {filename} ({count} replacements)")
-    return count
+    details = []
+    if underscore_count:
+        details.append(f"{underscore_count} escaped underscores")
+    if ls_count:
+        details.append(f"{ls_count} U+2028 line separators")
+    print(f"{prefix} {filename} ({', '.join(details)})")
+    return total
 
 
 def regenerate_combined(source_dir: str, *, dry_run: bool) -> None:

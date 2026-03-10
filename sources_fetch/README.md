@@ -43,7 +43,7 @@ These scripts fix conversion artifacts that the fetch script's post-processing d
 ```bash
 bash scripts/fix_abstract_lines.sh              # Strip standalone "Abstract" metadata lines from 43 files
 python scripts/fix_escaped_chars_in_fences.py   # Unescape \#  \[  \] inside fenced code blocks (file 216)
-python scripts/fix_escaped_underscores.py       # Unescape \_ globally in all contexts (30 files, 1852 replacements)
+python scripts/fix_escaped_underscores.py       # Unescape \_ globally + strip U+2028 line separators
 ```
 
 The broken table fixes (urgency metrics, SCA matrix, scanner attributes, IaC grid) were applied manually to the individual source files — see findings.md for details.
@@ -201,6 +201,7 @@ All topics concatenated with `---` separators. Frontmatter is stripped; only the
 | **Strip "Abstract" metadata lines** | 43 files | DocBook `<abstract>` element label leaked as a standalone "Abstract" line after each `# Title` heading |
 | **Unescape chars inside code fences** | 1 file (216) | Turndown escaped `\#`, `\[`, `\]` inside fenced code blocks where they should be literal |
 | **Unescape all escaped underscores** | 30 files (1,852 replacements) | Turndown escaped every `_` as `\_` globally; all occurrences are intraword (e.g., `CORTEX_API_KEY`) and never trigger emphasis |
+| **Strip Unicode line separators (U+2028)** | 1 file (172) | Fluid Topics HTML contained a U+2028 Line Separator character that survived conversion; invisible but can cause issues in downstream parsers |
 | **Urgency metrics table — propagate scanner type** | 1 file (079) | HTML `rowspan` on scanner-type cells was lost, leaving 30 sub-rows with 4 columns instead of 5 |
 | **SCA support matrix — propagate language** | 1 file (175) | HTML `rowspan` on language cells was lost, leaving 3 sub-rows (yarn, Gradle x2) with 3 columns instead of 4 |
 | **Scanner attributes table — convert to list** | 1 file (098) | Description cells spanned 2-12 physical lines (no markdown table equivalent); converted to definition list format |

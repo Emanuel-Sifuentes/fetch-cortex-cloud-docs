@@ -77,7 +77,7 @@ Remove the discrepancy and restore the cloud asset to its intended IaC-defined c
             
             ```
             terraform refresh
-            terraform plan // Reads the actual state from the live cloud environment (which includes the refresh function) and compares it against the desired IaC state to show the calculated changes needed to fix the drift.
+            terraform plan // Reads the actual state from the live cloud environment (which includes the refresh function) and compares it against the desired IaC state to show the calculated changes needed to fix the drift.
             terraform apply // Executes the computed plan, applying the configuration defined in your updated IaC code to the live cloud environment
             ```
             

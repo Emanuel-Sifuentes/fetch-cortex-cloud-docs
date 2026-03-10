@@ -30,7 +30,7 @@ No authentication required.
 | `fetch_fluidtopics.js` | `npm run fetch` | Fetch all topics and convert to Markdown |
 | `fix_abstract_lines.sh` | `npm run fix` | Strip standalone "Abstract" metadata from 43 files |
 | `fix_escaped_chars_in_fences.py` | `npm run fix` | Unescape `\#`, `\[`, `\]` inside code blocks |
-| `fix_escaped_underscores.py` | `npm run fix` | Unescape all `\_` globally (1,852 occurrences in 30 files) |
+| `fix_escaped_underscores.py` | `npm run fix` | Unescape all `\_` globally + strip U+2028 line separators |
 | `audit_headings.js` | `npm run audit:headings` | Audit heading levels vs TOC depth |
 | `audit_toc_vs_headings.js` | `npm run audit:toc` | Full TOC-to-file structure audit (live API) |
 | `generate_toc_table.js` | `npm run toc:table` | Generate TOC markdown table from live API |
