@@ -1,0 +1,18 @@
+---
+title: "CI/CD Security user roles and permissions"
+tocId: "ULsZGpEsjFQNYF8v1fRVUg"
+contentId: "JLXPNs9ULOulZQjm9LqNNA"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/CI/CD-Security-user-roles-and-permissions"
+depth: 1
+---
+
+# CI/CD Security user roles and permissions
+Cortex Cloud offers dedicated user roles for CI/CD Security: AppSec Admin and DevSecOps, each with specific areas of responsibilities. When assigning roles to users, it's recommended to align them with the user's required responsibilities within the application security framework.
+
+The AppSec Admin has full permissions for all Cortex Cloud Application Security\-related activities. They can create and modify detection rules within the Code/Build domain, track progress, and adjust enforcements as needed. Additionally, they can triage and investigate findings, issues, and cases spanning from code to cloud. The role also includes complete visibility into all cloud assets.
+
+The DevSecOps role is specifically designed as an intermediary, possessing more permissions than a Developer but fewer than an AppSec Admin. This role actively manages security processes and tools to embed security directly into development and operations workflows. Responsibilities include managing and resolving security issues, performing scan management, and improving the overall application security posture by integrating security practices throughout the development and operations lifecycle.
+
+Permissions assigned to predefined roles cannot be modified. However, you can save a predefined role as a new custom role. This custom role can then be edited to meet specific organizational needs, offering a balance between standardized roles and customizable access control.
+
+Dedicated CI/CD Security roles include permissions that extend beyond CI/CD Security itself. In addition to these dedicated users, other roles within your tenant are also granted specific permissions to CI/CD Security. You can view all permissions granted to user roles in your tenant by navigating to Settings → Configurations → Roles → select a role.

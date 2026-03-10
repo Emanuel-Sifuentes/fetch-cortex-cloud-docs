@@ -1,0 +1,291 @@
+const https = require("https");
+const fs = require("fs");
+const path = require("path");
+const TurndownService = require("turndown");
+const { gfm } = require("turndown-plugin-gfm");
+
+const BASE = "https://docs-cortex.paloaltonetworks.com";
+const MAP_ID = "aUsxSwBeRrRs3Jm36XHckg";
+const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
+const CONCURRENCY = 5;
+const DELAY_MS = 200;
+
+const turndown = new TurndownService({
+  headingStyle: "atx",
+  codeBlockStyle: "fenced",
+  bulletListMarker: "-",
+});
+turndown.use(gfm);
+
+// Fence <pre> blocks that turndown misses (e.g. <pre class="programlisting">)
+turndown.addRule("preWithoutCode", {
+  filter: (node) =>
+    node.nodeName === "PRE" &&
+    !node.querySelector("code"),
+  replacement: (content) => {
+    const code = content.replace(/^\n+|\n+$/g, "");
+    return "\n\n```\n" + code + "\n```\n\n";
+  },
+});
+
+function fetch(urlPath, accept) {
+  return new Promise((resolve, reject) => {
+    const url = new URL(urlPath, BASE);
+    const opts = {
+      hostname: url.hostname,
+      path: url.pathname + url.search,
+      headers: { Accept: accept || "application/json" },
+    };
+    https
+      .get(opts, (res) => {
+        if (res.statusCode !== 200) {
+          res.resume();
+          return reject(new Error(`HTTP ${res.statusCode} for ${urlPath}`));
+        }
+        const chunks = [];
+        res.on("data", (c) => chunks.push(c));
+        res.on("end", () => resolve(Buffer.concat(chunks).toString()));
+      })
+      .on("error", reject);
+  });
+}
+
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+function sanitizeFilename(title) {
+  return title
+    .replace(/[<>:"/\\|?*]/g, "-")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "")
+    .substring(0, 120);
+}
+
+function flattenToc(nodes, depth = 0) {
+  const result = [];
+  for (const node of nodes) {
+    result.push({ ...node, depth });
+    if (node.children && node.children.length) {
+      result.push(...flattenToc(node.children, depth + 1));
+    }
+  }
+  return result;
+}
+
+function flattenCellContent(inner) {
+  // Strip note/admonition headings: <h3 class="title">Note</h3> → " **Note:** "
+  inner = inner.replace(/<h[1-6][^>]*>\s*(Note|Tip|Danger|Warning|Important|Prerequisite|Prerequisites)\s*<\/h[1-6]>/gi, " **$1:** ");
+
+  // Insert semicolons between consecutive list items before stripping tags
+  inner = inner.replace(/<\/li>\s*<li/g, "</li>; <li");
+
+  // Unwrap <p> inside <li>: <li><p>text</p></li> → <li>text</li>
+  inner = inner.replace(/<li[^>]*>\s*<p>([\s\S]*?)<\/p>\s*<\/li>/g, "<li>$1</li>");
+
+  // Strip <li> tags, keeping content
+  inner = inner.replace(/<li[^>]*>([\s\S]*?)<\/li>/g, "$1");
+
+  // Strip remaining block wrappers (div, ul, ol, p) but keep their content
+  inner = inner.replace(/<\/?(div|ul|ol|section|article|aside|nav|header|footer)[^>]*>/g, " ");
+  inner = inner.replace(/<p>([\s\S]*?)<\/p>/g, "$1 ");
+  inner = inner.replace(/<p>/g, "").replace(/<\/p>/g, " ");
+
+  // Collapse whitespace
+  inner = inner.replace(/\s+/g, " ").trim();
+
+  return inner;
+}
+
+function cleanTableHtml(html) {
+  // Remove empty <p></p> tags
+  html = html.replace(/<p>\s*<\/p>/g, "");
+
+  // Remove <colgroup> blocks (confuse turndown)
+  html = html.replace(/<colgroup>[\s\S]*?<\/colgroup>/g, "");
+
+  // Convert layout tables to prose BEFORE flattening cells.
+  // Layout tables: no <thead>, single row, or first row has nested lists.
+  html = html.replace(
+    /<table([^>]*)>\s*<tbody>([\s\S]*?)<\/tbody>\s*<\/table>/g,
+    (match, attrs, tbodyContent) => {
+      const rows = tbodyContent.match(/<tr[\s\S]*?<\/tr>/g) || [];
+      const firstRow = rows[0] || "";
+      const hasNestedLists = firstRow.includes("<ul") || firstRow.includes("<ol");
+
+      if (rows.length === 1 || hasNestedLists) {
+        // Extract cell contents and return as plain HTML blocks
+        const cellContents = [];
+        tbodyContent.replace(/<td[^>]*>([\s\S]*?)<\/td>/g, (_, content) => {
+          cellContents.push(content.trim());
+        });
+        return cellContents.join("\n\n");
+      }
+
+      // Not a layout table — keep it, promote first row to <thead>
+      const headerRow = firstRow
+        .replace(/<td([^>]*)>/g, "<th$1>")
+        .replace(/<\/td>/g, "</th>");
+      const remainingRows = rows.slice(1).join("");
+      return `<table${attrs}><thead>${headerRow}</thead><tbody>${remainingRows}</tbody></table>`;
+    }
+  );
+
+  // Flatten all table cell content to inline (only for remaining real tables)
+  html = html.replace(/<(td|th)([^>]*)>([\s\S]*?)<\/(td|th)>/g, (match, tag, attrs, inner, closeTag) => {
+    return `<${tag}${attrs}>${flattenCellContent(inner)}</${closeTag}>`;
+  });
+
+  return html;
+}
+
+function normalizeHeadings(md, topicTitle) {
+  const norm = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const normTitle = norm(topicTitle);
+
+  // Strip any leading h1 that duplicates the topic title (we add our own)
+  md = md.replace(/^# (.+)\n+/m, (match, text) => {
+    return norm(text) === normTitle ? "" : match;
+  });
+
+  // Heading regex: must start with # and a space, then a capital letter or **bold**,
+  // and NOT look like a code comment (no trailing period/full sentence)
+  const isRealHeading = (line) => {
+    const m = line.match(/^(#{1,6}) (.+)$/);
+    if (!m) return false;
+    const text = m[2];
+    // Must start with capital or **
+    if (!/^[A-Z*]/.test(text)) return false;
+    // Reject lines ending with period (sentences = code comments, not headings)
+    if (/\.\s*$/.test(text)) return false;
+    // Reject lines containing = (code assignments/comments like cortex:skip=...)
+    if (text.includes("=")) return false;
+    return true;
+  };
+  const headingRe = /^(#{1,6}) (?=[A-Z*])/gm;
+
+  // Find the minimum heading level in the content (only real headings outside code blocks)
+  const lines = md.split("\n");
+  let minLevel = 7;
+  let inCodeBlock = false;
+  for (const line of lines) {
+    if (/^```/.test(line)) { inCodeBlock = !inCodeBlock; continue; }
+    if (inCodeBlock) continue;
+    const m = line.match(/^(#{1,6}) /);
+    if (m && isRealHeading(line)) {
+      minLevel = Math.min(minLevel, m[1].length);
+    }
+  }
+
+  if (minLevel >= 7 || minLevel === 2) return md; // no headings or already fine
+
+  // Shift only real headings outside code blocks so the minimum becomes h2
+  const shift = 2 - minLevel;
+  inCodeBlock = false;
+  md = lines.map((line) => {
+    if (/^```/.test(line)) { inCodeBlock = !inCodeBlock; return line; }
+    if (inCodeBlock) return line;
+    if (isRealHeading(line)) {
+      return line.replace(/^(#{1,6}) /, (_, hashes) => {
+        const newLevel = Math.min(Math.max(hashes.length + shift, 2), 6);
+        return "#".repeat(newLevel) + " ";
+      });
+    }
+    return line;
+  }).join("\n");
+
+  return md;
+}
+
+async function fetchTopic(topic, index, total) {
+  const contentUrl = `/api/khub/maps/${MAP_ID}/topics/${topic.contentId}/content`;
+  try {
+    const html = cleanTableHtml(await fetch(contentUrl, "text/html"));
+    let md = turndown.turndown(html);
+
+    // Replace base64 data-URI images with a placeholder
+    md = md.replace(/!\[([^\]]*)\]\(data:image\/[^)]+\)/g, "[image: $1]");
+
+    // Convert admonition headings to bold labels (including indented ones)
+    md = md.replace(
+      /^(\s*)#{2,6} (Prerequisite|Prerequisites|Note|Important|Warning|Danger|Tip)$/gm,
+      "$1**$2**"
+    );
+
+    // Normalize heading levels: shift so smallest heading becomes h2,
+    // then strip any leading h1 that duplicates the topic title
+    md = normalizeHeadings(md, topic.title);
+
+    // Prepend metadata header
+    const header = [
+      `---`,
+      `title: "${topic.title.replace(/"/g, '\\"')}"`,
+      `tocId: "${topic.tocId}"`,
+      `contentId: "${topic.contentId}"`,
+      `prettyUrl: "${topic.prettyUrl}"`,
+      `depth: ${topic.depth}`,
+      `---`,
+      "",
+      `# ${topic.title}`,
+      "",
+    ].join("\n");
+
+    md = header + md;
+
+    const filename = `${String(index + 1).padStart(3, "0")}-${sanitizeFilename(topic.title)}.md`;
+    fs.writeFileSync(path.join(OUT_DIR, filename), md, "utf-8");
+    console.log(`[${index + 1}/${total}] ${filename}`);
+  } catch (err) {
+    console.error(`[${index + 1}/${total}] FAILED: ${topic.title} - ${err.message}`);
+  }
+}
+
+async function main() {
+  fs.mkdirSync(OUT_DIR, { recursive: true });
+
+  console.log("Fetching TOC...");
+  const tocJson = await fetch(`/api/khub/maps/${MAP_ID}/toc`);
+  const toc = JSON.parse(tocJson);
+  const topics = flattenToc(toc);
+  console.log(`Found ${topics.length} topics. Fetching content...\n`);
+
+  // Process in batches for rate limiting
+  for (let i = 0; i < topics.length; i += CONCURRENCY) {
+    const batch = topics.slice(i, i + CONCURRENCY);
+    await Promise.all(
+      batch.map((topic, j) => fetchTopic(topic, i + j, topics.length))
+    );
+    if (i + CONCURRENCY < topics.length) {
+      await sleep(DELAY_MS);
+    }
+  }
+
+  // Write a combined file
+  console.log("\nCreating combined markdown...");
+  const files = fs.readdirSync(OUT_DIR)
+    .filter((f) => f.endsWith(".md") && f !== "cortex-cloud-appsec-combined.md" && f !== "README.md")
+    .sort();
+
+  const combined = files
+    .map((f) => {
+      const content = fs.readFileSync(path.join(OUT_DIR, f), "utf-8");
+      // Strip frontmatter for combined file, keep just the markdown
+      return content.replace(/^---[\s\S]*?---\n/, "");
+    })
+    .join("\n\n---\n\n");
+
+  fs.writeFileSync(
+    path.join(OUT_DIR, "cortex-cloud-appsec-combined.md"),
+    combined,
+    "utf-8"
+  );
+
+  console.log(`\nDone! ${files.length} topics saved to ${OUT_DIR}`);
+  console.log(`Combined file: ${path.join(OUT_DIR, "cortex-cloud-appsec-combined.md")}`);
+}
+
+main().catch((err) => {
+  console.error("Fatal error:", err);
+  process.exit(1);
+});

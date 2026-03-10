@@ -1,0 +1,65 @@
+---
+title: "Configure and monitor Cortex Cloud Application Security SLAs"
+tocId: "HcswjjL3diHGLqmwjcO5hA"
+contentId: "ORINEumDYLDpOszqtNR3Ww"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Configure-and-monitor-Cortex-Cloud-Application-Security-SLAs"
+depth: 2
+---
+
+# Configure and monitor Cortex Cloud Application Security SLAs
+These procedures defining remediation timeframes and the methods available for monitoring issue compliance against the defined SLAs.
+
+## Configure SLA Remediation Targets
+
+Define remediation timeframes to track issue compliance with the configured SLAs. The system automatically calculates and updates each issue’s SLA status during periodic scans based on these timeframes.
+
+1.  Navigate to Settings → Configurations → Application Configuration (under Application Security).
+    
+2.  Define the target SLA for each severity level: assigning a value in days → Save.
+    
+    Default values:
+    
+    -   Critical: 7 days
+        
+    -   High: 14 days
+        
+    -   Medium: 30 days
+        
+    -   Low: 90 days
+        
+    
+3.  Set the approaching SLA threshold: Specify the number of days → Save.
+    
+    This threshold enables proactive remediation and minimizes the risk of issues becoming Overdue.
+    
+
+### Monitor SLA status
+
+SLA status provides immediate risk context for prioritization. Status tracking is integrated across the Cortex Cloud Application Security Command Center dashboard, the Issues tables, and their side panels.
+
+-   **Cortex Cloud Application Security Dashboard**:
+    
+    Displays a widget showing the number of Critical and High severity issues that are Overdue or Approaching SLA. The widget breaks down SLA status by scanner (for example, Secrets or IaC). Selecting a scanner opens the relevant issues page, filtered by scanner, severity, and SLA status.
+    
+    You can access the Cortex Cloud Application Security dashboard from the the Application Security dashboard.
+    
+-   **Issues table**:
+    
+    The SLA status is integrated directly into the issues table, to provide context and help you track each issue.
+    
+    To view SLA under Issues tables, under **Modules** select Application Security → \[type of issue such as Secrets. If SLA is not displayed by default, select it from the Table Settings Menu.
+    
+    **SLA values**:
+    
+    -   On Track: The issue is within its assigned remediation timeframe
+        
+    -   Approaching: The issue's SLA will be breached in a configurable number of days (the Approaching threshold). This status alerts you before an issue becomes overdue
+        
+    -   Overdue: The issue has breached its SLA
+        
+    
+    Hovering over an issue's SLA status will show a tooltip with additional details.
+    
+-   **SLA in an issue side panel**:
+    
+    Clicking on any individual issue opens a side panel. The Overview tab displays the current SLA status of the issue (such as Overdue). Hovering over this status provides additional details, including the issue severity, the total time allotted for remediation, and a countdown of the time remaining until the SLA is breached or since it was breached.
