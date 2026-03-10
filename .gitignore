@@ -1,1 +1,6 @@
 node_modules/
+
+# Ignore all fetched markdown files except the combined file and README
+sources_fetch/*.md
+!sources_fetch/cortex-cloud-appsec-combined.md
+!sources_fetch/README.md
