@@ -18,8 +18,9 @@ npm run fix              # apply all post-fetch fixes
 2. Downloads each topic's HTML content (5 concurrent, 200ms rate-limit delay)
 3. Converts HTML to Markdown via [Turndown](https://github.com/mixmark-io/turndown) with GFM plugin
 4. Applies post-processing: heading normalization, table fixes, admonition conversion, base64 image stripping
-5. Writes 217 numbered files + a combined file to `sources_fetch/`
+5. Writes 217 numbered individual files to `sources_fetch/`
 6. Post-fetch fix scripts clean up remaining conversion artifacts
+7. Generates a combined file with hierarchical headings (driven by the live TOC API)
 
 No authentication required.
 
@@ -31,9 +32,12 @@ No authentication required.
 | `fix_abstract_lines.sh` | `npm run fix` | Strip standalone "Abstract" metadata from 43 files |
 | `fix_escaped_chars_in_fences.py` | `npm run fix` | Unescape `\#`, `\[`, `\]` inside code blocks |
 | `fix_escaped_underscores.py` | `npm run fix` | Unescape all `\_` globally + strip U+2028 line separators |
-| `audit_headings.js` | `npm run audit:headings` | Audit heading levels vs TOC depth |
-| `audit_toc_vs_headings.js` | `npm run audit:toc` | Full TOC-to-file structure audit (live API) |
-| `generate_toc_table.js` | `npm run toc:table` | Generate TOC markdown table from live API |
+| `generate_combined.js` | `npm run combine` | Build combined file with hierarchical headings from live TOC API |
+| `audit_headings.js` | `npm run audit:headings` | Audit heading levels vs TOC depth + h6 cap simulation |
+| `audit_toc_vs_headings.js` | `npm run audit:toc` | Full TOC-to-file structure audit + combined file validation |
+| `generate_toc_table.js` | `npm run toc:table` | Print TOC as indented tree from live API |
+
+`npm run fix` chains all fix scripts and then runs `npm run combine` at the end.
 
 ## Output
 
@@ -57,7 +61,7 @@ Content here...
 
 ### Combined file (`sources_fetch/cortex-cloud-appsec-combined.md`)
 
-All 217 topics concatenated with `---` separators. Frontmatter stripped.
+All 217 topics concatenated in TOC order with hierarchical heading levels. Topic titles use heading levels matching their TOC depth (depth 0 = `#`, depth 1 = `##`, etc.), and sub-headings within each topic are shifted accordingly (capped at h6). Built by `npm run combine` using the live TOC API.
 
 ## Re-fetching
 
@@ -72,6 +76,7 @@ fetch-cortex-cloud-docs/
 │   ├── fix_abstract_lines.sh         # post-fetch fix
 │   ├── fix_escaped_chars_in_fences.py # post-fetch fix
 │   ├── fix_escaped_underscores.py    # post-fetch fix
+│   ├── generate_combined.js          # combined file builder
 │   ├── audit_headings.js             # audit tool
 │   ├── audit_toc_vs_headings.js      # audit tool
 │   └── generate_toc_table.js         # utility

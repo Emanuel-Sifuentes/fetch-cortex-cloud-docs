@@ -25,7 +25,7 @@ This will:
 2. Fetch each topic's HTML content from `/api/khub/maps/{mapId}/topics/{contentId}/content`
 3. Convert HTML to markdown with post-processing fixes
 4. Write individual numbered files to `sources_fetch/`
-5. Write a combined file (`cortex-cloud-appsec-combined.md`)
+5. Write individual files only (combined file is built separately by `npm run combine`)
 
 No authentication is required. The script fetches 5 topics concurrently with a 200ms delay between batches to avoid rate limiting.
 
@@ -176,7 +176,7 @@ Content here...
 
 ### Combined file (cortex-cloud-appsec-combined.md)
 
-All topics concatenated with `---` separators. Frontmatter is stripped; only the markdown body is included.
+All topics concatenated in TOC order with hierarchical heading levels. Built by `npm run combine` (or automatically at the end of `npm run fix`), which fetches the live TOC API to determine each topic's depth and shifts headings accordingly. Frontmatter is stripped; only the markdown body is included.
 
 ## Post-processing applied during conversion
 
