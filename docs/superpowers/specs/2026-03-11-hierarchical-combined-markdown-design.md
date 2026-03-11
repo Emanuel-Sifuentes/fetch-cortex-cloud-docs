@@ -67,17 +67,17 @@ Single source of truth for building the combined markdown file.
 
 Content with ## Subsection staying as ## Subsection (depth 0, no shift)...
 
-## Onboard Data Sources
+# Onboard Data Sources
 
-Content...
+Content (depth 0 — top-level sibling, stays h1)...
 
-### Onboard version control systems
+## Onboard version control systems
+
+Content (depth 1, shift by 1)...
+
+### AWS CodeCommit
 
 Content with ## Subsection becoming #### Subsection (depth 2, shift by 2)...
-
-#### AWS CodeCommit
-
-Content with ## Subsection becoming ##### Subsection (depth 3, shift by 3)...
 ```
 
 ## Modified Files
