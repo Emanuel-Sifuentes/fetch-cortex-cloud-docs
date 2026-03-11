@@ -173,6 +173,71 @@ async function main() {
   checkOverlap(toc);
   console.log(`TOC/heading overlaps: ${tocHeadingOverlap}\n`);
 
+  // Audit 6: Combined file heading levels match TOC depth
+  const combinedPath = path.join(DIR, "cortex-cloud-appsec-combined.md");
+  let combinedHeadingMismatches = 0;
+  if (fs.existsSync(combinedPath)) {
+    console.log("Checking combined file heading levels...");
+    const combinedContent = fs.readFileSync(combinedPath, "utf-8");
+    const combinedLines = combinedContent.split("\n");
+
+    // Extract all headings with line numbers (skip code blocks)
+    const combinedHeadings = [];
+    let inCB = false;
+    for (let i = 0; i < combinedLines.length; i++) {
+      if (/^```/.test(combinedLines[i])) { inCB = !inCB; continue; }
+      if (inCB) continue;
+      const hm = combinedLines[i].match(/^(#{1,6}) (.+)$/);
+      if (hm) {
+        combinedHeadings.push({ level: hm[1].length, text: hm[2].trim(), line: i + 1 });
+      }
+    }
+
+    // Walk TOC entries in order, matching each to the next heading with the same title.
+    // Use two-phase matching to avoid false matches on common titles like "Overview"
+    // that appear as sub-headings in other topics:
+    //   Phase 1: match on text AND expected level (exact match)
+    //   Phase 2: if not found, match on text only (catches level mismatches)
+    let headingIdx = 0;
+    for (const entry of tocFlat) {
+      const expectedLevel = entry.depth + 1;
+      let found = false;
+
+      // Phase 1: exact match (text + level)
+      for (let i = headingIdx; i < combinedHeadings.length; i++) {
+        if (combinedHeadings[i].text === entry.title && combinedHeadings[i].level === expectedLevel) {
+          headingIdx = i + 1;
+          found = true;
+          break;
+        }
+      }
+
+      // Phase 2: text-only match (level mismatch detection)
+      if (!found) {
+        for (let i = headingIdx; i < combinedHeadings.length; i++) {
+          if (combinedHeadings[i].text === entry.title) {
+            console.log(
+              `COMBINED LEVEL: "${entry.title}" at line ${combinedHeadings[i].line} — ` +
+              `expected h${expectedLevel} (depth ${entry.depth}), got h${combinedHeadings[i].level}`
+            );
+            combinedHeadingMismatches++;
+            headingIdx = i + 1;
+            found = true;
+            break;
+          }
+        }
+      }
+
+      if (!found) {
+        console.log(`COMBINED MISSING: "${entry.title}" not found in combined file`);
+        combinedHeadingMismatches++;
+      }
+    }
+    console.log(`Combined file heading mismatches: ${combinedHeadingMismatches}\n`);
+  } else {
+    console.log("Combined file not found — skipping Audit 6.\n");
+  }
+
   // Summary
   console.log("=== SUMMARY ===");
   console.log(`TOC entries:              ${tocFlat.length}`);
@@ -182,6 +247,7 @@ async function main() {
   console.log(`Depth mismatches:         ${depthMismatches}`);
   console.log(`Heading hierarchy issues: ${hierarchyIssues}`);
   console.log(`TOC/heading overlaps:     ${tocHeadingOverlap}`);
+  console.log(`Combined heading mismatches: ${combinedHeadingMismatches}`);
 }
 
 main().catch(err => { console.error(err); process.exit(1); });
