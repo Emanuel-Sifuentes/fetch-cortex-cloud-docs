@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-r"""Fix escaped underscores (\_) and strip Unicode line separators (U+2028) in markdown source files and regenerate the combined file."""
+r"""Fix escaped underscores (\_) and strip Unicode line separators (U+2028) in markdown source files."""
 
 import argparse
 import glob
 import os
-import re
 import sys
 
 
@@ -49,29 +48,6 @@ def fix_file(filepath: str, *, dry_run: bool) -> int:
     return total
 
 
-def regenerate_combined(source_dir: str, *, dry_run: bool) -> None:
-    pattern = os.path.join(source_dir, "[0-9]*.md")
-    files = sorted(glob.glob(pattern))
-
-    sections = []
-    for filepath in files:
-        with open(filepath, "r", encoding="utf-8") as f:
-            content = f.read()
-        stripped = re.sub(r"^---\n.*?\n---\n", "", content, count=1, flags=re.DOTALL)
-        sections.append(stripped)
-
-    combined = "\n\n---\n\n".join(sections)
-    output_path = os.path.join(source_dir, "cortex-cloud-appsec-combined.md")
-    line_count = combined.count("\n") + 1
-
-    if dry_run:
-        print(f"[DRY RUN] Would regenerate cortex-cloud-appsec-combined.md ({line_count} lines)")
-    else:
-        with open(output_path, "w", encoding="utf-8") as f:
-            f.write(combined)
-        print(f"Regenerated cortex-cloud-appsec-combined.md ({line_count} lines)")
-
-
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Fix escaped underscores in markdown source files"
@@ -80,11 +56,6 @@ def main() -> None:
         "--dry-run",
         action="store_true",
         help="Report what would change without writing",
-    )
-    parser.add_argument(
-        "--no-combine",
-        action="store_true",
-        help="Fix files but skip combined file regeneration",
     )
     parser.add_argument(
         "--sources",
@@ -121,9 +92,6 @@ def main() -> None:
             total_replacements += count
 
     print(f"Fixed {total_files} files, {total_replacements} total replacements")
-
-    if not args.no_combine:
-        regenerate_combined(source_dir, dry_run=args.dry_run)
 
 
 if __name__ == "__main__":

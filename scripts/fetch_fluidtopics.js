@@ -261,28 +261,7 @@ async function main() {
     }
   }
 
-  // Write a combined file
-  console.log("\nCreating combined markdown...");
-  const files = fs.readdirSync(OUT_DIR)
-    .filter((f) => f.endsWith(".md") && f !== "cortex-cloud-appsec-combined.md" && f !== "README.md")
-    .sort();
-
-  const combined = files
-    .map((f) => {
-      const content = fs.readFileSync(path.join(OUT_DIR, f), "utf-8");
-      // Strip frontmatter for combined file, keep just the markdown
-      return content.replace(/^---[\s\S]*?---\n/, "");
-    })
-    .join("\n\n---\n\n");
-
-  fs.writeFileSync(
-    path.join(OUT_DIR, "cortex-cloud-appsec-combined.md"),
-    combined,
-    "utf-8"
-  );
-
-  console.log(`\nDone! ${files.length} topics saved to ${OUT_DIR}`);
-  console.log(`Combined file: ${path.join(OUT_DIR, "cortex-cloud-appsec-combined.md")}`);
+  console.log(`\nDone! ${topics.length} topics saved to ${OUT_DIR}`);
 }
 
 main().catch((err) => {
