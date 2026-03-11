@@ -98,12 +98,6 @@ async function main() {
   const tocFlat = flattenToc(toc);
   console.log(`TOC: ${tocFlat.length} entries`);
 
-  // Build contentId -> depth map from TOC
-  const depthMap = {};
-  for (const entry of tocFlat) {
-    depthMap[entry.contentId] = entry.depth;
-  }
-
   // Build contentId -> file content map from local files
   const fileMap = {};
   for (const f of files) {
