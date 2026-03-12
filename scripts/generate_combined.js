@@ -6,6 +6,13 @@ const BASE = "https://docs-cortex.paloaltonetworks.com";
 const MAP_ID = "aUsxSwBeRrRs3Jm36XHckg";
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
 const COMBINED_FILE = "cortex-cloud-appsec-combined.md";
+const KEYWORD_HEADINGS = [
+  "For AMD architecture",
+  "For ARM architecture",
+  "For **JavaScript**",
+  "For **Python**",
+  "For **Java**",
+];
 
 function fetch(urlPath) {
   return new Promise((resolve, reject) => {
@@ -69,6 +76,41 @@ function shiftHeadings(md, depth, filename) {
         }
         return "#".repeat(newLevel) + " ";
       });
+    })
+    .join("\n");
+}
+
+function promoteKeywordsToHeadings(md) {
+  let currentHeadingLevel = 0;
+  let inCodeBlock = false;
+  return md
+    .split("\n")
+    .map((line) => {
+      if (/^```/.test(line)) {
+        inCodeBlock = !inCodeBlock;
+        return line;
+      }
+      if (inCodeBlock) return line;
+      const headingMatch = line.match(/^(#{1,6}) /);
+      if (headingMatch) {
+        currentHeadingLevel = headingMatch[1].length;
+        return line;
+      }
+      const listMatch = line.match(/^-\s+(.*)/);
+      if (listMatch) {
+        const text = listMatch[1];
+        const isKeyword = KEYWORD_HEADINGS.some((kw) => text.startsWith(kw));
+        if (isKeyword) {
+          const level = Math.min(currentHeadingLevel + 1, 6);
+          if (currentHeadingLevel + 1 > 6) {
+            console.log(
+              `WARNING: keyword heading capped at h6: "${text}"`
+            );
+          }
+          return "#".repeat(level) + " " + text;
+        }
+      }
+      return line;
     })
     .join("\n");
 }
@@ -137,13 +179,18 @@ async function main() {
     sections.push(shiftHeadings(md.trim(), entry.depth, file.filename));
   }
 
-  const combined = sections.filter(Boolean).join("\n\n");
+  const raw = sections.filter(Boolean).join("\n\n");
+  const combined = promoteKeywordsToHeadings(raw);
   fs.writeFileSync(path.join(OUT_DIR, COMBINED_FILE), combined + "\n", "utf-8");
   console.log(`\nCombined file: ${path.join(OUT_DIR, COMBINED_FILE)}`);
   console.log(`${tocFlat.length} topics, ${combined.split("\n").length} lines`);
 }
 
-main().catch((err) => {
-  console.error("Fatal error:", err);
-  process.exit(1);
-});
+module.exports = { promoteKeywordsToHeadings };
+
+if (require.main === module) {
+  main().catch((err) => {
+    console.error("Fatal error:", err);
+    process.exit(1);
+  });
+}

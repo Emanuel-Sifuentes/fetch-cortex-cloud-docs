@@ -1,5 +1,4 @@
 # Cortex Cloud Application Security
-Abstract
 
 Application Security provides unified visibility and control over app security throughout the lifecycle, identifying vulnerabilities to protect data and integrity.
 
@@ -30,7 +29,6 @@ The following active licenses are required to enable and utilize the components 
 Prisma Cloud customers can use the Upgrade Helper to copy Application Security data and configurations from their Prisma Cloud tenant to their new Cortex Cloud tenant. For more information refer to Upgrade from Prisma Cloud to Cortex Cloud.Upgrade from Prisma Cloud to Cortex Cloud
 
 # Onboard Data Sources
-Abstract
 
 Onboard VCS, integrate CI tools, registries and ingest third-party data for a comprehensive view of your application and supply chain security.
 
@@ -206,6 +204,14 @@ You can manage VCS data source instances. Hover over an instance and right-click
 
 For information about managing findings detected after onboarding data sources, and issues generated from findings refer to Code Security scanners.
 
+---
+title: "AWS CodeCommit"
+tocId: "h9ZhYFmBmrMubAmsGXbnog"
+contentId: "ZO91H9KoxF9~jbUTwtQZDg"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/AWS-CodeCommit"
+depth: 2
+---
+
 ### AWS CodeCommit
 Integrate Cortex Cloud Application Security with your AWS CodeCommit version control system (VCS) to enable security scans for exposed secrets, infrastructure-as-code (IaC) misconfigurations, vulnerabilities, package operational risks, and license compliance issues in your repositories. This allows you to analyze, prioritize, and resolve detected issues efficiently.
 
@@ -240,7 +246,7 @@ Before you begin, ensure the following:
         
         **Note**
         
-        During deployment, you must acknowledge the CAPABILITY\_IAM setting in the AWS Console to allow the creation of these resources.
+        During deployment, you must acknowledge the CAPABILITY_IAM setting in the AWS Console to allow the creation of these resources.
         
     
 -   **Required scanning and policy permissions**
@@ -331,7 +337,7 @@ Review the following common issues and resolutions to resolve errors during stac
 
 -   **CloudFormation stack creation fails**
     
-    Stack status shows CREATE\_FAILED or ROLLBACK\_COMPLETE
+    Stack status shows CREATE_FAILED or ROLLBACK_COMPLETE
     
     -   Verify IAM permissions for stack creation
         
@@ -339,14 +345,14 @@ Review the following common issues and resolutions to resolve errors during stac
         
     -   Review CloudFormation events for specific error messages
         
-    -   Ensure CAPABILITY\_IAM is granted
+    -   Ensure CAPABILITY_IAM is granted
         
     
 -   **Connection status shows WARNING or ERROR**
     
     Instance status not CONNECTED
     
-    -   Verify CloudFormation stack is in CREATE\_COMPLETE state
+    -   Verify CloudFormation stack is in CREATE_COMPLETE state
         
     -   Check IAM role trust relationship
         
@@ -965,8 +971,15 @@ Cortex subscribes to real-time events (such as `git.push`, `build.complete`) to 
     
 -   **Impact**: Without these specific permissions, the event-driven architecture cannot function, and Cortex will revert to scheduled (polling) synchronization only
 
+---
+title: "Bitbucket Cloud"
+tocId: "7QXEngW4nN5keNii1_huTQ"
+contentId: "so~U9oEzOw5ECKCeaLaMAg"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Bitbucket-Cloud"
+depth: 2
+---
+
 ### Bitbucket Cloud
-Abstract
 
 Integrate Bitbucket Cloud to scan for secrets, IaC misconfigurations, vulnerabilities, and license compliance to strengthen your VCS security posture.
 
@@ -1095,15 +1108,15 @@ Read more...
     
 -   **repo:updated**: This event is triggered when there are updates or changes made to the repository settings or configuration
     
--   **repo:commit\_comment\_created**: This event occurs when a new comment is created on a commit within the repository
+-   **repo:commit_comment_created**: This event occurs when a new comment is created on a commit within the repository
     
--   **repo:commit\_status\_created**: This event is triggered when a new status or check is created for a commit within the repository
+-   **repo:commit_status_created**: This event is triggered when a new status or check is created for a commit within the repository
     
--   **repo:commit\_status\_updated**: This event occurs when the status or check of a commit within the repository is updated
+-   **repo:commit_status_updated**: This event occurs when the status or check of a commit within the repository is updated
     
 -   **issue:created**: This event is triggered when a new issue is created within the repository
     
--   **issue:comment\_created**: This event occurs when a new comment is added to an existing issue within the repository
+-   **issue:comment_created**: This event occurs when a new comment is added to an existing issue within the repository
     
 -   **issue:updated**: This event is triggered when an existing issue within the repository is updated or modified
     
@@ -1230,6 +1243,14 @@ When you select a specific integration instance, the UI adapts based on the type
 | Disable/Enable Instance | No | Yes |
 | Test Ingestion | No | Yes |
 
+---
+title: "Bitbucket Data Center"
+tocId: "kbPDkHMrgBcu18v81AVdug"
+contentId: "_rdL6FIdWyjusaSp7RN8ww"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Bitbucket-Data-Center"
+depth: 2
+---
+
 ### Bitbucket Data Center
 Integrate Cortex Cloud Application Security with your Bitbucket Data Center version control system (VCS) to enable security scans for exposed secrets, infrastructure-as-code (IaC) misconfigurations, vulnerabilities, package operational risks, and license compliance issues in your repositories. This integration allows you to analyze, prioritize, and resolve detected issues efficiently.
 
@@ -1355,7 +1376,7 @@ Read more...
     
 -   **repo:forked**: This event occurs when a repository is forked
     
--   **repo:refs\_changed**: This event happens when references in the repository are changed
+-   **repo:refs_changed**: This event happens when references in the repository are changed
     
 -   **repo:edited**: This event occurs when a comment in the repository is edited
     
@@ -1373,9 +1394,9 @@ Read more...
     
 -   **pr:modified**: This event occurs when a pull request is modified
     
--   **mirror:repo\_synchronized**: This event occurs when a mirrored repository is synchronized
+-   **mirror:repo_synchronized**: This event occurs when a mirrored repository is synchronized
     
--   **pr:needs\_work**: This event happens when a reviewer marks a pull request as needing work
+-   **pr:needs_work**: This event happens when a reviewer marks a pull request as needing work
     
 -   **pr:approved**: This event occurs when a reviewer approves a pull request
     
@@ -1393,15 +1414,15 @@ Read more...
 | Event | Description |
 | --- | --- |
 | Project: proj:modified | This event occurs when a project undergoes modifications, such as changes to its name, description, or configuration settings. |
-| Repository: repo:refs\_changed | This event occurs when a push operation is performed, typically resulting in changes to the repository’s references. |
+| Repository: repo:refs_changed | This event occurs when a push operation is performed, typically resulting in changes to the repository’s references. |
 | Repository: repo:forked | This event occurs when a repository is forked, creating a separate copy of the repository under a different user or organization. |
 | Repository: repomodified | This event occurs when the repository itself undergoes modifications, such as changes to its settings or configuration. |
 | Repository: repoadded | This event occurs when a new comment is added to a commit within the repository. |
 | Repository: repoedited | This event occurs when an existing comment on a commit is edited within the repository. |
 | Repository: repodeleted | This event occurs when a comment on a commit is deleted within the repository. |
 | Pull Request: pr:opened | This event occurs when a pull request is opened, indicating the initiation of a request to merge changes into the repository. |
-| Pull Request: pr:from\_ref\_updated | This event occurs when the source branch of a pull request is updated with new changes. |
-| Pull Request: pr:to\_ref\_updated | This event occurs when the target branch of a pull request is updated with new changes. |
+| Pull Request: pr:from_ref_updated | This event occurs when the source branch of a pull request is updated with new changes. |
+| Pull Request: pr:to_ref_updated | This event occurs when the target branch of a pull request is updated with new changes. |
 | Pull Request: pr:modified | This event occurs when a pull request undergoes modifications, such as changes to its title, description, or metadata. |
 | Pull Request: prupdated | This event occurs when the list of reviewers assigned to a pull request is updated. |
 | Pull Request: prapproved | This event occurs when a reviewer approves a pull request. |
@@ -1432,7 +1453,7 @@ To locate your integration ID:
     
 2.  Hover over Bitbucket Data Center and click View Details.
     
-3.  Select the required instance from the list and retrieve the cas\_connector\_id from the URL.
+3.  Select the required instance from the list and retrieve the cas_connector_id from the URL.
     
 
 ##### Manage data source integrations
@@ -1758,6 +1779,14 @@ When you select a specific integration instance, the UI adapts based on the type
 | Disable/Enable Instance | No | Yes |
 | Test Ingestion | No | Yes |
 
+---
+title: "GitHub Enterprise (On-Prem)"
+tocId: "F1HqKTMLNdcse8YMgQAg6w"
+contentId: "tmzUzijWPBjlhNP26Mbf1Q"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/GitHub-Enterprise-On-Prem"
+depth: 2
+---
+
 ### GitHub Enterprise (On-Prem)
 Integrate Cortex Cloud Application Security with your GitHub Enterprise (On-Prem) version control system (VCS) to enable security scans for exposed secrets, infrastructure-as-code (IaC) misconfigurations, vulnerabilities, package operational risks, and license compliance issues in your repositories. This integration allows you to analyze, prioritize, and resolve detected issues efficiently.
 
@@ -1783,15 +1812,15 @@ Before you begin:
         
     -   **read:user**: Grants access to read a user’s profile data
         
-    -   **read:repo\_hook**: Grants read and ping access to hooks in public or private repositories
+    -   **read:repo_hook**: Grants read and ping access to hooks in public or private repositories
         
     -   **read:org**: Provides read-only access to organization membership, organization projects, and team membership
         
-    -   **read:public\_key:** Allows listing and viewing details for public keys
+    -   **read:public_key:** Allows listing and viewing details for public keys
         
-    -   **workflow**: Provides the ability to add and update GitHub Actions workflow files. Workflow files can be committed without this scope if the same file (with both the same path and contents) exists on another branch in the same repository. Workflow files can expose GITHUB\_TOKEN, which may have a different set of scopes. For more information, refer to the [GitHub Actions Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token) token authentication documentation
+    -   **workflow**: Provides the ability to add and update GitHub Actions workflow files. Workflow files can be committed without this scope if the same file (with both the same path and contents) exists on another branch in the same repository. Workflow files can expose GITHUB_TOKEN, which may have a different set of scopes. For more information, refer to the [GitHub Actions Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token) token authentication documentation
         
-    -   **admin:org\_hook**: Grants read, write, ping, and delete access to organization hooks. Note: OAuth tokens will only be able to perform these actions on organization hooks created by the OAuth app. Personal access tokens will only be able to perform these actions on organization hooks created by a user
+    -   **admin:org_hook**: Grants read, write, ping, and delete access to organization hooks. Note: OAuth tokens will only be able to perform these actions on organization hooks created by the OAuth app. Personal access tokens will only be able to perform these actions on organization hooks created by a user
         
     
 -   Create an egress path to establish the designated route for outbound data transmission from Cortex Cloud to third party services. For more information about configuring egress paths, refer to Egress configurationsEgress configurations
@@ -2169,6 +2198,14 @@ When you select a specific integration instance, the UI adapts based on the type
 | Disable/Enable Instance | No | Yes |
 | Test Ingestion | No | Yes |
 
+---
+title: "GitLab SaaS"
+tocId: "vmZTuJ42_Gj~AC~76Qzs~A"
+contentId: "yorgEQ562~zSGuYakTdoxw"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/GitLab-SaaS"
+depth: 2
+---
+
 ### GitLab SaaS
 Integrate Cortex Cloud Application Security with your GitLab SaaS version control system (VCS) to enable security scans for exposed secrets, infrastructure-as-code (IaC) misconfigurations, vulnerabilities, package operational risks, and license compliance issues in your repositories. This integration allows you to analyze, prioritize, and resolve detected issues efficiently.
 
@@ -2248,20 +2285,20 @@ Read more...
 | Category | Event | Description |
 | :-- | :-- | :-- |
 | Projects | c | — |
-| — | merge\_requests\_events | This event is triggered when merge or pull requests are created, updated, merged, closed, or have changes made to them |
-| — | push\_events | This event occurs whenever code changes are pushed to a repository, indicating new commits being added to the version control history |
-| — | tag\_push\_events | This event is triggered when new tags are pushed to a repository |
-| — | note\_events | This event is generated when comments or notes are added to various objects within GitLab, such as issues, merge requests, or commits |
-| — | confidential\_note\_events | Similar to note\_events, but specifically for confidential comments or notes that are restricted to certain users or groups |
-| — | issues\_events | This event is triggered when issues are created, updated, closed, or have changes made to them |
-| — | confidential\_issues\_events | Similar to issues\_events, but specifically for confidential issues that are restricted to certain users or groups |
-| — | job\_events | This event occurs when jobs defined in CI/CD pipelines are created, updated, started, finished, or have changes made to them |
-| — | pipeline\_events | This event is generated when pipelines are created, updated, started, finished, or have changes made to them |
-| — | wiki\_page\_events | This event occurs when changes are made to wiki pages within GitLab, including creation, updates, and deletions |
-| — | deployment\_events | This event is triggered when deployments are created, updated, started, finished, or have changes made to them |
-| — | releases\_events | This event occurs when releases are created, updated, published, or have changes made to them |
+| — | merge_requests_events | This event is triggered when merge or pull requests are created, updated, merged, closed, or have changes made to them |
+| — | push_events | This event occurs whenever code changes are pushed to a repository, indicating new commits being added to the version control history |
+| — | tag_push_events | This event is triggered when new tags are pushed to a repository |
+| — | note_events | This event is generated when comments or notes are added to various objects within GitLab, such as issues, merge requests, or commits |
+| — | confidential_note_events | Similar to note_events, but specifically for confidential comments or notes that are restricted to certain users or groups |
+| — | issues_events | This event is triggered when issues are created, updated, closed, or have changes made to them |
+| — | confidential_issues_events | Similar to issues_events, but specifically for confidential issues that are restricted to certain users or groups |
+| — | job_events | This event occurs when jobs defined in CI/CD pipelines are created, updated, started, finished, or have changes made to them |
+| — | pipeline_events | This event is generated when pipelines are created, updated, started, finished, or have changes made to them |
+| — | wiki_page_events | This event occurs when changes are made to wiki pages within GitLab, including creation, updates, and deletions |
+| — | deployment_events | This event is triggered when deployments are created, updated, started, finished, or have changes made to them |
+| — | releases_events | This event occurs when releases are created, updated, published, or have changes made to them |
 | Groups | — | — |
-| — | subgroup\_events | This event is specific to GitLab groups and occurs when changes are made to subgroups within a group hierarchy |
+| — | subgroup_events | This event is specific to GitLab groups and occurs when changes are made to subgroups within a group hierarchy |
 
 **Troubleshooting Instance Path Errors**
 
@@ -2377,6 +2414,14 @@ When you select a specific integration instance, the UI adapts based on the type
 | Disable/Enable Instance | No | Yes |
 | Test Ingestion | No | Yes |
 
+---
+title: "GitLab Self Managed (On-Prem)"
+tocId: "skBlRg96t7FuHG1fSzyOJA"
+contentId: "GQV99Ix5IFLOK~iFQTgFvw"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/GitLab-Self-Managed-On-Prem"
+depth: 2
+---
+
 ### GitLab Self Managed (On-Prem)
 Integrate Cortex Cloud Application Security with your GitLab Self Managed (On-Prem) version control system (VCS) to enable security scans for exposed secrets, infrastructure-as-code (IaC) misconfigurations, vulnerabilities, package operational risks, and license compliance issues in your repositories. This integration allows you to analyze, prioritize, and resolve detected issues efficiently.
 
@@ -2479,21 +2524,21 @@ Read more...
 | Category | Event | Description |
 | --- | --- | --- |
 | Projects | — | — |
-| — | merge\_requests\_events | This event is triggered when merge or pull requests are created, updated, merged, closed, or have changes made to them |
-| — | push\_events | This event occurs whenever code changes are pushed to a repository, indicating new commits being added to the version control history |
-| — | tag\_push\_events | This event is triggered when new tags are pushed to a repository |
-| — | note\_events | This event is generated when comments or notes are added to various objects within GitLab, such as issues, merge requests, or commits |
-| — | confidential\_note\_events | Similar to note\_events, but specifically for confidential comments or notes that are restricted to certain users or groups |
-| — | issues\_events | This event is triggered when issues are created, updated, closed, or have changes made to them |
-| — | confidential\_issues\_events | Similar to issues\_events, but specifically for confidential issues that are restricted to certain users or groups |
-| — | job\_events | This event occurs when jobs defined in CI/CD pipelines are created, updated, started, finished, or have changes made to them |
-| — | pipeline\_events | This event is generated when pipelines are created, updated, started, finished, or have changes made to them |
-| — | wiki\_page\_events | This event occurs when changes are made to wiki pages within GitLab, including creation, updates, and deletions |
-| — | deployment\_events | This event is triggered when deployments are created, updated, started, finished, or have changes made to them |
-| — | releases\_events | This event occurs when releases are created, updated, published, or have changes made to them |
+| — | merge_requests_events | This event is triggered when merge or pull requests are created, updated, merged, closed, or have changes made to them |
+| — | push_events | This event occurs whenever code changes are pushed to a repository, indicating new commits being added to the version control history |
+| — | tag_push_events | This event is triggered when new tags are pushed to a repository |
+| — | note_events | This event is generated when comments or notes are added to various objects within GitLab, such as issues, merge requests, or commits |
+| — | confidential_note_events | Similar to note_events, but specifically for confidential comments or notes that are restricted to certain users or groups |
+| — | issues_events | This event is triggered when issues are created, updated, closed, or have changes made to them |
+| — | confidential_issues_events | Similar to issues_events, but specifically for confidential issues that are restricted to certain users or groups |
+| — | job_events | This event occurs when jobs defined in CI/CD pipelines are created, updated, started, finished, or have changes made to them |
+| — | pipeline_events | This event is generated when pipelines are created, updated, started, finished, or have changes made to them |
+| — | wiki_page_events | This event occurs when changes are made to wiki pages within GitLab, including creation, updates, and deletions |
+| — | deployment_events | This event is triggered when deployments are created, updated, started, finished, or have changes made to them |
+| — | releases_events | This event occurs when releases are created, updated, published, or have changes made to them |
 | Groups | — | — |
-| — | subgroup\_events | This event is specific to GitLab groups and occurs when changes are made to subgroups within a group hierarchy |
-| System | repository\_update\_events | This event occurs whenever there are updates or changes made to a GitLab repository, including actions such as new commits, branch operations, tag updates, and modifications to repository settings |
+| — | subgroup_events | This event is specific to GitLab groups and occurs when changes are made to subgroups within a group hierarchy |
+| System | repository_update_events | This event occurs whenever there are updates or changes made to a GitLab repository, including actions such as new commits, branch operations, tag updates, and modifications to repository settings |
 
 ##### Manage data source integrations
 
@@ -3014,6 +3059,14 @@ You can perform the following actions on CI tools:
     
 -   Perform a **manual scan** of the repository: Select an instance of the CI → right-click on a repository → Scan Repository
 
+---
+title: "AWS CodeBuild"
+tocId: "Y04h7kXBOJUVgZQyJyF0xA"
+contentId: "28aZD93Gn1oTREIuNoDPWA"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/AWS-CodeBuild"
+depth: 2
+---
+
 ### AWS CodeBuild
 Integrate Cortex Cloud Application Security with your AWS CodeBuild instance to allow dynamic, automated, and context-specific scans within your development workflow. This includes continuous scanning of your workflow whenever changes are pushed or triggered, integrating security checks, and catching issues as soon as they are introduced. Additionally, it automates shift-left actions such as notifying developers or creating tickets, based on scan results.
 
@@ -3046,16 +3099,16 @@ Before you begin:
     
     -   If you have an API key.
         
-        1.  Copy the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID variable names from their respective fields in the wizard.
+        1.  Copy the CORTEX_API_KEY and CORTEX_API_KEY_ID variable names from their respective fields in the wizard.
             
-        2.  Add the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID and their corresponding values as separate environment variables (secrets) to the AWS Secrets Manager.
+        2.  Add the CORTEX_API_KEY and CORTEX_API_KEY_ID and their corresponding values as separate environment variables (secrets) to the AWS Secrets Manager.
             
         
     -   If you do not have an API key:
         
-        1.  Click Generate API key → Copy the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID and their corresponding values from their respective fields.
+        1.  Click Generate API key → Copy the CORTEX_API_KEY and CORTEX_API_KEY_ID and their corresponding values from their respective fields.
             
-        2.  Add the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID and their corresponding values as separate environment variables (secrets) to the AWS Secrets Manager.
+        2.  Add the CORTEX_API_KEY and CORTEX_API_KEY_ID and their corresponding values as separate environment variables (secrets) to the AWS Secrets Manager.
             
         
     
@@ -3097,11 +3150,11 @@ version: 0.2
 
 env:
   variables:
-    CORTEX\_API\_URL: "https://api-viso-hdkbzk6qphxpbehy758elo.xdr-qa2-uat.us.paloaltonetworks.com"
-    CORTEX\_CLI\_VERSION: "0.8.11"
+    CORTEX_API_URL: "https://api-viso-hdkbzk6qphxpbehy758elo.xdr-qa2-uat.us.paloaltonetworks.com"
+    CORTEX_CLI_VERSION: "0.8.11"
   secrets-manager:
-    CORTEX\_API\_KEY: "CORTEX\_API\_KEY"
-    CORTEX\_API\_KEY\_ID: "CORTEX\_API\_KEY\_ID"
+    CORTEX_API_KEY: "CORTEX_API_KEY"
+    CORTEX_API_KEY_ID: "CORTEX_API_KEY_ID"
 
 phases:
   install:
@@ -3112,50 +3165,50 @@ phases:
       - yum -y update
       - yum -y install jq curl
 
-  pre\_build:
+  pre_build:
     commands:
       - echo "Fetching temporary token"
       - |
-        export TOKEN\_RESPONSE=$(curl --location "${CORTEX\_API\_URL}/public\_api/cas/v1/cortex-cli/create-token" \\
-                                 --header "Authorization: ${CORTEX\_API\_KEY}" \\
-                                 --header "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
+        export TOKEN_RESPONSE=$(curl --location "${CORTEX_API_URL}/public_api/cas/v1/cortex-cli/create-token" \\
+                                 --header "Authorization: ${CORTEX_API_KEY}" \\
+                                 --header "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
                                  --header "Content-Type: application/json" \\
                                  --data "{}" -s)
-      - export TEMP\_TOKEN=$(echo "$TOKEN\_RESPONSE" | jq -r '.token')
+      - export TEMP_TOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.token')
       - echo "Temporary token fetched"
 
       - echo "Pulling Docker image"
-      - docker pull --platform linux/arm64 distributions-dev.traps.paloaltonetworks.com/cli-docker/${TEMP\_TOKEN}/method:arm64-${CORTEX\_CLI\_VERSION}-dev
+      - docker pull --platform linux/arm64 distributions-dev.traps.paloaltonetworks.com/cli-docker/${TEMP_TOKEN}/method:arm64-${CORTEX_CLI_VERSION}-dev
 
       - echo "Tagging Docker image"
-      - docker tag distributions-dev.traps.paloaltonetworks.com/cli-docker/${TEMP\_TOKEN}/method:arm64-${CORTEX\_CLI\_VERSION}-dev cortexcli:${CORTEX\_CLI\_VERSION}
+      - docker tag distributions-dev.traps.paloaltonetworks.com/cli-docker/${TEMP_TOKEN}/method:arm64-${CORTEX_CLI_VERSION}-dev cortexcli:${CORTEX_CLI_VERSION}
 
       - echo "Setting Extra Environment Variables"
       - |
-        export CODEBUILD\_ACCOUNT\_ID=$(aws sts get-caller-identity --query 'Account' --output text)
-        export CODEBUILD\_GIT\_BRANCH="$(git symbolic-ref HEAD --short 2>/dev/null)"
-        if \[ "$CODEBUILD\_GIT\_BRANCH" = "" \] ; then
-          export CODEBUILD\_GIT\_BRANCH="$(git rev-parse HEAD | xargs git name-rev | cut -d' ' -f2 | sed 's/remotes\\/origin\\///g')"
+        export CODEBUILD_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)
+        export CODEBUILD_GIT_BRANCH="$(git symbolic-ref HEAD --short 2>/dev/null)"
+        if \[ "$CODEBUILD_GIT_BRANCH" = "" \] ; then
+          export CODEBUILD_GIT_BRANCH="$(git rev-parse HEAD | xargs git name-rev | cut -d' ' -f2 | sed 's/remotes\\/origin\\///g')"
         fi
-        export CODEBUILD\_PROJECT=${CODEBUILD\_BUILD\_ID%:$CODEBUILD\_LOG\_PATH}
+        export CODEBUILD_PROJECT=${CODEBUILD_BUILD_ID%:$CODEBUILD_LOG_PATH}
 
         echo "==> AWS CodeBuild Extra Environment Variables:"
-        echo "==> CODEBUILD\_ACCOUNT\_ID = $CODEBUILD\_ACCOUNT\_ID"
-        echo "==> CODEBUILD\_GIT\_BRANCH = $CODEBUILD\_GIT\_BRANCH"
-        echo "==> CODEBUILD\_PROJECT = $CODEBUILD\_PROJECT"
+        echo "==> CODEBUILD_ACCOUNT_ID = $CODEBUILD_ACCOUNT_ID"
+        echo "==> CODEBUILD_GIT_BRANCH = $CODEBUILD_GIT_BRANCH"
+        echo "==> CODEBUILD_PROJECT = $CODEBUILD_PROJECT"
 
   build:
     commands:
       - echo "Running Docker container"
       - |
-        docker run --rm --platform linux/arm64 cortexcli:${CORTEX\_CLI\_VERSION} \\
-                   --api-base-url ${CORTEX\_API\_URL} \\
-                   --api-key ${CORTEX\_API\_KEY} \\
-                   --api-key-id ${CORTEX\_API\_KEY\_ID} \\
+        docker run --rm --platform linux/arm64 cortexcli:${CORTEX_CLI_VERSION} \\
+                   --api-base-url ${CORTEX_API_URL} \\
+                   --api-key ${CORTEX_API_KEY} \\
+                   --api-key-id ${CORTEX_API_KEY_ID} \\
                    code scan \\
                    --directory . \\
-                   --repo-id $CODEBUILD\_ACCOUNT\_ID/$CODEBUILD\_PROJECT \\
-                   --branch $CODEBUILD\_GIT\_BRANCH
+                   --repo-id $CODEBUILD_ACCOUNT_ID/$CODEBUILD_PROJECT \\
+                   --branch $CODEBUILD_GIT_BRANCH
 ```
 
 ##### Manage data source integrations
@@ -3268,6 +3321,14 @@ When you select a specific integration instance, the UI adapts based on the type
 | Disable/Enable Instance | No | Yes |
 | Test Ingestion | No | Yes |
 
+---
+title: "CircleCI for code scans"
+tocId: "fjWuoSJTjTasn_lSFbxLlA"
+contentId: "nEYbrjoZEU9GMvB9hhPA7A"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/CircleCI-for-code-scans"
+depth: 2
+---
+
 ### CircleCI for code scans
 Integrate Cortex Cloud Application Security with your CircleCI system to allow dynamic, automated, and context-specific code scans across your codebase. This integration provides continuous scanning of your workflows, triggered by code changes or pipeline events, ensuring security checks are performed and issues are detected as early as possible.
 
@@ -3314,16 +3375,16 @@ Before you begin:
     
     -   If you have an API key:
         
-        1.  Copy the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID variable names from their respective fields in the wizard.
+        1.  Copy the CORTEX_API_KEY and CORTEX_API_KEY_ID variable names from their respective fields in the wizard.
             
-        2.  Add the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID and their corresponding values as separate environment variables (secrets) to the cortex-secrets context.
+        2.  Add the CORTEX_API_KEY and CORTEX_API_KEY_ID and their corresponding values as separate environment variables (secrets) to the cortex-secrets context.
             
         
     -   If you do not have an API key:
         
-        1.  Click Generate API key → Copy the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID and their corresponding values from their respective fields.
+        1.  Click Generate API key → Copy the CORTEX_API_KEY and CORTEX_API_KEY_ID and their corresponding values from their respective fields.
             
-        2.  Add the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID and their corresponding values as separate environment variables to the cortex-secrets context.
+        2.  Add the CORTEX_API_KEY and CORTEX_API_KEY_ID and their corresponding values as separate environment variables to the cortex-secrets context.
             
         
     
@@ -3369,38 +3430,38 @@ executors:
     docker:
       - image: cimg/base:stable  # Replace with a suitable image or executor
     environment:
-      CORTEX\_API\_URL: "https://{CORTEX\_URL}
-      CORTEX\_CLI\_VERSION: "0.8.11"
+      CORTEX_API_URL: "https://{CORTEX_URL}
+      CORTEX_CLI_VERSION: "0.8.11"
 
 jobs:
   setup-environment:
     executor: docker-executor
     steps:
       - checkout
-      - setup\_remote\_docker
+      - setup_remote_docker
       - run:
           name: Get Temporary Token and Pull Docker Image
           command: |
-            export TOKEN\_RESPONSE=$(curl --location "${CORTEX\_API\_URL}/public\_api/cas/v1/cortex-cli/create-token" \\
-                                        --header "Authorization: ${CORTEX\_API\_KEY}" \\
-                                        --header "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
+            export TOKEN_RESPONSE=$(curl --location "${CORTEX_API_URL}/public_api/cas/v1/cortex-cli/create-token" \\
+                                        --header "Authorization: ${CORTEX_API_KEY}" \\
+                                        --header "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
                                         --header "Content-Type: application/json" \\
                                         --data "{}" -s)
-            export TEMP\_TOKEN=$(echo "$TOKEN\_RESPONSE" | jq -r '.token')
-            docker pull distributions-dev.traps.paloaltonetworks.com/cli-docker/${TEMP\_TOKEN}/method:amd64-${CORTEX\_CLI\_VERSION}-dev
-            docker tag distributions-dev.traps.paloaltonetworks.com/cli-docker/${TEMP\_TOKEN}/method:amd64-${CORTEX\_CLI\_VERSION}-dev cortexcli:${CORTEX\_CLI\_VERSION}
+            export TEMP_TOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.token')
+            docker pull distributions-dev.traps.paloaltonetworks.com/cli-docker/${TEMP_TOKEN}/method:amd64-${CORTEX_CLI_VERSION}-dev
+            docker tag distributions-dev.traps.paloaltonetworks.com/cli-docker/${TEMP_TOKEN}/method:amd64-${CORTEX_CLI_VERSION}-dev cortexcli:${CORTEX_CLI_VERSION}
       - run:
           name: Run Cortex CLI Container
           # Replace owner/repo with your actual repository information
           command: |
-            docker run --rm cortexcli:${CORTEX\_CLI\_VERSION} \\
-                        --api-base-url ${CORTEX\_API\_URL} \\
-                        --api-key ${CORTEX\_API\_KEY} \\
-                        --api-key-id ${CORTEX\_API\_KEY\_ID} \\
+            docker run --rm cortexcli:${CORTEX_CLI_VERSION} \\
+                        --api-base-url ${CORTEX_API_URL} \\
+                        --api-key ${CORTEX_API_KEY} \\
+                        --api-key-id ${CORTEX_API_KEY_ID} \\
                         code scan \\
                         --directory . \\
-                        --repo-id <REPLACE WITH REPO\_OWNER/REPO\_NAME> \\
-                        --branch "${CIRCLE\_BRANCH}"
+                        --repo-id <REPLACE WITH REPO_OWNER/REPO_NAME> \\
+                        --branch "${CIRCLE_BRANCH}"
 
 workflows:
   version: 2
@@ -3520,6 +3581,14 @@ When you select a specific integration instance, the UI adapts based on the type
 | Disable/Enable Instance | No | Yes |
 | Test Ingestion | No | Yes |
 
+---
+title: "Connect Cortex CLI"
+tocId: "fdElOygD4U82f9PlyBkkkQ"
+contentId: "jKArx2SuIdtxo4bM_LxDww"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Connect-Cortex-CLI"
+depth: 2
+---
+
 ### Connect Cortex CLI
 Connect Cortex CLI to scan supported Cortex Cloud modules and gain insights into your security posture, enabling you to identify, analyze and address potential risks.
 
@@ -3586,7 +3655,7 @@ Connect Cortex CLI to scan supported Cortex Cloud modules and gain insights into
     
 -   Best Practice (required for SCA vulnerability suppression):
     
-    -   Run the CLI within your current working directory (<current\_directory\_path>). It is recommended to use the absolute file path for your current working directory
+    -   Run the CLI within your current working directory (<current_directory_path>). It is recommended to use the absolute file path for your current working directory
         
     -   Ensure that the `--repo-id` parameter includes the `<repo_owner_name>/<repo_name>` structure, with the `<repo_name>` matching the exact name of the directory
         
@@ -3690,11 +3759,11 @@ You can authenticate the Cortex CLI using one of two methods: command-line flags
 
 -   **Using command-line flags**: Provide your API credentials and base URL directly in the command using the following flags
     
-    -   `--api-base-url`: \[$CORTEX\_API\_BASE\_URL\]
+    -   `--api-base-url`: \[$CORTEX_API_BASE_URL\]
         
-    -   `--api-key`: \[$CORTEX\_API\_KEY\]
+    -   `--api-key`: \[$CORTEX_API_KEY\]
         
-    -   `--api-key-id` \[$CORTEX\_KEY\_ID\]
+    -   `--api-key-id` \[$CORTEX_KEY_ID\]
         
     
     For more information about these flags, refer to Cortex CLI common command line reference guide.
@@ -3755,6 +3824,14 @@ To execute a Cortex CLI scan, run `cortexcli [global flags] [module name] scan [
     
 -   For more information about CLI usage for Cortex Cloud Application Security, refer to Cortex CLI usage for Cortex Cloud Application Security
 
+---
+title: "GitHub Actions"
+tocId: "OMdgh8r8T9NxBY9pEHhDVw"
+contentId: "ZJmrJTQ4O8sI0nhiqGQ10Q"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/GitHub-Actions"
+depth: 2
+---
+
 ### GitHub Actions
 Integrate Cortex Cloud Application Security with GitHub Actions to allow dynamic, automated, and context-specific scans within your development workflow. This includes continuous scanning of your workflows whenever changes are pushed or triggered, integrating security checks, and detecting issues as soon as they are introduced.
 
@@ -3787,16 +3864,16 @@ Before you begin:
     
     -   If you have an API key:
         
-        1.  Copy the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID variable names from their respective fields in the wizard.
+        1.  Copy the CORTEX_API_KEY and CORTEX_API_KEY_ID variable names from their respective fields in the wizard.
             
-        2.  Add the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID and their corresponding values as separate environment variables (secrets) to the GitHub Actions Secrets credential store.
+        2.  Add the CORTEX_API_KEY and CORTEX_API_KEY_ID and their corresponding values as separate environment variables (secrets) to the GitHub Actions Secrets credential store.
             
         
     -   If you do not have an API key:
         
-        1.  Click Generate API key → Copy the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID and their corresponding values from their respective fields
+        1.  Click Generate API key → Copy the CORTEX_API_KEY and CORTEX_API_KEY_ID and their corresponding values from their respective fields
             
-        2.  Add the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID and their corresponding values as separate environment variables (secrets) to the GitHub Actions Secrets credential store.
+        2.  Add the CORTEX_API_KEY and CORTEX_API_KEY_ID and their corresponding values as separate environment variables (secrets) to the GitHub Actions Secrets credential store.
             
         
     
@@ -3836,13 +3913,13 @@ on:
   push:
     branches:
       - main
-  workflow\_dispatch:
+  workflow_dispatch:
 
 env:
-  CORTEX\_API\_KEY: ${{secrets.CORTEX\_API\_KEY}}
-  CORTEX\_API\_KEY\_ID: ${{secrets.CORTEX\_API\_KEY\_ID}}
-  CORTEX\_API\_URL: https://<CORTEX\_URL>
-  CORTEX\_CLI\_VERSION: 0.8.11
+  CORTEX_API_KEY: ${{secrets.CORTEX_API_KEY}}
+  CORTEX_API_KEY_ID: ${{secrets.CORTEX_API_KEY_ID}}
+  CORTEX_API_URL: https://<CORTEX_URL>
+  CORTEX_CLI_VERSION: 0.8.11
   
 jobs:
   download-and-execute:
@@ -3864,25 +3941,25 @@ jobs:
 
     - name: Get Temporary Token
       run: |
-        TOKEN\_RESPONSE=$(curl --location "${CORTEX\_API\_URL}/public\_api/cas/v1/cortex-cli/create-token" \\
-          --header "Authorization: ${CORTEX\_API\_KEY}" \\
-          --header "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
+        TOKEN_RESPONSE=$(curl --location "${CORTEX_API_URL}/public_api/cas/v1/cortex-cli/create-token" \\
+          --header "Authorization: ${CORTEX_API_KEY}" \\
+          --header "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
           --header 'Content-Type: application/json' \\
           --data '{}')
-        TEMP\_TOKEN=$(echo $TOKEN\_RESPONSE | jq -r '.token')
-        echo "TEMP\_TOKEN=$TEMP\_TOKEN" >> $GITHUB\_ENV
+        TEMP_TOKEN=$(echo $TOKEN_RESPONSE | jq -r '.token')
+        echo "TEMP_TOKEN=$TEMP_TOKEN" >> $GITHUB_ENV
 
     - name: Pull Docker Image
       run: |
-        docker pull distributions-dev.traps.paloaltonetworks.com/cli-docker/${{env.TEMP\_TOKEN}}/method:arm64-${{env.CORTEX\_CLI\_VERSION}}-dev
-        docker tag distributions-dev.traps.paloaltonetworks.com/cli-docker/${{env.TEMP\_TOKEN}}/method:arm64-${{env.CORTEX\_CLI\_VERSION}}-dev cortexcli:${{env.CORTEX\_CLI\_VERSION}}
+        docker pull distributions-dev.traps.paloaltonetworks.com/cli-docker/${{env.TEMP_TOKEN}}/method:arm64-${{env.CORTEX_CLI_VERSION}}-dev
+        docker tag distributions-dev.traps.paloaltonetworks.com/cli-docker/${{env.TEMP_TOKEN}}/method:arm64-${{env.CORTEX_CLI_VERSION}}-dev cortexcli:${{env.CORTEX_CLI_VERSION}}
 
     - name: Run Docker Container
       run: |
-        docker run --rm --platform linux/arm64 cortexcli:${{env.CORTEX\_CLI\_VERSION}} \\
-          --api-base-url ${CORTEX\_API\_URL} \\
-          --api-key ${CORTEX\_API\_KEY} \\
-          --api-key-id ${CORTEX\_API\_KEY\_ID} \\
+        docker run --rm --platform linux/arm64 cortexcli:${{env.CORTEX_CLI_VERSION}} \\
+          --api-base-url ${CORTEX_API_URL} \\
+          --api-key ${CORTEX_API_KEY} \\
+          --api-key-id ${CORTEX_API_KEY_ID} \\
           code scan \\
           --directory . \\
           --repo-id ${{github.repository}}
@@ -3998,6 +4075,14 @@ When you select a specific integration instance, the UI adapts based on the type
 | Disable/Enable Instance | No | Yes |
 | Test Ingestion | No | Yes |
 
+---
+title: "Jenkins for code scans"
+tocId: "sPjMfvkMefipL6S45KOiQQ"
+contentId: "yVawPSGVgRtnoZEW5MV~YA"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Jenkins-for-code-scans"
+depth: 2
+---
+
 ### Jenkins for code scans
 Integrate Cortex Cloud Application Security with your Jenkins server to allow dynamic, automated, and context-specific code scans across your codebase. This integration provides continuous scanning of your workflows, triggered by code changes or pipeline events, ensuring security checks are performed and issues are detected as early as possible.
 
@@ -4045,21 +4130,21 @@ Jenkins onboarding offers both code and CI/CD scanning. A single integrated inst
         -   **Credentials Binding Plugin**: Use the `withCredentials` function (requires installing the Credentials Binding Plugin) to securely bind credentials to environment variables within your pipeline
             
         
-    -   The variable names CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID must be used exactly as provided. They are part of a predefined system and cannot be changed without causing errors
+    -   The variable names CORTEX_API_KEY and CORTEX_API_KEY_ID must be used exactly as provided. They are part of a predefined system and cannot be changed without causing errors
         
     
     -   If you have an API key:
         
-        1.  Copy the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID variable names from their respective fields in the wizard.
+        1.  Copy the CORTEX_API_KEY and CORTEX_API_KEY_ID variable names from their respective fields in the wizard.
             
-        2.  Add the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID names and their corresponding values as separate environment variables (secrets) to the Jenkins Credentials store.
+        2.  Add the CORTEX_API_KEY and CORTEX_API_KEY_ID names and their corresponding values as separate environment variables (secrets) to the Jenkins Credentials store.
             
         
     -   If you do not have an API key:
         
-        1.  Click Generate API key → Copy the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID and their corresponding values from their respective fields.
+        1.  Click Generate API key → Copy the CORTEX_API_KEY and CORTEX_API_KEY_ID and their corresponding values from their respective fields.
             
-        2.  Add the CORTEX\_API\_KEY and CORTEX\_API\_KEY\_ID names and their corresponding values as separate environment variables (secrets) to the Jenkins Credentials store.
+        2.  Add the CORTEX_API_KEY and CORTEX_API_KEY_ID names and their corresponding values as separate environment variables (secrets) to the Jenkins Credentials store.
             
         
     
@@ -4116,10 +4201,10 @@ pipeline {
     }
 
     environment {
-        CORTEX\_API\_KEY = credentials('CORTEX\_API\_KEY')
-        CORTEX\_API\_KEY\_ID = credentials('CORTEX\_API\_KEY\_ID')
-        CORTEX\_API\_URL = '<YOUR\_CORTEX\_URL>'// Your placeholder
-        CORTEX\_CLI\_VERSION = '0.8.11'
+        CORTEX_API_KEY = credentials('CORTEX_API_KEY')
+        CORTEX_API_KEY_ID = credentials('CORTEX_API_KEY_ID')
+        CORTEX_API_URL = '<YOUR_CORTEX_URL>'// Your placeholder
+        CORTEX_CLI_VERSION = '0.8.11'
     }
 
     stages {
@@ -4134,20 +4219,20 @@ pipeline {
 
         stage('Get Temporary Token') {
             environment {
-                TEMP\_TOKEN = ""
+                TEMP_TOKEN = ""
             }
             steps {
                 script {
                     def response = sh(script: """
-                        curl --location '${env.CORTEX\_API\_URL}/public\_api/cas/v1/cortex-cli/create-token' \\
-                          --header 'Authorization: ${env.CORTEX\_API\_KEY}' \\
-                          --header 'x-xdr-auth-id: ${env.CORTEX\_API\_KEY\_ID}' \\
+                        curl --location '${env.CORTEX_API_URL}/public_api/cas/v1/cortex-cli/create-token' \\
+                          --header 'Authorization: ${env.CORTEX_API_KEY}' \\
+                          --header 'x-xdr-auth-id: ${env.CORTEX_API_KEY_ID}' \\
                           --header 'Content-Type: application/json' \\
                           --data '{}' \\
                           -s
                     """, returnStdout: true).trim()
 
-                    env.TEMP\_TOKEN = sh(script: """echo '${response}' | jq -r '.token'""", returnStdout: true).trim()
+                    env.TEMP_TOKEN = sh(script: """echo '${response}' | jq -r '.token'""", returnStdout: true).trim()
                 }
             }
         }
@@ -4155,8 +4240,8 @@ pipeline {
         stage('Pull Docker Image') {
             steps {
                 sh """
-                docker pull distributions-dev.traps.paloaltonetworks.com/cli-docker/${env.TEMP\_TOKEN}/method:amd64-${env.CORTEX\_CLI\_VERSION}-dev
-                docker tag distributions-dev.traps.paloaltonetworks.com/cli-docker/${env.TEMP\_TOKEN}/method:amd64-${env.CORTEX\_CLI\_VERSION}-dev cortexcli:${env.CORTEX\_CLI\_VERSION}
+                docker pull distributions-dev.traps.paloaltonetworks.com/cli-docker/${env.TEMP_TOKEN}/method:amd64-${env.CORTEX_CLI_VERSION}-dev
+                docker tag distributions-dev.traps.paloaltonetworks.com/cli-docker/${env.TEMP_TOKEN}/method:amd64-${env.CORTEX_CLI_VERSION}-dev cortexcli:${env.CORTEX_CLI_VERSION}
                 """
             }
         }
@@ -4167,13 +4252,13 @@ pipeline {
                 unstash 'source'
                 env.BRANCH = sh(script: "git rev-parse --abbrev-ref HEAD", returnStdout: true).trim()
                 sh """
-                docker run --rm --platform linux/amd64 cortexcli:${env.CORTEX\_CLI\_VERSION} \\
-                  --api-base-url ${env.CORTEX\_API\_URL} \\
-                  --api-key ${env.CORTEX\_API\_KEY} \\
-                  --api-key-id ${env.CORTEX\_API\_KEY\_ID} \\
+                docker run --rm --platform linux/amd64 cortexcli:${env.CORTEX_CLI_VERSION} \\
+                  --api-base-url ${env.CORTEX_API_URL} \\
+                  --api-key ${env.CORTEX_API_KEY} \\
+                  --api-key-id ${env.CORTEX_API_KEY_ID} \\
                   code scan \\
                   --directory . \\
-                  --repo-id <REPLACE WITH REPO\_OWNER/REPO\_NAME> \\
+                  --repo-id <REPLACE WITH REPO_OWNER/REPO_NAME> \\
                   --branch $BRANCH
                 """
             }
@@ -4199,10 +4284,10 @@ pipeline {
     }
 
     environment {
-        CORTEX\_API\_KEY = credentials('CORTEX\_API\_KEY')
-        CORTEX\_API\_KEY\_ID = credentials('CORTEX\_API\_KEY\_ID')
-        CORTEX\_API\_URL = '<YOUR\_CORTEX\_URL>' // Your placeholder
-        CORTEX\_CLI\_VERSION = '0.8.11'
+        CORTEX_API_KEY = credentials('CORTEX_API_KEY')
+        CORTEX_API_KEY_ID = credentials('CORTEX_API_KEY_ID')
+        CORTEX_API_URL = '<YOUR_CORTEX_URL>' // Your placeholder
+        CORTEX_CLI_VERSION = '0.8.11'
     }
 
     stages {
@@ -4223,20 +4308,20 @@ pipeline {
 
         stage('Get Temporary Token') {
             environment {
-                TEMP\_TOKEN = ""
+                TEMP_TOKEN = ""
             }
             steps {
                 script {
                     def response = sh(script: """
-                        curl --location '${env.CORTEX\_API\_URL}/public\_api/cas/v1/cortex-cli/create-token' \\
-                          --header 'Authorization: ${env.CORTEX\_API\_KEY}' \\
-                          --header 'x-xdr-auth-id: ${env.CORTEX\_API\_KEY\_ID}' \\
+                        curl --location '${env.CORTEX_API_URL}/public_api/cas/v1/cortex-cli/create-token' \\
+                          --header 'Authorization: ${env.CORTEX_API_KEY}' \\
+                          --header 'x-xdr-auth-id: ${env.CORTEX_API_KEY_ID}' \\
                           --header 'Content-Type: application/json' \\
                           --data '{}' \\
                           -s
                     """, returnStdout: true).trim()
 
-                    env.TEMP\_TOKEN = sh(script: """echo '${response}' | jq -r '.token'""", returnStdout: true).trim()
+                    env.TEMP_TOKEN = sh(script: """echo '${response}' | jq -r '.token'""", returnStdout: true).trim()
                 }
             }
         }
@@ -4244,8 +4329,8 @@ pipeline {
         stage('Pull Docker Image') {
             steps {
                 sh """
-                docker pull distributions-dev.traps.paloaltonetworks.com/cli-docker/${env.TEMP\_TOKEN}/method:amd64-${env.CORTEX\_CLI\_VERSION}-dev
-                docker tag distributions-dev.traps.paloaltonetworks.com/cli-docker/${env.TEMP\_TOKEN}/method:amd64-${env.CORTEX\_CLI\_VERSION}-dev cortexcli:${env.CORTEX\_CLI\_VERSION}
+                docker pull distributions-dev.traps.paloaltonetworks.com/cli-docker/${env.TEMP_TOKEN}/method:amd64-${env.CORTEX_CLI_VERSION}-dev
+                docker tag distributions-dev.traps.paloaltonetworks.com/cli-docker/${env.TEMP_TOKEN}/method:amd64-${env.CORTEX_CLI_VERSION}-dev cortexcli:${env.CORTEX_CLI_VERSION}
                 """
             }
         }
@@ -4256,13 +4341,13 @@ pipeline {
                 unstash 'source'
                 env.BRANCH = sh(script: "git rev-parse --abbrev-ref HEAD", returnStdout: true).trim()
                 sh """
-                docker run --rm --platform linux/amd64 cortexcli:${env.CORTEX\_CLI\_VERSION} \\
-                  --api-base-url ${env.CORTEX\_API\_URL} \\
-                  --api-key ${env.CORTEX\_API\_KEY} \\
-                  --api-key-id ${env.CORTEX\_API\_KEY\_ID} \\
+                docker run --rm --platform linux/amd64 cortexcli:${env.CORTEX_CLI_VERSION} \\
+                  --api-base-url ${env.CORTEX_API_URL} \\
+                  --api-key ${env.CORTEX_API_KEY} \\
+                  --api-key-id ${env.CORTEX_API_KEY_ID} \\
                   code scan \\
                   --directory . \\
-                  --repo-id <REPLACE WITH REPO\_OWNER/REPO\_NAME> \\
+                  --repo-id <REPLACE WITH REPO_OWNER/REPO_NAME> \\
                   --branch $BRANCH
                 """
             }
@@ -4795,6 +4880,14 @@ When you select a specific integration instance, the UI adapts based on the type
 | Disable/Enable Instance | No | Yes |
 | Test Ingestion | No | Yes |
 
+---
+title: "CLI pipeline code snippets"
+tocId: "kjCxhxOCjRB68siV6D9fOg"
+contentId: "akzwZjVaZUGzfRHQCCyvsw"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/CLI-pipeline-code-snippets"
+depth: 1
+---
+
 ## CLI pipeline code snippets
 You can integrate the Cortex CLI directly into your CI/CD pipelines to enable automated code scans by adding code snippets to your to your build script or pipeline configuration, such as a `YAML` or `Groovy` file. Both `ARM` and `AMD` architectures are supported, ensuring you can scan your codebase regardless of your runner’s environment.
 
@@ -4808,39 +4901,39 @@ You must replace placeholder variables with your own credentials and environment
 
 ### AWS CodeBuild
 
--   For AMD architecture
+#### For AMD architecture
     
     ```
     version: 0.2
     env:
       variables:
-        CORTEX\_API\_URL: <your\_cortex\_api\_url>
-        CORTEX\_CLI\_VERSION: "0.13.14"
+        CORTEX_API_URL: <your_cortex_api_url>
+        CORTEX_CLI_VERSION: "0.13.14"
       secrets-manager:
-        CORTEX\_API\_KEY: "CORTEX\_API\_KEY"   
-        CORTEX\_API\_KEY\_ID: "CORTEX\_API\_KEY\_ID"
+        CORTEX_API_KEY: "CORTEX_API_KEY"   
+        CORTEX_API_KEY_ID: "CORTEX_API_KEY_ID"
     phases:
       install:
         commands:
           - apt-get update
           - apt-get install -y curl jq git
-      pre\_build:
+      pre_build:
         commands:
           - echo "Getting repo name"
-          - export CODEBUILD\_ACCOUNT\_ID=$(aws sts get-caller-identity --query 'Account' --output text)  
-          - export CODEBUILD\_GIT\_BRANCH="$(git symbolic-ref HEAD --short 2>/dev/null)"
+          - export CODEBUILD_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)  
+          - export CODEBUILD_GIT_BRANCH="$(git symbolic-ref HEAD --short 2>/dev/null)"
           - |
-            if \[ "$CODEBUILD\_GIT\_BRANCH" = "" \] ; then
-              export CODEBUILD\_GIT\_BRANCH="$(git rev-parse HEAD | xargs git name-rev | cut -d' ' -f2 | sed 's/remotes\\/origin\\///g')";
+            if \[ "$CODEBUILD_GIT_BRANCH" = "" \] ; then
+              export CODEBUILD_GIT_BRANCH="$(git rev-parse HEAD | xargs git name-rev | cut -d' ' -f2 | sed 's/remotes\\/origin\\///g')";
             fi
-          - export CODEBUILD\_PROJECT=${CODEBUILD\_BUILD\_ID%:$CODEBUILD\_LOG\_PATH}
+          - export CODEBUILD_PROJECT=${CODEBUILD_BUILD_ID%:$CODEBUILD_LOG_PATH}
           - echo "Downloading cortexcli"
           - |
-            crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
-              -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-              -H "Authorization: ${CORTEX\_API\_KEY}")
-          - crtx\_url=$(echo "$crtx\_resp" | jq -r ".signed\_url")
-          - curl -o cortexcli "$crtx\_url"
+            crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
+              -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+              -H "Authorization: ${CORTEX_API_KEY}")
+          - crtx_url=$(echo "$crtx_resp" | jq -r ".signed_url")
+          - curl -o cortexcli "$crtx_url"
           - chmod +x cortexcli
           - ./cortexcli --version
           
@@ -4848,53 +4941,53 @@ You must replace placeholder variables with your own credentials and environment
         commands:
           - |
             ./cortexcli \\
-                       --api-base-url "${CORTEX\_API\_URL}" \\
-                       --api-key "${CORTEX\_API\_KEY}" \\
-                       --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+                       --api-base-url "${CORTEX_API_URL}" \\
+                       --api-key "${CORTEX_API_KEY}" \\
+                       --api-key-id "${CORTEX_API_KEY_ID}" \\
                        code scan \\
                        --directory "$(pwd)" \\
-                       --repo-id $CODEBUILD\_ACCOUNT\_ID/$CODEBUILD\_PROJECT \\
-                       --branch $CODEBUILD\_GIT\_BRANCH \\
-                       --source AWS\_CODE\_BUILD \\
+                       --repo-id $CODEBUILD_ACCOUNT_ID/$CODEBUILD_PROJECT \\
+                       --branch $CODEBUILD_GIT_BRANCH \\
+                       --source AWS_CODE_BUILD \\
                        --create-repo-if-missing
     artifacts:
       files:
         - '\*\*/\*'
     ```
     
--   For ARM architecture
+#### For ARM architecture
     
     ```
     version: 0.2
     env:
       variables:
-        CORTEX\_API\_URL: <your\_cortex\_api\_url> 
-        CORTEX\_CLI\_VERSION: "0.13.16"
+        CORTEX_API_URL: <your_cortex_api_url> 
+        CORTEX_CLI_VERSION: "0.13.16"
       secrets-manager:
-        CORTEX\_API\_KEY: "CORTEX\_API\_KEY"   
-        CORTEX\_API\_KEY\_ID: "CORTEX\_API\_KEY\_ID"
+        CORTEX_API_KEY: "CORTEX_API_KEY"   
+        CORTEX_API_KEY_ID: "CORTEX_API_KEY_ID"
     phases:
       install:
         commands:
           - apt-get update
           - apt-get install -y curl jq git
-      pre\_build:
+      pre_build:
         commands:
           - echo "Getting repo name"
-          - export CODEBUILD\_ACCOUNT\_ID=$(aws sts get-caller-identity --query 'Account' --output text)  
-          - export CODEBUILD\_GIT\_BRANCH="$(git symbolic-ref HEAD --short 2>/dev/null)"
+          - export CODEBUILD_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)  
+          - export CODEBUILD_GIT_BRANCH="$(git symbolic-ref HEAD --short 2>/dev/null)"
           - |
-            if \[ "$CODEBUILD\_GIT\_BRANCH" = "" \] ; then
-              export CODEBUILD\_GIT\_BRANCH="$(git rev-parse HEAD | xargs git name-rev | cut -d' ' -f2 | sed 's/remotes\\/origin\\///g')";
+            if \[ "$CODEBUILD_GIT_BRANCH" = "" \] ; then
+              export CODEBUILD_GIT_BRANCH="$(git rev-parse HEAD | xargs git name-rev | cut -d' ' -f2 | sed 's/remotes\\/origin\\///g')";
             fi
-          - export CODEBUILD\_PROJECT=${CODEBUILD\_BUILD\_ID%:$CODEBUILD\_LOG\_PATH}
+          - export CODEBUILD_PROJECT=${CODEBUILD_BUILD_ID%:$CODEBUILD_LOG_PATH}
           - echo "Downloading cortexcli"
           - |
-            crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
-              -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-              -H "Authorization: ${CORTEX\_API\_KEY}")
-          - crtx\_url=$(echo "$crtx\_resp" | jq -r ".signed\_url")
-          - curl -o cortexcli "$crtx\_url"
+            crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
+              -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+              -H "Authorization: ${CORTEX_API_KEY}")
+          - crtx_url=$(echo "$crtx_resp" | jq -r ".signed_url")
+          - curl -o cortexcli "$crtx_url"
           - chmod +x cortexcli
           - ./cortexcli --version
           
@@ -4902,14 +4995,14 @@ You must replace placeholder variables with your own credentials and environment
         commands:
           - |
             ./cortexcli \\
-                       --api-base-url "${CORTEX\_API\_URL}" \\
-                       --api-key "${CORTEX\_API\_KEY}" \\
-                       --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+                       --api-base-url "${CORTEX_API_URL}" \\
+                       --api-key "${CORTEX_API_KEY}" \\
+                       --api-key-id "${CORTEX_API_KEY_ID}" \\
                        code scan \\
                        --directory "$(pwd)" \\
-                       --repo-id $CODEBUILD\_ACCOUNT\_ID/$CODEBUILD\_PROJECT \\
-                       --branch $CODEBUILD\_GIT\_BRANCH \\
-                       --source AWS\_CODE\_BUILD \\
+                       --repo-id $CODEBUILD_ACCOUNT_ID/$CODEBUILD_PROJECT \\
+                       --branch $CODEBUILD_GIT_BRANCH \\
+                       --source AWS_CODE_BUILD \\
                        --create-repo-if-missing
     artifacts:
       files:
@@ -4919,7 +5012,7 @@ You must replace placeholder variables with your own credentials and environment
 
 ### Azure Pipelines
 
--   For AMD architecture
+#### For AMD architecture
     
     ```
     trigger:
@@ -4931,8 +5024,8 @@ You must replace placeholder variables with your own credentials and environment
     pool:
       vmImage: ubuntu-latest
     variables:
-      CORTEX\_API\_URL: <your\_cortex\_api\_url> 
-      MIN\_LOG\_LEVEL: "DEBUG"
+      CORTEX_API_URL: <your_cortex_api_url> 
+      MIN_LOG_LEVEL: "DEBUG"
     steps:
     - checkout: self
       clean: true
@@ -4944,41 +5037,41 @@ You must replace placeholder variables with your own credentials and environment
         set -euo pipefail
         sudo apt-get update
         sudo apt-get install -y --no-install-recommends jq ca-certificates curl
-        BASE="${CORTEX\_API\_URL%/}"
-        URL="$BASE/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64"
+        BASE="${CORTEX_API_URL%/}"
+        URL="$BASE/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64"
         set +x
-        CRTX\_URL=$(curl -fsSL "$URL" \\
-          -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-          -H "Authorization: ${CORTEX\_API\_KEY}" | jq -r '.signed\_url')
+        CRTX_URL=$(curl -fsSL "$URL" \\
+          -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+          -H "Authorization: ${CORTEX_API_KEY}" | jq -r '.signed_url')
         set -x
-        curl -fsSL -o cortexcli "$CRTX\_URL"
+        curl -fsSL -o cortexcli "$CRTX_URL"
         chmod +x cortexcli
       displayName: "Download cortexcli (amd64)"
       env:
-        CORTEX\_API\_URL: $(CORTEX\_API\_URL)
-        CORTEX\_API\_KEY\_ID: $(CORTEX\_API\_KEY\_ID)
-        CORTEX\_API\_KEY: $(CORTEX\_API\_KEY)
+        CORTEX_API_URL: $(CORTEX_API_URL)
+        CORTEX_API_KEY_ID: $(CORTEX_API_KEY_ID)
+        CORTEX_API_KEY: $(CORTEX_API_KEY)
     - bash: |
         set -euo pipefail
         ./cortexcli \\
-          --api-base-url "${CORTEX\_API\_URL}" \\
-          --api-key "${CORTEX\_API\_KEY}" \\
-          --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+          --api-base-url "${CORTEX_API_URL}" \\
+          --api-key "${CORTEX_API_KEY}" \\
+          --api-key-id "${CORTEX_API_KEY_ID}" \\
           code scan \\
           --directory "$(Build.SourcesDirectory)" \\
           --repo-id "$(Build.Repository.Name)" \\
           --branch "$(Build.SourceBranchName)" \\
-          --source "CORTEX\_CLI" \\
+          --source "CORTEX_CLI" \\
           --create-repo-if-missing
       displayName: "Cortex CLI Code Scan"
       env:
-        CORTEX\_API\_URL: $(CORTEX\_API\_URL)
-        CORTEX\_API\_KEY\_ID: $(CORTEX\_API\_KEY\_ID)
-        CORTEX\_API\_KEY: $(CORTEX\_API\_KEY)
-        MIN\_LOG\_LEVEL: $(MIN\_LOG\_LEVEL)
+        CORTEX_API_URL: $(CORTEX_API_URL)
+        CORTEX_API_KEY_ID: $(CORTEX_API_KEY_ID)
+        CORTEX_API_KEY: $(CORTEX_API_KEY)
+        MIN_LOG_LEVEL: $(MIN_LOG_LEVEL)
     ```
     
--   For ARM architecture
+#### For ARM architecture
     
     ```
     trigger:
@@ -4988,7 +5081,7 @@ You must replace placeholder variables with your own credentials and environment
       branches:
         include: \['\*'\]
     variables:
-      CORTEX\_API\_URL: <your\_cortex\_api\_url> 
+      CORTEX_API_URL: <your_cortex_api_url> 
     pool:
       name: arm
       demands:
@@ -5001,43 +5094,43 @@ You must replace placeholder variables with your own credentials and environment
       inputs: { versionSpec: "22.x" }
     - bash: |
         set -euo pipefail
-        BASE="${CORTEX\_API\_URL%/}"
-        URL="$BASE/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64"
+        BASE="${CORTEX_API_URL%/}"
+        URL="$BASE/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64"
         set +x
-        CRTX\_URL=$(curl -fsSL "$URL" \\
-          -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-          -H "Authorization: ${CORTEX\_API\_KEY}" | jq -r '.signed\_url')
+        CRTX_URL=$(curl -fsSL "$URL" \\
+          -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+          -H "Authorization: ${CORTEX_API_KEY}" | jq -r '.signed_url')
         set -x
-        curl -fsSL -o cortexcli "$CRTX\_URL"
+        curl -fsSL -o cortexcli "$CRTX_URL"
         chmod +x cortexcli
       displayName: "Download cortexcli (arm64)"
       env:
-        CORTEX\_API\_URL: $(CORTEX\_API\_URL)
-        CORTEX\_API\_KEY\_ID: $(CORTEX\_API\_KEY\_ID)
-        CORTEX\_API\_KEY: $(CORTEX\_API\_KEY)
+        CORTEX_API_URL: $(CORTEX_API_URL)
+        CORTEX_API_KEY_ID: $(CORTEX_API_KEY_ID)
+        CORTEX_API_KEY: $(CORTEX_API_KEY)
     - bash: |
         set -euo pipefail
         ./cortexcli \\
-          --api-base-url "${CORTEX\_API\_URL}" \\
-          --api-key "${CORTEX\_API\_KEY}" \\
-          --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+          --api-base-url "${CORTEX_API_URL}" \\
+          --api-key "${CORTEX_API_KEY}" \\
+          --api-key-id "${CORTEX_API_KEY_ID}" \\
           code scan \\
           --directory "$(Build.SourcesDirectory)" \\
           --repo-id "$(Build.Repository.Name)" \\
           --branch "$(Build.SourceBranchName)" \\
-          --source "CORTEX\_CLI" \\
+          --source "CORTEX_CLI" \\
           --create-repo-if-missing
       displayName: "Cortex CLI Code Scan (ARM64)"
       env:
-        CORTEX\_API\_URL: $(CORTEX\_API\_URL)
-        CORTEX\_API\_KEY\_ID: $(CORTEX\_API\_KEY\_ID)
-        CORTEX\_API\_KEY: $(CORTEX\_API\_KEY)
+        CORTEX_API_URL: $(CORTEX_API_URL)
+        CORTEX_API_KEY_ID: $(CORTEX_API_KEY_ID)
+        CORTEX_API_KEY: $(CORTEX_API_KEY)
     ```
     
 
 ### Bitbucket
 
--   For AMD architecture
+#### For AMD architecture
     
     ```
     image: ubuntu:24.04
@@ -5050,34 +5143,34 @@ You must replace placeholder variables with your own credentials and environment
             script:
               - set -euo pipefail
               - apt-get update && apt-get install -y --no-install-recommends curl jq ca-certificates tar gzip file
-              - curl -fsSL https://deb.nodesource.com/setup\_22.x | bash -
+              - curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
               - apt-get install -y nodejs
               - node -v && npm -v
-              - export CORTEXCLI\_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI\_HOME" || true; mkdir -p "$CORTEXCLI\_HOME"
+              - export CORTEXCLI_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI_HOME" || true; mkdir -p "$CORTEXCLI_HOME"
               - |
-                CRTX\_URL=$(curl -fsSL "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
-                  -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-                  -H "Authorization: ${CORTEX\_API\_KEY}" | jq -r '.signed\_url')
-                curl -fsSL -o cortexcli "$CRTX\_URL"
+                CRTX_URL=$(curl -fsSL "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
+                  -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+                  -H "Authorization: ${CORTEX_API_KEY}" | jq -r '.signed_url')
+                curl -fsSL -o cortexcli "$CRTX_URL"
                 chmod +x cortexcli
                 ./cortexcli --version
               - |
                 ./cortexcli \\
-                  --api-base-url "${CORTEX\_API\_URL}" \\
-                  --api-key "${CORTEX\_API\_KEY}" \\
-                  --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+                  --api-base-url "${CORTEX_API_URL}" \\
+                  --api-key "${CORTEX_API_KEY}" \\
+                  --api-key-id "${CORTEX_API_KEY_ID}" \\
                   code scan \\
-                  --directory "${BITBUCKET\_CLONE\_DIR}" \\
-                  --repo-id "${BITBUCKET\_REPO\_FULL\_NAME}" \\
-                  --branch "${BITBUCKET\_BRANCH}" \\
-                  --source "CORTEX\_CLI" \\
+                  --directory "${BITBUCKET_CLONE_DIR}" \\
+                  --repo-id "${BITBUCKET_REPO_FULL_NAME}" \\
+                  --branch "${BITBUCKET_BRANCH}" \\
+                  --source "CORTEX_CLI" \\
                   --create-repo-if-missing \\
                   --upload-mode no-upload
             artifacts:
               - cortexcli
     ```
     
--   For ARM architecture
+#### For ARM architecture
     
     ```
     image: node:22-bookworm
@@ -5092,29 +5185,29 @@ You must replace placeholder variables with your own credentials and environment
             script:
               - set -euo pipefail
               - apt-get update && apt-get install -y --no-install-recommends curl jq ca-certificates file
-              - export CORTEXCLI\_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI\_HOME" || true; mkdir -p "$CORTEXCLI\_HOME"
+              - export CORTEXCLI_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI_HOME" || true; mkdir -p "$CORTEXCLI_HOME"
     
               - |
                 set +x
-                CRTX\_URL=$(curl -fsSL "${CORTEX\_API\_URL%/}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
-                  -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-                  -H "Authorization: ${CORTEX\_API\_KEY}" | jq -r '.signed\_url')
+                CRTX_URL=$(curl -fsSL "${CORTEX_API_URL%/}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
+                  -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+                  -H "Authorization: ${CORTEX_API_KEY}" | jq -r '.signed_url')
                 set -x
-                curl -fsSL -o cortexcli "$CRTX\_URL"
+                curl -fsSL -o cortexcli "$CRTX_URL"
                 chmod +x cortexcli
                 ./cortexcli --version
     
               # Run the scan
               - |
                 ./cortexcli \\
-                  --api-base-url "${CORTEX\_API\_URL}" \\
-                  --api-key "${CORTEX\_API\_KEY}" \\
-                  --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+                  --api-base-url "${CORTEX_API_URL}" \\
+                  --api-key "${CORTEX_API_KEY}" \\
+                  --api-key-id "${CORTEX_API_KEY_ID}" \\
                   code scan \\
-                  --directory "${BITBUCKET\_CLONE\_DIR}" \\
-                  --repo-id "${BITBUCKET\_REPO\_FULL\_NAME}" \\
-                  --branch "${BITBUCKET\_BRANCH}" \\
-                  --source "CORTEX\_CLI" \\
+                  --directory "${BITBUCKET_CLONE_DIR}" \\
+                  --repo-id "${BITBUCKET_REPO_FULL_NAME}" \\
+                  --branch "${BITBUCKET_BRANCH}" \\
+                  --source "CORTEX_CLI" \\
                   --create-repo-if-missing
             artifacts:
               - cortexcli
@@ -5123,7 +5216,7 @@ You must replace placeholder variables with your own credentials and environment
 
 ### CircleCI
 
--   For AMD architecture
+#### For AMD architecture
     
     ```
     version: 2.1
@@ -5132,32 +5225,32 @@ You must replace placeholder variables with your own credentials and environment
         docker:
           - image: cimg/node:22.17.0  # Replace with a suitable image or executor
         environment:
-          CORTEX\_API\_URL: <your\_cortex\_api\_url>
+          CORTEX_API_URL: <your_cortex_api_url>
         steps:
           - checkout
           - run:
               name: Download cortexcli
               command: |
                 set -x
-                crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
-                  -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-                  -H "Authorization: ${CORTEX\_API\_KEY}")
-                crtx\_url=$(echo $crtx\_resp | jq -r ".signed\_url")
-                curl -o cortexcli $crtx\_url
+                crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
+                  -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+                  -H "Authorization: ${CORTEX_API_KEY}")
+                crtx_url=$(echo $crtx_resp | jq -r ".signed_url")
+                curl -o cortexcli $crtx_url
                 chmod +x cortexcli
                 ./cortexcli --version
           - run:
               name: Run Cortex CLI Code Scan
               command: |
                 ./cortexcli \\
-                  --api-base-url "${CORTEX\_API\_URL}" \\
-                  --api-key "${CORTEX\_API\_KEY}" \\
-                  --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+                  --api-base-url "${CORTEX_API_URL}" \\
+                  --api-key "${CORTEX_API_KEY}" \\
+                  --api-key-id "${CORTEX_API_KEY_ID}" \\
                   code scan \\
                   --directory "$(pwd)" \\
-                  --repo-id "${CIRCLE\_PROJECT\_USERNAME}/${CIRCLE\_PROJECT\_REPONAME}" \\
-                  --branch "${CIRCLE\_BRANCH}" \\
-                  --source "CIRCLE\_CI" \\
+                  --repo-id "${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}" \\
+                  --branch "${CIRCLE_BRANCH}" \\
+                  --source "CIRCLE_CI" \\
                   --create-repo-if-missing
     workflows:
       cortex-scan-workflow:
@@ -5166,7 +5259,7 @@ You must replace placeholder variables with your own credentials and environment
               context: cortex-secrets
     ```
     
--   For ARM architecture
+#### For ARM architecture
     
     ```
     version: 2.1
@@ -5175,32 +5268,32 @@ You must replace placeholder variables with your own credentials and environment
         docker:
           - image: <Replace with image supporting node js version 22 or higher>
         environment:
-          CORTEX\_API\_URL: <your\_cortex\_api\_url> 
+          CORTEX_API_URL: <your_cortex_api_url> 
         steps:
           - checkout
           - run:
               name: Download cortexcli
               command: |
                 set -x
-                crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
-                  -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-                  -H "Authorization: ${CORTEX\_API\_KEY}")
-                crtx\_url=$(echo $crtx\_resp | jq -r ".signed\_url")
-                curl -o cortexcli $crtx\_url
+                crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
+                  -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+                  -H "Authorization: ${CORTEX_API_KEY}")
+                crtx_url=$(echo $crtx_resp | jq -r ".signed_url")
+                curl -o cortexcli $crtx_url
                 chmod +x cortexcli
                 ./cortexcli --version
           - run:
               name: Run Cortex CLI Code Scan
               command: |
                 ./cortexcli \\
-                  --api-base-url "${CORTEX\_API\_URL}" \\
-                  --api-key "${CORTEX\_API\_KEY}" \\
-                  --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+                  --api-base-url "${CORTEX_API_URL}" \\
+                  --api-key "${CORTEX_API_KEY}" \\
+                  --api-key-id "${CORTEX_API_KEY_ID}" \\
                   code scan \\
                   --directory "$(pwd)" \\
-                  --repo-id "${CIRCLE\_PROJECT\_USERNAME}/${CIRCLE\_PROJECT\_REPONAME}" \\
-                  --branch "${CIRCLE\_BRANCH}" \\
-                  --source "CIRCLE\_CI" \\
+                  --repo-id "${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}" \\
+                  --branch "${CIRCLE_BRANCH}" \\
+                  --source "CIRCLE_CI" \\
                   --create-repo-if-missing
     workflows:
       cortex-scan-workflow:
@@ -5212,7 +5305,7 @@ You must replace placeholder variables with your own credentials and environment
 
 ### GitHub Actions
 
--   For AMD architecture
+#### For AMD architecture
     
     ```
     name: Cortex CLI Code Scan
@@ -5220,11 +5313,11 @@ You must replace placeholder variables with your own credentials and environment
       push:
         branches:
           - main
-      workflow\_dispatch:
+      workflow_dispatch:
     env:
-      CORTEX\_API\_KEY: ${{secrets.CORTEX\_API\_KEY}}
-      CORTEX\_API\_KEY\_ID: ${{secrets.CORTEX\_API\_KEY\_ID}}
-      CORTEX\_API\_URL: <your\_cortex\_api\_url> 
+      CORTEX_API_KEY: ${{secrets.CORTEX_API_KEY}}
+      CORTEX_API_KEY_ID: ${{secrets.CORTEX_API_KEY_ID}}
+      CORTEX_API_URL: <your_cortex_api_url> 
       
     jobs:
       cortex-code-scan:
@@ -5242,28 +5335,28 @@ You must replace placeholder variables with your own credentials and environment
         - name: Download cortexcli
           run: |
             set -x
-            crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
-              -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-              -H "Authorization: ${CORTEX\_API\_KEY}")
-            crtx\_url=$(echo $crtx\_resp | jq -r ".signed\_url")
-            curl -o cortexcli $crtx\_url
+            crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
+              -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+              -H "Authorization: ${CORTEX_API_KEY}")
+            crtx_url=$(echo $crtx_resp | jq -r ".signed_url")
+            curl -o cortexcli $crtx_url
             chmod +x cortexcli
             ./cortexcli --version
         - name: Run Cortex CLI Code Scan
           run: |
             ./cortexcli \\
-              --api-base-url "${CORTEX\_API\_URL}" \\
-              --api-key "${CORTEX\_API\_KEY}" \\
-              --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+              --api-base-url "${CORTEX_API_URL}" \\
+              --api-key "${CORTEX_API_KEY}" \\
+              --api-key-id "${CORTEX_API_KEY_ID}" \\
               code scan \\
               --directory "${{github.workspace}}" \\
               --repo-id "${{github.repository}}" \\
-              --branch "${{github.ref\_name}}" \\
-              --source "GITHUB\_ACTIONS" \\
+              --branch "${{github.ref_name}}" \\
+              --source "GITHUB_ACTIONS" \\
               --create-repo-if-missing
     ```
     
--   For ARM architecture
+#### For ARM architecture
     
     ```
     name: Cortex CLI Code Scan
@@ -5271,11 +5364,11 @@ You must replace placeholder variables with your own credentials and environment
       push:
         branches:
           - main
-      workflow\_dispatch:
+      workflow_dispatch:
     env:
-      CORTEX\_API\_KEY: ${{secrets.CORTEX\_API\_KEY}}
-      CORTEX\_API\_KEY\_ID: ${{secrets.CORTEX\_API\_KEY\_ID}}
-      CORTEX\_API\_URL: <your\_cortex\_api\_url>
+      CORTEX_API_KEY: ${{secrets.CORTEX_API_KEY}}
+      CORTEX_API_KEY_ID: ${{secrets.CORTEX_API_KEY_ID}}
+      CORTEX_API_URL: <your_cortex_api_url>
       
     jobs:
       cortex-code-scan:
@@ -5293,126 +5386,126 @@ You must replace placeholder variables with your own credentials and environment
         - name: Download cortexcli
           run: |
             set -x
-            crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
-              -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-              -H "Authorization: ${CORTEX\_API\_KEY}")
-            crtx\_url=$(echo $crtx\_resp | jq -r ".signed\_url")
-            curl -o cortexcli $crtx\_url
+            crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
+              -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+              -H "Authorization: ${CORTEX_API_KEY}")
+            crtx_url=$(echo $crtx_resp | jq -r ".signed_url")
+            curl -o cortexcli $crtx_url
             chmod +x cortexcli
             ./cortexcli --version
         - name: Run Cortex CLI Code Scan
           run: |
             ./cortexcli \\
-              --api-base-url "${CORTEX\_API\_URL}" \\
-              --api-key "${CORTEX\_API\_KEY}" \\
-              --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+              --api-base-url "${CORTEX_API_URL}" \\
+              --api-key "${CORTEX_API_KEY}" \\
+              --api-key-id "${CORTEX_API_KEY_ID}" \\
               code scan \\
               --directory "${{github.workspace}}" \\
               --repo-id "${{github.repository}}" \\
-              --branch "${{github.ref\_name}}" \\
-              --source "GITHUB\_ACTIONS" \\
+              --branch "${{github.ref_name}}" \\
+              --source "GITHUB_ACTIONS" \\
               --create-repo-if-missing
     ```
     
 
 ### GitLab Runner
 
--   For AMD architecture
+#### For AMD architecture
     
     ```
     stages: \[scan\]
     variables:
-      CORTEX\_API\_URL: <your\_cortex\_api\_url>
-    cortex\_code\_scan:
+      CORTEX_API_URL: <your_cortex_api_url>
+    cortex_code_scan:
       image: node:22-bookworm@sha256:bb6834c0669aa71cbc8d94606561a721adf489f6b93d7b8b825f0cf1b498c2c4
       tags: \["amd64"\]
       stage: scan
       rules:
-        - when: on\_success
-      before\_script:
+        - when: on_success
+      before_script:
         - uname -m
         - set -euo pipefail
         - apt-get update
         - apt-get install -y --no-install-recommends curl jq ca-certificates tar gzip file
-        - export CORTEXCLI\_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI\_HOME" || true; mkdir -p "$CORTEXCLI\_HOME"
+        - export CORTEXCLI_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI_HOME" || true; mkdir -p "$CORTEXCLI_HOME"
         - |
           # avoid leaking secrets in logs
           set +x
-          CRTX\_URL=$(curl -fsSL "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
-            -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-            -H "Authorization: ${CORTEX\_API\_KEY}" | jq -r '.signed\_url')
+          CRTX_URL=$(curl -fsSL "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
+            -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+            -H "Authorization: ${CORTEX_API_KEY}" | jq -r '.signed_url')
           set -x
-          curl -fsSL -o cortexcli "$CRTX\_URL"
+          curl -fsSL -o cortexcli "$CRTX_URL"
           chmod +x cortexcli
           ./cortexcli --version
       script:
         - |
           ./cortexcli \\
-            --api-base-url "${CORTEX\_API\_URL}" \\
-            --api-key "${CORTEX\_API\_KEY}" \\
-            --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+            --api-base-url "${CORTEX_API_URL}" \\
+            --api-key "${CORTEX_API_KEY}" \\
+            --api-key-id "${CORTEX_API_KEY_ID}" \\
             code scan \\
-            --directory "${CI\_PROJECT\_DIR}" \\
-            --repo-id "${CI\_PROJECT\_PATH}" \\
-            --branch "${CI\_COMMIT\_REF\_NAME}" \\
-            --source "CORTEX\_CLI" \\
+            --directory "${CI_PROJECT_DIR}" \\
+            --repo-id "${CI_PROJECT_PATH}" \\
+            --branch "${CI_COMMIT_REF_NAME}" \\
+            --source "CORTEX_CLI" \\
             --upload-mode no-upload \\
             --create-repo-if-missing
       artifacts:
         when: always
         paths: \[cortexcli\]
-        expire\_in: 1 day
+        expire_in: 1 day
     ```
     
--   For ARM architecture
+#### For ARM architecture
     
     ```
     stages: \[scan\]
     variables:
-      CORTEX\_API\_URL: <your\_cortex\_api\_url> 
-    cortex\_code\_scan:
+      CORTEX_API_URL: <your_cortex_api_url> 
+    cortex_code_scan:
       image: node:22-bookworm
       stage: scan
       rules:
-        - when: on\_success
-      before\_script:
+        - when: on_success
+      before_script:
         - set -euo pipefail
         - apt-get update
         - apt-get install -y --no-install-recommends curl jq ca-certificates tar gzip file
-        - export CORTEXCLI\_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI\_HOME" || true; mkdir -p "$CORTEXCLI\_HOME"
+        - export CORTEXCLI_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI_HOME" || true; mkdir -p "$CORTEXCLI_HOME"
         - |
           # avoid leaking secrets in logs
           set +x
-          CRTX\_URL=$(curl -fsSL "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
-            -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-            -H "Authorization: ${CORTEX\_API\_KEY}" | jq -r '.signed\_url')
+          CRTX_URL=$(curl -fsSL "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
+            -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+            -H "Authorization: ${CORTEX_API_KEY}" | jq -r '.signed_url')
           set -x
-          curl -fsSL -o cortexcli "$CRTX\_URL"
+          curl -fsSL -o cortexcli "$CRTX_URL"
           chmod +x cortexcli
           ./cortexcli --version
       script:
         - |
           ./cortexcli \\
-            --api-base-url "${CORTEX\_API\_URL}" \\
-            --api-key "${CORTEX\_API\_KEY}" \\
-            --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+            --api-base-url "${CORTEX_API_URL}" \\
+            --api-key "${CORTEX_API_KEY}" \\
+            --api-key-id "${CORTEX_API_KEY_ID}" \\
             code scan \\
-            --directory "${CI\_PROJECT\_DIR}" \\
-            --repo-id "${CI\_PROJECT\_PATH}" \\
-            --branch "${CI\_COMMIT\_REF\_NAME}" \\
-            --source "CORTEX\_CLI" \\
+            --directory "${CI_PROJECT_DIR}" \\
+            --repo-id "${CI_PROJECT_PATH}" \\
+            --branch "${CI_COMMIT_REF_NAME}" \\
+            --source "CORTEX_CLI" \\
             --upload-mode no-upload \\
             --create-repo-if-missing
       artifacts:
         when: always
         paths: \[cortexcli\]
-        expire\_in: 1 day
+        expire_in: 1 day
     ```
     
 
 ### Jenkins
 
--   For AMD architecture
+#### For AMD architecture
     
     ```
     pipeline {
@@ -5423,9 +5516,9 @@ You must replace placeholder variables with your own credentials and environment
             }
         }
         environment {
-            CORTEX\_API\_KEY = credentials('CORTEX\_API\_KEY')
-            CORTEX\_API\_KEY\_ID = credentials('CORTEX\_API\_KEY\_ID')
-            CORTEX\_API\_URL = <your\_cortex\_api\_url> 
+            CORTEX_API_KEY = credentials('CORTEX_API_KEY')
+            CORTEX_API_KEY_ID = credentials('CORTEX_API_KEY_ID')
+            CORTEX_API_URL = <your_cortex_api_url> 
         }
         stages {
             stage('Checkout Repository') {
@@ -5446,12 +5539,12 @@ You must replace placeholder variables with your own credentials and environment
                 steps {
                     script {
                         def response = sh(script: """
-                            curl --location '${env.CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64' \\
-                              --header 'Authorization: ${env.CORTEX\_API\_KEY}' \\
-                              --header 'x-xdr-auth-id: ${env.CORTEX\_API\_KEY\_ID}' \\
+                            curl --location '${env.CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64' \\
+                              --header 'Authorization: ${env.CORTEX_API_KEY}' \\
+                              --header 'x-xdr-auth-id: ${env.CORTEX_API_KEY_ID}' \\
                               --silent
                         """, returnStdout: true).trim()
-                        def downloadUrl = sh(script: """echo '${response}' | jq -r '.signed\_url'""", returnStdout: true).trim()
+                        def downloadUrl = sh(script: """echo '${response}' | jq -r '.signed_url'""", returnStdout: true).trim()
                         sh """
                             curl -o cortexcli '${downloadUrl}'
                             chmod +x cortexcli
@@ -5467,12 +5560,12 @@ You must replace placeholder variables with your own credentials and environment
                         unstash 'source'
                         sh """
                         ./cortexcli \\
-                          --api-base-url "${env.CORTEX\_API\_URL}" \\
-                          --api-key "${env.CORTEX\_API\_KEY}" \\
-                          --api-key-id "${env.CORTEX\_API\_KEY\_ID}" \\
+                          --api-base-url "${env.CORTEX_API_URL}" \\
+                          --api-key "${env.CORTEX_API_KEY}" \\
+                          --api-key-id "${env.CORTEX_API_KEY_ID}" \\
                           code scan \\
                           --directory "\\$(pwd)" \\
-                          --repo-id <REPLACE WITH REPO\_OWNER/REPO\_NAME> \\
+                          --repo-id <REPLACE WITH REPO_OWNER/REPO_NAME> \\
                           --branch <REPLACE WITH BRANCH> \\
                           --source "JENKINS" \\
                           --create-repo-if-missing
@@ -5484,7 +5577,7 @@ You must replace placeholder variables with your own credentials and environment
     }
     ```
     
--   For ARM architecture
+#### For ARM architecture
     
     ```
     pipeline {
@@ -5495,9 +5588,9 @@ You must replace placeholder variables with your own credentials and environment
             }
         }
         environment {
-            CORTEX\_API\_KEY = credentials('CORTEX\_API\_KEY')
-            CORTEX\_API\_KEY\_ID = credentials('CORTEX\_API\_KEY\_ID')
-            CORTEX\_API\_URL = <your\_cortex\_api\_url> 
+            CORTEX_API_KEY = credentials('CORTEX_API_KEY')
+            CORTEX_API_KEY_ID = credentials('CORTEX_API_KEY_ID')
+            CORTEX_API_URL = <your_cortex_api_url> 
         }
         stages {
             stage('Checkout Repository') {
@@ -5518,12 +5611,12 @@ You must replace placeholder variables with your own credentials and environment
                 steps {
                     script {
                         def response = sh(script: """
-                            curl --location '${env.CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64' \\
-                              --header 'Authorization: ${env.CORTEX\_API\_KEY}' \\
-                              --header 'x-xdr-auth-id: ${env.CORTEX\_API\_KEY\_ID}' \\
+                            curl --location '${env.CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64' \\
+                              --header 'Authorization: ${env.CORTEX_API_KEY}' \\
+                              --header 'x-xdr-auth-id: ${env.CORTEX_API_KEY_ID}' \\
                               --silent
                         """, returnStdout: true).trim()
-                        def downloadUrl = sh(script: """echo '${response}' | jq -r '.signed\_url'""", returnStdout: true).trim()
+                        def downloadUrl = sh(script: """echo '${response}' | jq -r '.signed_url'""", returnStdout: true).trim()
                         sh """
                             curl -o cortexcli '${downloadUrl}'
                             chmod +x cortexcli
@@ -5539,12 +5632,12 @@ You must replace placeholder variables with your own credentials and environment
                         unstash 'source'
                         sh """
                         ./cortexcli \\
-                          --api-base-url "${env.CORTEX\_API\_URL}" \\
-                          --api-key "${env.CORTEX\_API\_KEY}" \\
-                          --api-key-id "${env.CORTEX\_API\_KEY\_ID}" \\
+                          --api-base-url "${env.CORTEX_API_URL}" \\
+                          --api-key "${env.CORTEX_API_KEY}" \\
+                          --api-key-id "${env.CORTEX_API_KEY_ID}" \\
                           code scan \\
                           --directory "\\$(pwd)" \\
-                          --repo-id <REPLACE WITH REPO\_OWNER/REPO\_NAME> \\
+                          --repo-id <REPLACE WITH REPO_OWNER/REPO_NAME> \\
                           --branch <REPLACE WITH BRANCH> \\
                           --source "JENKINS" \\
                           --create-repo-if-missing
@@ -5833,7 +5926,6 @@ Only onboarded and scanned repositories can be mapped.
     -   Application: Refer to for more information
 
 ### Semgrep
-Abstract
 
 Cortex Cloud AppSec integrates with Semgrep to ingest SCA and SAST findings into the unified AppSec data model.
 
@@ -5985,7 +6077,6 @@ Manage data source integrations to maintain current configurations and align wit
 Deletion is irreversible. To restore Semgrep findings after deletion, reconfigure the integration and wait for the next polling cycle to re-ingest findings from Semgrep.
 
 #### Semgrep Software Composition Analysis (SCA) data ingestion
-Abstract
 
 Cortex Cloud ingests, normalizes, and displays Software Composition Analysis (SCA) data from Semgrep
 
@@ -6031,7 +6122,6 @@ The table displays all vulnerability issues across all data sources, including S
     3.  Select a repository to drill down into its findings.
 
 #### Semgrep Static Application Security Testing (SAST) data ingestion
-Abstract
 
 Cortex Cloud ingests, normalizes, and displays SAST data from Semgrep
 
@@ -6075,7 +6165,6 @@ The table displays all code weakness issues across all data sources, including S
     3.  Select a repository to drill down into its findings.
 
 ### Snyk
-Abstract
 
 Configure the Snyk integration to ingest SAST and SCA vulnerability findings into Cortex Cloud, unifying your software package assets and security code.
 
@@ -6260,6 +6349,14 @@ After third-party scanner integration is configured, Cortex Cloud automatically 
     
 -   Static Application Security Testing (SAST)
 
+---
+title: "Snyk Software Composition Analysis (SCA) ingestion"
+tocId: "xbs4qp~MwouxGmd88Sb7DA"
+contentId: "~k7NQLKD_mFcFJ2Or~8UPA"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Snyk-Software-Composition-Analysis-SCA-ingestion"
+depth: 3
+---
+
 #### Snyk Software Composition Analysis (SCA) ingestion
 **Abstract:** How Cortex Cloud ingests, normalizes, and displays Software Composition Analysis (SCA) data from Snyk, including software package assets and CVE findings.
 
@@ -6299,11 +6396,11 @@ For more information about SCA issues and findings, refer to Software Compositio
     
     -   **Data Source:** SNYK
         
-    -   **Detection Method:** CAS\_CVE\_SCANNER
+    -   **Detection Method:** CAS_CVE_SCANNER
         
-    -   **Report Identifier:** ThirdParty\_SNYK\_SCA
+    -   **Report Identifier:** ThirdParty_SNYK_SCA
         
-    -   **Asset Type:** <LANGUAGE>\_PACKAGE (e.g., JAVASCRIPT\_PACKAGE)
+    -   **Asset Type:** <LANGUAGE>_PACKAGE (e.g., JAVASCRIPT_PACKAGE)
         
     
 
@@ -6313,6 +6410,14 @@ For more information about SCA issues and findings, refer to Software Compositio
     
 -   **Which vulnerability identifier is used when Snyk reports both a CVE and a SNYK ID?** CVE identifiers are prioritized. When a Snyk issue contains both, the CVE is used as the primary vulnerability ID
 
+---
+title: "Snyk Static Application Security Testing (SAST) Findings"
+tocId: "wuV9aNsyMSsUjU9Ld8MEoQ"
+contentId: "MJgUp5vGXQDnug3jfDgIFg"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Snyk-Static-Application-Security-Testing-SAST-Findings"
+depth: 3
+---
+
 #### Snyk Static Application Security Testing (SAST) Findings
 **Abstract:** A detailed guide on how Cortex Cloud ingests, normalizes, and displays Static Application Security Testing (SAST) code-level vulnerabilities from Snyk Code.
 
@@ -6320,7 +6425,7 @@ When the SAST scan type is enabled in the Snyk integration, Cortex Cloud ingests
 
 ##### SAST vulnerability findings
 
-For each code vulnerability, a **SAST Finding** is created with the detection method CAS\_SAST\_SCANNER. Unlike SCA findings, SAST findings are associated with the repository asset itself and do not create individual software package assets.
+For each code vulnerability, a **SAST Finding** is created with the detection method CAS_SAST_SCANNER. Unlike SCA findings, SAST findings are associated with the repository asset itself and do not create individual software package assets.
 
 | Field | Description | Example |
 | --- | --- | --- |
@@ -6365,15 +6470,15 @@ SAST findings are classified using CWE identifiers extracted from the Snyk issue
 | Data Point | Snyk API Source |
 | --- | --- |
 | Rule name / Title | attributes.title |
-| Severity | attributes.effective\_severity\_level |
+| Severity | attributes.effective_severity_level |
 | CWE | attributes.classes\[\] (type=weakness) |
-| File path | location\_data\[\].file\_path |
-| Line number | location\_data\[\].line\_number |
-| End line number | location\_data\[\].end\_line\_number |
-| Column number | location\_data\[\].column\_number |
-| End column number | location\_data\[\].end\_column\_number |
-| Commit hash | location\_data\[\].commit\_id |
-| Branch | project\_attributes.target\_reference |
+| File path | location_data\[\].file_path |
+| Line number | location_data\[\].line_number |
+| End line number | location_data\[\].end_line_number |
+| Column number | location_data\[\].column_number |
+| End column number | location_data\[\].end_column_number |
+| Commit hash | location_data\[\].commit_id |
+| Branch | project_attributes.target_reference |
 | Description | attributes.description |
 | Status | attributes.status |
 | Risk score | attributes.risk.score.value |
@@ -6388,9 +6493,9 @@ SAST findings are classified using CWE identifiers extracted from the Snyk issue
     
     -   **Data Source:** SNYK
         
-    -   **Detection Method:** CAS\_SAST\_SCANNER
+    -   **Detection Method:** CAS_SAST_SCANNER
         
-    -   **Report Identifier:** ThirdParty\_SNYK\_SAST
+    -   **Report Identifier:** ThirdParty_SNYK_SAST
         
     -   **Asset Type:** repository
         
@@ -6866,6 +6971,14 @@ After onboarding the 3rd Party AppSec Collector, you can view SAST code weakness
         
     -   For more information about SAST issues on the Code Weaknesses tab under Business Applications assets, refer to Business application expanded asset details
 
+---
+title: "Onboard the 3rd Party AppSec Collector"
+tocId: "iTGrB7jcrlVCh_mBp1Utqw"
+contentId: "PppPulfuChkzuc4UcVR1SA"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Onboard-the-3rd-Party-AppSec-Collector"
+depth: 3
+---
+
 #### Onboard the 3rd Party AppSec Collector
 Before you begin, fulfill these prerequisites.
 
@@ -6963,7 +7076,7 @@ Before you begin, fulfill these prerequisites.
     -   `cURL`
         
         ```
-        curl -X POST {API\_URL\_FROM\_RESPONSE}?repository\_id={repository\_asset\_id}&branch={branch\_name} -H 'x-crtx-auth-id: {token\_id}' -H 'Authorization: {api\_token}' -H 'Content-Type: application/json' -d '{"example": "value"}' 
+        curl -X POST {API_URL_FROM_RESPONSE}?repository_id={repository_asset_id}&branch={branch_name} -H 'x-crtx-auth-id: {token_id}' -H 'Authorization: {api_token}' -H 'Content-Type: application/json' -d '{"example": "value"}' 
         ```
         
     -   Full `cURL` example
@@ -6972,8 +7085,8 @@ Before you begin, fulfill these prerequisites.
         
         ```
         curl --location '{base-URL}' \\
-          --header 'Authorization:{API\_KEY}' \\
-          --header 'x-crtx-auth-id: {API\_KEY\_ID}' \\
+          --header 'Authorization:{API_KEY}' \\
+          --header 'x-crtx-auth-id: {API_KEY_ID}' \\
           --header 'Content-Type: application/json' \\
           --data '{
             "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
@@ -7027,7 +7140,7 @@ Before you begin, fulfill these prerequisites.
                     "level": "error",
                     "rank": 5,
                     "message": {
-                      "text": "<span>This call to java.lang.ProcessBuilder.start() contains a command injection flaw.  The argument to the function is constructed using untrusted input.  If an attacker is allowed to specify all or part of the command, it may be possible to execute commands on the server with the privileges of the executing process.  The level of exposure depends on the effectiveness of input validation routines, if any. start() was called on the processBuilder object, which contains tainted data. The tainted data originated from an earlier call to AnnotationVirtualController.vc\_annotation\_entry.</span> <span>Validate all untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.  When using blocklists, be sure that the sanitizing routine performs a sufficient number of iterations to remove all instances of disallowed characters.  Most APIs that execute system commands also have a \\\\\\"safe\\\\\\" version of the method that takes an array of strings as input rather than a single string, which protects against some forms of command injection.</span> <span>References: <a href=\\\\\\"https://cwe.mitre.org/data/definitions/78.html\\\\\\">CWE</a> <a href=\\\\\\"https://owasp.org/www-community/attacks/Command\_Injection\\\\\\">OWASP</a></span>"
+                      "text": "<span>This call to java.lang.ProcessBuilder.start() contains a command injection flaw.  The argument to the function is constructed using untrusted input.  If an attacker is allowed to specify all or part of the command, it may be possible to execute commands on the server with the privileges of the executing process.  The level of exposure depends on the effectiveness of input validation routines, if any. start() was called on the processBuilder object, which contains tainted data. The tainted data originated from an earlier call to AnnotationVirtualController.vc_annotation_entry.</span> <span>Validate all untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.  When using blocklists, be sure that the sanitizing routine performs a sufficient number of iterations to remove all instances of disallowed characters.  Most APIs that execute system commands also have a \\\\\\"safe\\\\\\" version of the method that takes an array of strings as input rather than a single string, which protects against some forms of command injection.</span> <span>References: <a href=\\\\\\"https://cwe.mitre.org/data/definitions/78.html\\\\\\">CWE</a> <a href=\\\\\\"https://owasp.org/www-community/attacks/Command_Injection\\\\\\">OWASP</a></span>"
                     },
                     "locations": \[
                       {
@@ -7055,8 +7168,8 @@ Before you begin, fulfill these prerequisites.
                     \],
                     "ruleId": "78",
                     "partialFingerprints": {
-                      "context\_guid": "",
-                      "file\_path": "",
+                      "context_guid": "",
+                      "file_path": "",
                       "procedure": ""
                     }
                   },
@@ -7064,7 +7177,7 @@ Before you begin, fulfill these prerequisites.
                     "level": "error",
                     "rank": 4,
                     "message": {
-                      "text": "<span>This database query contains a SQL injection flaw.  The call to java.sql.Statement.executeQuery() constructs a dynamic SQL query using a variable derived from untrusted input.  An attacker could exploit this flaw to execute arbitrary SQL queries against the database. The first argument to executeQuery() contains tainted data from the variable query. The tainted data originated from an earlier call to AnnotationVirtualController.vc\_annotation\_entry.</span> <span>Avoid dynamically constructing SQL queries.  Instead, use parameterized prepared statements to prevent the database from interpreting the contents of bind variables as part of the query.  Always validate untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.</span> <span>References: <a href=\\\\\\"https://cwe.mitre.org/data/definitions/89.html\\\\\\">CWE</a> <a href=\\\\\\"https://owasp.org/www-community/attacks/SQL\_Injection\\\\\\">OWASP</a></span>"
+                      "text": "<span>This database query contains a SQL injection flaw.  The call to java.sql.Statement.executeQuery() constructs a dynamic SQL query using a variable derived from untrusted input.  An attacker could exploit this flaw to execute arbitrary SQL queries against the database. The first argument to executeQuery() contains tainted data from the variable query. The tainted data originated from an earlier call to AnnotationVirtualController.vc_annotation_entry.</span> <span>Avoid dynamically constructing SQL queries.  Instead, use parameterized prepared statements to prevent the database from interpreting the contents of bind variables as part of the query.  Always validate untrusted input to ensure that it conforms to the expected format, using centralized data validation routines when possible.</span> <span>References: <a href=\\\\\\"https://cwe.mitre.org/data/definitions/89.html\\\\\\">CWE</a> <a href=\\\\\\"https://owasp.org/www-community/attacks/SQL_Injection\\\\\\">OWASP</a></span>"
                     },
                     "locations": \[
                       {
@@ -7092,8 +7205,8 @@ Before you begin, fulfill these prerequisites.
                     \],
                     "ruleId": "89",
                     "partialFingerprints": {
-                      "context\_guid": "",
-                      "file\_path": "",
+                      "context_guid": "",
+                      "file_path": "",
                       "procedure": ""
                     }
                   }
@@ -7109,15 +7222,15 @@ Before you begin, fulfill these prerequisites.
         import requests
         import json
         
-        def generic\_collector(token\_id, api\_token):
+        def generic_collector(token_id, api_token):
             headers = {
-                "Authorization": {token\_id},
-                "x-crtx-auth-id": {api\_token},
+                "Authorization": {token_id},
+                "x-crtx-auth-id": {api_token},
                 "Content-Type": "application/json"
             }
         
             body = json.dumps({"example": "value"})
-            res = requests.post(url="{API\_URL\_FROM\_RESPONSE}?repository\_id={repository\_asset\_id}&branch={branch\_name}",
+            res = requests.post(url="{API_URL_FROM_RESPONSE}?repository_id={repository_asset_id}&branch={branch_name}",
                                 headers=headers,
                                 data=body)
             return res
@@ -7255,7 +7368,6 @@ When you select a specific integration instance, the UI adapts based on the type
 | Test Ingestion | No | Yes |
 
 ## Transporter over Broker VM
-Abstract
 
 Transporter over Broker VM sets up a secure communication channel between your VCS and Cortex.
 
@@ -7340,7 +7452,6 @@ The order for setting up the Transporter solution is as follows:
 2.  Onboard the Transporter on your VCS.
 
 ### Set up a Transporter applet on Broker VM
-Abstract
 
 Setup a Transporter applet on Broker VM.
 
@@ -7407,7 +7518,6 @@ To manage Transporter applet configurations, disable connections, or deactivate 
     All existing connections are deleted but their configurations are saved in the database. When adding a new connection, you'll be prompted if you want to reuse previous configurations.
 
 ### Set up a Transporter on your VCS
-Abstract
 
 Setup a Transporter on your version control system.
 
@@ -7440,7 +7550,6 @@ You configure a Transporter when onboarding your on-premises version control sys
 **GitLab Enterprise webhook internal IP restriction**: GitLab Enterprise's security policies prevent webhook subscriptions to internal IP addresses (such as broker addresses). These subscriptions can only be enabled through specific instance configuration. For more information, refer to [https://docs.gitlab.com/security/webhooks/](https://docs.gitlab.com/security/webhooks/).
 
 # Cortex Cloud Application Security dashboard
-Abstract
 
 Monitor and analyze your Application Security posture with the Application Security dashboard.
 
@@ -7575,7 +7684,6 @@ The Cortex Cloud Application Security dashboard provides an overview of the appl
     -   Selecting a pipeline opens the main Issues page filtered by critical and high issues detected in the pipeline
 
 # Application Security Posture Management (ASPM)
-Abstract
 
 ASPM centralizes AppSec monitoring across the SDLC. It aggregates findings from tools such as IaC and SCA to provide a holistic view and prioritize risks.
 
@@ -7630,7 +7738,6 @@ Permissions assigned to the AppSec Admin role cannot be modified. However, you c
 You can view AppSec Admin permissions in the tenant by navigating to Settings → Configurations → Roles → AppSec Admin.
 
 ## Code to Cloud
-Abstract
 
 Code to Cloud context maps asset lineage across the SDLC. By connecting repos, pipelines, and infra, it provides end-to-end traceability from code to runtime.
 
@@ -7688,7 +7795,6 @@ To build the asset lineage, Cortex Cloud requires integration with specific prov
 | IaC | Terraform (.tf), CloudFormation (.yml, .json) |
 
 ### Code to Cloud visibility
-Abstract
 
 Manage security risk across the SDLC by tracing technical asset lineage. View asset dependencies and runtime context in assets, issues, and policies.
 
@@ -7717,7 +7823,6 @@ If the Code to Cloud lineage is incomplete, specific signals may be missing. Com
 Empty state messages and troubleshooting guidance for missing lineage are only visible to users with an active license.
 
 ## ASPM Command Center
-Abstract
 
 The ASPM Command Center is your central hub for real-time application security posture management across the SDLC. It offers critical insights to identify risks, track compliance, and enable secure development, transforming data into actionable cases.
 
@@ -7800,7 +7905,6 @@ Clicking on the prioritization and aggregation part of the graph provides a dedi
 In the ASPM Command Center Overview page, the final section of the graph summarizes your cases: It displays the total count of open and closed cases. Open cases are further broken down by critical and high severity, alongside a summary of closed cases.
 
 ## Applications
-Abstract
 
 Build and manage applications as holistic entities. Gain centralized visibility across the SDLC to monitor assets and remediate threats based on business risk.
 
@@ -7816,7 +7920,6 @@ Applications are a single, holistic entity that encompasses their entire lifecyc
 By centralizing these functions, Cortex Cloud helps you to identify, prioritize, and remediate issues that could impact your most critical business systems.
 
 ### Defining Business Applications
-Abstract
 
 Define Business Applications automatically using tag-based criteria or manually with the Application Builder to map assets and prioritize app risk.
 
@@ -7829,7 +7932,6 @@ You can build applications using one of these methods:
 -   **Application Builder**: Provide a starting point from either code or cloud, and Cortex Cloud Application Security automatically maps related assets across the application lifecycle
 
 #### Defining business applications by Criteria
-Abstract
 
 The Criteria process uses tag-based criteria as the single source of truth to automatically define application assets and enable Code-to-Cloud risk correlation in real-time.
 
@@ -8015,7 +8117,6 @@ Grouping is limited to assets within a single cloud provider, and assets with th
     3.  Verification: On the Business Applications page, confirm the success notification is displayed, and that the newly created applications, based on the defined criteria, are displayed in the list. You may need to wait some time for the applications to populate, especially for large applications gathering substantial data.
 
 #### How to manually build an application
-Abstract
 
 Manually build an application by adding assets, starting from either the code or run side.
 
@@ -8781,6 +8882,14 @@ The CWE table includes the following properties. Click on the Table Settings Men
 
 For more information about about third party code weaknesses, refer to Manage code weaknesses.
 
+---
+title: "Manage Repository assets"
+tocId: "rP38pfNh_dcZ0bC3P_hJ6w"
+contentId: "6JMeXX0aQG_VKvEN~1rf6w"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Manage-Repository-assets"
+depth: 2
+---
+
 ### Manage Repository assets
 You can perform these actions on repository assets.
 
@@ -8794,7 +8903,7 @@ Right-click on a row in the inventory table to take the following actions:
     
 -   Copy entire row: Duplicate the entire row of data for easy pasting elsewhere
     
--   Show/hide rows with \[Asset\_Name\]: Show/hide rows matching the \[asset name\] of the selected row
+-   Show/hide rows with \[Asset_Name\]: Show/hide rows matching the \[asset name\] of the selected row
     
 
 -   Open in Cortex Assistant/Open in Cortex Agentic Assistant: Displays the repository asset in Cortex Assistant or Cortex Agentic Assistant.
@@ -9024,7 +9133,6 @@ The following table outlines Urgency metrics by scanner, detailing each metric's
 | OWASP Top 10 | Indicates whether the issue maps to one of the OWASP Top 10 Web Application Security Risks | True, False | — |
 
 ## Backlog baseline
-Abstract
 
 Backlog represents pre-existing code issues discovered by a scanner's first run or by new rules.
 
@@ -9087,7 +9195,6 @@ You can leverage the Backlog and New issue classifications across the platform a
     -   You can disable the issues on existing SBOM are considered new flag programmatically, provided you have the required permissions
 
 ## Service Lead Agreements (SLA)
-Abstract
 
 Application Security SLA defines deadlines for fixing security issues based on severity, ensuring timely remediation and improving team performance.
 
@@ -9458,7 +9565,6 @@ Add these properties to the tables table through the Table Settings Menu, as the
         -   The Compliance Standards tab in the IaC findings side panel displays the specific standards and controls mapped to the Cortex Cloud Application Security rules.
 
 ### CI/CD Compliance
-Abstract
 
 CI/CD compliance ensures adherence to industry standards: CIS GitLab/GitHub and OWASP Top 10.
 
@@ -9545,7 +9651,6 @@ To view the compliance scan results:
 For more information about compliance assessment reports, refer to View and manage compliance assessments and reports.View and manage compliance assessments and reports
 
 ## Application Security Policies
-Abstract
 
 AppSec policies define threat responses by setting conditions, scope, and actions. Use out-of-the-box policies or clone them to create custom ones.
 
@@ -9656,7 +9761,6 @@ Selecting a policy opens a side panel where you can review additional details:
     -   Then: Triggered actions for the policy, such as Create issue and Block PR
 
 ### AI-recommended guardrails
-Abstract
 
 AI-recommended guardrails automate risk prevention by analyzing your organization’s security data to suggest granular, context-aware guardrails that lock down clean environments and block recurring risks.
 
@@ -10039,7 +10143,6 @@ Using runtime and application contexts focuses efforts on high-impact issues and
 Investigate and remediate issues identified by your scanners to mitigate risks across your code, dependencies, and infrastructure. For more information, refer to Code Security scanners.
 
 ##### Cortex Cloud Application Security code policy Condition attributes
-Abstract
 
 Learn about Application Security code policy Condition filters and attributes.
 
@@ -10244,7 +10347,6 @@ To manage policies, right-click on a policy in the table or select a policy and 
 -   Delete policy (Custom policies only): Permanently remove the policy from your environment. Issues detected by the policy will persist. Bulk deletions are supported
 
 ## Application Security Rules
-Abstract
 
 AppSec rules detect security threats using predefined criteria based on standard compliance frameworks and best practices. Custom rules are supported.
 
@@ -10374,6 +10476,14 @@ You can manage Cortex Cloud Application Security detection rules to customize an
     
 -   Duplication: Opens the selected rule in a New Rule dialog box, allowing you to save a copy of the rule. This allows you to customize default rules according to your requirements
 
+---
+title: "Configure YAML file properties"
+tocId: "QwzTdNC91dnnqM8TV9PXAw"
+contentId: "js8_RtBXgZ9OCXoconFjng"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Configure-YAML-file-properties"
+depth: 2
+---
+
 ### Configure YAML file properties
 You can leverage YAML templates to create complex rules tailored to specific compliance or security requirements. Cortex Cloud Application Security rules support attribute-based and connection-state rules.
 
@@ -10385,9 +10495,9 @@ The following YAML attributes are used to define the properties of the rules.
     
 -   definition: Contains the logic and conditions for the rule, including attributes, operators, and resource connections
     
--   resource\_type: Defines the type of the specific cloud resource
+-   resource_type: Defines the type of the specific cloud resource
     
--   cond\_type: Represents the condition type for applying the rule. Options: attributes, connection, filter, resource
+-   cond_type: Represents the condition type for applying the rule. Options: attributes, connection, filter, resource
     
 -   attribute: Refers to the specific attribute or property of the cloud resource being evaluated
     
@@ -10413,11 +10523,11 @@ In this example, the attribute check flags any `aws_redshift_cluster` resource w
 
 ```
 definition:
-     cond\_type: "attribute"
-     resource\_types:
-     - "aws\_redshift\_cluster"
-     attribute: "automated\_snapshot\_retention\_period"
-     operator: "not\_equals"
+     cond_type: "attribute"
+     resource_types:
+     - "aws_redshift_cluster"
+     attribute: "automated_snapshot_retention_period"
+     operator: "not_equals"
      value: "0"
 ```
 
@@ -10430,7 +10540,7 @@ definition:
 -   For `Secrets` scans: You must implicitly use the `regex` operator. Even if `regex` is not explicitly defined, pattern matching is applied automatically. For example, in the following secret rule, regex is implicitly applied:
     
     ```
-    cond\_type: "secrets"
+    cond_type: "secrets"
      value:
        - "\[A-Za-z0-9\]{8,20}"
        - "my-super-secret-password-regex"
@@ -10474,11 +10584,11 @@ Example 12. 
 ```
 definition:
   not:
-    cond\_type: "connection"
-    resource\_types:
-      - "aws\_elb"
-    connected\_resource\_types:
-      - "aws\_security\_group"
+    cond_type: "connection"
+    resource_types:
+      - "aws_elb"
+    connected_resource_types:
+      - "aws_security_group"
     operator: "exists"
 ```
 
@@ -10498,13 +10608,13 @@ In this example, `aws_lb` and `aws_elb` must be connected to `aws_security_group
 
 ```
 definition:
-       cond\_type: "connection"
-       resource\_types:
-           - "aws\_elb"
-           - "aws\_lb"
-       connected\_resource\_types:
-         - "aws\_security\_group"
-         - "aws\_default\_security\_group"
+       cond_type: "connection"
+       resource_types:
+           - "aws_elb"
+           - "aws_lb"
+       connected_resource_types:
+         - "aws_security_group"
+         - "aws_default_security_group"
        operator: "exists"
 ```
 
@@ -10524,7 +10634,7 @@ The table below explains how to use Connection State operators:
 | Connection State Operators | Value |
 | --- | --- |
 | Exists | exists |
-| Not Exists | not\_exists |
+| Not Exists | not_exists |
 
 #### Logical operators (AND/OR)
 
@@ -10546,35 +10656,35 @@ scope:
   provider: "aws"
 definition:
  or:
-   - cond\_type: "attribute"
-     resource\_types:
-     - "aws\_rds\_cluster"
-     - "aws\_db\_instance"
-     attribute: "backup\_retention\_period"
-     operator: "not\_exists"
-   - cond\_type: "attribute"
-     resource\_types:
-     - "aws\_rds\_cluster"
-     - "aws\_db\_instance"
-     attribute: "backup\_retention\_period"
-     operator: "not\_equals"
+   - cond_type: "attribute"
+     resource_types:
+     - "aws_rds_cluster"
+     - "aws_db_instance"
+     attribute: "backup_retention_period"
+     operator: "not_exists"
+   - cond_type: "attribute"
+     resource_types:
+     - "aws_rds_cluster"
+     - "aws_db_instance"
+     attribute: "backup_retention_period"
+     operator: "not_equals"
      value: "0"
-   - cond\_type: "attribute"
-     resource\_types:
-     - "aws\_redshift\_cluster"
-     attribute: "automated\_snapshot\_retention\_period"
-     operator: "not\_equals"
+   - cond_type: "attribute"
+     resource_types:
+     - "aws_redshift_cluster"
+     attribute: "automated_snapshot_retention_period"
+     operator: "not_equals"
      value: "0"
-   - cond\_type: "attribute"
-     resource\_types:
-     - "aws\_dynamodb\_table"
-     attribute: "point\_in\_time\_recovery"
-     operator: "not\_equals"
+   - cond_type: "attribute"
+     resource_types:
+     - "aws_dynamodb_table"
+     attribute: "point_in_time_recovery"
+     operator: "not_equals"
      value: "false"
-   - cond\_type: "attribute"
-     resource\_types:
-     - "aws\_dynamodb\_table"
-     attribute: "point\_in\_time\_recovery"
+   - cond_type: "attribute"
+     resource_types:
+     - "aws_dynamodb_table"
+     attribute: "point_in_time_recovery"
      operator: "exists"
 ```
 
@@ -10589,92 +10699,92 @@ Read more...
 ```
 metadata:
   name: "Ensure all ALBs are connected only to HTTPS listeners"
-  guidelines: "In case of non-compliant resource - change the definition of the listener/listener\_rul protocol value into HTTPS"
+  guidelines: "In case of non-compliant resource - change the definition of the listener/listener_rul protocol value into HTTPS"
   category: "networking"
   severity: "high"
 scope:
   provider: "aws"
 definition:
   and:
-  - cond\_type: "filter"
+  - cond_type: "filter"
     value:
-    - "aws\_lb"
-    attribute: "resource\_type"
+    - "aws_lb"
+    attribute: "resource_type"
     operator: "within"
-  - cond\_type: "attribute"
-    resource\_types:
-    - "aws\_lb"
-    attribute: "load\_balancer\_type"
+  - cond_type: "attribute"
+    resource_types:
+    - "aws_lb"
+    attribute: "load_balancer_type"
     operator: "equals"
     value: "application"
   - or:
-    - cond\_type: "connection"
-      resource\_types:
-      - "aws\_lb"
-      connected\_resource\_types:
-      - "aws\_lb\_listener"
-      operator: "not\_exists"
+    - cond_type: "connection"
+      resource_types:
+      - "aws_lb"
+      connected_resource_types:
+      - "aws_lb_listener"
+      operator: "not_exists"
     - and:
-      - cond\_type: "connection"
-        resource\_types:
-        - "aws\_lb"
-        connected\_resource\_types:
-        - "aws\_lb\_listener"
+      - cond_type: "connection"
+        resource_types:
+        - "aws_lb"
+        connected_resource_types:
+        - "aws_lb_listener"
         operator: "exists"
-      - cond\_type: "attribute"
-        resource\_types:
-        - "aws\_lb\_listener"
-        attribute: "certificate\_arn"
+      - cond_type: "attribute"
+        resource_types:
+        - "aws_lb_listener"
+        attribute: "certificate_arn"
         operator: "exists"
-      - cond\_type: "attribute"
-        resource\_types:
-        - "aws\_lb\_listener"
-        attribute: "ssl\_policy"
+      - cond_type: "attribute"
+        resource_types:
+        - "aws_lb_listener"
+        attribute: "ssl_policy"
         operator: "exists"
-      - cond\_type: "attribute"
-        resource\_types:
-        - "aws\_lb\_listener"
+      - cond_type: "attribute"
+        resource_types:
+        - "aws_lb_listener"
         attribute: "protocol"
         operator: "equals"
         value: "HTTPS"
       - or:
-        - cond\_type: "attribute"
-          resource\_types:
-          - "aws\_lb\_listener"
-          attribute: "default\_action.redirect.protocol"
+        - cond_type: "attribute"
+          resource_types:
+          - "aws_lb_listener"
+          attribute: "default_action.redirect.protocol"
           operator: "equals"
           value: "HTTPS"
-        - cond\_type: "attribute"
-          resource\_types:
-          - "aws\_lb\_listener"
-          attribute: "default\_action.redirect.protocol"
-          operator: "not\_exists"
+        - cond_type: "attribute"
+          resource_types:
+          - "aws_lb_listener"
+          attribute: "default_action.redirect.protocol"
+          operator: "not_exists"
       - or:
-        - cond\_type: "connection"
-          resource\_types:
-          - "aws\_lb\_listener\_rule"
-          connected\_resource\_types:
-          - "aws\_lb\_listener"
-          operator: "not\_exists"
+        - cond_type: "connection"
+          resource_types:
+          - "aws_lb_listener_rule"
+          connected_resource_types:
+          - "aws_lb_listener"
+          operator: "not_exists"
         - and:
-          - cond\_type: "connection"
-            resource\_types:
-            - "aws\_lb\_listener\_rule"
-            connected\_resource\_types:
-            - "aws\_lb\_listener"
+          - cond_type: "connection"
+            resource_types:
+            - "aws_lb_listener_rule"
+            connected_resource_types:
+            - "aws_lb_listener"
             operator: "exists"
           - or:
-            - cond\_type: "attribute"
-              resource\_types:
-              - "aws\_lb\_listener\_rule"
-              attribute: "default\_action.redirect.protocol"
+            - cond_type: "attribute"
+              resource_types:
+              - "aws_lb_listener_rule"
+              attribute: "default_action.redirect.protocol"
               operator: "equals"
               value: "HTTPS"
-            - cond\_type: "attribute"
-              resource\_types:
-              - "aws\_lb\_listener\_rule"
-              attribute: "default\_action.redirect.protocol"
-              operator: "not\_exists"
+            - cond_type: "attribute"
+              resource_types:
+              - "aws_lb_listener_rule"
+              attribute: "default_action.redirect.protocol"
+              operator: "not_exists"
 ```
 
   
@@ -10692,14 +10802,13 @@ metadata:
   category: "secrets"
   severity: "high"
 definition:
-  cond\_type: "secrets"
+  cond_type: "secrets"
   value:
     - "\[A-Za-z0-9\]{8,}"
     - "my-super-secret-password-regex"
 ```
 
 ## Manage code weaknesses
-Abstract
 
 Ingest third-party SAST findings to create actionable issues, enabling you to prioritize and track remediation and enhancing your security posture.
 
@@ -10946,7 +11055,6 @@ Selecting a finding from the table provides additional details:
 -   Details: The location of the finding, the third party data source that detected the finding, the CWE category, the initial hash and commit, and rule ID
 
 # CI/CD Security
-Abstract
 
 CI/CD security safeguards software components and process throughout the SDLC.
 
@@ -10980,7 +11088,6 @@ Permissions assigned to predefined roles cannot be modified. However, you can sa
 Dedicated CI/CD Security roles include permissions that extend beyond CI/CD Security itself. In addition to these dedicated users, other roles within your tenant are also granted specific permissions to CI/CD Security. You can view all permissions granted to user roles in your tenant by navigating to Settings → Configurations → Roles → select a role.
 
 ## CI/CD Assets
-Abstract
 
 Identify and manage all CI/CD assets—collaborators, VCS, instances, pipelines—for a complete view of your software supply chain attack surface.
 
@@ -11407,7 +11514,6 @@ You can perform the following actions collaborator assets.
 -   View Dashboard: Redirects to the Application Security dashboard
 
 ## Supply Chain Inventories
-Abstract
 
 Supply Chain: Gain full visibility by tracking detected tools in your environment and cross-referencing them against a catalog of Cortex-recognized, trusted technologies.
 
@@ -11599,7 +11705,6 @@ When you click a tool's entry in the inventory table, a side card opens to displ
 The details provided in these tabs are identical to the details displayed in the expanded Supply Chain Tool Catalog. For information about these properties, refer to Expanded Supply Chain tool information.
 
 ## CI/CD Risks
-Abstract
 
 CI/CD risks identify vulnerabilities and misconfigurations in pipelines, then prioritize them into actionable issues for efficient remediation.
 
@@ -11767,7 +11872,6 @@ Click on a finding in the inventory table to open the Findings side card, which 
 -   Code: The file and code including the CI/CD risk in which the finding was detected
 
 ## CI/CD Rules
-Abstract
 
 CI/CD rules detect security threats within your pipelines.
 
@@ -11814,7 +11918,6 @@ The following list lists the exposed AppSec Rules table properties. Additional s
 | Mapped Cloud Security Rule | The specific runtime cloud security policy that correlates with this AppSec rule. This mapping enables you to trace a security issue from its definition in code to its manifestation in the live cloud environment, ensuring end-to-end visibility |
 
 ## CI/CD Policies
-Abstract
 
 Control CI/CD security: view system & custom policies. Create and manage policies to ensure pipeline integrity and compliance.
 
@@ -12015,7 +12118,6 @@ To manage policies, right-click on a policy in the table or select a policy and 
 -   Delete policy: Permanently remove the policy from your environment. Issues detected by the policy will persist. Bulk deletions are supported
 
 # Code Security
-Abstract
 
 Code Security identifies and mitigates vulnerabilities, secrets, and IaC misconfigurations, shifting security left to protect data and maintain trust.
 
@@ -12359,12 +12461,20 @@ The following table describes selected IaC resource properties of the inventory.
 | First Observed | The date and time when this IaC resource was first discovered by the system. |
 | Type Category | Fixed value: IaC Resource |
 
+---
+title: "In-depth IaC resource asset information"
+tocId: "YVY5ds4K7hvbCaOuadDGPw"
+contentId: "IsdFK9IwfwLX7WWtHjy3dw"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/In-depth-IaC-resource-asset-information"
+depth: 2
+---
+
 ### In-depth IaC resource asset information
 Click an asset in the inventory table to open its side card, providing in-depth information organized into several tabs. The Overview tab (default display) offers highlights and a general summary. Additional contextual tabs provide specific details, including a Code to Cloud tab (providing context on the asset's path to production), an Applications tab (displaying the applications associated with this asset), and tabs focusing on specific issue types detected within the asset, such as Secrets and Vulnerabilities.
 
 #### IaC resource summary
 
-The IaC resource asset summary, displayed at the top of the card, provides concise details about the IaC resource, such as its name (such as aws\_s3\_bucket.website), type (such as S3 bucket), and the associated framework (such as Terraform).
+The IaC resource asset summary, displayed at the top of the card, provides concise details about the IaC resource, such as its name (such as aws_s3_bucket.website), type (such as S3 bucket), and the associated framework (such as Terraform).
 
 Overview
 
@@ -12477,7 +12587,6 @@ Code Security scanners include:
 In addition to the native code security scanners, Cortex Cloud Cloud ingests data from third-party scanners. This allows you to consolidate your security findings and manage them all within a single platform for a holistic view of your security posture. For more information about third party scanners, refer to Ingest third-party data sources
 
 ## Secrets scanners
-Abstract
 
 Cortex Cloud Application Security Secrets scans identify sensitive data embedded in your codebase. This proactive scanning approach ensures that sensitive information is detected and addressed early in the Software Development Lifecycle, significantly reducing the risk of such issues reaching production environments.
 
@@ -12767,7 +12876,6 @@ Right-click on a row in the inventory table to access the following actions
 -   Show/hide rows with the \[severity level\]: Show/hide rows matching the \[severity level\] of the selected row
 
 ## Infrastructure as Code (IaC) misconfiguration scanner
-Abstract
 
 IaC scanners safeguard cloud infrastructure by identifying misconfigurations before deployment, preventing vulnerabilities in your operational environment.
 
@@ -13136,7 +13244,6 @@ Right-click on a row in the inventory table to access the following actions
 -   Open Fix PR: Create a Pull Request (PR) with a suggested fix to remediate the issue
 
 ## IaC Drift Detection scans
-Abstract
 
 IaC Drift Detection identifies runtime configurations that diverge from code. It flags security-critical discrepancies to focus remediation efforts.
 
@@ -13203,6 +13310,14 @@ The IaC drift detection issues inventory includes these default properties. Use 
 | Assignee | The individual responsible for addressing and resolving the issue |
 | Business Application | The business application associated with the drifted IaC resource and the corresponding cloud asset. For more information about business applications, refer to Defining Business Applications |
 
+---
+title: "Detailed IaC drift detection issue information"
+tocId: "xZ9kEr2rpu8ocX29VseEJA"
+contentId: "Ax7qhMTRhjDGoK8LIWxfdg"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Detailed-IaC-drift-detection-issue-information"
+depth: 2
+---
+
 ### Detailed IaC drift detection issue information
 Clicking an issue in the table opens a detailed side card that serves as a centralized workspace for investigation and remediation. The card opens on the Overview tab, which presents general details, metadata, and a summary of the evidence, while the War Room tab provides an audit trail of all automatic and manual actions taken on the issue, offering context on how it has been investigated over time. The Actions tab lists available remediation options, and for IaC and vulnerability issues, the Code to Cloud tab displays related resources and lineage between code and runtime, allowing you to understand the impact of the issue across environments.
 
@@ -13227,7 +13342,7 @@ Clicking an issue in the table opens a detailed side card that serves as a centr
     
     Example 18. Example
     
-    The AWS S3 Bucket Foo has been manually modified and now has drifted configuration from the Terraform resource aws\_s3\_bucket.bar in the repository panw/xxxx that can cause operational and security risks.
+    The AWS S3 Bucket Foo has been manually modified and now has drifted configuration from the Terraform resource aws_s3_bucket.bar in the repository panw/xxxx that can cause operational and security risks.
     
       
     
@@ -13274,7 +13389,7 @@ Remove the discrepancy and restore the cloud asset to its intended IaC-defined c
             
             ```
             terraform refresh
-            terraform plan // Reads the actual state from the live cloud environment (which includes the refresh function) and compares it against the desired IaC state to show the calculated changes needed to fix the drift.
+            terraform plan// Reads the actual state from the live cloud environment (which includes the refresh function) and compares it against the desired IaC state to show the calculated changes needed to fix the drift.
             terraform apply // Executes the computed plan, applying the configuration defined in your updated IaC code to the live cloud environment
             ```
             
@@ -13306,7 +13421,6 @@ To access IaC drift detection findings, navigate to Modules → Application Secu
 The properties displayed in the IaC Drift Detection Findings table are identical to those displayed in the IaC Drift Detection Issues page. This provides a consistent data structure for security teams transitioning from raw findings to prioritized issues. Refer to IaC Drift Detection issue inventory for more information.
 
 ## Software Composition Analysis (SCA ) scanners
-Abstract
 
 Cortex Cloud Application Security SCA scanners inspect and manage the security and compliance of your application's open-source and third-party dependencies. They are part of the Cortex Cloud shift-left security strategy, enabling organizations to proactively identify and mitigate risks associated with external code components early in the development lifecycle.
 
@@ -14499,7 +14613,6 @@ Right-click on a row in the inventory table to access the following actions
 -   Show/hide rows with the \[severity level\]: Show/hide rows matching the \[severity level\] of the selected row
 
 ## Application Security scans management
-Abstract
 
 ### Overview
 You can manage Cortex Cloud Application Security scans through dedicated periodic branch and pull request (PR) scans inventories, which provide a central view of scan health, status, scope, and detected issues. This enables efficient tracking, analysis, and management of scans for vulnerability insights
@@ -14996,6 +15109,14 @@ You can troubleshoot both instance and repository issues.
     
     A list of repository-related warnings and errors is displayed, including details such as description, type, location, and timestamp.
 
+---
+title: "Application Security CLI"
+tocId: "ZoDH9TX0GAxNNL5wAR9r1Q"
+contentId: "YOljB0qMZNaKvZ5GayfdBw"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Application-Security-CLI"
+depth: 1
+---
+
 ## Application Security CLI
 The Application Security CLI, part of the Cortex CLI, allows developers and security teams to integrate security checks directly into their application development workflows.
 
@@ -15028,7 +15149,7 @@ The CLI supports the following outputs:
     
 -   cyclonedx
     
--   cyclonedx\_json
+-   cyclonedx_json
     
 
 ### Code Security CLI scan behavior and output
@@ -15059,11 +15180,11 @@ To authenticate the Code Security CLI, choose one of the following methods:
     
     The following flags are required to authenticate the Code Security CLI:
     
-    -   `--api-base-url`: \[$CORTEX\_API\_BASE\_URL\]
+    -   `--api-base-url`: \[$CORTEX_API_BASE_URL\]
         
-    -   `--api-key`: \[$CORTEX\_API\_KEY\]
+    -   `--api-key`: \[$CORTEX_API_KEY\]
         
-    -   `--auth-id`. \[$CORTEX\_AUTH\_ID\]
+    -   `--auth-id`. \[$CORTEX_AUTH_ID\]
         
     
     For more information about these flags, refer to Cortex CLI common command line reference guide.
@@ -15113,7 +15234,7 @@ When operating the Code Security CLI within environments requiring internet acce
     -   **Use the environment variable**:
         
         ```
-        cortexcli --api-base-url <API\_URL> --api-key <API\_KEY> --api-key-id <API\_KEY\_ID> --ca-certificate $CORTEX\_CA\_CERTIFICATE code scan --directory {{DIRECTORY}} --branch main --repo-id organization/repo-name --output json --output-file-path ./output.json
+        cortexcli --api-base-url <API_URL> --api-key <API_KEY> --api-key-id <API_KEY_ID> --ca-certificate $CORTEX_CA_CERTIFICATE code scan --directory {{DIRECTORY}} --branch main --repo-id organization/repo-name --output json --output-file-path ./output.json
         ```
         
     -   **Use the flag with a direct path**:
@@ -15124,6 +15245,14 @@ When operating the Code Security CLI within environments requiring internet acce
         
     
 -   **Skip certificate verification**: Use the `--no-cert-verify` flag or the `$CORTEX_NO_CERT_VERIFY` environment variable to skip SSL certificate validation. To enable, set the flag or environment variable to true. **Warning**: This configuration is insecure. Use only in development or testing environments where a valid CA certificate is unavailable
+
+---
+title: "Connect Cortex CLI"
+tocId: "bcC2N941SR0bvUMKSCZV3g"
+contentId: "v7iqag5x0Rh19AgLTz8uZw"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Connect-Cortex-CLI"
+depth: 2
+---
 
 ### Connect Cortex CLI
 Connect Cortex CLI to scan supported Cortex Cloud modules and gain insights into your security posture, enabling you to identify, analyze and address potential risks.
@@ -15191,7 +15320,7 @@ Connect Cortex CLI to scan supported Cortex Cloud modules and gain insights into
     
 -   Best Practice (required for SCA vulnerability suppression):
     
-    -   Run the CLI within your current working directory (<current\_directory\_path>). It is recommended to use the absolute file path for your current working directory
+    -   Run the CLI within your current working directory (<current_directory_path>). It is recommended to use the absolute file path for your current working directory
         
     -   Ensure that the `--repo-id` parameter includes the `<repo_owner_name>/<repo_name>` structure, with the `<repo_name>` matching the exact name of the directory
         
@@ -15295,11 +15424,11 @@ You can authenticate the Cortex CLI using one of two methods: command-line flags
 
 -   **Using command-line flags**: Provide your API credentials and base URL directly in the command using the following flags
     
-    -   `--api-base-url`: \[$CORTEX\_API\_BASE\_URL\]
+    -   `--api-base-url`: \[$CORTEX_API_BASE_URL\]
         
-    -   `--api-key`: \[$CORTEX\_API\_KEY\]
+    -   `--api-key`: \[$CORTEX_API_KEY\]
         
-    -   `--api-key-id` \[$CORTEX\_KEY\_ID\]
+    -   `--api-key-id` \[$CORTEX_KEY_ID\]
         
     
     For more information about these flags, refer to Cortex CLI common command line reference guide.
@@ -15360,6 +15489,14 @@ To execute a Cortex CLI scan, run `cortexcli [global flags] [module name] scan [
     
 -   For more information about CLI usage for Cortex Cloud Application Security, refer to Cortex CLI usage for Cortex Cloud Application Security
 
+---
+title: "Cortex CLI usage for Cortex Cloud Application Security"
+tocId: "tZtHXAu0SSDwgs_vlAR0eg"
+contentId: "uwcQreCxkkmtjTVLnG_u5A"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Cortex-CLI-usage-for-Cortex-Cloud-Application-Security"
+depth: 2
+---
+
 ### Cortex CLI usage for Cortex Cloud Application Security
 To scan Cortex Cloud Application Security, run:
 
@@ -15395,13 +15532,13 @@ The command structure includes global flags which are used for authentication, a
 -   **Send output to a file**: Direct the command's output to a specified file instead of displaying it in the console
     
     ```
-    ./cortexcli --api-base-url <BASE\_URL> --api-key <API\_KEY> --api-key-id <API\_KEY\_ID> code scan --branch <branch name> --repo-id <repo name> --directory <path> --output json --output-file-path <path>
+    ./cortexcli --api-base-url <BASE_URL> --api-key <API_KEY> --api-key-id <API_KEY_ID> code scan --branch <branch name> --repo-id <repo name> --directory <path> --output json --output-file-path <path>
     ```
     
 -   **Perform a scan without upload**: Run a scan for local analysis or testing without uploading the results to Cortex Cloud. This command runs a code scan and saves all standard output (human-readable format) to `scan_results.txt`
     
     ```
-    ./cortexcli --api-base-url <BASE\_URL> --api-key <API\_KEY> --api-key-id <API\_KEY\_ID> code scan --upload-mode no-upload --branch <branch name> --repo-id <repo name> --directory <path>
+    ./cortexcli --api-base-url <BASE_URL> --api-key <API_KEY> --api-key-id <API_KEY_ID> code scan --upload-mode no-upload --branch <branch name> --repo-id <repo name> --directory <path>
     ```
     
 
@@ -15422,6 +15559,14 @@ The Cortex Cloud Application Security CLI supports both common Cortex CLI and de
     
 -   For common flags, refer to Cortex CLI common command line reference guide
 
+---
+title: "CLI pipeline code snippets"
+tocId: "lZPF24w61KJFZs6HFgJ~EQ"
+contentId: "UerN_S7pqcJ9nv2xSze2gA"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/CLI-pipeline-code-snippets"
+depth: 2
+---
+
 ### CLI pipeline code snippets
 You can integrate the Cortex CLI directly into your CI/CD pipelines to enable automated code scans by adding code snippets to your to your build script or pipeline configuration, such as a `YAML` or `Groovy` file. Both `ARM` and `AMD` architectures are supported, ensuring you can scan your codebase regardless of your runner’s environment.
 
@@ -15435,39 +15580,39 @@ You must replace placeholder variables with your own credentials and environment
 
 #### AWS CodeBuild
 
--   For AMD architecture
+##### For AMD architecture
     
     ```
     version: 0.2
     env:
       variables:
-        CORTEX\_API\_URL: <your\_cortex\_api\_url>
-        CORTEX\_CLI\_VERSION: "0.13.14"
+        CORTEX_API_URL: <your_cortex_api_url>
+        CORTEX_CLI_VERSION: "0.13.14"
       secrets-manager:
-        CORTEX\_API\_KEY: "CORTEX\_API\_KEY"   
-        CORTEX\_API\_KEY\_ID: "CORTEX\_API\_KEY\_ID"
+        CORTEX_API_KEY: "CORTEX_API_KEY"   
+        CORTEX_API_KEY_ID: "CORTEX_API_KEY_ID"
     phases:
       install:
         commands:
           - apt-get update
           - apt-get install -y curl jq git
-      pre\_build:
+      pre_build:
         commands:
           - echo "Getting repo name"
-          - export CODEBUILD\_ACCOUNT\_ID=$(aws sts get-caller-identity --query 'Account' --output text)  
-          - export CODEBUILD\_GIT\_BRANCH="$(git symbolic-ref HEAD --short 2>/dev/null)"
+          - export CODEBUILD_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)  
+          - export CODEBUILD_GIT_BRANCH="$(git symbolic-ref HEAD --short 2>/dev/null)"
           - |
-            if \[ "$CODEBUILD\_GIT\_BRANCH" = "" \] ; then
-              export CODEBUILD\_GIT\_BRANCH="$(git rev-parse HEAD | xargs git name-rev | cut -d' ' -f2 | sed 's/remotes\\/origin\\///g')";
+            if \[ "$CODEBUILD_GIT_BRANCH" = "" \] ; then
+              export CODEBUILD_GIT_BRANCH="$(git rev-parse HEAD | xargs git name-rev | cut -d' ' -f2 | sed 's/remotes\\/origin\\///g')";
             fi
-          - export CODEBUILD\_PROJECT=${CODEBUILD\_BUILD\_ID%:$CODEBUILD\_LOG\_PATH}
+          - export CODEBUILD_PROJECT=${CODEBUILD_BUILD_ID%:$CODEBUILD_LOG_PATH}
           - echo "Downloading cortexcli"
           - |
-            crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
-              -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-              -H "Authorization: ${CORTEX\_API\_KEY}")
-          - crtx\_url=$(echo "$crtx\_resp" | jq -r ".signed\_url")
-          - curl -o cortexcli "$crtx\_url"
+            crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
+              -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+              -H "Authorization: ${CORTEX_API_KEY}")
+          - crtx_url=$(echo "$crtx_resp" | jq -r ".signed_url")
+          - curl -o cortexcli "$crtx_url"
           - chmod +x cortexcli
           - ./cortexcli --version
           
@@ -15475,53 +15620,53 @@ You must replace placeholder variables with your own credentials and environment
         commands:
           - |
             ./cortexcli \\
-                       --api-base-url "${CORTEX\_API\_URL}" \\
-                       --api-key "${CORTEX\_API\_KEY}" \\
-                       --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+                       --api-base-url "${CORTEX_API_URL}" \\
+                       --api-key "${CORTEX_API_KEY}" \\
+                       --api-key-id "${CORTEX_API_KEY_ID}" \\
                        code scan \\
                        --directory "$(pwd)" \\
-                       --repo-id $CODEBUILD\_ACCOUNT\_ID/$CODEBUILD\_PROJECT \\
-                       --branch $CODEBUILD\_GIT\_BRANCH \\
-                       --source AWS\_CODE\_BUILD \\
+                       --repo-id $CODEBUILD_ACCOUNT_ID/$CODEBUILD_PROJECT \\
+                       --branch $CODEBUILD_GIT_BRANCH \\
+                       --source AWS_CODE_BUILD \\
                        --create-repo-if-missing
     artifacts:
       files:
         - '\*\*/\*'
     ```
     
--   For ARM architecture
+##### For ARM architecture
     
     ```
     version: 0.2
     env:
       variables:
-        CORTEX\_API\_URL: <your\_cortex\_api\_url> 
-        CORTEX\_CLI\_VERSION: "0.13.16"
+        CORTEX_API_URL: <your_cortex_api_url> 
+        CORTEX_CLI_VERSION: "0.13.16"
       secrets-manager:
-        CORTEX\_API\_KEY: "CORTEX\_API\_KEY"   
-        CORTEX\_API\_KEY\_ID: "CORTEX\_API\_KEY\_ID"
+        CORTEX_API_KEY: "CORTEX_API_KEY"   
+        CORTEX_API_KEY_ID: "CORTEX_API_KEY_ID"
     phases:
       install:
         commands:
           - apt-get update
           - apt-get install -y curl jq git
-      pre\_build:
+      pre_build:
         commands:
           - echo "Getting repo name"
-          - export CODEBUILD\_ACCOUNT\_ID=$(aws sts get-caller-identity --query 'Account' --output text)  
-          - export CODEBUILD\_GIT\_BRANCH="$(git symbolic-ref HEAD --short 2>/dev/null)"
+          - export CODEBUILD_ACCOUNT_ID=$(aws sts get-caller-identity --query 'Account' --output text)  
+          - export CODEBUILD_GIT_BRANCH="$(git symbolic-ref HEAD --short 2>/dev/null)"
           - |
-            if \[ "$CODEBUILD\_GIT\_BRANCH" = "" \] ; then
-              export CODEBUILD\_GIT\_BRANCH="$(git rev-parse HEAD | xargs git name-rev | cut -d' ' -f2 | sed 's/remotes\\/origin\\///g')";
+            if \[ "$CODEBUILD_GIT_BRANCH" = "" \] ; then
+              export CODEBUILD_GIT_BRANCH="$(git rev-parse HEAD | xargs git name-rev | cut -d' ' -f2 | sed 's/remotes\\/origin\\///g')";
             fi
-          - export CODEBUILD\_PROJECT=${CODEBUILD\_BUILD\_ID%:$CODEBUILD\_LOG\_PATH}
+          - export CODEBUILD_PROJECT=${CODEBUILD_BUILD_ID%:$CODEBUILD_LOG_PATH}
           - echo "Downloading cortexcli"
           - |
-            crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
-              -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-              -H "Authorization: ${CORTEX\_API\_KEY}")
-          - crtx\_url=$(echo "$crtx\_resp" | jq -r ".signed\_url")
-          - curl -o cortexcli "$crtx\_url"
+            crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
+              -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+              -H "Authorization: ${CORTEX_API_KEY}")
+          - crtx_url=$(echo "$crtx_resp" | jq -r ".signed_url")
+          - curl -o cortexcli "$crtx_url"
           - chmod +x cortexcli
           - ./cortexcli --version
           
@@ -15529,14 +15674,14 @@ You must replace placeholder variables with your own credentials and environment
         commands:
           - |
             ./cortexcli \\
-                       --api-base-url "${CORTEX\_API\_URL}" \\
-                       --api-key "${CORTEX\_API\_KEY}" \\
-                       --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+                       --api-base-url "${CORTEX_API_URL}" \\
+                       --api-key "${CORTEX_API_KEY}" \\
+                       --api-key-id "${CORTEX_API_KEY_ID}" \\
                        code scan \\
                        --directory "$(pwd)" \\
-                       --repo-id $CODEBUILD\_ACCOUNT\_ID/$CODEBUILD\_PROJECT \\
-                       --branch $CODEBUILD\_GIT\_BRANCH \\
-                       --source AWS\_CODE\_BUILD \\
+                       --repo-id $CODEBUILD_ACCOUNT_ID/$CODEBUILD_PROJECT \\
+                       --branch $CODEBUILD_GIT_BRANCH \\
+                       --source AWS_CODE_BUILD \\
                        --create-repo-if-missing
     artifacts:
       files:
@@ -15546,7 +15691,7 @@ You must replace placeholder variables with your own credentials and environment
 
 #### Azure Pipelines
 
--   For AMD architecture
+##### For AMD architecture
     
     ```
     trigger:
@@ -15558,8 +15703,8 @@ You must replace placeholder variables with your own credentials and environment
     pool:
       vmImage: ubuntu-latest
     variables:
-      CORTEX\_API\_URL: <your\_cortex\_api\_url> 
-      MIN\_LOG\_LEVEL: "DEBUG"
+      CORTEX_API_URL: <your_cortex_api_url> 
+      MIN_LOG_LEVEL: "DEBUG"
     steps:
     - checkout: self
       clean: true
@@ -15571,41 +15716,41 @@ You must replace placeholder variables with your own credentials and environment
         set -euo pipefail
         sudo apt-get update
         sudo apt-get install -y --no-install-recommends jq ca-certificates curl
-        BASE="${CORTEX\_API\_URL%/}"
-        URL="$BASE/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64"
+        BASE="${CORTEX_API_URL%/}"
+        URL="$BASE/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64"
         set +x
-        CRTX\_URL=$(curl -fsSL "$URL" \\
-          -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-          -H "Authorization: ${CORTEX\_API\_KEY}" | jq -r '.signed\_url')
+        CRTX_URL=$(curl -fsSL "$URL" \\
+          -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+          -H "Authorization: ${CORTEX_API_KEY}" | jq -r '.signed_url')
         set -x
-        curl -fsSL -o cortexcli "$CRTX\_URL"
+        curl -fsSL -o cortexcli "$CRTX_URL"
         chmod +x cortexcli
       displayName: "Download cortexcli (amd64)"
       env:
-        CORTEX\_API\_URL: $(CORTEX\_API\_URL)
-        CORTEX\_API\_KEY\_ID: $(CORTEX\_API\_KEY\_ID)
-        CORTEX\_API\_KEY: $(CORTEX\_API\_KEY)
+        CORTEX_API_URL: $(CORTEX_API_URL)
+        CORTEX_API_KEY_ID: $(CORTEX_API_KEY_ID)
+        CORTEX_API_KEY: $(CORTEX_API_KEY)
     - bash: |
         set -euo pipefail
         ./cortexcli \\
-          --api-base-url "${CORTEX\_API\_URL}" \\
-          --api-key "${CORTEX\_API\_KEY}" \\
-          --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+          --api-base-url "${CORTEX_API_URL}" \\
+          --api-key "${CORTEX_API_KEY}" \\
+          --api-key-id "${CORTEX_API_KEY_ID}" \\
           code scan \\
           --directory "$(Build.SourcesDirectory)" \\
           --repo-id "$(Build.Repository.Name)" \\
           --branch "$(Build.SourceBranchName)" \\
-          --source "CORTEX\_CLI" \\
+          --source "CORTEX_CLI" \\
           --create-repo-if-missing
       displayName: "Cortex CLI Code Scan"
       env:
-        CORTEX\_API\_URL: $(CORTEX\_API\_URL)
-        CORTEX\_API\_KEY\_ID: $(CORTEX\_API\_KEY\_ID)
-        CORTEX\_API\_KEY: $(CORTEX\_API\_KEY)
-        MIN\_LOG\_LEVEL: $(MIN\_LOG\_LEVEL)
+        CORTEX_API_URL: $(CORTEX_API_URL)
+        CORTEX_API_KEY_ID: $(CORTEX_API_KEY_ID)
+        CORTEX_API_KEY: $(CORTEX_API_KEY)
+        MIN_LOG_LEVEL: $(MIN_LOG_LEVEL)
     ```
     
--   For ARM architecture
+##### For ARM architecture
     
     ```
     trigger:
@@ -15615,7 +15760,7 @@ You must replace placeholder variables with your own credentials and environment
       branches:
         include: \['\*'\]
     variables:
-      CORTEX\_API\_URL: <your\_cortex\_api\_url> 
+      CORTEX_API_URL: <your_cortex_api_url> 
     pool:
       name: arm
       demands:
@@ -15628,43 +15773,43 @@ You must replace placeholder variables with your own credentials and environment
       inputs: { versionSpec: "22.x" }
     - bash: |
         set -euo pipefail
-        BASE="${CORTEX\_API\_URL%/}"
-        URL="$BASE/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64"
+        BASE="${CORTEX_API_URL%/}"
+        URL="$BASE/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64"
         set +x
-        CRTX\_URL=$(curl -fsSL "$URL" \\
-          -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-          -H "Authorization: ${CORTEX\_API\_KEY}" | jq -r '.signed\_url')
+        CRTX_URL=$(curl -fsSL "$URL" \\
+          -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+          -H "Authorization: ${CORTEX_API_KEY}" | jq -r '.signed_url')
         set -x
-        curl -fsSL -o cortexcli "$CRTX\_URL"
+        curl -fsSL -o cortexcli "$CRTX_URL"
         chmod +x cortexcli
       displayName: "Download cortexcli (arm64)"
       env:
-        CORTEX\_API\_URL: $(CORTEX\_API\_URL)
-        CORTEX\_API\_KEY\_ID: $(CORTEX\_API\_KEY\_ID)
-        CORTEX\_API\_KEY: $(CORTEX\_API\_KEY)
+        CORTEX_API_URL: $(CORTEX_API_URL)
+        CORTEX_API_KEY_ID: $(CORTEX_API_KEY_ID)
+        CORTEX_API_KEY: $(CORTEX_API_KEY)
     - bash: |
         set -euo pipefail
         ./cortexcli \\
-          --api-base-url "${CORTEX\_API\_URL}" \\
-          --api-key "${CORTEX\_API\_KEY}" \\
-          --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+          --api-base-url "${CORTEX_API_URL}" \\
+          --api-key "${CORTEX_API_KEY}" \\
+          --api-key-id "${CORTEX_API_KEY_ID}" \\
           code scan \\
           --directory "$(Build.SourcesDirectory)" \\
           --repo-id "$(Build.Repository.Name)" \\
           --branch "$(Build.SourceBranchName)" \\
-          --source "CORTEX\_CLI" \\
+          --source "CORTEX_CLI" \\
           --create-repo-if-missing
       displayName: "Cortex CLI Code Scan (ARM64)"
       env:
-        CORTEX\_API\_URL: $(CORTEX\_API\_URL)
-        CORTEX\_API\_KEY\_ID: $(CORTEX\_API\_KEY\_ID)
-        CORTEX\_API\_KEY: $(CORTEX\_API\_KEY)
+        CORTEX_API_URL: $(CORTEX_API_URL)
+        CORTEX_API_KEY_ID: $(CORTEX_API_KEY_ID)
+        CORTEX_API_KEY: $(CORTEX_API_KEY)
     ```
     
 
 #### Bitbucket
 
--   For AMD architecture
+##### For AMD architecture
     
     ```
     image: ubuntu:24.04
@@ -15677,34 +15822,34 @@ You must replace placeholder variables with your own credentials and environment
             script:
               - set -euo pipefail
               - apt-get update && apt-get install -y --no-install-recommends curl jq ca-certificates tar gzip file
-              - curl -fsSL https://deb.nodesource.com/setup\_22.x | bash -
+              - curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
               - apt-get install -y nodejs
               - node -v && npm -v
-              - export CORTEXCLI\_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI\_HOME" || true; mkdir -p "$CORTEXCLI\_HOME"
+              - export CORTEXCLI_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI_HOME" || true; mkdir -p "$CORTEXCLI_HOME"
               - |
-                CRTX\_URL=$(curl -fsSL "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
-                  -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-                  -H "Authorization: ${CORTEX\_API\_KEY}" | jq -r '.signed\_url')
-                curl -fsSL -o cortexcli "$CRTX\_URL"
+                CRTX_URL=$(curl -fsSL "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
+                  -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+                  -H "Authorization: ${CORTEX_API_KEY}" | jq -r '.signed_url')
+                curl -fsSL -o cortexcli "$CRTX_URL"
                 chmod +x cortexcli
                 ./cortexcli --version
               - |
                 ./cortexcli \\
-                  --api-base-url "${CORTEX\_API\_URL}" \\
-                  --api-key "${CORTEX\_API\_KEY}" \\
-                  --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+                  --api-base-url "${CORTEX_API_URL}" \\
+                  --api-key "${CORTEX_API_KEY}" \\
+                  --api-key-id "${CORTEX_API_KEY_ID}" \\
                   code scan \\
-                  --directory "${BITBUCKET\_CLONE\_DIR}" \\
-                  --repo-id "${BITBUCKET\_REPO\_FULL\_NAME}" \\
-                  --branch "${BITBUCKET\_BRANCH}" \\
-                  --source "CORTEX\_CLI" \\
+                  --directory "${BITBUCKET_CLONE_DIR}" \\
+                  --repo-id "${BITBUCKET_REPO_FULL_NAME}" \\
+                  --branch "${BITBUCKET_BRANCH}" \\
+                  --source "CORTEX_CLI" \\
                   --create-repo-if-missing \\
                   --upload-mode no-upload
             artifacts:
               - cortexcli
     ```
     
--   For ARM architecture
+##### For ARM architecture
     
     ```
     image: node:22-bookworm
@@ -15719,29 +15864,29 @@ You must replace placeholder variables with your own credentials and environment
             script:
               - set -euo pipefail
               - apt-get update && apt-get install -y --no-install-recommends curl jq ca-certificates file
-              - export CORTEXCLI\_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI\_HOME" || true; mkdir -p "$CORTEXCLI\_HOME"
+              - export CORTEXCLI_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI_HOME" || true; mkdir -p "$CORTEXCLI_HOME"
     
               - |
                 set +x
-                CRTX\_URL=$(curl -fsSL "${CORTEX\_API\_URL%/}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
-                  -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-                  -H "Authorization: ${CORTEX\_API\_KEY}" | jq -r '.signed\_url')
+                CRTX_URL=$(curl -fsSL "${CORTEX_API_URL%/}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
+                  -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+                  -H "Authorization: ${CORTEX_API_KEY}" | jq -r '.signed_url')
                 set -x
-                curl -fsSL -o cortexcli "$CRTX\_URL"
+                curl -fsSL -o cortexcli "$CRTX_URL"
                 chmod +x cortexcli
                 ./cortexcli --version
     
               # Run the scan
               - |
                 ./cortexcli \\
-                  --api-base-url "${CORTEX\_API\_URL}" \\
-                  --api-key "${CORTEX\_API\_KEY}" \\
-                  --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+                  --api-base-url "${CORTEX_API_URL}" \\
+                  --api-key "${CORTEX_API_KEY}" \\
+                  --api-key-id "${CORTEX_API_KEY_ID}" \\
                   code scan \\
-                  --directory "${BITBUCKET\_CLONE\_DIR}" \\
-                  --repo-id "${BITBUCKET\_REPO\_FULL\_NAME}" \\
-                  --branch "${BITBUCKET\_BRANCH}" \\
-                  --source "CORTEX\_CLI" \\
+                  --directory "${BITBUCKET_CLONE_DIR}" \\
+                  --repo-id "${BITBUCKET_REPO_FULL_NAME}" \\
+                  --branch "${BITBUCKET_BRANCH}" \\
+                  --source "CORTEX_CLI" \\
                   --create-repo-if-missing
             artifacts:
               - cortexcli
@@ -15750,7 +15895,7 @@ You must replace placeholder variables with your own credentials and environment
 
 #### CircleCI
 
--   For AMD architecture
+##### For AMD architecture
     
     ```
     version: 2.1
@@ -15759,32 +15904,32 @@ You must replace placeholder variables with your own credentials and environment
         docker:
           - image: cimg/node:22.17.0  # Replace with a suitable image or executor
         environment:
-          CORTEX\_API\_URL: <your\_cortex\_api\_url>
+          CORTEX_API_URL: <your_cortex_api_url>
         steps:
           - checkout
           - run:
               name: Download cortexcli
               command: |
                 set -x
-                crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
-                  -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-                  -H "Authorization: ${CORTEX\_API\_KEY}")
-                crtx\_url=$(echo $crtx\_resp | jq -r ".signed\_url")
-                curl -o cortexcli $crtx\_url
+                crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
+                  -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+                  -H "Authorization: ${CORTEX_API_KEY}")
+                crtx_url=$(echo $crtx_resp | jq -r ".signed_url")
+                curl -o cortexcli $crtx_url
                 chmod +x cortexcli
                 ./cortexcli --version
           - run:
               name: Run Cortex CLI Code Scan
               command: |
                 ./cortexcli \\
-                  --api-base-url "${CORTEX\_API\_URL}" \\
-                  --api-key "${CORTEX\_API\_KEY}" \\
-                  --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+                  --api-base-url "${CORTEX_API_URL}" \\
+                  --api-key "${CORTEX_API_KEY}" \\
+                  --api-key-id "${CORTEX_API_KEY_ID}" \\
                   code scan \\
                   --directory "$(pwd)" \\
-                  --repo-id "${CIRCLE\_PROJECT\_USERNAME}/${CIRCLE\_PROJECT\_REPONAME}" \\
-                  --branch "${CIRCLE\_BRANCH}" \\
-                  --source "CIRCLE\_CI" \\
+                  --repo-id "${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}" \\
+                  --branch "${CIRCLE_BRANCH}" \\
+                  --source "CIRCLE_CI" \\
                   --create-repo-if-missing
     workflows:
       cortex-scan-workflow:
@@ -15793,7 +15938,7 @@ You must replace placeholder variables with your own credentials and environment
               context: cortex-secrets
     ```
     
--   For ARM architecture
+##### For ARM architecture
     
     ```
     version: 2.1
@@ -15802,32 +15947,32 @@ You must replace placeholder variables with your own credentials and environment
         docker:
           - image: <Replace with image supporting node js version 22 or higher>
         environment:
-          CORTEX\_API\_URL: <your\_cortex\_api\_url> 
+          CORTEX_API_URL: <your_cortex_api_url> 
         steps:
           - checkout
           - run:
               name: Download cortexcli
               command: |
                 set -x
-                crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
-                  -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-                  -H "Authorization: ${CORTEX\_API\_KEY}")
-                crtx\_url=$(echo $crtx\_resp | jq -r ".signed\_url")
-                curl -o cortexcli $crtx\_url
+                crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
+                  -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+                  -H "Authorization: ${CORTEX_API_KEY}")
+                crtx_url=$(echo $crtx_resp | jq -r ".signed_url")
+                curl -o cortexcli $crtx_url
                 chmod +x cortexcli
                 ./cortexcli --version
           - run:
               name: Run Cortex CLI Code Scan
               command: |
                 ./cortexcli \\
-                  --api-base-url "${CORTEX\_API\_URL}" \\
-                  --api-key "${CORTEX\_API\_KEY}" \\
-                  --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+                  --api-base-url "${CORTEX_API_URL}" \\
+                  --api-key "${CORTEX_API_KEY}" \\
+                  --api-key-id "${CORTEX_API_KEY_ID}" \\
                   code scan \\
                   --directory "$(pwd)" \\
-                  --repo-id "${CIRCLE\_PROJECT\_USERNAME}/${CIRCLE\_PROJECT\_REPONAME}" \\
-                  --branch "${CIRCLE\_BRANCH}" \\
-                  --source "CIRCLE\_CI" \\
+                  --repo-id "${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}" \\
+                  --branch "${CIRCLE_BRANCH}" \\
+                  --source "CIRCLE_CI" \\
                   --create-repo-if-missing
     workflows:
       cortex-scan-workflow:
@@ -15839,7 +15984,7 @@ You must replace placeholder variables with your own credentials and environment
 
 #### GitHub Actions
 
--   For AMD architecture
+##### For AMD architecture
     
     ```
     name: Cortex CLI Code Scan
@@ -15847,11 +15992,11 @@ You must replace placeholder variables with your own credentials and environment
       push:
         branches:
           - main
-      workflow\_dispatch:
+      workflow_dispatch:
     env:
-      CORTEX\_API\_KEY: ${{secrets.CORTEX\_API\_KEY}}
-      CORTEX\_API\_KEY\_ID: ${{secrets.CORTEX\_API\_KEY\_ID}}
-      CORTEX\_API\_URL: <your\_cortex\_api\_url> 
+      CORTEX_API_KEY: ${{secrets.CORTEX_API_KEY}}
+      CORTEX_API_KEY_ID: ${{secrets.CORTEX_API_KEY_ID}}
+      CORTEX_API_URL: <your_cortex_api_url> 
       
     jobs:
       cortex-code-scan:
@@ -15869,28 +16014,28 @@ You must replace placeholder variables with your own credentials and environment
         - name: Download cortexcli
           run: |
             set -x
-            crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
-              -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-              -H "Authorization: ${CORTEX\_API\_KEY}")
-            crtx\_url=$(echo $crtx\_resp | jq -r ".signed\_url")
-            curl -o cortexcli $crtx\_url
+            crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
+              -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+              -H "Authorization: ${CORTEX_API_KEY}")
+            crtx_url=$(echo $crtx_resp | jq -r ".signed_url")
+            curl -o cortexcli $crtx_url
             chmod +x cortexcli
             ./cortexcli --version
         - name: Run Cortex CLI Code Scan
           run: |
             ./cortexcli \\
-              --api-base-url "${CORTEX\_API\_URL}" \\
-              --api-key "${CORTEX\_API\_KEY}" \\
-              --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+              --api-base-url "${CORTEX_API_URL}" \\
+              --api-key "${CORTEX_API_KEY}" \\
+              --api-key-id "${CORTEX_API_KEY_ID}" \\
               code scan \\
               --directory "${{github.workspace}}" \\
               --repo-id "${{github.repository}}" \\
-              --branch "${{github.ref\_name}}" \\
-              --source "GITHUB\_ACTIONS" \\
+              --branch "${{github.ref_name}}" \\
+              --source "GITHUB_ACTIONS" \\
               --create-repo-if-missing
     ```
     
--   For ARM architecture
+##### For ARM architecture
     
     ```
     name: Cortex CLI Code Scan
@@ -15898,11 +16043,11 @@ You must replace placeholder variables with your own credentials and environment
       push:
         branches:
           - main
-      workflow\_dispatch:
+      workflow_dispatch:
     env:
-      CORTEX\_API\_KEY: ${{secrets.CORTEX\_API\_KEY}}
-      CORTEX\_API\_KEY\_ID: ${{secrets.CORTEX\_API\_KEY\_ID}}
-      CORTEX\_API\_URL: <your\_cortex\_api\_url>
+      CORTEX_API_KEY: ${{secrets.CORTEX_API_KEY}}
+      CORTEX_API_KEY_ID: ${{secrets.CORTEX_API_KEY_ID}}
+      CORTEX_API_URL: <your_cortex_api_url>
       
     jobs:
       cortex-code-scan:
@@ -15920,126 +16065,126 @@ You must replace placeholder variables with your own credentials and environment
         - name: Download cortexcli
           run: |
             set -x
-            crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
-              -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-              -H "Authorization: ${CORTEX\_API\_KEY}")
-            crtx\_url=$(echo $crtx\_resp | jq -r ".signed\_url")
-            curl -o cortexcli $crtx\_url
+            crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
+              -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+              -H "Authorization: ${CORTEX_API_KEY}")
+            crtx_url=$(echo $crtx_resp | jq -r ".signed_url")
+            curl -o cortexcli $crtx_url
             chmod +x cortexcli
             ./cortexcli --version
         - name: Run Cortex CLI Code Scan
           run: |
             ./cortexcli \\
-              --api-base-url "${CORTEX\_API\_URL}" \\
-              --api-key "${CORTEX\_API\_KEY}" \\
-              --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+              --api-base-url "${CORTEX_API_URL}" \\
+              --api-key "${CORTEX_API_KEY}" \\
+              --api-key-id "${CORTEX_API_KEY_ID}" \\
               code scan \\
               --directory "${{github.workspace}}" \\
               --repo-id "${{github.repository}}" \\
-              --branch "${{github.ref\_name}}" \\
-              --source "GITHUB\_ACTIONS" \\
+              --branch "${{github.ref_name}}" \\
+              --source "GITHUB_ACTIONS" \\
               --create-repo-if-missing
     ```
     
 
 #### GitLab Runner
 
--   For AMD architecture
+##### For AMD architecture
     
     ```
     stages: \[scan\]
     variables:
-      CORTEX\_API\_URL: <your\_cortex\_api\_url>
-    cortex\_code\_scan:
+      CORTEX_API_URL: <your_cortex_api_url>
+    cortex_code_scan:
       image: node:22-bookworm@sha256:bb6834c0669aa71cbc8d94606561a721adf489f6b93d7b8b825f0cf1b498c2c4
       tags: \["amd64"\]
       stage: scan
       rules:
-        - when: on\_success
-      before\_script:
+        - when: on_success
+      before_script:
         - uname -m
         - set -euo pipefail
         - apt-get update
         - apt-get install -y --no-install-recommends curl jq ca-certificates tar gzip file
-        - export CORTEXCLI\_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI\_HOME" || true; mkdir -p "$CORTEXCLI\_HOME"
+        - export CORTEXCLI_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI_HOME" || true; mkdir -p "$CORTEXCLI_HOME"
         - |
           # avoid leaking secrets in logs
           set +x
-          CRTX\_URL=$(curl -fsSL "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
-            -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-            -H "Authorization: ${CORTEX\_API\_KEY}" | jq -r '.signed\_url')
+          CRTX_URL=$(curl -fsSL "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
+            -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+            -H "Authorization: ${CORTEX_API_KEY}" | jq -r '.signed_url')
           set -x
-          curl -fsSL -o cortexcli "$CRTX\_URL"
+          curl -fsSL -o cortexcli "$CRTX_URL"
           chmod +x cortexcli
           ./cortexcli --version
       script:
         - |
           ./cortexcli \\
-            --api-base-url "${CORTEX\_API\_URL}" \\
-            --api-key "${CORTEX\_API\_KEY}" \\
-            --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+            --api-base-url "${CORTEX_API_URL}" \\
+            --api-key "${CORTEX_API_KEY}" \\
+            --api-key-id "${CORTEX_API_KEY_ID}" \\
             code scan \\
-            --directory "${CI\_PROJECT\_DIR}" \\
-            --repo-id "${CI\_PROJECT\_PATH}" \\
-            --branch "${CI\_COMMIT\_REF\_NAME}" \\
-            --source "CORTEX\_CLI" \\
+            --directory "${CI_PROJECT_DIR}" \\
+            --repo-id "${CI_PROJECT_PATH}" \\
+            --branch "${CI_COMMIT_REF_NAME}" \\
+            --source "CORTEX_CLI" \\
             --upload-mode no-upload \\
             --create-repo-if-missing
       artifacts:
         when: always
         paths: \[cortexcli\]
-        expire\_in: 1 day
+        expire_in: 1 day
     ```
     
--   For ARM architecture
+##### For ARM architecture
     
     ```
     stages: \[scan\]
     variables:
-      CORTEX\_API\_URL: <your\_cortex\_api\_url> 
-    cortex\_code\_scan:
+      CORTEX_API_URL: <your_cortex_api_url> 
+    cortex_code_scan:
       image: node:22-bookworm
       stage: scan
       rules:
-        - when: on\_success
-      before\_script:
+        - when: on_success
+      before_script:
         - set -euo pipefail
         - apt-get update
         - apt-get install -y --no-install-recommends curl jq ca-certificates tar gzip file
-        - export CORTEXCLI\_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI\_HOME" || true; mkdir -p "$CORTEXCLI\_HOME"
+        - export CORTEXCLI_HOME="/root/.cortexcli"; rm -rf "$CORTEXCLI_HOME" || true; mkdir -p "$CORTEXCLI_HOME"
         - |
           # avoid leaking secrets in logs
           set +x
-          CRTX\_URL=$(curl -fsSL "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
-            -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-            -H "Authorization: ${CORTEX\_API\_KEY}" | jq -r '.signed\_url')
+          CRTX_URL=$(curl -fsSL "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64" \\
+            -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+            -H "Authorization: ${CORTEX_API_KEY}" | jq -r '.signed_url')
           set -x
-          curl -fsSL -o cortexcli "$CRTX\_URL"
+          curl -fsSL -o cortexcli "$CRTX_URL"
           chmod +x cortexcli
           ./cortexcli --version
       script:
         - |
           ./cortexcli \\
-            --api-base-url "${CORTEX\_API\_URL}" \\
-            --api-key "${CORTEX\_API\_KEY}" \\
-            --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+            --api-base-url "${CORTEX_API_URL}" \\
+            --api-key "${CORTEX_API_KEY}" \\
+            --api-key-id "${CORTEX_API_KEY_ID}" \\
             code scan \\
-            --directory "${CI\_PROJECT\_DIR}" \\
-            --repo-id "${CI\_PROJECT\_PATH}" \\
-            --branch "${CI\_COMMIT\_REF\_NAME}" \\
-            --source "CORTEX\_CLI" \\
+            --directory "${CI_PROJECT_DIR}" \\
+            --repo-id "${CI_PROJECT_PATH}" \\
+            --branch "${CI_COMMIT_REF_NAME}" \\
+            --source "CORTEX_CLI" \\
             --upload-mode no-upload \\
             --create-repo-if-missing
       artifacts:
         when: always
         paths: \[cortexcli\]
-        expire\_in: 1 day
+        expire_in: 1 day
     ```
     
 
 #### Jenkins
 
--   For AMD architecture
+##### For AMD architecture
     
     ```
     pipeline {
@@ -16050,9 +16195,9 @@ You must replace placeholder variables with your own credentials and environment
             }
         }
         environment {
-            CORTEX\_API\_KEY = credentials('CORTEX\_API\_KEY')
-            CORTEX\_API\_KEY\_ID = credentials('CORTEX\_API\_KEY\_ID')
-            CORTEX\_API\_URL = <your\_cortex\_api\_url> 
+            CORTEX_API_KEY = credentials('CORTEX_API_KEY')
+            CORTEX_API_KEY_ID = credentials('CORTEX_API_KEY_ID')
+            CORTEX_API_URL = <your_cortex_api_url> 
         }
         stages {
             stage('Checkout Repository') {
@@ -16073,12 +16218,12 @@ You must replace placeholder variables with your own credentials and environment
                 steps {
                     script {
                         def response = sh(script: """
-                            curl --location '${env.CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64' \\
-                              --header 'Authorization: ${env.CORTEX\_API\_KEY}' \\
-                              --header 'x-xdr-auth-id: ${env.CORTEX\_API\_KEY\_ID}' \\
+                            curl --location '${env.CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64' \\
+                              --header 'Authorization: ${env.CORTEX_API_KEY}' \\
+                              --header 'x-xdr-auth-id: ${env.CORTEX_API_KEY_ID}' \\
                               --silent
                         """, returnStdout: true).trim()
-                        def downloadUrl = sh(script: """echo '${response}' | jq -r '.signed\_url'""", returnStdout: true).trim()
+                        def downloadUrl = sh(script: """echo '${response}' | jq -r '.signed_url'""", returnStdout: true).trim()
                         sh """
                             curl -o cortexcli '${downloadUrl}'
                             chmod +x cortexcli
@@ -16094,12 +16239,12 @@ You must replace placeholder variables with your own credentials and environment
                         unstash 'source'
                         sh """
                         ./cortexcli \\
-                          --api-base-url "${env.CORTEX\_API\_URL}" \\
-                          --api-key "${env.CORTEX\_API\_KEY}" \\
-                          --api-key-id "${env.CORTEX\_API\_KEY\_ID}" \\
+                          --api-base-url "${env.CORTEX_API_URL}" \\
+                          --api-key "${env.CORTEX_API_KEY}" \\
+                          --api-key-id "${env.CORTEX_API_KEY_ID}" \\
                           code scan \\
                           --directory "\\$(pwd)" \\
-                          --repo-id <REPLACE WITH REPO\_OWNER/REPO\_NAME> \\
+                          --repo-id <REPLACE WITH REPO_OWNER/REPO_NAME> \\
                           --branch <REPLACE WITH BRANCH> \\
                           --source "JENKINS" \\
                           --create-repo-if-missing
@@ -16111,7 +16256,7 @@ You must replace placeholder variables with your own credentials and environment
     }
     ```
     
--   For ARM architecture
+##### For ARM architecture
     
     ```
     pipeline {
@@ -16122,9 +16267,9 @@ You must replace placeholder variables with your own credentials and environment
             }
         }
         environment {
-            CORTEX\_API\_KEY = credentials('CORTEX\_API\_KEY')
-            CORTEX\_API\_KEY\_ID = credentials('CORTEX\_API\_KEY\_ID')
-            CORTEX\_API\_URL = <your\_cortex\_api\_url> 
+            CORTEX_API_KEY = credentials('CORTEX_API_KEY')
+            CORTEX_API_KEY_ID = credentials('CORTEX_API_KEY_ID')
+            CORTEX_API_URL = <your_cortex_api_url> 
         }
         stages {
             stage('Checkout Repository') {
@@ -16145,12 +16290,12 @@ You must replace placeholder variables with your own credentials and environment
                 steps {
                     script {
                         def response = sh(script: """
-                            curl --location '${env.CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64' \\
-                              --header 'Authorization: ${env.CORTEX\_API\_KEY}' \\
-                              --header 'x-xdr-auth-id: ${env.CORTEX\_API\_KEY\_ID}' \\
+                            curl --location '${env.CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=arm64' \\
+                              --header 'Authorization: ${env.CORTEX_API_KEY}' \\
+                              --header 'x-xdr-auth-id: ${env.CORTEX_API_KEY_ID}' \\
                               --silent
                         """, returnStdout: true).trim()
-                        def downloadUrl = sh(script: """echo '${response}' | jq -r '.signed\_url'""", returnStdout: true).trim()
+                        def downloadUrl = sh(script: """echo '${response}' | jq -r '.signed_url'""", returnStdout: true).trim()
                         sh """
                             curl -o cortexcli '${downloadUrl}'
                             chmod +x cortexcli
@@ -16166,12 +16311,12 @@ You must replace placeholder variables with your own credentials and environment
                         unstash 'source'
                         sh """
                         ./cortexcli \\
-                          --api-base-url "${env.CORTEX\_API\_URL}" \\
-                          --api-key "${env.CORTEX\_API\_KEY}" \\
-                          --api-key-id "${env.CORTEX\_API\_KEY\_ID}" \\
+                          --api-base-url "${env.CORTEX_API_URL}" \\
+                          --api-key "${env.CORTEX_API_KEY}" \\
+                          --api-key-id "${env.CORTEX_API_KEY_ID}" \\
                           code scan \\
                           --directory "\\$(pwd)" \\
-                          --repo-id <REPLACE WITH REPO\_OWNER/REPO\_NAME> \\
+                          --repo-id <REPLACE WITH REPO_OWNER/REPO_NAME> \\
                           --branch <REPLACE WITH BRANCH> \\
                           --source "JENKINS" \\
                           --create-repo-if-missing
@@ -16182,6 +16327,14 @@ You must replace placeholder variables with your own credentials and environment
         }
     }
     ```
+
+---
+title: "Cortex CLI Cortex Cloud Application Security command line reference"
+tocId: "zScssRW1wHQh3CfPQui_eQ"
+contentId: "gcL3U39clHyyWGcvsWhZrw"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Cortex-CLI-Cortex-Cloud-Application-Security-command-line-reference"
+depth: 2
+---
 
 ### Cortex CLI Cortex Cloud Application Security command line reference
 This reference guide documents the commands and flags unique to the Cortex Cloud Application Security CLI. For CLI commands common to all supported modules refer to Cortex CLI common command line reference guide.
@@ -16192,7 +16345,7 @@ The Cortex CLI Cortex Cloud Application Security only supports single occurrence
 
 Example 21. 
 
-./cortexcli --api-base-url <YOUR\_API\_URL> --api-key <YOUR\_API\_KEY> --auth-id <YOUR\_AUTH\_ID> --framework terraform --framework "terraform cloudformation"
+./cortexcli --api-base-url <YOUR_API_URL> --api-key <YOUR_API_KEY> --auth-id <YOUR_AUTH_ID> --framework terraform --framework "terraform cloudformation"
 
   
 
@@ -16212,7 +16365,7 @@ To retrieve the repository ID, under Inventory, navigate to All Assets → Repos
 | \--summary-position | Sets the position for displaying the summary information |
 | \--upload-mode | Upload mode determines the method or mode used to upload data, and includes these options: `upload` : Uploads scan results to the Cortex Cloud platform; `no-upload` : Disables uploads of scan results to the platform; `no-code`: Uploads scan findings to the platform, but without including the actual source code content (code blocks in the uploaded data |
 | \--external-modules-download-path | Specifies the directory to download external modules to. Defaults to `.external_modules` |
-| \--output Supported formats: cli, json, spdx, junitxml, sarif, cyclonedx, cyclonedx\_json | Output format for reporting |
+| \--output Supported formats: cli, json, spdx, junitxml, sarif, cyclonedx, cyclonedx_json | Output format for reporting |
 | \--output-file-path | Specifies the output path for the scan result file |
 | \--deep-analysis | Enables or disables deep analysis of the Terraform plan and related files |
 | \--repo-root-for-plan-enrichment | Enriches Terraform plan findings by mapping them to their original `.tf` files |
@@ -16221,9 +16374,17 @@ To retrieve the repository ID, under Inventory, navigate to All Assets → Repos
 | \--compact | Do not display code blocks in the output |
 | \--no-fail-on-crash | Prevents the application from failing (blocking pipelines) in the event of a scanner or backend failure. Instead of returning a `2` exit code, it will return a `0` exit code in such scenarios. |
 | \--var-file | Variable files to load in addition to the default files, Currently only supported for source Terraform (.tf file) and Helm chart scans |
-| CORTEX\_APPSEC\_VALIDATE\_SECRETS | Controls whether secret validation is performed. By default, this feature is disabled. Set `CORTEX_APPSEC_VALIDATE_SECRETS = true` to enable it |
+| CORTEX_APPSEC_VALIDATE_SECRETS | Controls whether secret validation is performed. By default, this feature is disabled. Set `CORTEX_APPSEC_VALIDATE_SECRETS = true` to enable it |
 | \--timeout | Sets the maximum time the Cortex CLI will wait for triggered local scan processes to complete. Default value: 15 minutes. Syntax: **To specify a duration**: Use a numeric value followed by a unit (for example `--timeout 10m`); **Default unit**: Numeric values entered without a unit are interpreted as seconds. For example, `30` is equal to 30 seconds.; **Supported units**: Milliseconds, seconds, minutes and hours |
 | \--help | Help |
+
+---
+title: "Cortex CLI common command line reference guide"
+tocId: "YTl82KE09_ryNqyNb9Po6w"
+contentId: "x~EhBmVYZqqz~BJ3Sz~pmQ"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Cortex-CLI-common-command-line-reference-guide"
+depth: 2
+---
 
 ### Cortex CLI common command line reference guide
 This reference guide describes the common command line flags used to manage the Cortex Cloud Application Security,Cloud Workload Protection (CWP) ) and API Security modules through the Cortex CLI, including the structure of base commands and subcommands.
@@ -16234,17 +16395,16 @@ The following table describes CLI commands common to all supported Cortex CLI mo
 
 | Command | Description |
 | --- | --- |
-| \--api-base-url | The public facing API URL. To retrieve the URL, under Settings, select Configurations → API Keys → copy API URL. Required: true. \[$CORTEX\_API\_BASE\_URL\] |
-| \--api-key | The API key used for authorization. Required: true. \[$CORTEX\_API\_KEY\] |
-| \--api-key-id | The API key ID. Required: true. \[$CORTEX\_API\_KEY\_ID\] |
-| \--soft-fail | Identifies and reports errors identified during a scan but does not trigger a failing condition. Instead, the scan returns a successful result with an exit code of `0`. Unlike skipped or suppressed checks, soft fail errors are still reported but do not cause the scan to fail. Required: false. \[$CORTEX\_SOFT\_FAIL\] \*\*Note:\*\* For soft fails, a failed check matches the defined severity threshold. If multiple soft fail severities are specified, the highest severity acts as the threshold for determining a soft fail. However, a successful scan will always return an exit code of `0`, even if block-level findings (which might trigger soft fails based on severity) are present. |
+| \--api-base-url | The public facing API URL. To retrieve the URL, under Settings, select Configurations → API Keys → copy API URL. Required: true. \[$CORTEX_API_BASE_URL\] |
+| \--api-key | The API key used for authorization. Required: true. \[$CORTEX_API_KEY\] |
+| \--api-key-id | The API key ID. Required: true. \[$CORTEX_API_KEY_ID\] |
+| \--soft-fail | Identifies and reports errors identified during a scan but does not trigger a failing condition. Instead, the scan returns a successful result with an exit code of `0`. Unlike skipped or suppressed checks, soft fail errors are still reported but do not cause the scan to fail. Required: false. \[$CORTEX_SOFT_FAIL\] \*\*Note:\*\* For soft fails, a failed check matches the defined severity threshold. If multiple soft fail severities are specified, the highest severity acts as the threshold for determining a soft fail. However, a successful scan will always return an exit code of `0`, even if block-level findings (which might trigger soft fails based on severity) are present. |
 | \--log-level | Set the logging level (INFO, WARNING, ERROR) for Stdout output |
-| \--http-proxy | The HTTP proxy server URL to route traffic through \[$HTTP\_PROXY\] |
+| \--http-proxy | The HTTP proxy server URL to route traffic through \[$HTTP_PROXY\] |
 | \--help | Show help options |
 | \--version | Retrieves the version of the Cortex CLI currently in use |
 
 ### Git Hooks
-Abstract
 
 Pre-commit and pre-receive hooks scan code changes locally and on push to detect exposed secrets.
 
@@ -16257,7 +16417,6 @@ The following hooks are supported:
 -   Pre-receive hooks: Run on the remote server before changes are pushed
 
 #### Cortex CLI pre-commit hooks
-Abstract
 
 Integrate Application Security secrets scanner as pre-commit hooks into your workflows to scan for errors on your machine before local commits.
 
@@ -16342,6 +16501,14 @@ To set up the Cortex CLI as a pre-commit hook on supported platforms, refer to t
     
 -   **Atlassian Git Tutorial**: A tutorial that explains the purpose and usage of both local and server-side hooks, including `pre-commit`: [https://www.atlassian.com/git/tutorials/git-hooks](https://www.atlassian.com/git/tutorials/git-hooks)
 
+---
+title: "Pre-commit hook usage"
+tocId: "OTaPlrQdcTZ5GuJ5QuzB6w"
+contentId: "e8axx3uu1SNgqLc8kVdNhA"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Pre-commit-hook-usage"
+depth: 4
+---
+
 ##### Pre-commit hook usage
 You can run secrets checks on your code, customize its behavior using supported flags, and suppress detected secrets when required.
 
@@ -16390,18 +16557,25 @@ Comments in a Dockerfile begin with (`#`). Note the comment in the **After suppr
 -   **Before suppression**:
     
     ```
-    ENV SEC\_1="ghp\_3xyKmc3W7XanE82IKHJ3Z3AfHbV"
+    ENV SEC_1="ghp_3xyKmc3W7XanE82IKHJ3Z3AfHbV"
     ```
     
 -   **After suppression**:
     
     ```
-    \# cortex:skip=APPSEC\_SECRET\_43: Suppress this key for testing purposes
-    ENV SEC\_1="ghp\_3xyKmc3W7XanE82IKHJ3Z3AfHbV"           
+    \# cortex:skip=APPSEC_SECRET_43: Suppress this key for testing purposes
+    ENV SEC_1="ghp_3xyKmc3W7XanE82IKHJ3Z3AfHbV"           
     ```
 
+---
+title: "Cortex CLI pre-receive hooks"
+tocId: "O0C1ijAO2CbZb76SvrXyxQ"
+contentId: "R8Oy1cEriw3aLHuvovaGgA"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Cortex-CLI-pre-receive-hooks"
+depth: 3
+---
+
 #### Cortex CLI pre-receive hooks
-Abstract
 
 Integrate the Application Security secrets scanner as a pre-receive hook into your workflows to scan for errors before code is accepted into your repository.
 
@@ -16482,19 +16656,27 @@ Use the script below as reference to extend or modify your existing pre-receive 
 # This script is used to run Cortex CLI in a pre-receive hook.
 
 # Hide the update notice.
-export CORTEX\_HIDE\_UPDATE\_NOTICE=1
+export CORTEX_HIDE_UPDATE_NOTICE=1
 
-CORTEX\_CLI="/usr/local/bin/cortexcli"
-BASE\_COMMAND="--api-base-url ${CORTEX\_API\_BASE\_URL} --api-key-id ${CORTEX\_API\_KEY\_ID} --api-key ${CORTEX\_API\_KEY} code pre-receive"
-OPTIONAL\_FLAGS=''
+CORTEX_CLI="/usr/local/bin/cortexcli"
+BASE_COMMAND="--api-base-url ${CORTEX_API_BASE_URL} --api-key-id ${CORTEX_API_KEY_ID} --api-key ${CORTEX_API_KEY} code pre-receive"
+OPTIONAL_FLAGS=''
 
 # Run cortex cli
-${CORTEX\_CLI} ${BASE\_COMMAND:-''} ${OPTIONAL\_FLAGS:-''}
+${CORTEX_CLI} ${BASE_COMMAND:-''} ${OPTIONAL_FLAGS:-''}
 
-exit\_code=$?
+exit_code=$?
 
-exit $exit\_code
+exit $exit_code
 ```
+
+---
+title: "Pre-receive hook usage"
+tocId: "kxjMyuM3C407I_9FbI_gbQ"
+contentId: "Gqx6AnD6u~RekTpdDxs3zw"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Pre-receive-hook-usage"
+depth: 4
+---
 
 ##### Pre-receive hook usage
 The hook executes a script on every git push.
@@ -16571,13 +16753,12 @@ The breakglass feature allows you to intentionally bypass the pre-receive hook s
 -   Instead of adding the API URL and credentials directly in the script, consider creating a `~/.cortexcli/.cortex.yaml` configuration file (owned by the git user and group) with the following contents:
     
     ```
-    CORTEX\_API\_BASE\_URL: <api base url>
-    CORTEX\_API\_KEY: <api key>
-    CORTEX\_API\_KEY\_ID: <api key id>
+    CORTEX_API_BASE_URL: <api base url>
+    CORTEX_API_KEY: <api key>
+    CORTEX_API_KEY_ID: <api key id>
     ```
 
 ## IDE
-Abstract
 
 Integrating the AppSec IDE security plugin to scan for misconfigurations, vulnerabilities, and secrets while coding, with in-IDE fixes.
 
@@ -16608,6 +16789,14 @@ Not all remediation options are available for all findings or all type of scan c
 -   Special characters (such as `&`, parentheses) are not supported in user names within a file path). For example, the `é` character in `c:\Users\JohnSmithé` is not supported
     
 -   For terminal actions performed by Cortex Cloud IDE extensions on Windows, only Command Prompt (CMD) is supported. PowerShell is not supported
+
+---
+title: "Visual Studio (VS) Code and VS Code compatible IDEs"
+tocId: "7iCXM~Jx36_pjlapDtXGcA"
+contentId: "4iQWO7a2pDPzA6zg4CiZJw"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Visual-Studio-VS-Code-and-VS-Code-compatible-IDEs"
+depth: 2
+---
 
 ### Visual Studio (VS) Code and VS Code compatible IDEs
 Integrate the Cortex Cloud code security plugin with your Visual Studio (VS) Code or any VS Code-compatible IDEs (such as Cursor, VSCodium, or Windsurf) to enhance security during development. The plugin scans for security policy violations using both default and custom policies, enabling you to identify and resolve issues before committing code, reducing the risk of pull request failures caused by undetected problems.
@@ -16780,9 +16969,9 @@ The configuration process depends on whether you’re using the open-source or p
         
         Example 24. Example
         
-        -   **macOS/Linux**: /Users/your\_username/Documents/cacert.pem or ~/Documents/cacert.pem
+        -   **macOS/Linux**: /Users/your_username/Documents/cacert.pem or ~/Documents/cacert.pem
             
-        -   **Windows**: C:\\Users\\your\_username\\Documents\\cacert.pem
+        -   **Windows**: C:\\Users\\your_username\\Documents\\cacert.pem
             
         
           
@@ -16916,6 +17105,14 @@ After suppressing an issue, the file will not be scanned for two minutes. This i
 
 If automated fixes are not available, policy documentation can provide guidance on how to address the issue: Select an issue and click Documentation. You are redirected to the relevant policy documentation which includes suggested guidelines on how to solve the issue.
 
+---
+title: "JetBrains"
+tocId: "x4zERHB7PSiSEzwXvjTieA"
+contentId: "zvddOCoB~UDVUoNCccbCKw"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/JetBrains"
+depth: 2
+---
+
 ### JetBrains
 Integrate the Cortex AppSec code security plugin with your JetBrains IDE instance to enhance security during development. The plugin scans for security policy violations using both default and custom policies, allowing you to identify and resolve issues before committing code, reducing the risk of pull request failures due to undetected problems.
 
@@ -17012,9 +17209,9 @@ You can install the plugin directly through the JetBrains IDE Plugins panel or t
         
         Example 25. Example
         
-        -   **macOS/Linux**: /Users/your\_username/Documents/cacert.pem or ~/Documents/cacert.pem
+        -   **macOS/Linux**: /Users/your_username/Documents/cacert.pem or ~/Documents/cacert.pem
             
-        -   **Windows**: C:\\Users\\your\_username\\Documents\\cacert.pem
+        -   **Windows**: C:\\Users\\your_username\\Documents\\cacert.pem
             
         
           
@@ -17027,7 +17224,7 @@ You can install the plugin directly through the JetBrains IDE Plugins panel or t
         
     -   External Checks Directory: Provide the path to a folder containing custom security checks
         
-    -   Custom Environment Variables: Environment variables passed to the scanner during scans such as CORTEX\_API\_BASE\_URL:
+    -   Custom Environment Variables: Environment variables passed to the scanner during scans such as CORTEX_API_BASE_URL:
         
         -   To add variables, provide the key/value pairs in the table under the Custom Environment Variables field
             
@@ -17180,6 +17377,14 @@ If automated fixes are not available, policy documentation can provide guidance 
 
 Secrets and Licenses category issues are typically mitigated by following the guidance in the Documentation.
 
+---
+title: "Developer Suppressions"
+tocId: "WwwLgZy8nD2KKc4LM9CKqw"
+contentId: "wPiLMTedtOmpCorS4tfnZA"
+prettyUrl: "/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Developer-Suppressions"
+depth: 1
+---
+
 ## Developer Suppressions
 Developer suppressions enable you to temporarily ignore specific scan findings that are known or acceptable in your code. You can apply a suppression inline in the code using inline comments or an annotation, or manage them from supported IDEs (see IDE integrations).
 
@@ -17203,7 +17408,7 @@ Use suppressions only for valid exceptions (for example, a false positive or an 
 The general pattern for inline suppressions is:
 
 ```
-#cortex:skip=<rule\_id>:<suppression\_comment>
+#cortex:skip=<rule_id>:<suppression_comment>
 ```
 
 -   `rule_id` : The ID of the specific check
@@ -17224,11 +17429,11 @@ The check IDs and rule names are placeholders for illustration purposes and do n
 The following comment skips the `APPSEC_AWS_20` check for the **foo-bucket S3** resource. This check ensures that the S3 bucket is private. It is skipped here because the bucket is intentionally public.
 
 ```
-resource "aws\_s3\_bucket" "foo-bucket" {
+resource "aws_s3_bucket" "foo-bucket" {
   region        = var.region
-  # cortex:skip=APPSEC\_AWS\_20:The bucket is a public static content host
-  bucket        = local.bucket\_name
-  force\_destroy = true
+  # cortex:skip=APPSEC_AWS_20:The bucket is a public static content host
+  bucket        = local.bucket_name
+  force_destroy = true
   acl           = "public-read"
 }
 ```
@@ -17245,7 +17450,7 @@ CloudFormation checks can be suppressed either with an inline comment next to th
     Resources:
       MyDB:
         Type: 'AWS::RDS::DBInstance'
-        # cortex:skip=APPSEC\_AWS\_16:Ensure all data stored in the RDS is securely encrypted at rest
+        # cortex:skip=APPSEC_AWS_16:Ensure all data stored in the RDS is securely encrypted at rest
         Properties:
           DBName: 'mydb'
           DBInstanceClass: 'db.t3.micro'
@@ -17264,7 +17469,7 @@ CloudFormation checks can be suppressed either with an inline comment next to th
         Metadata:
           cortex:
             skip:
-              - id: "APPSEC\_AWS\_157"
+              - id: "APPSEC_AWS_157"
                 comment: "Ensure that RDS instances have Multi-AZ enabled"
         Type: "AWS::RDS::DBInstance"
         Properties:
@@ -17283,13 +17488,13 @@ Comments can be added to any line in the Dockerfile.
 The following comment skips specific Dockerfile checks using inline comments while providing a reason for each suppression.
 
 ```
-\# cortex:skip=APPSEC\_DOCKER\_5: No need to skip the python check in this image
-# cortex:skip=APPSEC\_DOCKER\_7: No need to skip graph check in this image
+# cortex:skip=APPSEC_DOCKER_5: No need to skip the python check in this image
+# cortex:skip=APPSEC_DOCKER_7: No need to skip graph check in this image
 FROM alpine:3.3
 RUN apk --no-cache add nginx
 EXPOSE 3000 80 443 22
-# cortex:skip=APPSEC\_DOCKER\_1: required for nginx to run
-CMD \["nginx", "-g", "daemon off;"\]
+# cortex:skip=APPSEC_DOCKER_1: required for nginx to run
+CMD ["nginx", "-g", "daemon off;"]
 ```
 
 ### Kubernetes
@@ -17297,7 +17502,7 @@ CMD \["nginx", "-g", "daemon off;"\]
 To suppress checks in Kubernetes manifests, annotate using the following format:
 
 ```
-cortex.io/skip#: <rule\_id>=<suppression\_comment>
+cortex.io/skip#: <rule_id>=<suppression_comment>
 ```
 
 ```
@@ -17306,9 +17511,9 @@ kind: Pod
 metadata:
   name: mypod
   annotations:
-    cortex.io/skip1: APPSEC\_K8S\_20=Ignore privilege escalation
-    cortex.io/skip2: APPSEC\_K8S\_14
-    cortex.io/skip3: APPSEC\_K8S\_11=BestEffort QoS, no CPU limits
+    cortex.io/skip1: APPSEC_K8S_20=Ignore privilege escalation
+    cortex.io/skip2: APPSEC_K8S_14
+    cortex.io/skip3: APPSEC_K8S_11=BestEffort QoS, no CPU limits
 spec:
   containers:
     - name: app
@@ -17328,26 +17533,26 @@ Resources:
       DBInstanceClass: 'db.t3.micro'
       Engine: 'mysql'
       MasterUsername: 'master'
-      # cortex:skip=APPSEC\_SECRET\_6 before it
-      MasterUserPassword: 'password' # cortex:skip=APPSEC\_SECRET\_6 or next to it
+      # cortex:skip=APPSEC_SECRET_6 before it
+      MasterUserPassword: 'password' # cortex:skip=APPSEC_SECRET_6 or next to it
 ```
 
 ### Software Composition Analysis (SCA)
 
 Inline suppressions allow you to ignore specific CVEs, license violations, or all CVEs for a specific package directly in dependency files. Each skip includes a check ID (or package identifier) and an optional reason for the suppression. The exact syntax depends on the package manager.
 
--   For **Python** (`requirements.txt`), **.NET** (`Paket`), **Java/Kotlin** `(gradle.properties`), **Ruby** (`Gemfile`)
+#### For **Python** (`requirements.txt`), **.NET** (`Paket`), **Java/Kotlin** `(gradle.properties`), **Ruby** (`Gemfile`)
     
     The skip comment can be added anywhere in the file.
     
     ```
-    \# cortex:skip=CVE-2019-19844: Ignore CVE-2019-19844 for all packages in this file
-    # cortex:skip=jinja2\[APPSEC\_LIC\_1\]: Ignore non-OSI license violations for jinja2
+    # cortex:skip=CVE-2019-19844: Ignore CVE-2019-19844 for all packages in this file
+    # cortex:skip=jinja2[APPSEC_LIC_1]: Ignore non-OSI license violations for jinja2
     django==1.2
     jinja2==3.1.0
     ```
     
--   For **JavaScript** (`package.json`, `bower,json`)
+#### For **JavaScript** (`package.json`, `bower,json`)
     
     -   Skip comments can be placed in the metadata section of the non-lock file. When scanning with lock files (for example `yarn.lock`), the suppression applies to related violations.
         
@@ -17355,10 +17560,10 @@ Inline suppressions allow you to ignore specific CVEs, license violations, or al
         {
           "name": "my-package",
           "version": "1.0.0",
-          "//": \[
-            "cortex:skip=express\[APPSEC\_LIC\_2\]: ignore unknown license violations for express",
+          "//": [
+            "cortex:skip=express[APPSEC_LIC_2]: ignore unknown license violations for express",
             "cortex:skip=CVE-2023-123: ignore this CVE for this file"
-          \],
+          ],
           "dependencies": {
             "express": "4.17.1",
             "lodash": "4.17.21"
@@ -17373,13 +17578,13 @@ Inline suppressions allow you to ignore specific CVEs, license violations, or al
         ```
         
     
--   For **Java** (`pom.xml`), **.NET** (`*.cspro`j)
+#### For **Java** (`pom.xml`), **.NET** (`*.cspro`j)
     
     Skip comments can be placed anywhere in the file.
     
     ```
     <!--cortex:skip=CVE-2023-123: ignore this CVE for the file-->
-    <!--cortex:skip=junit\[APPSEC\_LIC\_1\]: ignore non-compliant license findings for junit-->
+    <!--cortex:skip=junit[APPSEC_LIC_1]: ignore non-compliant license findings for junit-->
     <dependencies>
       <dependency>
         <groupId>org.springframework</groupId>
@@ -17408,7 +17613,7 @@ Inline suppressions allow you to ignore specific CVEs, license violations, or al
         github.com/gin-gonic/gin v1.7.4
         github.com/go-sql-driver/mysql v1.6.0
         // cortex:skip=CVE-2023-123: ignore this CVE for this file
-        // cortex:skip=github.com/go-sql-driver/mysql\[APPSEC\_LIC\_2\]: ignore license violations for this package
+        // cortex:skip=github.com/go-sql-driver/mysql[APPSEC_LIC_2]: ignore license violations for this package
     )
     ```
 

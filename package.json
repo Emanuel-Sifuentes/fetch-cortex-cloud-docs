@@ -9,7 +9,8 @@
     "fix": "bash scripts/fix_abstract_lines.sh && python scripts/fix_escaped_chars_in_fences.py sources_fetch/216-Developer-Suppressions.md && python scripts/fix_escaped_underscores.py && npm run combine",
     "audit:headings": "node scripts/audit_headings.js",
     "audit:toc": "node scripts/audit_toc_vs_headings.js",
-    "toc:table": "node scripts/generate_toc_table.js"
+    "toc:table": "node scripts/generate_toc_table.js",
+    "test": "node --test scripts/generate_combined.test.js"
   },
   "dependencies": {
     "turndown": "^7.2.0",
