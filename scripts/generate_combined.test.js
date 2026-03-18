@@ -3,6 +3,7 @@ const assert = require("node:assert/strict");
 const {
   promoteKeywordsToHeadings,
   computeBuckets,
+  resolveFile,
 } = require("./generate_combined.js");
 
 describe("promoteKeywordsToHeadings", () => {
@@ -333,5 +334,28 @@ describe("computeBuckets", () => {
 
     assert.equal(result.titleMatched.size, 1);
     assert.equal(result.titleMatched.get("p-title"), "r-target");
+  });
+});
+
+describe("resolveFile", () => {
+  it("returns the file for a direct contentId match", () => {
+    const fileMap = { "abc": { filename: "001-Topic.md", content: "# Topic" } };
+    const titleMatchMap = new Map();
+    const result = resolveFile("abc", titleMatchMap, fileMap);
+    assert.deepEqual(result, { filename: "001-Topic.md", content: "# Topic" });
+  });
+
+  it("falls back to title-match lookup when contentId not in fileMap", () => {
+    const fileMap = { "rt-456": { filename: "042-Scanning.md", content: "# Scanning" } };
+    const titleMatchMap = new Map([["pos-123", "rt-456"]]);
+    const result = resolveFile("pos-123", titleMatchMap, fileMap);
+    assert.deepEqual(result, { filename: "042-Scanning.md", content: "# Scanning" });
+  });
+
+  it("returns null when contentId cannot be resolved", () => {
+    const fileMap = {};
+    const titleMatchMap = new Map();
+    const result = resolveFile("missing-id", titleMatchMap, fileMap);
+    assert.equal(result, null);
   });
 });
