@@ -115,6 +115,67 @@ function promoteKeywordsToHeadings(md) {
     .join("\n");
 }
 
+function computeBuckets(postureToc, runtimeToc, appsecToc) {
+  const postureIds = new Set(postureToc.map((e) => e.contentId));
+  const runtimeIds = new Set(runtimeToc.map((e) => e.contentId));
+  const appsecIds  = new Set(appsecToc.map((e) => e.contentId));
+
+  const PRA = new Set();
+  const PR  = new Set();
+  const R   = new Set();
+  const P   = new Set();
+  const A   = new Set();
+  const titleMatched = new Map();
+
+  for (const id of appsecIds) {
+    if (postureIds.has(id) && runtimeIds.has(id)) PRA.add(id);
+    else A.add(id);
+  }
+
+  for (const id of runtimeIds) {
+    if (appsecIds.has(id)) continue;
+    if (postureIds.has(id)) PR.add(id);
+    else R.add(id);
+  }
+
+  const postureOnlyIds = [];
+  for (const id of postureIds) {
+    if (!appsecIds.has(id) && !runtimeIds.has(id)) {
+      postureOnlyIds.push(id);
+    }
+  }
+
+  const runtimeByTitle = new Map();
+  for (const entry of runtimeToc) {
+    if (!runtimeByTitle.has(entry.title)) {
+      runtimeByTitle.set(entry.title, []);
+    }
+    runtimeByTitle.get(entry.title).push(entry);
+  }
+
+  const postureTocMap = new Map();
+  for (const entry of postureToc) {
+    if (!postureTocMap.has(entry.contentId)) {
+      postureTocMap.set(entry.contentId, entry);
+    }
+  }
+
+  for (const id of postureOnlyIds) {
+    const postureEntry = postureTocMap.get(id);
+    const candidates = runtimeByTitle.get(postureEntry.title);
+    if (candidates && candidates.length > 0) {
+      const best = candidates.reduce((a, b) =>
+        Math.abs(a.depth - postureEntry.depth) <= Math.abs(b.depth - postureEntry.depth) ? a : b
+      );
+      titleMatched.set(id, best.contentId);
+    } else {
+      P.add(id);
+    }
+  }
+
+  return { PRA, PR, R, P, A, titleMatched };
+}
+
 async function main() {
   // Check source files exist
   if (!fs.existsSync(OUT_DIR)) {
@@ -186,7 +247,7 @@ async function main() {
   console.log(`${tocFlat.length} topics, ${combined.split("\n").length} lines`);
 }
 
-module.exports = { promoteKeywordsToHeadings };
+module.exports = { promoteKeywordsToHeadings, computeBuckets };
 
 if (require.main === module) {
   main().catch((err) => {
