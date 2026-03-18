@@ -3,9 +3,19 @@ const fs = require("fs");
 const path = require("path");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
-const MAP_ID = "aUsxSwBeRrRs3Jm36XHckg";
+const MAP_IDS = {
+  appsec:  "aUsxSwBeRrRs3Jm36XHckg",
+  posture: "BNCvOg6pEdBp~axnn92pBQ",
+  runtime: "bKDBlplrokDJKA~h8O9o6A",
+};
+
+const OUTPUT_FILES = {
+  appsec:  "cortex-cloud-appsec-combined.md",
+  posture: "cortex-cloud-posture-combined.md",
+  runtime: "cortex-cloud-runtime-combined.md",
+};
+
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
-const COMBINED_FILE = "cortex-cloud-appsec-combined.md";
 const KEYWORD_HEADINGS = [
   "For AMD architecture",
   "For ARM architecture",
@@ -183,7 +193,24 @@ function resolveFile(contentId, titleMatchMap, fileMap) {
   return null;
 }
 
+function parseMapFlag() {
+  const idx = process.argv.indexOf("--map");
+  if (idx === -1 || idx + 1 >= process.argv.length) return "all";
+  return process.argv[idx + 1];
+}
+
 async function main() {
+  // Parse --map flag
+  const mapFlag = parseMapFlag();
+  const ALL_TARGETS = ["appsec", "posture", "runtime"];
+  const targets = mapFlag === "all" ? ALL_TARGETS : [mapFlag];
+  for (const t of targets) {
+    if (!MAP_IDS[t]) {
+      console.error(`Error: unknown map "${t}" — choose from: ${ALL_TARGETS.join(", ")}`);
+      process.exit(1);
+    }
+  }
+
   // Check source files exist
   if (!fs.existsSync(OUT_DIR)) {
     console.error(
@@ -193,7 +220,7 @@ async function main() {
   }
   const files = fs
     .readdirSync(OUT_DIR)
-    .filter((f) => /^\d{3}-/.test(f) && f.endsWith(".md"))
+    .filter((f) => /^\d+-/.test(f) && f.endsWith(".md"))
     .sort();
   if (files.length === 0) {
     console.error(
@@ -201,12 +228,6 @@ async function main() {
     );
     process.exit(1);
   }
-
-  // Fetch TOC
-  console.log("Fetching TOC from API...");
-  const toc = await fetch(`/api/khub/maps/${MAP_ID}/toc`);
-  const tocFlat = flattenToc(toc);
-  console.log(`TOC: ${tocFlat.length} entries`);
 
   // Build contentId -> file content map from local files
   const fileMap = {};
@@ -220,38 +241,62 @@ async function main() {
     }
   }
 
-  // Check for mismatches
-  const tocContentIds = new Set(tocFlat.map((e) => e.contentId));
-  const fileContentIds = new Set(Object.keys(fileMap));
-  for (const id of fileContentIds) {
-    if (!tocContentIds.has(id)) {
-      console.log(
-        `WARNING: local file ${fileMap[id].filename} has no matching TOC entry`
-      );
-    }
-  }
-  for (const entry of tocFlat) {
-    if (!fileMap[entry.contentId]) {
-      console.log(
-        `WARNING: TOC entry "${entry.title}" has no matching local file`
-      );
-    }
-  }
+  // Fetch all 3 TOCs in parallel (always needed for bucketing)
+  console.log("Fetching TOCs from API...");
+  const [appsecToc, postureToc, runtimeToc] = await Promise.all([
+    fetch(`/api/khub/maps/${MAP_IDS.appsec}/toc`),
+    fetch(`/api/khub/maps/${MAP_IDS.posture}/toc`),
+    fetch(`/api/khub/maps/${MAP_IDS.runtime}/toc`),
+  ]);
 
-  // Build combined file in TOC order
-  const sections = [];
-  for (const entry of tocFlat) {
-    const file = fileMap[entry.contentId];
-    if (!file) continue;
-    const md = stripFrontmatter(file.content);
-    sections.push(shiftHeadings(md.trim(), entry.depth, file.filename));
-  }
+  // Flatten each TOC
+  const appsecFlat  = flattenToc(appsecToc);
+  const postureFlat = flattenToc(postureToc);
+  const runtimeFlat = flattenToc(runtimeToc);
+  console.log(`TOCs: appsec=${appsecFlat.length}, posture=${postureFlat.length}, runtime=${runtimeFlat.length}`);
 
-  const raw = sections.filter(Boolean).join("\n\n");
-  const combined = promoteKeywordsToHeadings(raw);
-  fs.writeFileSync(path.join(OUT_DIR, COMBINED_FILE), combined + "\n", "utf-8");
-  console.log(`\nCombined file: ${path.join(OUT_DIR, COMBINED_FILE)}`);
-  console.log(`${tocFlat.length} topics, ${combined.split("\n").length} lines`);
+  // Compute dedup buckets
+  const buckets = computeBuckets(postureFlat, runtimeFlat, appsecFlat);
+
+  // Determine which contentIds belong to each target
+  const targetContentIds = {
+    appsec:  new Set([...buckets.PRA, ...buckets.A]),
+    posture: new Set([...buckets.PR, ...buckets.P, ...buckets.titleMatched.keys()]),
+    runtime: new Set([...buckets.R]),
+  };
+
+  const targetTocs = {
+    appsec:  appsecFlat,
+    posture: postureFlat,
+    runtime: runtimeFlat,
+  };
+
+  // Generate combined file for each target
+  for (const target of targets) {
+    const allowedIds = targetContentIds[target];
+    const tocFlat = targetTocs[target].filter((e) => allowedIds.has(e.contentId));
+
+    console.log(`\n[${target}] ${tocFlat.length} entries after dedup`);
+
+    // Build combined file in TOC order
+    const sections = [];
+    for (const entry of tocFlat) {
+      const file = resolveFile(entry.contentId, buckets.titleMatched, fileMap);
+      if (!file) {
+        console.log(`WARNING: TOC entry "${entry.title}" has no matching local file`);
+        continue;
+      }
+      const md = stripFrontmatter(file.content);
+      sections.push(shiftHeadings(md.trim(), entry.depth, file.filename));
+    }
+
+    const raw = sections.filter(Boolean).join("\n\n");
+    const combined = promoteKeywordsToHeadings(raw);
+    const outPath = path.join(OUT_DIR, OUTPUT_FILES[target]);
+    fs.writeFileSync(outPath, combined + "\n", "utf-8");
+    console.log(`Combined file: ${outPath}`);
+    console.log(`${tocFlat.length} topics, ${combined.split("\n").length} lines`);
+  }
 }
 
 module.exports = { promoteKeywordsToHeadings, computeBuckets, resolveFile };
