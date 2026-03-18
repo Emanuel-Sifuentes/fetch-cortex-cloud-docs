@@ -176,6 +176,13 @@ function computeBuckets(postureToc, runtimeToc, appsecToc) {
   return { PRA, PR, R, P, A, titleMatched };
 }
 
+function resolveFile(contentId, titleMatchMap, fileMap) {
+  if (fileMap[contentId]) return fileMap[contentId];
+  const mapped = titleMatchMap.get(contentId);
+  if (mapped && fileMap[mapped]) return fileMap[mapped];
+  return null;
+}
+
 async function main() {
   // Check source files exist
   if (!fs.existsSync(OUT_DIR)) {
@@ -247,7 +254,7 @@ async function main() {
   console.log(`${tocFlat.length} topics, ${combined.split("\n").length} lines`);
 }
 
-module.exports = { promoteKeywordsToHeadings, computeBuckets };
+module.exports = { promoteKeywordsToHeadings, computeBuckets, resolveFile };
 
 if (require.main === module) {
   main().catch((err) => {
