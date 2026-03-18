@@ -172,6 +172,25 @@ function computeBuckets(postureToc, runtimeToc, appsecToc) {
     }
   }
 
+  const appsecTocMap = new Map();
+  for (const entry of appsecToc) {
+    if (!appsecTocMap.has(entry.contentId)) {
+      appsecTocMap.set(entry.contentId, entry);
+    }
+  }
+
+  for (const id of [...A]) {
+    const appsecEntry = appsecTocMap.get(id);
+    const candidates = runtimeByTitle.get(appsecEntry.title);
+    if (candidates && candidates.length > 0) {
+      const best = candidates.reduce((a, b) =>
+        Math.abs(a.depth - appsecEntry.depth) <= Math.abs(b.depth - appsecEntry.depth) ? a : b
+      );
+      A.delete(id);
+      titleMatched.set(id, best.contentId);
+    }
+  }
+
   return { PRA, PR, R, P, A, titleMatched };
 }
 
@@ -234,9 +253,13 @@ async function main() {
   const buckets = computeBuckets(postureFlat, runtimeFlat, appsecFlat);
 
   // Determine which contentIds belong to each target
+  const appsecIds  = new Set(appsecFlat.map((e) => e.contentId));
+  const postureIds = new Set(postureFlat.map((e) => e.contentId));
   const targetContentIds = {
-    appsec:  new Set([...buckets.PRA, ...buckets.A]),
-    posture: new Set([...buckets.PR, ...buckets.P, ...buckets.titleMatched.keys()]),
+    appsec:  new Set([...buckets.PRA, ...buckets.A,
+      ...[...buckets.titleMatched.keys()].filter((id) => appsecIds.has(id))]),
+    posture: new Set([...buckets.PR, ...buckets.P,
+      ...[...buckets.titleMatched.keys()].filter((id) => postureIds.has(id))]),
     runtime: new Set([...buckets.R]),
   };
 

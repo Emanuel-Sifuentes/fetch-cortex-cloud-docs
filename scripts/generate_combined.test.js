@@ -296,6 +296,17 @@ describe("computeBuckets", () => {
     assert.equal(result.P.size, 0);
   });
 
+  it("title-matches an AppSec-only contentId to a Runtime contentId with same title", () => {
+    const posture = [];
+    const runtime = [entry("rt-root", "AppSec Root", 0)];
+    const appsec = [entry("as-root", "AppSec Root", 0)];
+
+    const result = computeBuckets(posture, runtime, appsec);
+
+    assert.equal(result.titleMatched.get("as-root"), "rt-root");
+    assert.ok(!result.A.has("as-root"));
+  });
+
   it("assigns mixed entries to correct buckets comprehensively", () => {
     const posture = [
       entry("shared-all", "All Three", 0),
