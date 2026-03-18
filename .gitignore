@@ -1,4 +1,5 @@
 node_modules/
+.worktrees/
 
 # Ignore all fetched markdown files except the combined file and README
 sources_fetch/*.md
