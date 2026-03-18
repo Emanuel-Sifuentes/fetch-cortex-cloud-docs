@@ -1,19 +1,8 @@
 const https = require("https");
+const { MAP_IDS, parseMapFlag } = require("./map_config.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
-const MAP_IDS = {
-  appsec:  "aUsxSwBeRrRs3Jm36XHckg",
-  posture: "BNCvOg6pEdBp~axnn92pBQ",
-  runtime: "bKDBlplrokDJKA~h8O9o6A",
-};
-
-function parseMapFlag() {
-  const idx = process.argv.indexOf("--map");
-  if (idx === -1 || idx + 1 >= process.argv.length) return "runtime";
-  return process.argv[idx + 1];
-}
-
-const MAP_ID = MAP_IDS[parseMapFlag()];
+const MAP_ID = MAP_IDS[parseMapFlag("runtime")];
 
 function fetch(urlPath) {
   return new Promise((resolve, reject) => {

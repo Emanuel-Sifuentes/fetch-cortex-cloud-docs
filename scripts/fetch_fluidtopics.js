@@ -3,22 +3,12 @@ const fs = require("fs");
 const path = require("path");
 const TurndownService = require("turndown");
 const { gfm } = require("turndown-plugin-gfm");
+const { MAP_IDS, parseMapFlag } = require("./map_config.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
-const MAP_IDS = {
-  appsec:  "aUsxSwBeRrRs3Jm36XHckg",
-  posture: "BNCvOg6pEdBp~axnn92pBQ",
-  runtime: "bKDBlplrokDJKA~h8O9o6A",
-};
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
 const CONCURRENCY = 5;
 const DELAY_MS = 200;
-
-function parseMapFlag() {
-  const idx = process.argv.indexOf("--map");
-  if (idx === -1 || idx + 1 >= process.argv.length) return "all";
-  return process.argv[idx + 1];
-}
 
 const turndown = new TurndownService({
   headingStyle: "atx",
@@ -253,7 +243,7 @@ async function fetchTopic(topic, index, total, mapId, sourceMap) {
 }
 
 async function main() {
-  const mapFlag = parseMapFlag();
+  const mapFlag = parseMapFlag("all");
   fs.mkdirSync(OUT_DIR, { recursive: true });
 
   if (mapFlag === "appsec") {

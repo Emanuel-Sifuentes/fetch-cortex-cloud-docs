@@ -1,20 +1,9 @@
 const https = require("https");
 const fs = require("fs");
 const path = require("path");
+const { MAP_IDS, COMBINED_FILES, VALID_MAPS, parseMapFlag } = require("./map_config.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
-const MAP_IDS = {
-  appsec:  "aUsxSwBeRrRs3Jm36XHckg",
-  posture: "BNCvOg6pEdBp~axnn92pBQ",
-  runtime: "bKDBlplrokDJKA~h8O9o6A",
-};
-
-const OUTPUT_FILES = {
-  appsec:  "cortex-cloud-appsec-combined.md",
-  posture: "cortex-cloud-posture-combined.md",
-  runtime: "cortex-cloud-runtime-combined.md",
-};
-
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
 const KEYWORD_HEADINGS = [
   "For AMD architecture",
@@ -193,23 +182,9 @@ function resolveFile(contentId, titleMatchMap, fileMap) {
   return null;
 }
 
-function parseMapFlag() {
-  const idx = process.argv.indexOf("--map");
-  if (idx === -1 || idx + 1 >= process.argv.length) return "all";
-  return process.argv[idx + 1];
-}
-
 async function main() {
-  // Parse --map flag
-  const mapFlag = parseMapFlag();
-  const ALL_TARGETS = ["appsec", "posture", "runtime"];
-  const targets = mapFlag === "all" ? ALL_TARGETS : [mapFlag];
-  for (const t of targets) {
-    if (!MAP_IDS[t]) {
-      console.error(`Error: unknown map "${t}" — choose from: ${ALL_TARGETS.join(", ")}`);
-      process.exit(1);
-    }
-  }
+  const mapFlag = parseMapFlag("all");
+  const targets = mapFlag === "all" ? VALID_MAPS : [mapFlag];
 
   // Check source files exist
   if (!fs.existsSync(OUT_DIR)) {
@@ -292,7 +267,7 @@ async function main() {
 
     const raw = sections.filter(Boolean).join("\n\n");
     const combined = promoteKeywordsToHeadings(raw);
-    const outPath = path.join(OUT_DIR, OUTPUT_FILES[target]);
+    const outPath = path.join(OUT_DIR, COMBINED_FILES[target]);
     fs.writeFileSync(outPath, combined + "\n", "utf-8");
     console.log(`Combined file: ${outPath}`);
     console.log(`${tocFlat.length} topics, ${combined.split("\n").length} lines`);

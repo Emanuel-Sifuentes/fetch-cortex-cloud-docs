@@ -1,27 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 const https = require("https");
+const { MAP_IDS, COMBINED_FILES, parseMapFlag } = require("./map_config.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
-const MAP_IDS = {
-  appsec:  "aUsxSwBeRrRs3Jm36XHckg",
-  posture: "BNCvOg6pEdBp~axnn92pBQ",
-  runtime: "bKDBlplrokDJKA~h8O9o6A",
-};
-
-const COMBINED_FILES = {
-  appsec:  "cortex-cloud-appsec-combined.md",
-  posture: "cortex-cloud-posture-combined.md",
-  runtime: "cortex-cloud-runtime-combined.md",
-};
-
-function parseMapFlag() {
-  const idx = process.argv.indexOf("--map");
-  if (idx === -1 || idx + 1 >= process.argv.length) return "runtime";
-  return process.argv[idx + 1];
-}
-
-const mapFlag = parseMapFlag();
+const mapFlag = parseMapFlag("runtime");
 const MAP_ID = MAP_IDS[mapFlag];
 const DIR = path.join(__dirname, "..", "sources_fetch");
 
