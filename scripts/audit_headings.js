@@ -3,7 +3,20 @@ const path = require("path");
 const https = require("https");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
-const MAP_ID = "aUsxSwBeRrRs3Jm36XHckg";
+const MAP_IDS = {
+  appsec:  "aUsxSwBeRrRs3Jm36XHckg",
+  posture: "BNCvOg6pEdBp~axnn92pBQ",
+  runtime: "bKDBlplrokDJKA~h8O9o6A",
+};
+
+function parseMapFlag() {
+  const idx = process.argv.indexOf("--map");
+  if (idx === -1 || idx + 1 >= process.argv.length) return "runtime";
+  return process.argv[idx + 1];
+}
+
+const mapFlag = parseMapFlag();
+const MAP_ID = MAP_IDS[mapFlag];
 const DIR = path.join(__dirname, "..", "sources_fetch");
 
 function fetch(urlPath) {
@@ -86,7 +99,7 @@ function parseFile(filepath) {
 
 async function main() {
   const files = fs.readdirSync(DIR)
-    .filter(f => f.endsWith(".md") && f !== "cortex-cloud-appsec-combined.md" && f !== "README.md")
+    .filter(f => f.endsWith(".md") && !f.startsWith("cortex-cloud-") && f !== "README.md")
     .sort();
 
   // Parse all files in one pass
