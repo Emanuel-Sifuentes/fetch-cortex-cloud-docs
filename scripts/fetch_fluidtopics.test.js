@@ -80,4 +80,24 @@ describe("flattenCellContent", () => {
     assert.ok(!result.includes("(1)"));
     assert.ok(result.includes("Only one"));
   });
+
+  it("strips nested table tags from cell content", () => {
+    const input = "<table><tbody><tr><td>nested</td></tr></tbody></table>";
+    const result = flattenCellContent(input);
+
+    assert.ok(!result.includes("<table"));
+    assert.ok(!result.includes("<tbody"));
+    assert.ok(!result.includes("<tr"));
+    assert.ok(!result.includes("<td"));
+    assert.ok(result.includes("nested"));
+  });
+
+  it("collapses newlines into a single line", () => {
+    const input = "<p>line one</p>\n\n<p>line two</p>";
+    const result = flattenCellContent(input);
+
+    assert.ok(!result.includes("\n"));
+    assert.ok(result.includes("line one"));
+    assert.ok(result.includes("line two"));
+  });
 });
