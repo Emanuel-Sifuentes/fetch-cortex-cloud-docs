@@ -328,15 +328,19 @@ function extractToSections(row, headerRow, extractedSections) {
 function processCellToMarkdown(cellHtml, extractedSections) {
   const parts = [];
 
-  // Handle nested tables: extract and recursively process through cleanTableHtml
+  // Handle nested tables: use extractTopLevelTables for correct nesting,
+  // then recursively process each through cleanTableHtml
   let html = cellHtml;
   const nestedTables = [];
-  html = html.replace(/<table[\s\S]*?<\/table>/g, (tableHtml) => {
-    const nestedSections = extractedSections || new Map();
-    const processed = cleanTableHtml(tableHtml, nestedSections);
-    nestedTables.push(processed);
-    return "<!--NESTED_TABLE-->";
-  });
+  const segments = extractTopLevelTables(html);
+  html = segments.map((seg) => {
+    if (seg.type === "table") {
+      const processed = cleanTableHtml(seg.html, extractedSections);
+      nestedTables.push(processed);
+      return "<!--NESTED_TABLE-->";
+    }
+    return seg.html;
+  }).join("");
 
   // Extract code blocks
   const codeBlocks = [];
