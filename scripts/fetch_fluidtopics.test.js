@@ -23,4 +23,41 @@ describe("extractTopLevelTables", () => {
       { type: "content", html: "<p>after</p>" },
     ]);
   });
+
+  it("extracts multiple tables preserving interleaved content", () => {
+    const html = "<p>a</p><table><tr><td>1</td></tr></table><p>b</p><table><tr><td>2</td></tr></table><p>c</p>";
+    const segments = extractTopLevelTables(html);
+
+    assert.equal(segments.length, 5);
+    assert.equal(segments[0].type, "content");
+    assert.equal(segments[1].type, "table");
+    assert.equal(segments[2].type, "content");
+    assert.equal(segments[3].type, "table");
+    assert.equal(segments[4].type, "content");
+  });
+
+  it("treats nested tables as part of the outer table", () => {
+    const html = '<table><tr><td><table><tr><td>inner</td></tr></table></td></tr></table>';
+    const segments = extractTopLevelTables(html);
+
+    assert.equal(segments.length, 1);
+    assert.equal(segments[0].type, "table");
+    assert.ok(segments[0].html.includes("<table><tr><td>inner</td></tr></table>"));
+  });
+
+  it("returns a single content segment when no tables exist", () => {
+    const html = "<p>just text</p>";
+    const segments = extractTopLevelTables(html);
+
+    assert.deepEqual(segments, [{ type: "content", html: "<p>just text</p>" }]);
+  });
+
+  it("handles table with attributes", () => {
+    const html = '<table class="wide"><tr><td>A</td></tr></table>';
+    const segments = extractTopLevelTables(html);
+
+    assert.equal(segments.length, 1);
+    assert.equal(segments[0].type, "table");
+    assert.equal(segments[0].html, '<table class="wide"><tr><td>A</td></tr></table>');
+  });
 });
