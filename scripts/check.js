@@ -84,6 +84,10 @@ async function checkProduct(product, snapshot) {
   for (const mapName of mapNames) {
     const mapId = MAP_IDS[mapName];
     try {
+      if (!snapshot.maps[mapName]) {
+        throw new Error(`map "${mapName}" not in snapshot — run: npm run snapshot:${product}`);
+      }
+
       const meta = await fetchMapMeta(mapId);
 
       if (meta.lastPublication === snapshot.maps[mapName].lastPublication) {
