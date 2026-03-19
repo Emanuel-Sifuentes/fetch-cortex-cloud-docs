@@ -100,4 +100,20 @@ describe("flattenCellContent", () => {
     assert.ok(result.includes("line one"));
     assert.ok(result.includes("line two"));
   });
+
+  it("preserves admonition heading conversion", () => {
+    const input = '<h3 class="title">Note</h3><p>text</p>';
+    const result = flattenCellContent(input);
+
+    assert.ok(result.includes("**Note:**"));
+    assert.ok(result.includes("text"));
+  });
+
+  it("unwraps p inside li", () => {
+    const input = "<ul><li><p>wrapped</p></li></ul>";
+    const result = flattenCellContent(input);
+
+    assert.ok(result.includes("wrapped"));
+    assert.ok(!result.includes("<p>"));
+  });
 });
