@@ -267,6 +267,48 @@ describe("extractToSections", () => {
   });
 });
 
+describe("cleanTableHtml integration", () => {
+  it("processes a simple table through the full pipeline unchanged", () => {
+    const html = "<table><tbody><tr><td>A</td><td>B</td></tr>" +
+      "<tr><td>1</td><td>2</td></tr></tbody></table>";
+    const sections = new Map();
+
+    const result = cleanTableHtml(html, sections);
+
+    // Should still have a table with <thead> (promoted from first row)
+    assert.ok(result.includes("<thead>"));
+    assert.ok(result.includes("<th>"));
+    assert.equal(sections.size, 0);
+  });
+
+  it("extracts complex rows and leaves simple rows as tables", () => {
+    const html = "<table><tbody>" +
+      "<tr><td>Op</td><td>Desc</td></tr>" +
+      "<tr><td>=</td><td>Equals</td></tr>" +
+      "<tr><td>IN</td><td><p>Check membership.</p><pre>code</pre></td></tr>" +
+      "<tr><td>!=</td><td>Not equals</td></tr>" +
+      "</tbody></table>";
+    const sections = new Map();
+
+    const result = cleanTableHtml(html, sections);
+
+    assert.ok(result.includes("<!--EXTRACTED:"));
+    assert.ok(sections.size > 0);
+  });
+
+  it("pads rows with fewer cells than header", () => {
+    const html = "<table><thead><tr><th>A</th><th>B</th><th>C</th></tr></thead>" +
+      "<tbody><tr><td>1</td></tr></tbody></table>";
+    const sections = new Map();
+
+    const result = cleanTableHtml(html, sections);
+
+    // Row should be padded to 3 cells
+    const tdCount = (result.match(/<td[^>]*>/g) || []).length;
+    assert.equal(tdCount, 3);
+  });
+});
+
 describe("removeDuplicateSeparators", () => {
   it("removes duplicate consecutive separator rows", () => {
     const input = "| A | B |\n| --- | --- |\n| --- | --- |\n| 1 | 2 |";

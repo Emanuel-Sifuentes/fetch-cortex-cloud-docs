@@ -441,46 +441,82 @@ function flattenCellContent(inner) {
   return inner;
 }
 
-function cleanTableHtml(html) {
-  // Remove empty <p></p> tags
+function cleanTableHtml(html, extractedSections = new Map()) {
+  // Step 1: Remove empty <p></p> tags
   html = html.replace(/<p>\s*<\/p>/g, "");
 
-  // Remove <colgroup> blocks (confuse turndown)
+  // Step 1b: Remove <colgroup> blocks (confuse turndown)
   html = html.replace(/<colgroup>[\s\S]*?<\/colgroup>/g, "");
 
-  // Convert layout tables to prose BEFORE flattening cells.
-  // Layout tables: no <thead>, single row, or first row has nested lists.
-  html = html.replace(
-    /<table([^>]*)>\s*<tbody>([\s\S]*?)<\/tbody>\s*<\/table>/g,
-    (match, attrs, tbodyContent) => {
-      const rows = tbodyContent.match(/<tr[\s\S]*?<\/tr>/g) || [];
-      const firstRow = rows[0] || "";
-      const hasNestedLists = firstRow.includes("<ul") || firstRow.includes("<ol");
+  // Step 2: Isolate top-level tables
+  const segments = extractTopLevelTables(html);
 
-      if (rows.length === 1 || hasNestedLists) {
-        // Extract cell contents and return as plain HTML blocks
-        const cellContents = [];
-        tbodyContent.replace(/<td[^>]*>([\s\S]*?)<\/td>/g, (_, content) => {
-          cellContents.push(content.trim());
-        });
-        return cellContents.join("\n\n");
+  // Steps 3-7: Process each table segment
+  const processed = segments.map((segment) => {
+    if (segment.type !== "table") return segment.html;
+
+    let tableHtml = segment.html;
+
+    // Step 3: Detect layout tables → prose (only if no pre-existing <thead>)
+    if (!/<thead>/i.test(tableHtml)) {
+      const tbodyMatch = tableHtml.match(/^<table([^>]*)>\s*<tbody>([\s\S]*)<\/tbody>\s*<\/table>$/);
+      if (tbodyMatch) {
+        const [, attrs, tbodyContent] = tbodyMatch;
+        const rows = tbodyContent.match(/<tr[\s\S]*?<\/tr>/g) || [];
+        const firstRow = rows[0] || "";
+        const hasNestedLists = firstRow.includes("<ul") || firstRow.includes("<ol");
+
+        if (rows.length === 1 || hasNestedLists) {
+          const cellContents = [];
+          tbodyContent.replace(/<td[^>]*>([\s\S]*?)<\/td>/g, (_, content) => {
+            cellContents.push(content.trim());
+          });
+          return cellContents.join("\n\n");
+        }
+
+        // Step 4: Promote first row to <thead>
+        const headerRow = firstRow
+          .replace(/<td([^>]*)>/g, "<th$1>")
+          .replace(/<\/td>/g, "</th>");
+        const remainingRows = rows.slice(1).join("");
+        tableHtml = `<table${attrs}><thead>${headerRow}</thead><tbody>${remainingRows}</tbody></table>`;
       }
-
-      // Not a layout table — keep it, promote first row to <thead>
-      const headerRow = firstRow
-        .replace(/<td([^>]*)>/g, "<th$1>")
-        .replace(/<\/td>/g, "</th>");
-      const remainingRows = rows.slice(1).join("");
-      return `<table${attrs}><thead>${headerRow}</thead><tbody>${remainingRows}</tbody></table>`;
     }
-  );
 
-  // Flatten all table cell content to inline (only for remaining real tables)
-  html = html.replace(/<(td|th)([^>]*)>([\s\S]*?)<\/(td|th)>/g, (match, tag, attrs, inner, closeTag) => {
-    return `<${tag}${attrs}>${flattenCellContent(inner)}</${closeTag}>`;
+    // Step 5: Pad rows with fewer <td> than <th> count
+    const theadMatch = tableHtml.match(/<thead>([\s\S]*?)<\/thead>/);
+    if (theadMatch) {
+      const thCount = (theadMatch[1].match(/<th\b[^>]*>/g) || []).length;
+      if (thCount > 0) {
+        tableHtml = tableHtml.replace(/<tbody>([\s\S]*?)<\/tbody>/, (_, tbody) => {
+          const padded = tbody.replace(/<tr[\s\S]*?<\/tr>/g, (row) => {
+            const tdCount = (row.match(/<td[\s\S]*?<\/td>/g) || []).length;
+            if (tdCount < thCount) {
+              const padding = "<td></td>".repeat(thCount - tdCount);
+              return row.replace(/<\/tr>/, padding + "</tr>");
+            }
+            return row;
+          });
+          return `<tbody>${padded}</tbody>`;
+        });
+      }
+    }
+
+    // Step 6: Analyze and route (complex extraction, splitting, or passthrough)
+    tableHtml = analyzeTable(tableHtml, extractedSections);
+
+    // Step 7: Flatten remaining simple table cells.
+    // Safe to use non-greedy [\s\S]*? here: analyzeTable (step 6) already extracted
+    // all cells containing nested <td> tags, so remaining cells are flat.
+    tableHtml = tableHtml.replace(/<(td|th)([^>]*)>([\s\S]*?)<\/(td|th)>/g, (match, tag, attrs, inner, closeTag) => {
+      return `<${tag}${attrs}>${flattenCellContent(inner)}</${closeTag}>`;
+    });
+
+    return tableHtml;
   });
 
-  return html;
+  // Step 8: Reassemble
+  return processed.join("");
 }
 
 function normalizeHeadings(md, topicTitle) {
