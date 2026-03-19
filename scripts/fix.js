@@ -59,3 +59,16 @@ try {
   if (err.stderr) console.error(err.stderr);
   process.exit(1);
 }
+
+// Update metadata snapshots after successful pipeline run
+console.log("\n=== Updating metadata snapshots ===\n");
+try {
+  const snapshotOutput = execSync(`node scripts/snapshot.js${productArgs}`, {
+    cwd: path.join(__dirname, ".."),
+    encoding: "utf-8",
+  });
+  if (snapshotOutput.trim()) console.log(snapshotOutput.trim());
+} catch (err) {
+  console.error("WARNING: snapshot update failed (non-fatal)");
+  if (err.stderr) console.error(err.stderr);
+}
