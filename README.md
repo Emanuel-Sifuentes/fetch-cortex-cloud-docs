@@ -48,12 +48,27 @@ No authentication required.
 | `npm run fetch` | Fetch all products (or `fetch:{product}` for one) |
 | `npm run fix` | Run all fix scripts + combine (or `fix:{product}` for one) |
 | `npm run combine` | Generate combined files only (or `combine:{product}` for one) |
+| `npm run snapshot` | Snapshot API metadata for all products (or `snapshot:{product}` for one) |
+| `npm run check` | Detect changes vs stored snapshots (or `check:{product}` for one) |
 | `npm run audit:headings` | Audit heading levels vs TOC depth + h6 cap simulation |
 | `npm run audit:toc` | Full TOC-to-file structure audit + combined file validation |
 | `npm run toc:table` | Print TOC as indented tree from live API |
 | `npm test` | Run unit tests |
 
-`npm run fix` chains all fix scripts per product directory and then generates the combined files.
+`npm run fix` chains all fix scripts per product directory, generates the combined files, and updates metadata snapshots.
+
+## Change detection
+
+The pipeline can detect when documentation has changed without doing a full re-fetch. This uses lightweight API calls to compare stored metadata snapshots against the live FluidTopics API.
+
+```bash
+npm run snapshot             # bootstrap snapshots for all products (first time)
+npm run check                # compare live API vs stored snapshots (JSON output)
+npm run check -- --format text   # human-readable output
+npm run check -- --apply     # detect changes + re-fetch affected products
+```
+
+Snapshots are stored in `metadata/{product}.json` and track each map's `lastPublication` timestamp and TOC structure. When `check` detects a change, it reports added/removed/reordered topics per map. The `--apply` flag triggers a full `fetch` + `fix` cycle for affected products only.
 
 ## Output
 
@@ -98,9 +113,12 @@ fetch-cortex-docs/
 │   ├── fix_broken_tables.py           # post-fetch fix
 │   ├── generate_combined.js           # combined file builder
 │   ├── split_combined.py              # split combined files by H1 heading
+│   ├── snapshot.js                    # metadata snapshot builder
+│   ├── check.js                      # change detection (compare snapshots vs API)
 │   ├── audit_headings.js              # audit tool
 │   ├── audit_toc_vs_headings.js       # audit tool
 │   └── generate_toc_table.js          # utility
+├── metadata/                          # per-product snapshot JSON files
 ├── sources_fetch/
 │   ├── appsec/                        # Cortex Cloud AppSec
 │   ├── posture/                       # Cortex Cloud Posture
