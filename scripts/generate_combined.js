@@ -1,7 +1,7 @@
 const https = require("https");
 const fs = require("fs");
 const path = require("path");
-const { MAP_IDS, COMBINED_FILES, VALID_MAPS, parseMapFlag } = require("./map_config.js");
+const { MAP_IDS, COMBINED_FILES, VALID_MAPS, resolveTargetMaps } = require("./map_config.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
@@ -215,82 +215,114 @@ function resolveFile(contentId, titleMatchMap, fileMap) {
 }
 
 async function main() {
-  const mapFlag = parseMapFlag("all");
-  const targets = mapFlag === "all" ? VALID_MAPS : [mapFlag];
+  const targets = resolveTargetMaps();
 
-  // Check source files exist
-  if (!fs.existsSync(OUT_DIR)) {
-    console.error(
-      `Error: ${OUT_DIR} not found — run \`npm run fetch\` first`
-    );
-    process.exit(1);
-  }
-  const files = fs
-    .readdirSync(OUT_DIR)
-    .filter((f) => /^\d+-/.test(f) && f.endsWith(".md"))
-    .sort();
-  if (files.length === 0) {
-    console.error(
-      `Error: No source files found in ${OUT_DIR} — run \`npm run fetch\` first`
-    );
-    process.exit(1);
-  }
-
-  // Build contentId -> file content map from local files
+  // Build contentId -> file content map from per-map subdirectories
   const fileMap = {};
-  for (const f of files) {
-    const content = fs.readFileSync(path.join(OUT_DIR, f), "utf-8");
-    const contentId = parseContentId(content);
-    if (contentId) {
-      fileMap[contentId] = { filename: f, content };
-    } else {
-      console.log(`WARNING: no contentId found in ${f}`);
+  function loadFilesFromDir(dir) {
+    if (!fs.existsSync(dir)) return;
+    const files = fs
+      .readdirSync(dir)
+      .filter((f) => /^\d+-/.test(f) && f.endsWith(".md"))
+      .sort();
+    for (const f of files) {
+      const content = fs.readFileSync(path.join(dir, f), "utf-8");
+      const contentId = parseContentId(content);
+      if (contentId) {
+        fileMap[contentId] = { filename: f, content };
+      } else {
+        console.log(`WARNING: no contentId found in ${f}`);
+      }
     }
   }
 
-  // Fetch all 3 TOCs in parallel (always needed for bucketing)
-  console.log("Fetching TOCs from API...");
-  const [appsecToc, postureToc, runtimeToc] = await Promise.all([
-    fetch(`/api/khub/maps/${MAP_IDS.appsec}/toc`),
-    fetch(`/api/khub/maps/${MAP_IDS.posture}/toc`),
-    fetch(`/api/khub/maps/${MAP_IDS.runtime}/toc`),
-  ]);
+  for (const key of VALID_MAPS) {
+    loadFilesFromDir(path.join(OUT_DIR, key));
+  }
 
-  // Flatten each TOC
-  const appsecFlat  = flattenToc(appsecToc);
-  const postureFlat = flattenToc(postureToc);
-  const runtimeFlat = flattenToc(runtimeToc);
-  console.log(`TOCs: appsec=${appsecFlat.length}, posture=${postureFlat.length}, runtime=${runtimeFlat.length}`);
+  if (Object.keys(fileMap).length === 0) {
+    console.error(
+      `Error: No source files found in ${OUT_DIR}/*/ — run \`npm run fetch\` first`
+    );
+    process.exit(1);
+  }
 
-  // Compute dedup buckets
-  const buckets = computeBuckets(postureFlat, runtimeFlat, appsecFlat);
+  // Maps that use the cross-map dedup logic
+  const dedupMaps = ["appsec", "posture", "runtime"];
+  // Maps that combine straight from their own TOC
+  const simpleMaps = ["cortex_gateway", "xdr_5", "xdr_compatibility", "xsiam_3", "agentix"];
 
-  // Determine which contentIds belong to each target
-  const targetContentIds = {
-    appsec:  new Set([...buckets.PRA, ...buckets.A,
-      ...[...buckets.titleMatched.keys()].filter((id) => buckets.appsecIds.has(id))]),
-    posture: new Set([...buckets.PR, ...buckets.P,
-      ...[...buckets.titleMatched.keys()].filter((id) => buckets.postureIds.has(id))]),
-    runtime: new Set([...buckets.R]),
-  };
+  const dedupTargets = targets.filter((t) => dedupMaps.includes(t));
+  const simpleTargets = targets.filter((t) => simpleMaps.includes(t));
 
-  const targetTocs = {
-    appsec:  appsecFlat,
-    posture: postureFlat,
-    runtime: runtimeFlat,
-  };
+  // --- Dedup maps (appsec / posture / runtime) ---
+  if (dedupTargets.length > 0) {
+    console.log("Fetching TOCs for dedup maps...");
+    const [appsecToc, postureToc, runtimeToc] = await Promise.all([
+      fetch(`/api/khub/maps/${MAP_IDS.appsec}/toc`),
+      fetch(`/api/khub/maps/${MAP_IDS.posture}/toc`),
+      fetch(`/api/khub/maps/${MAP_IDS.runtime}/toc`),
+    ]);
 
-  // Generate combined file for each target
-  for (const target of targets) {
-    const allowedIds = targetContentIds[target];
-    const tocFlat = targetTocs[target].filter((e) => allowedIds.has(e.contentId));
+    const appsecFlat  = flattenToc(appsecToc);
+    const postureFlat = flattenToc(postureToc);
+    const runtimeFlat = flattenToc(runtimeToc);
+    console.log(`TOCs: appsec=${appsecFlat.length}, posture=${postureFlat.length}, runtime=${runtimeFlat.length}`);
 
-    console.log(`\n[${target}] ${tocFlat.length} entries after dedup`);
+    const buckets = computeBuckets(postureFlat, runtimeFlat, appsecFlat);
 
-    // Build combined file in TOC order
+    const targetContentIds = {
+      appsec:  new Set([...buckets.PRA, ...buckets.A,
+        ...[...buckets.titleMatched.keys()].filter((id) => buckets.appsecIds.has(id))]),
+      posture: new Set([...buckets.PR, ...buckets.P,
+        ...[...buckets.titleMatched.keys()].filter((id) => buckets.postureIds.has(id))]),
+      runtime: new Set([...buckets.R]),
+    };
+
+    const targetTocs = {
+      appsec:  appsecFlat,
+      posture: postureFlat,
+      runtime: runtimeFlat,
+    };
+
+    for (const target of dedupTargets) {
+      const allowedIds = targetContentIds[target];
+      const tocFlat = targetTocs[target].filter((e) => allowedIds.has(e.contentId));
+
+      console.log(`\n[${target}] ${tocFlat.length} entries after dedup`);
+
+      const sections = [];
+      for (const entry of tocFlat) {
+        const file = resolveFile(entry.contentId, buckets.titleMatched, fileMap);
+        if (!file) {
+          console.log(`WARNING: TOC entry "${entry.title}" has no matching local file`);
+          continue;
+        }
+        const md = stripFrontmatter(file.content);
+        sections.push(shiftHeadings(md.trim(), entry.depth, file.filename));
+      }
+
+      const raw = sections.filter(Boolean).join("\n\n");
+      const combined = promoteKeywordsToHeadings(raw);
+      const targetDir = path.join(OUT_DIR, target);
+      fs.mkdirSync(targetDir, { recursive: true });
+      const outPath = path.join(targetDir, COMBINED_FILES[target]);
+      fs.writeFileSync(outPath, combined + "\n", "utf-8");
+      console.log(`Combined file: ${outPath}`);
+      console.log(`${tocFlat.length} topics, ${combined.split("\n").length} lines`);
+    }
+  }
+
+  // --- Simple maps (no dedup, straight TOC combine) ---
+  for (const target of simpleTargets) {
+    console.log(`\nFetching ${target} TOC...`);
+    const toc = await fetch(`/api/khub/maps/${MAP_IDS[target]}/toc`);
+    const tocFlat = flattenToc(toc);
+    console.log(`[${target}] ${tocFlat.length} entries`);
+
     const sections = [];
     for (const entry of tocFlat) {
-      const file = resolveFile(entry.contentId, buckets.titleMatched, fileMap);
+      const file = fileMap[entry.contentId];
       if (!file) {
         console.log(`WARNING: TOC entry "${entry.title}" has no matching local file`);
         continue;
@@ -301,7 +333,9 @@ async function main() {
 
     const raw = sections.filter(Boolean).join("\n\n");
     const combined = promoteKeywordsToHeadings(raw);
-    const outPath = path.join(OUT_DIR, COMBINED_FILES[target]);
+    const targetDir = path.join(OUT_DIR, target);
+    fs.mkdirSync(targetDir, { recursive: true });
+    const outPath = path.join(targetDir, COMBINED_FILES[target]);
     fs.writeFileSync(outPath, combined + "\n", "utf-8");
     console.log(`Combined file: ${outPath}`);
     console.log(`${tocFlat.length} topics, ${combined.split("\n").length} lines`);

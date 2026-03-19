@@ -2,16 +2,24 @@
 # Fix Finding 4: Remove standalone "Abstract" metadata lines from source files.
 set -euo pipefail
 
-SOURCES_DIR="$(cd "$(dirname "$0")/../sources_fetch" && pwd)"
+SOURCES_DIR=""
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --sources) SOURCES_DIR="$2"; shift 2 ;;
+    *) shift ;;
+  esac
+done
+
+if [ -z "$SOURCES_DIR" ]; then
+  SOURCES_DIR="$(cd "$(dirname "$0")/../sources_fetch" && pwd)"
+fi
 
 echo "=== Step 1: Remove standalone 'Abstract' lines from individual files ==="
 
 count=0
 for f in "$SOURCES_DIR"/[0-9]*.md; do
-  # Check if the file contains a standalone Abstract line
+  [ -e "$f" ] || continue
   if grep -q '^Abstract$' "$f"; then
-    # Remove lines that are exactly "Abstract" (standalone)
-    # Using sed in-place (GNU sed on Git Bash)
     sed -i '/^Abstract$/d' "$f"
     basename "$f"
     count=$((count + 1))

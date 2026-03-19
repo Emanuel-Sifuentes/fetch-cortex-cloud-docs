@@ -1,7 +1,8 @@
 node_modules/
 .worktrees/
+scripts/__pycache__/
 
-# Ignore all fetched markdown files except the combined files and README
-sources_fetch/*.md
-!sources_fetch/cortex-cloud-*-combined.md
-!sources_fetch/README.md
+# Ignore individual fetched markdown files (numbered), keep combined files and README
+sources_fetch/*/[0-9]*.md
+!sources_fetch/*/README.md
+!sources_fetch/*-combined.md

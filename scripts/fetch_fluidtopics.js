@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const TurndownService = require("turndown");
 const { gfm } = require("turndown-plugin-gfm");
-const { MAP_IDS, parseMapFlag } = require("./map_config.js");
+const { MAP_IDS, resolveTargetMaps } = require("./map_config.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
@@ -208,7 +208,7 @@ function convertAdmonitionHeadings(md) {
   );
 }
 
-async function fetchTopic(topic, index, total, mapId, sourceMap) {
+async function fetchTopic(topic, index, total, mapId, outDir, sourceMap) {
   const contentUrl = `/api/khub/maps/${mapId}/topics/${topic.contentId}/content`;
   try {
     const html = cleanTableHtml(await fetch(contentUrl, "text/html"));
@@ -242,23 +242,42 @@ async function fetchTopic(topic, index, total, mapId, sourceMap) {
     md = header + md;
 
     const filename = `${String(index + 1).padStart(4, "0")}-${sanitizeFilename(topic.title)}.md`;
-    fs.writeFileSync(path.join(OUT_DIR, filename), md, "utf-8");
+    fs.writeFileSync(path.join(outDir, filename), md, "utf-8");
     console.log(`[${index + 1}/${total}] ${filename}`);
   } catch (err) {
     console.error(`[${index + 1}/${total}] FAILED: ${topic.title} - ${err.message}`);
   }
 }
 
-async function main() {
-  const mapFlag = parseMapFlag("all");
-  fs.mkdirSync(OUT_DIR, { recursive: true });
+function outDirForMap(mapKey) {
+  return path.join(OUT_DIR, mapKey);
+}
 
-  if (mapFlag === "appsec") {
-    console.log("AppSec content comes from the Runtime fetch. Run with --map runtime or no flag.");
-    return;
+async function fetchSimpleMap(mapKey) {
+  const outDir = outDirForMap(mapKey);
+  fs.mkdirSync(outDir, { recursive: true });
+
+  console.log(`Fetching ${mapKey} TOC...`);
+  const tocJson = await fetch(`/api/khub/maps/${MAP_IDS[mapKey]}/toc`);
+  const toc = JSON.parse(tocJson);
+  const topics = flattenToc(toc);
+  console.log(`Found ${topics.length} ${mapKey} topics. Fetching content...\n`);
+
+  for (let i = 0; i < topics.length; i += CONCURRENCY) {
+    const batch = topics.slice(i, i + CONCURRENCY);
+    await Promise.all(
+      batch.map((topic, j) => fetchTopic(topic, i + j, topics.length, MAP_IDS[mapKey], outDir))
+    );
+    if (i + CONCURRENCY < topics.length) await sleep(DELAY_MS);
   }
+  console.log(`\n${mapKey}: ${topics.length} topics saved to ${outDir}`);
+}
 
-  if (mapFlag === "all" || mapFlag === "runtime") {
+async function fetchCloudMaps(targets) {
+  if (targets.includes("runtime")) {
+    const runtimeDir = outDirForMap("runtime");
+    fs.mkdirSync(runtimeDir, { recursive: true });
+
     console.log("Fetching Runtime TOC...");
     const tocJson = await fetch(`/api/khub/maps/${MAP_IDS.runtime}/toc`);
     const toc = JSON.parse(tocJson);
@@ -268,14 +287,17 @@ async function main() {
     for (let i = 0; i < topics.length; i += CONCURRENCY) {
       const batch = topics.slice(i, i + CONCURRENCY);
       await Promise.all(
-        batch.map((topic, j) => fetchTopic(topic, i + j, topics.length, MAP_IDS.runtime))
+        batch.map((topic, j) => fetchTopic(topic, i + j, topics.length, MAP_IDS.runtime, runtimeDir))
       );
       if (i + CONCURRENCY < topics.length) await sleep(DELAY_MS);
     }
-    console.log(`\nRuntime: ${topics.length} topics saved to ${OUT_DIR}`);
+    console.log(`\nRuntime: ${topics.length} topics saved to ${runtimeDir}`);
   }
 
-  if (mapFlag === "all" || mapFlag === "posture") {
+  if (targets.includes("posture")) {
+    const postureDir = outDirForMap("posture");
+    fs.mkdirSync(postureDir, { recursive: true });
+
     console.log("\nFetching Posture + Runtime TOCs for supplement...");
     const [postureTocJson, runtimeTocJson] = await Promise.all([
       fetch(`/api/khub/maps/${MAP_IDS.posture}/toc`),
@@ -299,7 +321,7 @@ async function main() {
     if (deduped.length === 0) {
       console.log("No Posture-unique topics to fetch.");
     } else {
-      const existingFiles = fs.readdirSync(OUT_DIR).filter((f) => /^\d+-/.test(f));
+      const existingFiles = fs.readdirSync(postureDir).filter((f) => /^\d+-/.test(f));
       const startIndex = existingFiles.length;
 
       console.log(`Found ${deduped.length} Posture-unique topics. Fetching...\n`);
@@ -307,13 +329,30 @@ async function main() {
         const batch = deduped.slice(i, i + CONCURRENCY);
         await Promise.all(
           batch.map((topic, j) =>
-            fetchTopic(topic, startIndex + i + j, startIndex + deduped.length, MAP_IDS.posture, "posture")
+            fetchTopic(topic, startIndex + i + j, startIndex + deduped.length, MAP_IDS.posture, postureDir, "posture")
           )
         );
         if (i + CONCURRENCY < deduped.length) await sleep(DELAY_MS);
       }
-      console.log(`\nPosture supplement: ${deduped.length} topics saved to ${OUT_DIR}`);
+      console.log(`\nPosture supplement: ${deduped.length} topics saved to ${postureDir}`);
     }
+  }
+}
+
+async function main() {
+  const targets = resolveTargetMaps();
+  fs.mkdirSync(OUT_DIR, { recursive: true });
+
+  const cloudMaps = ["appsec", "posture", "runtime"];
+  const cloudTargets = targets.filter((t) => cloudMaps.includes(t));
+  const simpleTargets = targets.filter((t) => !cloudMaps.includes(t));
+
+  if (cloudTargets.length > 0) {
+    await fetchCloudMaps(cloudTargets);
+  }
+
+  for (const key of simpleTargets) {
+    await fetchSimpleMap(key);
   }
 }
 
