@@ -1,6 +1,7 @@
 const https = require("https");
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 const TurndownService = require("turndown");
 const { gfm } = require("turndown-plugin-gfm");
 const { MAP_IDS, parseMapFlag } = require("./map_config.js");
@@ -195,6 +196,146 @@ function splitAtDividers(classified, headerRow, tableAttrs, extractedSections) {
 function splitAtComplexRows(classified, headerRow, tableAttrs, extractedSections) {
   // Stub — implemented in Task 7
   return classified.map((r) => r.row).join("");
+}
+
+function extractCells(row) {
+  const cells = [];
+  let i = 0;
+  while (i < row.length) {
+    const openMatch = row.slice(i).match(/^<td([^>]*)>/);
+    if (!openMatch) { i++; continue; }
+
+    const contentStart = i + openMatch[0].length;
+    let depth = 1;
+    let j = contentStart;
+
+    while (j < row.length && depth > 0) {
+      if (row.startsWith("<td", j) && (row[j + 3] === ">" || row[j + 3] === " ")) {
+        depth++;
+        j += 3;
+      } else if (row.startsWith("</td>", j)) {
+        depth--;
+        if (depth === 0) {
+          cells.push(row.slice(contentStart, j));
+          j += 5;
+          break;
+        }
+        j += 5;
+      } else {
+        j++;
+      }
+    }
+    i = j;
+  }
+  return cells;
+}
+
+function extractToSections(row, headerRow, extractedSections) {
+  try {
+    const cells = extractCells(row);
+
+    if (cells.length === 0) return row;
+
+    const heading = cells[0].replace(/<[^>]+>/g, "").trim();
+    const parts = [`### ${heading}`, ""];
+
+    for (let i = 1; i < cells.length; i++) {
+      const cell = cells[i];
+      parts.push(...processCellToMarkdown(cell, extractedSections));
+    }
+
+    const markdown = parts.join("\n");
+    const id = crypto.randomUUID();
+    extractedSections.set(id, markdown);
+    return `<!--EXTRACTED:${id}-->`;
+  } catch {
+    return row;
+  }
+}
+
+function processCellToMarkdown(cellHtml, extractedSections) {
+  const parts = [];
+
+  // Handle nested tables: extract and recursively process through cleanTableHtml
+  let html = cellHtml;
+  const nestedTables = [];
+  html = html.replace(/<table[\s\S]*?<\/table>/g, (tableHtml) => {
+    const nestedSections = extractedSections || new Map();
+    const processed = cleanTableHtml(tableHtml, nestedSections);
+    nestedTables.push(processed);
+    return "<!--NESTED_TABLE-->";
+  });
+
+  // Extract code blocks
+  const codeBlocks = [];
+  html = html.replace(/<pre[^>]*>\s*<code([^>]*)>([\s\S]*?)<\/code>\s*<\/pre>/g, (_, attrs, code) => {
+    const langMatch = attrs.match(/language-(\w+)/);
+    const lang = langMatch ? langMatch[1] : "";
+    codeBlocks.push({ lang, code: code.trim() });
+    return "<!--CODE_BLOCK-->";
+  });
+
+  // Also handle <pre> without <code>
+  html = html.replace(/<pre[^>]*>([\s\S]*?)<\/pre>/g, (_, code) => {
+    codeBlocks.push({ lang: "", code: code.trim() });
+    return "<!--CODE_BLOCK-->";
+  });
+
+  // Process lists
+  html = html.replace(/<ul[^>]*>([\s\S]*?)<\/ul>/g, (_, listContent) => {
+    const items = [];
+    listContent.replace(/<li[^>]*>([\s\S]*?)<\/li>/g, (__, item) => {
+      items.push(`- ${item.replace(/<[^>]+>/g, "").trim()}`);
+    });
+    return items.join("\n") + "\n";
+  });
+
+  html = html.replace(/<ol[^>]*>([\s\S]*?)<\/ol>/g, (_, listContent) => {
+    const items = [];
+    let num = 1;
+    listContent.replace(/<li[^>]*>([\s\S]*?)<\/li>/g, (__, item) => {
+      items.push(`${num}. ${item.replace(/<[^>]+>/g, "").trim()}`);
+      num++;
+    });
+    return items.join("\n") + "\n";
+  });
+
+  // Strip remaining HTML tags and split into paragraphs
+  const text = html
+    .replace(/<[^>]+>/g, "")
+    .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&")
+    .trim();
+
+  let codeIdx = 0;
+  let nestedIdx = 0;
+  for (const segment of text.split("<!--CODE_BLOCK-->")) {
+    // Handle nested table placeholders within text segments
+    const subSegments = segment.split("<!--NESTED_TABLE-->");
+    for (let s = 0; s < subSegments.length; s++) {
+      const trimmed = subSegments[s].trim();
+      if (trimmed) parts.push(trimmed, "");
+      if (s < subSegments.length - 1 && nestedIdx < nestedTables.length) {
+        parts.push(nestedTables[nestedIdx++], "");
+      }
+    }
+    if (codeIdx < codeBlocks.length) {
+      const { lang, code } = codeBlocks[codeIdx++];
+      parts.push(`\`\`\`${lang}`, code, "```", "");
+    }
+  }
+
+  // Handle trailing code blocks
+  while (codeIdx < codeBlocks.length) {
+    const { lang, code } = codeBlocks[codeIdx++];
+    parts.push(`\`\`\`${lang}`, code, "```", "");
+  }
+
+  // Handle trailing nested tables
+  while (nestedIdx < nestedTables.length) {
+    parts.push(nestedTables[nestedIdx++], "");
+  }
+
+  return parts;
 }
 
 function flattenCellContent(inner) {
@@ -457,6 +598,8 @@ module.exports = {
   extractTopLevelTables,
   isCellComplex,
   analyzeTable,
+  extractCells,
+  extractToSections,
   flattenCellContent,
   cleanTableHtml,
   normalizeHeadings,

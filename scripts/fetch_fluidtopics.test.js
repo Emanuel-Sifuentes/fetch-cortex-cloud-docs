@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { flattenCellContent, cleanTableHtml, extractTopLevelTables, removeDuplicateSeparators, analyzeTable, isCellComplex } = require("./fetch_fluidtopics.js");
+const { flattenCellContent, cleanTableHtml, extractTopLevelTables, removeDuplicateSeparators, analyzeTable, isCellComplex, extractToSections, extractCells } = require("./fetch_fluidtopics.js");
 
 describe("fetch_fluidtopics module exports", () => {
   it("exports flattenCellContent as a function", () => {
@@ -173,6 +173,23 @@ describe("analyzeTable", () => {
       "<tr><td>z</td><td>simple</td></tr></tbody></table>";
     const result = analyzeTable(html, new Map());
     assert.notEqual(result, html);
+  });
+});
+
+describe("extractToSections", () => {
+  it("extracts a row with code block to heading + fenced code", () => {
+    const row = '<tr><td>IN</td><td><p>Check membership.</p><pre><code class="language-xql">filter x IN (1,2,3)</code></pre></td></tr>';
+    const headerRow = "<tr><th>Operator</th><th>Description</th></tr>";
+    const sections = new Map();
+
+    const placeholder = extractToSections(row, headerRow, sections);
+
+    assert.match(placeholder, /<!--EXTRACTED:[a-z0-9-]+-->/);
+    const content = [...sections.values()][0];
+    assert.ok(content.includes("### IN"));
+    assert.ok(content.includes("Check membership."));
+    assert.ok(content.includes("```xql"));
+    assert.ok(content.includes("filter x IN (1,2,3)"));
   });
 });
 
