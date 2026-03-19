@@ -118,6 +118,32 @@ describe("flattenCellContent", () => {
   });
 });
 
+describe("isCellComplex", () => {
+  it("returns true for nested table", () => {
+    assert.equal(isCellComplex("<table><tr><td>x</td></tr></table>"), true);
+  });
+  it("returns true for pre element", () => {
+    assert.equal(isCellComplex("<pre>code here</pre>"), true);
+  });
+  it("returns true for >3 list items", () => {
+    assert.equal(isCellComplex("<ul><li>a</li><li>b</li><li>c</li><li>d</li></ul>"), true);
+  });
+  it("returns false for <=3 list items", () => {
+    assert.equal(isCellComplex("<ul><li>a</li><li>b</li><li>c</li></ul>"), false);
+  });
+  it("returns false for long plain text without block elements", () => {
+    const longText = "A".repeat(250);
+    assert.equal(isCellComplex(longText), false);
+  });
+  it("returns true for long text WITH block elements", () => {
+    const longText = "A".repeat(250);
+    assert.equal(isCellComplex(`<p>${longText}</p>`), true);
+  });
+  it("returns false for short simple text", () => {
+    assert.equal(isCellComplex("just a short cell"), false);
+  });
+});
+
 describe("analyzeTable", () => {
   it("returns simple table unchanged", () => {
     const html = "<table><thead><tr><th>A</th><th>B</th></tr></thead>" +
