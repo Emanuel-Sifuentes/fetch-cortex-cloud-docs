@@ -174,6 +174,17 @@ describe("analyzeTable", () => {
     const result = analyzeTable(html, new Map());
     assert.notEqual(result, html);
   });
+
+  it("extracts all rows when >50% are complex", () => {
+    const pre = "<pre>code</pre>";
+    const html = "<table><thead><tr><th>Op</th><th>Desc</th></tr></thead>" +
+      `<tbody><tr><td>A</td><td>${pre}</td></tr><tr><td>B</td><td>${pre}</td></tr></tbody></table>`;
+    const sections = new Map();
+    const result = analyzeTable(html, sections);
+    // Both rows extracted → result should be placeholders
+    assert.ok(result.includes("<!--EXTRACTED:"));
+    assert.equal(sections.size, 2);
+  });
 });
 
 describe("extractToSections", () => {

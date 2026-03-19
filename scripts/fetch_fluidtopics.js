@@ -184,8 +184,16 @@ function analyzeTable(tableHtml, extractedSections) {
 }
 
 function extractAllRows(classified, headerRow, tableAttrs, extractedSections) {
-  // Stub — implemented in Task 6
-  return classified.map((r) => r.row).join("");
+  const parts = [];
+  for (const { row, type } of classified) {
+    if (type === "divider") {
+      const text = row.replace(/<[^>]+>/g, "").trim();
+      parts.push(`<p><strong>${text}</strong></p>`);
+    } else {
+      parts.push(extractToSections(row, headerRow, extractedSections));
+    }
+  }
+  return parts.join("\n\n");
 }
 
 function splitAtDividers(classified, headerRow, tableAttrs, extractedSections) {
