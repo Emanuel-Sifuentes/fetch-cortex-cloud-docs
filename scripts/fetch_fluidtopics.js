@@ -310,7 +310,15 @@ async function main() {
   }
 }
 
-main().catch((err) => {
-  console.error("Fatal error:", err);
-  process.exit(1);
-});
+module.exports = {
+  flattenCellContent,
+  cleanTableHtml,
+  normalizeHeadings,
+};
+
+if (require.main === module) {
+  main().catch((err) => {
+    console.error("Fatal error:", err);
+    process.exit(1);
+  });
+}
