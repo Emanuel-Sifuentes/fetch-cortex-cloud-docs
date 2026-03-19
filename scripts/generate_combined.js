@@ -52,7 +52,7 @@ function parseContentId(content) {
 }
 
 function stripFrontmatter(content) {
-  return content.replace(/^---\n[\s\S]*?\n---\n/, "");
+  return content.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "");
 }
 
 function shiftHeadings(md, depth, filename) {
