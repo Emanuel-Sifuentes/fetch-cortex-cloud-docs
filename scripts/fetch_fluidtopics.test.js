@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { flattenCellContent, cleanTableHtml, extractTopLevelTables } = require("./fetch_fluidtopics.js");
+const { flattenCellContent, cleanTableHtml, extractTopLevelTables, removeDuplicateSeparators } = require("./fetch_fluidtopics.js");
 
 describe("fetch_fluidtopics module exports", () => {
   it("exports flattenCellContent as a function", () => {
@@ -115,5 +115,37 @@ describe("flattenCellContent", () => {
 
     assert.ok(result.includes("wrapped"));
     assert.ok(!result.includes("<p>"));
+  });
+});
+
+describe("removeDuplicateSeparators", () => {
+  it("removes duplicate consecutive separator rows", () => {
+    const input = "| A | B |\n| --- | --- |\n| --- | --- |\n| 1 | 2 |";
+    const result = removeDuplicateSeparators(input);
+    assert.equal(result, "| A | B |\n| --- | --- |\n| 1 | 2 |");
+  });
+
+  it("keeps a single separator row untouched", () => {
+    const input = "| A | B |\n| --- | --- |\n| 1 | 2 |";
+    const result = removeDuplicateSeparators(input);
+    assert.equal(result, input);
+  });
+
+  it("handles triple consecutive separators", () => {
+    const input = "| A |\n| --- |\n| --- |\n| --- |\n| 1 |";
+    const result = removeDuplicateSeparators(input);
+    assert.equal(result, "| A |\n| --- |\n| 1 |");
+  });
+
+  it("returns markdown unchanged when no separators present", () => {
+    const input = "# Heading\n\nSome text.";
+    const result = removeDuplicateSeparators(input);
+    assert.equal(result, input);
+  });
+
+  it("handles separator rows with alignment colons", () => {
+    const input = "| A | B |\n| :--- | ---: |\n| :--- | ---: |\n| 1 | 2 |";
+    const result = removeDuplicateSeparators(input);
+    assert.equal(result, "| A | B |\n| :--- | ---: |\n| 1 | 2 |");
   });
 });

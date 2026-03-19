@@ -242,6 +242,19 @@ function normalizeHeadings(md, topicTitle) {
   return md;
 }
 
+function removeDuplicateSeparators(md) {
+  const lines = md.split("\n");
+  const result = [];
+  let prevIsSeparator = false;
+  for (const line of lines) {
+    const isSeparator = /^\|[\s\-:]+(\|[\s\-:]+)*\|\s*$/.test(line);
+    if (isSeparator && prevIsSeparator) continue;
+    result.push(line);
+    prevIsSeparator = isSeparator;
+  }
+  return result.join("\n");
+}
+
 async function fetchTopic(topic, index, total, mapId, sourceMap) {
   const contentUrl = `/api/khub/maps/${mapId}/topics/${topic.contentId}/content`;
   try {
@@ -359,6 +372,7 @@ module.exports = {
   flattenCellContent,
   cleanTableHtml,
   normalizeHeadings,
+  removeDuplicateSeparators,
 };
 
 if (require.main === module) {
