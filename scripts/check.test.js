@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { diffTopics } = require("./check.js");
+const { diffTopics, formatTextReport } = require("./check.js");
 
 const topic = (id) => ({ contentId: id, tocId: `toc-${id}`, title: `Title ${id}`, depth: 0 });
 
@@ -80,5 +80,121 @@ describe("diffTopics", () => {
     assert.deepEqual(result.added, []);
     assert.deepEqual(result.removed, ["a", "b"]);
     assert.equal(result.reordered, false);
+  });
+});
+
+describe("formatTextReport", () => {
+  it("shows 'no changes' for an unchanged product", () => {
+    const report = {
+      timestamp: "2026-03-20T08:00:00.000Z",
+      products: {
+        xdr: {
+          changed: false,
+          maps: {
+            xdr_5: { republished: false, added: 0, removed: 0, reordered: false },
+          },
+        },
+      },
+    };
+    const text = formatTextReport(report);
+    assert.ok(text.includes("[xdr] no changes"));
+  });
+
+  it("shows map-level diff details for a changed product", () => {
+    const report = {
+      timestamp: "2026-03-20T08:00:00.000Z",
+      products: {
+        gateway: {
+          changed: true,
+          maps: {
+            cortex_gateway: { republished: true, added: 1, removed: 0, reordered: false },
+          },
+        },
+      },
+    };
+    const text = formatTextReport(report);
+    assert.ok(text.includes("[gateway] changed"));
+    assert.ok(text.includes("cortex_gateway: 1 added, 0 removed"));
+  });
+
+  it("shows 'no TOC changes' for a republished map with identical topics", () => {
+    const report = {
+      timestamp: "2026-03-20T08:00:00.000Z",
+      products: {
+        xsiam: {
+          changed: true,
+          maps: {
+            xsiam_3: { republished: true, added: 0, removed: 0, reordered: false },
+          },
+        },
+      },
+    };
+    const text = formatTextReport(report);
+    assert.ok(text.includes("xsiam_3: no TOC changes"));
+  });
+
+  it("includes reordered flag in map detail when topics were reordered", () => {
+    const report = {
+      timestamp: "2026-03-20T08:00:00.000Z",
+      products: {
+        gateway: {
+          changed: true,
+          maps: {
+            cortex_gateway: { republished: true, added: 0, removed: 0, reordered: true },
+          },
+        },
+      },
+    };
+    const text = formatTextReport(report);
+    assert.ok(text.includes("reordered"));
+  });
+
+  it("shows summary count of products needing re-fetch", () => {
+    const report = {
+      timestamp: "2026-03-20T08:00:00.000Z",
+      products: {
+        cloud: {
+          changed: true,
+          maps: { runtime: { republished: true, added: 0, removed: 0, reordered: false } },
+        },
+        xdr: {
+          changed: false,
+          maps: { xdr_5: { republished: false, added: 0, removed: 0, reordered: false } },
+        },
+      },
+    };
+    const text = formatTextReport(report);
+    assert.ok(text.includes("1 product"));
+    assert.ok(text.includes("re-fetch"));
+  });
+
+  it("shows 'up to date' when no products changed", () => {
+    const report = {
+      timestamp: "2026-03-20T08:00:00.000Z",
+      products: {
+        xdr: {
+          changed: false,
+          maps: { xdr_5: { republished: false, added: 0, removed: 0, reordered: false } },
+        },
+      },
+    };
+    const text = formatTextReport(report);
+    assert.ok(text.includes("up to date"));
+  });
+
+  it("marks maps with errors", () => {
+    const report = {
+      timestamp: "2026-03-20T08:00:00.000Z",
+      products: {
+        gateway: {
+          changed: false,
+          maps: {
+            cortex_gateway: { error: true, message: "HTTP 503" },
+          },
+        },
+      },
+    };
+    const text = formatTextReport(report);
+    assert.ok(text.includes("cortex_gateway: error"));
   });
 });
