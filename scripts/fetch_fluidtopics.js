@@ -590,6 +590,13 @@ function removeDuplicateSeparators(md) {
   return result.join("\n");
 }
 
+function convertAdmonitionHeadings(md) {
+  return md.replace(
+    /^(\s*)#{2,6} (Prerequisite|Prerequisites|Note|Notes|Important|Warning|Danger|Tip|Caution|Notice):?$/gm,
+    "$1**$2:**"
+  );
+}
+
 async function fetchTopic(topic, index, total, mapId, sourceMap) {
   const contentUrl = `/api/khub/maps/${mapId}/topics/${topic.contentId}/content`;
   try {
@@ -599,11 +606,8 @@ async function fetchTopic(topic, index, total, mapId, sourceMap) {
     // Replace base64 data-URI images with a placeholder
     md = md.replace(/!\[([^\]]*)\]\(data:image\/[^)]+\)/g, "[image: $1]");
 
-    // Convert admonition headings to bold labels (including indented ones)
-    md = md.replace(
-      /^(\s*)#{2,6} (Prerequisite|Prerequisites|Note|Important|Warning|Danger|Tip)$/gm,
-      "$1**$2**"
-    );
+    // Convert admonition headings to bold labels
+    md = convertAdmonitionHeadings(md);
 
     // Normalize heading levels: shift so smallest heading becomes h2,
     // then strip any leading h1 that duplicates the topic title
@@ -712,6 +716,7 @@ module.exports = {
   cleanTableHtml,
   normalizeHeadings,
   removeDuplicateSeparators,
+  convertAdmonitionHeadings,
 };
 
 if (require.main === module) {
