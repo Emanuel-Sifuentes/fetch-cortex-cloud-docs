@@ -600,18 +600,26 @@ function convertAdmonitionHeadings(md) {
 async function fetchTopic(topic, index, total, mapId, sourceMap) {
   const contentUrl = `/api/khub/maps/${mapId}/topics/${topic.contentId}/content`;
   try {
-    const html = cleanTableHtml(await fetch(contentUrl, "text/html"));
+    const extractedSections = new Map();
+    const html = cleanTableHtml(await fetch(contentUrl, "text/html"), extractedSections);
     let md = turndown.turndown(html);
 
-    // Replace base64 data-URI images with a placeholder
+    // 1. Replace base64 data-URI images with a placeholder
     md = md.replace(/!\[([^\]]*)\]\(data:image\/[^)]+\)/g, "[image: $1]");
 
-    // Convert admonition headings to bold labels
+    // 2. Convert admonition headings to bold labels
     md = convertAdmonitionHeadings(md);
 
-    // Normalize heading levels: shift so smallest heading becomes h2,
-    // then strip any leading h1 that duplicates the topic title
+    // 3. Normalize heading levels
     md = normalizeHeadings(md, topic.title);
+
+    // 4. Remove duplicate separator rows
+    md = removeDuplicateSeparators(md);
+
+    // 5. Replace extracted-section placeholders (LAST — after all markdown post-processing)
+    for (const [id, content] of extractedSections) {
+      md = md.replace(`<!--EXTRACTED:${id}-->`, content);
+    }
 
     // Prepend metadata header
     const header = [
