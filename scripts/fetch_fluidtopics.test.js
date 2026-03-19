@@ -151,6 +151,29 @@ describe("analyzeTable", () => {
     const result = analyzeTable(html, new Map());
     assert.equal(result, html);
   });
+
+  it("detects section-divider rows by colspan (smoke)", () => {
+    const html = "<table><thead><tr><th>A</th><th>B</th></tr></thead>" +
+      '<tbody><tr><td colspan="2">Section</td></tr><tr><td>1</td><td>2</td></tr></tbody></table>';
+    const result = analyzeTable(html, new Map());
+    assert.notEqual(result, html);
+  });
+
+  it("detects section-divider by single td in multi-column table (smoke)", () => {
+    const html = "<table><thead><tr><th>A</th><th>B</th><th>C</th></tr></thead>" +
+      "<tbody><tr><td>Divider</td></tr><tr><td>1</td><td>2</td><td>3</td></tr></tbody></table>";
+    const result = analyzeTable(html, new Map());
+    assert.notEqual(result, html);
+  });
+
+  it("routes >50% complex data rows away from passthrough (smoke)", () => {
+    const pre = "<pre>code</pre>";
+    const html = "<table><thead><tr><th>A</th><th>B</th></tr></thead>" +
+      `<tbody><tr><td>x</td><td>${pre}</td></tr><tr><td>y</td><td>${pre}</td></tr>` +
+      "<tr><td>z</td><td>simple</td></tr></tbody></table>";
+    const result = analyzeTable(html, new Map());
+    assert.notEqual(result, html);
+  });
 });
 
 describe("removeDuplicateSeparators", () => {
