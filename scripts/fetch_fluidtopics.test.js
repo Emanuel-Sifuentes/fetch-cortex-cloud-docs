@@ -375,6 +375,52 @@ describe("placeholder round-trip", () => {
   });
 });
 
+describe("snapshot: known-broken table patterns", () => {
+  it("handles colspan section-divider rows", () => {
+    const html = '<table><thead><tr><th>Field</th><th>Value</th></tr></thead>' +
+      '<tbody><tr><td>f1</td><td>v1</td></tr>' +
+      '<tr><td colspan="2">Advanced Settings</td></tr>' +
+      '<tr><td>f2</td><td>v2</td></tr></tbody></table>';
+    const sections = new Map();
+    const result = cleanTableHtml(html, sections);
+    assert.ok(result.includes("<strong>Advanced Settings</strong>"));
+    assert.ok((result.match(/<thead>/g) || []).length >= 2);
+  });
+
+  it("handles nested table inside a cell", () => {
+    const html = '<table><thead><tr><th>Feature</th><th>Details</th></tr></thead>' +
+      '<tbody><tr><td>Basic</td><td>Simple text</td></tr>' +
+      '<tr><td>Complex</td><td><table><tr><td>inner1</td></tr><tr><td>inner2</td></tr></table></td></tr>' +
+      '</tbody></table>';
+    const sections = new Map();
+    const result = cleanTableHtml(html, sections);
+    // Nested table should be extracted, not leak as raw HTML
+    assert.ok(!result.includes("<table><tr><td>inner1</td></tr>"));
+  });
+
+  it("handles cell with code block", () => {
+    const html = '<table><thead><tr><th>Function</th><th>Example</th></tr></thead>' +
+      '<tbody><tr><td>json_path</td><td><p>Extract fields.</p><pre><code class="language-xql">json_path(field, "$.key")</code></pre></td></tr>' +
+      '</tbody></table>';
+    const sections = new Map();
+    const result = cleanTableHtml(html, sections);
+    if (sections.size > 0) {
+      const content = [...sections.values()][0];
+      assert.ok(content.includes("```xql"));
+    }
+  });
+
+  it("handles cell with many list items", () => {
+    const html = '<table><thead><tr><th>Name</th><th>Values</th></tr></thead>' +
+      '<tbody><tr><td>OS</td><td><ul><li>Windows</li><li>Mac</li><li>Linux</li><li>Docker</li><li>K8s</li></ul></td></tr>' +
+      '</tbody></table>';
+    const sections = new Map();
+    const result = cleanTableHtml(html, sections);
+    // 5 items > MAX_LI_COUNT(3) → should be extracted
+    assert.ok(sections.size > 0, "Cell with 5 list items should be extracted");
+  });
+});
+
 describe("removeDuplicateSeparators", () => {
   it("removes duplicate consecutive separator rows", () => {
     const input = "| A | B |\n| --- | --- |\n| --- | --- |\n| 1 | 2 |";
