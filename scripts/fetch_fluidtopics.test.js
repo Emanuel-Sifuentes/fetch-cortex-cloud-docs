@@ -200,6 +200,23 @@ describe("analyzeTable", () => {
     const tableCount = (result.match(/<thead>/g) || []).length;
     assert.equal(tableCount, 2);
   });
+
+  it("splits mixed table: simple rows stay in tables, complex rows extracted", () => {
+    const pre = "<pre>code</pre>";
+    const html = "<table><thead><tr><th>Op</th><th>Desc</th></tr></thead>" +
+      `<tbody><tr><td>=</td><td>Equals</td></tr>` +
+      `<tr><td>IN</td><td><p>Check membership.</p>${pre}</td></tr>` +
+      `<tr><td>!=</td><td>Not equals</td></tr></tbody></table>`;
+    const sections = new Map();
+
+    const result = analyzeTable(html, sections);
+
+    // Should have 2 sub-tables (rows 1 and 3) and 1 extracted section (row 2)
+    const tableCount = (result.match(/<thead>/g) || []).length;
+    assert.equal(tableCount, 2);
+    assert.ok(result.includes("<!--EXTRACTED:"));
+    assert.equal(sections.size, 1);
+  });
 });
 
 describe("extractToSections", () => {

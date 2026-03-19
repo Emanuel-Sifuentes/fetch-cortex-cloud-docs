@@ -247,8 +247,27 @@ function analyzeSubTable(rowHtmls, headerRow, tableAttrs, extractedSections) {
 }
 
 function splitAtComplexRows(classified, headerRow, tableAttrs, extractedSections) {
-  // Stub — implemented in Task 7
-  return classified.map((r) => r.row).join("");
+  const segments = [];
+  let simpleRows = [];
+
+  const flushSimple = () => {
+    if (simpleRows.length === 0) return;
+    const tbody = simpleRows.join("");
+    segments.push(`<table${tableAttrs}><thead>${headerRow}</thead><tbody>${tbody}</tbody></table>`);
+    simpleRows = [];
+  };
+
+  for (const { row, type } of classified) {
+    if (type === "complex") {
+      flushSimple();
+      segments.push(extractToSections(row, headerRow, extractedSections));
+    } else {
+      simpleRows.push(row);
+    }
+  }
+  flushSimple();
+
+  return segments.join("\n\n");
 }
 
 function extractCells(row) {
