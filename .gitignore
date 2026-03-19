@@ -1,7 +1,7 @@
 node_modules/
 .worktrees/
 
-# Ignore all fetched markdown files except the combined file and README
+# Ignore all fetched markdown files except the combined files and README
 sources_fetch/*.md
-!sources_fetch/cortex-cloud-appsec-combined.md
+!sources_fetch/cortex-cloud-*-combined.md
 !sources_fetch/README.md

@@ -163,7 +163,7 @@ function normalizeHeadings(md, topicTitle) {
     if (text.includes("=")) return false;
     return true;
   };
-  const headingRe = /^(#{1,6}) (?=[A-Z*])/gm;
+
 
   // Find the minimum heading level in the content (only real headings outside code blocks)
   const lines = md.split("\n");

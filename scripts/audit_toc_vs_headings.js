@@ -12,6 +12,10 @@ function fetch(urlPath) {
   return new Promise((resolve, reject) => {
     const url = new URL(urlPath, BASE);
     https.get({ hostname: url.hostname, path: url.pathname, headers: { Accept: "application/json" } }, (res) => {
+      if (res.statusCode !== 200) {
+        res.resume();
+        return reject(new Error(`HTTP ${res.statusCode} for ${urlPath}`));
+      }
       const chunks = [];
       res.on("data", (c) => chunks.push(c));
       res.on("end", () => resolve(JSON.parse(Buffer.concat(chunks).toString())));
