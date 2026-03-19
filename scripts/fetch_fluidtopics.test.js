@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { flattenCellContent, cleanTableHtml, extractTopLevelTables, removeDuplicateSeparators } = require("./fetch_fluidtopics.js");
+const { flattenCellContent, cleanTableHtml, extractTopLevelTables, removeDuplicateSeparators, analyzeTable, isCellComplex } = require("./fetch_fluidtopics.js");
 
 describe("fetch_fluidtopics module exports", () => {
   it("exports flattenCellContent as a function", () => {
@@ -115,6 +115,15 @@ describe("flattenCellContent", () => {
 
     assert.ok(result.includes("wrapped"));
     assert.ok(!result.includes("<p>"));
+  });
+});
+
+describe("analyzeTable", () => {
+  it("returns simple table unchanged", () => {
+    const html = "<table><thead><tr><th>A</th><th>B</th></tr></thead>" +
+      "<tbody><tr><td>1</td><td>2</td></tr></tbody></table>";
+    const result = analyzeTable(html, new Map());
+    assert.equal(result, html);
   });
 });
 

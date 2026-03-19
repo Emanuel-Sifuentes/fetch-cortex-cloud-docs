@@ -9,6 +9,9 @@ const BASE = "https://docs-cortex.paloaltonetworks.com";
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
 const CONCURRENCY = 5;
 const DELAY_MS = 200;
+const MAX_LI_COUNT = 3;
+const MAX_CELL_LENGTH = 200;
+const COMPLEX_ROW_THRESHOLD = 0.5;
 
 const turndown = new TurndownService({
   headingStyle: "atx",
@@ -109,6 +112,89 @@ function extractTopLevelTables(html) {
   }
 
   return segments;
+}
+
+function isCellComplex(cellHtml) {
+  if (/<table\b/i.test(cellHtml)) return true;
+  if (/<pre\b/i.test(cellHtml)) return true;
+  if (/<code\b[^>]*>[\s\S]*<\/code>/i.test(cellHtml) && /<(p|div|ul|ol)\b/i.test(cellHtml)) return true;
+
+  const liCount = (cellHtml.match(/<li\b/gi) || []).length;
+  if (liCount > MAX_LI_COUNT) return true;
+
+  const textOnly = cellHtml.replace(/<[^>]+>/g, "").trim();
+  if (textOnly.length > MAX_CELL_LENGTH && /<(ul|ol|pre|table|div|p)\b/i.test(cellHtml)) return true;
+
+  return false;
+}
+
+function analyzeTable(tableHtml, extractedSections) {
+  const theadMatch = tableHtml.match(/<thead>([\s\S]*?)<\/thead>/);
+  if (!theadMatch) return tableHtml;
+
+  const headerRow = theadMatch[1];
+  const thCount = (headerRow.match(/<th\b[^>]*>/g) || []).length;
+  if (thCount === 0) return tableHtml;
+
+  const tbodyMatch = tableHtml.match(/<tbody>([\s\S]*?)<\/tbody>/);
+  if (!tbodyMatch) return tableHtml;
+
+  const rows = tbodyMatch[1].match(/<tr[\s\S]*?<\/tr>/g) || [];
+  if (rows.length === 0) return tableHtml;
+
+  const classified = rows.map((row) => {
+    const tds = row.match(/<td[\s\S]*?<\/td>/g) || [];
+    const hasColspan = /<td[^>]+colspan/i.test(row);
+    const isSectionDivider = hasColspan || (tds.length === 1 && thCount > 1);
+
+    if (isSectionDivider) return { row, type: "divider" };
+
+    const isComplex = tds.some((td) => {
+      const inner = td.replace(/^<td[^>]*>/, "").replace(/<\/td>$/, "");
+      return isCellComplex(inner);
+    });
+
+    return { row, type: isComplex ? "complex" : "simple" };
+  });
+
+  const dataRows = classified.filter((r) => r.type !== "divider");
+  const complexCount = dataRows.filter((r) => r.type === "complex").length;
+  const hasDividers = classified.some((r) => r.type === "divider");
+
+  // All simple, no dividers → passthrough
+  if (complexCount === 0 && !hasDividers) return tableHtml;
+
+  // Extract table-level attributes for reconstructing sub-tables
+  const tableAttrsMatch = tableHtml.match(/^<table([^>]*)>/);
+  const tableAttrs = tableAttrsMatch ? tableAttrsMatch[1] : "";
+
+  // >50% complex → extract entire table
+  if (dataRows.length > 0 && complexCount / dataRows.length > COMPLEX_ROW_THRESHOLD) {
+    return extractAllRows(classified, headerRow, tableAttrs, extractedSections);
+  }
+
+  // Has dividers → split at dividers
+  if (hasDividers) {
+    return splitAtDividers(classified, headerRow, tableAttrs, extractedSections);
+  }
+
+  // Mixed → split at complex rows
+  return splitAtComplexRows(classified, headerRow, tableAttrs, extractedSections);
+}
+
+function extractAllRows(classified, headerRow, tableAttrs, extractedSections) {
+  // Stub — implemented in Task 6
+  return classified.map((r) => r.row).join("");
+}
+
+function splitAtDividers(classified, headerRow, tableAttrs, extractedSections) {
+  // Stub — implemented in Task 7
+  return classified.map((r) => r.row).join("");
+}
+
+function splitAtComplexRows(classified, headerRow, tableAttrs, extractedSections) {
+  // Stub — implemented in Task 7
+  return classified.map((r) => r.row).join("");
 }
 
 function flattenCellContent(inner) {
@@ -369,6 +455,8 @@ async function main() {
 
 module.exports = {
   extractTopLevelTables,
+  isCellComplex,
+  analyzeTable,
   flattenCellContent,
   cleanTableHtml,
   normalizeHeadings,
