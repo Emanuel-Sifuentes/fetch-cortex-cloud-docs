@@ -74,6 +74,43 @@ function flattenToc(nodes, depth = 0) {
   return result;
 }
 
+function extractTopLevelTables(html) {
+  const segments = [];
+  let depth = 0;
+  let tableStart = -1;
+  let lastEnd = 0;
+  let i = 0;
+
+  while (i < html.length) {
+    if (html.startsWith("<table", i) && (html[i + 6] === ">" || html[i + 6] === " ")) {
+      if (depth === 0) {
+        if (i > lastEnd) {
+          segments.push({ type: "content", html: html.slice(lastEnd, i) });
+        }
+        tableStart = i;
+      }
+      depth++;
+      i += 6;
+    } else if (html.startsWith("</table>", i)) {
+      depth--;
+      if (depth === 0) {
+        const end = i + 8;
+        segments.push({ type: "table", html: html.slice(tableStart, end) });
+        lastEnd = end;
+      }
+      i += 8;
+    } else {
+      i++;
+    }
+  }
+
+  if (lastEnd < html.length) {
+    segments.push({ type: "content", html: html.slice(lastEnd) });
+  }
+
+  return segments;
+}
+
 function flattenCellContent(inner) {
   // Strip note/admonition headings: <h3 class="title">Note</h3> → " **Note:** "
   inner = inner.replace(/<h[1-6][^>]*>\s*(Note|Tip|Danger|Warning|Important|Prerequisite|Prerequisites)\s*<\/h[1-6]>/gi, " **$1:** ");
@@ -311,6 +348,7 @@ async function main() {
 }
 
 module.exports = {
+  extractTopLevelTables,
   flattenCellContent,
   cleanTableHtml,
   normalizeHeadings,
