@@ -160,6 +160,55 @@ describe("promoteKeywordsToHeadings", () => {
     );
   });
 
+  it("dedents indented content after a promoted keyword heading", () => {
+    const input = [
+      "### Inline Suppressions",
+      "",
+      "-   For **Python** (`requirements.txt`), **.NET** (`Paket`)",
+      "    ",
+      "    The skip comment can be added anywhere in the file.",
+      "    ",
+      "    ```",
+      "    # cortex:skip=CVE-2019-19844: Ignore CVE",
+      "    django==1.2",
+      "    ```",
+      "",
+      "-   For **JavaScript** (`package.json`)",
+      "    ",
+      "    -   Skip comments can be placed in the metadata section.",
+      "        ",
+      "        ```",
+      '        "//": "cortex:skip=CVE-2023-123"',
+      "        ```",
+    ].join("\n");
+
+    const result = promoteKeywordsToHeadings(input);
+
+    assert.equal(
+      result,
+      [
+        "### Inline Suppressions",
+        "",
+        "#### For **Python** (`requirements.txt`), **.NET** (`Paket`)",
+        "",
+        "The skip comment can be added anywhere in the file.",
+        "",
+        "```",
+        "# cortex:skip=CVE-2019-19844: Ignore CVE",
+        "django==1.2",
+        "```",
+        "",
+        "#### For **JavaScript** (`package.json`)",
+        "",
+        "-   Skip comments can be placed in the metadata section.",
+        "    ",
+        "    ```",
+        '    "//": "cortex:skip=CVE-2023-123"',
+        "    ```",
+      ].join("\n")
+    );
+  });
+
   it("tracks heading level changes across the document", () => {
     const input = [
       "## Top section",

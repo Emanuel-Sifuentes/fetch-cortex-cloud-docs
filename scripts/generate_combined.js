@@ -82,36 +82,85 @@ function shiftHeadings(md, depth, filename) {
 function promoteKeywordsToHeadings(md) {
   let currentHeadingLevel = 0;
   let inCodeBlock = false;
-  return md
-    .split("\n")
-    .map((line) => {
-      if (/^```/.test(line)) {
-        inCodeBlock = !inCodeBlock;
-        return line;
+  let dedenting = false;
+  const lines = md.split("\n");
+  const result = [];
+
+  for (const line of lines) {
+    let out = line;
+
+    if (dedenting) {
+      if (/^    /.test(out)) {
+        out = out.replace(/^    /, "");
+      } else if (/^\s*$/.test(out)) {
+        out = "";
+      } else {
+        dedenting = false;
       }
-      if (inCodeBlock) return line;
-      const headingMatch = line.match(/^(#{1,6}) /);
-      if (headingMatch) {
-        currentHeadingLevel = headingMatch[1].length;
-        return line;
-      }
-      const listMatch = line.match(/^-\s+(.*)/);
-      if (listMatch) {
-        const text = listMatch[1];
-        const isKeyword = KEYWORD_HEADINGS.some((kw) => text.startsWith(kw));
-        if (isKeyword) {
-          const level = Math.min(currentHeadingLevel + 1, 6);
-          if (currentHeadingLevel + 1 > 6) {
-            console.log(
-              `WARNING: keyword heading capped at h6: "${text}"`
-            );
-          }
-          return "#".repeat(level) + " " + text;
+    }
+
+    if (/^```/.test(out)) {
+      inCodeBlock = !inCodeBlock;
+      result.push(out);
+      continue;
+    }
+    if (inCodeBlock) {
+      result.push(out);
+      continue;
+    }
+
+    const headingMatch = out.match(/^(#{1,6}) /);
+    if (headingMatch) {
+      currentHeadingLevel = headingMatch[1].length;
+      result.push(out);
+      continue;
+    }
+
+    const listMatch = out.match(/^-\s+(.*)/);
+    if (listMatch) {
+      const text = listMatch[1];
+      const isKeyword = KEYWORD_HEADINGS.some((kw) => text.startsWith(kw));
+      if (isKeyword) {
+        const level = Math.min(currentHeadingLevel + 1, 6);
+        if (currentHeadingLevel + 1 > 6) {
+          console.log(
+            `WARNING: keyword heading capped at h6: "${text}"`
+          );
         }
+        result.push("#".repeat(level) + " " + text);
+        dedenting = true;
+        continue;
       }
-      return line;
-    })
-    .join("\n");
+    }
+
+    result.push(out);
+  }
+
+  return result.join("\n");
+}
+
+function titleMatchToRuntime(sourceIds, sourceTocMap, runtimeByTitle, fallbackSet, titleMatched) {
+  for (const id of sourceIds) {
+    const entry = sourceTocMap.get(id);
+    const candidates = runtimeByTitle.get(entry.title);
+    if (candidates && candidates.length > 0) {
+      const best = candidates.reduce((a, b) =>
+        Math.abs(a.depth - entry.depth) <= Math.abs(b.depth - entry.depth) ? a : b
+      );
+      if (fallbackSet) fallbackSet.delete(id);
+      titleMatched.set(id, best.contentId);
+    } else if (fallbackSet) {
+      fallbackSet.add(id);
+    }
+  }
+}
+
+function buildTocMap(toc) {
+  const map = new Map();
+  for (const entry of toc) {
+    if (!map.has(entry.contentId)) map.set(entry.contentId, entry);
+  }
+  return map;
 }
 
 function computeBuckets(postureToc, runtimeToc, appsecToc) {
@@ -152,46 +201,10 @@ function computeBuckets(postureToc, runtimeToc, appsecToc) {
     runtimeByTitle.get(entry.title).push(entry);
   }
 
-  const postureTocMap = new Map();
-  for (const entry of postureToc) {
-    if (!postureTocMap.has(entry.contentId)) {
-      postureTocMap.set(entry.contentId, entry);
-    }
-  }
+  titleMatchToRuntime(postureOnlyIds, buildTocMap(postureToc), runtimeByTitle, P, titleMatched);
+  titleMatchToRuntime(A, buildTocMap(appsecToc), runtimeByTitle, A, titleMatched);
 
-  for (const id of postureOnlyIds) {
-    const postureEntry = postureTocMap.get(id);
-    const candidates = runtimeByTitle.get(postureEntry.title);
-    if (candidates && candidates.length > 0) {
-      const best = candidates.reduce((a, b) =>
-        Math.abs(a.depth - postureEntry.depth) <= Math.abs(b.depth - postureEntry.depth) ? a : b
-      );
-      titleMatched.set(id, best.contentId);
-    } else {
-      P.add(id);
-    }
-  }
-
-  const appsecTocMap = new Map();
-  for (const entry of appsecToc) {
-    if (!appsecTocMap.has(entry.contentId)) {
-      appsecTocMap.set(entry.contentId, entry);
-    }
-  }
-
-  for (const id of [...A]) {
-    const appsecEntry = appsecTocMap.get(id);
-    const candidates = runtimeByTitle.get(appsecEntry.title);
-    if (candidates && candidates.length > 0) {
-      const best = candidates.reduce((a, b) =>
-        Math.abs(a.depth - appsecEntry.depth) <= Math.abs(b.depth - appsecEntry.depth) ? a : b
-      );
-      A.delete(id);
-      titleMatched.set(id, best.contentId);
-    }
-  }
-
-  return { PRA, PR, R, P, A, titleMatched };
+  return { PRA, PR, R, P, A, titleMatched, postureIds, appsecIds };
 }
 
 function resolveFile(contentId, titleMatchMap, fileMap) {
@@ -253,13 +266,11 @@ async function main() {
   const buckets = computeBuckets(postureFlat, runtimeFlat, appsecFlat);
 
   // Determine which contentIds belong to each target
-  const appsecIds  = new Set(appsecFlat.map((e) => e.contentId));
-  const postureIds = new Set(postureFlat.map((e) => e.contentId));
   const targetContentIds = {
     appsec:  new Set([...buckets.PRA, ...buckets.A,
-      ...[...buckets.titleMatched.keys()].filter((id) => appsecIds.has(id))]),
+      ...[...buckets.titleMatched.keys()].filter((id) => buckets.appsecIds.has(id))]),
     posture: new Set([...buckets.PR, ...buckets.P,
-      ...[...buckets.titleMatched.keys()].filter((id) => postureIds.has(id))]),
+      ...[...buckets.titleMatched.keys()].filter((id) => buckets.postureIds.has(id))]),
     runtime: new Set([...buckets.R]),
   };
 
