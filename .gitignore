@@ -5,3 +5,6 @@ node_modules/
 sources_fetch/*.md
 !sources_fetch/cortex-cloud-*-combined.md
 !sources_fetch/README.md
+
+# Ignore fetched TechDocs markdown files
+sources_techdocs/

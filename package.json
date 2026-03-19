@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "fetch": "node scripts/fetch_fluidtopics.js",
+    "fetch:techdocs": "node scripts/fetch_techdocs.js",
     "combine": "node scripts/generate_combined.js",
     "fix": "bash scripts/fix_abstract_lines.sh && python scripts/fix_escaped_chars_in_fences.py sources_fetch/ && python scripts/fix_escaped_underscores.py && python scripts/fix_images_and_fences.py && python scripts/fix_broken_tables.py && npm run combine",
     "audit:headings": "node scripts/audit_headings.js",
