@@ -87,10 +87,13 @@ function flattenCellContent(inner) {
   // Strip <li> tags, keeping content
   inner = inner.replace(/<li[^>]*>([\s\S]*?)<\/li>/g, "$1");
 
-  // Strip remaining block wrappers (div, ul, ol, p) but keep their content
-  inner = inner.replace(/<\/?(div|ul|ol|section|article|aside|nav|header|footer)[^>]*>/g, " ");
-  inner = inner.replace(/<p>([\s\S]*?)<\/p>/g, "$1 ");
-  inner = inner.replace(/<p>/g, "").replace(/<\/p>/g, " ");
+  // Strip remaining block wrappers (div, ul, ol, pre, blockquote, etc.) but keep their content
+  inner = inner.replace(/<\/?(div|ul|ol|pre|blockquote|dl|dt|dd|section|article|aside|nav|header|footer)[^>]*>/g, " ");
+  inner = inner.replace(/<p[^>]*>([\s\S]*?)<\/p>/g, "$1 ");
+  inner = inner.replace(/<p[^>]*>/g, "").replace(/<\/p>/g, " ");
+
+  // Strip <br> tags
+  inner = inner.replace(/<br\s*\/?>/g, " ");
 
   // Collapse whitespace
   inner = inner.replace(/\s+/g, " ").trim();

@@ -12,9 +12,6 @@ Cortex Cloud is an easily extensible platform to consolidate Application Securit
 -   **Cloud Runtime**: Stop an attacker from exploiting risks present in your cloud environment.
     
 -   **SOC**: Detect and respond.
-    
-
-[image: image7.png]
 
 ### Key features
 -   **Visibility**–Get complete visibility across your entire cloud estate:
@@ -96,7 +93,6 @@ Cortex Cloud is an easily extensible platform to consolidate Application Securit
     -   Build your own Remediation Playbooks: Cortex Cloud offers a no code automation wizard to build your own security playbooks.
 
 ## What is Cortex Cloud Posture Management?
-Abstract
 
 Learn about Cortex Cloud Posture Management and the key integrated capabilities.
 
@@ -107,12 +103,8 @@ Cortex Cloud Posture Management includes:
 -   **Posture Management**: Supports configuration assessment, compliance monitoring, vulnerability management, code-to-cloud remediation, and reporting. Includes attack path analysis to aggregate potential risks.
     
 -   **Data, Identity, and Application Security**: Deploys quickly to deliver real-time visibility and protection across cloud environments.
-    
-
-[image: runtime-security.png]
 
 ## Agentic AI in Cortex Cloud
-Abstract
 
 Use the Cortex Agentic Assistant to investigate cases, perform threat hunting, and create scripts. Embed and run LLM prompts in playbooks. View AI case summaries.
 
@@ -156,7 +148,6 @@ Cortex Cloud integrates advanced artificial intelligence to streamline security 
 -   United States (US)
 
 ### Cortex Agentic Assistant
-Abstract
 
 Learn about the Cortex Agentic Assistant and key integrated capabilities.
 
@@ -214,7 +205,6 @@ The system Help Center Agent provides fast access to documentation. You can ask 
 To view how your organization utilizes the Cortex Agentic Assistant, including information on agent plans, user prompts, as well as open cases, see the Cortex Agentic Assistant dashboard.
 
 #### Agentic Assistant use cases
-Abstract
 
 Recommended prompts to automate your SOC using the Cortex Agentic Assistant
 
@@ -253,7 +243,6 @@ Additional examples of possible relevant prompts are:
 For more information on investigations, see Use Cortex Agentic Assistant chat in an investigation.Use Cortex Agentic Assistant chat in an investigation
 
 #### Agentic Assistant security
-Abstract
 
 Learn about how the Agentic Assistant is built using Agentic AI security principles.
 
@@ -334,19 +323,13 @@ After you onboard your cloud or code providers, the data collected by Cortex Clo
 -   Finally, the several hundred posture risk issues that Cortex Cloud detected are now grouped into few Posture Cases that you can remediate are displayed on the right of the Command Center UI.
     
 
-The Command Center also provides you details on the total number of assets in your environment, number of issues closed as well as the amount of time saved. [image: image12.png] 
+The Command Center also provides you details on the total number of assets in your environment, number of issues closed as well as the amount of time saved.  
 
 Cortex Cloud includes a unified **Asset Inventory**, which provides a complete list of your different assets in a single place. Here you can see your AI models and deployments, Applications, APIs, and all your Compute instances, Data assets, and Identities.
 
-[image: image9.png]
-
 Select **View Dashboard** to get an in-depth view of all your assets.
 
-[image: image13.png]
-
 Now that you have an overview of your environment and all the assets, you can navigate to **Cases** to view and resolve your issues as well as create a New Case.
-
-[image: image5.png]
 
 Now that you have familiarized yourself with Cortex Cloud, consider taking the following actions to begin securing your cloud resources:
 
@@ -357,7 +340,6 @@ Now that you have familiarized yourself with Cortex Cloud, consider taking the f
 -   View dashboards and assets
 
 ## In-product support case creation
-Abstract
 
 Open a support case directly in Cortex Cloud and record your console to capture your issues and have the case handled efficiently.
 
@@ -524,7 +506,6 @@ The following table outlines how the system counts workloads based on your purch
 | Both Cloud Posture and Cloud Runtime | Runtime quota full | Posture: Total usage (including excess). Runtime: Total usage (over-quota) | Spillover only occurs from Posture to Runtime; it does not occur in the reverse. Excess Posture workloads are added back to the Posture counter, and any over-quota usage is shown there. |
 
 ### Data retention
-Abstract
 
 Learn more about the default retention periods for all Cortex Cloud licenses and the available retention add-ons.
 
@@ -554,7 +535,6 @@ Retention add-ons are provided for ingested data and Cases and Issues data. Mini
 | Period-Based Retention - Cold Storage | Lower-cost storage of ingested data for long-term compliance needs with limited search options. Requires purchasing a minimum of six months of additional retention. |
 
 # Onboard and configure Cortex Cloud
-Abstract
 
 Learn about the deployment preparation and procedures to onboard and configure Cortex Cloud.
 
@@ -565,7 +545,6 @@ Onboard your cloud assets for automation and core analytics, data ingestion, ent
 Depending on your license and add-ons, onboard your cloud assets and modules.
 
 ## Plan and prepare
-Abstract
 
 Learn more about deployment considerations and onboarding steps.
 
@@ -578,13 +557,10 @@ Before you get started with Cortex Cloud, consider the following:
 -   Determine the region in which you want to host Cortex Cloud and any associated services, such as Directory Sync Service. If you plan to stream data from a Strata Logging Service instance, it must be in the same region as Cortex Cloud. For more information, see Cortex Cloud supported regions.
 
 ## Deployment steps and checklist
-Abstract
 
 Review the steps to onboard and configure Cortex Cloud.
 
 Review the plan and prepare considerations, and then use the onboarding checklist to deploy and onboard successfully Cortex Cloud.
-
-[image: cloudonboard.png]
 
 -   **Step 1**: Activate Cortex Cloud. Activate and log in to Cortex Gateway.
     
@@ -595,7 +571,6 @@ Review the plan and prepare considerations, and then use the onboarding checklis
 -   Perform a health check.
 
 ### Activate Cortex Cloud
-Abstract
 
 Learn how to activate your tenant.
 
@@ -668,7 +643,6 @@ How to activate Cortex Cloud
 7.  Enable and verify access to  Cortex Cloud communication servers, storage buckets, and various resources in your firewall configuration. For more information, see Enable access to required PANW resources.
 
 #### Cortex Cloud supported regions
-Abstract
 
 Supported regions in which you want to host Cortex Cloud and any associated services.
 
@@ -713,7 +687,6 @@ The following table lists the regions available to host Cortex Cloud and any ass
 | Taiwan (TW) | All Cortex Cloud logs and ingested data remain hosted within the boundaries of Taiwan. |
 
 #### Enable access to required PANW resources
-Abstract
 
 Learn more about enabling network access to the Cortex Cloud resources.
 
@@ -774,8 +747,7 @@ The following table lists the required resources by region, including FQDNs, IP 
 | pendo-static-5664029141630976.storage.googleapis.com | Port: 443 | — |
 | **Email Notifications** |
 | — | IP address for all regions: 159.183.150.248 | — |
-| **Ingress** These IPs are used for communication between Cortex Cloud and your resources. Use them when sending data out from your tenant. |
-|  | US (United States)-   34.132.108.184; 34.69.63.16
+| **Ingress** These IPs are used for communication between Cortex Cloud and your resources. Use them when sending data out from your tenant. | | | US (United States)- 34.132.108.184; 34.69.63.16
 ; EU (Europe)-   34.147.107.51; 34.91.26.125
 ; CA (Canada)-   35.203.108.13; 35.203.101.162
 ; UK (United Kingdom)-   35.242.180.163; 34.105.173.229
@@ -796,8 +768,7 @@ The following table lists the required resources by region, including FQDNs, IP 
 ; IT (Italy)-   34.154.23.156; 34.154.186.12
 ; KR (South Korea)-   34.64.93.168; 34.64.237.45
 ; ZA (South Africa):-   34.35.42.196; 34.35.79.219 | **`cortex-xdr`** |
-| **Outbound IPs for engines** |
-|  | IP addresses by region US (United States)-   35.225.156.101; 34.69.88.119
+| **Outbound IPs for engines** | | | IP addresses by region US (United States)- 35.225.156.101; 34.69.88.119
 ; EU (Europe)-   34.147.67.188; 34.90.16.31
 ; CA (Canada)-   35.203.57.162; 35.203.90.79
 ; UK (United Kingdom)-   34.142.3.42; 34.142.44.136
@@ -820,8 +791,7 @@ The following table lists the required resources by region, including FQDNs, IP 
 ; KR (South Korea)-   34.64.189.205; 34.64.45.118
 ; ZA (South Africa)-   34.35.70.193; 34.35.80.189
 ; BR (Brazil)-   35.199.96.109; 34.39.161.254 | — |
-| **Collect third-party data from your SaaS and Cloud resources** |
-| — | IP address by region. US (United States)-   34.66.69.154; 35.202.21.123
+| **Collect third-party data from your SaaS and Cloud resources** | | — | IP address by region. US (United States)- 34.66.69.154; 35.202.21.123
 ; AU (Australia)-   35.197.181.108; 35.197.175.44
 ; CA (Canada)-   34.95.33.72; 34.95.62.136
 ; SG (Singapore)-   35.247.148.38; 35.247.173.40
@@ -878,8 +848,7 @@ The following table lists the required resources for the federal government of t
 | login.paloaltonetworks.com (SSO) | IP address: 34.107.190.184; Port: 443 | — |
 | **Collect third-party data from your SaaS and Cloud resources** |
 | — | IP addresses 34.68.217.16; 34.69.175.202 | **`cortex-xdr`** |
-| **Log Forwarding to a Syslog Receiver** |
-| See Integrate a syslog receiver. |
+| **Log Forwarding to a Syslog Receiver** | | See Integrate a syslog receiver. |
 
 ### Upgrade from Prisma Cloud to Cortex Cloud
 
@@ -907,17 +876,13 @@ The following table lists the types of content that are copied from your Prisma 
 | --- | --- | --- |
 | Global Configurations | Permission Groups and Roles | Roles and User Groups |
 | CSPM Configurations | Policies | Rules |
-| Custom Alert Rules | Custom Policies |
-| Notifications | Automation Rules |
+| Custom Alert Rules | Custom Policies | | Notifications | Automation Rules |
 | Custom Compliance Standards | Custom Compliance Standards |
 | CWP Configurations | Rules and Their Collections | Policies and Their Asset Groups |
 | Application Security Configurations | Policy Labels | Application Security Rule Labels |
-| Custom Policies | Application Security Custom Rules |
-| Enforcement Rules | Application Security Policies |
-| Non-default Scanned Branches | Non-default Scanned Branches |
-| Git History & Validate Secrets | Git History & Validate Secrets |
-| Developer Suppressions | Application Security Policies |
-| AppDNA Discovery Criteria | Application Criteria |
+| Custom Policies | Application Security Custom Rules | | Enforcement Rules | Application Security Policies |
+| Non-default Scanned Branches | Non-default Scanned Branches | | Git History & Validate Secrets | Git History & Validate Secrets |
+| Developer Suppressions | Application Security Policies | | AppDNA Discovery Criteria | Application Criteria |
 
 #### Link Cortex Cloud to Prisma Cloud
 To link your Cortex Cloud tenant to a Prisma Cloud tenant, first obtain the Access Key from Prisma Cloud, and then paste it in the Link Tenant section of the Upgrade Helper to establish the link.
@@ -949,8 +914,6 @@ Link from Cortex Cloud
 
 #### Copy content
 After you successfully link your Cortex Cloud tenant to your Prisma Cloud tenant, you can choose content items to copy. You can either copy all supported content (recommended) or select specific items to copy.
-
-[image: upgrade-helper-new.png]
 
 How to copy selected content
 
@@ -1019,9 +982,9 @@ After you follow the steps listed in Copy configurations, navigate to Posture Ma
 
 When verifying the list of policies, note the following details:
 
--   The policy name will have a prisma\_cloud\_copy suffix.
+-   The policy name will have a prisma_cloud_copy suffix.
     
--   To verify that the prisma\_cloud\_alert\_rule label was added to your policies, click the three dots next to Create Policy and select Labels from under Add Columns.
+-   To verify that the prisma_cloud_alert_rule label was added to your policies, click the three dots next to Create Policy and select Labels from under Add Columns.
     
 -   Click on a policy to view its details and review the issues that were generated.
     
@@ -1029,10 +992,8 @@ When verifying the list of policies, note the following details:
 | Alert Rule name in Prisma Cloud | Result after copying to Cortex Cloud |
 | --- | --- |
 | Alert rule default config or attack | Policies are created |
-| Alert rule custom config or attack path |
-| Alert rule with custom compliance standard filter |
-| Alert rule with Email and Slack notification setup |
-| Alert rule without Email notification setup |
+| Alert rule custom config or attack path | | Alert rule with custom compliance standard filter |
+| Alert rule with Email and Slack notification setup | | Alert rule without Email notification setup |
 | Alert rule with CIEM policies | Policies are not created: IAM policy; Attack path with CIEM finding |
 | Alert rule with network or audit event policies | Policies are not created: Network; Audit event; Anomaly |
 
@@ -1051,22 +1012,14 @@ You can copy Prisma Cloud notifications that were configured for:
 
 After you follow the steps listed in Copy configurations, navigate to Investigation & Response → Automation → Automation Rules to view the list of notifications that were copied.
 
-The notification type is Email and has a prisma\_cloud\_copy suffix. You can view the corresponding Policy ID and the email recipient.
+The notification type is Email and has a prisma_cloud_copy suffix. You can view the corresponding Policy ID and the email recipient.
 
 | Alert rule in Prisma Cloud | Notification channels configured for alert rule in Prisma Cloud | Result after copying to Cortex Cloud |
 | --- | --- | --- |
 | Alert rule with default Config or Attack Path policies | Email | Automation rule is created with Email |
 | Alert rule with Slack and Email | Slack and Email |
 | Alert rule with no Email | Slack | Automation rule is not created |
-| Alert rule with custom Config or Attack Path policies | Not applicable |
-
-###### Custom compliance standards
-
-When you copy Custom Compliance Standards in the Upgrade Helper, the Prisma Cloud Custom Compliance Standards are copied to Cortex Cloud.
-
-###### Verify copied compliance standards
-
-After you follow the steps listed in Copy configurations, navigate to Posture Management → Compliance → Standards to view the list of custom compliance standards that were copied.
+| Alert rule with custom Config or Attack Path policies | Not applicable | ## Custom compliance standards When you copy Custom Compliance Standards in the Upgrade Helper, the Prisma Cloud Custom Compliance Standards are copied to Cortex Cloud. ## Verify copied compliance standards After you follow the steps listed in Copy configurations, navigate to Posture Management → Compliance → Standards to view the list of custom compliance standards that were copied.
 
 ##### Copy CWP configurations
 ###### Policies and their asset groups
@@ -1246,9 +1199,7 @@ The Cortex CLI uses the following environment variables:
 
 You can also authenticate by providing your API credentials and base URL directly in the command.
 
-```
-cortexcli code scan --api-base-url <CORTEX\_API\_BASE\_URL> --api-key-id <YOUR\_API\_KEY\_ID> --api-key <YOUR\_API\_KEY> --directory ./my-app
-```
+cortexcli code scan --api-base-url <CORTEX_API_BASE_URL> --api-key-id <YOUR_API_KEY_ID> --api-key <YOUR_API_KEY> --directory ./my-app
 
 Replace these placeholders:
 
@@ -1300,7 +1251,7 @@ The output of a scan can be saved in various formats. The following table maps t
 
 |  | Checkov | Cortex CLI |
 | --- | --- | --- |
-| Output formats | cli; sarif; json; spdx; Junitxml; Cyclonedx; cyclonedx\_json | CSV; sarif; Junitxml; GitLab SAST; Cyclonedx |
+| Output formats | cli; sarif; json; spdx; Junitxml; Cyclonedx; cyclonedx_json | CSV; sarif; Junitxml; GitLab SAST; Cyclonedx |
 | --- | --- | --- |
 | Output command | `-o [FORMAT]` | `--output [FORMAT]` |
 
@@ -1368,11 +1319,11 @@ These examples demonstrate a GitHub Actions workflow in both legacy and the new 
       push:
         branches:
           - main
-      workflow\_dispatch:
+      workflow_dispatch:
     env:
-      CORTEX\_API\_KEY: ${{secrets.CORTEX\_API\_KEY}}
-      CORTEX\_API\_KEY\_ID: ${{secrets.CORTEX\_API\_KEY\_ID}}
-      CORTEX\_API\_URL: https://api-viso-cq3sdpg7uyd6vqk66ccjyv.xdr-qa2-uat.us.paloaltonetworks.com
+      CORTEX_API_KEY: ${{secrets.CORTEX_API_KEY}}
+      CORTEX_API_KEY_ID: ${{secrets.CORTEX_API_KEY_ID}}
+      CORTEX_API_URL: https://api-viso-cq3sdpg7uyd6vqk66ccjyv.xdr-qa2-uat.us.paloaltonetworks.com
       
     jobs:
       cortex-code-scan:
@@ -1390,24 +1341,24 @@ These examples demonstrate a GitHub Actions workflow in both legacy and the new 
         - name: Download cortexcli
           run: |
             set -x
-            crtx\_resp=$(curl "${CORTEX\_API\_URL}/public\_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
-              -H "x-xdr-auth-id: ${CORTEX\_API\_KEY\_ID}" \\
-              -H "Authorization: ${CORTEX\_API\_KEY}")
-            crtx\_url=$(echo $crtx\_resp | jq -r ".signed\_url")
-            curl -o cortexcli $crtx\_url
+            crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \\
+              -H "x-xdr-auth-id: ${CORTEX_API_KEY_ID}" \\
+              -H "Authorization: ${CORTEX_API_KEY}")
+            crtx_url=$(echo $crtx_resp | jq -r ".signed_url")
+            curl -o cortexcli $crtx_url
             chmod +x cortexcli
             ./cortexcli --version
         - name: Run Cortex CLI Code Scan
           run: |
             ./cortexcli \\
-              --api-base-url "${CORTEX\_API\_URL}" \\
-              --api-key "${CORTEX\_API\_KEY}" \\
-              --api-key-id "${CORTEX\_API\_KEY\_ID}" \\
+              --api-base-url "${CORTEX_API_URL}" \\
+              --api-key "${CORTEX_API_KEY}" \\
+              --api-key-id "${CORTEX_API_KEY_ID}" \\
               code scan \\
               --directory "${{github.workspace}}" \\
               --repo-id "${{github.repository}}" \\
-              --branch "${{github.ref\_name}}" \\
-              --source "GITHUB\_ACTIONS" \\
+              --branch "${{github.ref_name}}" \\
+              --source "GITHUB_ACTIONS" \\
               --create-repo-if-missing
     ```
     
@@ -1434,8 +1385,8 @@ Here is how you can map your TwistCLI image scan command to the Cortex CLI.
     ```
     ./twistcli images scan \\
       --address "your Prisma Cloud Console URL" \\
-      --user "your\_access\_key\_id" \\
-      --password "your\_secret\_key" \\
+      --user "your_access_key_id" \\
+      --password "your_secret_key" \\
       ubuntu:latest
     ```
     
@@ -1446,7 +1397,6 @@ Here is how you can map your TwistCLI image scan command to the Cortex CLI.
     ```
 
 ### Set up users and roles
-Abstract
 
 Learn how to set up users and roles in Cortex Cloud.
 
@@ -1495,7 +1445,6 @@ Some features are license-dependent. Accordingly, users may not see a specific f
 | Identity Security Viewer | The Identity Security Viewer can view the majority of the features for this Identity Security and can edit reports. |
 
 #### User group management
-Abstract
 
 Create user groups and assign roles and users to further refine your requirements.
 
@@ -1565,7 +1514,6 @@ How to create a user group
 4.  Click Create to create the user group.
 
 #### Assign user roles and groups
-Abstract
 
 Learn how to assign users to roles and user groups.
 
@@ -1690,7 +1638,6 @@ Below are some of the main pivot (right-click) options for actions available on 
 | Filter API keys | Filters the API keys by selecting one of the filter options, such as Show rows 30 days prior to.... You can then adjust the filter options to filter the API keys according to all the available fields. |
 
 ### Set up authentication
-Abstract
 
 Authenticate Cortex Cloud users using SAML 2.0 or Cortex Gateway.
 
@@ -1727,7 +1674,6 @@ If you want to restrict the user login through SSO only, remove any direct role 
 You should have at least one user in the Customer Support Portal for backup, in case of any authentication issues with your IdP provider.
 
 #### Authenticate users through the Customer Support Portal
-Abstract
 
 Authenticate Cortex Cloud users when using the Customer Support Portal.
 
@@ -1783,7 +1729,6 @@ How to authenticate users through the Customer Support Portal
     After the user accepts the invitation, you see the added users. You must assign a role to the user directly or add them to user groups in Cortex Gateway or in the Cortex Cloud tenant.
 
 #### Authenticate users using SSO
-Abstract
 
 Set up authentication in the Cortex Cloud tenant using SSO.
 
@@ -2023,19 +1968,19 @@ Within Azure AD, assign users to [security groups](https://learn.microsoft.com/e
 
 1.  From within Azure AD, create a Cortex Cloud application and Edit the Basic SAML Configuration.
     
-    [image: Azure-Basic-SAML-8.png]
+    
     
 2.  Paste the Single sign-on URL and the Audience URI (SP Entity ID) that you copied from the Cortex Cloud SSO settings. The Single sign-on URL from Cortex Cloud should be pasted in the Reply URL and the Sign on URL fields. The Audience URI (SP Entity ID) value from Cortex Cloud should be pasted in the Identifier (Entity ID) and Relay State fields. This allows users to log in to Cortex Cloud directly from Azure AD.
     
-    [image: azure-basic-saml.png]
+    
     
 3.  In the SAML Certificates section, click Edit and verify that Azure is configured to sign both the response and the assertion.
     
-    [image: Azure-Sign-Certificate-8.png]
+    
     
 4.  To have Azure AD send group membership for the user in the SAML token, you must \+ Add a group claim in the Attributes & Claims section. Send the Security groups, using the source attribute Group ID. Use the word or phrase you selected when configuring Azure AD security groups (such as Cortex Cloud) to create a filter. Customize the name of the group claim as memberOf.
     
-    [image: Azure-memberof-Group-8.png]
+    
     
 5.  In addition to group membership, verify that there are also claims for:
     
@@ -2051,7 +1996,7 @@ Within Azure AD, assign users to [security groups](https://learn.microsoft.com/e
 
 1.  In Azure, from the Single sign-on page, in the Set up Cortex Cloud Production section, copy the values for the Login URL and Azure AD Identifier. You need these values to configure the SSO Integration in Cortex Cloud.
     
-    [image: Azure-XSOAR-Settings-8.png]
+    
     
 2.  Edit Attributes & Claims and copy the values in the Claim name column. The claim name is case sensitive. You need these values to configure the SSO Integration in Cortex Cloud.
     
@@ -2059,14 +2004,12 @@ Within Azure AD, assign users to [security groups](https://learn.microsoft.com/e
     
     The default attributes shown on the main single sign-on page in Azure AD are not the values you need. You must click Edit next to Attributes and Claims to view and copy the actual values.
     
-    [image: Azure-claim-names-8.png]
+    
     
 
 ##### Task 5. Download the Certificate
 
 From the SAML Certificates section in Azure AD, Download the Certificate (Base64). You need the contents of this file to configure the Cortex Cloud SSO Integration.
-
-[image: Azure-download-certificate-8.png]
 
 ##### Task 6. Copy the Source IDs for Azure AD Security Groups
 
@@ -2092,7 +2035,7 @@ The claim for the membership attribute that is sent to Cortex Cloud uses the Obj
     
     The attribute claim name must exactly match the value sent by your IdP. In some cases, this may be the full attribute name/namespace, depending on the configuration of our IdP
     
-    [image: Azure-XSOAR-Attributes-8.png]
+    
     
 5.  (Optional) Under Advanced Settings, select the checkboxes for ADFS and Compress encode URL (ADFS). In some circumstances, these fields may be required by your Azure AD configuration.
     
@@ -2125,14 +2068,12 @@ The claim for the membership attribute that is sent to Cortex Cloud uses the Obj
     To view your role and any role assigned to a user group you are a member of, click your name in the bottom left-hand corner, and click About.
 
 ### Cloud service provider (CSP) onboarding
-Abstract
 
 Learn about onboarding your cloud service provider to Cortex Cloud.
 
 Onboard your cloud service provider (CSP) from the Data Source page.
 
 #### Ingest cloud assets
-Abstract
 
 Explains how to onboard cloud service providers from the Data Sources & Integrations page.
 
@@ -2177,7 +2118,6 @@ The additional security capabilities you can enable include:
 -   Registry scanning: Scan container registry images for vulnerabilities. malware, and secrets. You can configure your initial preference for scanning your registry. Any newly discovered registry, repository or image in the account will be scanned by default.
 
 #### Onboard Amazon Web Services
-Abstract
 
 Follow the AWS onboarding wizard and Cortex Cloud creates a custom CloudFormation authentication template to be deployed in AWS CloudFormation.
 
@@ -2300,14 +2240,13 @@ Cortex Cloud generates a CloudFormation authentication template based on the set
 
 Use the following template to create a dedicated role with the permissions required for onboarding AWS to Cortex Cloud:
 
-```
 {
   "Version": "2012-10-17",
-  "Statement": \[
+  "Statement": [
     {
       "Sid": "CortexCloudOnboarding",
       "Effect": "Allow",
-      "Action": \[
+      "Action": [
         "iam:GetRole",
         "iam:UpdateAssumeRolePolicy",
         "iam:GetPolicyVersion",
@@ -2338,35 +2277,31 @@ Use the following template to create a dedicated role with the permissions requi
         "sns:\*",
         "cloudtrail:\*",
         "cloudformation:\*"
-      \],
+      ],
       "Resource": "\*"
     }
-  \]
+  ]
 }
-```
 
 To enable serverless function scanning, grant the following permissions in your AWS account for scanning outposts and accessing logs:
 
-```
 {
  "Version": "2012-10-17",
- "Statement": \[
+ "Statement": [
    {
      "Effect": "Allow",
-     "Action": \[
+     "Action": [
        "lambda:GetFunction",
        "lambda:GetFunctionConfiguration",
        "lambda:GetLayerVersion",
        "iam:GetRole"
-     \],
+     ],
      "Resource": "\*"
    }
- \]
+ ]
 }
-```
 
 ##### Manually upload template to AWS
-Abstract
 
 Learn how to manually create a stack in AWS Management Console using the CloudFormation file downloaded in the onboarding wizard.
 
@@ -2410,13 +2345,12 @@ Before you begin, ensure you have:
     
     Click Next and Next again.
     
-8.  In Review, acknowledge that CloudFormation might create IAM resources with custom names and click Submit. The stack is complete when it appears in the Stacks list with status of CREATE\_COMPLETE.
+8.  In Review, acknowledge that CloudFormation might create IAM resources with custom names and click Submit. The stack is complete when it appears in the Stacks list with status of CREATE_COMPLETE.
     
 
 When the template is successfully uploaded to AWS and the stack creation is complete, the initial discovery scan is started. When the scan is complete, you can view the discovered assets in Asset Inventory.
 
 ##### Configure AWS integration instances and monitor integration instance health
-Abstract
 
 Enable automations from Data Sources & Integrations and monitor AWS integration instance health.
 
@@ -2467,7 +2401,6 @@ Monitoring AWS integration instance health ensures continuous, reliable operatio
         Currently, automation permission errors or missing automation permissions do not affect the Automation health status. You can view any permission errors or missing permissions in the the Permissions health status.
 
 #### Onboard Google Cloud Platform
-Abstract
 
 Follow the GCP onboarding wizard, and Cortex Cloud creates a custom authentication template to be applied in GCP.
 
@@ -2584,12 +2517,11 @@ Cortex Cloud generates a Terraform authentication template based on the settings
 
 Use the following template to create a dedicated role with the permissions required for onboarding GCP to Cortex Cloud.
 
-```
 {
   "title": "CortexCloudOnboarding",
   "description": "Custom role with permissions required for onboarding Cortex Cloud",
   "stage": "GA",
-  "includedPermissions": \[
+  "includedPermissions": [
     "iam.roles.create",
     "iam.roles.delete",
     "iam.roles.get",
@@ -2627,12 +2559,10 @@ Use the following template to create a dedicated role with the permissions requi
     "resourcemanager.projects.getIamPolicy",
     "resourcemanager.projects.list",
     "resourcemanager.projects.setIamPolicy"
-  \]
+  ]
 }
-```
 
 ##### Manually upload template to GCP
-Abstract
 
 Learn how to manually deploy the Terraform template file in Google Cloud Console.
 
@@ -2679,7 +2609,7 @@ Before you begin, ensure you have:
     
     ```
     cd ~/terraform/gcp-connector-1
-    tar -xzvf <your\_template>.tar.gz
+    tar -xzvf <your_template>.tar.gz
     ```
     
 5.  Initialize Terraform in your project directory:
@@ -2691,7 +2621,7 @@ Before you begin, ensure you have:
 6.  Apply your Terraform configuration using the downloaded parameter file. When prompted, enter the project ID if you configured one in the onboarding wizard:
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
     The Terraform template is deployed.
@@ -2788,7 +2718,6 @@ Your Cortex Cloud service account has been successfully granted the necessary pe
 You have successfully enabled the Google Workspace in your GCP cloud instance.
 
 ##### Configure GCP integration instances and monitor integration instance health
-Abstract
 
 Enable automations from Data Sources & Integrations and monitor GCP integration instance health.
 
@@ -2806,7 +2735,7 @@ You can configure a new GCP integration instance or edit an existing GCP integra
     
 2.  In the GCP integration row:
     
-    -   To configure a new GCP integration instance: Click [image: three-dots.png] and then click Add New Instance or click View Details and from the New Instance drop down select the GCP cloud service provider.
+    -   To configure a new GCP integration instance: Click ⋮ and then click Add New Instance or click View Details and from the New Instance drop down select the GCP cloud service provider.
         
     -   To edit an existing GCP integration instance: Click View Details and then click the configuration pencil icon.
         
@@ -2839,7 +2768,6 @@ Monitoring GCP integration instance health ensures continuous, reliable operatio
         Currently, automation permission errors or missing automation permissions do not affect the Automation health status. You can view any permission errors or missing permissions in the the Permissions health status.
 
 ##### Monitor GCP resources inside service perimeters
-Abstract
 
 Learn how to grant authorization to Cortex Cloud to scan within your GCP service perimeter.
 
@@ -2912,7 +2840,6 @@ Add Cortex Cloud authorization values to GCP perimeter
 The Cortex Cloud authorization values have been added as approved identities in GCP.
 
 #### Onboard Microsoft Azure
-Abstract
 
 Follow the Azure onboarding wizard, and Cortex creates a custom authentication template to be executed in Azure.
 
@@ -3033,12 +2960,11 @@ Cortex Cloud generates an authentication template based on the settings you conf
 
 Use the following template to create a dedicated role with the permissions required for onboarding Microsoft Azure to Cortex Cloud.
 
-```
 {
   "Name": "CortexCloudOnboarding",
   "IsCustom": true,
   "Description": "Custom role with permissions for Cortex Cloud onboarding",
-  "Actions": \[
+  "Actions": [
     "Microsoft.Authorization/roleAssignments/read",
     "Microsoft.Authorization/roleAssignments/write",
     "Microsoft.Authorization/roleAssignments/delete",
@@ -3110,20 +3036,18 @@ Use the following template to create a dedicated role with the permissions requi
     "Microsoft.aadiam/diagnosticsettings/delete",
     "microsoft.aadiam/azureADMetrics/providers/Microsoft.Insights/diagnosticSettings/write",
     "microsoft.aadiam/tenants/providers/Microsoft.Insights/diagnosticSettings/write"
-  \],
-  "NotActions": \[\],
-  "DataActions": \[\],
-  "NotDataActions": \[\],
-  "AssignableScopes": \[
-    <SUBSCRIPTION\_ID> or <MANAGEMENT\_GROUP\_ID> or <TENANT\_ID>
-  \]
+  ],
+  "NotActions": [],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    <SUBSCRIPTION_ID> or <MANAGEMENT_GROUP_ID> or <TENANT_ID>
+  ]
 }
-```
 
 Where `<SUBSCRIPTION_ID>`, `<MANAGEMENT_GROUP_ID>`, or `<TENANT_ID>` is replaced with the ID of the scope you are onboarding.
 
 ##### Finalize Microsoft Azure onboarding by executing the authentication template
-Abstract
 
 Learn how to execute the authentication template file in Microsoft Azure for subscriptions, tenants, and management groups. We provide instructions both for applying the Terraform template's configuration and for deploying the Microsoft Azure Resource Manager (ARM) template.
 
@@ -3176,7 +3100,7 @@ Before you begin, ensure you have:
     
     ```
     cd ~/terraform/azure-connector-1
-    tar -xzvf <your\_template>.tar.gz.
+    tar -xzvf <your_template>.tar.gz.
     ```
     
 4.  Initialize Terraform in your project directory:
@@ -3188,7 +3112,7 @@ Before you begin, ensure you have:
 5.  Apply your Terraform configuration using the downloaded parameter file:
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
     -   When the CLI prompts you for a Group ID, enter the management group ID or the root tenant ID where you want to create Cortex Cloud resources.
@@ -3290,7 +3214,6 @@ See also
 -   Introduction to Terraform for Cloud service provider (CSP) onboardingIntroduction to Terraform for Cloud service provider (CSP) onboarding
 
 ##### Configure Azure integration instances and monitor integration instance health
-Abstract
 
 Enable automations from Data Sources & Integrations and monitor Azure integration instance health.
 
@@ -3308,7 +3231,7 @@ You can configure a new Azure integration instance or edit an existing Azure int
     
 2.  In the Azure integration row:
     
-    -   To configure a new Azure integration instance: Click [image: three-dots.png] and then click Add New Instance or click View Details and from the New Instance drop down select the Azure cloud service provider.
+    -   To configure a new Azure integration instance: Click ⋮ and then click Add New Instance or click View Details and from the New Instance drop down select the Azure cloud service provider.
         
     -   To edit an existing Azure integration instance: Click View Details and then click the configuration pencil icon.
         
@@ -3341,7 +3264,6 @@ Monitoring Azure integration instance health ensures continuous, reliable operat
         Currently, automation permission errors or missing automation permissions do not affect the Automation health status. You can view any permission errors or missing permissions in the the Permissions health status.
 
 #### Onboard Oracle Cloud Infrastructure
-Abstract
 
 Follow the OCI onboarding wizard, and Cortex Cloud creates a custom authentication template to be applied in OCI.
 
@@ -3420,7 +3342,6 @@ Cortex Cloud generates a Terraform authentication template based on the settings
 **Next step:** Apply the Terraform authentication template in OCI.
 
 ##### Manually upload template to OCI
-Abstract
 
 Learn how to manually deploy the Terraform template files in Oracle Cloud Infrastructure (OCI).
 
@@ -3451,7 +3372,7 @@ Before you begin, ensure you have:
     
     ```
     cd ~/terraform/oci-connector-1
-    tar -xzvf <your\_template>.tar.gz.
+    tar -xzvf <your_template>.tar.gz.
     ```
     
 4.  Initialize Terraform in your project directory:
@@ -3465,7 +3386,7 @@ Before you begin, ensure you have:
 5.  Apply your Terraform configuration using the downloaded parameter file. When prompted to enter a value, enter the tenancy OCID.
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
 6.  When prompted, review the actions the Terraform will perform, and approve them by entering **`yes`**.
@@ -3476,7 +3397,6 @@ Before you begin, ensure you have:
 When the template is successfully uploaded to OCI, the initial discovery scan starts. When the scan is complete, you can view your cloud assets in Asset Inventory. You can also view details about the instance by hovering over the instance on the Data Sources & Integrations page, and then clicking View Details.
 
 ##### Configure the OCI connector for log collection
-Abstract
 
 Create an OCI service connector and define the log source within OCI and the connector's target as the OCI bucket you want to use for audit log collection.
 
@@ -3563,13 +3483,13 @@ Use the following table to guide you on which values in the output map to the ne
 
 | Connect Instance input field | Value |
 | --- | --- |
-| Organization ID | organization\_id.value |
-| Project ID | project\_id.value |
-| Folder ID | folder\_id.value |
-| Service Account Email | service\_account\_email.value |
-| Audit Logs Audit Pubsub Subscription ID | resources\_data.value.AUDIT\_LOGS.audit\_pubsub\_subscription\_id |
-| Audit Logs Service Account Email | resources\_data.value.AUDIT\_LOGS.audit\_service\_account\_email |
-| Outpost Scanner Service Account Email | resources\_data.value.OUTPOST\_SCANNER.outpost\_scanner\_service\_account\_email |
+| Organization ID | organization_id.value |
+| Project ID | project_id.value |
+| Folder ID | folder_id.value |
+| Service Account Email | service_account_email.value |
+| Audit Logs Audit Pubsub Subscription ID | resources_data.value.AUDIT_LOGS.audit_pubsub_subscription_id |
+| Audit Logs Service Account Email | resources_data.value.AUDIT_LOGS.audit_service_account_email |
+| Outpost Scanner Service Account Email | resources_data.value.OUTPOST_SCANNER.outpost_scanner_service_account_email |
 
 Azure with Terraform
 
@@ -3595,12 +3515,12 @@ Use the following table to guide you on which values in the output map to the ne
 | Resource Group Location (only for subscription scope) | Onboarded resource group location |
 | Resource Group Name | Automatically populated |
 | Audit Logs Audience | Automatically populated |
-| Audit Logs Storage Account Name | resources\_data.value.AUDIT\_LOGS.storage\_account\_name |
+| Audit Logs Storage Account Name | resources_data.value.AUDIT_LOGS.storage_account_name |
 | Audit Logs Tenant ID | Automatically populated |
-| Audit Logs Client ID | resources\_data.value.AUDIT\_LOGS.client\_id |
-| Audit Logs Namespace | resources\_data.value.AUDIT\_LOGS.namespace |
-| Audit Logs Eventhub Name | resources\_data.value.AUDIT\_LOGS.eventhub\_name |
-| Audit Logs Azure Audit Eventhub Consumer Group Name | resources\_data.value.AUDIT\_LOGS.azure\_audit\_eventhub\_consumer\_group\_name |
+| Audit Logs Client ID | resources_data.value.AUDIT_LOGS.client_id |
+| Audit Logs Namespace | resources_data.value.AUDIT_LOGS.namespace |
+| Audit Logs Eventhub Name | resources_data.value.AUDIT_LOGS.eventhub_name |
+| Audit Logs Azure Audit Eventhub Consumer Group Name | resources_data.value.AUDIT_LOGS.azure_audit_eventhub_consumer_group_name |
 
 Azure Portal
 
@@ -3661,7 +3581,7 @@ After you have downloaded the updated CloudFormation authentication template, co
     
 7.  Select to acknowledge that AWS CloudFormation might create IAM resources with custom names. Click Next.
     
-8.  Click Submit. The stack update is complete when it appears in the Stacks list with status of UPDATE\_COMPLETE.
+8.  Click Submit. The stack update is complete when it appears in the Stacks list with status of UPDATE_COMPLETE.
     
 
 Google Cloud Platform
@@ -3680,7 +3600,7 @@ After you have downloaded the updated Terraform template file, connect to Google
     
     ```
     cd ~/terraform/gcp-connector-1
-    tar -xzvf <your\_template>.tar.gz
+    tar -xzvf <your_template>.tar.gz
     ```
     
 4.  Initialize the upgrade of the Terraform in your project directory:
@@ -3692,7 +3612,7 @@ After you have downloaded the updated Terraform template file, connect to Google
 5.  Apply your Terraform configuration using the downloaded parameter file. When prompted, enter the project ID if you configured one in the onboarding wizard:
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
     The updated Terraform template is deployed.
@@ -3708,7 +3628,7 @@ After you have downloaded the updated authentication template file, lot in to Az
     
     ```
     cd ~/azure-connector-1
-    tar -xzvf <your\_template>.tar.gz.
+    tar -xzvf <your_template>.tar.gz.
     ```
     
 3.  In Cloud Shell, run the onboard.sh file:
@@ -3738,7 +3658,7 @@ After you have downloaded the updated authentication template file, use the same
     
     ```
     cd ~/terraform/azure-connector-1
-    tar -xzvf <your\_template>.tar.gz.
+    tar -xzvf <your_template>.tar.gz.
     ```
     
 4.  Initialize the upgrade of the Terraform in your project directory:
@@ -3750,7 +3670,7 @@ After you have downloaded the updated authentication template file, use the same
 5.  Apply your Terraform configuration using the downloaded parameter file. :
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
     The updated Terraform template is deployed.
@@ -3769,7 +3689,7 @@ After you have downloaded the updated authentication template file, use the same
 3.  Deploy the updated template file:
     
     ```
-    az deployment sub create  --location <LOCATION>  --subscription <SUBSCRIPTION\_ID> --template-file <JSON\_TEMPLATE> 
+    az deployment sub create  --location <LOCATION>  --subscription <SUBSCRIPTION_ID> --template-file <JSON_TEMPLATE> 
     ```
     
     where:
@@ -3784,7 +3704,6 @@ After you have downloaded the updated authentication template file, use the same
     The updated template is deployed.
 
 #### Outposts
-Abstract
 
 An outpost enables you to have security scans performed on infrastructure in a cloud account owned by you.
 
@@ -3805,7 +3724,6 @@ Outpost scan is an alternative to the recommended standard cloud scan. Cloud sca
 -   Create your outpost
 
 ##### Outpost fundamentals and planning
-Abstract
 
 An outpost enables you to have security scans performed on infrastructure in a cloud account owned by you. Learn about outpost fundamentals and what to consider when planning your outpost.
 
@@ -3884,7 +3802,6 @@ For details, see Create an outpost.
 -   View and manage existing outposts by navigating to Settings → Data Sources & Integrations → Outposts
 
 ##### Create an outpost
-Abstract
 
 Create an outpost for security scanning performed on infrastructure in a cloud account owned by you.
 
@@ -4012,7 +3929,7 @@ Before you begin, ensure you have:
     
     ```
     cd ~/terraform/aws-outpost-1
-    tar -xzvf <your\_template>.tar.gz
+    tar -xzvf <your_template>.tar.gz
     ```
     
 5.  Initialize Terraform in your project directory:
@@ -4024,7 +3941,7 @@ Before you begin, ensure you have:
 6.  Apply your Terraform configuration using the downloaded parameter file. When prompted, enter the subscription ID:
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
 7.  When prompted, review the actions Terraform will perform and approve them by entering **`yes`**.
@@ -4065,7 +3982,7 @@ Before you begin, ensure you have:
     
     ```
     cd ~/terraform/gcp-outpost-1
-    tar -xzvf <your\_template>.tar.gz
+    tar -xzvf <your_template>.tar.gz
     ```
     
 5.  Initialize Terraform in your project directory:
@@ -4077,7 +3994,7 @@ Before you begin, ensure you have:
 6.  Apply your Terraform configuration using the downloaded parameter file. When prompted, enter the project ID:
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
 7.  When prompted, review the actions Terraform will perform and approve them by entering **`yes`**.
@@ -4110,7 +4027,7 @@ Before you begin, ensure you have:
     az login
     ```
     
-3.  If prompted, select the subscription\_id of the designated subscription, or run:
+3.  If prompted, select the subscription_id of the designated subscription, or run:
     
     az account set --subscription `<subscription_id>`
     
@@ -4126,7 +4043,7 @@ Before you begin, ensure you have:
     
     ```
     cd ~/terraform/azure-outpost-1
-    tar -xzvf <your\_template>.tar.gz
+    tar -xzvf <your_template>.tar.gz
     ```
     
 6.  Initialize Terraform in your project directory:
@@ -4138,7 +4055,7 @@ Before you begin, ensure you have:
 7.  Apply your Terraform configuration using the downloaded parameter file. When prompted, enter the subscription ID:
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
 8.  When prompted for `var.storaage_account_ip_whitelist`, you can leave it empty to enable access from any public IP to the storage accounts. We recommend you to limit access to selected IPs. To limit access, enter a comma-separated list of public IP addresses, including your local machine's egress IP (to enable the completion of the Terraform run). For example: `8.8.8.8, 8.8.4.4`
@@ -4173,7 +4090,6 @@ Troubleshooting
 If you have successfully executed the template in your cloud service provider and no new outpost has been created, verify that your internet connection is active. An active internet connection is necessary for the notification to be sent to Cortex Cloud to create the new outpost. If you are unable to establish an internet connection, contact customer support for a manual workaround.
 
 #### Introduction to Terraform for Cloud service provider (CSP) onboarding
-Abstract
 
 Introductory concepts for working with Terraform to facilitate cloud onboarding.
 
@@ -4401,7 +4317,7 @@ To configure registry scanning, do the following:
 
 1.  Under Additional Security Capabilities, select Registry Scanning, then click Edit Preferences.
     
-    [image: enable-container-registry-scanning.png]
+    
     
 2.  In Initial Scan Configuration, set your scanning process to focus on recently added or modified container images and exclude older ones that do not align with your current scanning objectives. This setting helps avoid unnecessary scans. Choose one of the following options:
     
@@ -4639,8 +4555,6 @@ Follow the wizard to connect your Docker Hub registry with Cortex Cloud.
     After the scan is complete, you can view the scanned images on the Container Images Inventory page. For more details, see Container Image assets.
     
     If you have selected the Scan with Broker VM option, then a Registry Scanner applet is created on the selected Broker VM or Cluster. For details, see Verify Registry Scanner connection.
-    
-    [image: registry-scanner-applet-on-boker-vm.png]
 
 ###### Manage a Docker Hub connector
 After you add a Docker Hub connector, you can modify the connector settings and configure the scanning scope to control which images are scanned in the connected registry.
@@ -4830,8 +4744,6 @@ Follow the wizard to use the Docker V2 connector in Cortex Cloud to scan and sec
     After the scan is complete, you can view the scanned images on the Container Images Inventory page. For more details, see Container Images assets.
     
     If you have selected the Scan with Broker VM option, then a Registry Scanner applet is created on the selected Broker VM or Cluster. For details, see Verify Registry Scanner connection.
-    
-    [image: registry-scanner-applet-on-boker-vm.png]
 
 ###### Manage a Docker V2 connector
 After you add a Docker V2 connector, you can modify the connector settings and configure the scanning scope to control which images are scanned in the connected registry.
@@ -5111,8 +5023,6 @@ Follow the wizard to connect the GitLab Container Registry connector in Cortex C
     -   After the scan is complete, you can view the list of scanned images on the Container Images Inventory page. For more details, see Container Image assets.
         
     -   If you have selected the Scan with Broker VM option, then a Registry Scanner applet is created on the selected Broker VM or Cluster. For details, see Verify Registry Scanner connection.
-        
-        [image: registry-scanner-applet-on-boker-vm.png]
 
 ###### Manage a Gitlab Container Registry connector
 After you add a Gitlab Container Registry connector, you can modify the connector settings and configure the scanning scope to control which images are scanned in the connected registry.
@@ -5328,8 +5238,6 @@ Follow the wizard to use the Harbor connector in Cortex Cloud to scan and secure
     After the scan is complete, you can view the scanned details on the Container Images Inventory page. For more details, see Container Images assets.
     
     If you have selected the Scan with Broker VM option, then a Registry Scanner applet is created on the selected Broker VM or Cluster. For details, see Verify Registry Scanner connection.
-    
-    [image: registry-scanner-applet-on-boker-vm.png]
 
 ###### Manage a Harbor connector
 After successfully adding a connector, you can modify the connector settings and configure the scanning scope to control which images are scanned in the connected registry.
@@ -5552,8 +5460,6 @@ Follow the wizard to connect your JFrog Container Registry with Cortex Cloud.
     -   After the scan is complete, you can view the list of scanned images on the Container Images Inventory page. For more details, see Container Image assets.
         
     -   If you have selected the Scan with Broker VM option, then a Registry Scanner applet is created on the selected Broker VM or Cluster. For details, see Verify Registry Scanner connection.
-        
-        [image: registry-scanner-applet-on-boker-vm.png]
 
 ###### Manage a JFrog connector
 After you add a JFrog connector, you can modify the connector settings and configure the scanning scope to control which images are scanned in the connected registry.
@@ -5775,8 +5681,6 @@ Follow the wizard to use the Sonatype Nexus registry connector in Cortex Cloud.
     -   After the scan is complete, you can view the list of scanned images on the Container Images Inventory page. For more details, see Container Images assets.
         
     -   If you have selected the Scan with Broker VM option, then a Registry Scanner applet is created on the selected Broker VM or Cluster. For details, see Verify Registry Scanner connection.
-        
-        [image: registry-scanner-applet-on-boker-vm.png]
 
 ###### Manage a Sonatype connector
 After you add a Sonatype connector, you can modify the connector settings and configure the scanning scope to control which images are scanned in the connected registry.
@@ -5801,7 +5705,6 @@ To manage the connector, follow these steps:
     | Disable | Stops image scanning for the connector without deleting it. |
 
 #### Cloud service provider permissions
-Abstract
 
 Grant the correct cloud service provider permissions for Cortex Cloud.
 
@@ -5818,7 +5721,6 @@ Review the permissions required for each cloud service provider:
 -   Oracle Cloud Infrastructure
 
 ##### Amazon Web Services provider permissions
-Abstract
 
 List of Amazon Web Services provider permissions for Cortex Cloud.
 
@@ -5845,15 +5747,15 @@ Agentless Disk Scanning
 
 | Permission | Scope | Purpose |
 | --- | --- | --- |
-| ec2:CopyImage | Images created with managed\_by: `paloaltonetworks` tag | Create disk from Image |
-| ec2:CopySnapshot | Snapshots copied with managed\_by: `paloaltonetworks` tag | Re-encrypt snapshot with Palo Alto Network's KMS key |
-| ec2:CreateSnapshot | Snapshots created with managed\_by: `paloaltonetworks` tag | Create disk snapshot |
+| ec2:CopyImage | Images created with managed_by: `paloaltonetworks` tag | Create disk from Image |
+| ec2:CopySnapshot | Snapshots copied with managed_by: `paloaltonetworks` tag | Re-encrypt snapshot with Palo Alto Network's KMS key |
+| ec2:CreateSnapshot | Snapshots created with managed_by: `paloaltonetworks` tag | Create disk snapshot |
 | ec2:CreateTags | Only as part of CopyImage, CreateSnapshot and CopySnapshot operations | Add tags for permission scoping and cost visibility |
-| ec2:DeleteSnapshot | Snapshots with managed\_by: `paloaltonetworks` tag | Delete scanned snapshot |
-| ec2:DeregisterImage | Images with managed\_by: `paloaltonetworks` tag | Delete ephemeral re-encrypted image |
-| ec2:DescribeImages | Images with managed\_by: `paloaltonetworks` tag | Retrieve image creation status |
-| ec2:DescribeSnapshots | Snapshots with managed\_by: `paloaltonetworks` tag | Retrieve snapshot creation status |
-| ec2:ModifySnapshotAttribute | Snapshots with managed\_by: `paloaltonetworks` tag; The snapshots can be shared only with the outpost account | Share snapshot with the outpost account |
+| ec2:DeleteSnapshot | Snapshots with managed_by: `paloaltonetworks` tag | Delete scanned snapshot |
+| ec2:DeregisterImage | Images with managed_by: `paloaltonetworks` tag | Delete ephemeral re-encrypted image |
+| ec2:DescribeImages | Images with managed_by: `paloaltonetworks` tag | Retrieve image creation status |
+| ec2:DescribeSnapshots | Snapshots with managed_by: `paloaltonetworks` tag | Retrieve snapshot creation status |
+| ec2:ModifySnapshotAttribute | Snapshots with managed_by: `paloaltonetworks` tag; The snapshots can be shared only with the outpost account | Share snapshot with the outpost account |
 | kms:CreateGrant | Palo Alto Network's and customer KMS keys; Only EC2 services can use this permission | Create a new grant for a customer master key (CMK), such as to allow the re-encrypt operation |
 | kms:DescribeKey | Palo Alto Network's KMS key; Only EC2 services can use this permission | Retrieve detailed information about a customer master key (CMK), such as to allow and support a re-encrypt operation |
 | kms:GenerateDataKeyWithoutPlaintext | Palo Alto Network's KMS key; Only EC2 services can use this permission | Generate a data key for client-side encryption, such as to allow and support a re-encrypt operation |
@@ -6068,8 +5970,8 @@ Outposts
 | ec2:AssociateAddress | Resources with the request tag: `managed_by: paloaltonetworks` | Associate a static public IP address with a network interface for use with a proxy VM |
 | ec2:AttachVolume | Volumes in the specified AWS account with the `managed_by: paloaltonetworks` | Attach volume to scanner VM during deployment |
 | ec2:CreateNetworkInterface | Any region in the specified AWS account with the tag `managed_by: paloaltonetworks`; applies to network interfaces, subnets, and security groups. | Create a network interface for a scanner or proxy VM within managed subnets and security groups |
-| ec2:CreateTags | Resources with the request tag: managed\_by: `paloaltonetworks` tag | For adding tags to all resources |
-| ec2:CreateVolume | Volumes with the request tag: managed\_by: `paloaltonetworks` tag | Perform the create volume operation in EC2 |
+| ec2:CreateTags | Resources with the request tag: managed_by: `paloaltonetworks` tag | For adding tags to all resources |
+| ec2:CreateVolume | Volumes with the request tag: managed_by: `paloaltonetworks` tag | Perform the create volume operation in EC2 |
 | ec2:CreateVpcEndpoint | The VPC endpoint being created must: Have the request tag: `managed_by: paloaltonetworks`; Only reference Palo Alto Networks-managed network components (VPCs, security groups, subnets, and route tables, and so on, with the request tag: `managed_by: paloaltonetworks`); Connect to an approved VpceServiceName service as defined by policy | Create endpoints that are used by scanners to access managed services using private IP addresses |
 | ec2:DeleteNetworkInterface | Network interfaces with the request resource tag: `managed_by: paloaltonetworks` | Perform the delete network interface operation in EC2 |
 | ec2:DeleteVolume | Volumes in the specified account with the request tag: `managed_by: paloaltonetworks` | Perform the delete volume operation in EC2 |
@@ -6129,7 +6031,7 @@ Outposts
 | s3:PutBucketPolicy | S3 buckets that users own and whose name begins with the prefix: `${bucket_name}-` | Apply or update a resource-based access policy in an Amazon S3 bucket |
 | s3:PutObject | Users can Upload files to the specific `${cf_template_bucket}` without restriction.; Upload files to any S3 bucket users own that begins with the prefix: `${bucket_name}-` This upload permission applies broadly to the general contents of these prefixed buckets, including files placed specifically in the `input/`, `output/`, and `output/logs/` subfolders | Upload or replace an object in an Amazon S3 bucket |
 | sqs:DeleteMessage | Messages from any SQS queue that is already tagged with `managed_by: paloaltonetworks` and whose name begins with the prefix: `${queue_prefix}-` | For bucket communications |
-| sqs:GetQueueUrl | URL for any SQS queue that is already tagged with managed\_by: paloaltonetworks and whose name begins with the prefix: `${queue_prefix}-` | For bucket communications |
+| sqs:GetQueueUrl | URL for any SQS queue that is already tagged with managed_by: paloaltonetworks and whose name begins with the prefix: `${queue_prefix}-` | For bucket communications |
 | sqs:ListQueues | URL for any SQS queue that is already tagged with `managed_by: paloaltonetworks` and whose name begins with the prefix: `${queue_prefix}-` | For bucket communications |
 | sqs:ReceiveMessage | Messages from any SQS queue that is already tagged with `managed_by: paloaltonetworks` and whose name begins with the prefix: `${queue_prefix}-` | For bucket communications |
 | ssm:AddTagsToResource | SSM Parameter named cortex-outposts-..., but only if the tagging request itself includes the `managed_by:` `paloaltonetworks` tag | Perform the add tags to resource operation in SSM. |
@@ -6139,7 +6041,6 @@ Outposts
 | sts:AssumeRole | Resource belongs to a different AWS account than the current account | Provide temporary security credentials by assuming the specified IAM role through STS |
 
 ##### Google Cloud Platform provider permissions
-Abstract
 
 List of Google Cloud Platform provider permissions for Cortex Cloud.
 
@@ -6398,7 +6299,6 @@ Outposts
 | cloudkms.keyRings.create | Create a new key ring to hold cryptographic keys, used for Bigtable encryption. Used from ST. |
 
 ##### Microsoft Azure provider permissions
-Abstract
 
 List of Microsoft Azure provider permissions for Cortex Cloud.
 
@@ -7003,7 +6903,6 @@ Automations
 | Microsoft.Web/sites/write | Subscription | Set the HTTPS-only feature for the Azure App Service Web app to enforce redirection from HTTP to HTTPS. This helps remediate issues detected by the "Azure App Service Web app doesn't redirect HTTP to HTTPS" rule. Required for command: `azure-webapp-update` |
 
 ##### Oracle Cloud Infrastructure provider permissions
-Abstract
 
 List of Oracle Cloud Infrastructure provider permissions for Cortex Cloud.
 
@@ -7016,7 +6915,7 @@ ADS
 | Admit group CortexOutpostGroup of tenancy CortexOutpost to associate keys in tenancy with volumes in tenancy CortexOutpost | ADS | Volumes in tenancy | Associate encryption keys with volumes during backup/restore |
 | Admit group CortexOutpostGroup of tenancy CortexOutpost to use tag-namespaces in tenancy | ADS | In tenancy | Enable tagging for permission scoping, resource tracking, and cost visibility |
 | Admit group CortexOutpostGroup of tenancy CortexOutpost to manage boot-volume-backups in tenancy where request.operation != 'DeleteBootVolumeBackup' | ADS | Excludes delete | Allow full management of boot volume backups except deletion |
-| Admit group CortexOutpostGroup of tenancy CortexOutpost to manage boot-volume-backups in tenancy where target.resource.tag.cortex\_m-o-lcaas\_id.panw\_capability = 'cortex-scan-platform' | ADS | Only boot-volume-backups tagged with panw\_capability = cortex-scan-platform | Restrict deletion to Cortex scan-related resources only |
+| Admit group CortexOutpostGroup of tenancy CortexOutpost to manage boot-volume-backups in tenancy where target.resource.tag.cortex_m-o-lcaas_id.panw_capability = 'cortex-scan-platform' | ADS | Only boot-volume-backups tagged with panw_capability = cortex-scan-platform | Restrict deletion to Cortex scan-related resources only |
 | Admit group CortexOutpostGroup of tenancy CortexOutpost to read all-resources in tenancy | ADS | In tenancy | Read-only access to all resources |
 
 Discovery Engine
@@ -7029,9 +6928,9 @@ Table 2. Dynamic Group Permissions
 
 | Permission | Scope | Purpose |
 | --- | --- | --- |
-| Allow dynamic-group registry-scan to manage buckets in tenancy | Tag-scoped (project\_id) | Manage Object Storage buckets for scan artifacts/results |
-| Allow dynamic-group registry-scan to manage objects in tenancy | Tag-scoped (project\_id) | Upload/download image layers, manifests, and reports |
-| Allow dynamic-group registry-scan to read secret-bundles in tenancy | Tag-scoped (project\_id) | Retrieve registry credentials from OCI Vault |
+| Allow dynamic-group registry-scan to manage buckets in tenancy | Tag-scoped (project_id) | Manage Object Storage buckets for scan artifacts/results |
+| Allow dynamic-group registry-scan to manage objects in tenancy | Tag-scoped (project_id) | Upload/download image layers, manifests, and reports |
+| Allow dynamic-group registry-scan to read secret-bundles in tenancy | Tag-scoped (project_id) | Retrieve registry credentials from OCI Vault |
 | Endorse dynamic-group registry-scan to read repos in any-tenancy | Cross-tenancy | Allow cross-tenancy image pulls for scans |
 
   
@@ -7040,19 +6939,18 @@ Table 3. Inherited Base Permissions for Registry scanning
 
 | Permission | Scope | Purpose |
 | --- | --- | --- |
-| Allow any-user to manage buckets in tenancy | Tag-scoped (project\_id) | Create/manage buckets for scan data |
-| Allow any-user to manage objects in tenancy | Tag-scoped (project\_id) | Read/write objects (artifacts, logs, results) |
-| Allow any-user to use keys in tenancy | Tag-scoped (project\_id) | Decrypt secrets for registry access |
-| Allow any-user to manage secret-versions in tenancy | Tag-scoped (project\_id) | Rotate credentials and manage secret versions |
-| Allow any-user to manage secrets in tenancy | Tag-scoped (project\_id) | Create/update secrets for scanners |
-| Allow any-user to manage secret-family in tenancy | Tag-scoped (project\_id) | Broader secret-management rights |
-| Allow any-user to manage vaults in tenancy | Tag-scoped (project\_id) | Create/administer Vaults for key and secret storage |
+| Allow any-user to manage buckets in tenancy | Tag-scoped (project_id) | Create/manage buckets for scan data |
+| Allow any-user to manage objects in tenancy | Tag-scoped (project_id) | Read/write objects (artifacts, logs, results) |
+| Allow any-user to use keys in tenancy | Tag-scoped (project_id) | Decrypt secrets for registry access |
+| Allow any-user to manage secret-versions in tenancy | Tag-scoped (project_id) | Rotate credentials and manage secret versions |
+| Allow any-user to manage secrets in tenancy | Tag-scoped (project_id) | Create/update secrets for scanners |
+| Allow any-user to manage secret-family in tenancy | Tag-scoped (project_id) | Broader secret-management rights |
+| Allow any-user to manage vaults in tenancy | Tag-scoped (project_id) | Create/administer Vaults for key and secret storage |
 | Allow any-user to inspect tag-family in tenancy | Global | Discover tag namespaces/definitions |
-| Allow any-user to use tag-family (namespace=cortex\_cloud, managed\_by=PANW) | Restricted | Restrict tag usage to Palo Alto-managed groups |
+| Allow any-user to use tag-family (namespace=cortex_cloud, managed_by=PANW) | Restricted | Restrict tag usage to Palo Alto-managed groups |
 | Endorse any-group to use tag-namespaces in any-tenancy | Cross-tenancy | Allow tag namespace usage across tenancies |
 
 ### Onboard the Kubernetes Connector
-Abstract
 
 To onboard your Kubernetes cluster, choose the capabilities that fit your needs and download the Helm chart values. Install the Helm charts in your Kubernetes environment to grant Cortex Cloud permissions to collect the data.
 
@@ -7190,16 +7088,16 @@ This table shows the Kubernetes platform versions that have been compatibility t
 | --- | --- |
 | Unmanaged Kubernetes (k8s) | 1.30 |
 | Amazon Elastic Kubernetes Service (EKS) | 1.33 |
-|  | BottleRocket OS x86\_64 User mode agent only |  |
+|  | BottleRocket OS x86_64 User mode agent only |  |
 | BottleRocket OS aarch64 User mode agent only |  |
 | Microsoft Azure Kubernetes Service (AKS) | 1.33 |
-|  | CBL-mariner 2 x86\_64 |  |
+|  | CBL-mariner 2 x86_64 |  |
 | Google Kubernetes Engine (GKE) | 1.33 |
-|  | Google Container-Optimized OS (COS)\* x86\_64 User mode agent only |  |
+|  | Google Container-Optimized OS (COS)\* x86_64 User mode agent only |  |
 | Google Kubernetes Engine (GKE) Autopilot |  |
 | Oracle Kubernetes Engine (OKE) | 1.33 |
 | Red Hat Openshift Container Platform (OCP) | 4.16 |
-|  | RHCOS\* x86\_64 User mode agent only |  |
+|  | RHCOS\* x86_64 User mode agent only |  |
 | SUSE Rancher Kubernetes Engine 2 (RKE2) | 1.28 |
 | Talos | 1.8.3 |
 
@@ -7213,7 +7111,6 @@ In RHCOS version 4.12 and earlier, the Kernel configuration may be partial for t
 Perform post-deployment tasks such as setting up your environment, creating automation rules, and managing user roles and access management.
 
 ### Set up your environment
-Abstract
 
 Learn more about setting up the Cortex Cloud environment based on your preferences.
 
@@ -7226,7 +7123,6 @@ To create a more personalized user experience, Cortex Cloud enables you to cus
 -   Log forwarding
 
 #### Configure server settings
-Abstract
 
 Configure server settings such as keyboard shortcuts, timezone, and timestamp format.
 
@@ -7248,16 +7144,12 @@ Keyboard shortcuts, timezone, and timestamp format are not set universally and o
 | Google Maps Key | Enter the Google Maps API key to display the physical location of an entity on a Google map. |
 | Scope-Based Access Control (SBAC) | Enforces granular scoping on users with a scoping configuration. A user can inherit scoping configurations from a user group, or have the scoping configuration applied directly on top of the role assigned from either a user group or a generated API Key. By default, Enable Scope Based Access Control is disabled and granular scoping is not enforced. Before enabling SBAC, we recommend that an administrator or a user with Access Management permissions first ensure that the users, user groups, and API Keys defined in Cortex Cloud are granted the required access by assigning the relevant scopes. For more information, see Manage user scope. (Optional) If enabled, you can select the Endpoint Scoping Mode, which is defined per tenant: Permissive: Enables users with at least one scope tag to access the relevant entity with that same tag.; Restrictive: Users must have all the scoped tags that are tagged within the relevant entity of the system. |
 | XQL Configuration | Enables setting case sensitivity across Cortex Cloud. By default, this setting is set to **`false`** and field values are evaluated as case insensitive. This setting overwrites any other default configuration except for BIOCs, which will remain case-insensitive no matter what this configuration is set to. |
-| Define the cases target MTTR per issue severity | 
-Determines within how many days and hours you want issues resolved according to the issue severity Critical, High, Medium, and Low. The defined MTTR is used to display the Resolved Issue MTTR dashboard widgets.
-
- |
+| Define the cases target MTTR per issue severity | Determines within how many days and hours you want issues resolved according to the issue severity Critical, High, Medium, and Low. The defined MTTR is used to display the Resolved Issue MTTR dashboard widgets. |
 | Impersonation Role | The type of role permissions granted to the Palo Alto Networks Support team when opening support tickets. We recommend that role permissions be granted only for a specific time frame, and full administrative permissions be granted only when specifically requested by the Support team. Role permissions include: Read-only: Default setting; grants read-only access to your tenant.; Support-related actions: Grants permissions to tech support file collection, dump file collection, investigation query, correlation rule, BIOC and IOC rule editing, alert starring, exclusion, and exception editing; Full role permissions: No limitations are applied; grants full permissions to all actions and content on your tenant Permission Reset Timeframe: Determines how long role permissions are valid. |
 | Case display modes | Allow users the access the Cases page in legacy mode. |
 | Caching | Improve performance on the Cases and Issues pages by enabling a temporary data cache. |
 
 #### Configure security settings
-Abstract
 
 Configure security settings such as session expiration, user login expiration, and dashboard expiration.
 
@@ -7268,21 +7160,19 @@ You can configure security settings such as how long users can be logged in Cort
 | Session Expiration | User Login Expiration | The number of hours (between 1 and 24) after which the user's login session expires. You can also choose to automatically log users out after a specified period of inactivity. |
 | Dashboard Expiration | Whether the Dashboard page expires at the same time as the user login session or after seven days. This is useful when you view a dashboard on a separate screen. For example, if you select seven days for dashboards and eight hours for login expiration, and you are currently viewing the Dashboard page, the dashboard expiration takes priority (seven days). This ensures that the Dashboard page continues to display the widgets for an extended period. |
 | Allowed Sessions | Approved Domains | The domains from which you want to allow user access (login) to Cortex Cloud. You can add or remove domains as necessary. |
-| Approved IP Ranges | The IP ranges from which you want to allow user access (login) to Cortex Cloud. You can also choose to limit API access from specific IP addresses. |
+| Approved IP Ranges | The IP ranges from which you want to allow user access (login) to Cortex Cloud. You can also choose to limit API access from specific IP addresses. |
 | User Expiration | Deactivate Inactive User | Deactivate an inactive user, and also set the user deactivation trigger period. By default, user expiration is disabled. When enabled, enter the number of days after which inactive users should be deactivated. |
 | Same-Site Cookie Policy | Strict | Configure your Cortex tenant's SameSite cookie security policy by selecting between two settings to control how users log in from external links: Strict (Recommended): Requires users to reauthenticate when clicking a link from another site, even if they are already signed in.; Lax: Offers a more seamless experience by allowing users to access the tenant directly from external links without needing to log in again. Yet, we advise against this setting for security reasons. |
 | Lax |
 | Allowed Domains | Domain Name |  |
 
 #### Data and log forwarding
-Abstract
 
 Stay informed and updated about events in your system by forwarding logs and data to an external service, such as a syslog receiver, a Slack channel, or an email account.
 
 To stay informed about important alerts and events, you can configure your notifications and specify the type of data and logs you want to forward. You can forward logs and data to an email account, a Slack channel, or a syslog receiver. In addition, cases and issues can be forwarded to third-party systems including Splunk, Amazon SQS, Amazon S3, and Webhook.
 
 ##### Forward logs and data from Cortex Cloud to external services
-Abstract
 
 Learn how to forward logs and data from Cortex Cloud to external third-party services such as email, Slack, syslog, and Splunk.
 
@@ -7298,7 +7188,6 @@ You can forward logs, cases, and issues from Cortex Cloud to an external service
 The following table shows the log types supported for each notification type:
 
 ###### Configure external applications for forwarding
-Abstract
 
 Configure external applications so you can forward data to services such as syslog servers, Slack, Splunk, Amazon SQS, Amazon S3, and Webhook.
 
@@ -7327,9 +7216,9 @@ Only a user with Account Admin or Instance Admin permissions can configure egres
 
 | Flow | Path | Example |
 | --- | --- | --- |
-| External Storage: AWS S3 | <bucket\_name> Enter the name of the AWS S3 bucket to allow access. | `my-example-bucket` |
+| External Storage: AWS S3 | <bucket_name> Enter the name of the AWS S3 bucket to allow access. | `my-example-bucket` |
 | Webhook | <host> Enter the host name of the Webhook endpoint. | `webhook.mycompany.com` |
-| External storage: AWS SQS | <queue\_name> Enter the name of the AWS SQS queue. | `my-example-queue` |
+| External storage: AWS SQS | <queue_name> Enter the name of the AWS SQS queue. | `my-example-queue` |
 | Splunk | <host> Enter the host or domain name of the Splunk instance. | `splunk.mycompany.com` |
 
 1.  In the [Cortex Gateway](https://cortex-gateway.paloaltonetworks.com/signin/), go to Permission Management → Egress Configurations → Path.
@@ -7452,7 +7341,6 @@ Task 4: Configure notification forwarding
 Configure notification forwarding to email or external services. For more information, see Configure notification forwarding.
 
 ###### Integrate a syslog receiver
-Abstract
 
 Define syslog settings and then configure notification forwarding to receive notifications about issues and reports.
 
@@ -7535,41 +7423,17 @@ The following table includes descriptions and suggested solutions for the error 
 | --- | --- | --- |
 | Host Resolving Failed | The IP address or hostname you provided doesn't exist, or can't be resolved. | Ensure you have the correct IP address or the hostname. |
 | Configured Local Address | The IP address or hostname you provided is internal and can't be used. | Ensure you have the correct IP address or the hostname. |
-| Wrong Certificate Format | The certificate you uploaded is in an unexpected format and can't be used. The certificate must be an ASCII string or a bytes-like object. | Re-create the certificate in the correct format, for example:
-```
-\-----BEGIN CERTIFICATE-----MIIDHTCCAgWgAwIBAgIQSwieRyGdh6BNRQyp406bnTANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDExZTVVJTLUNoYXJsaWVBbHBoYS1Sb290MB4XDTIwMDQzMDE4MjEzNFoXDTMwMDQzMDE4MzEzNFowITEfMB0GA1UEAxMWU1VSUy1DaGFybGllQWxwaGEtUm9vdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJHH2HR/CzVzm9lOIu6rrtF9opYeIJdtgJR2Le7w4M56lFKIoziAfZD9qR0DqXpAV+42PZC8Oe4ueweD44OKTnaofbOxQvygelvHkFyAj+oz0VppzhmeUXh1Eux96QKB+Q+vSm8FbNlBL2SI8RhceYsWtZe5vBm/zDdV2alO5LJ3rEj9ycG1a7re1wSDQ67NaSrny+C/7IL5utlVspcgjslEiGM7D30uKszpq3CCeV9f7aPHCVZbbFRBxe4cbgZjGvE7Mm1OBbsypMT3z8jmSj7Kz5ui6R8mlqtll5MkIGtvmc1aypJHKrobwcs2ozEmLiVR0F1oJrl+PIZy5MXhBUcCAwEAAaNRME8wCwYDVR0PBAQDAgGGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFIJ1ZhG0dkgwF8OOB/eT4u/9yowaMBAGCSsGAQQBgjcVAQQDAgEAMA0GCSqGSIb3DQEBCwUAA4IBAQBvDQ4Epr0zxQHuyziDtlauddVsrLpckljHc+dCIhBvGMzGEj47Cb0c/eNt6tHrPThyzRxOHd9GBMX4AxLccPNuCZdWIRTgb4SYzDspGEYDK7v/N5+FvpYdWRgB4msUXhHt36ivH450XuY8Slt+qbQWNVU2+xIkMSSA3mUwnK+hz1GwO/Zc2JYOaVZUrW39EuzNePJ+O6BlgMRMRPNGzgT+xSxt316r/QnVA2sk4IXshdGGMG0VcuzBCyeuiCRP5/2QeFthas5EoXbdlB5eK3VzqLtiKyua/kS/hPuKahN9mI8FZ4TNB+nd6+eRQs2nsnbVOFmmOYu5KkGnDOjTzRh4-----END CERTIFICATE-----
-```
-
- |
+| Wrong Certificate Format | The certificate you uploaded is in an unexpected format and can't be used. The certificate must be an ASCII string or a bytes-like object. | Re-create the certificate in the correct format, for example: -----BEGIN CERTIFICATE-----MIIDHTCCAgWgAwIBAgIQSwieRyGdh6BNRQyp406bnTANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDExZTVVJTLUNoYXJsaWVBbHBoYS1Sb290MB4XDTIwMDQzMDE4MjEzNFoXDTMwMDQzMDE4MzEzNFowITEfMB0GA1UEAxMWU1VSUy1DaGFybGllQWxwaGEtUm9vdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJHH2HR/CzVzm9lOIu6rrtF9opYeIJdtgJR2Le7w4M56lFKIoziAfZD9qR0DqXpAV+42PZC8Oe4ueweD44OKTnaofbOxQvygelvHkFyAj+oz0VppzhmeUXh1Eux96QKB+Q+vSm8FbNlBL2SI8RhceYsWtZe5vBm/zDdV2alO5LJ3rEj9ycG1a7re1wSDQ67NaSrny+C/7IL5utlVspcgjslEiGM7D30uKszpq3CCeV9f7aPHCVZbbFRBxe4cbgZjGvE7Mm1OBbsypMT3z8jmSj7Kz5ui6R8mlqtll5MkIGtvmc1aypJHKrobwcs2ozEmLiVR0F1oJrl+PIZy5MXhBUcCAwEAAaNRME8wCwYDVR0PBAQDAgGGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFIJ1ZhG0dkgwF8OOB/eT4u/9yowaMBAGCSsGAQQBgjcVAQQDAgEAMA0GCSqGSIb3DQEBCwUAA4IBAQBvDQ4Epr0zxQHuyziDtlauddVsrLpckljHc+dCIhBvGMzGEj47Cb0c/eNt6tHrPThyzRxOHd9GBMX4AxLccPNuCZdWIRTgb4SYzDspGEYDK7v/N5+FvpYdWRgB4msUXhHt36ivH450XuY8Slt+qbQWNVU2+xIkMSSA3mUwnK+hz1GwO/Zc2JYOaVZUrW39EuzNePJ+O6BlgMRMRPNGzgT+xSxt316r/QnVA2sk4IXshdGGMG0VcuzBCyeuiCRP5/2QeFthas5EoXbdlB5eK3VzqLtiKyua/kS/hPuKahN9mI8FZ4TNB+nd6+eRQs2nsnbVOFmmOYu5KkGnDOjTzRh4-----END CERTIFICATE----- |
 | Connection Timed Out | Cortex Cloud didn’t connect to the syslog receiver in the expected time. This could be because your firewall blocked the connection or because the configuration of the syslog server caused it to drop the connection. | Check the firewall logs and the connection using Wireshark. |
 | Connection Refused | The syslog receiver refused the connection. This could be because your firewall blocked the connection or because the configuration of the syslog server caused it to drop the connection. | Check the firewall logs and the connection using Wireshark. |
 | Connection Reset | The connection was reset by the syslog receiver. This could be because your firewall blocked the connection or because the configuration of the syslog receiver caused it to drop the connection. | Check the firewall logs and the connection using Wireshark. |
-| Certificate Verification Failed | The uploaded certificate couldn’t be verified for one of the following reasons. The certificate doesn't correspond to the certificate on the syslog receiver and cannot be validated.; The certificate doesn’t have the correct hostname.; You are using a certificate chain and didn’t merge the certificates into one certificate. | Incorrect certificate: to check that the certificate you are uploading corresponds to the server syslog certificate, use the following openssl command.
-
-```
-openssl verify -verbose -CAfile cortex\_upload\_certificate syslog\_certificate
-```
-
-If the certificate is correct, the result is `syslog_certificate: OK`.; Incorrect hostname: make sure that the hostname/ip in the certificate matches the syslog server.; Certificate chain: If you are using a list of certificates, merge the chain into one certificate. You can concatenate the certificates using the following cat command in Linux or macOS.
-
-```
-cat intermediate\_cert root\_cert > merged\_syslog.crt 
-```
-
-If the concatenated certificate doesn’t work, change the order of the root and intermediate certificates, and try again. To verify that the chain certificate was saved correctly, use the following OpenSSL command.
-
-```
-openssl verify -verbose -CAfile cortex\_upload\_certificate syslog\_certificate
-```
-
-If the certificate is correct, the result is `syslog_certificate: OK`. |
+| Certificate Verification Failed | The uploaded certificate couldn’t be verified for one of the following reasons. The certificate doesn't correspond to the certificate on the syslog receiver and cannot be validated.; The certificate doesn’t have the correct hostname.; You are using a certificate chain and didn’t merge the certificates into one certificate. | Incorrect certificate: to check that the certificate you are uploading corresponds to the server syslog certificate, use the following openssl command. openssl verify -verbose -CAfile cortex_upload_certificate syslog_certificate If the certificate is correct, the result is `syslog_certificate: OK`.; Incorrect hostname: make sure that the hostname/ip in the certificate matches the syslog server.; Certificate chain: If you are using a list of certificates, merge the chain into one certificate. You can concatenate the certificates using the following cat command in Linux or macOS. cat intermediate_cert root_cert > merged_syslog.crt If the concatenated certificate doesn’t work, change the order of the root and intermediate certificates, and try again. To verify that the chain certificate was saved correctly, use the following OpenSSL command. openssl verify -verbose -CAfile cortex_upload_certificate syslog_certificate If the certificate is correct, the result is `syslog_certificate: OK`. |
 | Connection Terminated Abruptly | The firewall or the syslog receiver dropped the connection unexpectedly. This could be because the firewall on the customer side limits the number of connections, the configuration on the syslog receiver drops the connection, or the network is unstable. | Check the firewall logs and the connection using Wireshark. |
 | Host Unreachable | The network configuration is faulty, and the connection can't reach the syslog receiver. | Check the network configuration to make sure everything is configured correctly, like a firewall or a load balancer which may be accidentally directing the connection to a dead server. |
 | SSL Error | Unknown SSL error. | To investigate the issue, contact support. |
 | Connection Unavailable | General error. | To investigate the issue, contact support. |
 
 ###### Integrate Slack for outbound notifications
-Abstract
 
 Learn how to integrate Cortex Cloud with your Slack workspace and stay updated on important alerts and events.
 
@@ -7595,7 +7459,6 @@ What to do next
 After you integrate with your Slack workspace, configure your forwarding settings. For more information see, Configure notification forwarding. To send reports to Slack, see Run or schedule reports.
 
 ###### Configure notification forwarding
-Abstract
 
 Learn how to create a forwarding configuration that specifies the log type you want to forward.
 
@@ -7703,7 +7566,6 @@ How to configure notifications
 9.  Review the forwarding configuration and click Create.
 
 ###### Monitor administrative activity
-Abstract
 
 View all Cortex Cloud administrator-initiated actions taken on issues, cases, and live terminal sessions.
 
@@ -7726,7 +7588,6 @@ The following table describes the default **and optional fields** that you can v
 | User Name | The user who performed the action. |
 
 ##### Data and log notification formats
-Abstract
 
 Cortex Cloud provides you with different formats for its log notifications.
 
@@ -7737,7 +7598,6 @@ When Cortex Cloud cases, issues, and logs are forwarded to email or a third-part
 Issues can be forwarded to email, syslog servers, and Slack in the alert format, if you prefer. The alert format can be selected when you configure your forwarding notification.
 
 ###### Management audit log messages
-Abstract
 
 View the types of Cortex Cloud management audit log messages that are sent.
 
@@ -7961,7 +7821,6 @@ List of log types
 -   XSOAR Migration
 
 ###### Issue notification format
-Abstract
 
 Learn about the formats used to forward issues to third-party services.
 
@@ -7991,8 +7850,7 @@ Example 3.  
 
 Single-issue email message
 
-```
-Email Subject: Issue: <issue\_name>
+Email Subject: Issue: <issue_name>
 	Email Body:
 	    Issue Name: Suspicious Process Creation
 	    Severity: High
@@ -8005,7 +7863,6 @@ Email Subject: Issue: <issue\_name>
 	    Starred: Yes 
 	    Issue: <link to the tenant issue view>
 	    Case: <link to the tenant case view>
-```
 
   
 
@@ -8013,8 +7870,7 @@ Example 4.  
 
 Grouped issue email message
 
-```
-Email Subject: Issues: <first\_highest\_severity\_issue> + x others
+Email Subject: Issues: <first_highest_severity_issue> + x others
 	Email Body:
 	   Issue Name: Suspicious Process Creation
 	   Severity: High
@@ -8039,7 +7895,6 @@ Email Subject: Issues: <first\_highest\_severity\_issue> + x others
 	   Issue: <link to the tenant case view>
 	   Notification Name: “My notification policy 2 ”
 	   Notification Description: “Starred issues with medium severity”
-```
 
   
 
@@ -8047,30 +7902,28 @@ Example 5.  
 
 Email attachment
 
-```
 {
-    "original\_issue\_json":{
+    "original_issue_json":{
         "uuid":"<UUID Value>",
         "recordType":"threat",
         "customerId":"<Customer ID>",
         "severity":4,
         "...",
         
-    "is\_pcap":null,
-    "contains\_featured\_host":\[
+    "is_pcap":null,
+    "contains_featured_host":[
         "NO"
-    \],
-    "contains\_featured\_user":\[
+    ],
+    "contains_featured_user":[
         "YES"
-    \],
-    "contains\_featured\_ip":\[
+    ],
+    "contains_featured_ip":[
         "YES"
-    \],
-    "events\_length":1,
-    "is\_excluded":false
+    ],
+    "events_length":1,
+    "is_excluded":false
     
 }
-```
 
   
 
@@ -8090,12 +7943,9 @@ Issue notifications forwarded to a syslog receiver are sent in a CEF format RF 5
 
 Example 6. 
 
-```
-end=timestamp shost=endpoint\_name deviceFacility=facility cat=category externalId=external\_id request=request cs1=initiated\_by\_process cs1Label=Initiated by (constant string) cs2=initiator\_commande cs2Label=Initiator CMD (constant string) cs3=signature cs3Label=Signature (constant string) cs4=cgo\_name cs4Label=CGO name (constant string) cs5=cgo\_command cs5Label=CGO CMD (constant string) cs6=cgo\_signature cs6Label=CGO Signature (constant string) dst=destination\_ip dpt=destination\_port src=source\_ip spt=source\_port fileHash=file\_hash filePath=file\_path targetprocesssignature=target\_process\_signature tenantname=tenant\_name tenantCDLid=tenant\_id CSPaccountname=account\_name initiatorSha256=initiator\_hash initiatorPath=initiator\_path osParentName=parent\_name osParentCmd=parent\_command osParentSha256=parent\_hash osParentSignature=parent\_signature osParentSigner=parent\_signer incident=incident\_id act=action suser=actor\_effective\_username
-```
+end=timestamp shost=endpoint_name deviceFacility=facility cat=category externalId=external_id request=request cs1=initiated_by_process cs1Label=Initiated by (constant string) cs2=initiator_commande cs2Label=Initiator CMD (constant string) cs3=signature cs3Label=Signature (constant string) cs4=cgo_name cs4Label=CGO name (constant string) cs5=cgo_command cs5Label=CGO CMD (constant string) cs6=cgo_signature cs6Label=CGO Signature (constant string) dst=destination_ip dpt=destination_port src=source_ip spt=source_port fileHash=file_hash filePath=file_path targetprocesssignature=target_process_signature tenantname=tenant_name tenantCDLid=tenant_id CSPaccountname=account_name initiatorSha256=initiator_hash initiatorPath=initiator_path osParentName=parent_name osParentCmd=parent_command osParentSha256=parent_hash osParentSignature=parent_signature osParentSigner=parent_signer incident=incident_id act=action suser=actor_effective_username
 
 ###### Management Audit log notification format
-Abstract
 
 An email account or a syslog receiver are the notification channels through which the Management Audit log is communicated.
 
@@ -8114,12 +7964,9 @@ Cortex Cloud forwards the Management Audit log to these external data sources:
 
 Example 8. 
 
-```
-3/18/2012:05:17.567 PM<14>1 2020-03-18T12:05:17.567590Z cortexxdr - - - CEF:0|Palo Alto Networks|Cortex XDR|Cortex XDR x.x |Management Audit Logs|REPORTING|6|suser=test end=1584533117501 externalId=5820 cs1Label=email cs1=test@paloaltonetworks.com cs2Label=subtype cs2=Slack Report cs3Label=result cs3=SUCCESS cs4Label=reason cs4=None msg=Slack report 'scheduled\_1584533112442' ID 00 to \['CUXM741BK', 'C01022YU00L', 'CV51Y1E2X', 'CRK3VASN9'\] tenantname=test tenantCDLid=11111 CSPaccountname=00000
-```
+3/18/2012:05:17.567 PM<14>1 2020-03-18T12:05:17.567590Z cortexxdr - - - CEF:0|Palo Alto Networks|Cortex XDR|Cortex XDR x.x |Management Audit Logs|REPORTING|6|suser=test end=1584533117501 externalId=5820 cs1Label=email cs1=test@paloaltonetworks.com cs2Label=subtype cs2=Slack Report cs3Label=result cs3=SUCCESS cs4Label=reason cs4=None msg=Slack report 'scheduled_1584533112442' ID 00 to ['CUXM741BK', 'C01022YU00L', 'CV51Y1E2X', 'CRK3VASN9'] tenantname=test tenantCDLid=11111 CSPaccountname=00000
 
 ###### Log format for IOC and BIOC issues
-Abstract
 
 An email account or a syslog receiver are the notification channels through which IOC and BIOC issues are communicated.
 
@@ -8130,23 +7977,23 @@ Cortex Cloud logs IOC and BIOC issues. If you configure Cortex Cloud to forward 
     Example 9. 
     
     ```
-    edrData/action\_country: 
-    edrData/action\_download: 
-    edrData/action\_external\_hostname: 
-    edrData/action\_external\_port: 
-    edrData/action\_file\_extension: pdf
-    edrData/action\_file\_md5: null
-    edrData/action\_file\_name: XORXOR2614081980.pdf
+    edrData/action_country: 
+    edrData/action_download: 
+    edrData/action_external_hostname: 
+    edrData/action_external_port: 
+    edrData/action_file_extension: pdf
+    edrData/action_file_md5: null
+    edrData/action_file_name: XORXOR2614081980.pdf
     ...
-    xdr\_sub\_type: BIOC - Credential Access
-    bioc\_category\_enum\_key: null
-    alert\_action\_status: null
-    agent\_data\_collection\_status: null
-    attempt\_counter: null
-    case\_id: null
-    global\_content\_version\_id: 
-    global\_rule\_id: 
-    is\_whitelisted: false
+    xdr_sub_type: BIOC - Credential Access
+    bioc_category_enum_key: null
+    alert_action_status: null
+    agent_data_collection_status: null
+    attempt_counter: null
+    case_id: null
+    global_content_version_id: 
+    global_rule_id: 
+    is_whitelisted: false
     ```
     
       
@@ -8156,7 +8003,7 @@ Cortex Cloud logs IOC and BIOC issues. If you configure Cortex Cloud to forward 
     Example 10. 
     
     ```
-    "/edrData/action\_country","/edrData/action\_download","/edrData/action\_external\_hostname","/edrData/action\_external\_port","/edrData/action\_file\_extension","/edrData/action\_file\_md5","/edrData/action\_file\_name","/edrData/action\_file\_path","/edrData/action\_file\_previous\_file\_extension","/edrData/action\_file\_previous\_file\_name","/edrData/action\_file\_previous\_file\_path","/edrData/action\_file\_sha256","/edrData/action\_file\_size","/edrData/action\_file\_remote\_ip","/edrData/action\_file\_remote\_port","/edrData/action\_is\_injected\_thread","/edrData/action\_local\_ip","/edrData/action\_local\_port","/edrData/action\_module\_base\_address","/edrData/action\_module\_image\_size","/edrData/action\_module\_is\_remote","/edrData/action\_module\_is\_replay","/edrData/action\_module\_path","/edrData/action\_module\_process\_causality\_id","/edrData/action\_module\_process\_image\_command\_line","/edrData/action\_module\_process\_image\_extension","/edrData/action\_module\_process\_image\_md5","/edrData/action\_module\_process\_image\_name","/edrData/action\_module\_process\_image\_path","/edrData/action\_module\_process\_image\_sha256","/edrData/action\_module\_process\_instance\_id","/edrData/action\_module\_process\_is\_causality\_root","/edrData/action\_module\_process\_os\_pid","/edrData/action\_module\_process\_signature\_product","/edrData/action\_module\_process\_signature\_status","/edrData/action\_module\_process\_signature\_vendor","/edrData/action\_network\_connection\_id","/edrData/action\_network\_creation\_time","/edrData/action\_network\_is\_ipv6","/edrData/action\_process\_causality\_id","/edrData/action\_process\_image\_command\_line","/edrData/action\_process\_image\_extension","/edrData/action\_process\_image\_md5","/edrData/action\_process\_image\_name","/edrData/action\_process\_image\_path","/edrData/action\_process\_image\_sha256","/edrData/action\_process\_instance\_id","/edrData/action\_process\_integrity\_level","/edrData/action\_process\_is\_causality\_root","/edrData/action\_process\_is\_replay","/edrData/action\_process\_is\_special","/edrData/action\_process\_os\_pid","/edrData/action\_process\_signature\_product","/edrData/action\_process\_signature\_status","/edrData/action\_process\_signature\_vendor","/edrData/action\_proxy","/edrData/action\_registry\_data","/edrData/action\_registry\_file\_path","/edrData/action\_registry\_key\_name","/edrData/action\_registry\_value\_name","/edrData/action\_registry\_value\_type","/edrData/action\_remote\_ip","/edrData/action\_remote\_port","/edrData/action\_remote\_process\_causality\_id","/edrData/action\_remote\_process\_image\_command\_line","/edrData/action\_remote\_process\_image\_extension","/edrData/action\_remote\_process\_image\_md5","/edrData/action\_remote\_process\_image\_name","/edrData/action\_remote\_process\_image\_path","/edrData/action\_remote\_process\_image\_sha256","/edrData/action\_remote\_process\_is\_causality\_root","/edrData/action\_remote\_process\_os\_pid","/edrData/action\_remote\_process\_signature\_product","/edrData/action\_remote\_process\_signature\_status","/edrData/action\_remote\_process\_signature\_vendor","/edrData/action\_remote\_process\_thread\_id","/edrData/action\_remote\_process\_thread\_start\_address","/edrData/action\_thread\_thread\_id","/edrData/action\_total\_download","/edrData/action\_total\_upload","/edrData/action\_upload","/edrData/action\_user\_status","/edrData/action\_username","/edrData/actor\_causality\_id","/edrData/actor\_effective\_user\_sid","/edrData/actor\_effective\_username","/edrData/actor\_is\_injected\_thread","/edrData/actor\_primary\_user\_sid","/edrData/actor\_primary\_username","/edrData/actor\_process\_causality\_id","/edrData/actor\_process\_command\_line","/edrData/actor\_process\_execution\_time","/edrData/actor\_process\_image\_command\_line","/edrData/actor\_process\_image\_extension","/edrData/actor\_process\_image\_md5","/edrData/actor\_process\_image\_name","/edrData/actor\_process\_image\_path","/edrData/actor\_process\_image\_sha256","/edrData/actor\_process\_instance\_id","/edrData/actor\_process\_integrity\_level","/edrData/actor\_process\_is\_special","/edrData/actor\_process\_os\_pid","/edrData/actor\_process\_signature\_product","/edrData/actor\_process\_signature\_status","/edrData/actor\_process\_signature\_vendor","/edrData/actor\_thread\_thread\_id","/edrData/agent\_content\_version","/edrData/agent\_host\_boot\_time","/edrData/agent\_hostname","/edrData/agent\_id","/edrData/agent\_ip\_addresses","/edrData/agent\_is\_vdi","/edrData/agent\_os\_sub\_type","/edrData/agent\_os\_type","/edrData/agent\_session\_start\_time","/edrData/agent\_version","/edrData/causality\_actor\_causality\_id","/edrData/causality\_actor\_effective\_user\_sid","/edrData/causality\_actor\_effective\_username","/edrData/causality\_actor\_primary\_user\_sid","/edrData/causality\_actor\_primary\_username","/edrData/causality\_actor\_process\_causality\_id","/edrData/causality\_actor\_process\_command\_line","/edrData/causality\_actor\_process\_execution\_time","/edrData/causality\_actor\_process\_image\_command\_line","/edrData/causality\_actor\_process\_image\_extension","/edrData/causality\_actor\_process\_image\_md5","/edrData/causality\_actor\_process\_image\_name","/edrData/causality\_actor\_process\_image\_path","/edrData/causality\_actor\_process\_image\_sha256","/edrData/causality\_actor\_process\_instance\_id","/edrData/causality\_actor\_process\_integrity\_level","/edrData/causality\_actor\_process\_is\_special","/edrData/causality\_actor\_process\_os\_pid","/edrData/causality\_actor\_process\_signature\_product","/edrData/causality\_actor\_process\_signature\_status","/edrData/causality\_actor\_process\_signature\_vendor","/edrData/event\_id","/edrData/event\_is\_simulated","/edrData/event\_sub\_type","/edrData/event\_timestamp","/edrData/event\_type","/edrData/event\_utc\_diff\_minutes","/edrData/event\_version","/edrData/host\_metadata\_hostname","/edrData/missing\_action\_remote\_process\_instance\_id","/facility","/generatedTime","/recordType","/recsize","/trapsId","/uuid","/xdr\_unique\_id","/meta\_internal\_id","/external\_id","/is\_visible","/is\_secdo\_event","/severity","/alert\_source","/internal\_id","/matching\_status","/local\_insert\_ts","/source\_insert\_ts","/alert\_name","/alert\_category","/alert\_description","/bioc\_indicator","/matching\_service\_rule\_id","/external\_url","/xdr\_sub\_type","/bioc\_category\_enum\_key","/alert\_action\_status","/agent\_data\_collection\_status","/attempt\_counter","/case\_id","/global\_content\_version\_id","/global\_rule\_id","/is\_whitelisted"
+    "/edrData/action_country","/edrData/action_download","/edrData/action_external_hostname","/edrData/action_external_port","/edrData/action_file_extension","/edrData/action_file_md5","/edrData/action_file_name","/edrData/action_file_path","/edrData/action_file_previous_file_extension","/edrData/action_file_previous_file_name","/edrData/action_file_previous_file_path","/edrData/action_file_sha256","/edrData/action_file_size","/edrData/action_file_remote_ip","/edrData/action_file_remote_port","/edrData/action_is_injected_thread","/edrData/action_local_ip","/edrData/action_local_port","/edrData/action_module_base_address","/edrData/action_module_image_size","/edrData/action_module_is_remote","/edrData/action_module_is_replay","/edrData/action_module_path","/edrData/action_module_process_causality_id","/edrData/action_module_process_image_command_line","/edrData/action_module_process_image_extension","/edrData/action_module_process_image_md5","/edrData/action_module_process_image_name","/edrData/action_module_process_image_path","/edrData/action_module_process_image_sha256","/edrData/action_module_process_instance_id","/edrData/action_module_process_is_causality_root","/edrData/action_module_process_os_pid","/edrData/action_module_process_signature_product","/edrData/action_module_process_signature_status","/edrData/action_module_process_signature_vendor","/edrData/action_network_connection_id","/edrData/action_network_creation_time","/edrData/action_network_is_ipv6","/edrData/action_process_causality_id","/edrData/action_process_image_command_line","/edrData/action_process_image_extension","/edrData/action_process_image_md5","/edrData/action_process_image_name","/edrData/action_process_image_path","/edrData/action_process_image_sha256","/edrData/action_process_instance_id","/edrData/action_process_integrity_level","/edrData/action_process_is_causality_root","/edrData/action_process_is_replay","/edrData/action_process_is_special","/edrData/action_process_os_pid","/edrData/action_process_signature_product","/edrData/action_process_signature_status","/edrData/action_process_signature_vendor","/edrData/action_proxy","/edrData/action_registry_data","/edrData/action_registry_file_path","/edrData/action_registry_key_name","/edrData/action_registry_value_name","/edrData/action_registry_value_type","/edrData/action_remote_ip","/edrData/action_remote_port","/edrData/action_remote_process_causality_id","/edrData/action_remote_process_image_command_line","/edrData/action_remote_process_image_extension","/edrData/action_remote_process_image_md5","/edrData/action_remote_process_image_name","/edrData/action_remote_process_image_path","/edrData/action_remote_process_image_sha256","/edrData/action_remote_process_is_causality_root","/edrData/action_remote_process_os_pid","/edrData/action_remote_process_signature_product","/edrData/action_remote_process_signature_status","/edrData/action_remote_process_signature_vendor","/edrData/action_remote_process_thread_id","/edrData/action_remote_process_thread_start_address","/edrData/action_thread_thread_id","/edrData/action_total_download","/edrData/action_total_upload","/edrData/action_upload","/edrData/action_user_status","/edrData/action_username","/edrData/actor_causality_id","/edrData/actor_effective_user_sid","/edrData/actor_effective_username","/edrData/actor_is_injected_thread","/edrData/actor_primary_user_sid","/edrData/actor_primary_username","/edrData/actor_process_causality_id","/edrData/actor_process_command_line","/edrData/actor_process_execution_time","/edrData/actor_process_image_command_line","/edrData/actor_process_image_extension","/edrData/actor_process_image_md5","/edrData/actor_process_image_name","/edrData/actor_process_image_path","/edrData/actor_process_image_sha256","/edrData/actor_process_instance_id","/edrData/actor_process_integrity_level","/edrData/actor_process_is_special","/edrData/actor_process_os_pid","/edrData/actor_process_signature_product","/edrData/actor_process_signature_status","/edrData/actor_process_signature_vendor","/edrData/actor_thread_thread_id","/edrData/agent_content_version","/edrData/agent_host_boot_time","/edrData/agent_hostname","/edrData/agent_id","/edrData/agent_ip_addresses","/edrData/agent_is_vdi","/edrData/agent_os_sub_type","/edrData/agent_os_type","/edrData/agent_session_start_time","/edrData/agent_version","/edrData/causality_actor_causality_id","/edrData/causality_actor_effective_user_sid","/edrData/causality_actor_effective_username","/edrData/causality_actor_primary_user_sid","/edrData/causality_actor_primary_username","/edrData/causality_actor_process_causality_id","/edrData/causality_actor_process_command_line","/edrData/causality_actor_process_execution_time","/edrData/causality_actor_process_image_command_line","/edrData/causality_actor_process_image_extension","/edrData/causality_actor_process_image_md5","/edrData/causality_actor_process_image_name","/edrData/causality_actor_process_image_path","/edrData/causality_actor_process_image_sha256","/edrData/causality_actor_process_instance_id","/edrData/causality_actor_process_integrity_level","/edrData/causality_actor_process_is_special","/edrData/causality_actor_process_os_pid","/edrData/causality_actor_process_signature_product","/edrData/causality_actor_process_signature_status","/edrData/causality_actor_process_signature_vendor","/edrData/event_id","/edrData/event_is_simulated","/edrData/event_sub_type","/edrData/event_timestamp","/edrData/event_type","/edrData/event_utc_diff_minutes","/edrData/event_version","/edrData/host_metadata_hostname","/edrData/missing_action_remote_process_instance_id","/facility","/generatedTime","/recordType","/recsize","/trapsId","/uuid","/xdr_unique_id","/meta_internal_id","/external_id","/is_visible","/is_secdo_event","/severity","/alert_source","/internal_id","/matching_status","/local_insert_ts","/source_insert_ts","/alert_name","/alert_category","/alert_description","/bioc_indicator","/matching_service_rule_id","/external_url","/xdr_sub_type","/bioc_category_enum_key","/alert_action_status","/agent_data_collection_status","/attempt_counter","/case_id","/global_content_version_id","/global_rule_id","/is_whitelisted"
     ```
     
       
@@ -8166,44 +8013,37 @@ Field prefixes for BIOC and IOC issue logs
 
 | Field Name | Description |
 | --- | --- |
-| /edrData/action\_file\* | Fields that begin with this prefix describe attributes of a file for which Traps reported activity. |
-| edrData/action\_module\* | Fields that begin with this prefix describe attributes of a module for which Traps reported module loading activity. |
-| edrData/action\_module\_process\* | Fields that begin with this prefix describe attributes and activity related to processes reported by Traps that load modules such as DLLs on the endpoint. |
-| edrData/action\_process\_image\* | Fields that begin with this prefix describe attributes of a process image for which Traps reported activity. |
-| edrData/action\_registry\* | Fields that begin with this prefix describe registry activity and attributes such as key name, data, and previous value for which Traps reported activity. |
-| edrData/action\_network | Fields that begin with this prefix describe network attributes for which Traps reported activity. |
-| edrData/action\_remote\_process\* | Fields that begin with this prefix describe attributes of remote processes for which Traps reported activity. |
+| /edrData/action_file\* | Fields that begin with this prefix describe attributes of a file for which Traps reported activity. |
+| edrData/action_module\* | Fields that begin with this prefix describe attributes of a module for which Traps reported module loading activity. |
+| edrData/action_module_process\* | Fields that begin with this prefix describe attributes and activity related to processes reported by Traps that load modules such as DLLs on the endpoint. |
+| edrData/action_process_image\* | Fields that begin with this prefix describe attributes of a process image for which Traps reported activity. |
+| edrData/action_registry\* | Fields that begin with this prefix describe registry activity and attributes such as key name, data, and previous value for which Traps reported activity. |
+| edrData/action_network | Fields that begin with this prefix describe network attributes for which Traps reported activity. |
+| edrData/action_remote_process\* | Fields that begin with this prefix describe attributes of remote processes for which Traps reported activity. |
 | edrData/actor\* | Fields that begin with this prefix describe attributes about the acting user that initiated the activity on the endpoint. |
 | edrData/agent\* | Fields that begin with this prefix describe attributes about the Traps agent deployed on the endpoint. |
-| edrData/causality\_actor\* | Fields that begin with this prefix describe attributes about the causality group owner. |
+| edrData/causality_actor\* | Fields that begin with this prefix describe attributes about the causality group owner. |
 
 Additional fields for BIOC and IOC issue logs
 
 | Field Name | Description |
 | --- | --- |
-| /severity | Severity assigned to the issue: SEV\_010\_INFO; SEV\_020\_LOW; SEV\_030\_MEDIUM; SEV\_040\_HIGH; SEV\_090\_UNKNOWN |
-| /alert\_source | Source of the issue: BIOC or IOC |
-| /local\_insert\_ts | Date and time when Cortex Cloud – Investigation and Response ingested the app. |
-| /source\_insert\_ts | Date and time the issue was reported by the issue source. |
-| /alert\_name | If the issue was generated by Cortex Cloud – Investigation and Response, the issue name will be the specific Cortex Cloud rule that created the issue (BIOC or IOC rule name). If from an external system, it will carry the name assigned to it by Cortex Cloud . |
-| /alert\_category | Issue category based on the issue source. BIOC issue categories:-   OTHER; PERSISTENCE; EVASION; TAMPERING; FILE\_TYPE\_OBFUSCATION; PRIVILEGE\_ESCALATION; CREDENTIAL\_ACCESS; LATERAL\_MOVEMENT; EXECUTION; COLLECTION; EXFILTRATION; INFILTRATION; DROPPER; FILE\_PRIVILEGE\_MANIPULATION; RECONNAISSANCE
-; IOC issue categories:-   HASH; IP; PATH; DOMAIN\_NAME; FILENAME; MIXED |
-| /alert\_description | Text summary of the event including the issue source, issue name, severity, and file path. For alerts generated by BIOC and IOC rules, Cortex Cloud displays detailed information about the rule. |
-| /bioc\_indicator | A JSON representation of the rule characteristics. For example:
-```
-\[{""pretty\_name"":""File"",""data\_type"":null, ""render\_type"":""entity"",""entity\_map"":null}, {""pretty\_name"":""action type"", ""data\_type"":null,""render\_type"":""attribute"", ""entity\_map"":null},{""pretty\_name"":""="", ""data\_type"":null,""render\_type"":""operator"", ""entity\_map"":null},{""pretty\_name"":""all"", ""data\_type"":null,""render\_type"":""value"", ""entity\_map"":null},{""pretty\_name"":""AND"", ""data\_type"":null,""render\_type"":""connector"", ""entity\_map"":null},{""pretty\_name"":""name"", ""data\_type"":""TEXT"", ""render\_type"":""attribute"", ""entity\_map"":""attributes""}, {""pretty\_name"":""="",""data\_type"":null, ""render\_type"":""operator"", ""entity\_map"":""attributes""}, {""pretty\_name"":""\*.pdf"",""data\_type"":null, ""render\_type"":""value"", ""entity\_map"":""attributes""}\]"
-```
-
- |
-| /bioc\_category\_enum\_key | Issue category based on the issue source. An example of a BIOC issue category is Evasion. An example of a Traps issue category is Exploit Modules. |
-| /alert\_action\_status | Action taken by the issue sensor with action status displayed in parenthesis: Detected; Detected (Download); Detected (Post Detected); Detected (Prompt Allow); Detected (Reported); Detected (Scanned); Prevented (Blocked); Prevented (Prompt Block) |
-| /case\_id | Unique identifier for the incident. |
-| /global\_content\_version\_id | Unique identifier for the content version in which a Palo Alto Networks global BIOC rule was released. |
-| /global\_rule\_id | Unique identifier for an issue generated by a Palo Alto Networks global BIOC rule. |
-| /is\_whitelisted | Boolean indicating whether the issue is excluded or not. |
+| /severity | Severity assigned to the issue: SEV_010_INFO; SEV_020_LOW; SEV_030_MEDIUM; SEV_040_HIGH; SEV_090_UNKNOWN |
+| /alert_source | Source of the issue: BIOC or IOC |
+| /local_insert_ts | Date and time when Cortex Cloud – Investigation and Response ingested the app. |
+| /source_insert_ts | Date and time the issue was reported by the issue source. |
+| /alert_name | If the issue was generated by Cortex Cloud – Investigation and Response, the issue name will be the specific Cortex Cloud rule that created the issue (BIOC or IOC rule name). If from an external system, it will carry the name assigned to it by Cortex Cloud . |
+| /alert_category | Issue category based on the issue source. BIOC issue categories:- OTHER; PERSISTENCE; EVASION; TAMPERING; FILE_TYPE_OBFUSCATION; PRIVILEGE_ESCALATION; CREDENTIAL_ACCESS; LATERAL_MOVEMENT; EXECUTION; COLLECTION; EXFILTRATION; INFILTRATION; DROPPER; FILE_PRIVILEGE_MANIPULATION; RECONNAISSANCE ; IOC issue categories:- HASH; IP; PATH; DOMAIN_NAME; FILENAME; MIXED |
+| /alert_description | Text summary of the event including the issue source, issue name, severity, and file path. For alerts generated by BIOC and IOC rules, Cortex Cloud displays detailed information about the rule. |
+| /bioc_indicator | A JSON representation of the rule characteristics. For example: [{""pretty_name"":""File"",""data_type"":null, ""render_type"":""entity"",""entity_map"":null}, {""pretty_name"":""action type"", ""data_type"":null,""render_type"":""attribute"", ""entity_map"":null},{""pretty_name"":""="", ""data_type"":null,""render_type"":""operator"", ""entity_map"":null},{""pretty_name"":""all"", ""data_type"":null,""render_type"":""value"", ""entity_map"":null},{""pretty_name"":""AND"", ""data_type"":null,""render_type"":""connector"", ""entity_map"":null},{""pretty_name"":""name"", ""data_type"":""TEXT"", ""render_type"":""attribute"", ""entity_map"":""attributes""}, {""pretty_name"":""="",""data_type"":null, ""render_type"":""operator"", ""entity_map"":""attributes""}, {""pretty_name"":""\*.pdf"",""data_type"":null, ""render_type"":""value"", ""entity_map"":""attributes""}]" |
+| /bioc_category_enum_key | Issue category based on the issue source. An example of a BIOC issue category is Evasion. An example of a Traps issue category is Exploit Modules. |
+| /alert_action_status | Action taken by the issue sensor with action status displayed in parenthesis: Detected; Detected (Download); Detected (Post Detected); Detected (Prompt Allow); Detected (Reported); Detected (Scanned); Prevented (Blocked); Prevented (Prompt Block) |
+| /case_id | Unique identifier for the incident. |
+| /global_content_version_id | Unique identifier for the content version in which a Palo Alto Networks global BIOC rule was released. |
+| /global_rule_id | Unique identifier for an issue generated by a Palo Alto Networks global BIOC rule. |
+| /is_whitelisted | Boolean indicating whether the issue is excluded or not. |
 
 ###### Analytics log format
-Abstract
 
 Learn about the syntax and different variables that are used in the analytics log format.
 
@@ -8214,7 +8054,7 @@ Cortex Cloud Analytics logs issues as analytics issue logs. If you configure Cor
     Example 11. 
     
     ```
-    sub\_type,time\_generated,id,version\_info/document\_version,version\_info/magnifier\_version,version\_info/detection\_version,alert/url,alert/category,alert/type,alert/name,alert/description/html,alert/description/text,alert/severity,alert/state,alert/is\_whitelisted,alert/ports,alert/internal\_destinations/single\_destinations,alert/internal\_destinations/ip\_ranges,alert/external\_destinations,alert/app\_id,alert/schedule/activity\_first\_seen\_at,alert/schedule/activity\_last\_seen\_at,alert/schedule/first\_detected\_at,alert/schedule/last\_detected\_at,user/user\_name,user/url,user/display\_name,user/org\_unit,device/id,device/url,device/mac,device/hostname,device/ip,device/ip\_ranges,device/owner,device/org\_unit,files
+    sub_type,time_generated,id,version_info/document_version,version_info/magnifier_version,version_info/detection_version,alert/url,alert/category,alert/type,alert/name,alert/description/html,alert/description/text,alert/severity,alert/state,alert/is_whitelisted,alert/ports,alert/internal_destinations/single_destinations,alert/internal_destinations/ip_ranges,alert/external_destinations,alert/app_id,alert/schedule/activity_first_seen_at,alert/schedule/activity_last_seen_at,alert/schedule/first_detected_at,alert/schedule/last_detected_at,user/user_name,user/url,user/display_name,user/org_unit,device/id,device/url,device/mac,device/hostname,device/ip,device/ip_ranges,device/owner,device/org_unit,files
     ```
     
       
@@ -8224,12 +8064,12 @@ Cortex Cloud Analytics logs issues as analytics issue logs. If you configure Cor
     Example 12. 
     
     ```
-    sub\_type: Update
-    time\_generated: 1547717480
+    sub_type: Update
+    time_generated: 1547717480
     id: 4
-    version\_info/document\_version: 1
-    version\_info/magnifier\_version: 1.8
-    version\_info/detection\_version: 2019.2.0rc1
+    version_info/document_version: 1
+    version_info/magnifier_version: 1.8
+    version_info/detection_version: 2019.2.0rc1
     alert/url: https:\\/\\/ddc1...
     alert/category: Recon
     alert/type: Port Scan
@@ -8242,10 +8082,10 @@ Cortex Cloud Analytics logs issues as analytics issue logs. If you configure Cor
     device/mac: 00-50-56-a5-db-b2
     device/hostname: DC1ENV3APC42
     device/ip: 10.201.102.17
-    device/ip\_ranges: "\[{""max\_ip"":""..."",""name"":""..."",""min\_ip"":""..."",""asset"":""""}\]"
+    device/ip_ranges: "[{""max_ip"":""..."",""name"":""..."",""min_ip"":""..."",""asset"":""""}]"
     device/owner: 
-    device/org\_unit: 
-    files: \[\]
+    device/org_unit: 
+    files: []
     ```
     
       
@@ -8255,12 +8095,12 @@ Fields for analytics issue logs
 
 | Field Name | Definition |
 | --- | --- |
-| sub\_type | Issue log subtype. Values are: `New:` First log record for the issue with this record `id`.; `Update:` Log record identifies an update to a previously logged issue.; `StateOnlyUpdate:` Issue state is updated. For internal use only. |
-| time\_generated | Time the log record was sent to the Cortex Cloud tenant. Value is a Unix Epoch timestamp. |
+| sub_type | Issue log subtype. Values are: `New:` First log record for the issue with this record `id`.; `Update:` Log record identifies an update to a previously logged issue.; `StateOnlyUpdate:` Issue state is updated. For internal use only. |
+| time_generated | Time the log record was sent to the Cortex Cloud tenant. Value is a Unix Epoch timestamp. |
 | id | Unique identifier for the issue. Any given issue can generate multiple log records—one when the issue is initially generated, and then additional records every time the issue status changes. This ID remains constant for all such issue records. You can obtain the current status of the issue by looking for log records with this id and the most recent `alert/schedule/last_detected_at` timestamp. |
-| version\_info/document\_version | Identifies the log schema version number used for this log record. |
-| version\_info/magnifier\_version | The version number of the Cortex Cloud – Analytics instance that wrote this log record. |
-| version\_info/detection\_version | Identifies the version of the Cortex Cloud – Analytics detection software used to generate the issue. |
+| version_info/document_version | Identifies the log schema version number used for this log record. |
+| version_info/magnifier_version | The version number of the Cortex Cloud – Analytics instance that wrote this log record. |
+| version_info/detection_version | Identifies the version of the Cortex Cloud – Analytics detection software used to generate the issue. |
 | alert/url | Provides the full URL to the issue page in the Cortex Cloud – Analytics user interface. |
 | alert/category | Identifies the issue category, which is a reflection of the anomalous network activity location in the attack life cycle. Possible categories are: `C&C:` The network activity is possibly the result of malware attempting to connect to its Command & Control server.; `Exfiltration:` A large amount of data is being transferred to an endpoint that is external to the network.; `Lateral:` The network activity is indicative of an attacker who is attempting to move from one endpoint to another on the network.; `Malware:` A file has been discovered on an endpoint that is probably malware or riskware. Malware issues can also be generated based on network activity that is indicative of automated malicious traffic generation.; `Recon:` The network activity is indicative an attacker that is exploring the network for endpoints and other resources to attack. |
 | alert/type | Identifies the categorization to which the issue belongs. For example Tunneling Process, Sandbox Detection, Malware, and so forth. |
@@ -8269,35 +8109,34 @@ Fields for analytics issue logs
 | alert/description/text | The issue textual description in plain text. |
 | alert/severity | Identifies the issue severity. These severities indicate the likelihood that the anomalous network activity is a real attack. `High:` The issue is confirmed to be a network attack.; `Medium:` The issue is suspicious enough to require additional investigation.; `Low:` The issue is unverified. Whether the issue is indicative of a network attack is unknown. |
 | alert/state | Identifies the issue state. `Open:` The issue is currently active and should be undergoing triage or investigation by the network security analysts.; `Reopened:` The issue was previously resolved or dismissed, but new network activity has caused Cortex Cloud – Analytics to reopen the issue.; `Archived:` No action was taken on the issue in the Cortex Cloud – Analytics user interface, and no further network activity has occurred that caused it to remain active.; `Resolved:` Network personnel have taken enough action to end the attack.; `Dismissed:` The anomaly has been examined and deemed to be normal, sanctioned, network activity. |
-| alert/is\_whitelisted | Indicates whether the issue is whitelisted. Whitelisting indicates that anomalous-appearing network activity is legitimate. If an issue is whitelisted, then it is not visible in the Cortex Cloud – Analytics user interface. Issues can be dismissed or archived and still have a whitelist rule. |
+| alert/is_whitelisted | Indicates whether the issue is whitelisted. Whitelisting indicates that anomalous-appearing network activity is legitimate. If an issue is whitelisted, then it is not visible in the Cortex Cloud – Analytics user interface. Issues can be dismissed or archived and still have a whitelist rule. |
 | alert/ports | List of ports accessed by the network entity during its anomalous behavior. |
-| alert/internal\_destinations/single\_destinations | Network destinations that the entity reached, or tried to reach, during the course of the network activity that caused Cortex Cloud – Analytics to generate the issue. This field contains a sequence of JSON objects, each of which contains the following fields: `ip:` The destination IP address.; `name:` The destination name (for example, a host name). |
-| alert/internal\_destinations/ip\_ranges | IP address range subnets that the entity reached, or tried to reach, during the course of the network activity that caused Cortex Cloud – Analytics to generate the issue. This field contains a sequence of JSON objects, each of which contains the following fields: `max_ip:` Last IP address in the subnet.; `min_ip:` First IP address in the subnet.; `name:` Subnet name. |
-| alert/external\_destinations | Provides a list of destinations external to the monitored network that the entity tried to reach, or actually reached, during the activity that generated this issue. This list can contain IP addresses or fully qualified domain names. |
-| alert/app\_id | The App-ID associated with this issue. |
-| alert/schedule/activity\_first\_seen\_at | Time when Cortex Cloud – Analytics first detected the network activity that caused it to generate the issue. Be aware that there is frequently a delay between this timestamp, and the time when Cortex Cloud – Analytics generates an issue (see the `alert/schedule/first_detected_at` field). |
-| alert/schedule/activity\_last\_seen\_at | Time when Cortex Cloud – Analytics last detected the network activity that caused it to generate the issue. |
-| alert/schedule/first\_detected\_at | Time when Cortex Cloud – Analytics first alerted on the network activity. |
-| alert/schedule/last\_detected\_at | Time when Cortex Cloud – Analytics last alerted on the network activity. |
-| user/user\_name | The name of the user associated with this issue. This name is obtained from Active Directory. |
+| alert/internal_destinations/single_destinations | Network destinations that the entity reached, or tried to reach, during the course of the network activity that caused Cortex Cloud – Analytics to generate the issue. This field contains a sequence of JSON objects, each of which contains the following fields: `ip:` The destination IP address.; `name:` The destination name (for example, a host name). |
+| alert/internal_destinations/ip_ranges | IP address range subnets that the entity reached, or tried to reach, during the course of the network activity that caused Cortex Cloud – Analytics to generate the issue. This field contains a sequence of JSON objects, each of which contains the following fields: `max_ip:` Last IP address in the subnet.; `min_ip:` First IP address in the subnet.; `name:` Subnet name. |
+| alert/external_destinations | Provides a list of destinations external to the monitored network that the entity tried to reach, or actually reached, during the activity that generated this issue. This list can contain IP addresses or fully qualified domain names. |
+| alert/app_id | The App-ID associated with this issue. |
+| alert/schedule/activity_first_seen_at | Time when Cortex Cloud – Analytics first detected the network activity that caused it to generate the issue. Be aware that there is frequently a delay between this timestamp, and the time when Cortex Cloud – Analytics generates an issue (see the `alert/schedule/first_detected_at` field). |
+| alert/schedule/activity_last_seen_at | Time when Cortex Cloud – Analytics last detected the network activity that caused it to generate the issue. |
+| alert/schedule/first_detected_at | Time when Cortex Cloud – Analytics first alerted on the network activity. |
+| alert/schedule/last_detected_at | Time when Cortex Cloud – Analytics last alerted on the network activity. |
+| user/user_name | The name of the user associated with this issue. This name is obtained from Active Directory. |
 | user/url | Provides the full URL to the user page in the Cortex Cloud – Analytics user interface for the user who is associated with the issue. |
-| user/display\_name | The user name as retrieved from Active Directory. This is the user name displayed within the Cortex Cloud – Analytics user interface for the user who is associated with this issue. |
-| user/org\_unit | The organizational unit of the user associated with this issue, as identified using Active Directory. |
+| user/display_name | The user name as retrieved from Active Directory. This is the user name displayed within the Cortex Cloud – Analytics user interface for the user who is associated with this issue. |
+| user/org_unit | The organizational unit of the user associated with this issue, as identified using Active Directory. |
 | device/id | A unique ID assigned by Cortex Cloud – Analytics to the device. All issues generated due to activity occurring on this endpoint will share this ID. |
 | device/url | Provides the full URL to the device page in the Cortex Cloud – Analytics user interface. |
 | device/mac | The MAC address of the network card in use on the device. |
 | device/hostname | The device host name. |
 | device/ip | The device IP address. |
-| device/ip\_ranges | Identifies the subnet or subnets that the device is on. This sequence can contain multiple inclusive subnets. Each element in this sequence is a JSON object with the following fields: `asset:` The asset name assigned to the device from within the Cortex Cloud – Analytics user interface.; `max_ip:` Last IP address in the subnet.; `min_ip:` First IP address in the subnet.; `name:` Subnet name. |
+| device/ip_ranges | Identifies the subnet or subnets that the device is on. This sequence can contain multiple inclusive subnets. Each element in this sequence is a JSON object with the following fields: `asset:` The asset name assigned to the device from within the Cortex Cloud – Analytics user interface.; `max_ip:` Last IP address in the subnet.; `min_ip:` First IP address in the subnet.; `name:` Subnet name. |
 | device/owner | The user name of the person who owns the device. |
-| device/org\_unit | The organizational unit that owns the device, as identified by Active Directory. |
+| device/org_unit | The organizational unit that owns the device, as identified by Active Directory. |
 | files | Identifies the files associated with the issue. Each element in this sequence is a JSON object with the following fields: `full_path:` The file full path (including the file name).; `md5:` The file MD5 hash. |
 
 ### Cortex MCP server
 Learn how to install, configure, and use the Cortex MCP Server with Cortex Cloud.
 
 #### Cortex MCP server overview
-Abstract
 
 The Cortex MCP server enables you to leverage Cortex's powerful capabilities directly through natural language. Use built-in tools to manage cases and issues and conduct investigations, with the flexibility to create and customize new tools to fit specific use cases and workflows.
 
@@ -8337,7 +8176,6 @@ To install, configure, and use the Cortex MCP server:
 4.  Use the Cortex MCP server
 
 ##### Install the Cortex MCP server
-Abstract
 
 Download, install, and configure the MCP server on your local machine or a container.
 
@@ -8435,7 +8273,7 @@ Poetry virtual environment
 
 `python src/main.py`
 
-When using the Poetry virtual environment, you can also start the server using the CLI command `python src/cli.py start [OPTIONS`, where \[OPTIONS\] includes the API key id, API key, the Cortex PAPI server URL, and the log level.
+When using the Poetry virtual environment, you can also start the server using the CLI command `python src/cli.py start [OPTIONS`, where [OPTIONS] includes the API key id, API key, the Cortex PAPI server URL, and the log level.
 
 ###### Use the CLI
 
@@ -8443,7 +8281,7 @@ From the CLI, you can run three commands.
 
 -   `start`: Start the Cortex MCP server. Relevant only for the Poetry virtual environment.
     
--   `update`: Any new or updated components provided by Cortex are automatically downloaded into the remote\_components folder.  During each update, the folder is fully replaced and all existing contents are recreated. Do not add custom tools to this directory, as it is managed entirely by Cortex and is overwritten at every update.
+-   `update`: Any new or updated components provided by Cortex are automatically downloaded into the remote_components folder.  During each update, the folder is fully replaced and all existing contents are recreated. Do not add custom tools to this directory, as it is managed entirely by Cortex and is overwritten at every update.
     
 -   `version`: Display the current version of the Cortex MCP Server.
     
@@ -8451,7 +8289,6 @@ From the CLI, you can run three commands.
 Additional information about the CLI is available in the README file located in the `src` directory.
 
 ##### Configure the MCP client
-Abstract
 
 Configure your local MCP client to communicate with the Cortex MCP server.
 
@@ -8475,14 +8312,14 @@ After you have downloaded and installed the Cortex MCP server, you need to confi
       "mcpServers": {
         "Cortex MCP Server": {
           "command": "python",
-          "args": \[
+          "args": [
             "/path/to/cortex-mcp/src/main.py"
-          \],
+          ],
            "env": {
-              "CORTEX\_MCP\_PAPI\_URL": "https://api.cortex.example.com",
-              "CORTEX\_MCP\_PAPI\_AUTH\_HEADER": "<your\_api\_key>", 
-              "CORTEX\_MCP\_PAPI\_AUTH\_ID": "<your\_api\_key\_id",
-              "MCP\_TRANSPORT": "stdio/streamable-http"
+              "CORTEX_MCP_PAPI_URL": "https://api.cortex.example.com",
+              "CORTEX_MCP_PAPI_AUTH_HEADER": "<your_api_key>", 
+              "CORTEX_MCP_PAPI_AUTH_ID": "<your_api_key_id",
+              "MCP_TRANSPORT": "stdio/streamable-http"
        }
         }
       }
@@ -8496,14 +8333,14 @@ After you have downloaded and installed the Cortex MCP server, you need to confi
       "mcpServers": {
         "Cortex MCP Server": {
           "command": "docker",
-          "args": \[
+          "args": [
             "run",
             "--env-file",
             "/path/to/.env",
             "-i",
             "--rm",
             "cortex-mcp"
-          \]
+          ]
         }
       }
     }
@@ -8514,7 +8351,6 @@ After you have downloaded and installed the Cortex MCP server, you need to confi
 4.  Verify the connection to the Cortex MCP server. You should see the Cortex MCP server running in the Developer settings and a hammer icon may appear in the input box, indicating the MCP tools are available.
 
 ##### Use the Cortex MCP server
-Abstract
 
 Use the MCP server to investigate and manage cases and issues from your local MCP client.
 
@@ -8522,17 +8358,17 @@ The Cortex MCP server provides built-in tools to manage cases and issues and con
 
 Built-in tools include, but are not limited to:
 
--   **get\_assets**: Fetch all assets, or a filtered subset of assets, based on criteria such as category, region or provider.
+-   **get_assets**: Fetch all assets, or a filtered subset of assets, based on criteria such as category, region or provider.
     
--   **get\_assets\_by\_id**: Fetch detailed information about the asset specified by the asset ID.
+-   **get_assets_by_id**: Fetch detailed information about the asset specified by the asset ID.
     
--   **get\_cases**: Fetch all cases, or a filtered subset of cases matching specific criteria such as domain, status, severity or specific case Id.
+-   **get_cases**: Fetch all cases, or a filtered subset of cases matching specific criteria such as domain, status, severity or specific case Id.
     
--   **get\_issues**: Fetch all issues, or a filtered subset of issues matching specific criteria such as domain, severity, detection method or specific issue ID.
+-   **get_issues**: Fetch all issues, or a filtered subset of issues matching specific criteria such as domain, severity, detection method or specific issue ID.
     
--   **get\_assessment\_results**: Fetch the results of all or filtered compliance assessments from the Cortex platform.
+-   **get_assessment_results**: Fetch the results of all or filtered compliance assessments from the Cortex platform.
     
--   **get\_filtered\_endpoints**: Fetch a filtered list of endpoints managed by the XDR agents based on their status, XDR agent status, and other filters.
+-   **get_filtered_endpoints**: Fetch a filtered list of endpoints managed by the XDR agents based on their status, XDR agent status, and other filters.
     
 
 When you run the `update` command in the Cortex MCP server, new or updated tools provided by Cortex are automatically downloaded.
@@ -8556,7 +8392,6 @@ The built-in tools retrieve information, but do not write to the tenant. You can
 -   Add a note to case 12345 saying ‘Escalated to Tier 2 for further investigation.
 
 ##### Create custom Cortex MCP server tools
-Abstract
 
 Create your own customized tools to manage cases and issues.
 
@@ -8566,7 +8401,7 @@ To view the Cortex Cloud API documentation, see [Cortex Cloud Platform APIs](htt
 
 **Note:**
 
-Any new or updated components provided by Cortex are automatically downloaded into the remote\_components folder.  During each update, the folder is fully replaced and all existing contents are recreated. Do not add custom tools to this directory, as it is managed entirely by Cortex and is overwritten at every update.
+Any new or updated components provided by Cortex are automatically downloaded into the remote_components folder.  During each update, the folder is fully replaced and all existing contents are recreated. Do not add custom tools to this directory, as it is managed entirely by Cortex and is overwritten at every update.
 
 OpenAPI
 
@@ -8594,7 +8429,6 @@ We recommend using Python for more complex MCP components that require custom lo
 4.  Test your new MCP component by adding an end-to-end test in the `tests/e2e` directory or run the MCP server and write a prompt that uses your new component.
 
 ### Manage user roles and access management
-Abstract
 
 Learn how to manage access for users, user roles, user groups, and Single Sign-On (SSO) for users on a specific Cortex Cloud tenant.
 
@@ -8661,7 +8495,6 @@ SSO with SAML 2.0 configuration activities are dependent on your organization’
 After SSO configuration is complete, when you sign in as an SSO user, the Cortex Cloud permissions granted to you after logging in, either from the group mapping or from the default role configuration, are effective throughout the entire session for the defined maximum session length. Maximum session length is defined in your Cortex Cloud Session Security Settings. This applies even if the default role configuration is updated, or the group membership settings were changed.
 
 #### Manage user roles
-Abstract
 
 Manage user roles that are assigned to Cortex Cloud users or user groups in Cortex Cloud Access Management.
 
@@ -8750,7 +8583,6 @@ You can only set dataset access permissions from a user role in Cortex Cloud Acc
 7.  Click Save.
 
 #### Manage user access
-Abstract
 
 Manage access permissions for Cortex Cloud users.
 
@@ -8959,7 +8791,6 @@ The following is a list of common fields on the Users page:
 | Groups Scope | Lists a summary of the granular scoping configured in the user groups that the user belongs to |
 
 #### Manage user scope
-Abstract
 
 Learn about Scope-Based Access Control (SBAC) and how to assign users to specific scoping areas in your organization.
 
@@ -9092,7 +8923,7 @@ Ensure that you review the points below that explain the main functional areas w
 -   Cloud Workload Policies: Users with SBAC granular scoping (in addition to the RBAC permissions required for Cloud Workload Policies) can only view Cloud Workload Policies when their access is scoped to any of the available options: All assets, No assets, or Select asset groups. When no SBAC restriction is applied, the user’s access is determined solely by their RBAC permissions. As a result, if you want users to be able to edit and modify Cloud Workload Policies, use the RBAC permissions. For more information on Cloud Workload Policies, see Cloud Workload Policies and Rules.
     
 
-###### \[Feature Change\] Visibility for cases and issues without Inventory Assets
+###### [Feature Change] Visibility for cases and issues without Inventory Assets
 
 **Important:**
 
@@ -9191,7 +9022,6 @@ Make sure to assign the required default granular scoping for users. This depend
     When you are finished, all the users in Cortex Cloud are now able to use Cortex Cloud only within the granular scoping granted according to their assigned user roles.
 
 #### Manage access to objects
-Abstract
 
 Learn more about managing access to objects in Cortex Cloud.
 
@@ -9234,13 +9064,13 @@ Sharing icons
 
 The following icons indicate the sharing status and origin of an object in management tables:
 
--   [image: unshared-query-icon.png]: A Restricted object you created that is not shared with anyone else.
+-   : A Restricted object you created that is not shared with anyone else.
     
--   [image: query-created-by-me-shared-icon.png]: An object you created that is currently shared with other users, groups, or API keys.
+-   : An object you created that is currently shared with other users, groups, or API keys.
     
--   [image: query-created-by-someone-else-shared.png]: An object created by another user that has been shared with you.
+-   : An object created by another user that has been shared with you.
     
--   [image: PANW_Query.png]: A Palo Alto Networks object provided out-of-the-box. These are Public, cannot be deleted, and ownership cannot be transferred.
+-   : A Palo Alto Networks object provided out-of-the-box. These are Public, cannot be deleted, and ownership cannot be transferred.
     
 
 How to configure access to objects?
@@ -9287,9 +9117,9 @@ Once tenant-level policies are established, configure individual roles to allow 
     
     If enabled, refine capabilities using the following checkboxes:
     
-    -   Create \[Object\]: Allows the user to create new instances; the user is automatically designated as the Owner, which grants the inherent right to edit, delete, and manage sharing for that specific object.
+    -   Create [Object]: Allows the user to create new instances; the user is automatically designated as the Owner, which grants the inherent right to edit, delete, and manage sharing for that specific object.
         
-    -   Edit Public \[Object\]: Allows the user to modify custom objects that have been set to Public General access, even if they are not the owner.
+    -   Edit Public [Object]: Allows the user to modify custom objects that have been set to Public General access, even if they are not the owner.
         
     
 
@@ -9326,7 +9156,6 @@ Granular per-object access supports various organizational security requirements
 3.  **Both SOC team and Cloud team**: Provides department isolation. Each team only accesses its own dashboards; the SOC team cannot see Cloud team objects, and vice versa.
 
 ##### Manage access to custom dashboards
-Abstract
 
 Learn more about managing access to custom dashboards in Cortex Cloud.
 
@@ -9440,13 +9269,13 @@ Sharing icons in the Dashboard Manager
 
 The following icons help you identify the security access of your custom dashboards:
 
--   [image: unshared-query-icon.png]: A Restricted custom dashboard you created that is not shared with anyone else.
+-   : A Restricted custom dashboard you created that is not shared with anyone else.
     
--   [image: query-created-by-me-shared-icon.png]: A custom dashboard you created that is currently shared with other users or user groups.
+-   : A custom dashboard you created that is currently shared with other users or user groups.
     
--   [image: query-created-by-someone-else-shared.png]: A custom dashboard created by another user that has been shared with you.
+-   : A custom dashboard created by another user that has been shared with you.
     
--   [image: PANW_Query.png]: A standard system dashboard provided by Palo Alto Networks. These are always Public and cannot be deleted or edited, and their ownership cannot be transferred. Yes, you can Duplicate a system dashboard to create a custom version that you can then modify and share.
+-   : A standard system dashboard provided by Palo Alto Networks. These are always Public and cannot be deleted or edited, and their ownership cannot be transferred. Yes, you can Duplicate a system dashboard to create a custom version that you can then modify and share.
     
 
 Change owner of a dashboard
@@ -9464,14 +9293,12 @@ Only Account Administrators and Instance Administrators have the authority to ch
 3.  Select the new owner from the list of users, and click Change.
 
 ### Configure the Cortex Agentic Assistant
-Abstract
 
 Create and manage agents and actions in the Agents Hub and configure access to the Cortex Agentic Assistant.
 
 Create and manage agents and actions in the Agents Hub, configure access to the Cortex Agentic Assistant to create an AI agent workforce.
 
 #### Agentic Assistant components and concepts
-Abstract
 
 Learn about the key components and concepts, such as agents and actions in the Cortex Agentic Assistant
 
@@ -9486,21 +9313,16 @@ The Cortex Agentic Assistant uses the following components and concepts:
 | Request | A user request from the agent with an end goal, triggering a plan. |
 
 #### Agents Hub
-Abstract
 
 Learn about personal and system agents in in the Agents Hub
 
 In Cortex Cloud, you can interact with agents in the Agentic Assistant chat to automate case and issue investigation and response. Agents create and execute plans, which are sequences of actions (such as playbooks, scripts, and commands) designed to fulfill your requests.
 
-Actions and agents are managed in the Agents Hub. To open the Agents Hub, click on the agent chat icon [image: agent-chat-icon.png] in the upper right hand corner, click the side panel icon [image: expandmenuicon.png] to expand the menu if needed, and then click the Agents Hub menu item.
-
-[image: openagentshub.png]
+Actions and agents are managed in the Agents Hub. To open the Agents Hub, click on the agent chat icon  in the upper right hand corner, click the side panel icon  to expand the menu if needed, and then click the Agents Hub menu item.
 
 **Note:**
 
 To manage agents in the Agents Hub, you must have the proper permissions. For more information, see Agentic Assistant role-based access control.
-
-[image: agentshub.png]
 
 The Agents Hub includes the following components:
 
@@ -9536,7 +9358,6 @@ In the Agents Hub, you can do the following:
 -   Start a chat with any agent, by clicking the more options icon on the agent card and clicking Start chat.
 
 ##### Manage actions
-Abstract
 
 Manage actions that can be used by agents.
 
@@ -9563,7 +9384,7 @@ Any action marked as sensitive to require user approval requires explicit user a
 
 Manage existing actions
 
-From the Actions tab of the Agents Hub, click [image: three-dots.png] for an action to edit, delete, or disable an existing custom action. System actions can only be enabled or disabled.
+From the Actions tab of the Agents Hub, click ⋮ for an action to edit, delete, or disable an existing custom action. System actions can only be enabled or disabled.
 
 Search, filter, and sort actions
 
@@ -9572,7 +9393,6 @@ You can use the dropdown filter to search all actions, custom actions, system ac
 You can sort actions by most used, creation time, or update time.
 
 ##### Register actions
-Abstract
 
 Register custom actions that can be used by agents.
 
@@ -9598,9 +9418,9 @@ How to register an action
 
 1.  Do one of the following:
     
-    -   Click the Agentic Assistant icon in the upper right hand corner and expand the side panel [image: expandmenuicon.png] to access the Agents Hub menu item. From the Actions tab of the Agents Hub, click Register new action.
+    -   Click the Agentic Assistant icon in the upper right hand corner and expand the side panel  to access the Agents Hub menu item. From the Actions tab of the Agents Hub, click Register new action.
         
-    -   Within the script creation or editing screen, click [image: three-dots.png] when viewing or editing a script and select Register as action.
+    -   Within the script creation or editing screen, click ⋮ when viewing or editing a script and select Register as action.
         
     -   Within the AI Prompts library, select a prompt and click the more options icon to Register as action.
         
@@ -9632,7 +9452,6 @@ How to register an action
 9.  Save changes.
 
 ##### Manage agents
-Abstract
 
 Edit, disable, or delete existing agents.
 
@@ -9655,9 +9474,9 @@ There are two types of agents in the Cortex Agentic Assistant:
 
 ###### Agent management
 
-You can edit, delete, disable, or enable custom agents by clicking the more options [image: three-dots.png] icon for the agent.
+You can edit, delete, disable, or enable custom agents by clicking the more options ⋮ icon for the agent.
 
-You can edit, enable, or disable system agents by clicking the more options [image: three-dots.png] for the agent. The edit option for system agents is limited to adding specific instructions for the agent such as tone, style, format, and priorities.
+You can edit, enable, or disable system agents by clicking the more options ⋮ for the agent. The edit option for system agents is limited to adding specific instructions for the agent such as tone, style, format, and priorities.
 
 You can click on an Agent to view all actions assigned to the agent. There are three possible statuses for actions assigned to an agent:
 
@@ -9679,7 +9498,6 @@ You can use the dropdown filter to search all agents, custom agents, enabled age
 You can sort agents by most used, creation time, or update time.
 
 ##### Build agents
-Abstract
 
 Build new agents.
 
@@ -9691,7 +9509,7 @@ When you build an agent, it should contain all actions that you require for your
 
 To build agents in the Agents Hub, you must have view/edit permissions. For more information, see Agentic Assistant role-based access control.
 
-1.  Click on the agent chat icon [image: agent-chat-icon.png] in the upper right hand corner, click the side panel icon [image: expandmenuicon.png] to expand the menu if needed, and then click the Agents Hub menu item.
+1.  Click on the agent chat icon  in the upper right hand corner, click the side panel icon  to expand the menu if needed, and then click the Agents Hub menu item.
     
 2.  From the Agents tab of the Agents Hub, click Create agent.
     
@@ -9725,7 +9543,6 @@ To build agents in the Agents Hub, you must have view/edit permissions. For more
 7.  Save Agent.
 
 ##### Expand agent capabilities with MCP integrations
-Abstract
 
 Learn how Agentic agents can leverage tools on third-party MCP servers.
 
@@ -9765,7 +9582,6 @@ Agents and permissions
 To use MCP tool actions, they must be added to custom agents in the Agents Hub. By default, all users with access to the custom agent can use all of the available tools. To restrict access to MCP tools, go to Settings → Configurations → Data Collection → Integration Permissions. You can restrict access for MCP integration instance commands to one or more roles. If you restrict access, only users in the permitted roles can use these actions.
 
 #### Agentic Assistant role-based access control
-Abstract
 
 Configure permissions to access Cortex Agentic Assistant features.
 
@@ -9784,7 +9600,6 @@ By default, Instance and Account admins have full view/edit permissions enabled.
 Agents are limited by the individual permissions of the user. For example, if users do not have sufficient permissions to isolate an endpoint, they cannot use an agent to isolate an endpoint.
 
 ### XQL query management
-Abstract
 
 Administrators can set controls on running XQL queries.
 
@@ -9848,7 +9663,7 @@ Administrators can set query limits that control user-generated XQL queries with
     
     To ensure optimal system performance, all queries (user-generated and otherwise) adhere to a default timeout limit of 60 minutes that is defined by Palo Alto that takes priority over the administrator defined value. Therefore, regardless of the value specified in this field, queries will be stopped after 60 minutes.
     
-    You can override the default timeout limit by including the `config max_runtime_minutes` stage in your query to increase the query timeout value, up-to the administrator defined value. For more information about this stage, see max\_runtime\_minutes.
+    You can override the default timeout limit by including the `config max_runtime_minutes` stage in your query to increase the query timeout value, up-to the administrator defined value. For more information about this stage, see max_runtime_minutes.
     
 
 How to set a query limit
@@ -9924,14 +9739,12 @@ Changes to the query visibility settings are recorded in the Management Audit Lo
 ### Customize cases and issues
 
 #### Customize cases and issues
-Abstract
 
 Customize your cases and issues for specific requirements.
 
 While cases and issues are configured to work OOTB, users with specific requirements can customize them for specific needs or scenarios.
 
 ##### Set up case scoring
-Abstract
 
 Set up case scoring and define scoring rules.
 
@@ -10042,7 +9855,6 @@ Case starring supports Scope-Based Access Control (SBAC). The following paramete
 -   If a policy was added when set to restrictive mode, and then changed to permissive (or vice versa), you will only have view permissions.
 
 ##### Create custom case statuses and resolution reasons
-Abstract
 
 You can create custom case status and resolutions that are that are tailored to your workflow.
 
@@ -10073,7 +9885,6 @@ How to create custom case statuses
 3.  Click Edit to rearrange the order of the statuses. This order is presented when you set a status or select a resolution type.
 
 ##### Create a sync profile
-Abstract
 
 You can set up inbound and outbound sync profiles to define field mapping between Cortex Cloud issues and an external application.
 
@@ -10119,8 +9930,6 @@ How to create a sync profile
     Example 14. 
     
     In this example, the sync profile specifies Inbound mapping from Jira v3 fields to Cortex fields.
-    
-    [image: Sync_profile_example.png]
 
 ### Dashboards and reports
 Dashboards consist of visualized data powered by fully customizable widgets, which enable you to analyze data from inside or outside Cortex Cloud, in different formats such as graphs, pie charts, or text. Cortex Cloud displays the predefined dashboards when you log in. You can also create custom dashboards that are based on the predefined dashboards, or built to your specifications, and you can save any of your dashboards as reports.
@@ -10144,20 +9953,16 @@ From the Dashboard & Reports menu, you can view and manage your dashboards and r
 ## Inventory management
 
 ### Asset management
-Abstract
 
 A comprehensive overview and management interface for all assets in your environment, ensuring complete visibility, control, and protection.
 
 A comprehensive overview and management interface for all assets in your environment, ensuring complete visibility, control, and protection.
 
 #### All Assets
-Abstract
 
 Learn about the All Assets page, under Asset Inventory.
 
 The All Assets page provides a centralized repository containing information about all assets within your environment, including enterprise, multi-cloud, code, and external surfaces. Dedicated asset modules allow multi-method asset coverage, such as agent, agentless, logs, from various sources. Having full visibility of assets allows for timely incident response, effective threat hunting, and attack surface reduction.
-
-[image: AssetInventory2__1_.gif]
 
 The asset card provides a unified view of an asset, consolidating attributes, enhancements, and related cases, issues, or findings. The Highlights section provides an overview of the security risks associated with the asset. When you click an asset, the asset card opens in a tab, enabling users to easily switch between multiple asset cards at the same time.
 
@@ -10377,7 +10182,6 @@ Applications
 The Applications tab identifies any embedded applications within the image, helping you assess security risks associated with the bundled software.
 
 ##### Kubernetes Cluster
-Abstract
 
 Learn about the Kubernetes Cluster feature, under the Asset Inventory page.
 
@@ -10402,7 +10206,6 @@ Select any cluster, to view all resources within it and any connected clusters. 
 Select Kubernetes Connectivity Management to manage the connector-connectivity of cluster assets, including connector versions, upgrades, statuses, and more. Here, you can check if a cluster is connected, view the status, and see the connector version. You can also update to a new connector version when one is released.
 
 ##### External Surface assets
-Abstract
 
 The External Surface inventory provides a searchable, filterable view of all your internet-facing assets.
 
@@ -10455,8 +10258,7 @@ The Services table includes the fields.
 | --- | --- |
 | Active classifications | Facts that have been inferred about each of your services by examining a response for fingerprints. Classifications cover a variety of details including: Identifying specific software and versions.; Configuration details of note.; Identifying when the services do not implement best practices like web security headers or certificate security standards. Some Classifications merely note that a fact is true or false, like Missing Cache Control Header. Other Classifications provide additional information, such as a version number for “nginx Server”. These details are viewable in the services table and on the details page for the service by clicking the name of the service in the All External Services table. |
 | Business units | A Business Unit is a designation to classify assets. Cortex Cloud tracks business units as a means to identify owning organizations of these assets. Business units become extremely important when an organization has subsidiaries and groups established through M&A activities. |
-| Discovery type | Services are identified with one of the following two discovery types, depending on the level of confidence Cortex Cloud has in attributing it to your organization. Directly Discovered: services that are definitively associated with an asset that belongs to your organization. Examples include:-   It is hosted on one of your on-prem IP ranges.; The service advertises one of your organization's certificates.; It is on a managed cloud resource that is known to be yours.
-; Colocated with your Services: the service is running on the same IP as a different directly-discovered service. In a multi-tenant hosting environment, these co-located services may belong to other organizations but can sometimes pose adjacency risks to your services hosted on that IP. If your organization has “single-tenant environment only” policies with 3rd party hosting providers, you can use this functionality to identify possible violations of that policy. |
+| Discovery type | Services are identified with one of the following two discovery types, depending on the level of confidence Cortex Cloud has in attributing it to your organization. Directly Discovered: services that are definitively associated with an asset that belongs to your organization. Examples include:- It is hosted on one of your on-prem IP ranges.; The service advertises one of your organization's certificates.; It is on a managed cloud resource that is known to be yours. ; Colocated with your Services: the service is running on the same IP as a different directly-discovered service. In a multi-tenant hosting environment, these co-located services may belong to other organizations but can sometimes pose adjacency risks to your services hosted on that IP. If your organization has “single-tenant environment only” policies with 3rd party hosting providers, you can use this functionality to identify possible violations of that policy. |
 | Domain | The most recent domain on which the service is running. |
 | Externally detected providers | The provider of the asset is determined by an external assessment. |
 | Externally inferred CVEs | Externally Inferred CVEs are identified by comparing the product name and version of active service, if identifiable, with CVES for those products in the National Vulnerability Database. Additional investigation may be required to confirm if the CVE is present. Click on the service to view the service details, which include the complete list of all the externally inferred CVEs. |
@@ -10573,7 +10375,6 @@ The Vulnerabilities tab provides inventories for Findings and Packages, enabling
 For details of all serverless function issues generated by Cortex Cloud from vulnerability findings, refer to Serverless function usage.
 
 #### Network configuration
-Abstract
 
 Cortex Cloud Network Configuration provides a representation of your network assets by collecting and analyzing your network resources.
 
@@ -10603,7 +10404,6 @@ With the data aggregated by Cortex Cloud Network Configuration, you can locate a
 -   Monitor network data communications both within and outside your network.
 
 ##### Configure your network parameters
-Abstract
 
 Define the IP address ranges and domain names used by Cortex Cloud to identify your network assets.
 
@@ -10645,7 +10445,7 @@ Internal IP address ranges and domain names must be defined in order to track an
     
 2.  In the Internal Domain Suffixes section, +Add the domain suffix you want to include as part of your internal network. For example, **`acme.com`**.
     
-3.  Select [image: network-mapper-enter.png] to add to the Domains List.
+3.  Select  to add to the Domains List.
     
 
 ###### IP address ranges fields
@@ -10661,7 +10461,6 @@ Internal IP address ranges and domain names must be defined in order to track an
 | Modification Time | The timestamp shows when this range was last changed. |
 
 #### Asset Groups
-Abstract
 
 Learn about the Asset Groups feature, under the Asset Inventory.
 
@@ -10695,7 +10494,6 @@ Once your Asset Group has been defined, you can use it in specific areas of the 
 When you create or edit an Asset Group, the changes are applied immediately to new assets and to existing assets that have been updated. However, it may take a few hours for the changes to appear on existing assets that have not been updated.
 
 #### Vulnerability Assessment
-Abstract
 
 Perform a vulnerability assessment of all endpoints in your network using Cortex Cloud. This includes CVE, endpoint, and application analysis.
 
@@ -10712,8 +10510,7 @@ The following are prerequisites for Cortex Cloud to perform a vulnerability asse
 | Requirement | Description |
 | --- | --- |
 | Licenses and Add-ons |  |
-| Supported Platforms | **Windows**-   Cortex XDR agent 8.3 or a later release.; Cortex Cloud collects all the information about the operating system and the installed applications, and calculates CVE.; CVEs that apply to applications that are installed by one user aren't detected when another user without the application installed is logged in during the scan.
-; **MacOS**-   Cortex XDR agent 8.3 or a later release.; Cortex Cloud collects all the information about the operating system and the installed applications, and calculates CVE. |
+| Supported Platforms | **Windows**- Cortex XDR agent 8.3 or a later release.; Cortex Cloud collects all the information about the operating system and the installed applications, and calculates CVE.; CVEs that apply to applications that are installed by one user aren't detected when another user without the application installed is logged in during the scan. ; **MacOS**- Cortex XDR agent 8.3 or a later release.; Cortex Cloud collects all the information about the operating system and the installed applications, and calculates CVE. |
 | Setup and Permissions | Ensure Host Inventory Data Collection is enabled for your Cortex XDR agent.Set up agent settings profiles |
 | Certificates for Windows and macOS | When Advanced Vulnerability and Assessment is enabled, these certificates are a prerequisite for Windows and macOS. Download the certificates from [here](https://docs-cortex.paloaltonetworks.com/v/u/EJVLvtinTtrAb~Na9XuXag). Import the _Digicert Trusted Root G4_ certificate into the Trusted Root Certification Authorities store in the local machine.; In some environments, if the scan does not initialize, the _DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1_ certificate, may also be required. Import the signed certificate into the Intermediate Certification Authorities store in the local machine. |
 | Limitations | Some CVEs may be outdated if the Cortex XDR agent wasn't updated recently.; Application versions which have reached end-of-life (EOL) may have their version listed as 0. This doesn't affect the detection of the CVEs.; Some applications are listed twice. One of the instances may display `invalid version`, however, this doesn't affect the functionality.; The scanning process may impact performance on the Cortex XDR agent during scanning. The scan may take up to two minutes. |
@@ -10758,7 +10555,7 @@ You can perform the following actions from Cortex Cloud as you analyze the exist
 
 ##### Endpoint Analysis
 
-To help you assess the vulnerability status of an endpoint, Cortex Cloud provides a full list of all installed applications and existing CVEs per endpoint and also assigns each endpoint a vulnerability severity score that reflects the highest NIST vulnerability score detected on the endpoint. This information helps you to determine the best course of action for remediating each endpoint. From Inventory → Endpoints+Host Inventory → Vulnerability Assessment, select Endpoints on the upper-right bar. This information is also available in the va\_endpoints dataset. In addition, the host\_inventory\_endpoints preset lists all endpoints, CVE data, and additional metadata regarding the endpoint information. You can use this dataset and preset to build queries in XQL Search.
+To help you assess the vulnerability status of an endpoint, Cortex Cloud provides a full list of all installed applications and existing CVEs per endpoint and also assigns each endpoint a vulnerability severity score that reflects the highest NIST vulnerability score detected on the endpoint. This information helps you to determine the best course of action for remediating each endpoint. From Inventory → Endpoints+Host Inventory → Vulnerability Assessment, select Endpoints on the upper-right bar. This information is also available in the va_endpoints dataset. In addition, the host_inventory_endpoints preset lists all endpoints, CVE data, and additional metadata regarding the endpoint information. You can use this dataset and preset to build queries in XQL Search.
 
 For each vulnerability, Cortex XDR displays the following default and optional values.
 
@@ -10809,7 +10606,6 @@ From Inventory → Endpoints → Host Inventory, select Applications.
 Understand how cases work in Cortex Cloud.
 
 #### What are cases?
-Abstract
 
 A case provides the full contextual story of a problem that impacts your organization's security, giving you an end-to-end view of the problem and streamlining your understanding of what needs to be solved and how.
 
@@ -10844,7 +10640,6 @@ While most low-severity issues do not create cases, specific analytic rules can 
 For more information about how cases are built, see Case grouping.
 
 #### Resolving cases with AI
-Abstract
 
 AI tools can help you through the case analysis and resolution process.
 
@@ -10870,7 +10665,6 @@ Cortex Cloud leverages Agentic AI to collaborate on investigations and actively 
 | Resolution Center | Provides actionable remediation tasks, recommendations, and progress tracking to guide you step-by-step to a complete resolution. With playbook task tracking across all issues and in-context links to the Workplan, you can manage tasks awaiting action, monitor work in progress, and review completed items. |
 
 #### Case lifecycle
-Abstract
 
 Understand the lifecycle of a case.
 
@@ -10885,10 +10679,7 @@ Cortex Cloud handles cases through a structured process that moves from identifi
 | Response | Application of remediation actions to mitigate the threat. |
 | Resolution | Final confirmation that the issues in the case are fully addressed. |
 
-[image: image2.png]
-
 #### Case thresholds
-Abstract
 
 Case grouping thresholds are implemented to keep cases manageable.
 
@@ -10908,7 +10699,6 @@ You can track the threshold status in the `Issues Grouping Status` field in the 
 If a case is resolved with the status `Resolved - Auto Resolved`, Cortex Cloud reopens the case within a six-hour window if a matching issue occurs. The six-hour period is defined by the timestamp of the last issue that was grouped into the case. After the six-hour period, any new issues are linked to a new case for a new investigation.
 
 #### Case scope and impact
-Abstract
 
 A case's scope and impact is determined by the assigned severity, score, and domain.
 
@@ -10924,7 +10714,6 @@ The prioritization and governance of cases are determined by the case **Severity
 By aligning these three factors, Cortex Cloud automates the transition from detection to response, ensuring the most critical risks are addressed by the right experts.
 
 #### Case and issue domains
-Abstract
 
 Cortex Cloud assigns each case and issue to a domain. Domains help you to organize and manage your work efforts, and differentiate between use cases.
 
@@ -10949,7 +10738,6 @@ Cortex Cloud provides the following built-in domains:
 ### Case concepts
 
 #### Issues, findings, and events
-Abstract
 
 Understand how issues, findings, and events are related to cases.
 
@@ -10982,7 +10770,6 @@ In addition, Cortex Cloud offers the flexibility to:
 -   Create issues from custom rules that you define. For example, correlation rules, malware rules, and vulnerability rules. For more information about setting up rules, see What are detection rules?.
 
 ##### Findings and events
-Abstract
 
 Findings and events form the core of our knowledge data lake. **Findings** provide context about the current state of the assets in your environment and **Events** are logged activities that occur in your environment.
 
@@ -11018,7 +10805,6 @@ Cortex Cloud collects event logs that audit the activities that occur in your en
 When certain malicious objects (such as malware) are discovered in the event logs, an issue is created. During case investigation, you can query your event logs to see information about the actors and processes that triggered the issue.
 
 #### Case grouping
-Abstract
 
 Cortex Cloud uses a specific case grouping logic to build cases.
 
@@ -11073,7 +10859,6 @@ Case grouping and SmartScore work together to improve triage efficiency. While c
 Case grouping is natively supported within built-in domains only, for example Security.
 
 #### Case scoring
-Abstract
 
 Learn about the different case scoring methods.
 
@@ -11118,7 +10903,6 @@ When a case is created, Cortex Cloud searches for a match between your scoring r
 You can view the assigned score on the Cases page.
 
 #### Case starring
-Abstract
 
 Starring cases can help you to prioritize and filter your cases.
 
@@ -11129,7 +10913,6 @@ You can star cases manually, or create a starring configuration. A starring conf
 You can manage all starring configurations under Case & Issues → Case Configuration → Starred Issues. For more information see Create a starring configuration.
 
 #### What is Causality?
-Abstract
 
 Learn more about Causality in Cortex Cloud.
 
@@ -11202,14 +10985,12 @@ Each causality chain gets a unique ID called  a CID. All actions on this chain,
 This concept is important because any alert that is triggered about any action is also mapped to the same CID, meaning that one chain of execution displays all processes and alerts associated with the relevant CID. Alerts on the same CID is also one of the methods Cortex Cloud uses to group alerts into an incident.
 
 ### Analyze and resolve cases
-Abstract
 
 Learn how to analyze and resolve cases.
 
 The following sections explain how to review, analyze, and resolve cases. You can start reviewing the cases in your environment on the Cases page.
 
 #### Review all cases
-Abstract
 
 Start reviewing your open cases on the **Cases** page.
 
@@ -11243,7 +11024,6 @@ Saved table views are saved filter configurations of table data that help you to
 The default view on the Cases page is **All Cases**. Click on the arrow next to All Cases to see all available saved views. If you change the table filters, you will see a Modified label next to the view name. You can create a new saved views. Once you have change the table filters, click the three dots next to the view name to save the new configuration, update an existing saved view, or revert to the original configuration.
 
 #### Start case analysis
-Abstract
 
 Understand the case analysis and resolution process.
 
@@ -11254,8 +11034,6 @@ The case card opens a dedicated workspace where you can fully understand, invest
 The case card brings together case context, correlated issues, affected assets, and remediation actions in one place. It helps you quickly understand the case context, see how events are connected, and take action with confidence. Click through the view to dive into investigation data, resolution tasks, and AI assistance without switching pages or losing context, keeping your focus on resolution.
 
 ##### Case analysis and resolution process
-
-[image: image3.png]
 
 ##### Core components
 
@@ -11270,7 +11048,6 @@ The following table describes the core components of case analysis and resolutio
 | Resolution Center | Guides you towards resolution by presenting actionable remediation steps and enables you to track all related playbook tasks without opening individual playbooks. | Resolution Center |
 
 ##### Agentic Assistant- Case Investigation agent
-Abstract
 
 The Agentic assistant provides side-by-side support throughout the case analysis and resolution process.
 
@@ -11310,7 +11087,6 @@ To streamline case analysis, the assistant provides the following areas of suppo
 Before you start to analyze the case, review the case title and description to establish case context. You can also review the case score, assignee, and decide whether to star the case.
 
 ##### AI-generated case summaries
-Abstract
 
 AI generated case summaries helps you quickly understand the scope and nature of the case by summarizing key case details.
 
@@ -11341,7 +11117,7 @@ In addition to the AI-generated case titles and summaries, Cortex Cloud automati
 
 These static descriptions are used when AI-generated case summaries are unavailable or disabled. In addition, they are reflected in the case title in the List of cases in the **Split view**, and the **Case Name** and **Case Description** columns in the **Table view.**
 
-You can manually update these values. From the **Actions** [image: Actions_icon.png] menu select **Edit case details**.
+You can manually update these values. From the **Actions**  menu select **Edit case details**.
 
 Single issue cases
 
@@ -11374,7 +11150,6 @@ You can also turn AI summarization on or off for a specific case. Take the follo
 3.  Switch the Summarize with AI toggle.
 
 ##### Assess case severity and score
-Abstract
 
 Review the case severity and score, and see a breakdown of how the score was calculated.
 
@@ -11417,7 +11192,6 @@ You can change the default scoring method. In addition, if Cortex Cloud was unab
 2.  Select a different scoring method, or click **Set score manually** and define a new score.
 
 ##### Update case attributes
-Abstract
 
 You can update the case title and description, and choose whether to star a case.
 
@@ -11435,7 +11209,7 @@ A case title and description is automatically generated for each case. In additi
 
 You can manually update the saved case description, as required.
 
-1.  Select a case and open the Actions [image: Actions_icon.png] menu.
+1.  Select a case and open the Actions  menu.
     
 2.  Select Edit case details.
     
@@ -11463,7 +11237,6 @@ You can manually star or un-star a case:
     -   In the **Table** view, select one or more cases and right-click. Select whether to star or un-star the cases.
 
 #### Analyze case details
-Abstract
 
 You can analyze detailed information about the case in the **Overview** section of the Case card.
 
@@ -11489,7 +11262,6 @@ If you prefer a tabular or legacy layout, switch the case card to the **Detailed
 This view preserves the legacy tab based format and custom layouts, ensuring full backward compatibility. You can switch between the new case experience and the legacy view based on personal workflow preferences. For more information, see Detailed View.
 
 ##### Grouping graph
-Abstract
 
 Gain insight into why issues were grouped in a case.
 
@@ -11537,8 +11309,6 @@ You can interact with the graph to uncover deeper layers of data without leaving
 
 Example 38. 
 
-[image: Grouping_graph_example.png]
-
 The following table breaks down the components in this example:
 
 | Label | Explanation |
@@ -11553,7 +11323,6 @@ The following table breaks down the components in this example:
 | 8 | Case grouping is inactive label. This indicates that the case is no longer accepting new matching issues, which happens when a case grouping threshold is met. For more information, see Case thresholds. |
 
 ##### Evidence
-Abstract
 
 Review the Evidence section of the Case card to see details of causalities and events.
 
@@ -11577,7 +11346,6 @@ The causality chains are listed according to the Causality Group Owner (CGO), ex
 Expand the causality chain to further investigate in the full Causality view. For more information, see Causality view.
 
 ##### Issue feed
-Abstract
 
 See a chronological visualization of the case lifecycle in the issue feed.
 
@@ -11594,7 +11362,6 @@ The issue feed provides a chronological visualization of the case lifecycle, hig
 -   **Group issues by attribute:** Sort the issues in the timeline with the **Group By** option that allows you cluster issues and insights by selected criteria, such as category, severity, or detection method.
 
 ##### Associated assets and artifacts
-Abstract
 
 Review the associated assets and artifacts identified in the case
 
@@ -11602,7 +11369,7 @@ This section displays the technical entities involved in the case, such as endpo
 
 Hover over an asset or artifact to see key details about the entity. Click on an asset to see full details in the asset card.
 
-To investigate further, click Ask AI next to an asset or artifact to open the **Agentic Assistant** with an automatically generated prompt tailored to the selected entity. You can also use the **Actions** [image: Actions_icon.png] menu next to an asset or artifact to drill down to dedicated views or take direct actions on the asset or artifact.
+To investigate further, click Ask AI next to an asset or artifact to open the **Agentic Assistant** with an automatically generated prompt tailored to the selected entity. You can also use the **Actions**  menu next to an asset or artifact to drill down to dedicated views or take direct actions on the asset or artifact.
 
 **Note:**
 
@@ -11620,7 +11387,6 @@ To see a full breakdown by MITRE ATT&CK tactic and technique, including the numb
 This component is available for cases associated with the Security domain or custom domains.
 
 ##### Detailed View
-Abstract
 
 Switch to the Detailed View to see a breakdown of case information in a table-based format.
 
@@ -11712,7 +11478,6 @@ The Timeline tab is a chronological representation of issues and actions relatin
     -   In action entries that involved more artifacts, expand Additional artifacts found to further investigate.
 
 ##### Issue card
-Abstract
 
 On the Issue card, you can see details of the selected issue and take actions on an issue.
 
@@ -11725,8 +11490,7 @@ Each issue card adapts to the type of issue you’re investigating, surfacing th
 | Tab | Description |
 | --- | --- |
 | Overview | Displays a description of the issue and provides key information, including: Assignee; Status; Time at which the issue was created and updated; Suggested automations to run on the issue. Click the automation to open to the Work Plan tab with details of the automation.; Affected Assets with links to the affected asset cards; Cases linked to the issue; (For issues related to Container images) Related Affected Assets displays the assets that are related to the assets listed under Affected Assets. For example, if one of the associated assets is a container image running on a VM, the VM will be listed under this section. The Evidence section contains information to help you investigate the issue, such as the causality chain. \*\*Note:\*\* This section is context-specific and shows data according to the issue context. |
-| Issue Information | Displays a summary of the issue, such as issue details , indicators, and outstanding tasks. Some fields are informational and some can be edited. Includes the following sections (depending on the layout): ISSUE DETAILS: A summary of the issue, such as type, severity, and when the issue occurred. You can update these fields as required.; COMMAND AND TASK RESULTS: Lists any manual commands and playbook task results.; WORK PLAN: View or take action on the following:-   Playbook tasks: When a playbook runs, any outstanding tasks appear. You can take various actions here or in the Work Plan tab.; To-Do Tasks: An ad-hoc item that is not attached to the Work Plan. Create tasks for users to complete as part of an investigation. These are like a To-Do list that you keep in an investigation on an ad-hoc basis, rather than the Work Plan, which follows a pre-defined process. You can view or create To-Do tasks.
-; NOTES: Helps you understand specific actions taken, and allows you to view conversations between analysts to see how they arrived at a certain decision. You can see the thought process behind identifying key evidence and identifying similar cases.; MALICIOUS OR SUSPICIOUS INDICATORS: A list of any malicious or suspicious indicators. If you have the Threat Intel add-on, you can pivot to the Indicators page, where you can take further action on the indicator.; INDICATORS HANDLING: Take actions on indicators from the displayed options. |
+| Issue Information | Displays a summary of the issue, such as issue details , indicators, and outstanding tasks. Some fields are informational and some can be edited. Includes the following sections (depending on the layout): ISSUE DETAILS: A summary of the issue, such as type, severity, and when the issue occurred. You can update these fields as required.; COMMAND AND TASK RESULTS: Lists any manual commands and playbook task results.; WORK PLAN: View or take action on the following:- Playbook tasks: When a playbook runs, any outstanding tasks appear. You can take various actions here or in the Work Plan tab.; To-Do Tasks: An ad-hoc item that is not attached to the Work Plan. Create tasks for users to complete as part of an investigation. These are like a To-Do list that you keep in an investigation on an ad-hoc basis, rather than the Work Plan, which follows a pre-defined process. You can view or create To-Do tasks. ; NOTES: Helps you understand specific actions taken, and allows you to view conversations between analysts to see how they arrived at a certain decision. You can see the thought process behind identifying key evidence and identifying similar cases.; MALICIOUS OR SUSPICIOUS INDICATORS: A list of any malicious or suspicious indicators. If you have the Threat Intel add-on, you can pivot to the Indicators page, where you can take further action on the indicator.; INDICATORS HANDLING: Take actions on indicators from the displayed options. |
 | Technical Information | Displays an overview of the information collected about the investigation, such as indicators, email information, URL screenshots, etc. When you run a playbook, the sections are automatically completed. |
 | Investigation Tools | Enables you to take action on the issue, such as converting a JSON file to CSV and checking if the IP address is in CIDR. |
 | War Room | A comprehensive collection of all investigation actions, artifacts, and collaboration. It is a chronological journal of the issue investigation. Each issue has a unique War Room. For information, see Use the War Room in an investigation. |
@@ -11734,14 +11498,12 @@ Each issue card adapts to the type of issue you’re investigating, surfacing th
 | Actions | Recommended actions to resolve the issue. |
 
 #### Resolve the case
-Abstract
 
 You can start remediating a case by reviewing the actions in the Resolution Center.
 
 After analyzing a case, you can start remediation in the Resolution Center. This process involves executing specific tasks to address the problems identified in the case. Once the remediation tasks are completed and verified, you can officially close the case to reflect its updated status and maintain an accurate audit trail.
 
 ##### Resolution Center
-Abstract
 
 Review the remediation action in the Resolution Center to start resolving a case.
 
@@ -11825,7 +11587,6 @@ You can resolve a case in the following ways:
 If a case is resolved with the status `Resolved - Auto Resolved`, Cortex Cloud can reopen the case for up-to six hours if a new issue is triggered that matches the case. The six-hour period is defined by the timestamp of the last issue that was grouped into the case. After the six-hour period, any new issues are linked to a new case for a new investigation.
 
 ##### Resolution reasons for cases and issues
-Abstract
 
 Describes the resolution reasons for cases and issues.
 
@@ -11843,7 +11604,6 @@ When you resolve a case or issue, you must also specify a resolution reason. The
 #### Additional case actions
 
 ##### Create a case
-Abstract
 
 You can manually create a new case, assign it to a specific domain, and define custom fields for the case.
 
@@ -11891,7 +11651,6 @@ You can create a case directly from the Cases page.
     You can't attach files to manually created cases.
 
 ##### Merge a case
-Abstract
 
 You can merge cases from the Table view of the Cases page.
 
@@ -11919,7 +11678,6 @@ Case assignees are managed as follows:
 ## Investigation and response
 
 ### Investigate issues
-Abstract
 
 Cortex Cloud generates issues to bring your attention to security risks in your framework.
 
@@ -11942,7 +11700,6 @@ Issues help you to monitor and control the security of your system framework by 
     Integrations enable you to ingest events, such as phishing emails, SIEM events, from third-party security and management vendors. You might need to configure the integrations to determine how events are classified as events. For example, for email integrations, you might want to classify items based on the subject field, but for SIEM events, you want to classify by event type.
 
 #### Overview of the Issues page
-Abstract
 
 The Issues page consolidates all non-informational issues from your detection sources.
 
@@ -11960,7 +11717,7 @@ Every 12 hours, the system enforces a cleanup policy to remove the oldest issues
 
 Cortex Cloud processes and displays the names of users in the following standardized format, also termed “normalized user”.
 
-**``_`<company domain>`_\_`<username>`_``**
+**``_`<company domain>`__`<username>`_``**
 
 As a result, any issue triggered based on network, authentication, or login events displays the User Name in the standardized format in the Issues and Cases pages. This impacts every issue for Cortex Cloud Analytics and Cortex Cloud Analytics BIOC, including Correlation, BIOC, and IOC issues triggered on one of these event types.
 
@@ -11976,9 +11733,7 @@ You can highlight issues that are important to you by tagging speciﬁc issue at
 
 To see a full list of issue fields and descriptions, run the following query in the Query Builder:
 
-```
 datamodel dataset = issues
-```
 
 #### Link or unlink issues from a case
 You can link and unlink issues from cases. An issue can be assigned to more than one case, and the case domain can be different from the issue domain.
@@ -11992,7 +11747,6 @@ Unlink an issue from a case
 From the Issues page, select the issue that you want to unlink, right-click and select Manage Issue+Unlink from case. You can select one or more cases to unlink the issue. You cannot bulk select issues to unlink.
 
 #### Run an automation on an issue
-Abstract
 
 Save time and expense by using playbooks and Quick Actions to automatically investigate and take remedial action on issues.
 
@@ -12030,13 +11784,10 @@ You can create automation rules that automatically run a playbook or Quick Actio
 For more information, see Automation in Cortex Cloud.
 
 #### Use the War Room in an investigation
-Abstract
 
 Use the War Room for real-time investigation into a case, to filter war room entries, and to disable indicator notifications.
 
 The War Room contains an audit trail of all automatic or manual actions that take place in a case or issue. A War Room is where you can review and interact with your case or issue. Cortex Cloud provides machine learning insights to suggest the most effective analysts and command-sets. Each case and issue has a unique War Room.
-
-[image: war-room-overview.png]
 
 Within Cortex Cloud, real-time investigation is facilitated through the War Room, which is powered by ChatOps. In the War Room you can take the following actions:
 
@@ -12157,7 +11908,7 @@ The syntax to reference attributes in the UAI is `${asset.xdm.asset.attributenam
 
 Run commands in the Automations browser
 
-You can view and run commands and scripts (not system commands, operations, and notifications) in the Automations Browser, by clicking [image: exclamation-cli.png] next to the CLI.
+You can view and run commands and scripts (not system commands, operations, and notifications) in the Automations Browser, by clicking  next to the CLI.
 
 The Automations Browser enables you to run commands and all associated arguments. The scripts and commands are separated into sections such as scripts and built-in commands. In each argument, you can do the following:
 
@@ -12209,7 +11960,6 @@ To run the Python command returning Hello World using backticks:
 `` !py script=`demisto.results("hello world")` ``
 
 #### Use the Work Plan in an investigation
-Abstract
 
 A Work Plan is a visual representation of the running playbook that is assigned to a case. Use it to monitor and manage a playbook workflow.
 
@@ -12239,21 +11989,21 @@ A playbook will not continue its execution path if a prior task has failed; you 
 
 | Task | Description |
 | --- | --- |
-| [image: standard_task.png] | [image: arrow.png]**Standard manual task** An arrow with a light blue square background indicates a standard manual task. The following are kinds of standard tasks. Manual Standard task (no lightning bolt logo): These tasks are used where usually it's not possible to automate them. You can add comments, assign them to an owner, and set a due date. The analyst who is responsible for the investigation needs to complete the task before the Work Plan can continue. A user icon ( [image: user_icon.png]) indicates the task requires manual inputs.; Automated Standard task (with lightning bolt script logo): A single command or script that is set to automatically run when the Work Plan execution reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the Work Plan can continue.; Automated Standard task (with Builtin logo): A single system command or script that is set to automatically run when the Work Plan reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the Work Plan can continue.; Automated Standard task (with Multi Command logo): A generic single command or script that can be used with multiple integrations is set to automatically run when the Work Plan reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the Work Plan can continue. |
-| [image: condition_task.png] | [image: conditional_icon.png]**Conditional task** A diamond icon in a purple square background indicates a conditional task used as decision trees in your Work Plan. The following are kinds of conditional tasks. Manual conditional task. A user icon ( [image: user_icon.png]) indicates the task requires manual inputs.a; Automated conditional task (with the lightning bolt script logo).; Automated conditional task that uses a system script (with the Builtin logo). |
-| [image: data_collection_task.png] | [image: data_collection_icon.png]**Data collection task / Communication task** The speech bubble in a turquoise background  indicates a data collection task. This task prompts the receivers to respond to a multi-question form and submit replies, even if they are not Cortex users. A user icon ( [image: user_icon.png]) indicates the task requires manual inputs. |
-| [image: sub-playbook_task.png] | [image: sub-playbook_icon.png]**Sub-playbook task** The workflow icon in a blue background indicates that the task is a playbook nested within the parent playbook. You can view the playbook by opening the task and selecting Open sub-playbook. |
-| [image: task-error-new-logo.png] | **Task containing an error** Scripts or sub-playbooks that have errors are designated by a red triangle. You need to open the script or sub-playbook to review the errors. |
-| [image: update_scripts.png] | **Task containing a deprecated script or needs to be updated** Scripts or sub-playbooks that have updates or are deprecated are designated by a yellow triangle. You need to update the scripts, integration commands, or sub-playbook tasks to their most current version. |
-| [image: skip.png] | [image: skip_icon.png]**Set to skip** When a task is set to skip, the skip icon will be orange. |
-| [image: breakpoint.png] | [image: breakpoint_icon.png]**Breakpoint** When the Work Plan reaches a breakpoint, the task has an orange line at the top to indicate the breakpoint. |
-| [image: overriden.png] | [image: overidden_icon.png]**Overridden inputs or outputs** When a task is set to have overridden inputs or outputs, the word Input or Output appears in orange. |
-| [image: pending.png] | [image: pending_icon.png]**Pending/in queue task** When the Work Plan starts to run, all tasks that are about to be performed are gray. |
-| [image: running.png] | [image: running_icon.png]**Running/ in progress task** A spinning circle inside the gray square indicates a running/in progress  task. |
-| [image: completed.png] | [image: completed_icon.png]**Completed task** The green square indicates a completed task. |
-| [image: waiting.png] | [image: waiting_icon.png]**Waiting task** The orange square indicates that the task is pending action. If you hover over the icon on the top left corner, details about the reason the task is in waiting mode appear. The user icon ( [image: user_icon.png]) indicates the task requires you to open it and manually mark it as complete. A speech bubble icon ([image: bubble_icon.png]) indicates the task is waiting for a questionnaire to be completed. |
-| [image: failed.png] | **Failed task** The red warning icon indicates that the task failed to complete as expected and requires manual inspection and troubleshooting. Contact your Cortex Cloud administrator. If you hover on the icon on the top left corner, details about the specific problem appear. If a red warning icon is paired with the clock icon ([image: hourglass_icon.png]), the task’s SLA is overdue. |
-| [image: skipped.png] | [image: skipped_icon.png]**Skipped task** The task will look faded to indicate it was not executed. This can happen if this task was set to be skipped when an error occurs, or if it is in a branch that was not executed if a condition wasn’t met. |
+|  | →**Standard manual task** An arrow with a light blue square background indicates a standard manual task. The following are kinds of standard tasks. Manual Standard task (no lightning bolt logo): These tasks are used where usually it's not possible to automate them. You can add comments, assign them to an owner, and set a due date. The analyst who is responsible for the investigation needs to complete the task before the Work Plan can continue. A user icon ( ) indicates the task requires manual inputs.; Automated Standard task (with lightning bolt script logo): A single command or script that is set to automatically run when the Work Plan execution reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the Work Plan can continue.; Automated Standard task (with Builtin logo): A single system command or script that is set to automatically run when the Work Plan reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the Work Plan can continue.; Automated Standard task (with Multi Command logo): A generic single command or script that can be used with multiple integrations is set to automatically run when the Work Plan reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the Work Plan can continue. |
+|  | **Conditional task** A diamond icon in a purple square background indicates a conditional task used as decision trees in your Work Plan. The following are kinds of conditional tasks. Manual conditional task. A user icon ( ) indicates the task requires manual inputs.a; Automated conditional task (with the lightning bolt script logo).; Automated conditional task that uses a system script (with the Builtin logo). |
+|  | **Data collection task / Communication task** The speech bubble in a turquoise background  indicates a data collection task. This task prompts the receivers to respond to a multi-question form and submit replies, even if they are not Cortex users. A user icon ( ) indicates the task requires manual inputs. |
+|  | **Sub-playbook task** The workflow icon in a blue background indicates that the task is a playbook nested within the parent playbook. You can view the playbook by opening the task and selecting Open sub-playbook. |
+|  | **Task containing an error** Scripts or sub-playbooks that have errors are designated by a red triangle. You need to open the script or sub-playbook to review the errors. |
+|  | **Task containing a deprecated script or needs to be updated** Scripts or sub-playbooks that have updates or are deprecated are designated by a yellow triangle. You need to update the scripts, integration commands, or sub-playbook tasks to their most current version. |
+|  | **Set to skip** When a task is set to skip, the skip icon will be orange. |
+|  | **Breakpoint** When the Work Plan reaches a breakpoint, the task has an orange line at the top to indicate the breakpoint. |
+|  | **Overridden inputs or outputs** When a task is set to have overridden inputs or outputs, the word Input or Output appears in orange. |
+|  | **Pending/in queue task** When the Work Plan starts to run, all tasks that are about to be performed are gray. |
+|  | **Running/ in progress task** A spinning circle inside the gray square indicates a running/in progress  task. |
+|  | **Completed task** The green square indicates a completed task. |
+|  | **Waiting task** The orange square indicates that the task is pending action. If you hover over the icon on the top left corner, details about the reason the task is in waiting mode appear. The user icon ( ) indicates the task requires you to open it and manually mark it as complete. A speech bubble icon () indicates the task is waiting for a questionnaire to be completed. |
+|  | **Failed task** The red warning icon indicates that the task failed to complete as expected and requires manual inspection and troubleshooting. Contact your Cortex Cloud administrator. If you hover on the icon on the top left corner, details about the specific problem appear. If a red warning icon is paired with the clock icon (), the task’s SLA is overdue. |
+|  | **Skipped task** The task will look faded to indicate it was not executed. This can happen if this task was set to be skipped when an error occurs, or if it is in a branch that was not executed if a condition wasn’t met. |
 
 ##### Add ad-hoc tasks to the Work Plan
 
@@ -12283,7 +12033,6 @@ When you create a task, add a name, automation, and description. The name and de
 5.  To run the Work Plan again click the Run Again icon.
 
 #### Issue syncing
-Abstract
 
 Set up integrations that mirror Cortex issues with external applications, such as Jira or ServiceNow.
 
@@ -12382,19 +12131,15 @@ Example 39. 
 
 The following example shows an automation run on an issue to create a ServiceNow ticket that is synced in an outbound flow with the ticket.
 
-[image: Outbound_SNOW_sync_example.png]
-
   
 
 ##### Run a War Room command to create and sync a ticket
 
 You can run the following command in the War Room to create an external ticket and define the syncing configuration:
 
-```
-!jira-create-issue-quick-action summary="<summary>" project\_key="<key>" issue\_type\_name="<type>" 
-description="<description>" using="<instance>" mirroring\_link\_to\_object="true" 
-mirroring\_sync\_direction="<syncDirection>" mirroring\_outbound\_profile\_id="<profileID>"
-```
+!jira-create-issue-quick-action summary="<summary>" project_key="<key>" issue_type_name="<type>" 
+description="<description>" using="<instance>" mirroring_link_to_object="true" 
+mirroring_sync_direction="<syncDirection>" mirroring_outbound_profile_id="<profileID>"
 
 **Tip:**
 
@@ -12404,12 +12149,10 @@ Example 40. 
 
 The following example creates a Jira Bug ticket for the Project Key SCRUM, with an Outbound sync configuration:
 
-```
 !jira-create-issue-quick-action summary="Restrict ingress on AWS Network ACLs for admin ports 22 and 3349" 
-project\_key="SCRUM" issue\_type\_name="Bug" description="We identified that multiple AWS Network ACLS are 
-allowing inbound (ingress) traffic on admin ports" using="JiraV3" mirroring\_link\_to\_object="true" 
-mirroring\_sync\_direction="OUTBOUND" mirroring\_outbound\_profile\_id="h8e14996-8695-5396-9g87-f08suu907486"
-```
+project_key="SCRUM" issue_type_name="Bug" description="We identified that multiple AWS Network ACLS are 
+allowing inbound (ingress) traffic on admin ports" using="JiraV3" mirroring_link_to_object="true" 
+mirroring_sync_direction="OUTBOUND" mirroring_outbound_profile_id="h8e14996-8695-5396-9g87-f08suu907486"
 
   
 
@@ -12484,8 +12227,6 @@ You can set up automation rules that create external tickets when certain issues
 Example 41. 
 
 The following example shows an automation rule that creates a Jira ticket with bi-directional syncing when a Critical Posture issue is triggered.
-
-[image: issue_sync_automation_rule.png]
 
   
 
@@ -12637,7 +12378,6 @@ Consider the following limitations of issue mirroring:
 #### Issue investigation actions
 
 ##### Copy issues
-Abstract
 
 You can copy an issue into memory.
 
@@ -12661,7 +12401,6 @@ How to copy an issue value
 3.  Paste the URL into an email or use it as needed to share the information.
 
 ##### Update issue fields
-Abstract
 
 Use a playbook, script, or command to update issue fields.
 
@@ -12724,11 +12463,8 @@ You can update issue fields by running the `setIssue` and `setIssueStatus` comma
     Example 50. Example of using the setIssueStatus command in a playbook
     
     The following example shows how the `setIssueStatus` command can be used in a playbook task. In this example, the task sets a custom issue status (Triage). The custom issue status was created before setting up the playbook.
-    
-    [image: setAlertStatus_playbook_example.png]
 
 ##### Export issue details to a file
-Abstract
 
 You can review issue details offline by exporting issues to a TSV file.
 
@@ -12736,14 +12472,13 @@ To archive, continue investigation offline, or parse issue details, you can expo
 
 1.  From the Issues page, adjust the filters to identify the issues you want to export.
     
-2.  When you are satisfied with the results, click the download icon ([image: download-to-file-icon.png]).
+2.  When you are satisfied with the results, click the download icon ().
     
     The icon is grayed out when there are no results.
     
     Cortex Cloud exports the filtered result set to the TSV file.
 
 ##### Exclude an issue
-Abstract
 
 You can exclude issues that are not deemed to be a threat.
 
@@ -12760,7 +12495,6 @@ How to exclude an issue
     A notification displays indicating the exclusion is in progress.
 
 ##### Query case and issue data
-Abstract
 
 You can run queries on case and issue data with the `cases` and `issues` datasets.
 
@@ -12784,18 +12518,13 @@ You can query case and issue data in the `cases` and `issues` datasets. When usi
 
 The `issues` dataset is categorized by domain. To query only security issues, use the following XQL:
 
-```
-dataset = issues | filter issue\_domain = "SECURITY"
-```
+dataset = issues | filter issue_domain = "SECURITY"
 
 To query only posture issues, use the following XQL:
 
-```
-dataset = issues | filter issue\_domain = "POSTURE"
-```
+dataset = issues | filter issue_domain = "POSTURE"
 
 ### Review findings
-Abstract
 
 Review findings for an asset to gain insights into an asset’s posture status.
 
@@ -12803,9 +12532,7 @@ Findings provide knowledge about an asset by leveraging the data we collect from
 
 Click on a finding from any location in the UI to open the findings card. For more information, see Findings card. To view all findings, go to Issues+Findings table. You can also see findings for a specific asset by opening the asset card.
 
- [image: movie__2_.png] Show me more
-
-[image: Findings.gif]
+  Show me more
 
 #### Types of findings
 
@@ -12841,12 +12568,9 @@ Example 51. 
 
 The following query searches for all findings for AssetA:
 
-```
-dataset = findings | filter xdm.finding.asset\_name = "AssetA"
-```
+dataset = findings | filter xdm.finding.asset_name = "AssetA"
 
 #### Findings card
-Abstract
 
 The Findings card provides information about a selected finding, including the Finding ID, category, and associated asset.
 
@@ -12866,7 +12590,6 @@ The information in this card is context specific, therefore some sections are no
 | Data | Normalized finding data. |
 
 ### Investigate artifacts and assets
-Abstract
 
 You can investigate specific artifacts and assets on dedicated views related to IP address, Network Assets, and File and Process Hash information.
 
@@ -12881,7 +12604,6 @@ From the Cases view, open the Key Assets & Artifact tab to see the assets and ar
     Displays Hosts and Users details. For hosts with a Cortex XDR agent installed, click on the host name to see more information in the Details panel.
 
 #### Investigate an IP address
-Abstract
 
 Investigate cases, connections, and threat intelligence reports related to a specific IP address on the IP View.
 
@@ -12949,7 +12671,6 @@ How to investigate an IP address
     Depending on the current IOC and EDL status, the Actions button is displayed.
 
 #### Investigate an asset
-Abstract
 
 Investigate host assets and view host insights on the Asset View.
 
@@ -12993,7 +12714,6 @@ How to investigate an asset
 5.  Perform actions on the host.
 
 #### Investigate a file and process hash
-Abstract
 
 Investigate cases, actions, and threat intelligence reports related to a specific file or process hash on the Hash View.
 
@@ -13071,7 +12791,6 @@ How to investigate a file or process hash
 5.  (Optional) Perform actions on the hash.
 
 #### Investigate a user
-Abstract
 
 Investigate user assets associated with your cases.
 
@@ -13246,7 +12965,6 @@ How to investigate a user
         -   Recent Authentications
 
 ### Cortex Assistant
-Abstract
 
 Cortex Assistant is designed to streamline processes by simplifying case triaging, investigation, and remediation. It enables you to seamlessly uncover new insights on hashes, hosts, and more. You can get tailored suggestions, and run actions in natural language from anywhere without losing context.
 
@@ -13278,7 +12996,6 @@ To increase usability, you can create a personalized keyboard shortcut: Settings
 Cortex Assistant is developed in accordance with responsible AI principles. Customer data is not used to train the AI models, and your data is private and secure. For added security, user prompts are processed within the tenant's region. Safety and security measures include user confirmation for write actions and adherence to RBAC permissions. At the same time, explainability is maintained by providing the logic behind answers and offering a feedback option for user opinions.
 
 #### Cortex Assistant layout
-Abstract
 
 Understand the main components in Cortex Assistant: search bar, insights and suggestions, action log, and feedback.
 
@@ -13299,7 +13016,6 @@ Below that, Cortex Assistant offers suggestions, which are divided into three co
 -   Respond: Take action by running recommended playbooks or scripts, enabling you to initiate response actions based on Cortex Assistant's suggestions.
 
 #### Cortex Assistant capabilities
-Abstract
 
 Understand Cortex Assistant's capabilities and how to use them.
 
@@ -13335,7 +13051,6 @@ Additionally, you can enter multiple search terms, and Cortex Assistant will sea
 Automation leverages playbooks and Quick Actions to execute predefined workflows, use context data to make informed decisions, and interact with lists to store and retrieve information as needed during the automation process.
 
 #### Automation in Cortex Cloud
-Abstract
 
 Automate response to issues, using playbooks and Quick Actions, triggered automatically by automation rules or manually from an issue.
 
@@ -13403,7 +13118,6 @@ Quick Actions can automatically populate parameters such as region, account id, 
 The syntax to reference attributes in the UAI is `${asset.xdm.asset.attributename}`. To find the property path in the XDM data set, see the asset data card for the asset in the Inventory page. For example, to print the region for the asset, enter `!print value=${asset.xdm.asset.cloud.region}`. You can also run Quick Actions directly on the asset using `${asset.xdm.asset}`.
 
 #### Automation Exclusion Center
-Abstract
 
 Automation exclusion policies prevent commands and scripts from performing remediation on critical assets.
 
@@ -13434,7 +13148,6 @@ By default, only admin users have access to the Automation Exclusion Center page
 Policies can be sorted, filtered, and searched using the category, status, policy, exclude, and description columns.
 
 ##### Manage automation exclusion policies
-Abstract
 
 Automation exclusion policies prevent commands and scripts from performing remediation on critical assets. Edit lists of critical assets and enable/disable policies.
 
@@ -13486,7 +13199,6 @@ To provide playbook access, first set the Cases & Issues RBAC permission to View
 To completely restrict playbook access, first set the Cases & Issues RBAC permission to None and then set the Playbooks permission to None.
 
 ##### Playbooks overview
-Abstract
 
 Cortex Cloud playbooks enable you to structure and automate many of your security processes. Parse case information, interact with users, and remediate.
 
@@ -13525,13 +13237,10 @@ You can see which playbook ran in a case, if any, by going to Cases & Issues, se
 For more information, see Investigate cases.Investigate cases
 
 ##### Playbook development checklist
-Abstract
 
 Follow the playbook development flow to create playbooks that structure and automate many of your security processes.
 
 The playbook development checklist follows the logical flow for developing a playbook.
-
-[image: playbook-development-flow-4.png]
 
 We recommend that you review the following steps to successfully implement your playbook.
 
@@ -13543,7 +13252,6 @@ We recommend that you review the following steps to successfully implement your 
 | Step 4. Test your playbook | Debug errors in your playbook. Use playbook metadata to troubleshoot playbook performance. | See topic |
 
 ##### Plan your playbook
-Abstract
 
 Considerations when planning your playbook.
 
@@ -13558,7 +13266,6 @@ When defining the workflow of your playbook, consider the following:
 -   When is the case considered remediated?
 
 ##### Manage playbooks
-Abstract
 
 Navigate the Playbooks page.
 
@@ -13627,7 +13334,6 @@ Clicking a card provides a preview of the playbook. If it is relevant for your u
 -   Adopting a playbook does not make it run. Some content packs include recommended automation rules. When you configure automation rules, you can view the recommendations. See Create an automation rule.
 
 ##### Build your playbook
-Abstract
 
 Use an out-of-the-box playbook, customize an existing playbook, or create a new playbook based on your organization's needs.
 
@@ -13647,7 +13353,6 @@ Follow these steps to build a playbook.
 | Task 6. Manage playbook content | Save versions of your playbook in Cortex Cloud. | See topic. |
 
 ###### Task 1. Choose from existing playbooks or create your own
-Abstract
 
 Use an existing playbook from your Org repository or search for a playbook in the Playbook Catalog. Customize an existing playbook, or create a new playbook based on your use case.
 
@@ -13705,7 +13410,7 @@ You can then configure the playbook settings or add quick actions, scripts, AI p
 
 -   To open multiple playbooks at the same time, edit the first playbook and then click New next to the playbook name to create a new tab. You can either create a new playbook, or add an existing one.
     
--   You can view recently modified or deleted playbooks by clicking version history for all playbooks [image: versionhistory.png].
+-   You can view recently modified or deleted playbooks by clicking version history for all playbooks .
     
 
 Create a playbook
@@ -13721,20 +13426,15 @@ Create a playbook
 
 You can easily navigate playbooks and focus on the parts you need to work on by collapsing and expanding playbook sections. Collapsing sections provides a condensed view of the playbook flow, reducing visual clutter and enabling quick access to specific sections. Expanding sections allows you to view or edit specific parts of a playbook while keeping the rest of the playbook compact and maintaining focus on the relevant playbook details. You can also hover over a section header to highlight all tasks under the section and easily identify the section scope.
 
-To collapse and expand a section, in the Playbooks page, after selecting a playbook from the library or creating a new playbook and adding tasks, click [image: playbook-expand-collapse.png] on a section header.
+To collapse and expand a section, in the Playbooks page, after selecting a playbook from the library or creating a new playbook and adding tasks, click  on a section header.
 
 When you collapse a section, you can see the number of tasks included under the section. For example:
 
-[image: playbook-collapsed-num-tasks.png]
+Click  to collapse or expand the entire playbook.
 
-Click [image: playbook-collpase-expand-all.png] to collapse or expand the entire playbook.
-
- [image: movie__2_.png] Show me more
-
-[image: playbook-collapse-expand.gif]
+  Show me more
 
 ###### Task 2. Configure playbook settings
-Abstract
 
 Define playbook triggers, inputs and outputs, and general settings when you customize or create a new playbook.
 
@@ -13865,7 +13565,6 @@ How to configure playbook settings
         In the War Room (under the Case War Room tab for cases, and the War Room tab for issues) you can run the **!getInvPlaybookMetadata** command to analyze the size of playbook tasks in a specific issue Work Plan to determine whether to implement Quiet Mode for playbooks or tasks.
 
 ###### Task 3. Add objects from the Task Library
-Abstract
 
 Using the Task Library, add Quick Actions, scripts and commands, sub-playbooks, and tasks to customize or create a new playbook.
 
@@ -13903,24 +13602,23 @@ Playbook task icons in the playbook editor
 
 | Task | Description |
 | --- | --- |
-| [image: standard_task.png] | [image: arrow.png]**Standard manual task** An arrow with a light blue square background indicates a standard manual task. The following are kinds of standard tasks. Manual Standard task (no lightning bolt script logo): These tasks are used where usually it's not possible to automate them. You can add comments, assign them to an owner, and set a due date. The analyst who is responsible for the investigation needs to complete the task before the playbook can continue running. A user icon ( [image: user_icon.png]) indicates the task requires manual inputs.; Automated Standard task (with lightning bolt script logo): A single command or script that is set to automatically run when the playbook execution reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the playbook can continue its execution.; Automated Standard task (with Builtin logo): A single system command or script that is set to automatically run when the playbook execution reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the playbook can continue its execution.; Automated Standard task (with Multi Command logo): A generic single command or script that can be used with multiple integrations is set to automatically run when the playbook reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the playbook can continue its execution. |
-| [image: condition_task.png] | [image: conditional_icon.png]**Conditional task** A diamond icon in a purple square background indicates a conditional task used as a decision tree in your playbook. The following are kinds of conditional tasks. Manual conditional task. A user icon ( [image: user_icon.png]) indicates the task requires manual input.; Automated conditional task (with the lightning bolt script logo).; Automated conditional task that uses a system script (with the Builtin logo). |
-| [image: data_collection_task.png] | [image: data_collection_icon.png]**Data collection task / Communication task** The speech bubble in a turquoise background indicates a data collection task. This task prompts the receivers to respond to a multi-question form and submit replies, even if they are not Cortex users. A user icon ( [image: user_icon.png]) indicates the task requires manual input. |
-| [image: sub-playbook_task.png] | [image: sub-playbook_icon.png]**Sub-playbook task** The workflow icon in a blue background indicates that the task is a playbook nested within the parent playbook. You can view the playbook by opening the task and selecting Open sub-playbook. The red warning icon indicates the sub-playbook is not ready to use. Open it to review the errors. |
-| [image: task-error-new-logo.png] | **Task containing an error** Scripts or sub-playbooks that have errors are designated by a red triangle. You need to open the script or sub-playbook to review the errors. |
-| [image: update_scripts.png] | **Task containing a deprecated script or needs to be updated** Scripts or sub-playbooks that have updates or are deprecated are designated by a yellow triangle. You need to update the scripts, integration commands, or sub-playbook tasks to their most current version. |
-| [image: skip.png] | [image: skip_icon.png]**Set to skip** For the debugger, when a task is set to skip, the skip icon will be orange. |
-| [image: breakpoint.png] | [image: breakpoint_icon.png]**Breakpoint** For the debugger, when the playbook reaches a breakpoint, the task has an orange line at the top to indicate the breakpoint. |
-| [image: overriden.png] | [image: overidden_icon.png]**Overridden inputs or outputs** For the debugger, when a task is set to have overridden inputs or outputs, the word Input or Output appears in orange. |
-| [image: pending.png] | [image: pending_icon.png]**Pending/in queue task** When the playbook starts to run, all tasks that are about to be performed are grayed out. |
-| [image: running.png] | [image: running_icon.png]**Running/ in progress task** A spinning circle inside the gray square indicates a running/in progress task. |
-| [image: completed.png] | [image: completed_icon.png]**Completed task** The green square indicates a completed task. |
-| [image: waiting.png] | [image: waiting_icon.png]**Waiting task** The orange square indicates that the task is pending action. If you hover over the icon in the top left corner, details about the reason the task is in waiting mode appear. The user icon ( [image: user_icon.png]) indicates the task requires you to open it and manually mark it as complete. A speech bubble icon ([image: bubble_icon.png]) indicates the task is waiting for a questionnaire to be completed. |
-| [image: failed.png] | **Failed task** The red warning icon indicates that the automation failed to complete as expected and requires manual inspection and troubleshooting. Contact your Cortex Cloud administrator. If you hover on the icon in the top left corner, details about the specific problem appear. If a red warning icon is paired with the clock icon ([image: hourglass_icon.png]), the task’s SLA is overdue. |
-| [image: skipped.png] | [image: skipped_icon.png]**Skipped task** The task will look faded to indicate it was not executed. This can happen if this task was set to be skipped when an error occurs, or if it is in a branch that was not executed if a condition wasn’t met. |
+|  | →**Standard manual task** An arrow with a light blue square background indicates a standard manual task. The following are kinds of standard tasks. Manual Standard task (no lightning bolt script logo): These tasks are used where usually it's not possible to automate them. You can add comments, assign them to an owner, and set a due date. The analyst who is responsible for the investigation needs to complete the task before the playbook can continue running. A user icon ( ) indicates the task requires manual inputs.; Automated Standard task (with lightning bolt script logo): A single command or script that is set to automatically run when the playbook execution reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the playbook can continue its execution.; Automated Standard task (with Builtin logo): A single system command or script that is set to automatically run when the playbook execution reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the playbook can continue its execution.; Automated Standard task (with Multi Command logo): A generic single command or script that can be used with multiple integrations is set to automatically run when the playbook reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the playbook can continue its execution. |
+|  | **Conditional task** A diamond icon in a purple square background indicates a conditional task used as a decision tree in your playbook. The following are kinds of conditional tasks. Manual conditional task. A user icon ( ) indicates the task requires manual input.; Automated conditional task (with the lightning bolt script logo).; Automated conditional task that uses a system script (with the Builtin logo). |
+|  | **Data collection task / Communication task** The speech bubble in a turquoise background indicates a data collection task. This task prompts the receivers to respond to a multi-question form and submit replies, even if they are not Cortex users. A user icon ( ) indicates the task requires manual input. |
+|  | **Sub-playbook task** The workflow icon in a blue background indicates that the task is a playbook nested within the parent playbook. You can view the playbook by opening the task and selecting Open sub-playbook. The red warning icon indicates the sub-playbook is not ready to use. Open it to review the errors. |
+|  | **Task containing an error** Scripts or sub-playbooks that have errors are designated by a red triangle. You need to open the script or sub-playbook to review the errors. |
+|  | **Task containing a deprecated script or needs to be updated** Scripts or sub-playbooks that have updates or are deprecated are designated by a yellow triangle. You need to update the scripts, integration commands, or sub-playbook tasks to their most current version. |
+|  | **Set to skip** For the debugger, when a task is set to skip, the skip icon will be orange. |
+|  | **Breakpoint** For the debugger, when the playbook reaches a breakpoint, the task has an orange line at the top to indicate the breakpoint. |
+|  | **Overridden inputs or outputs** For the debugger, when a task is set to have overridden inputs or outputs, the word Input or Output appears in orange. |
+|  | **Pending/in queue task** When the playbook starts to run, all tasks that are about to be performed are grayed out. |
+|  | **Running/ in progress task** A spinning circle inside the gray square indicates a running/in progress task. |
+|  | **Completed task** The green square indicates a completed task. |
+|  | **Waiting task** The orange square indicates that the task is pending action. If you hover over the icon in the top left corner, details about the reason the task is in waiting mode appear. The user icon ( ) indicates the task requires you to open it and manually mark it as complete. A speech bubble icon () indicates the task is waiting for a questionnaire to be completed. |
+|  | **Failed task** The red warning icon indicates that the automation failed to complete as expected and requires manual inspection and troubleshooting. Contact your Cortex Cloud administrator. If you hover on the icon in the top left corner, details about the specific problem appear. If a red warning icon is paired with the clock icon (), the task’s SLA is overdue. |
+|  | **Skipped task** The task will look faded to indicate it was not executed. This can happen if this task was set to be skipped when an error occurs, or if it is in a branch that was not executed if a condition wasn’t met. |
 
 ###### Add Quick Actions, commands, and scripts
-Abstract
 
 Using the Task Library, add Quick Actions, commands, and scripts.
 
@@ -14000,7 +13698,7 @@ If you want to add a script that is not yet adopted, Cortex Cloud automatically 
     | Inputs | Each script has its own set of input arguments (or none). You can set each argument to a specific value (by typing directly on the line under the argument name), or you can click the curly brackets to define a source field to populate the argument. \*\*Note:\*\* Commands you run in the War Room can automatically populate parameters such as region, account ID, and tags, based on asset data. Commands can reference UIA attributes for the relevant asset(s) in the issue context and use those attributes as input. The issue must contain the relevant `Asset ID`. The syntax to reference attributes in the UAI is `${asset.xdm.asset.attributename}`. To find the property path in the XDM data set, see the asset data card for the asset in the Inventory page. For example, to print the region for the asset, enter `!print value=${asset.xdm.asset.cloud.region}`. You can also run commands and scripts directly on the asset using `${asset.xdm.asset}`. |
     | Outputs | Each script has its own set of output arguments (or none). |
     | Mapping | Map the output from a playbook task directly to an issue field. The value for an output key populates the specified field per issue. This is a good alternative to using a task with the `setIssue` command. \*\*Note:\*\* The output value is dynamic and is derived from the context at the time that the task is processed. As a result, parallel tasks that are based on the same output may return inconsistent results. In the Mapping tab, click Add custom output mapping.; Under Outputs, select the context output to map to an issue field. Click the curly brackets to see a list of the output parameters available from the script.; Under Field to fill, select the field that you want to populate with the output.; Click Save. |
-    | Advanced | Includes the following fields. Using: Choose which integration instance will execute the command, or leave empty to use all integration instances.; Extend context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "\\\[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb'\\\]"; Ignore outputs: If set to true, will not store outputs into the context (besides the extended outputs).; Execution timeout (seconds): Sets the command execution timeout in seconds.; Indicator Extraction mode: Choose when to extract indicators:-   Use system default: This is the default setting.; None: Do not perform indicator extraction; Inline: Before other playbook tasks; Out of band: While other tasks are running
+    | Advanced | Includes the following fields. Using: Choose which integration instance will execute the command, or leave empty to use all integration instances.; Extend context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb']"; Ignore outputs: If set to true, will not store outputs into the context (besides the extended outputs).; Execution timeout (seconds): Sets the command execution timeout in seconds.; Indicator Extraction mode: Choose when to extract indicators:-   Use system default: This is the default setting.; None: Do not perform indicator extraction; Inline: Before other playbook tasks; Out of band: While other tasks are running
     ; Mark results as note; Run without a worker; Skip this branch if this script/playbook is unavailable; Quiet Mode: When in quiet mode, tasks do not display inputs and outputs or extract indicators. Errors and warnings are still documented. You can turn quiet mode on or off at the task or playbook level. |
     | Details | Includes the following fields. Tag the result with: Add a tag to the task result. You can use the tag to filter entries in the War Room.; Task description (Markdown supported): Provide a description of what this task does. You can enter objects from the context data in the description. For example, in a communication task, you can use the recipient’s email address. The value for the object is based on what appears in the context every time the task runs. |
     | On Error | Includes the following fields. Number of retries: How many times the task should retry running if there is an error. Default is 0.; Retry interval (seconds): How long to wait between retries. Default is 30 seconds. The maximum retry interval is 800 seconds (13.3 minutes). If you enter a value greater than 800 seconds, the retry interval will be limited to 800 seconds.; Error handling: How the task should behave if there is an error while running the script. Options are:-   Stop; Continue; Continue on error path(s) This option configures the task to handle potential errors that may occur when executing the current task's script. |
@@ -14010,11 +13708,10 @@ If you want to add a script that is not yet adopted, Cortex Cloud automatically 
 10.  Connect the task you added by dragging and dropping a wire.
 
 ###### Add sub-playbooks
-Abstract
 
 Using the Task Library, add sub-playbooks.
 
-Sub-playbooks are playbooks that are nested under other playbooks. They appear as tasks in the parent playbook flow and are indicated by the sub-playbook icon [image: sub-playbook-icon-2.png]. A sub-playbook can also be a parent playbook in a different use case.
+Sub-playbooks are playbooks that are nested under other playbooks. They appear as tasks in the parent playbook flow and are indicated by the sub-playbook icon . A sub-playbook can also be a parent playbook in a different use case.
 
 Since sub-playbooks are building blocks that can be used in other playbooks and use cases, you should define generic inputs for them.
 
@@ -14030,9 +13727,9 @@ Inputs can be passed to sub-playbooks from the parent playbook, used and process
     
     When you adopt a playbook from the Playbooks Catalog, installation may take some time.
     
-    When you adopt a system playbook, it is locked and you can only make limited changes to the playbook settings from the Playbook Starts task. For full editing capabilities, click [image: three-dots.png] and select either Duplicate (create a copy of the playbook to edit) or Edit Playbook (detach the playbook). A detached playbook does not receive updates in future content releases. If you reattach the playbook, the latest content updates will be applied and any edits you made will be overridden.
+    When you adopt a system playbook, it is locked and you can only make limited changes to the playbook settings from the Playbook Starts task. For full editing capabilities, click ⋮ and select either Duplicate (create a copy of the playbook to edit) or Edit Playbook (detach the playbook). A detached playbook does not receive updates in future content releases. If you reattach the playbook, the latest content updates will be applied and any edits you made will be overridden.
     
-    1.  If after adopting a playbook you see a warning [image: sub-playbook-icon-warning.png] indicating the sub-playbook is not ready to use, click the playbook to open its Task Details pane.
+    1.  If after adopting a playbook you see a warning  indicating the sub-playbook is not ready to use, click the playbook to open its Task Details pane.
         
     2.  In the error message, click the Open it link to view the sub-playbook in a new tab in the playbook editor.
         
@@ -14058,10 +13755,7 @@ Inputs can be passed to sub-playbooks from the parent playbook, used and process
         | Inputs | Any required input arguments for the sub-playbook. |
         | Outputs | Any outputs defined for the sub-playbook. |
         | Advanced | Skip this branch if this script/playbook is unavailable; Quiet Mode: Determines whether this task uses the playbook default setting for quiet mode. When in quiet mode, tasks do not display inputs and outputs or extract indicators. Errors and warnings are still documented. You can turn quiet mode on or off at the task or playbook level. |
-        | Loop | 
-        Click one of the following options to define loop settings: None: (Default) The sub-playbook does not loop.;
-        
-        -   Built-in: Use built-in functions to define loop settings:
+        | Loop | Click one of the following options to define loop settings: None: (Default) The sub-playbook does not loop.;-   Built-in: Use built-in functions to define loop settings:
             
             | Option | Description |
             | --- | --- |
@@ -14074,7 +13768,6 @@ Inputs can be passed to sub-playbooks from the parent playbook, used and process
             
         -   Choose Loop automation: Select the automation from the drop-down list to define when to exit the loop. The parameters that appear are applicable to the selected automation.
             
-        
         For more information, see Configure a sub-playbook loop.
         
          |
@@ -14088,7 +13781,6 @@ Inputs can be passed to sub-playbooks from the parent playbook, used and process
 7.  Connect the sub-playbook you've added by dragging and dropping a wire.
 
 ###### Add AI prompt tasks
-Abstract
 
 Using the Task Library, add AI prompt tasks to a playbook.
 
@@ -14104,9 +13796,9 @@ The following are examples of available system AI-based tasks.
 
 | Task name | Inputs | Outputs | Prompt |
 | --- | --- | --- | --- |
-| IssueSummaryAndRemediation | issue The issue details which will be sent to the LLM for summarization. | llm.summary The LLM output summary. | IssueSummaryAndRemediation prompt You are an experienced Security Operations Center (SOC) analyst with a deep understanding of security alert analysis and remediation. Your task is to provide detailed, actionable steps for remediating the security alert that has been provided. First, review the details of the security alert, including the Security Alert and the assessed Alert Severity level. Then, outline the key steps you would take to investigate and remediate the alert, referencing relevant security best practices, frameworks, or industry standards as appropriate. Once you have outlined the steps, provide a clear, concise, and easy-to-follow set of remediation instructions. Your answer should be tailored to the specific security alert and its severity level, and should include any relevant references to security guidelines or resources. Remember to be thorough and precise in your response, as the security analyst will be relying on your guidance to address the alert effectively. General Scope and Instructions: 1. Only provide remediation steps for the alert. 2. Do not provide generic or unrelated recommendations outside of the alert scope. Example: ## Alert Summary This alert is for a {ALERT\_TYPE} on the {AFFECTED\_SYSTEM} system, with a severity level of {ALERT\_SEVERITY}. ## Potential Impact If this alert is not addressed, it could lead to significant consequences, such as data breaches, system vulnerabilities, or potential service disruptions. ## Remediation Steps 1. \[Step 1 remediation instruction\] 2. \[Step 2 remediation instruction\] 3. \[Step 3 remediation instruction\] ## Recap Add a recap section. Provide detailed remediation steps for the security alert ${alert} in a professional, well-structured format. |
-| MalwareReportSummary | report\_id The report ID which will be sent to the LLM for summarization. | llm.summary The LLM output summary. | MalwareReportSummary prompt You are a highly specialized Malware Analyst, with deep expertise in analyzing and interpreting sandbox execution reports. Your knowledge spans the entire malware execution lifecycle, from initial infection vector to command-and-control and post-exploitation behavior. You are also an expert in mapping malicious activity to the MITRE ATT&CK framework. Your sole purpose is to analyze and summarize malware sandbox reports. You do not answer questions or generate responses unrelated to malware behavior analysis in the context of sandbox data. Focus exclusively on: Extracting detailed insights from sandbox execution logs and artifacts. Mapping observed behaviors to MITRE ATT&CK techniques. Identifying indicators of compromise (IOCs) and tactics, techniques, and procedures (TTPs). Only document IOCs with suspicious or malicious context, do not list IOCs for known or benign indicators. Describing the malware behavior across the whole kill chain. Recommending remediation actions and next steps for investigation. Analyze the following malware sandbox execution report and provide a comprehensive, structured analysis: Summarize the malware behavior across the entire attack kill chain (Initial Access → Execution → Persistence → Privilege Escalation → Defense Evasion → Credential Access → Discovery → Lateral Movement → Collection → Exfiltration → C2). Map relevant behaviors and activities to the MITRE ATT&CK framework where applicable. Highlight any notable techniques, unusual behaviors, or key insights from the malware execution. List any IOCs observed (domains, IPs, hashes, file paths, etc.). Provide remediation recommendations based on observed behavior. Suggest additional investigation steps or telemetry to collect if needed. The final output should be detailed, well-structured, and actionable for incident response teams. |
-| VulnerabilityReportSummary | report\_id The report ID which will be sent to the LLM for summarization. | llm.summary The LLM output summary. | VulnerabilityReportSummary prompt You are a vulnerability assessment analyst responsible for reviewing and analyzing vulnerability scan results provided in JSON format. Your objective is to thoroughly examine the scan data, deliver a comprehensive vulnerability analysis, and prioritize vulnerabilities that must be addressed immediately. General Instructions: 1. Only provide recommendations related to the data in the report. 2. Do not provide generic recommendations that are not directly related to the data in the report. Example: ### Steps for Analysis: Perform your assessment considering the following key criteria: 1. Criticality: - Consider vulnerability severity ratings (Critical, High, Medium, Low, Informational). - Evaluate CVSS base scores and severity definitions. 2. Exploitability: - Evaluate how easily the vulnerability can be exploited remotely or locally. - Analyze the complexity of exploitation, including the attack vector, required privileges, and user interaction. - Identify if active exploits or proof-of-concept exploits exist in the wild. 3. Environmental Factors: - Consider the importance of assets (e.g., business-critical servers, database hosts, publicly exposed systems). - Assess network accessibility of affected systems (internal vs. externally exposed systems). - Reflect on regulatory compliance requirements relevant to affected assets (e.g., PCI-DSS, HIPAA, GDPR). ### Deliverable: Provide your analysis in the following structured format: #### 1. Executive Summary: - Briefly summarize overall risk status based on scan results. #### 2. Detailed Vulnerability Analysis: For each vulnerability identified: - Plugin Name &amp; ID - CVE Identifier (if applicable) - Affected Asset(s) - Severity Rating &amp; CVSS Base Score - Exploitability Assessment: - Describe the likelihood and complexity of exploitation. - Reference if active exploits are known. - Environmental Impact: - Explain potential business impact based on asset role and exposure. - Highlight any compliance risks or regulatory impacts. #### 3. Prioritized Recommendations: - Provide a clearly ranked list (high-priority first) of vulnerabilities to remediate. - Include justification for prioritization based on criticality, exploitability, and environmental factors. - Suggest remediation actions for each vulnerability. ### Important Considerations: - Clearly justify each decision to ensure transparency. - Maintain concise yet informative language suitable for both technical and managerial audiences. - Emphasize vulnerabilities posing immediate and significant risk to the organization security posture. Please analyze the provided vulnerability scan results in detail. For each identified vulnerability: Describe the vulnerability clearly, including its type, affected service/component, and any relevant technical details. Assess severity based on industry-standard metrics (e.g., CVSS score or equivalent). Evaluate exploitability, noting whether known public exploits exist and how easily the vulnerability could be leveraged in practice. Recommend remediation or mitigation steps to address the issue (e.g., patching, configuration changes, compensating controls). Then, prioritize all vulnerabilities based on a combination of: 1. Exploitability (known exploits, attack complexity, likelihood of exploitation) 2. Severity (potential impact if exploited) 3. Exposure level (e.g., internet-facing systems, critical internal services) Provide a ranked list of vulnerabilities with a clear explanation of why each one should be prioritized. If applicable, highlight quick wins — high-risk vulnerabilities that can be easily fixed. |
+| IssueSummaryAndRemediation | issue The issue details which will be sent to the LLM for summarization. | llm.summary The LLM output summary. | IssueSummaryAndRemediation prompt You are an experienced Security Operations Center (SOC) analyst with a deep understanding of security alert analysis and remediation. Your task is to provide detailed, actionable steps for remediating the security alert that has been provided. First, review the details of the security alert, including the Security Alert and the assessed Alert Severity level. Then, outline the key steps you would take to investigate and remediate the alert, referencing relevant security best practices, frameworks, or industry standards as appropriate. Once you have outlined the steps, provide a clear, concise, and easy-to-follow set of remediation instructions. Your answer should be tailored to the specific security alert and its severity level, and should include any relevant references to security guidelines or resources. Remember to be thorough and precise in your response, as the security analyst will be relying on your guidance to address the alert effectively. General Scope and Instructions: 1. Only provide remediation steps for the alert. 2. Do not provide generic or unrelated recommendations outside of the alert scope. Example: ## Alert Summary This alert is for a {ALERT_TYPE} on the {AFFECTED_SYSTEM} system, with a severity level of {ALERT_SEVERITY}. ## Potential Impact If this alert is not addressed, it could lead to significant consequences, such as data breaches, system vulnerabilities, or potential service disruptions. ## Remediation Steps 1. [Step 1 remediation instruction] 2. [Step 2 remediation instruction] 3. [Step 3 remediation instruction] ## Recap Add a recap section. Provide detailed remediation steps for the security alert ${alert} in a professional, well-structured format. |
+| MalwareReportSummary | report_id The report ID which will be sent to the LLM for summarization. | llm.summary The LLM output summary. | MalwareReportSummary prompt You are a highly specialized Malware Analyst, with deep expertise in analyzing and interpreting sandbox execution reports. Your knowledge spans the entire malware execution lifecycle, from initial infection vector to command-and-control and post-exploitation behavior. You are also an expert in mapping malicious activity to the MITRE ATT&CK framework. Your sole purpose is to analyze and summarize malware sandbox reports. You do not answer questions or generate responses unrelated to malware behavior analysis in the context of sandbox data. Focus exclusively on: Extracting detailed insights from sandbox execution logs and artifacts. Mapping observed behaviors to MITRE ATT&CK techniques. Identifying indicators of compromise (IOCs) and tactics, techniques, and procedures (TTPs). Only document IOCs with suspicious or malicious context, do not list IOCs for known or benign indicators. Describing the malware behavior across the whole kill chain. Recommending remediation actions and next steps for investigation. Analyze the following malware sandbox execution report and provide a comprehensive, structured analysis: Summarize the malware behavior across the entire attack kill chain (Initial Access → Execution → Persistence → Privilege Escalation → Defense Evasion → Credential Access → Discovery → Lateral Movement → Collection → Exfiltration → C2). Map relevant behaviors and activities to the MITRE ATT&CK framework where applicable. Highlight any notable techniques, unusual behaviors, or key insights from the malware execution. List any IOCs observed (domains, IPs, hashes, file paths, etc.). Provide remediation recommendations based on observed behavior. Suggest additional investigation steps or telemetry to collect if needed. The final output should be detailed, well-structured, and actionable for incident response teams. |
+| VulnerabilityReportSummary | report_id The report ID which will be sent to the LLM for summarization. | llm.summary The LLM output summary. | VulnerabilityReportSummary prompt You are a vulnerability assessment analyst responsible for reviewing and analyzing vulnerability scan results provided in JSON format. Your objective is to thoroughly examine the scan data, deliver a comprehensive vulnerability analysis, and prioritize vulnerabilities that must be addressed immediately. General Instructions: 1. Only provide recommendations related to the data in the report. 2. Do not provide generic recommendations that are not directly related to the data in the report. Example: ### Steps for Analysis: Perform your assessment considering the following key criteria: 1. Criticality: - Consider vulnerability severity ratings (Critical, High, Medium, Low, Informational). - Evaluate CVSS base scores and severity definitions. 2. Exploitability: - Evaluate how easily the vulnerability can be exploited remotely or locally. - Analyze the complexity of exploitation, including the attack vector, required privileges, and user interaction. - Identify if active exploits or proof-of-concept exploits exist in the wild. 3. Environmental Factors: - Consider the importance of assets (e.g., business-critical servers, database hosts, publicly exposed systems). - Assess network accessibility of affected systems (internal vs. externally exposed systems). - Reflect on regulatory compliance requirements relevant to affected assets (e.g., PCI-DSS, HIPAA, GDPR). ### Deliverable: Provide your analysis in the following structured format: #### 1. Executive Summary: - Briefly summarize overall risk status based on scan results. #### 2. Detailed Vulnerability Analysis: For each vulnerability identified: - Plugin Name &amp; ID - CVE Identifier (if applicable) - Affected Asset(s) - Severity Rating &amp; CVSS Base Score - Exploitability Assessment: - Describe the likelihood and complexity of exploitation. - Reference if active exploits are known. - Environmental Impact: - Explain potential business impact based on asset role and exposure. - Highlight any compliance risks or regulatory impacts. #### 3. Prioritized Recommendations: - Provide a clearly ranked list (high-priority first) of vulnerabilities to remediate. - Include justification for prioritization based on criticality, exploitability, and environmental factors. - Suggest remediation actions for each vulnerability. ### Important Considerations: - Clearly justify each decision to ensure transparency. - Maintain concise yet informative language suitable for both technical and managerial audiences. - Emphasize vulnerabilities posing immediate and significant risk to the organization security posture. Please analyze the provided vulnerability scan results in detail. For each identified vulnerability: Describe the vulnerability clearly, including its type, affected service/component, and any relevant technical details. Assess severity based on industry-standard metrics (e.g., CVSS score or equivalent). Evaluate exploitability, noting whether known public exploits exist and how easily the vulnerability could be leveraged in practice. Recommend remediation or mitigation steps to address the issue (e.g., patching, configuration changes, compensating controls). Then, prioritize all vulnerabilities based on a combination of: 1. Exploitability (known exploits, attack complexity, likelihood of exploitation) 2. Severity (potential impact if exploited) 3. Exposure level (e.g., internet-facing systems, critical internal services) Provide a ranked list of vulnerabilities with a clear explanation of why each one should be prioritized. If applicable, highlight quick wins — high-risk vulnerabilities that can be easily fixed. |
 
   
 
@@ -14132,7 +13824,7 @@ System AI prompt tasks come with pre-defined prompts, inputs, and outputs that a
     | --- | --- |
     | Inputs | System AI prompt task input definitions (name, description, type) are fixed and non-editable. Includes the following fields. Prompt: The prompt that is passed to the LLM together with the inputs. System AI prompt task prompts are not editable. In the prompt, inputs are marked with **`${}`** as placeholders that will be filled with values. You can expand the prompt for better readability.; Extracted Inputs: Set the input values within the prompt. Input values can be set with either context path or a specific value.  Mandatory inputs are indicated with an asterisk. |
     | Outputs | AI prompt task outputs are fixed and non-editable. |
-    | Advanced | Includes the following fields. Extend context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "\\\[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb'\\\]"; Ignore outputs: If set to true, will not store outputs into the context (besides the extended outputs).; Execution timeout (seconds): Sets the command execution timeout in seconds.; Indicator Extraction mode: Choose when to extract indicators:-   Use system default: This is the default setting.; None: Do not perform indicator extraction; Inline: Before other playbook tasks; Out of band: While other tasks are running
+    | Advanced | Includes the following fields. Extend context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb']"; Ignore outputs: If set to true, will not store outputs into the context (besides the extended outputs).; Execution timeout (seconds): Sets the command execution timeout in seconds.; Indicator Extraction mode: Choose when to extract indicators:-   Use system default: This is the default setting.; None: Do not perform indicator extraction; Inline: Before other playbook tasks; Out of band: While other tasks are running
     ; Mark results as note; Run without a worker; Skip this branch if this script/playbook is unavailable; Quiet Mode: When in quiet mode, tasks do not display inputs and outputs or extract indicators. Errors and warnings are still documented. You can turn quiet mode on or off at the task or playbook level. |
     | Details | Includes the following fields. Tag the result with: Add a tag to the task result. You can use the tag to filter entries in the War Room.; Task description (Markdown supported): Provide a description of what this task does. You can enter objects from the context data in the description. For example, in a communication task, you can use the recipient’s email address. The value for the object is based on what appears in the context every time the task runs. |
     | On Error | Includes the following fields. Number of retries: How many times the task should retry running if there is an error. Default is 0.; Retry interval (seconds): How long to wait between retries. Default is 30 seconds. The maximum retry interval is 800 seconds (13.3 minutes). If you enter a value greater than 800 seconds, the retry interval will be limited to 800 seconds. |
@@ -14172,15 +13864,15 @@ You can create or edit a custom AI prompt task or edit a duplicated system AI pr
         
         | Tab | Settings |
         | --- | --- |
-        | Inputs | Expand this section to show the following fields: Prompt: Define a natural language prompt that will be passed to the LLM together with the inputs. Mark placeholders for inputs using square brackets \[ \].; Extracted Inputs: The list of inputs defined within the prompt. The order you define the inputs in the prompt matches their appearance here. Inputs can be set with either context path or specific value. You can choose whether the input is a variable using ${<input name>}. Mandatory inputs are indicated with an asterisk. The Prompt Helper also provides a list of prompt tips, including: Be clear and specific Tell the AI exactly what you need. Imagine you're asking a new team member for help – the more precise you are, the better they can assist. The same goes for our AI! What to do: Instead of vague questions like "Tell me about malware," try to be very specific. Think about:-   The goal: What do you want to achieve? (for example, "Summarize," "Identify," "Explain," "Generate ideas"); The topic: What is the subject? (for example, "Phishing emails," "Vulnerability reports," "Security policies"); Any details: What specific information is important? (for example, "From last week's incidents," "For non-technical executives," "Highlighting critical threats")
+        | Inputs | Expand this section to show the following fields: Prompt: Define a natural language prompt that will be passed to the LLM together with the inputs. Mark placeholders for inputs using square brackets [ ].; Extracted Inputs: The list of inputs defined within the prompt. The order you define the inputs in the prompt matches their appearance here. Inputs can be set with either context path or specific value. You can choose whether the input is a variable using ${<input name>}. Mandatory inputs are indicated with an asterisk. The Prompt Helper also provides a list of prompt tips, including: Be clear and specific Tell the AI exactly what you need. Imagine you're asking a new team member for help – the more precise you are, the better they can assist. The same goes for our AI! What to do: Instead of vague questions like "Tell me about malware," try to be very specific. Think about:-   The goal: What do you want to achieve? (for example, "Summarize," "Identify," "Explain," "Generate ideas"); The topic: What is the subject? (for example, "Phishing emails," "Vulnerability reports," "Security policies"); Any details: What specific information is important? (for example, "From last week's incidents," "For non-technical executives," "Highlighting critical threats")
         ; Examples:-   Bad prompt: "Tell me about that virus ${VirusName}."; Good prompt: "Analyze the attached malware report from ${Path} and summarize the key indicators of compromise (IOCs) for our incident response team."
         Provide context and background Give the AI the full picture. Our AI doesn't know everything about your specific situation. Giving it background information helps it understand the "why" behind your request. What to do: Include relevant details that help the AI understand the situation or your specific needs.-   Role: Tell the AI to act as a specific persona (for example, "Act as a security analyst," "You are a CISO," "As a technical writer"). This helps it tailor its language and focus.; Audience: Who is the information for? (for example, "For a technical audience," "For a board meeting," "For a general user"). This influences the complexity and depth of the response.; Key Information: What specific data points or previous steps are relevant? (for example, "Based on the recent network scan results," "Considering the new compliance regulations").
         ; Examples:-   Bad prompt: "Write a report."; Good prompt:"You are a cybersecurity consultant. Write a brief executive summary report for our CEO detailing the top three critical vulnerabilities identified in our recent penetration test report from ${Path} and suggest immediate actions."
-        Ask for the desired format Guide the AI's output structure. If you have a specific way you want the information presented, tell the AI upfront. This saves you time on reformatting. What to do: Clearly state how you want the AI's response to be structured.-   Lists: "Provide a bulleted list of..." or "Give me 5 key points."; Tables: "Create a table with columns for \[X\], \[Y\], and \[Z\]."; Summaries/reports: "Generate a concise summary," "Draft a formal report," or "Write a brief email."; Length: "Keep it under 200 words," or "Provide a detailed analysis."
+        Ask for the desired format Guide the AI's output structure. If you have a specific way you want the information presented, tell the AI upfront. This saves you time on reformatting. What to do: Clearly state how you want the AI's response to be structured.-   Lists: "Provide a bulleted list of..." or "Give me 5 key points."; Tables: "Create a table with columns for [X], [Y], and [Z]."; Summaries/reports: "Generate a concise summary," "Draft a formal report," or "Write a brief email."; Length: "Keep it under 200 words," or "Provide a detailed analysis."
         ; Examples:-   Bad Prompt: "What are the latest threats?; "Good Prompt: "List the top 5 emerging cyber threats relevant to financial services, with a brief explanation for each, presented as a bulleted list."
         Few-shot prompting Use few-shot prompting when you need the AI prompt task to learn a new pattern or format quickly without extensive fine-tuning, especially for tasks with limited data. What to do: Provide several examples of the desired input and output to guide the AI's response.; Examples of good prompts: "You are a SOC analyst that needs to enrich CVE ${CVEId} , use the following structure:" Sample structures:-   CVE Description: Apache Struts 2.5.x before 2.5.14, 2.3.x before 2.3.34, and 2.x.x before 2.3.x.x.x.x allows remote attackers to execute arbitrary code via a crafted Content-Type header.; CVSS:9.8 (Critical)Impact: Remote Code Execution (RCE), potential for complete system compromise, data theft, and denial of service. Affects web applications built with Apache Struts, widely used in enterprise environments.; Risk Score: 10/10 - Extremely High. Exploitability is high due to public exploits and widespread usage of the affected software.; CVE Description: Microsoft Windows MSHTML Remote Code Execution Vulnerability. This vulnerability exists in the way MSHTML engine handles specially crafted files. An attacker could host a specially crafted website or send a specially crafted document that, when opened, could allow remote code execution.; CVSS:8.8 (High)Impact: Remote Code Execution (RCE), arbitrary code execution in the context of the current user. Affects all Windows versions. Could lead to system compromise and data exfiltration. Often exploited via phishing campaigns.; Risk Score: 9/10 - Very High. Widespread target, often exploited through user interaction, making it a common attack vector. |
         | Outputs | AI prompt task outputs are fixed and non-editable. |
-        | Advanced | Includes the following fields. Extend Issue context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "\\\[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb'\\\]"; Ignore outputs: If set to true, will not store outputs into the context (besides the extended outputs).; Execution timeout (seconds): Sets the command execution timeout in seconds. Default is 10 seconds.; Indicator Extraction mode: Choose when to extract indicators:-   Use system default: This is the default setting.; None: Do not perform indicator extraction; Inline: Before other playbook tasks; Out of band: While other tasks are running
+        | Advanced | Includes the following fields. Extend Issue context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb']"; Ignore outputs: If set to true, will not store outputs into the context (besides the extended outputs).; Execution timeout (seconds): Sets the command execution timeout in seconds. Default is 10 seconds.; Indicator Extraction mode: Choose when to extract indicators:-   Use system default: This is the default setting.; None: Do not perform indicator extraction; Inline: Before other playbook tasks; Out of band: While other tasks are running
         ; Mark results as note; Run without a worker; Skip this branch if this script/playbook is unavailable; Quiet Mode: When in quiet mode, tasks do not display inputs and outputs or extract indicators. Errors and warnings are still documented. You can turn quiet mode on or off at the task or playbook level. |
         | Details | Includes the following fields. Tag the result with: Add a tag to the task result. You can use the tag to filter entries in the War Room.; Task description (Markdown supported): Provide a description of what this task does. You can enter objects from the context data in the description. For example, in a communication task, you can use the recipient’s email address. The value for the object is based on what appears in the context every time the task runs. |
         | Timers | Timer.start: The trigger for starting to send a message or survey to recipients. You can change this trigger or add a trigger for Timer.stop or Timer.pause. Select the trigger timer field from the drop down.; Add Trigger: You can add other trigger timer fields from the drop down. |
@@ -14209,7 +13901,6 @@ The reason for failure is logged in the War Room.
 If an AI prompt task returns a **`504 Error`** with the status **`DEADLINE_EXCEEDED`**, it is likely due to the task requiring more time to process than the default setting allows. To resolve this, open the Task Details pane of the AI task and select the Advanced tab, then increase the Execution timeout (seconds) based on how complex your prompt is and how long you expect the AI response to be. For example, for complex tasks such as generating a full vulnerability report, you many need to increase the timeout from the 10 second default to 120 seconds or higher.
 
 ###### Add manual tasks and blank tasks
-Abstract
 
 Using the Task Library, add manual tasks and or blank tasks.
 
@@ -14227,7 +13918,7 @@ Manual Tasks contains a list of playbooks from your Org repository with the manu
     
 3.  Hover over the task you want and and drag it onto the playbook editor.
     
-    By default, a user icon ( [image: user_icon.png]) indicates the task requires manual inputs. You can change the task settings to automate it.
+    By default, a user icon ( ) indicates the task requires manual inputs. You can change the task settings to automate it.
     
 4.  Connect the playbook you added by dragging and dropping a wire.
     
@@ -14275,7 +13966,6 @@ A Blank Task can be used to create a custom task from scratch.
 7.  Save the playbook.
 
 ###### Create a standard task
-Abstract
 
 Define a Standard task in Cortex Cloud.
 
@@ -14294,7 +13984,7 @@ Standard tasks can be manual tasks such as manual verification to prompt an anal
     | Field / tab | Settings |
     | --- | --- |
     | Choose script field | From a drop down list, select a script for the playbook to run. In the following tabs you can set: Inputs: Each script has its own set of input arguments (or none). You can set each argument to a specific value (by typing directly on the line under the argument name) or you can click the curly brackets to define a source field to populate the argument.; Outputs: Each script has its own set of output arguments (or none).; Mapping: Map the output from a playbook task directly to an issue field. The value for an output key populates the specified field per issue. This is a good alternative to using a task with the `setIssue` command. \*\*Note:\*\* The output value is dynamic and is derived from the context at the time that the task is processed. As a result, parallel tasks that are based on the same output may return inconsistent results.-   In the Mapping tab, click Add custom output mapping.; Under Outputs, select the output parameter whose output you want to map. Click the curly brackets to see a list of the output parameters available from the script.; Under Field to fill, select the field that you want to populate with the output.; Click Save.
-    ; Advanced: Includes the following fields.-   Using: Choose which integration instance will execute the command, or leave empty to use all integration instances.; Extend context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "\\\[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb'\\\]"; Ignore outputs: If set to true, will not store outputs into the context (besides the extended outputs).; Execution timeout (seconds): Sets the command execution timeout in seconds.; Indicator Extraction mode: Choose when to extract indicators:
+    ; Advanced: Includes the following fields.-   Using: Choose which integration instance will execute the command, or leave empty to use all integration instances.; Extend context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb']"; Ignore outputs: If set to true, will not store outputs into the context (besides the extended outputs).; Execution timeout (seconds): Sets the command execution timeout in seconds.; Indicator Extraction mode: Choose when to extract indicators:
     -   None: Do not perform indicator extraction; Inline: Before other playbook tasks; Out of band: While other tasks are running
     ; Mark results as note; Mark results as evidence; Run without a worker; Skip this branch if this script/playbook is unavailable; Quiet Mode: When in quiet mode, tasks do not display inputs and outputs or extract indicators. Errors and warnings are still documented. You can turn quiet mode on or off at the task or playbook level. ; Details: Includes the following fields.-   Tag the result with: Add a tag to the task result. You can use the tag to filter entries in the War Room.; Task description (Markdown supported): Describe what this task does. You can enter objects from the context data in the description. For example, in a communication task, you can use the recipient’s email address. The value for the object is based on what appears in the context every time the task runs.
     ; On Error: Includes the following fields.-   Number of retries: How many times the task should retry running if there is an error. Default is 0.; Retry interval (seconds): How long to wait between retries. Default is 30 seconds. The maximum retry interval is 800 seconds (13.3 minutes). If you enter a value greater than 800 seconds, the retry interval will be limited to 800 seconds.; Error handling: How the task should behave if there is an error. Options are:
@@ -14314,7 +14004,6 @@ Standard tasks can be manual tasks such as manual verification to prompt an anal
 7.  Save the playbook.
 
 ###### Create a conditional task
-Abstract
 
 Create a Conditional task in a playbook.
 
@@ -14437,7 +14126,7 @@ How to create a conditional task
         
         -   Using: Choose which integration instance will execute the command, or leave empty to use all integration instances.
             
-        -   Extend context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "\\\[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb'\\\]"
+        -   Extend context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb']"
             
         -   Ignore outputs: If set to true, will not store outputs into the context (besides the extended outputs).
             
@@ -14502,7 +14191,7 @@ How to create a conditional task
         
         -   Using: Choose which integration instance will execute the command, or leave empty to use all integration instances.
             
-        -   Extend context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "\\\[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb'\\\]"
+        -   Extend context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb']"
             
         -   Ignore outputs: If set to true, will not store outputs into the context (besides the extended outputs).
             
@@ -14565,7 +14254,6 @@ How to create a conditional task
 7.  Save the playbook.
 
 ###### Create a communication task
-Abstract
 
 Communication tasks in playbooks enable you to send surveys and collect data. Ask task, data collection task.
 
@@ -14594,15 +14282,11 @@ Example 53. Send a survey
 
 In this example, the message and survey will be sent to recipients every hour for six hours, until a reply is received (it is repeated every 60 minutes, 6 times). The SLA is six hours. If the SLA is breached, the playbook will proceed according to the Yes condition.
 
-[image: ask-timer.png]
-
   
 
 Example 54. Send email to users
 
 In this example, a message and survey are sent by email to all users with the Analyst role. We are not including a message body because the message subject is the survey question we want recipients to answer. There are three reply options, Yes, No, and Not sure. In the playbook, we will only add conditions for the Yes and No replies. We require recipient authentication, which first involves setting up authentication.
-
-[image: ask-task-example-email-8-4.png]
 
   
 
@@ -14642,7 +14326,7 @@ How to create a Data Collection task
     ; Mandatory: If this checkbox is selected for a question, survey recipients will not be able to submit the survey until they answer this question.; Help Message: The message that displays when users hover over the question mark help button for the survey question.; Placeholder: A sample value displayed until a real value is entered. \*\*Note:\*\* You can drag questions to rearrange the order in which they display in the survey. |
     | Timing | Retry interval (minutes): Determines the wait time between each execution of a command. For example, the frequency (in minutes) that a message and survey are resent to recipients before the response is received.; Number of retries: Determines how many times a command attempts to run before generating an error. For example, the maximum number of times a message is sent. If a reply is received, no additional retry messages will be sent. \*\*Note:\*\* Retries are not supported for data collection tasks that have errors sending emails (indicated by a server timeout). This is because retries only work on automation execution failures, not on email delivery issues. ; Task SLA: Set the SLA in granularity of weeks, days, and hours.; Set task Reminder at: Set a task reminder in granularity of weeks, days, and hours.; Complete automatically if:-   Reached task SLA (with or without a reply): This option is grayed out.; Received <enter a number> reply |
     | Details | Tag the result with: Add a tag to the task result. You can use the tag to filter entries in the War Room.; Task description (Markdown supported): Describe what this task does. You can enter objects from the context data in the description. For example, in a communication task, you can use the recipient’s email address. The value for the object is based on what appears in the context every time the task runs. |
-    | Advanced | Using: Choose which integration instance will execute the command, or leave empty to use all integration instances.; Extend context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "\\\[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb'\\\]"; Ignore outputs: If set to true, will not store outputs into the context (besides the extended outputs).; Execution timeout (seconds): Sets the command execution timeout in seconds.; Indicator Extraction mode: Choose when to extract indicators:-   None: Do not perform indicator extraction; Inline: Before other playbook tasks; Out of band: While other tasks are running
+    | Advanced | Using: Choose which integration instance will execute the command, or leave empty to use all integration instances.; Extend context: Append the extracted results of the action to the context. For example, "newContextKey1=path1::newContextKey2=path2" returns "[path1:'aaa',path2: 'bbb', newContexKey1: 'aaa',newContextKey2:'bbb']"; Ignore outputs: If set to true, will not store outputs into the context (besides the extended outputs).; Execution timeout (seconds): Sets the command execution timeout in seconds.; Indicator Extraction mode: Choose when to extract indicators:-   None: Do not perform indicator extraction; Inline: Before other playbook tasks; Out of band: While other tasks are running
     ; Mark results as note; Mark results as evidence; Run without a worker; Skip this branch if this script/playbook is unavailable; Quiet Mode: When in quiet mode, tasks do not display inputs and outputs or extract indicators. Errors and warnings are still documented. You can turn quiet mode on or off at the task or playbook level. |
     
 5.  (Optional) To customize the look and feel of your email message, click Preview.
@@ -14665,7 +14349,7 @@ How to create a Data Collection task
     
     The task is added in the playbook editor.
     
-    A user icon ( [image: user_icon.png]) indicates the task requires manual inputs.
+    A user icon ( ) indicates the task requires manual inputs.
     
 7.  Connect the tasks you've added in their logical order by dragging and dropping a wire from one task to another.
     
@@ -14678,13 +14362,9 @@ Stand-alone question with a single-select answer
 
 In this example, we create a stand-alone question, with a single-select answer. This question is not mandatory. If we selected the First option is default checkbox, the reply option "0" is the default value in the answer field.
 
-[image: data-collection-eg.png]
-
 Field-based using a custom field
 
 In this example, we create a question based on a custom issue field that is marked as mandatory. You can add a question based on a field. To add a field, click the Add Question based on field.
-
-[image: data-collection-eg2.png]
 
 ###### Configure communication task authentication
 
@@ -14697,11 +14377,8 @@ Set up playbook communication task authentication
 1.  Set up your SSO if it is not already configured. See Authenticate users using SSO for more details.
     
 2.  In the Task details of your playbook communication task, check Require users to authenticate to have your SAML or AD authenticate the recipient before allowing them access to the form.
-    
-    [image: playbook-comm-task-authenticate-2.png]
 
 ###### Create a section header
-Abstract
 
 Section headers are used to manage the flow of your playbook and help you organize your tasks efficiently.
 
@@ -14719,13 +14396,12 @@ Section headers are used to manage the flow of your playbook and help you organi
         
     -   Sub Section: If selected, this section becomes a subsection of the parent section above it, and it collapses when its parent section collapses.
         
-    -   Task description (Markdown supported): Provide a description of what this task does. In the Playbooks page, click [image: playbook-info-icon.png] on the section header to display the description.
+    -   Task description (Markdown supported): Provide a description of what this task does. In the Playbooks page, click  on the section header to display the description.
         
     
 5.  Click Save.
 
 ###### Configure script error handling in a playbook
-Abstract
 
 When defining a task, you can decide if the playbook continues, stops, or continues on an error path.
 
@@ -14794,7 +14470,6 @@ How to set up error handling in your playbook
         If you select Error path, if the task errors, the playbook continues with this path.
 
 ###### Task 4. Add custom playbook features
-Abstract
 
 Use an out-of-the-box playbook, create a new playbook, or customize an existing one based on your organization's needs.
 
@@ -14810,7 +14485,6 @@ You can customize your playbook to do the following.
 | Create an automation rule | Create conditions so if an issue with specific characteristics is created, a suitable response is issued via a playbook. |
 
 ###### Task 5. Test and debug the playbook
-Abstract
 
 Use an out-of-the-box playbook, create a new playbook, or customize an existing one based on your organization's needs.
 
@@ -14819,7 +14493,6 @@ The debugger provides a test environment where you can make changes to data and 
 For more information, see Test your playbook.
 
 ###### Task 6. Manage playbook content
-Abstract
 
 Use an out-of-the-box playbook, create a new playbook, or customize an existing one based on your organization's needs.
 
@@ -14830,14 +14503,12 @@ Cortex Cloud also manages playbook editing conflicts by only allowing one user a
 For more details, see Manage playbook content.
 
 ##### Customize your playbook
-Abstract
 
 Customize your playbook to extract indicators, extend context, update issue fields, filter and transform data, run scripts, and perform triggered actions, and sub-playbook loops.
 
 Customizing a playbook helps you automate tasks to match your needs, making workflows more efficient, accurate, and easier to integrate with your existing processes.
 
 ###### Configure a sub-playbook loop
-Abstract
 
 Configure a sub-playbook to run in a loop.
 
@@ -14914,7 +14585,6 @@ In the parent playbook (the task that contains the sub-playbook), you can config
     The fourth loop: 4, d, 9
 
 ###### Filter and transform data
-Abstract
 
 Use filters and transformers to manipulate data. Use filters and transformers in playbook tasks or when mapping an instance.
 
@@ -14971,13 +14641,11 @@ Example: Filter items with an EXE extension
 
 In this example, we want to filter all EWS Item names that have the extension **`exe`**.
 
-[image: playbook-context.png]
-
 1.  From the Filters & transformers window, in the Get field, type **`EWS.Items.Name`** to extract all Item names in EWS.
     
     The context root to filter is **`EWS,Items`**.
     
-    [image: filter-name.png]
+    
     
 2.  In the Filter section, click Add filter.
     
@@ -14987,7 +14655,7 @@ In this example, we want to filter all EWS Item names that have the extension **
     
 5.  In the right-hand side add **`exe`**.
     
-    [image: filter-exe.png]
+    
     
 6.  Click the tick box to save the filter.
     
@@ -15002,13 +14670,12 @@ In this example, we want to see the **`LastResolved`** time only from the **`dem
 
 This is part of the data where we want to filter:
 
-```
 {
-    "IP": \[
+    "IP": [
        {
         "Address": "192.168.10.96",
         "AutoFocus": {
-            "Resolutions": \[
+            "Resolutions": [
                 {
                     "Hostname": "79463wwfqq,dattolocal.net",
                     "LastResolved": "2022-08-02 04:01:02"
@@ -15021,13 +14688,13 @@ This is part of the data where we want to filter:
                     "Hostname": "securesense.call4pchelp.com",
                     "LastResolved": "2022-04-22 11:49:06"
                 }
-            \]
+            ]
         }
        },
        {
         "Address":"192.168.10.96",
         "AutoFocus": {
-            "Resolutions":\[
+            "Resolutions":[
                 {
                     "Hostname":"79463wwfqq,dattolocal.net",
                     "LastResolved":"2022-08-02 04:01:02"
@@ -15040,22 +14707,21 @@ This is part of the data where we want to filter:
                     "Hostname":"securesense.call4pchelp.com",
                     "LastResolved":"2022-04-22 11:49:06"
                 }
-            \]
+            ]
         }
        }
-    \]
+    ]
 }
-```
 
 1.  From the Filters & transformers window, in the Get field, type **`IP.AutoFocus.Resolutions.LastResolve`**.
     
-    [image: playbook-filter-auto.png]
+    
     
 2.  In the Filter section, click Add filter.
     
     Cortex Cloud automatically calculates that the context root to filter is **`IP.AutoFocus.Resolutions`**.
     
-    [image: playbook-filter-autores.png]
+    
     
 3.  In the left-hand side, add **`Hostname`** to the filter.
     
@@ -15065,11 +14731,11 @@ This is part of the data where we want to filter:
     
 6.  Click the checkbox to save.
     
-    [image: playbook-filter-autofilter.png]
+    
     
 7.  Click Test.
     
-    [image: playbook-filter-autotest.png]
+    
     
 
 Create custom filters and transformers
@@ -15110,7 +14776,6 @@ If you require a filter or transformer that is not provided out-of-the-box, you 
 5.  Go to the filters and transformers window and select the operator.
 
 ###### Filter considerations, categories, and built-in filters
-Abstract
 
 Filters in playbook tasks are defined built-in according to categories.
 
@@ -15120,7 +14785,7 @@ You can use built-in filters to define your filter, they are grouped by category
 
 -   Filters try to cast the transformed value and arguments to the appropriate type. The task fails if casting fails. For example, “a” Equals {“some”: “object”} => Error
     
--   If the filter's left-side value expects a single item but receives a list, the filter passes if at least one item meets the requirements. For example, \[“a”, “b”, “c”\] Equals “b” => true.
+-   If the filter's left-side value expects a single item but receives a list, the filter passes if at least one item meets the requirements. For example, [“a”, “b”, “c”] Equals “b” => true.
     
 -   If the filter's left-side value expects a list but receives a single item, it converts it to a list with a single item. For example, “a” Contains “a” => True.
     
@@ -15167,7 +14832,7 @@ Determines the relationship between the left-side string value and the right-sid
 | Matches - regex | Tests whether the string on the left matches the regex on the right. Uses Go-style regex. |
 | Not in list | Tests whether the string on the left is NOT a substring of the string on the right. |
 | Starts with | Tests whether the string on the right is the beginning of the string on the left. |
-| StringContainsArray | Tests whether a substring or an array of substrings on the left is within a string array on the right. Supports single strings as well. For example, for substrings \['a', 'b', 'c'\] in string 'a' the script returns true. |
+| StringContainsArray | Tests whether a substring or an array of substrings on the left is within a string array on the right. Supports single strings as well. For example, for substrings ['a', 'b', 'c'] in string 'a' the script returns true. |
 
 ###### Number
 
@@ -15198,8 +14863,8 @@ Supported time and date formats
 
 | Format | Example |
 | --- | --- |
-| ANSIC | Tues Jan \_2 15:04:05 2019 |
-| UnixDate | Tues Jan \_2 15:04:05 MST 2019 |
+| ANSIC | Tues Jan _2 15:04:05 2019 |
+| UnixDate | Tues Jan _2 15:04:05 MST 2019 |
 | RubyDate | Tues Jan 02 15:04:05 -0700 2019 |
 | RFC822 | 02 Jan 19 15:04 MST |
 | RFC822Z | 02 Jan 19 15:04 -0700 // RFC822 with numeric zone |
@@ -15209,10 +14874,10 @@ Supported time and date formats
 | RFC3339 | 2019-01-02T15:04:05Z07:00 |
 | RFC3339Nano | 2019-01-02T15:04:05.999999999Z07:00 |
 | Kitchen | 3.04PM |
-| Stamp | Jan \_2 15:04:05 |
-| StampMilli | Jan \_2 15:04:05.000 |
-| StampMicro | Jan \_2 15:04:05.000000 |
-| StampNano | Jan \_2 15:04:05.000000000 |
+| Stamp | Jan _2 15:04:05 |
+| StampMilli | Jan _2 15:04:05.000 |
+| StampMicro | Jan _2 15:04:05.000000 |
+| StampNano | Jan _2 15:04:05.000000000 |
 
 ###### Boolean
 
@@ -15238,7 +14903,6 @@ Miscellaneous filters, including CheckIfSubdomain and IsInCidrRanges.
 | LowerCidrNumAddresses | Tests whether the number of available addresses in IPv4 or IPv6 CIDR on the right is less than the input given on the left. |
 
 ###### Transformer considerations, categories, and built-in transformers
-Abstract
 
 Use transformers in playbook tasks according to the following considerations.
 
@@ -15315,8 +14979,8 @@ Supported time and date formats
 
 | Format | Example |
 | --- | --- |
-| ANSIC | Tues Jan \_2 15:04:05 2019 |
-| UnixDate | Tues Jan \_2 15:04:05 MST 2019 |
+| ANSIC | Tues Jan _2 15:04:05 2019 |
+| UnixDate | Tues Jan _2 15:04:05 MST 2019 |
 | RubyDate | Tues Jan 02 15:04:05 -0700 2019 |
 | RFC822 | 02 Jan 19 15:04 MST |
 | RFC822Z | 02 Jan 19 15:04 -0700 // RFC822 with numeric zone |
@@ -15326,23 +14990,14 @@ Supported time and date formats
 | RFC3339 | 2019-01-02T15:04:05Z07:00 |
 | RFC3339Nano | 2019-01-02T15:04:05.999999999Z07:00 |
 | Kitchen | 3.04PM |
-| Stamp | Jan \_2 15:04:05 |
-| StampMilli | Jan \_2 15:04:05.000 |
-| StampMicro | Jan \_2 15:04:05.000000 |
-| StampNano | Jan \_2 15:04:05.000000000 |
-
-
-
-
-
-
-
-
+| Stamp | Jan _2 15:04:05 |
+| StampMilli | Jan _2 15:04:05.000 |
+| StampMicro | Jan _2 15:04:05.000000 |
+| StampNano | Jan _2 15:04:05.000000000 |
 
  |
 
 ###### Extend context
-Abstract
 
 Extend context to retrieve specific information from integrations or commands and map to fields.
 
@@ -15356,7 +15011,7 @@ You can extend context either in a playbook task or directly from the command li
 
 Filter for specific keys from lists of dictionaries
 
-You can use DT to get select keys of interest from a command that returns a list of dictionaries containing many keys. For example, the `findIndicators` automation returns a long list of indicator properties, but you may only be interested in saving the value and the indicator\_type to minimize the size of the context data. For more information about DT, [see Cortex XSOAR Transform Language (DT)](https://xsoar.pan.dev/docs/integrations/dt).
+You can use DT to get select keys of interest from a command that returns a list of dictionaries containing many keys. For example, the `findIndicators` automation returns a long list of indicator properties, but you may only be interested in saving the value and the indicator_type to minimize the size of the context data. For more information about DT, [see Cortex XSOAR Transform Language (DT)](https://xsoar.pan.dev/docs/integrations/dt).
 
 Example 55. 
 
@@ -15364,16 +15019,16 @@ Example 55. 
     
     You will see a list of two dictionaries containing 20+ items.
     
-2.  Use the following value for extend-context to save only value and indicator\_type into a context key called FoundIndicators:
+2.  Use the following value for extend-context to save only value and indicator_type into a context key called FoundIndicators:
     
     ```
-    !findIndicators size=2 query="type:IP" extend-context=\`FoundIndicators=.={"value": val.value, "indicator\_type": val.indicator\_type}\`
+    !findIndicators size=2 query="type:IP" extend-context=\`FoundIndicators=.={"value": val.value, "indicator_type": val.indicator_type}\`
     ```
     
 3.  Use the following value for extend-context to save only the issue name, status, and id to a key called FoundIssues:
     
     ```
-    !SearchIssuesV2 id=<ANY\_ISSUE\_ID> extend-context=\`FoundIssues=Contents.data={"name": val.name, "status": val.status, "id": val.id}\` ignore-outputs=true
+    !SearchIssuesV2 id=<ANY_ISSUE_ID> extend-context=\`FoundIssues=Contents.data={"name": val.name, "status": val.status, "id": val.id}\` ignore-outputs=true
     ```
     
 
@@ -15387,7 +15042,7 @@ Example 55. 
     
     The following image shows the result of the **`!IPReuptation ip=20.8.1.5 raw-response=true`** command.
     
-    [image: extend-context-pb.png]
+    
     
     To include more than one field, separate the fields with a double colon. For example: **`attributes=displayName::manager=attributes.manager`**
     
@@ -15407,7 +15062,6 @@ Example 55. 
 2.  To output only the values that you set as Extend context, run the command with the ignore-ouput flag=true. **`!ad-get-user=${user.manager.username} extend-context=manager=attributes.manager::attributes=displayName ignore-output=true`**
 
 ###### Extract indicators
-Abstract
 
 Extract indicators from Cortex Cloud issue fields and enrich them with commands and scripts.
 
@@ -15452,7 +15106,6 @@ Indicator extraction supports the following modes:
 If indicators are not extracted, check whether the indicator mode is set to none. Even if you select the relevant issue fields and the indicators to extract, if the mode is set to none, indicators do not extract.
 
 ###### Update issue fields with playbook tasks
-Abstract
 
 Use the setIssue script to set and update all system issue fields.
 
@@ -15468,7 +15121,6 @@ During the investigation you can set and update issue fields using the setIssue 
 For more information, see Update issue fields
 
 ##### Test your playbook
-Abstract
 
 Set breakpoints, conditional breakpoints, skip tasks, and input and output overrides in the playbook debugger.
 
@@ -15507,7 +15159,7 @@ Breakpoints do not apply to manual tasks, as a manual task will always pause the
 
 1.  To set a breakpoint, go to a task and click on the breakpoint button. When a breakpoint is set, the breakpoint button changes to orange.
     
-    [image: debug-break.png]
+    
     
 2.  After a breakpoint is reached, click the task to override inputs and outputs if needed.
     
@@ -15521,7 +15173,7 @@ Breakpoints do not apply to manual tasks, as a manual task will always pause the
     
     When the playbook reaches a breakpoint, the task has an orange line at the top to indicate the breakpoint.
     
-    [image: breakpoint.png]
+    
     
     Breakpoint alerts are also displayed at the top of the playbook, enabling you to navigate between multiple breakpoints that have been reached in the playbook or sub-playbooks.
     
@@ -15542,7 +15194,7 @@ You can override task inputs or outputs before or during a playbook run to troub
 
 1.  To override an input or output, open the task and hover over any existing input or output. Click Override Input.
     
-    [image: debug-override.png]
+    
     
 2.  Enter a new input or output that will be used only in the debugger. For output overrides, you can enter a value, an array of values, or JSON. For input overrides, you can only enter plain text.
     
@@ -15572,7 +15224,7 @@ How to skip a task
     
     When a task is set to skip, the ‘skip’ button will be orange.
     
-    [image: skip.png]
+    
     
 2.  If the output is required for the playbook to proceed, click the task and override inputs and outputs.
     
@@ -15583,10 +15235,7 @@ Within the debugger panel, you can view the context data during the playbook run
 
 You can see the results of that task in the debugger panel.
 
-[image: debug-results.png]
-
 ###### Troubleshoot playbook performance
-Abstract
 
 Obtain playbook metadata to troubleshoot performance issues.
 
@@ -15596,11 +15245,11 @@ Get data from XQL datasets
 
 You can leverage XQL for flexible and adjustable playbook and script tracking to provide performance and execution data for debugging. The following datasets are available for querying and dashboards:
 
--   playbook\_tasks: Data about task executions within playbooks.
+-   playbook_tasks: Data about task executions within playbooks.
     
--   playbook\_runs: Data about playbook runs and statuses.
+-   playbook_runs: Data about playbook runs and statuses.
     
--   scripts\_and\_commands\_metrics: Data about scripts and commands used in playbook tasks.
+-   scripts_and_commands_metrics: Data about scripts and commands used in playbook tasks.
     
 
 Get playbook metadata using the CLI
@@ -15622,7 +15271,6 @@ Increase the execution timeout for AI prompt tasks
 AI prompt tasks have a default execution timeout of 10 seconds. If an AI prompt task returns a **`504 Error`** with the status **`DEADLINE_EXCEEDED`**, it is likely due to the task requiring more time to process than the default setting allows. To resolve this, open the Task Details pane of the AI task and select the Advanced tab, then increase the Execution timeout (seconds) value based on the complexity of the prompt and the expected length of the LLM response. For example, for complex tasks such as generating a full vulnerability report, you many need to increase the timeout from the 10 second default to 120 seconds or higher.
 
 ##### Manage playbook content
-Abstract
 
 Manage playbook content and avoid concurrent playbook editing.
 
@@ -15632,7 +15280,7 @@ You can save versions of a playbook as you are developing it. When you save a ve
 
 1.  In a playbook, after making changes, click the list next to Save Playbook and then click Save version for current Playbook.
     
-    [image: playbook-save.png]
+    
     
 2.  Enter a description of the change that was made to the current version.
     
@@ -15642,7 +15290,7 @@ You can save versions of a playbook as you are developing it. When you save a ve
     
     1.  Click the icon next to New Playbook. The tooltip displays Version history for all Playbooks.
         
-        [image: playbook-version.png]
+        
         
     2.  Search for the required playbook. The description that was entered when the version was saved should help you locate the version you now require.
         
@@ -15666,7 +15314,6 @@ Manually unlocking a playbook may cause version conflicts. This turns off concur
 The playbook Unlock permission is located under Settings → Configurations → Access Management → Roles. Edit a role and go to Investigation & Response → Automations → Playbooks. Ensure you have View/Edit permissions selected.
 
 ##### Best practices
-Abstract
 
 Best practices for building and working with playbooks.
 
@@ -15720,41 +15367,41 @@ In each task, make sure appropriate logical operations are performed on input da
     
     Tasks take their inputs from the context, not directly from the previous tasks (even if it says from previous tasks). For an example of a task not receiving the right context, see this bug (since fixed) in a playbook:
     
-    [image: enrichmenttasks.png]
+    
     
     The playbook begins by classifying the emails as internal or external. It then checks the reputation of external email addresses if any were found. That happens on the right side of the image. We expect that branch to run only if external addresses are found.
     
-    [image: emailaddressbug.png]
+    
     
     However, we did not apply a filter to the last task that gets the reputation on the right side:
     
     This means that if both internal and external email addresses are found, we proceed with both branches (internal and external) of the playbook, and the task that gets the reputation runs without an applied filter, effectively taking all the emails we have in the inputs. The correct task input should have been:
     
-    [image: transformerfortask.png]
+    
     
 -   **Select Ignore case for input names**.
     
     Use `ignore-case` option where possible, especially when checking Boolean playbook inputs such as `True` which users may end up configuring as `true` with a lowercase t:
     
-    [image: ignorecase.png]
+    
     
 -   When working with two lists, if you need multiple items from list A, which are also in list B, use the `in` filter instead of the `equals` or `contains` filters.
     
     | Correct Method | Incorrect Method |
     | --- | --- |
-    | Get the IP addresses that `are in` the list of inputs. [image: iparein.png] | Get the IP addresses where the addresses `contain` the list. This is incorrect because they don't contain the list, they contain individual items from it. |
+    | Get the IP addresses that `are in` the list of inputs.  | Get the IP addresses where the addresses `contain` the list. This is incorrect because they don't contain the list, they contain individual items from it. |
     
 -   Differentiate between checking if `a specific element exists` versus checking if `an` element equals something. This is a common mistake that can lead to tests working in some situations, but not all.
     
     | Correct Method | Incorrect Method |
     | --- | --- |
-    | Check if `any object` where the NetworkType is External `exists`. [image: conditionforyes.png] | Check if the NetworkType `of the IP object is External`. This is incorrect because the IP object may contain multiple IPs, some internal and some external. [image: getexternal.png] |
+    | Check if `any object` where the NetworkType is External `exists`.  | Check if the NetworkType `of the IP object is External`. This is incorrect because the IP object may contain multiple IPs, some internal and some external.  |
     
 -   Run `one or more tasks` based on the `object types` versus running `either one task or the other` based on `the type of one object`.
     
     | Correct Method | Incorrect Method |
     | --- | --- |
-    | Check the existence of both object types and run tasks for the types found. [image: checkexistence2025.png] | Check if there is either an internal or an external IP, and take only one path even if both types exist. [image: checkeithertype2025.png] |
+    | Check the existence of both object types and run tasks for the types found.  | Check if there is either an internal or an external IP, and take only one path even if both types exist.  |
     
 
 Define playbook loops correctly
@@ -15763,7 +15410,7 @@ Use playbook loops only where needed. Loops are needed when certain actions have
 
 | Correct Method Example | Incorrect Method Example |
 | --- | --- |
-| Either use filters and transformers or loop through each separate indicator to verify they're creating the correct relationships. | A user has a playbook that creates relationships for multiple indicator types. All indicator types and malware families are in their `${inputs.Domain}` and `${inputs.MFam}` playbook inputs. The user wrongly assumes that when creating the relationships, the correct malware families in `${inputs.MFam}` correspond to the correct domains in ${inputs.Domain}. [image: inputa_2025.png] |
+| Either use filters and transformers or loop through each separate indicator to verify they're creating the correct relationships. | A user has a playbook that creates relationships for multiple indicator types. All indicator types and malware families are in their `${inputs.Domain}` and `${inputs.MFam}` playbook inputs. The user wrongly assumes that when creating the relationships, the correct malware families in `${inputs.MFam}` correspond to the correct domains in ${inputs.Domain}.  |
 
 ###### Best practices for optimizing playbook design and performance
 
@@ -15782,8 +15429,6 @@ If you reattach a detached playbook, any customizations you have made to the pla
 Scripts
 
 Update scripts and integration commands in playbook tasks to their most current version. Scripts that have updates or are deprecated are designated by a yellow triangle.
-
-[image: update_scripts.png]
 
 Break up large playbooks into sub-playbooks
 
@@ -15843,17 +15488,16 @@ Get data from XQL datasets
 
 You can leverage XQL for flexible and adjustable playbook and script tracking to provide performance and execution data. The following datasets are available for querying and dashboards:
 
--   playbook\_tasks: Data about task executions within playbooks.
+-   playbook_tasks: Data about task executions within playbooks.
     
--   playbook\_runs: Data about playbook runs and statuses.
+-   playbook_runs: Data about playbook runs and statuses.
     
--   scripts\_and\_commands\_metrics: Data about scripts and commands used in playbook tasks.
+-   scripts_and_commands_metrics: Data about scripts and commands used in playbook tasks.
 
 #### AI Prompts
 On the AI Prompts page (Investigation → Response → Automation → AI Prompts), you can view, edit, and manually create prompts.
 
 ##### AI prompts role-based access control
-Abstract
 
 Configure permissions to access AI prompts.
 
@@ -15867,7 +15511,6 @@ By default, Instance and Account admins have full view/edit permissions enabled.
 | Manage prompts in playbook editor | When selected, the user role can create and edit AI prompts in the playbook editor. |
 
 ##### Use existing prompts
-Abstract
 
 Edit prompts to use in playbooks and run in the War Room.
 
@@ -15939,7 +15582,7 @@ Using an existing prompt allows you to quickly achieve reliable results by lever
             
             -   Lists: "Provide a bulleted list of..." or "Give me 5 key points."
                 
-            -   Tables: "Create a table with columns for \[X\], \[Y\], and \[Z\]."
+            -   Tables: "Create a table with columns for [X], [Y], and [Z]."
                 
             -   Summaries/reports: "Generate a concise summary," "Draft a formal report," or "Write a brief email."
                 
@@ -15981,7 +15624,7 @@ Using an existing prompt allows you to quickly achieve reliable results by lever
             
         
     
-2.  Click Edit. If the prompt you want to use is locked, click [image: three-dots.png] and then select Duplicate Prompt.
+2.  Click Edit. If the prompt you want to use is locked, click ⋮ and then select Duplicate Prompt.
     
     System prompts, are by default locked, which means they are not editable. To edit a system prompt, you need to make a copy.
     
@@ -16015,7 +15658,7 @@ Using an existing prompt allows you to quickly achieve reliable results by lever
         | Add tags | Add any relevant tags to use that help you find relevant information. |
         
     
-7.  (Optional) Click [image: three-dots-dark.png] and select Register new Action to register the prompt as an Action and make it available for Agents. For more information, see Manage actions.Manage actions
+7.  (Optional) Click ⋮ and select Register new Action to register the prompt as an Action and make it available for Agents. For more information, see Manage actions.Manage actions
     
 8.  (Optional) Add the prompt to a playbook.
     
@@ -16034,7 +15677,6 @@ Using an existing prompt allows you to quickly achieve reliable results by lever
         The prompt appears in the playbook editor.
 
 ##### Create a prompt
-Abstract
 
 Create or edit an out-of-the-box prompt, including detach and attach and automation settings.
 
@@ -16129,7 +15771,7 @@ Creating a prompt enables you to turn your own custom requests into reusable, sh
         
         -   Lists: "Provide a bulleted list of..." or "Give me 5 key points."
             
-        -   Tables: "Create a table with columns for \[X\], \[Y\], and \[Z\]."
+        -   Tables: "Create a table with columns for [X], [Y], and [Z]."
             
         -   Summaries/reports: "Generate a concise summary," "Draft a formal report," or "Write a brief email."
             
@@ -16187,7 +15829,7 @@ Creating a prompt enables you to turn your own custom requests into reusable, sh
         The tests are executed in a Playground environment. Review the output generated by the AI to validate the prompt's behavior and ensure it produces the expected results. The output is typically a text summary or another structured format that you have defined.
         
     
-9.  (Optional) Click [image: three-dots-dark.png] and select Register new Action to register the prompt as an Action and make it available for Agents. For more information, see Manage actions.Manage actions
+9.  (Optional) Click ⋮ and select Register new Action to register the prompt as an Action and make it available for Agents. For more information, see Manage actions.Manage actions
     
 10.  (Optional) Add the prompt as an AI prompt task to a playbook.
      
@@ -16206,7 +15848,6 @@ Creating a prompt enables you to turn your own custom requests into reusable, sh
          The prompt appears in the playbook editor.
 
 #### Create an automation rule
-Abstract
 
 Learn how to create an automation rule for an issue.
 
@@ -16259,7 +15900,7 @@ Create an automation rule for issues where conditions from the automation rule a
             
             Quick Actions, by default, run using all available integration instances that contain the command. When selecting a Quick Action for an automation rule, you can instead choose one specific integration instance to use.
             
-            Click [image: playbooks_automation_view.png] to view the description and the tasks of the playbook.
+            Click  to view the description and the tasks of the playbook.
             
             For example, for the IF condition where severity=critical, select the Quick Action - Create Jira Ticket. The automation rule is triggered when a critical severity issue is detected, which then runs the selected automation, the Quick Action - Create Jira Ticket.
             
@@ -16315,14 +15956,12 @@ Automation rules support SBAC (scope-based access control). The following parame
 -   If a rule was added when set to restrictive mode, and then changed to permissive (or vice versa), you will only have view permissions.
 
 #### Scripts
-Abstract
 
 Scripts perform specific automated actions using commands that are used in playbook tasks and in the War Room.
 
 On the Scripts page, you can view, edit, and create scripts in JavaScript, Python, or PowerShell. When creating a script, you can access all Cortex Cloud APIs, including access to alerts, and investigations, and share data to the War Room. Scripts can receive and access arguments and can be password protected.
 
 ##### Use existing scripts
-Abstract
 
 Edit scripts to use in playbooks and run in the War Room.
 
@@ -16413,10 +16052,9 @@ On the Scripts page, you can view/edit common scripts such as:
         | Add tags | Add any relevant tags to use that help you find relevant information. |
         
     
-6.  (Optional) Click [image: three-dots-dark.png] next to the Edit button and select Register new Action to register the script as an action and make it available for agents. For more information, see Manage actions.Manage actions
+6.  (Optional) Click ⋮ next to the Edit button and select Register new Action to register the script as an action and make it available for agents. For more information, see Manage actions.Manage actions
 
 ##### Create a script
-Abstract
 
 Create or edit an out-of-the-box script, including detach and attach and automation settings.
 
@@ -16458,14 +16096,14 @@ Creating custom scripts in Cortex Cloud helps meet your organization’s specifi
         | Add tags | Add any relevant tags to use that help you find relevant information. |
         
     
-7.  (Optional) Click [image: three-dots-dark.png] and select Register new Action to register the script as an Action. For more information, see Manage actions.Manage actions
+7.  (Optional) Click ⋮ and select Register new Action to register the script as an Action. For more information, see Manage actions.Manage actions
     
 
 **Note:**
 
 -   You can enable/disable a script in the Settings without having to duplicate the script.
     
--   You can view recently modified or deleted scripts by clicking the version history for all scripts [image: versionhistory.png].
+-   You can view recently modified or deleted scripts by clicking the version history for all scripts .
     
 
 ###### Basic script settings
@@ -16528,7 +16166,6 @@ Modify parameters, logic, or integrations within a script to adapt it to specifi
 The [Script Helper](https://xsoar.pan.dev/docs/concepts/xsoar-ide#the-script-helper) provides a list of available alphabetically ordered commands and scripts.
 
 ##### Use the Automation Engineer agent to accelerate script development and deployment
-Abstract
 
 Use the AI-powered Automation Engineer agent to create, modify, explore, and understand scripts.
 
@@ -16569,7 +16206,7 @@ How to use the Automation Engineer agent
     
     1.  Click \+ New Script, give the script a name, and click Save.
         
-    2.  Click [image: agentic-assistant-icon.png]. The Agentic Assistant pane opens with the Automation Engineer agent automatically selected.
+    2.  Click . The Agentic Assistant pane opens with the Automation Engineer agent automatically selected.
         
     
     For an existing script:
@@ -16665,7 +16302,7 @@ How to use the Automation Engineer agent
     
       
     
-3.  Click [image: ai-script-prompt-go.png] or **`Enter`** to submit the prompt.
+3.  Click  or **`Enter`** to submit the prompt.
     
     The Agentic Assistant then displays:
     
@@ -16681,7 +16318,7 @@ How to use the Automation Engineer agent
             
         -   An expand icon that shows the new script code with the option to Use this revision.
             
-        -   [image: three-dots-dark.png] that includes Use this revision or Copy code.
+        -   ⋮ that includes Use this revision or Copy code.
             
         
     
@@ -16704,7 +16341,7 @@ How to use the Automation Engineer agent
     
     If you make manual edits in the script and don't save the changes and you then modify the script with the Automation Engineer agent, you are prompted to confirm overwriting the manual edits.
     
-5.  (Optional) Access an earlier script revision by clicking [image: three-dots-dark.png] and then Use this revision on the script preview card of the revision you want to use.
+5.  (Optional) Access an earlier script revision by clicking ⋮ and then Use this revision on the script preview card of the revision you want to use.
     
 6.  Continue modifying and submitting prompts until the script works as intended.
     
@@ -16736,7 +16373,6 @@ How to use the Automation Engineer agent
         | Add tags | Add any relevant tags to use that help you find relevant information. |
 
 ##### Change the Docker image in a script
-Abstract
 
 Use Docker to run Python scripts in a controlled environment in Cortex Cloud.
 
@@ -16755,7 +16391,6 @@ Change the Docker image for a script
 3.  Save your changes.
 
 ###### Connect an engine to an image registry
-Abstract
 
 Connect via an engine to your own authenticated Docker image registry.
 
@@ -16791,7 +16426,6 @@ This procedure uses the `--username` and `--password` command line options to pa
 4.  In the tenant, set up the engine to pull images from a private image registry.
 
 #### Context data
-Abstract
 
 Use context data to assist with the investigation and remediation process.
 
@@ -16800,7 +16434,7 @@ Context data is a map (dictionary) that stores structured data related to an iss
 ##### Issue context data
 When an issue is generated, context data is captured from the issue fields and from any automations, such as commands, playbooks, and scripts. Context data includes keys (strings) and values (numbers, maps, arrays, and strings).
 
-To see context data for an issue, open the issue card and click the Issue Context Data icon [image: issue_context_data_icon.png].
+To see context data for an issue, open the issue card and click the Issue Context Data icon .
 
 Consider the following information when working with context data:
 
@@ -16831,7 +16465,6 @@ Adding context data from issues to a parent case can help you with the following
 For more information, see Add context data to a case.
 
 ##### Search context data
-Abstract
 
 Use Query to search for specific items in the context data of a case or issue.
 
@@ -16839,26 +16472,24 @@ You can use Query to search within the context data JSON for specific items and 
 
 Example context:
 
-```
 {
   "HelloWorld": {
-    "Alerts": \[
+    "Alerts": [
       {
         "name": "Example 1",
-        "alert\_status": "ACTIVE"
+        "alert_status": "ACTIVE"
       },
       {
         "name": "Example 2",
-        "alert\_status": "CLOSED"
+        "alert_status": "CLOSED"
       },
       {
         "name": "Example 3",
-        "alert\_status": "ACTIVE"
+        "alert_status": "ACTIVE"
       }
-    \]
+    ]
   }
 }
-```
 
 Search examples:
 
@@ -16871,7 +16502,6 @@ Search examples:
 -   `${HelloWorld.Alert(val.alert_status == 'ACTIVE').name}` fetches the HelloWorld.Alert.name of all alerts in context with status "ACTIVE".
 
 ##### Add context data to an issue
-Abstract
 
 Use a script, command, or playbook to add context data to an issue to be used in playbooks or other automations.
 
@@ -16906,9 +16536,7 @@ Example 59. Example
 
 The following example adds the key and value `hello:world` to the issue context data.
 
-```
 demisto.executeCommand("Set", {"key":"hello", "value":"world"})
-```
 
   
 
@@ -16920,7 +16548,6 @@ Example 60. Example
 
 An issue's context data contains the following values:
 
-```
 {  
    "Account":
     {
@@ -16928,15 +16555,11 @@ An issue's context data contains the following values:
       "lastName": "Jones",
     }
 }
-```
 
 For an automation, you need to use the full name value. You can use the `Set` script to add an new `fullName` value to the JSON:
 
-[image: addcontextdata.png]
-
 Result:
 
-```
 {  
    "Account":
     {
@@ -16945,10 +16568,8 @@ Result:
       "lastName": "Jones",
     }
 }
-```
 
 ##### Add context data to a case
-Abstract
 
 Use a script, command, or playbook to add context data to a case to be used in playbooks or other automations.
 
@@ -17017,9 +16638,7 @@ Example 63. Example
 
 The following example creates a new key name `AuditID` with a `90210` value to your script.
 
-```
 demisto.executeCommand("setParentIncidentContext", {"key":"AuditID", "value":"90210"})
-```
 
   
 
@@ -17031,10 +16650,7 @@ Example 64. 
 
 The following example adds the TicketID to the case context. To see a full use case that includes this standard task, see Use context data in a playbook.
 
-[image: jira-task-ticket.png]
-
 ##### Delete context data from a case
-Abstract
 
 You can delete context data from a case by running a command in the Case War Room or the issue War Room.
 
@@ -17042,7 +16658,7 @@ Run the `!deleteParentIncidentContext` command to delete all context data or a s
 
 Use the issue War Room
 
-1.  Identify an issue and click [image: Investigate_icon.png] to Investigate the issue.
+1.  Identify an issue and click  to Investigate the issue.
     
 2.  In the issue investigation panel, select the War Room tab.
     
@@ -17060,12 +16676,9 @@ Example 65. Example
 
 The following example deletes the key and value `hello:world` from the case or issue context.
 
-```
 !deleteParentIncidentContext key="hello" value="world"
-```
 
 ##### Use context data in a playbook
-Abstract
 
 Learn how to use context data in playbook tasks, and how to update context data from a playbook.
 
@@ -17134,34 +16747,29 @@ In this use case, a Jira ticketing system is used to manage issues and reduce du
 
 **Solution:** This playbook checks existing endpoints and Case IDs and decides whether to create a new ticket or to add the data to an existing ticket, and therefore, reduces duplicate tickets in the case.
 
-[image: playbook-jira.png]
-
 The playbook flow is described in the following steps:
 
 1.  After checking that the Jira v3 integration is enabled, in this task the playbook adds the `EndpointFromAlerts` key to the case context by retrieving the `alert.hostname` and using the `setParentIncidentContext` script.
     
-    [image: jira-task-1.png]
+    
     
 2.  In this task, the playbook checks if there is an open ticket for the case by retrieving the `parentIncidentContext.TicketID`.
     
-    [image: jira-task-2.png]
+    
     
 3.  If there is no open ticket, a new ticket is created in Jira and the TicketID is added to the case context.
     
-    [image: jira-task-ticket.png]
+    
     
 4.  If there is an open ticket, this task checks whether there is an open ticket for the endpoint by comparing the `alert.hostname` (issue endpoint) to the `parentIncidentContent.EndpointFromAlerts` key.
     
-    [image: jira-task-3.png]
+    
     
 5.  After retrieving the `alert.hostname` in the `parentIncidentContext.EndpointFromAlerts` context, if there is no open ticket for the endpoint, the playbook updates the Jira ticket for the case.
     
     In this example, you can see that the `EndpointFromAlerts` and `TicketID` has been added to the case context data.
-    
-    [image: jira-results.png]
 
 #### Lists
-Abstract
 
 Use lists to store data for use in playbooks and scripts.
 
@@ -17188,7 +16796,6 @@ The following are use cases for lists: 
 -   **Prioritizing Case Response**: Create lists to identify critical assets, such as important users or servers. This helps improve incident management by prioritizing the most important incidents.
 
 ##### Create a list
-Abstract
 
 Create a list that can be accessed later, such as in a playbook script or managed in the CLI (War Room or Playground).
 
@@ -17221,7 +16828,6 @@ To create a Text, Markdown, HTML, CSS, or JSON list type:
 If you want to edit a list from a content pack, you need to duplicate or detach a list. Detached lists do not receive updated content in subsequent Cortex Cloud content releases. To retain an updated list, reattach it.
 
 ##### List commands
-Abstract
 
 Use list commands in the War Room, Playground, playbooks, and scripts.
 
@@ -17239,93 +16845,90 @@ Example 68. 
 
 In this example, a manageOOOusers script uses the **`getList`**, **`createList`**, and **`setList`** commands.
 
-```
-register\_module\_line('ManageOOOusers', 'start', \_\_line\_\_())
+register_module_line('ManageOOOusers', 'start', __line__())
 
-def \_get\_current\_user():
-    current\_username = demisto.executeCommand("getUsers", {"current": True})
-    if isError(current\_username):
-        demisto.debug(f"failed to get current username - {get\_error(current\_username)}")
+def _get_current_user():
+    current_username = demisto.executeCommand("getUsers", {"current": True})
+    if isError(current_username):
+        demisto.debug(f"failed to get current username - {get_error(current_username)}")
         return
     else:
-        return current\_username\[0\]\["Contents"\]\[0\]\['username'\]
+        return current_username[0]["Contents"][0]['username']
 
 def main():
     # get current time
     now = datetime.now()
 
     # args
-    list\_name = demisto.getArg("listname")
+    list_name = demisto.getArg("listname")
     username = demisto.getArg("username")
 
     option = demisto.getArg("option")
-    days\_off = now + timedelta(days=int(demisto.getArg("daysoff")))
-    off\_until = days\_off.strftime("%Y-%m-%d")
+    days_off = now + timedelta(days=int(demisto.getArg("daysoff")))
+    off_until = days_off.strftime("%Y-%m-%d")
 
     # update list name to start with 'OOO', so we can't overwrite other lists with this
-    if not list\_name.startswith("OOO"):
-        list\_name = f"OOO {list\_name}"
+    if not list_name.startswith("OOO"):
+        list_name = f"OOO {list_name}"
 
-    current\_user = \_get\_current\_user()
-    if not current\_user and not username:
-        return\_error('Failed to get current user. Please set the username argument in the script.')
+    current_user = _get_current_user()
+    if not current_user and not username:
+        return_error('Failed to get current user. Please set the username argument in the script.')
 
     if not username:
         # Current user was found, running script on it.
-        username = current\_user
+        username = current_user
     else:
         # check if provided username is a valid user
         users = demisto.executeCommand("getUsers", {})
         if isError(users):
-            return\_error(f'Failed to get users: {str(get\_error(users))}')
-        users = users\[0\]\['Contents'\]
+            return_error(f'Failed to get users: {str(get_error(users))}')
+        users = users[0]['Contents']
 
-        users = \[x\['username'\] for x in users\]
+        users = [x['username'] for x in users]
         if username not in users:
-            return\_error(message=f"{username} is not a valid user")
+            return_error(message=f"{username} is not a valid user")
 
     # get the out of office list, check if the list exists, if not create it:
-    ooo\_list = demisto.executeCommand("getList", {"listName": list\_name})\[0\]\["Contents"\]
-    if isError(ooo\_list):
-        return\_error(f'Failed to get users out of office: {str(get\_error(ooo\_list))}')
+    ooo_list = demisto.executeCommand("getList", {"listName": list_name})[0]["Contents"]
+    if isError(ooo_list):
+        return_error(f'Failed to get users out of office: {str(get_error(ooo_list))}')
 
-    if "Item not found" in ooo\_list:
-        demisto.results(demisto.executeCommand("createList", {"listName": list\_name, "listData": \[\]}))
-        ooo\_list = demisto.executeCommand("getList", {"listName": list\_name})\[0\]\["Contents"\]
+    if "Item not found" in ooo_list:
+        demisto.results(demisto.executeCommand("createList", {"listName": list_name, "listData": []}))
+        ooo_list = demisto.executeCommand("getList", {"listName": list_name})[0]["Contents"]
 
     # check status of the list, and add/remove the user from it.
-    if not ooo\_list:
-        list\_data = \[\]
+    if not ooo_list:
+        list_data = []
     else:
-        list\_data = json.loads(ooo\_list)
+        list_data = json.loads(ooo_list)
     if option == "add":
         # check if user is already in the list, and remove, to allow updating
-        list\_data = \[i for i in list\_data if not (i\['user'\] == username)\]
-        list\_data.append({"user": username,
-                          "offuntil": off\_until,
-                          "addedby": current\_user if current\_user else 'DBot'})
+        list_data = [i for i in list_data if not (i['user'] == username)]
+        list_data.append({"user": username,
+                          "offuntil": off_until,
+                          "addedby": current_user if current_user else 'DBot'})
     else:
         # remove the user from the list.
-        list\_data = \[i for i in list\_data if not (i\['user'\] == username)\]
+        list_data = [i for i in list_data if not (i['user'] == username)]
 
-    set\_list\_res = demisto.executeCommand("setList", {"listName": list\_name, "listData": json.dumps(list\_data)})
-    if isError(set\_list\_res):
-        return\_error(f'Failed to update the list {list\_name}: {str(get\_error(set\_list\_res))}')
+    set_list_res = demisto.executeCommand("setList", {"listName": list_name, "listData": json.dumps(list_data)})
+    if isError(set_list_res):
+        return_error(f'Failed to update the list {list_name}: {str(get_error(set_list_res))}')
 
     # welcome back, or see ya later!
     if option == "add":
-        demisto.results(f"Vacation mode engaged until {off\_until}, enjoy the time off {username}")
+        demisto.results(f"Vacation mode engaged until {off_until}, enjoy the time off {username}")
     else:
         demisto.results(f"Welcome back {username}, it's like you never left!")
 
-if \_\_name\_\_ in ('\_\_builtin\_\_', 'builtins', '\_\_main\_\_'):
+if __name__ in ('__builtin__', 'builtins', '__main__'):
     main()
 
-register\_module\_line('ManageOOOusers', 'end', \_\_line\_\_())
-```
+register_module_line('ManageOOOusers', 'end', __line__())
 
 ##### Use cases: JSON lists
-Abstract
 
 Manage JSON lists in Cortex Cloud that can be accessed by automations, playbooks, etc. List commands, lists arrays separators delimiters
 
@@ -17356,13 +16959,13 @@ Create a JSON list and use the **Set** automation to create a new context key th
         {    
             "domain": {
                 "name": "mwidomain",
-                "prod\_mode": "prod",
+                "prod_mode": "prod",
                 "user": "weblogic",
                 "admin": {
                     "servername": "AdminServer",
                     "listenport": "8001"
                 },
-                "machines": \[
+                "machines": [
                     {
                         "refname": "Machine1",
                         "name": "MWINODE01"
@@ -17371,8 +16974,8 @@ Create a JSON list and use the **Set** automation to create a new context key th
                         "refname": "Machine2",
                         "name": "MWINODE02"
                     }
-                \],
-                "clusters": \[
+                ],
+                "clusters": [
                     {
                         "refname": "Cluster1",
                         "name": "App1Cluster",
@@ -17383,8 +16986,8 @@ Create a JSON list and use the **Set** automation to create a new context key th
                         "name": "App2Cluster",
                         "machine": "Box2"
                     }
-                \],
-                "servers": \[
+                ],
+                "servers": [
                     {
                         "name": "ms1",
                         "port": 9001,
@@ -17397,7 +17000,7 @@ Create a JSON list and use the **Set** automation to create a new context key th
                         "machine": "Box2",
                         "clusterrefname": "Cluster2"
                     }
-                \]
+                ]
             }
         }
         ```
@@ -17418,7 +17021,7 @@ Create a JSON list and use the **Set** automation to create a new context key th
         
     5.  In the key field, define a context key name for the data. For example, JSONData.
         
-        [image: Screenshot_2024-02-22_at_13_00_37.png]
+        
         
     6.  In the value field, set the list you want to extract by clicking the curly brackets.
         
@@ -17432,7 +17035,7 @@ Create a JSON list and use the **Set** automation to create a new context key th
          
          In this example, the test results have found the list data.
          
-         [image: Screenshot_2024-02-22_at_14_08_00.png]
+         
          
     11.  When the test completes, click Save.
          
@@ -17446,7 +17049,7 @@ Create a JSON list and use the **Set** automation to create a new context key th
         
         The key you defined, JSONData, holds the data in context from the JSON object.
         
-        [image: Screenshot_2024-02-22_at_14_40_34.png]
+        
         
 
 ###### Extract a subset of the data
@@ -17479,7 +17082,7 @@ In a playbook, you can extract subsets of context data to analyze a specific inf
         
     2.  The key you defined (JSONDataSubset) holds the subset of the data in context from the JSON object.
         
-        [image: work-with-json-lists-subset-8x.png]
+        
         
 
 ###### Filter extracted data
@@ -17496,13 +17099,13 @@ You can filter the extracted data subset to analyze it on a more granular level.
     
     In this example, retrieve the list of machines named **`Box1`** from **`Test1`** list by setting the filter **`lists.Test1.domain.servers.machine Equals Box1`**.
     
-    [image: work-with-json-lists-filter-data-8-x.png]
+    
     
 5.  Click Test.
     
 6.  Check whether the data subset was accessed successfully by selecting the data source from an issue. You can see the results returned **`machine: Box1`**.
     
-    [image: lists-test.png]
+    
     
 
 ###### Apply transformers to extracted data
@@ -17524,12 +17127,11 @@ In general, in a playbook task, you can transform (apply changes) to the data ex
         The **`To upper case (String)`** transformer does not work on lists, only on individual elements. Therefore, the **`Get index (General)`** transformer should be applied before adding the **`To upper case (String)`** transformer.
         
     
-    [image: lists-trans.png]
+    
     
 4.  In the Fetch Data field, select an issue to test and click Test.
 
 ##### Transform a list into an array
-Abstract
 
 Create a transformer to split a list into an array when adding or editing a task in a playbook or when mapping an integration instance in Cortex Cloud.
 
@@ -17564,14 +17166,12 @@ Create a transformer to split a list into an array, add or edit a task in a _pla
 7.  Save the task and playbook.
 
 #### Integrations
-Abstract
 
 Configure and use integrations to connect with third-party systems and automate workflows.
 
 Integrations enable you to extend Cortex Cloud. Integrations are included in content packs and must be configured for use.
 
 ##### Integrations in Cortex Cloud
-Abstract
 
 Integrations enable you to connect with third-party services and provide opportunities for increased automation.
 
@@ -17594,7 +17194,6 @@ On the Automation and feed integrations page, you can do the following:
 You can view the version history for all installed integrations (the last 100 changes) by clicking the Version History button at the top of the .
 
 ##### Add an integration instance
-Abstract
 
 Configure an integration instance to use integration commands in playbooks, the case and issue War Rooms, and the Playground.
 
@@ -17626,7 +17225,6 @@ Before you begin:
 6.  By default, the integration instance is used whenever the integration is called. If you want to only use the integration instance when specified with the `using` argument in a playbook or the CLI, change the integration instance setting from Always to On Demand. For example, you might have two instances of an integration and want to use one instance as the default and the other instance only for manual testing on demand.
 
 ##### Use integration commands in the CLI
-Abstract
 
 Use integration commands within the War Room or Playground.
 
@@ -17645,7 +17243,6 @@ When running commands from the CLI, the results are returned in the War Room or 
 In the Playground, you can clear the context data, if needed, which deletes everything in the Playground context data, but does not affect the actual issue or case. To clear the context, run `!DeleteContext all=yes'` from the CLI or click Clear Context Data while viewing the context data.
 
 ##### Troubleshoot Integrations
-Abstract
 
 Learn how to troubleshoot your integration in Cortex Cloud.
 
@@ -17659,7 +17256,7 @@ The Troubleshooting Instances dashboard provides you with insight into command e
     
     In the following example, you receive a 401 unauthorized error code after testing the integration.
     
-    [image: integration-error.png]
+    
     
     Click Run Test & Download Debug Log, to download the debug file locally. You can verify what server the URL request is being forwarded to and any other reasons as to why you received this error code. The 401 unauthorized error code usually relates to invalid error credentials, expired tokens, or incorrect API settings.
     
@@ -17704,7 +17301,6 @@ How to add credentials to an integration instance
     4.  Test and Save & Exit the integration instance.
 
 #### Engines
-Abstract
 
 Install, manage, configure, and troubleshoot engines.
 
@@ -17742,7 +17338,6 @@ An engine can be used for the following purposes:
     When you add an engine to a load-balancing group, you cannot use that engine separately. The engine does not appear in the engines menu when configuring an integration instance, but you can choose the load-balancing group.
 
 ##### Engine requirements
-Abstract
 
 Hardware, OS, and required URLs for engines.
 
@@ -17797,7 +17392,6 @@ If you have configured a range of Approved IP Ranges under Allowed Sessions on t
 | Docker | https://registry-1.docker.io; https://registry.fedoraproject.org; https://registry.access.redhat.com; https://docker.io; https://registry.docker.io; https://auth.docker.io This URL may change at Docker’s discretion.; https://production.cloudflare.docker.com This URL may change at Docker’s discretion. | 443 | Outbound |
 
 ##### Install an engine
-Abstract
 
 Install, deploy and configure Cortex Cloud engines.
 
@@ -17930,17 +17524,17 @@ For DEB/RPM engines, Python (including 3.x) and the containerization platform (D
     5.  In `/etc/systemd/system` edit the `d1.service` file as follows (adjust the directory and the name of the binary file if needed).
         
         ```
-         \[Unit\]
+         [Unit]
         Description=Demisto Engine Service
         After=network.target
-        \[Service\]
+        [Service]
         Type=simple
         User=demisto
         WorkingDirectory=/usr/local/demisto
-        ExecStart=/usr/local/demisto/d1\_linux\_amd64
+        ExecStart=/usr/local/demisto/d1_linux_amd64
         EnvironmentFile=/etc/environment
         Restart=always
-        \[Install\]
+        [Install]
         WantedBy=multi-user.target
         ```
         
@@ -17971,7 +17565,6 @@ For DEB/RPM engines, Python (including 3.x) and the containerization platform (D
 7.  (Optional) After installing the engine, you may want to set up a proxy, set up Docker hardening, configure the number of workers for the engine, or perform other related engine configurations. For more information, see Configure Engines. You can also configure an integration instance to run on the engine you created.
 
 ###### Docker
-Abstract
 
 Cortex Cloud Docker installation, configuration, security, and troubleshooting guides.
 
@@ -17990,7 +17583,6 @@ Each Python/PowerShell script or integration has a specific Docker image listed 
 Docker images can be [downloaded](https://xsoar.pan.dev/docs/reference/articles/download-packs-offline) together with their relevant content packs for offline installation.
 
 ###### Install Docker
-Abstract
 
 Install Docker on engines and troubleshoot the installation.
 
@@ -18067,7 +17659,6 @@ To verify that the operating system user (demisto) has the necessary permissions
 If everything is configured properly you will receive the following output. `Python 2.7.14`.
 
 ###### Install Docker distribution for Red Hat on an engine server
-Abstract
 
 Install Docker distribution for Red Hat.
 
@@ -18131,13 +17722,10 @@ For more information about the different packages available to install on Red Ha
     4.  Open any issue and in the issue War Room CLI, run the **`/reset_containers`** command.
 
 ###### Docker image security
-Abstract
 
 Information about Cortex Cloud Docker image security practices.
 
 The project that contains the source Dockerfiles used to build the images and the accompanying files is fully open source and [available for review](https://github.com/demisto/dockerfiles). Cortex Cloud uses the secure Docker Hub registry for its [Docker images](https://hub.docker.com/u/demisto). However, in an Engine environment, you can also use the PANW registry . You can view the Docker trust information for each image at the [image info branch](https://github.com/demisto/dockerfiles-info/blob/master/README.md).Use the Cortex XSOAR Container Registry
-
-[image: docker-trust.png]
 
 We automatically update our open-source Docker images and their accompanying dependencies (OS and Python). Examples of automatic updates can be viewed on [GitHub](https://github.com/demisto/dockerfiles/pull/700).
 
@@ -18169,7 +17757,6 @@ In each version release (every 3 months,) we publish a new version of our conten
 -   If you scanned the Docker images locally, and found some critical CVE’s - Make sure you use the latest version of the pack, as it should have the latest version of the image. In addition, purge the old and unused images with vulnerabilities.
 
 ###### Docker FAQs
-Abstract
 
 Frequently asked questions (FAQ) about Docker in Cortex Cloud.
 
@@ -18271,9 +17858,9 @@ If you have Docker networking issues when using an engine, you need to modify th
     {
     	"LogLevel": "info",
     	"LogFile": "/var/log/demisto/d1.log",
-    	"EngineURLs": \[
+    	"EngineURLs": [
     	"wss://1234.demisto.live/d1ws"
-    	\],
+    	],
     					"BindAddress": ":443",
     	"EngineID": "XYZ",
     	"ServerPublic": "ABC"
@@ -18324,7 +17911,6 @@ The installed Docker package and its dependencies are not up to date.
     | Debian | **`apt-get update docker`** |
 
 ###### Configure Docker pull rate limit
-Abstract
 
 Configure the Docker pull rate limit on public images. Create a Docker user account and receive a higher pull limit.
 
@@ -18345,7 +17931,6 @@ To increase the limit:
 3.  (Optional) Instead of manually logging in to Docker to pull images, you can edit the [Docker config file](https://docs.docker.com/engine/reference/commandline/login/) to use credentials from the file or from a credential store.
 
 ###### Change the Docker installation folder
-Abstract
 
 Instructions for changing the default Docker folder.
 
@@ -18382,7 +17967,6 @@ To change the Docker folder:
     **`sudo service docker start`**
 
 ###### Docker hardening guide
-Abstract
 
 Use the Docker Hardening Guide to configure the Cortex Cloud settings when running Docker containers.
 
@@ -18657,7 +18241,7 @@ If **`swap limit capabilities`** is enabled (see **How to check if your system s
         import os
         
         
-        def big\_string(size):
+        def big_string(size):
             sys.stdin = os.fdopen(0, "r")
             s = 'a' \* 1024
             while len(s) < size:
@@ -18666,11 +18250,11 @@ If **`swap limit capabilities`** is enabled (see **How to check if your system s
         
         
         size = 1 \* 1024 \* 1024 \* 1024
-        p = Process(target=big\_string, args=(size, ))
+        p = Process(target=big_string, args=(size, ))
         p.start()
         p.join()
         if p.exitcode != 0:
-            return\_error("Return code from sub process indicates failure: {}".format(p.exitcode))
+            return_error("Return code from sub process indicates failure: {}".format(p.exitcode))
         else:
             print("Success allocating memory of size: {}".format(size))
         ```
@@ -18734,7 +18318,6 @@ Before running the command, ensure that your engine is up and running.
 2.  Verify the Docker container has been hardened according to recommended settings. In the Case/Issue War Room CLI, run the **`!DockerHardeningCheck`** command.
 
 ###### Podman
-Abstract
 
 Run Podman containers instead of Docker for RHEL v8.
 
@@ -18759,7 +18342,7 @@ The new storage directory needs to be owned by the **demisto** user, otherwise, 
 
 **Warning:**
 
-Do not use NAS storage or a temporary (tmpfs) directory for the **`graphroot`** setting. The **`graphroot`** needs to be a local, non-temporary directory for Podman to work. For more information, see [https://en.wikipedia.org/wiki/Network-attached\_storage](https://en.wikipedia.org/wiki/Network-attached_storage).
+Do not use NAS storage or a temporary (tmpfs) directory for the **`graphroot`** setting. The **`graphroot`** needs to be a local, non-temporary directory for Podman to work. For more information, see [https://en.wikipedia.org/wiki/Network-attached_storage](https://en.wikipedia.org/wiki/Network-attached_storage).
 
 **Tip:**
 
@@ -18790,7 +18373,7 @@ We recommend reserving 150 GB for container storage, either in the /home partiti
     
     Alternatively, the **`runroot`** setting may be set to some temporary directory that is accessible by the user demisto. If you choose to set the **`runroot`**, it must be a directory that is mounted as tmpfs (temporary filesystem), unlike the graphroot.
     
-4.  Under \[storage.options.overlay\], uncomment the following line (remove the # from the start):
+4.  Under [storage.options.overlay], uncomment the following line (remove the # from the start):
     
     **`mount_program = "/usr/bin/fuse-overlayfs"`**
     
@@ -18803,7 +18386,6 @@ We recommend reserving 150 GB for container storage, either in the /home partiti
     **`sudo -u demisto podman info | grep graph`**
 
 ###### Install Podman
-Abstract
 
 Install Podman on engines for RHEL v8 or later.
 
@@ -18908,14 +18490,12 @@ When installing a new engine on RHEL 8 or later, the shell installer configures 
     **`sudo systemctl restart d1_<Engine _name>`**
 
 ###### Migrate From Docker to Podman
-Abstract
 
 Switch from Docker to Podman when installing an engine for RHEL 8 or later.
 
 Although Podman is set up automatically in an engine installation, it is possible to migrate from Docker to Podman in an existing engine. Follow the Podman installation instructions to migrate.
 
 ###### Troubleshoot Podman
-Abstract
 
 Troubleshoot process leaks or installation issues for Podman in Cortex Cloud,
 
@@ -18940,10 +18520,8 @@ To fix this issue:
 
 When Podman fails to run with an “Invalid argument” error, such as:
 
-```
-ERRO\[0000\] running \`/usr/bin/newuidmap 15936 0 1029 1 1 165536 65536 65537 200000 65536\`: newuidmap: write to uid\_map failed: Invalid argument
+ERRO[0000] running \`/usr/bin/newuidmap 15936 0 1029 1 1 165536 65536 65537 200000 65536\`: newuidmap: write to uid_map failed: Invalid argument
 Error: cannot set up namespace using "/usr/bin/newuidmap": exit status 1
-```
 
 This can be caused by duplicate lines for Cortex Cloud in `/etc/subuid` and `/etc/subgid`.
 
@@ -19185,7 +18763,6 @@ When installing a Cortex Cloud engine on a RHEL system (version 8 or later), or 
     -   `podman system migrate`
 
 ##### Manage engines
-Abstract
 
 Manage engines and load balancing groups.
 
@@ -19203,7 +18780,6 @@ You can do the following:
 | Delete Engine | Deletes an engine from Cortex Cloud. To remove the engine from your remote machine, see Remove an engine. |
 
 ##### Upgrade an engine
-Abstract
 
 Upgrade an engine on Cortex Cloud or directly on the remote machine.
 
@@ -19226,10 +18802,10 @@ The option to set custom upgrade variables is only available for shell installat
 
 | Variable | Description | Default |
 | --- | --- | --- |
-| https\_proxy | The URL of a web proxy server to use when connecting with the server. The variable name is case sensitive. Other common proxy variables, such as `http_proxy` or `HTTPS_PROXY` are ignored. Use `https_proxy` even if your proxy address begins with `http://`. | Not set |
-| SERVER\_URLS | The URL to connect to for hash validation. Set this variable if your tenant's address has changed. Use your tenant's API address, with the `api-` prefix added, instead of the UI address. For example: `SERVER_URLS="api-example.us.paloaltonetworks.com"`. Include only the IP/hostname and, optionally, a port. Do not include `https://` or any path at the end. | Public tenant URL |
-| TRUST\_ANY\_CERTIFICATE | Determines whether the connection's SSL certificate must be trusted. This variable must be empty `""` to require certificate trust. When set to `-k`, trusts any certificate. We recommend enabling this setting. Verify first that the engine host has the required CA root certificate, especially if using a proxy. | \-k |
-| XSOAR\_ENGINE\_AUTO\_UPGRADE\_TMP\_DIR | Specifies a directory to use for extracting upgrade files and executing the upgrade. For example, `XSOAR_ENGINE_AUTO_UPGRADE_TMP_DIR="/root/tmp/engine1"` For environments with multiple engines, each engine must use a different temporary directory. This variable must be set if you used the `--target` option in the shell installer. | By default, a random directory under the `/tmp` folder is used. |
+| https_proxy | The URL of a web proxy server to use when connecting with the server. The variable name is case sensitive. Other common proxy variables, such as `http_proxy` or `HTTPS_PROXY` are ignored. Use `https_proxy` even if your proxy address begins with `http://`. | Not set |
+| SERVER_URLS | The URL to connect to for hash validation. Set this variable if your tenant's address has changed. Use your tenant's API address, with the `api-` prefix added, instead of the UI address. For example: `SERVER_URLS="api-example.us.paloaltonetworks.com"`. Include only the IP/hostname and, optionally, a port. Do not include `https://` or any path at the end. | Public tenant URL |
+| TRUST_ANY_CERTIFICATE | Determines whether the connection's SSL certificate must be trusted. This variable must be empty `""` to require certificate trust. When set to `-k`, trusts any certificate. We recommend enabling this setting. Verify first that the engine host has the required CA root certificate, especially if using a proxy. | \-k |
+| XSOAR_ENGINE_AUTO_UPGRADE_TMP_DIR | Specifies a directory to use for extracting upgrade files and executing the upgrade. For example, `XSOAR_ENGINE_AUTO_UPGRADE_TMP_DIR="/root/tmp/engine1"` For environments with multiple engines, each engine must use a different temporary directory. This variable must be set if you used the `--target` option in the shell installer. | By default, a random directory under the `/tmp` folder is used. |
 
 Test upgrade connectivity
 
@@ -19237,7 +18813,7 @@ Test upgrade connectivity
     
     ```
     cd /usr/local/demisto
-    echo test > d1\_upgrade.sh
+    echo test > d1_upgrade.sh
     ```
     
     After you create the file, the upgrade cron job removes the file within one minute.
@@ -19281,7 +18857,6 @@ If you didn't use the Shell installer, you need to remove the engine and do a fr
 Troubleshoot engines.
 
 ##### Remove an engine
-Abstract
 
 Remove an engine by running the relevant command, depending on your operating system.
 
@@ -19296,7 +18871,6 @@ You can remove an engine when it is no longer needed.
     | SH | Remove an Engine: **``sudo _`<engine-file-path>`_ -- -purge``** |
 
 ##### Configure engines
-Abstract
 
 Configure Cortex Cloud engines by editing the d1.conf file or modifying the configuration in the UI (for shell installations).
 
@@ -19328,7 +18902,7 @@ Ensure that the data is in JSON format. The properties that you specify override
     
 3.  In the JSON formatted configuration dialog box, modify the properties as required. For more information, see Common properties when editing an engine configuration.
     
-    [image: edit_engine_config.png]
+    
     
 
 Common properties when editing an engine configuration
@@ -19349,7 +18923,6 @@ The following table describes the common properties when editing an engine confi
 | **`engine.handshake.max.retries.slow`** | String | The maximum time in minutes the engine will try to reconnect after losing communication. Default is 600 (10 hours). \*\*Note:\*\* If the engine loses communication for longer than this time, it will disconnect and you need to restart the service. | The engine `d1.conf` file. |
 
 ###### Configure the engine to use a web proxy
-Abstract
 
 Configure a Cortex Cloud engine to use a web proxy by editing the d1.conf file.
 
@@ -19370,9 +18943,9 @@ You need to [configure Docker](https://docs.docker.com/config/daemon/systemd/#ht
 2.  If the environment variables are not set, or you wish to use different settings than those specified in the environment variables, set the configuration with your specific proxy details in the **`d1.conf`** file. For example:
     
     ```
-    {"http\_proxy": "http://proxy.host.local:8080",
-    "https\_proxy": "https://proxy.host.local:8443"
-    "no\_proxy": "https://proxy.host.local:8020"}
+    {"http_proxy": "http://proxy.host.local:8080",
+    "https_proxy": "https://proxy.host.local:8443"
+    "no_proxy": "https://proxy.host.local:8020"}
     ```
     
 3.  Save the file.
@@ -19388,7 +18961,6 @@ You need to [configure Docker](https://docs.docker.com/config/daemon/systemd/#ht
 5.  Save the file.
 
 ###### Configure the engine to call the server without using a proxy
-Abstract
 
 Configure an engine to call the server without using a proxy.
 
@@ -19405,13 +18977,12 @@ In some cases, due to specific environment architecture, you may need to configu
     | **`engine.to.server.proxy`** | **`false`** (default is **`true`**) |
 
 ###### Use NGINX as a reverse proxy
-Abstract
 
 Use NGINX as a reverse proxy to the Cortex Cloud engines.
 
 NGINX can act as a reverse proxy that sits between internal applications and external clients, forwarding client requests to the appropriate application. Using NGINX as a reverse proxy in front of the engine enables you to provide network segmentation where the proxy can be put on a public subnet (DMZ) while the engine can be on a private subnet, only accepting traffic from the proxy. Additionally, NGINX provides a number of advanced load balancing and acceleration features that you can utilize.
 
-If you want to use an engine (d1) through the reverse proxy, you need to modify `EngineURLs` in the `d1.conf` file to point to the host and port the NGINX server is listening on. In addition to supporting engine upgrades from the UI, edit the `/usr/local/demisto/upgrade.conf` file to add the `SERVER_URLS` setting. `SERVER_URLS` should be set to the proxy’s network address (host and port). For example: `SERVER_URLS="10.0.0.30:1234"`. For SERVER\_URLS, include only the IP/hostname and, optionally, a port. Do not include https:// or any path at the end.
+If you want to use an engine (d1) through the reverse proxy, you need to modify `EngineURLs` in the `d1.conf` file to point to the host and port the NGINX server is listening on. In addition to supporting engine upgrades from the UI, edit the `/usr/local/demisto/upgrade.conf` file to add the `SERVER_URLS` setting. `SERVER_URLS` should be set to the proxy’s network address (host and port). For example: `SERVER_URLS="10.0.0.30:1234"`. For SERVER_URLS, include only the IP/hostname and, optionally, a port. Do not include https:// or any path at the end.
 
 Install NGINX
 
@@ -19451,54 +19022,54 @@ Configure NGINX
     Replace **`DEMISTO_ENGINE`** with the appropriate hostname.
     
     ```
-    \# Replace DEMISTO\_ENGINE with the appropriate hostname. If needed, change port 443 to the port on which the engine is listening.
+    # Replace DEMISTO_ENGINE with the appropriate hostname. If needed, change port 443 to the port on which the engine is listening.
     
     upstream demisto {
-        server DEMISTO\_ENGINE:443;
+        server DEMISTO_ENGINE:443;
     }
     
     # Uncomment to redirect http to https (optional)
     # server {
     #     listen 80;
-    #     return 301 https://$host$request\_uri;
+    #     return 301 https://$host$request_uri;
     # }
     
     server {
        # Change the port if you want NGINX to listen on a different port
         listen 443;
         
-        ssl\_certificate           /etc/nginx/cert.crt;
-        ssl\_certificate\_key       /etc/nginx/cert.key;
+        ssl_certificate           /etc/nginx/cert.crt;
+        ssl_certificate_key       /etc/nginx/cert.key;
     
         ssl on;
-        ssl\_session\_cache  builtin:1000  shared:SSL:10m;
-        ssl\_protocols  TLSv1 TLSv1.1 TLSv1.2;
-        ssl\_ciphers HIGH:!aNULL:!eNULL:!EXPORT:!CAMELLIA:!DES:!MD5:!PSK:!RC4;
-        ssl\_prefer\_server\_ciphers on;
+        ssl_session_cache  builtin:1000  shared:SSL:10m;
+        ssl_protocols  TLSv1 TLSv1.1 TLSv1.2;
+        ssl_ciphers HIGH:!aNULL:!eNULL:!EXPORT:!CAMELLIA:!DES:!MD5:!PSK:!RC4;
+        ssl_prefer_server_ciphers on;
     
-        access\_log            /var/log/nginx/demisto.access.log;
+        access_log            /var/log/nginx/demisto.access.log;
     
         location / {
     
-          proxy\_set\_header        Host $host;
-          proxy\_set\_header        X-Real-IP $remote\_addr;
-          proxy\_set\_header        X-Forwarded-For $proxy\_add\_x\_forwarded\_for;
-          proxy\_set\_header        X-Forwarded-Proto $scheme;
+          proxy_set_header        Host $host;
+          proxy_set_header        X-Real-IP $remote_addr;
+          proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header        X-Forwarded-Proto $scheme;
     
-          proxy\_pass          https://demisto;
-          proxy\_read\_timeout  90;
+          proxy_pass          https://demisto;
+          proxy_read_timeout  90;
         }
     
         location ~ ^/(websocket|d1ws|d2ws) {
-            proxy\_pass https://demisto;
-            proxy\_http\_version 1.1;
-            proxy\_set\_header Upgrade $http\_upgrade;
-            proxy\_set\_header Connection "upgrade";
-            proxy\_set\_header Host $host;
-            proxy\_set\_header Origin "";
-            proxy\_set\_header X-Real-IP $remote\_addr;
-            proxy\_set\_header X-Forwarded-For $proxy\_add\_x\_forwarded\_for;
-            proxy\_set\_header X-Forwarded-Proto $scheme;
+            proxy_pass https://demisto;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            proxy_set_header Host $host;
+            proxy_set_header Origin "";
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
         }
     }
     ```
@@ -19514,7 +19085,6 @@ Configure NGINX
 4.  Verify you can access the engine by browsing to the NGINX server host.
 
 ###### Configure an engine to use custom certificates
-Abstract
 
 Replace the self-signed certificate for an engine with a valid CA certificate for communication tasks.
 
@@ -19541,7 +19111,6 @@ You can replace the default self-signed certificate for the engine with your own
     **`chmod 644 d1.cert.pem`**
 
 ##### Use an engine in an integration
-Abstract
 
 Use an engine or a load-balancing group of engines to fetch issues and run commands for an integration.
 
@@ -19558,7 +19127,6 @@ Long-running integrations should not run on load-balancing groups.
 **`!url url="www.cnn.com" using=urlscan.io_instance_1`**
 
 ##### Run a script using an engine
-Abstract
 
 Run a script on an engine or load-balancing group to distribute the workload and improve performance.
 
@@ -19577,7 +19145,6 @@ You can run a script on an engine or load-balancing group to distribute the work
 5.  Click Save.
 
 ##### Troubleshoot engines
-Abstract
 
 Troubleshoot engines by accessing logs and viewing errors.
 
@@ -19588,8 +19155,6 @@ Ensure that pop-ups are not blocked by your browser.
 **Debug engines**
 
 The d1.log field appears whenever an engine is running. The d1.log field contains information necessary for your customer success team to debug any engine-related issue. The field displays any error, as well as noting whether the engine is connected.
-
-[image: engine-debug.png]
 
 Troubleshoot engine installation
 
@@ -19630,7 +19195,7 @@ After installing the engine, check that the engine is connected to the Cortex Cl
         
         `error Cannot connect to [wss://<mainServerIP/HostName>/d1ws]: wss://<mainServerIP/HostName>/d1ws: dial tcp: lookup localhost: no such host. . Waiting 3 seconds. Will try until…`
         
-        In this case, navigate to `/usr/local/demisto/d1.conf` and change the **`EngineURLs`** parameter to an address the engine can reach. Check the addresses at the beginning of the _upgrade\_engine.sh_ file. If the addresses are not correct, set the correct addresses in the `/usr/local/demisto/upgrade.conf` file, as a comma-separated list.
+        In this case, navigate to `/usr/local/demisto/d1.conf` and change the **`EngineURLs`** parameter to an address the engine can reach. Check the addresses at the beginning of the _upgrade_engine.sh_ file. If the addresses are not correct, set the correct addresses in the `/usr/local/demisto/upgrade.conf` file, as a comma-separated list.
         
         The configurations that might affect the `upgrade_engine.sh` script are the following variables are located at the beginning of the script:
         
@@ -19639,13 +19204,13 @@ After installing the engine, check that the engine is connected to the Cortex Cl
         -   **`TRUST_ANY_CERT`**
             
         
-        If you make a change to the baseURLs configuration, you must apply the change in `/usr/local/demisto/d1.conf` AND in `/usr/local/demisto/upgrade.conf` under the SERVER\_URLS var. For SERVER\_URLS, specify only the IP/hostname and, optionally, a port. Do not include `https://` or any path at the end.
+        If you make a change to the baseURLs configuration, you must apply the change in `/usr/local/demisto/d1.conf` AND in `/usr/local/demisto/upgrade.conf` under the SERVER_URLS var. For SERVER_URLS, specify only the IP/hostname and, optionally, a port. Do not include `https://` or any path at the end.
         
         If you make a change in the `engine.connection.trust_any_certificate` configuration, you must apply the change in `/usr/local/demisto/upgrade.conf` as follows:
         
-        -   If the `engine.connection.trust_any_certificate` configuration was set to true (trust any certificate), set the TRUST\_ANY\_CERT variable to -k.
+        -   If the `engine.connection.trust_any_certificate` configuration was set to true (trust any certificate), set the TRUST_ANY_CERT variable to -k.
             
-        -   If the `engine.connection.trust_any_certificate` configuration was set to false, the TRUST\_ANY\_CERT variable should be blank (““).
+        -   If the `engine.connection.trust_any_certificate` configuration was set to false, the TRUST_ANY_CERT variable should be blank (““).
             
         
         **Note:**
@@ -19948,7 +19513,6 @@ A common error message you may see when running integrations on engines is somet
         **`sudo systemctl restart d1_<Engine _name>`**
 
 ### Build XQL queries
-Abstract
 
 Learn more about how to build Cortex Query Language (XQL) queries using the Query Builder.
 
@@ -19959,7 +19523,6 @@ To support investigation and analysis, you can search your data by creating quer
 If you have the Cortex Agentic Assistant, you can use natural language prompts to create and run XQL queries within the chat interface. For more information, see Create and run XQL queries with Agentic Assistant chat.Cortex Agentic Assistant
 
 #### About the Query Builder
-Abstract
 
 The Query Builder facilitates threat detection, case expansion, and data analytics for suspected threats.
 
@@ -19995,7 +19558,6 @@ Cortex Cloud provides different options in the Query Builder for creating querie
 -   Graph Search to build queries to search assets, findings, and their contextual data. For more information, see How to build Graph Search queries?.
 
 #### How to build XQL queries
-Abstract
 
 Learn more about how to build XQL queries in the Query Builder.
 
@@ -20022,21 +19584,17 @@ In a dataset query, unless otherwise specified, the query runs against the `xdr
 
 The basic syntax structure for querying datasets that are not mapped to the XDM is:
 
-```
 dataset = <dataset name> 
     | <stage1> ...
     | <stage2> ... 
     | <stage3> ...
-```
 
 or
 
-```
 dataset in (<dataset name>)
     | <stage1> ...
     | <stage2> ...
     | <stage3> ...
-```
 
 You can specify a dataset using one of the following formats, which is based on the data retention offerings available in Cortex Cloud.
 
@@ -20045,7 +19603,7 @@ You can specify a dataset using one of the following formats, which is based on 
     Example 71. 
     
     ```
-    dataset = xdr\_data
+    dataset = xdr_data
     ```
     
       
@@ -20055,7 +19613,7 @@ You can specify a dataset using one of the following formats, which is based on 
     Example 72. 
     
     ```
-    cold\_dataset = xdr\_data
+    cold_dataset = xdr_data
     ```
     
       
@@ -20080,7 +19638,6 @@ For example, the `login_data` ﬁeld has the `login_data_dst_normalized_user` �
 XQL queries can contain different components, such as functions and stages, depending on the type of query you want to build. For a complete list of the syntax options available with example queries, see Stages and Functions.
 
 ##### Get started with XQL queries
-Abstract
 
 Learn more about some important information before getting started with XQL queries.
 
@@ -20099,7 +19656,6 @@ Before you begin running XQL queries, consider the following information:
     If you have existing Splunk queries, you can translate them to XQL. For more information, see Translate to XQL.
 
 ##### Useful XQL user interface features
-Abstract
 
 Learn about useful XQL query features in the user interface.
 
@@ -20135,7 +19691,6 @@ The user interface contains several useful features for querying data, and for v
 -   Schema: Contains schema information for every field found in the result set. This information includes the field name, data type, descriptive text (if available), and the dataset that contains the field. Contains the list of all the fields of all the datasets that were involved in the query.
 
 ##### XQL Query best practices
-Abstract
 
 Learn about best practices for streamlining XQL queries.
 
@@ -20148,7 +19703,7 @@ Cortex Cloud includes built-in mechanisms for mitigating long-running queries, s
     Example 73. 
     
     ```
-    dataset = microsoft\_windows\_raw 
+    dataset = microsoft_windows_raw 
     | fields \*host\* 
     | limit 100
     ```
@@ -20162,7 +19717,6 @@ Cortex Cloud includes built-in mechanisms for mitigating long-running queries, s
 -   Select the specific fields that you would like to see in the query results.
 
 ##### Expected results when querying fields
-Abstract
 
 Learn what to expect in the query results when querying fields.
 
@@ -20181,7 +19735,6 @@ The following are returned when querying fields:
 -   When no limit is explicitly stated in a `datamodel` query, a maximum of 1,000,000 results are returned (default). When this limit is applied to results using the limit stage, it will be indicated in the user interface.
 
 ##### Create XQL query
-Abstract
 
 Learn how to create queries using the Cortex Query Language (XQL).
 
@@ -20216,7 +19769,7 @@ How to create a dataset query
     -   These time picker options are available in XQL queries when using the Query Builder, XQL Widgets, and when defining XQL Widgets in Reports and Dashboards.
         
     
-4.  _(Optional)_ To translate Splunk queries to XQL queries, enable Translate to XQL. If you choose to use this feature, enter your Splunk query in the Splunk field, click the arrow icon ([image: translate-to-spl-arrow.png]) to convert to XQL, and then go to Step 6.
+4.  _(Optional)_ To translate Splunk queries to XQL queries, enable Translate to XQL. If you choose to use this feature, enter your Splunk query in the Splunk field, click the arrow icon () to convert to XQL, and then go to Step 6.
     
 5.  Create your query by typing in the query field. Relevant commands, their definitions, and operators are suggested as you type.
     
@@ -20240,7 +19793,7 @@ How to create a dataset query
         Example 74. 
         
         ```
-        dataset = xdr\_data
+        dataset = xdr_data
         ```
         
           
@@ -20252,8 +19805,8 @@ How to create a dataset query
         Example 75. 
         
         ```
-        dataset = xdr\_data 
-        | filter agent\_os\_type = ENUM.AGENT\_OS\_MAC
+        dataset = xdr_data 
+        | filter agent_os_type = ENUM.AGENT_OS_MAC
         | limit 250  
         ```
         
@@ -20263,12 +19816,12 @@ How to create a dataset query
     
     -   Run the query immediately.
         
-    -   Run the query by the specified date and time, or on a specific date, by selecting the calendar icon ([image: query-calendar-icon.png]).
+    -   Run the query by the specified date and time, or on a specific date, by selecting the calendar icon ().
         
     
 7.  _(Optional)_ The Save As options save your query for future use:
     
-    -   BIOC Rule: When compatible, saves the query as a BIOC rule. The XQL query must contain a filter for the event\_type field.
+    -   BIOC Rule: When compatible, saves the query as a BIOC rule. The XQL query must contain a filter for the event_type field.
         
     -   Correlation Rule: When compatible, saves the query as a Correlation Rule. For more information, see What's a correlation rule?.
         
@@ -20283,7 +19836,6 @@ How to create a dataset query
 While the query is running, you can navigate away from the page. A notification is sent when the query has finished. You can also Cancel the query or run a new query, where you have the option to Run only new query (cancel previous) or Run both queries.
 
 ##### Review XQL query results
-Abstract
 
 Learn more about reviewing the results returned from an XQL query.
 
@@ -20338,11 +19890,10 @@ Use the following options in the Query Results tab to investigate your query res
 
 | Option | Use |
 | --- | --- |
-| Table tab | Displays results in rows and columns according to the entity ﬁelds. Columns can be filtered, using their filter icons. More options ([image: table-settings.png]) displays table layout options, which are divided into different sections: In the Appearance section, you can Show line breaks for any text field in the Query Results. By default, the text in these fields are wrapped unless the Show line breaks option is selected. In addition, you can change the way rows and columns are displayed.; In the Log Format section, you can change the way that logs are displayed:-   RAW: Raw format of the entity in the database.; JSON: Condensed JSON format with key value distinctions. NULL values are not displayed.; TREE: Dynamic view of the JSON hierarchy with the option to collapse and expand the different hierarchies.
-; In the Search column section, you can find a specific column; enable or disable display of columns using the checkboxes. Show and hide rows according to a specific field in a specific event: select a cell, right-click it, and then select either Show rows with … or Hide rows with … |
+| Table tab | Displays results in rows and columns according to the entity ﬁelds. Columns can be filtered, using their filter icons. More options () displays table layout options, which are divided into different sections: In the Appearance section, you can Show line breaks for any text field in the Query Results. By default, the text in these fields are wrapped unless the Show line breaks option is selected. In addition, you can change the way rows and columns are displayed.; In the Log Format section, you can change the way that logs are displayed:- RAW: Raw format of the entity in the database.; JSON: Condensed JSON format with key value distinctions. NULL values are not displayed.; TREE: Dynamic view of the JSON hierarchy with the option to collapse and expand the different hierarchies. ; In the Search column section, you can find a specific column; enable or disable display of columns using the checkboxes. Show and hide rows according to a specific field in a specific event: select a cell, right-click it, and then select either Show rows with … or Hide rows with … |
 | Graph tab | Use the Chart Editor to visualize the query results. |
-| Advanced tab | Displays results in a table format which aggregates the entity ﬁelds into one column. You can change the layout, decide whether to Show line breaks for any text field in the results table, and change the log format from the [image: table-settings.png] menu. Select Show more to pivot an Expanded View of the event results that include NULL values. You can toggle between the JSON and Tree views, search, and Copy to clipboard. |
-| Export to File | Exports the results to a TSV (tab-separated values) ﬁle. More options ([image: table-settings.png]) works in a similar way to how it works on the Table tab.; Show more in the bottom left corner of each row opens the Expanded View of the event results that also include NULL values. Here, you can toggle between the JSON and Tree views, search, and Copy to clipboard.; Log format options change the way that logs are displayed:-   RAW: Raw format of the entity in the database.; JSON: Condensed JSON format with key value distinctions. NULL values are not displayed.; TREE: Dynamic view of the JSON hierarchy with the option to collapse and expand the diﬀerent hierarchies. |
+| Advanced tab | Displays results in a table format which aggregates the entity ﬁelds into one column. You can change the layout, decide whether to Show line breaks for any text field in the results table, and change the log format from the  menu. Select Show more to pivot an Expanded View of the event results that include NULL values. You can toggle between the JSON and Tree views, search, and Copy to clipboard. |
+| Export to File | Exports the results to a TSV (tab-separated values) ﬁle. More options () works in a similar way to how it works on the Table tab.; Show more in the bottom left corner of each row opens the Expanded View of the event results that also include NULL values. Here, you can toggle between the JSON and Tree views, search, and Copy to clipboard.; Log format options change the way that logs are displayed:-   RAW: Raw format of the entity in the database.; JSON: Condensed JSON format with key value distinctions. NULL values are not displayed.; TREE: Dynamic view of the JSON hierarchy with the option to collapse and expand the diﬀerent hierarchies. |
 | Refresh | Refreshes the query results. |
 | Free text search | Searches the query results for text that you specify in the free text search. Click the Free text search icon to reveal or hide the free text search field. |
 | Filter | Enables you to ﬁlter a particular ﬁeld in the interface that is displayed to specify your ﬁlter criteria. For integer, boolean, and timestamp (such as `_time`) ﬁelds, we recommend that you use the Filter instead of the Free text search, in order to retrieve the most accurate query results. |
@@ -20352,7 +19903,7 @@ Use the following options in the Query Results tab to investigate your query res
 
 The Save As options save your query for future use:
 
--   BIOC Rule: When compatible, saves the query as a BIOC rule. The XQL query must contain a filter for the event\_type field.
+-   BIOC Rule: When compatible, saves the query as a BIOC rule. The XQL query must contain a filter for the event_type field.
     
 -   Correlation Rule: When compatible, saves the query as a Correlation Rule. For more information, see What's a correlation rule?.
     
@@ -20388,10 +19939,9 @@ For network stories, you can pivot to the Causality View only. For cloud Cortex 
 
 ###### Add file path to Malware Profile allowed list
 
-Add a file path to your existing Malware Profile allowed list by right-clicking a <path> field, such as target\_process\_path, and select Add <path type> to malware profile allow list.
+Add a file path to your existing Malware Profile allowed list by right-clicking a <path> field, such as target_process_path, and select Add <path type> to malware profile allow list.
 
 ##### Translate to XQL
-Abstract
 
 Learn how to translate your Splunk queries to XQL queries in Cortex Cloud.
 
@@ -20466,14 +20016,13 @@ How to translate a Splunk query to XQL syntax
     
 3.  Add your Splunk query to the SPL query field.
     
-4.  Click the arrow ([image: translate-to-spl-arrow.png]).
+4.  Click the arrow ().
     
     The XQL query field displays the equivalent Splunk query using the XQL syntax.
     
     You can now decide what to do with this query based on the instructions explained in Create XQL query.
 
 ##### Graph query results
-Abstract
 
 Cortex Cloud enables you to generate helpful visualizations of your XQL query results.
 
@@ -20492,8 +20041,8 @@ To help you better understand your Cortex Query Language (XQL) query results and
     Enter the following query:
     
     ```
-    dataset = xdr\_data 
-    | fields action\_total\_upload, \_time 
+    dataset = xdr_data 
+    | fields action_total_upload, _time 
     | limit 10
     ```
     
@@ -20505,7 +20054,7 @@ To help you better understand your Cortex Query Language (XQL) query results and
     
     Use Chart Editor
     
-    Navigate to Query Results → Chart Editor ([image: visualizing-query-results-chart-editor.png]) to manually build and view the graph using the selected graph parameters:
+    Navigate to Query Results → Chart Editor () to manually build and view the graph using the selected graph parameters:
     
     -   Main
         
@@ -20545,8 +20094,8 @@ To help you better understand your Cortex Query Language (XQL) query results and
         Example 77. 
         
         ```
-        dataset = xdr\_data 
-        | view graph type = column header = "Test 1" xaxis = \_time yaxis = action\_total\_upload series = \_vendor
+        dataset = xdr_data 
+        | view graph type = column header = "Test 1" xaxis = _time yaxis = action_total_upload series = _vendor
         ```
         
           
@@ -20561,7 +20110,6 @@ To help you better understand your Cortex Query Language (XQL) query results and
     Select Save to Widget Library to pivot to the Widget Library and generate a custom widget based on the query results.
 
 #### XQL query entities
-Abstract
 
 Learn more about the Cortex Query Language (XQL) entities available in the Query Builder.
 
@@ -20591,7 +20139,6 @@ The Query Builder provides queries for the following types of entities:
 The Query Builder also provides flexibility for both on-demand query generation and scheduled queries.
 
 ##### Create authentication query
-Abstract
 
 Learn more about creating a query to investigate any authentication activity.
 
@@ -20625,7 +20172,6 @@ How to build an authentication query
 5.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 ##### Create event log query
-Abstract
 
 Learn more about creating a query to investigate Windows and Linux event log attributes and investigate event logs across endpoints.
 
@@ -20687,7 +20233,6 @@ How to build an event log query
 7.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 ##### Create file query
-Abstract
 
 Learn more about creating a query to investigate the connections between file activity and endpoints.
 
@@ -20724,11 +20269,11 @@ How to build a file query
             
         -   SHA256: SHA256 hash value of the file.
             
-        -   ACTION\_DISK\_DRIVER\_NAME: The driver where the file was created.
+        -   ACTION_DISK_DRIVER_NAME: The driver where the file was created.
             
-        -   FILE\_SYSTEM\_TYPE: Operating system type where the file was run.
+        -   FILE_SYSTEM_TYPE: Operating system type where the file was run.
             
-        -   ACTION\_IS\_VFS: Denotes if the file is on a virtual file system on the disk. This is relevant only for files that are written to disk.
+        -   ACTION_IS_VFS: Denotes if the file is on a virtual file system on the disk. This is relevant only for files that are written to disk.
             
         -   DEVICE TYPE: Type of device used to run the file: Unknown, Fixed, Removable Media, CD-ROM.
             
@@ -20791,7 +20336,6 @@ How to build a file query
 8.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 ##### Create image load query
-Abstract
 
 Learn more about create a query to investigate the connections between image load activity, acting processes, and endpoints.
 
@@ -20870,7 +20414,6 @@ How to build an image load query
 8.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 ##### Create network connections query
-Abstract
 
 Learn more about creating a query to investigate the connections between firewall logs, endpoints, and network activity.
 
@@ -20980,7 +20523,6 @@ How to build a network connection query
 8.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 ##### Create network query
-Abstract
 
 Learn more about creating a query to investigate the connections between network activity, acting processes, and endpoints.
 
@@ -21080,7 +20622,6 @@ How to build a network query
 8.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 ##### Create process query
-Abstract
 
 Learn more about creating a query to investigate connections between processes, child processes, and endpoints.
 
@@ -21122,11 +20663,11 @@ How to build a process query
             
         -   PID: Process ID.
             
-        -   PROCESS\_FILE\_INFO: Metadata of the process file, including file property details, file entropy, company name, encryption status, and version number.
+        -   PROCESS_FILE_INFO: Metadata of the process file, including file property details, file entropy, company name, encryption status, and version number.
             
-        -   PROCESS\_SCHEDULED\_TASK\_NAME: Name of the task scheduled by the process to run in the Task Scheduler.
+        -   PROCESS_SCHEDULED_TASK_NAME: Name of the task scheduled by the process to run in the Task Scheduler.
             
-        -   PROCESS\_TOKEN\_INFORMATION: Bitwise token of the process privileges.
+        -   PROCESS_TOKEN_INFORMATION: Bitwise token of the process privileges.
             
         -   DEVICE TYPE: Type of device used to run the process: Unknown, Fixed, Removable Media, CD-ROM.
             
@@ -21185,7 +20726,6 @@ How to build a process query
 8.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 ##### Create registry query
-Abstract
 
 Learn more about creating a query to investigate connections between registry activity, processes, and endpoints.
 
@@ -21291,7 +20831,6 @@ How to build a registry query
 8.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 ##### Query across all entities
-Abstract
 
 From the Cortex Cloud management console, you can search for endpoints and processes across all endpoint activity.
 
@@ -21353,7 +20892,6 @@ How to build a query
 7.  When ready, view the results in a query.
 
 #### Overview of the Query Center
-Abstract
 
 View information about the In Progress and Completed queries that that were run on the tenant.
 
@@ -21377,7 +20915,6 @@ The Query Center displays information about all queries that were run on the ten
 -   The default retention period for historic queries is aligned with issue retention.
 
 ##### Edit and run queries in Query Center
-Abstract
 
 Learn more about viewing the results of a query, modifying a query, and rerunning queries from Query Center.
 
@@ -21494,7 +21031,6 @@ How to cancel a query
 -   If you cancel a scheduled query, only the current query is cancelled. Future recurrences of the scheduled query are not affected.
 
 ###### Query Center reference information
-Abstract
 
 Descriptions of the fields in the Query Center table.
 
@@ -21517,10 +21053,8 @@ Query Center table
 | PUBLIC API | Whether the source executing the XQL query was an XQL query API. |
 | QUERY DESCRIPTION\* | Query parameters used to run the query. |
 | QUERY ID | Unique identifier of the query. |
-| QUERY NAME\* | For saved queries, the Query Name identifies the query specified according to a randomly generated number.-   XQL queries use the format XQL-QUERY-<number>, such as XQL-QUERY-12.; Graph Search queries use the format Graph-Query-<number>, such as Graph-Query-1247.
-; For scheduled queries, the Query Name identifies the auto-generated name of the parent XQL query. Scheduled queries also display an icon to the left of the name to indicate that the XQL query is recurring. [image: query-scheduled.png] |
-| QUERY STATUS\* | Status of the query, where the options differ based on the query type: XQL queries:-   Queued: The query is queued and will run when there is an available slot.; Running; Failed; Partially completed: The query was stopped after exceeding the maximum number of permitted results. The default results for any query is a maximum of 1,000,000 results, when no limit is explicitly stated in the query. Queries based on XQL query entities are limited to 10,000 results. To reduce the number of results returned, you can adjust the query settings and rerun.; Stopped: The query was stopped by an administrator.; Completed; Deleted: The query was pruned.
-; Graph Search queries:-   Failed; Completed |
+| QUERY NAME\* | For saved queries, the Query Name identifies the query specified according to a randomly generated number.- XQL queries use the format XQL-QUERY-<number>, such as XQL-QUERY-12.; Graph Search queries use the format Graph-Query-<number>, such as Graph-Query-1247. ; For scheduled queries, the Query Name identifies the auto-generated name of the parent XQL query. Scheduled queries also display an icon to the left of the name to indicate that the XQL query is recurring. |
+| QUERY STATUS\* | Status of the query, where the options differ based on the query type: XQL queries:- Queued: The query is queued and will run when there is an available slot.; Running; Failed; Partially completed: The query was stopped after exceeding the maximum number of permitted results. The default results for any query is a maximum of 1,000,000 results, when no limit is explicitly stated in the query. Queries based on XQL query entities are limited to 10,000 results. To reduce the number of results returned, you can adjust the query settings and rerun.; Stopped: The query was stopped by an administrator.; Completed; Deleted: The query was pruned. ; Graph Search queries:- Failed; Completed |
 | QUERY SYNTAX | The exact syntax used to write the query. |
 | RESULTS SAVED\* | For XQL queries, you can choose whether to save the query results, so the output of the field is either Yes or No. Yet, for Graph Search queries, the results can't be saved and must be run each time again, so the field is always No. |
 | SIMULATED COMPUTE UNITS | Number of XQL query units that were used to execute the Hot Storage query. |
@@ -21531,7 +21065,6 @@ Query Center table
 | XQL | Indicates whether the XQL query was created by an XQL search. |
 
 #### Manage scheduled queries
-Abstract
 
 Learn how to manage your scheduled and recurring queries.
 
@@ -21563,7 +21096,6 @@ The Scheduled Queries page displays information about your scheduled and recurri
 4.  Adjust the schedule settings, and then click OK.
 
 ##### Scheduled Queries reference information
-Abstract
 
 Descriptions of the fields in the Scheduled Queries table.
 
@@ -21583,13 +21115,12 @@ Scheduled Queries table
 | PUBLIC API | Whether the source executing the query was an XQL query API. |
 | QUERY DESCRIPTION | Query parameters used to run the query. |
 | QUERY ID | Unique identifier of the query. |
-| QUERY NAME | For saved queries, the Query Name identifies the query specified by the administrator.; For scheduled queries, the Query Name identifies the auto-generated name of the parent query. Scheduled queries also display an icon to the left of the name to indicate that the query is recurring. [image: query-scheduled.png] |
+| QUERY NAME | For saved queries, the Query Name identifies the query specified by the administrator.; For scheduled queries, the Query Name identifies the auto-generated name of the parent query. Scheduled queries also display an icon to the left of the name to indicate that the query is recurring.  |
 | QUERY SYNTAX | The exact syntax used to write the query. |
 | SCHEDULE TIME | Frequency or time at which the query was scheduled to run. |
 | XQL | Whether the query was created by XQL search. |
 
 #### Manage your personal query library
-Abstract
 
 Cortex Cloud provides as part of the Query Library a personal library for saving and managing your own queries.
 
@@ -21597,11 +21128,11 @@ Cortex Cloud provides as part of the Query Library a personal query library for 
 
 The queries listed in your Query Library have different icons to help you identify the different states of the queries:
 
--   [image: unshared-query-icon.png]Created by me and unshared.
+-   Created by me and unshared.
     
--   [image: query-created-by-me-shared-icon.png]Create by me and shared.
+-   Create by me and shared.
     
--   [image: query-created-by-someone-else-shared.png]Created by someone else and shared.
+-   Created by someone else and shared.
     
 
 The Query Library contains a powerful search mechanism that enables you to search in any field related to the query, such as the query name, description, creator, query text, and labels. In addition, adding a label to your query enables you to search for these queries using these labels in the Query Library.
@@ -21667,7 +21198,6 @@ How to add a query to your personal query library
     -   Delete the query. You can only delete queries that you created. If another user created the query, this option is disabled in the query menu when selecting the 3 vertical dots.
 
 ### Quick Launcher
-Abstract
 
 The Quick Launcher provides a quick, in-context shortcut that you can use to search for information, perform common investigation tasks, or initiate actions.
 
@@ -21708,14 +21238,12 @@ You can also prepopulate searches in Quick Launcher by selecting text in the app
 ## Customize cases and issues
 
 ### Customize cases and issues
-Abstract
 
 Customize your cases and issues for specific requirements.
 
 While cases and issues are configured to work OOTB, users with specific requirements can customize them for specific needs or scenarios.
 
 #### Set up case scoring
-Abstract
 
 Set up case scoring and define scoring rules.
 
@@ -21826,7 +21354,6 @@ Case starring supports Scope-Based Access Control (SBAC). The following paramete
 -   If a policy was added when set to restrictive mode, and then changed to permissive (or vice versa), you will only have view permissions.
 
 #### Create custom case statuses and resolution reasons
-Abstract
 
 You can create custom case status and resolutions that are that are tailored to your workflow.
 
@@ -21857,7 +21384,6 @@ How to create custom case statuses
 3.  Click Edit to rearrange the order of the statuses. This order is presented when you set a status or select a resolution type.
 
 #### Create a sync profile
-Abstract
 
 You can set up inbound and outbound sync profiles to define field mapping between Cortex Cloud issues and an external application.
 
@@ -21903,18 +21429,14 @@ How to create a sync profile
     Example 14. 
     
     In this example, the sync profile specifies Inbound mapping from Jira v3 fields to Cortex fields.
-    
-    [image: Sync_profile_example.png]
 
 # Agentic Assistant chat
-Abstract
 
 Chat with the Cortex Agentic Assistant using natural language prompts.
 
 The Agentic Assistant chat provides an interactive and intelligent way to simplify and streamline complex security operations. Enter a prompt using natural language, and your agent plans and executes the most relevant actions to fulfill your request.
 
 ## Get started with Agentic Assistant chat
-Abstract
 
 Enable Agentic Assistant and access the chat interface.
 
@@ -21933,7 +21455,6 @@ To open the chat window, click the Agentic Assistant icon in the upper right han
 To close the chat window, click anywhere outside the chat window's boundaries or click the Agentic Assistant icon in the upper right hand corner.
 
 ## Choose an Agentic Assistant agent
-Abstract
 
 Choose a system or custom agent for your chat.
 
@@ -21949,8 +21470,6 @@ Select an agent
     
 3.  Select the agent that best suits your current task or investigation.
     
-
-[image: agent-drop-down.png]
 
 ### System agents
 
@@ -21980,7 +21499,6 @@ Examples of specialized system agents:
 In some cases, the system may suggest you switch agents based on the page you are viewing. For example, if you are viewing a case and have a chat with the Threat Intel agent open, the system will suggest switching to the Case Investigation agent for more relevant results.
 
 ## Chat with an Agentic Assistant agent
-Abstract
 
 Tips for chatting with the Cortex Agentic Assistant
 
@@ -22087,7 +21605,6 @@ Cortex Agentic Assistant implements the following safeguards to ensure agent pla
 You can quickly jump to different product pages within Cortex Cloud by typing / in the prompt area. This shortcut is a built-in navigation feature that is available even if the Cortex Agentic Assistant is disabled.
 
 ## Create and run XQL queries with Agentic Assistant chat
-Abstract
 
 Interact with Cortex Agentic Assistant agents to build and run XQL queries.
 
@@ -22136,7 +21653,6 @@ When a query runs, the agent provides a preview of the results and you can also 
 Running XQL queries manually through agent does not consume compute units. This includes scenarios where you prompt the agent to create and execute a multi-step plan.
 
 ## Manage chat history
-Abstract
 
 Manage and navigate your past chats with the Cortex Agentic Assistant.
 
@@ -22144,20 +21660,17 @@ Cortex Agentic Assistant helps you keep track of your investigations by organizi
 
 Your chat history is listed to the left of the prompt. The chat history is organized by periods: Chats from today, yesterday, the last seven days, and older. To continue a previous investigation or review a past conversation, scroll through the list and click on the chat you wish to resume.
 
-By default, the first prompt you enter in a new chat becomes its title in the history. To edit the chat title or delete a chat that is no longer relevant, click [image: three-dots.png] and select Edit or Delete.
+By default, the first prompt you enter in a new chat becomes its title in the history. To edit the chat title or delete a chat that is no longer relevant, click ⋮ and select Edit or Delete.
 
 # Review and report your security posture and progress
 
 ## Monitor dashboards and reports
 
 ### About dashboards
-Abstract
 
 Learn more about dashboards, which help you to monitor system activity and security operations in your environment.
 
 Dashboards help you monitor system activity and security operations in your environment. Each dashboard consists of widgets that summarize information about your tenant's activities in a graphical or tabular format, enabling you to effectively monitor your cases and overall activity in your environment.
-
-[image: Agent_management_DB.png]
 
 When you sign in to Cortex Cloud, your default dashboard is displayed. To change the displayed dashboard, you can select from the list of predefined and custom dashboards using the dashboard menu, or manage them centrally from the Dashboard Manager.
 
@@ -22217,19 +21730,18 @@ From the Dashboard Manager, you can take the following actions:
 
 The following icons in the Dashboard Manager (under the Source column) help you identify the security access and status of your dashboards:
 
--   [image: unshared-query-icon.png]:
+-   :
     
     -   A Restricted custom dashboard you created (Owner) that is not currently shared with anyone else.
         
     -   A custom dashboard you created that is currently shared with other users or user groups.
         
     
--   [image: query-created-by-someone-else-shared.png]: A custom dashboard created by another user that has been shared with you (either individually or through a user group).
+-   : A custom dashboard created by another user that has been shared with you (either individually or through a user group).
     
--   [image: PANW_Query.png]: A standard system dashboard provided by Palo Alto Networks. These are always Public and can't be deleted, or have their ownership transferred.
+-   : A standard system dashboard provided by Palo Alto Networks. These are always Public and can't be deleted, or have their ownership transferred.
 
 #### Command Center dashboards
-Abstract
 
 Learn more about Command Center dashboards, which are system-provided dashboards.
 
@@ -22246,7 +21758,6 @@ These dashboards are read-only and are provided by Palo Alto Networks to ensure 
 -   Some of the dashboard’s animations are not fully supported by the Safari web browser. We recommend that you view the dashboard with an alternative web browser.
 
 ##### Cortex Agentic Assistant dashboard
-Abstract
 
 See a dynamic overview of how AI Agentic technology is utilized across your organization.
 
@@ -22282,8 +21793,6 @@ The Cloud Security Operations dashboard helps you rapidly assess your security p
 -   Customize your view: The dashboard provides a default view for each of the widgets while giving you the option to customize views to capture the insights you need.
     
 
-[image: sec-ops-april.png]
-
 **Note:**
 
 Command Center data may not match the counts on the Issues page, and you may observe inconsistencies. This is because dashboard data is a snapshot of issues identified, whereas the Issues page provides the most up-to-date view of risks across your cloud assets. In addition, the Issues pages do not support all the currently available filters on the Command Center dashboard.
@@ -22318,7 +21827,6 @@ Use one of the multiple filter options provided to further focus on the most imp
 -   **Time Range Filter:** By default the time range is set to 7 days. This can be updated to 24 hours, 7 or 30 days, and a Custom time frame and applied across all widgets.
 
 ##### Cortex Cloud Command Center
-Abstract
 
 Introduction to the Cortex Cloud Command Center and its capabilities.
 
@@ -22327,8 +21835,6 @@ Introduction to the Cortex Cloud Command Center and its capabilities.
 Cortex Cloud Command Center serves as your centralized landing experience designed to provide immediate visibility into your security posture and current environmental status. It presents a high-level summary of your account health, asset distribution, and assets at risk to help you get a snapshot of your compliance and vulnerability posture. Through a unified view of your security domains, you can monitor open threat cases and posture issues sorted by severity and impact. This interface provides direct pathways to your inventory searches, operational dashboards, graphs, and compliance reports while highlighting top-priority issues.
 
 The following image shows the Cortex Cloud Command Center dashboard:
-
-[image: cortex_cloud_command_center_dashboard.png]
 
 ###### Interactive Navigation and Drilldown
 
@@ -22370,7 +21876,6 @@ The lower sections of Cortex Cloud Command Center aggregate your high-impact ris
 In addition, navigation links are provided, enabling you to select Manage Vulnerabilities or View Compliance Center to transition from these summaries to your specialized management environments.
 
 #### Predefined dashboards
-Abstract
 
 Learn more about predefined dashboards, which are out-of-the-box dashboards providedby Palo Alto Networks.
 
@@ -22409,21 +21914,18 @@ Available predefined dashboards
 | Troubleshooting Playbooks | Provides the ability to identify and resolve issues with playbooks and tasks through focused error analysis and runtime metrics. |
 
 #### Reports
-Abstract
 
 Create, edit, and customize reports in Cortex Cloud. Schedule reports with Cron expressions.
 
 Reports contain statistical data in the form of widgets, which enable you to analyze data from inside or outside Cortex Cloud, in different formats such as graphs, pie charts, or text from information. After generating a report, it also appears in the Reports tab, so you can use the report again.
 
 ##### Report templates
-Abstract
 
 View, import, export, create, and modify report templates
 
 On the Report Templates page, you can view, delete, import, export, create, and modify report templates. You can also select and generate multiple reports.
 
 ### Build custom dashboards and reports
-Abstract
 
 Custom dashboards and reports can support your day-to-day operations by providing options that are tailored to your unique workflow.
 
@@ -22453,7 +21955,6 @@ Dashboards and reports are built from widgets. You can drag any widgets from the
     -   If you don't have permission to edit a widget, create a copy of the widget.
 
 #### Build a custom dashboard
-Abstract
 
 Build customized dashboards to display and filter the information that is most relevant to you.
 
@@ -22505,7 +22006,6 @@ By default, all new custom dashboards are Restricted and visible only to you (th
 11.  Click Generate to complete your dashboard.
 
 #### Manage your Widget Library
-Abstract
 
 Create, search, and view custom widgets in Cortex Cloud, or use predefined widgets.
 
@@ -22545,7 +22045,6 @@ From the Widget Library you can take the following actions:
 -   **Manage visibility**: If you are the Owner of a custom widget, you can change its status from Restricted to Public. This makes the widget available in the Widget Library for all other users who have the required permissions. For more information, see Manage access to custom dashboards.
 
 ### Fine-tune dashboards and reports
-Abstract
 
 Fine tune your custom dashboards and report by adding custom XQL widgets, fixed filters and inputs, and dashboard drilldowns.
 
@@ -22570,7 +22069,6 @@ Dashboard drilldowns
 Enable dashboard users to access interactive data insights when clicking on data points in widgets. Drilldowns can trigger contextual changes on the dashboard, or they can link to an XQL search, a custom URL, another dashboard, or a report. Users can hover over a widget to see details about the drilldown, and click a value to trigger the drilldown.
 
 #### Create a custom widget using a script
-Abstract
 
 Create a custom script based widget. Use custom widgets in dashboards and reports.
 
@@ -22644,7 +22142,6 @@ You can manage your script widgets directly from the Widget Library:
 -   Editing: Only the person who created the script widget (the owner) or an administrator can modify the underlying script code in the Automation section.
 
 ##### Script-based widget examples
-Abstract
 
 Create script based widgets based on scripts for reports and dashboards in Cortex Cloud.
 
@@ -22666,25 +22163,23 @@ If your script returns a time duration, configure the widget with the graph type
 
 Example:
 
-```
 import requests
 
 def main():
-    api\_key = 'PUTYOURKEYHERE'
+    api_key = 'PUTYOURKEYHERE'
     symbol = 'PANW'
-    api\_url = f'https://www.alphavantage.co/query?function=GLOBAL\_QUOTE&symbol={symbol}&apikey={api\_key}'
+    api_url = f'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={symbol}&apikey={api_key}'
 
-    response = requests.get(api\_url)
+    response = requests.get(api_url)
     data = response.json()
 
-    price\_str = data\['Global Quote'\]\['05. price'\]
-    price\_int = int(float(price\_str))
+    price_str = data['Global Quote']['05. price']
+    price_int = int(float(price_str))
 
-    return\_results(price\_int)
+    return_results(price_int)
 
-if \_\_name\_\_ in ('\_\_main\_\_', '\_\_builtin\_\_', 'builtins'):
+if __name__ in ('__main__', '__builtin__', 'builtins'):
     main()
-```
 
 ###### Pie, Line, or Column Chart
 
@@ -22692,67 +22187,61 @@ Example 1
 
 The following example script creates random, mock data to simulate a stock price fluctuating over a short period of time. Use this example to build your own script that brings in third-party data and display trends using a pie, line, or column chart.
 
-```
 import random
 import json
 from datetime import datetime, timedelta
 
 def main():
-    chart\_data = \[\]
-    start\_time = datetime.strptime("13:00", "%H:%M")
+    chart_data = []
+    start_time = datetime.strptime("13:00", "%H:%M")
 
     # Start the price at a realistic value
-    current\_price = 202.0
+    current_price = 202.0
 
     # Simulate 50 data points
     for i in range(50):
         # Generate a time label in 1-minute jumps
-        time\_label = (start\_time + timedelta(minutes=i)).strftime("%H:%M")
+        time_label = (start_time + timedelta(minutes=i)).strftime("%H:%M")
 
         # Create the data point for the chart
-        data\_point = {
-            "name": time\_label,
-            "data": \[int(current\_price)\],
-            "groups": \[\]
+        data_point = {
+            "name": time_label,
+            "data": [int(current_price)],
+            "groups": []
         }
-        chart\_data.append(data\_point)
+        chart_data.append(data_point)
 
         # Simulate the next price by adding a small change to the current price
-        price\_change = random.uniform(-1.5, 1.5) # A small drift up or down
-        current\_price += price\_change
+        price_change = random.uniform(-1.5, 1.5) # A small drift up or down
+        current_price += price_change
 
     # Return the data formatted exactly as in your working script
-    return\_results({
+    return_results({
         "Type": 1,
         "ContentsFormat": "json",
-        "Contents": json.dumps(chart\_data)
+        "Contents": json.dumps(chart_data)
     })
 
-
-if \_\_name\_\_ in ('\_\_main\_\_', '\_\_builtin\_\_', 'builtins'):
+if __name__ in ('__main__', '__builtin__', 'builtins'):
     main()
-```
 
 When used in a widget:
-
-[image: stockgraph-examplescript.png]
 
 Example 2
 
 The following example script generates simulated data representing the count of security incidents (or other events) broken down by severity level for each day of the week (Monday to Friday). Use this example to build your own script to create a stacked column chart. Configure the widget with graph type Column subtype Stacked.
 
-```
 import json
 import random
 
 def main():
-    chart\_data = \[\]
-    days = \["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"\]
-    severities = \["Critical", "High", "Medium", "Low", "Info"\]
+    chart_data = []
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    severities = ["Critical", "High", "Medium", "Low", "Info"]
 
     for day in days:
-        groups\_list = \[\]
-        daily\_total = 0
+        groups_list = []
+        daily_total = 0
 
         for severity in severities:
             count = 0
@@ -22767,28 +22256,24 @@ def main():
             else:
                 count = random.randint(5, 30)
 
-            daily\_total += count
-            groups\_list.append({"name": severity, "data": \[count\]})
+            daily_total += count
+            groups_list.append({"name": severity, "data": [count]})
 
-        chart\_data.append({
+        chart_data.append({
             "name": day,
-            "data": \[daily\_total\],
-            "groups": groups\_list
+            "data": [daily_total],
+            "groups": groups_list
         })
 
-    return\_results({
+    return_results({
         "Type": 1,
         "ContentsFormat": "json",
-        "Contents": json.dumps(chart\_data)
+        "Contents": json.dumps(chart_data)
     })
-```
 
 When used in a widget:
 
-[image: severitybyday-examplescript.png]
-
 #### Create custom XQL widgets
-Abstract
 
 You can create custom XQL widgets based on a Cortex Query Language (XQL) query, and add parameters that you can configure as fixed filters or dashboard drilldowns.
 
@@ -22831,7 +22316,7 @@ How to create a custom XQL widget
     The dataset in a query is defined as:
     
     ```
-    dataset = amazon\_aws\_raw\*
+    dataset = amazon_aws_raw\*
     ```
     
     If there are multiple datasets that begin with `amazon_aws_raw` in their name, such as `amazon_aws_raw_eu_view` and `amazon_aws_raw_us1_view`, these views will be included.
@@ -22863,7 +22348,7 @@ How to create a custom XQL widget
         Single value parameters are based on static predefined values. In this example, the dashboard user will be able to select a domain from a list of predefined domains.
         
         ```
-        dataset = agent\_auditing | filter domain = $domain
+        dataset = agent_auditing | filter domain = $domain
         ```
         
           
@@ -22877,7 +22362,7 @@ How to create a custom XQL widget
         You can configure this parameter with static predefined values, or dynamic values that are pulled from an XQL query.
         
         ```
-        dataset = agent\_auditing | filter endpoint\_name IN ($endpointname)
+        dataset = agent_auditing | filter endpoint_name IN ($endpointname)
         ```
         
           
@@ -22906,7 +22391,7 @@ How to create a custom XQL widget
     
     Use Chart Editor
     
-    Under Query Results → Chart Editor ([image: visualizing-query-results-chart-editor.png]), manually build and view the graph using the selected graph parameters:
+    Under Query Results → Chart Editor (), manually build and view the graph using the selected graph parameters:
     
     -   Main
         
@@ -22946,7 +22431,7 @@ How to create a custom XQL widget
         Example 85. 
         
         ```
-        view graph type = column subtype = grouped header = “Test 1” xaxis = \_time yaxis = \_product,action\_total\_upload series = \_vendor
+        view graph type = column subtype = grouped header = “Test 1” xaxis = _time yaxis = _product,action_total_upload series = _vendor
         ```
         
           
@@ -22959,7 +22444,6 @@ How to create a custom XQL widget
     The custom widget appears in the list of existing widgets.
 
 ##### Configure filters and inputs for custom XQL widgets
-Abstract
 
 Learn more about configuring fixed filters on your dashboards to enable dashboard users to alter the scope of the dashboard.
 
@@ -23046,7 +22530,7 @@ How to configure fixed dashboard filters
         
         Example 86. Example
         
-        In this example, the endpoint\_name field is configured. The dashboard user will be able to filter by one or more values from the `endpoint_name` field.
+        In this example, the endpoint_name field is configured. The dashboard user will be able to filter by one or more values from the `endpoint_name` field.
         
         `dataset =endpoints | fields endpoint_name`
         
@@ -23066,7 +22550,6 @@ How to configure fixed dashboard filters
     After the initial setup, when you access your dashboard the filters and inputs might need further refinement. You can make changes to the configured parameters in the XQL widgets, and update the Filters & Inputs on your dashboard until you are satisfied with the results.
 
 ##### Configure dashboard drilldowns
-Abstract
 
 Learn more about configuring drilldowns on custom dashboards providing interactive data insights when clicking data points in a widget.
 
@@ -23125,18 +22608,18 @@ How to configure dashboard drilldowns
         | --- | --- |
         | XQL Query | Define the query that you want to run on drilldown. Type **`$`** to see autocomplete options for variables that are available in the widget drilldown. For example, in a table widget $first.name selects the leftmost column name in the table. For more information, see Variables in drilldowns. |
         
-        In the following example two parameters are passed from a table widget to an XQL query. The first parameter with the cell value that the user clicked on, and a second parameter with the cell value in the request\_url column in the row that the user clicked.
+        In the following example two parameters are passed from a table widget to an XQL query. The first parameter with the cell value that the user clicked on, and a second parameter with the cell value in the request_url column in the row that the user clicked.
         
         ```
-        dataset=xdr\_data
-        |filter event\_type=**$y\_axis.value** and requestUri=**$row.request\_url**
-        |fields action\_download, action\_remote\_ip as remote\_ip,
-        actor\_process\_image\_name as process\_name
-        |comp count\_distinct(action\_download) as total\_download by process\_name,
-        remote\_ip, remote\_hostname
-        |sort desc total\_download
+        dataset=xdr_data
+        |filter event_type=**$y_axis.value** and requestUri=**$row.request_url**
+        |fields action_download, action_remote_ip as remote_ip,
+        actor_process_image_name as process_name
+        |comp count_distinct(action_download) as total_download by process_name,
+        remote_ip, remote_hostname
+        |sort desc total_download
         |limit 10
-        |view graph type=single subtype=standard xaxis=remote\_ip yaxis=total\_download
+        |view graph type=single subtype=standard xaxis=remote_ip yaxis=total_download
         ```
         
     -   Open custom URL: Opens an external URL based on a clicked value.
@@ -23147,11 +22630,11 @@ How to configure dashboard drilldowns
         | --- | --- |
         | URL Address | Type the URL. To create a dynamic drilldown, you can include Available parameters. For more information about the parameters, see Variables in drilldowns. |
         
-        In the following URL, the **`$x_axis.value`** parameter represents cortex products names. On drilldown, the $x\_axis.value is replaced with the clicked product name in the pie chart.
+        In the following URL, the **`$x_axis.value`** parameter represents cortex products names. On drilldown, the $x_axis.value is replaced with the clicked product name in the pie chart.
         
-        https://www.paloaltonetworks.com/cortex/cortex-$x\_axis.value
+        https://www.paloaltonetworks.com/cortex/cortex-$x_axis.value
         
-        [image: DD_example_Cortex_piechart.png]
+        
         
     -   Generate Report: Runs a report from a clicked value.
         
@@ -23159,7 +22642,6 @@ How to configure dashboard drilldowns
 4.  Save the changes for the widget and dashboard.
 
 ###### Variables in drilldowns
-Abstract
 
 Learn about the widget variable values that you can use in dashboard drilldowns.
 
@@ -23168,8 +22650,6 @@ The following tabs are organized according to widget type and describes the widg
 Chart
 
 (Area, Bubble, Column, Funnel, Line, Map, Pie, Scatter, or Word Cloud)
-
-[image: DD_example_chart.png]
 
 -   **`$x_axis.name`**: Selects the x-axis name.
     
@@ -23182,16 +22662,12 @@ Chart
 
 Single value or gauge
 
-[image: DD_example_gauge.png]
-
 -   **`$y_axis.name`**: Selects the y-axis name that the single value represents.
     
 -   **`$y_axis.value`**: Selects the y-axis value for the clicked value.
     
 
 Table
-
-[image: DD_example_table.png]
 
 -   **`$first.name`**: Selects the leftmost column name in the table.
     
@@ -23204,7 +22680,6 @@ Table
 -   **`$row.<field_name>`**: Selects the field (column) from the clicked table row.
 
 ### Run or schedule reports
-Abstract
 
 You can run reports that are based on dashboard templates, or you can create reports from scratch.
 
@@ -23234,16 +22709,16 @@ Dashboard sharing icons
 
 The following icons in the Dashboard Manager (under the Source column) and in the Dashboards page header menu help you identify the security access of your dashboards:
 
--   [image: unshared-query-icon.png]:
+-   :
     
     -   A Restricted custom dashboard you created (Owner) that is not currently shared with anyone else.
         
     -   A custom dashboard you created that is currently shared with other users or user groups.
         
     
--   [image: query-created-by-someone-else-shared.png]: A custom dashboard created by another user that has been shared with you (either individually or through a user group).
+-   : A custom dashboard created by another user that has been shared with you (either individually or through a user group).
     
--   [image: PANW_Query.png]: A standard system dashboard provided by Palo Alto Networks. These are always Public and can't be deleted, or have their ownership transferred.
+-   : A standard system dashboard provided by Palo Alto Networks. These are always Public and can't be deleted, or have their ownership transferred.
     
 
 #### Run a report based on a dashboard
@@ -23365,7 +22840,6 @@ You can receive an email or send a notification to a syslog server if a report f
 6.  Review settings and click Create.
 
 # Monitor and track compliance adherence
-Abstract
 
 Evaluate your compliance status across different standards.
 
@@ -23374,13 +22848,10 @@ Determine asset vulnerabilities and risk by checking whether assets adhere to in
 You can view all compliance-related details in the tenant under Posture Management → Compliance.
 
 ## Cortex compliance flow
-Abstract
 
 Cortex compliance workflow for evaluating your overall compliance posture for various compliance standards.
 
 The following steps describe the flow for evaluating asset compliance.
-
-[image: cortex-cloud-compliance-flow.png]
 
 | Step | See More |
 | --- | --- |
@@ -23389,7 +22860,6 @@ The following steps describe the flow for evaluating asset compliance.
 | Step 3. Review the results. | View and manage compliance assessments and reports |
 
 ## Choose compliance standards from the compliance catalog
-Abstract
 
 The compliance Catalogs provides a list of available compliance standards and controls.
 
@@ -23404,7 +22874,6 @@ Standards consist of controls, which are measures related to the standard that e
 The Standards and Controls catalogs include built-in industry standards and controls and custom organizational standards and controls.
 
 ### Standards Catalog
-Abstract
 
 Review the list of built-in and custom compliance standards to monitor and audit your organization’s performance.
 
@@ -23420,8 +22889,6 @@ The Standards Catalog page displays cards of the available standards and their d
     
 -   Clickable links to associated controls, assessment profiles, and labels
     
-
-[image: standards_catalog.png]
 
 Table 7. Standards Catalog
 
@@ -23549,7 +23016,6 @@ Table 7. Standards Catalog
 | Trusted Information Security Assessment Exchange (TISAX) | 6 |
 
 #### Use a built-in or custom standard
-Abstract
 
 Use a built-in industry standard, create a custom standard, or edit a custom standard.
 
@@ -23580,7 +23046,7 @@ You can create a custom compliance standard that is tailored to your own busines
     
     You can use the filter to search for a specific control. For more information about choosing a control, see Controls catalog.
     
-    [image: cortex-cloud-compliance-create-new-standard.png]
+    
     
 5.  Click Create.
     
@@ -23589,9 +23055,9 @@ Edit a custom standard
 
 You can edit a copy of a built-in industry standard or edit an existing custom standard. You can also delete a custom standard.
 
-1.  In the Standards catalog, click [image: cortex-cloud-compliance-three-dots.png] on the built-in standard you want to edit and click Save as new.
+1.  In the Standards catalog, click  on the built-in standard you want to edit and click Save as new.
     
-    To edit a custom standard, click [image: cortex-cloud-compliance-three-dots.png] on the custom standard and click Edit.
+    To edit a custom standard, click  on the custom standard and click Edit.
     
 2.  Define compliance standard metadata, including:
     
@@ -23608,12 +23074,11 @@ You can edit a copy of a built-in industry standard or edit an existing custom s
     
     You can use the filter to search for a specific control.
     
-    [image: cortex-cloud-compliance-create-new-standard.png]
+    
     
 5.  Click Create.
 
 ### Controls catalog
-Abstract
 
 Review the list of all the built-in and custom compliance standards to monitor and audit your organization’s performance.
 
@@ -23636,8 +23101,6 @@ The Controls Catalog page shows a list of the available controls and their detai
 -   Created by: Who created the control. For built-in controls, it is **`Palo Alto Networks`**.
     
 
-[image: cortex-cloud-compliance-controls-catalog.png]
-
 Clicking a control opens a side panel that displays all the control details in the Overview tab, and the list of rules associated with the control in the Rules tab.
 
 #### Search for specific controls
@@ -23647,7 +23110,6 @@ All of the columns are sortable and filterable. By default, the table is sorted 
 You can search for specific controls using the filter. For example, you can search for all custom controls with the filter **`Created by != Palo Alto`**
 
 #### Use a built-in or custom control
-Abstract
 
 Add a built-in control to a custom standard, create a custom control for a custom standard, or edit a custom control for a custom standard.
 
@@ -23685,9 +23147,9 @@ Edit a custom control
 
 You can edit a copy of a built-in control or edit an existing custom control. You can also delete a custom control.
 
-1.  In the Controls catalog, click [image: cortex-cloud-compliance-three-dots.png] on the built-in control you want to edit and click Save as new.
+1.  In the Controls catalog, click  on the built-in control you want to edit and click Save as new.
     
-    To edit a custom control, click [image: cortex-cloud-compliance-three-dots.png] on the custom control and click Edit.
+    To edit a custom control, click  on the custom control and click Edit.
     
 2.  Click Next.
     
@@ -23709,7 +23171,6 @@ You can edit a copy of a built-in control or edit an existing custom control. Yo
 5.  If the control does not already contain a rule, assign a custom detection rule to the control.
 
 ##### Add a custom detection rule to a custom control
-Abstract
 
 Add a custom detection rule to one or more custom controls to tailor compliance checks to your organization's needs.
 
@@ -23727,7 +23188,7 @@ How to add a custom detection rule to a custom control
     
 3.  Click the Compliance Controls tab.
     
-4.  Click [image: cortex-cloud-compliance-three-dots.png] and click Edit.
+4.  Click  and click Edit.
     
 5.  In the Edit Custom Detection Rule pane Compliance Controls field, click Add.
     
@@ -23742,7 +23203,6 @@ How to add a custom detection rule to a custom control
     The custom detection rule is assigned to the custom control.
 
 ##### Create a new Custom Detection Rule
-Abstract
 
 Create Custom Detection Rules to check your organization’s assets.
 
@@ -23781,39 +23241,15 @@ How to create a Custom Detection Rule
     | Field | Description |
     | --- | --- |
     | Operating System | The operating system targeted by the rule. The available options are: Linux; Windows |
-    | Input file(s) path | The full file path for one or more files. For example, **`/nfs/an/disks/jj/home/dir/file.txt`**
-     |
-    | Define the Rule (Rego) | Use Rego to define the custom detection logic. Use the default code in this box as a reference or starting point. Click [read here](https://www.openpolicyagent.org/docs/latest/policy-language/#learning-rego) for more information how to use Rego syntax. Example 1
-    
-    ```
-    **Code** "/var/log/auth.log": { "content": "Failed password for invalid user test from 192.168.1.1 port 22 ssh2\\n", "metadata": { "file\_type": "file", "gid": 1000, "last\_modified": 1737292449, "permissions": 436, "size": 6000, "uid": 1001 },"path": "/var/log/auth.log" } **Script** package panw.complianceimport rego.v1 match contains {"msg": msg} if { authLogFile = input\["/var/log/auth.log" \] contains(authLogFile.content, "Failed password")     authLogFile.metadata.permissions == 436     authLogFile.metadata.size > 5000 msg := "Failed login attempts detected in /var/log/auth.log"} **Output** "match": \[         {                "msg": "Failed login attempts detected in /var/log/auth.log"       },   \]
-    ```
-    
-    Example 2
-    
-    ```
-    **Code** "/etc/passwd": { "content": "root:x:0:0:root:/root:/bin/bash\\nuser1:\*:1001:1001:User One:/home/user1:/bin/bash\\n", "metadata": { "file\_type": "file", "gid": 1001, "last\_modified": 1737292449, "permissions": 644, "size": 100, "uid": 1002 },"path": "/etc/passwd" } **Script** package panw.complianceimport rego.v1 match contains {"msg": msg} if { passwdFile = input\["/etc/passwd"\]         passwdFile.metadata.file\_type == "file"     passwdFile.metadata.permissions == 644     passwdFile.metadata.size < 200     contains(passwdFile.content, ":\*:")     msg := "Empty or suspicious password detected in /etc/passwd"} **Output** "match": \[   {             "msg": "Empty or suspicious password detected in /etc/passwd"     }, \]
-    ```
-    
-    Example 3
-    
-    ```
-    **Code**  "/etc/shadow": {    "content": "root:$6$abc123$abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123:17542:0:99999:7:::",     "metadata": {       "file\_type": "file",       "gid": 1001,       "last\_modified": 1737292449,       "permissions": 640,       "size": 100,       "uid": 1002     },"path": "/etc/shadow"  } **Script** package panw.complianceimport rego.v1 match contains {"msg": msg} if { shadowFile = input\["/etc/shadow"\]         shadowFile.metadata.file\_type == "file"    shadowFile.metadata.permissions != 600     shadowFile.metadata.size > 30     contains(shadowFile.content, "::")     msg := "Empty or weak password detected in /etc/shadow"} **Output** "match": \[    {             "msg": "Empty or weak password detected in /etc/shadow"         }, \]
-    ```
-    
-     |
+    | Input file(s) path | The full file path for one or more files. For example, **`/nfs/an/disks/jj/home/dir/file.txt`** |
+    | Define the Rule (Rego) | Use Rego to define the custom detection logic. Use the default code in this box as a reference or starting point. Click [read here](https://www.openpolicyagent.org/docs/latest/policy-language/#learning-rego) for more information how to use Rego syntax. Example 1 **Code** "/var/log/auth.log": { "content": "Failed password for invalid user test from 192.168.1.1 port 22 ssh2\\n", "metadata": { "file_type": "file", "gid": 1000, "last_modified": 1737292449, "permissions": 436, "size": 6000, "uid": 1001 },"path": "/var/log/auth.log" } **Script** package panw.complianceimport rego.v1 match contains {"msg": msg} if { authLogFile = input["/var/log/auth.log" ] contains(authLogFile.content, "Failed password")     authLogFile.metadata.permissions == 436     authLogFile.metadata.size > 5000 msg := "Failed login attempts detected in /var/log/auth.log"} **Output** "match": [         {                "msg": "Failed login attempts detected in /var/log/auth.log"       },   ] Example 2 **Code** "/etc/passwd": { "content": "root:x:0:0:root:/root:/bin/bash\\nuser1:\*:1001:1001:User One:/home/user1:/bin/bash\\n", "metadata": { "file_type": "file", "gid": 1001, "last_modified": 1737292449, "permissions": 644, "size": 100, "uid": 1002 },"path": "/etc/passwd" } **Script** package panw.complianceimport rego.v1 match contains {"msg": msg} if { passwdFile = input["/etc/passwd"]         passwdFile.metadata.file_type == "file"     passwdFile.metadata.permissions == 644     passwdFile.metadata.size < 200     contains(passwdFile.content, ":\*:")     msg := "Empty or suspicious password detected in /etc/passwd"} **Output** "match": [   {             "msg": "Empty or suspicious password detected in /etc/passwd"     }, ] Example 3 **Code**  "/etc/shadow": {    "content": "root:$6$abc123$abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123abc123:17542:0:99999:7:::",     "metadata": {       "file_type": "file",       "gid": 1001,       "last_modified": 1737292449,       "permissions": 640,       "size": 100,       "uid": 1002     },"path": "/etc/shadow"  } **Script** package panw.complianceimport rego.v1 match contains {"msg": msg} if { shadowFile = input["/etc/shadow"]         shadowFile.metadata.file_type == "file"    shadowFile.metadata.permissions != 600     shadowFile.metadata.size > 30     contains(shadowFile.content, "::")     msg := "Empty or weak password detected in /etc/shadow"} **Output** "match": [    {             "msg": "Empty or weak password detected in /etc/shadow"         }, ] |
     
     Kubernetes Connector settings
     
     | Field | Description |
     | --- | --- |
     | Kubernetes Resources | From the drop down, select one or more from the following: Namespaces: Logical partitions within a Kubernetes cluster that allow resource isolation and organization.; ReplicaSets: Ensures a specified number of pod replicas are running at all times by automatically scaling up or down.; Deployments: Manages and control pod replicas by providing declarative updates for ReplicaSets, enabling rolling updates and rollbacks.; StatefulSets: Deploys stateful applications that require persistent identity and storage, ensuring stable pod names and ordered scaling.; DaemonSets: Ensures that a copy of a specific pod runs on all or selected nodes in the cluster, commonly used for logging and monitoring agents.; Jobs: Runs one-time or short-lived workloads that complete execution and then terminate.; CronJobs: Defines scheduled jobs that run at specified times or intervals, similar to Linux cron jobs.; ClusterRoles: Defines permissions at the cluster level, granting access to resources across all namespaces.; Roles: Defines permissions within a specific namespace, restricting access to resources within that namespace.; RoleBindings: Associates a role with a user, group, or service account within a specific namespace.; ClusterRoleBindings: Associates a cluster role with users, groups, or service accounts at the cluster-wide level.; NetworkPolicies: Defines rules that control the communication between pods and other network entities within the cluster, enforcing security restrictions.; Services: Exposes a set of pods as a network service, allowing stable communication within and outside the cluster.; ServiceAccounts: Provides an identity for pods to authenticate against the Kubernetes API, allowing controlled access to resources.; Endpoints: Represents the actual network addresses of the pods backing a service, dynamically updated as pods start or stop.; Ingresses: Manages external access to services, providing HTTP/HTTPS routing, load balancing, and SSL termination.; ConfigMaps: Stores non-sensitive configuration data in key-value pairs, allowing applications to retrieve configuration without modifying container images.; Secrets: Securely stores and manage sensitive data, such as API keys, passwords, and certificates, in an encrypted format.; Nodes: Defines the physical or virtual machines that run the workloads in a Kubernetes cluster. |
-    | Define the Rule (Rego) | All custom Rego policies in Cortex must follow this pattern:
-    ```
-    package panw.compliance import rego.v1 match contains {"msg": msg} if { # Your detection logic here msg := "Description of the finding" }
-    ```
-    
-    \*\*Note:\*\* The custom rule must use the `match` term (not `deny` or others) to function properly. |
+    | Define the Rule (Rego) | All custom Rego policies in Cortex must follow this pattern: package panw.compliance import rego.v1 match contains {"msg": msg} if { # Your detection logic here msg := "Description of the finding" } \*\*Note:\*\* The custom rule must use the `match` term (not `deny` or others) to function properly. |
     
     XDR Agent settings
     
@@ -23866,13 +23302,10 @@ How to create a Custom Detection Rule
     Under Posture Management → Compliance → Catalogs → Standards, create a custom standard that includes the custom control associated with the Custom Detection Rule, and then create an assessment profile that runs the custom standard. You can then monitor the compliance results in a report. For more information, see Monitor and track compliance adherence.
 
 ## Use an assessment profile to run compliance checks on your assets
-Abstract
 
 The compliance Assessment Profiles are configurations that define which standard to run on which asset group.
 
 An assessment profile runs scans on asset groups to check whether the assets adhere to a specific standard.
-
-[image: cortex-cloud-compliance-assessment-profile.png]
 
 Right click on the profile to disable, edit, or delete an existing profile.
 
@@ -23890,7 +23323,7 @@ How to create a new profile
         
     -   Optionally schedule generating a report.
         
-        1.  Enter one or more report email recipients, clicking `enter` or [image: enter.png] between each entry.
+        1.  Enter one or more report email recipients, clicking `enter` or ↵ between each entry.
             
         2.  Set the cadence for the report generation.
             
@@ -23909,7 +23342,6 @@ How to create a new profile
     The assessment profile evaluates the compliance posture and generates a report at the optionally defined cadence, and sends it to the defined emails.
 
 ## View and manage compliance assessments and reports
-Abstract
 
 Create a compliance assessment report based on a Cortex compliance standard for immediate viewing or download, or schedule recurring reports to continue monitoring compliance over time.
 
@@ -23925,10 +23357,7 @@ You can generate PDF or CSV reports and optionally receive them via email when y
 
 The compliance score is calculated for each assessment profile. The score is based on the number of assets that passed or failed the rules in the standard, represented as a percentage of controls that failed/passed.
 
-[image: compliance-score-blurred.png]
-
 ### Assessments
-Abstract
 
 View the latest compliance assessment results in the Assessment page.
 
@@ -23948,8 +23377,6 @@ You can right click a specific assessment profile and select View Profile Report
 
 Controls tab
 
-[image: compliance-score.png]
-
 The Controls tab shows:
 
 | Display element | Description |
@@ -23964,10 +23391,6 @@ Drill down to specific controls and rules
 View control details
 
 Clicking the row for a specific control opens the Control Details side panel that shows information about the control in the Overview tab and the Rules tab.
-
-[image: compliance-click-control.png]
-
-[image: compliance-control-details.png]
 
 | Tab | Details |
 | --- | --- |
@@ -24019,7 +23442,6 @@ Right clicking on a row includes the following options:
 -   View Rule Side Panel: Opens the Rule Details side panel.
 
 ### Reports
-Abstract
 
 View a history of compliance assessment reports in Reports.
 
@@ -24061,10 +23483,7 @@ Example 120. 
 
 The following is a sample compliance assessment report exported to PDF.
 
-[image: cortex-cloud-compliance-assessment-report-pdf.png]
-
 ## View the compliance assessment of an individual asset
-Abstract
 
 You can review the compliance performance of any asset to gain insight into how a specific asset aligns with assigned security standards and individual controls.
 
@@ -24142,14 +23561,12 @@ The [discovery catalog](https://docs-cortex.paloaltonetworks.com/r/Cortex-Cloud-
 -   **ASSET TYPE:** The asset type created from resources identified by this RIT. If there is no asset type listed, this RIT does not create an asset. It is an intermediary RIT used to support execution of other RITs.
 
 # Cortex Cloud AI Security
-Abstract
 
 Provides a comprehensive overview of the AI assets within an organization.
 
 Cortex Cloud AI Security provides a comprehensive overview of the AI assets within an organization. It is designed to ensure AI security by offering tools to review and prioritize AI risks effectively.
 
 ## What is Cortex Cloud AI Security?
-Abstract
 
 A basic overview of the Cortex Cloud AI Security overview page, assets inventory, risks, and benefits.
 
@@ -24177,8 +23594,6 @@ These benefits ensure that using Cortex Cloud AI Security can maintain a robust 
 The Cortex Cloud AI Security overview dashboard serves as the central hub for information on the AI ecosystem within the organization. It provides a comprehensive overview of AI security posture and is designed to help users quickly access relevant information. The layout and organization of the dashboard are tailored to guide you in understanding the AI environment and determining the next steps to take for effective AI governance.
 
 The following image shows the Cortex Cloud AI Security dashboard:
-
-[image: what_is_AI_security_2.png]
 
 ### AI assets inventory
 
@@ -24212,7 +23627,6 @@ When insecure models and deployments are used, several types of attacks can occu
 These types of attacks highlight the importance of implementing robust security measures, as outlined by the OWASP (Open Web Application Security Project) _Top 10 Risk & Mitigations for LLMs and Gen AI Apps_.
 
 ## Supported services in Cortex Cloud AI Security
-Abstract
 
 A list of platforms and services that are compatible with Cortex Cloud AI Security.
 
@@ -24227,7 +23641,6 @@ The following lists the various services that are compatible with Cortex Cloud A
 -   Self-managed AI models
 
 ## Cortex Cloud AI Security concepts
-Abstract
 
 Basic concepts of Cortex Cloud AI Security.
 
@@ -24303,8 +23716,6 @@ Retrieval-Augmented Generation (RAG) enhances large language model (LLM) respons
 
 To illustrate how these components work together, consider an AI-powered customer support chatbot:
 
-[image: AI_security_concepts_1.png]
-
 -   **Model endpoint:** The chatbot application interacts with the GPT-4 model through the Azure OpenAI Deployment, which serves as the model endpoint. This endpoint handles user queries, processes them, and directs them to the GPT-4 model to generate responses.
     
 -   **Model:** The GPT-4 model receives the user's query, processes it, and generates a relevant and contextually appropriate response based on the information and nuances provided in the query.
@@ -24316,7 +23727,6 @@ To illustrate how these components work together, consider an AI-powered custome
 -   **Application:** The customer support platform integrates the chatbot with a user-friendly interface.
 
 ## Cortex Cloud AI Security use cases
-Abstract
 
 Learn about use cases that are relevant for Cortex Cloud AI Security.
 
@@ -24365,7 +23775,6 @@ A key aspect of Cortex Cloud AI Security is implementing a shift-left approach t
 Cortex Cloud AI Security provides detection and risk assessment for open-source models, identifying and displaying the count of open-source models on the dashboard.
 
 ## How to perform advanced AI Security investigations using XQL
-Abstract
 
 Working with datasets in Cortex Cloud AI Security.
 
@@ -24377,8 +23786,8 @@ You can use the following AI-related datasets:
 
 | Dataset | Description |
 | --- | --- |
-| asset\_inventory | Provides a normalized, structured inventory of all digital assets across your AI environment, including detailed metadata for each asset, such as type, cloud provider, region, and security configurations. The dataset also maps relationships between assets, enabling the identification of complex AI and cloud dependencies for a comprehensive AI security posture. |
-| classification\_mgmt\_data\_profile | Provides administrative insights into the data classification policies and profiles configured within the Cortex Cloud Data Classification service.This dataset is primarily used for monitoring and managing the data classification rules in the Cortex Cloud environment. |
+| asset_inventory | Provides a normalized, structured inventory of all digital assets across your AI environment, including detailed metadata for each asset, such as type, cloud provider, region, and security configurations. The dataset also maps relationships between assets, enabling the identification of complex AI and cloud dependencies for a comprehensive AI security posture. |
+| classification_mgmt_data_profile | Provides administrative insights into the data classification policies and profiles configured within the Cortex Cloud Data Classification service.This dataset is primarily used for monitoring and managing the data classification rules in the Cortex Cloud environment. |
 | findings | Contains the findings that are associated with the assets that are found in your environments. For more information, see Findings and events. |
 | issues | Consolidates all AI security vulnerabilities, misconfigurations, and threats detected by Cortex Cloud AI Security. Each entry includes detailed context, such as the affected asset ID, a risk score, a description of the issue, and suggested remediation steps. This dataset provides a unified, actionable view of all security risks for your organization. |
 
@@ -24405,162 +23814,141 @@ Here are some examples of AI-related queries you can run in Cortex Cloud to inve
 
 1\. AI assets that were first discovered in the last 7 days
 
-```
-dataset = asset\_inventory
+dataset = asset_inventory
 | filter xdm.asset.type.class = "AI"
-| alter found = xdm.asset.first\_observed
-| filter timestamp\_diff(found, current\_time(), "DAY") >= 7
+| alter found = xdm.asset.first_observed
+| filter timestamp_diff(found, current_time(), "DAY") >= 7
 | fields
-    xdm.asset.name as Asset\_Name,
-    xdm.asset.type.category as Asset\_Type,
-    xdm.asset.first\_observed as First\_Observed,
+    xdm.asset.name as Asset_Name,
+    xdm.asset.type.category as Asset_Type,
+    xdm.asset.first_observed as First_Observed,
     xdm.asset.provider as Cloud,
     xdm.asset.cloud.region as Region
-```
 
 2\. Sensitive AI assets, such as datasets containing sensitive data, models trained on sensitive data, or model endpoints using sensitive inference data
 
-```
-dataset = asset\_inventory
+dataset = asset_inventory
 | filter xdm.asset.type.class = "AI"
 | join (
     dataset = findings
-    | filter xdm.finding.type\_id = 110000001
-) as sensitive\_AI sensitive\_ai.xdm.finding.asset\_id = xdm.asset.id
+    | filter xdm.finding.type_id = 110000001
+) as sensitive_AI sensitive_ai.xdm.finding.asset_id = xdm.asset.id
 | fields
-    xdm.asset.name as Asset\_Name,
-    xdm.asset.type.category as Asset\_Type,
+    xdm.asset.name as Asset_Name,
+    xdm.asset.type.category as Asset_Type,
     xdm.asset.provider as Cloud,
-    xdm.finding.normalized\_fields as Sensitive\_Data
-```
+    xdm.finding.normalized_fields as Sensitive_Data
 
 3\. Fine-tuned AI models
 
-```
-dataset = asset\_inventory
-| filter xdm.asset.type.category = "Model" and xdm.ai.model.kind = "FINE\_TUNED"
+dataset = asset_inventory
+| filter xdm.asset.type.category = "Model" and xdm.ai.model.kind = "FINE_TUNED"
 | fields
-    xdm.asset.name as Asset\_Name,
-    xdm.asset.type.category as Asset\_Type,
+    xdm.asset.name as Asset_Name,
+    xdm.asset.type.category as Asset_Type,
     xdm.asset.provider as Cloud,
-    xdm.ai.model.kind as model\_kind
-```
+    xdm.ai.model.kind as model_kind
 
 4\. Public AI deployments that are accessible from the public internet
 
-```
 dataset = findings
-| filter xdm.finding.type\_id = 110000004
-| join (dataset = asset\_inventory | filter xdm.asset.type.category = "Model Endpoint") as public\_endpoints public\_endpoints.xdm.asset.id = xdm.finding.asset\_id
-| fields xdm.asset.name as Asset\_Name, xdm.asset.type.category as Asset\_Type, xdm.asset.provider as Cloud
-```
+| filter xdm.finding.type_id = 110000004
+| join (dataset = asset_inventory | filter xdm.asset.type.category = "Model Endpoint") as public_endpoints public_endpoints.xdm.asset.id = xdm.finding.asset_id
+| fields xdm.asset.name as Asset_Name, xdm.asset.type.category as Asset_Type, xdm.asset.provider as Cloud
 
 5\. AI datasets containing sensitive PII data
 
-```
-dataset = asset\_inventory
+dataset = asset_inventory
 | filter xdm.asset.type.class = "AI" and xdm.asset.type.category = "Dataset"
 | join(
     dataset = findings
-    | filter xdm.finding.type\_id = 110000001
-    | filter xdm.finding.is\_active = TRUE
-    | alter data\_profile = json\_extract\_scalar\_array(xdm.finding.normalized\_fields, "$\['xdm.data.data\_profile'\]")
-    | arrayexpand data\_profile
-) as sensitive\_AI sensitive\_ai.xdm.finding.asset\_id = xdm.asset.id
+    | filter xdm.finding.type_id = 110000001
+    | filter xdm.finding.is_active = TRUE
+    | alter data_profile = json_extract_scalar_array(xdm.finding.normalized_fields, "$['xdm.data.data_profile']")
+    | arrayexpand data_profile
+) as sensitive_AI sensitive_ai.xdm.finding.asset_id = xdm.asset.id
 | join(
-    dataset = classification\_mgmt\_data\_profile
+    dataset = classification_mgmt_data_profile
     | filter name = "PII" and enabled = True
-) as data\_profile\_def data\_profile\_def.id = to\_integer(data\_profile)
-| fields name as data\_type, xdm.asset.name as dataset\_name, xdm.asset.strong\_id as dataset\_full\_path, xdm.asset.provider as dataset\_provider, xdm.asset.realm as dataset\_realm, xdm.asset.type.name as dataset\_type, xdm.finding.description as description
-```
+) as data_profile_def data_profile_def.id = to_integer(data_profile)
+| fields name as data_type, xdm.asset.name as dataset_name, xdm.asset.strong_id as dataset_full_path, xdm.asset.provider as dataset_provider, xdm.asset.realm as dataset_realm, xdm.asset.type.name as dataset_type, xdm.finding.description as description
 
 6\. AI datasets containing sensitive PCI data
 
-```
-dataset = asset\_inventory
+dataset = asset_inventory
 | filter xdm.asset.type.class = "AI" and xdm.asset.type.category = "Dataset"
 | join(
     dataset = findings
-    | filter xdm.finding.type\_id = 110000001
-    | filter xdm.finding.is\_active = TRUE
-    | alter data\_profile = json\_extract\_scalar\_array(xdm.finding.normalized\_fields, "$\['xdm.data.data\_profile'\]")
-    | arrayexpand data\_profile
-) as sensitive\_AI sensitive\_ai.xdm.finding.asset\_id = xdm.asset.id
+    | filter xdm.finding.type_id = 110000001
+    | filter xdm.finding.is_active = TRUE
+    | alter data_profile = json_extract_scalar_array(xdm.finding.normalized_fields, "$['xdm.data.data_profile']")
+    | arrayexpand data_profile
+) as sensitive_AI sensitive_ai.xdm.finding.asset_id = xdm.asset.id
 | join(
-    dataset = classification\_mgmt\_data\_profile
+    dataset = classification_mgmt_data_profile
     | filter name = "PCI" and enabled = True
-) as data\_profile\_def data\_profile\_def.id = to\_integer(data\_profile)
-| fields name as data\_type, xdm.asset.name as dataset\_name, xdm.asset.strong\_id as dataset\_full\_path, xdm.asset.provider as dataset\_provider, xdm.asset.realm as dataset\_realm, xdm.asset.type.name as dataset\_type, xdm.finding.description as description
-```
+) as data_profile_def data_profile_def.id = to_integer(data_profile)
+| fields name as data_type, xdm.asset.name as dataset_name, xdm.asset.strong_id as dataset_full_path, xdm.asset.provider as dataset_provider, xdm.asset.realm as dataset_realm, xdm.asset.type.name as dataset_type, xdm.finding.description as description
 
 7\. AI assets with more than one issue
 
-```
-dataset = asset\_inventory
+dataset = asset_inventory
 | filter xdm.asset.type.class = "AI" and xdm.asset.type.category in ("Dataset", "Model", "Model Endpoint")
 | join (
-    dataset = issues\_with\_sbac
-    | fields xdm.issue.id as issue\_id, xdm.issue.domain, xdm.issue.status.progress as progress, xdm.issue.is\_excluded as is\_excluded
-    | filter xdm.issue.domain = "POSTURE" and is\_excluded != true and progress != "RESOLVED"
+    dataset = issues_with_sbac
+    | fields xdm.issue.id as issue_id, xdm.issue.domain, xdm.issue.status.progress as progress, xdm.issue.is_excluded as is_excluded
+    | filter xdm.issue.domain = "POSTURE" and is_excluded != true and progress != "RESOLVED"
     | join type = inner (
-        dataset = issue\_to\_asset
-        | fields xdm.asset.id as ita\_assetid, xdm.issue.id
-    ) as its its.xdm.issue.id = issue\_id
-    | fields issue\_id, ita\_assetid
-    | comp count(issue\_id) as issues\_count by ita\_assetid
-) as iss iss.ita\_assetid = xdm.asset.id
-```
+        dataset = issue_to_asset
+        | fields xdm.asset.id as ita_assetid, xdm.issue.id
+    ) as its its.xdm.issue.id = issue_id
+    | fields issue_id, ita_assetid
+    | comp count(issue_id) as issues_count by ita_assetid
+) as iss iss.ita_assetid = xdm.asset.id
 
 8\. VMs deploying self-managed AI models
 
-```
-dataset = asset\_inventory
-| filter xdm.asset.type.class = "AI" and xdm.asset.type.category in ("Model") and xdm.asset.type.id = "SELF\_MANAGED\_MODEL"
-| alter relation = json\_extract\_array(xdm.asset.normalized\_fields, "$\['xdm.asset.relations'\]")
+dataset = asset_inventory
+| filter xdm.asset.type.class = "AI" and xdm.asset.type.category in ("Model") and xdm.asset.type.id = "SELF_MANAGED_MODEL"
+| alter relation = json_extract_array(xdm.asset.normalized_fields, "$['xdm.asset.relations']")
 | arrayexpand relation
-| alter relation\_type = json\_extract\_scalar(relation, "$\['xdm.asset.relation.type'\]")
-| filter relation\_type in("DEPLOYED\_ON")
-| alter relation\_asset\_id\_to\_find = json\_extract\_scalar(relation, "$\['xdm.asset.relation.asset\_id'\]")
-| dedup relation\_asset\_id\_to\_find
+| alter relation_type = json_extract_scalar(relation, "$['xdm.asset.relation.type']")
+| filter relation_type in("DEPLOYED_ON")
+| alter relation_asset_id_to_find = json_extract_scalar(relation, "$['xdm.asset.relation.asset_id']")
+| dedup relation_asset_id_to_find
 | join(
-    dataset = asset\_inventory
-) as vm\_asset vm\_asset.xdm.asset.id = relation\_asset\_id\_to\_find
-| fields xdm.asset.name as compute\_instance\_name, xdm.asset.realm as compute\_instance\_realm, xdm.asset.provider as compute\_instance\_provider, xdm.asset.type.name as compute\_instance\_type
-```
+    dataset = asset_inventory
+) as vm_asset vm_asset.xdm.asset.id = relation_asset_id_to_find
+| fields xdm.asset.name as compute_instance_name, xdm.asset.realm as compute_instance_realm, xdm.asset.provider as compute_instance_provider, xdm.asset.type.name as compute_instance_type
 
 9\. Disks storing self-managed AI models
 
-```
-dataset = asset\_inventory
-| filter xdm.asset.type.class = "AI" and xdm.asset.type.category in ("Model") and xdm.asset.type.id = "SELF\_MANAGED\_MODEL"
-| alter relation = json\_extract\_array(xdm.asset.normalized\_fields, "$\['xdm.asset.relations'\]")
+dataset = asset_inventory
+| filter xdm.asset.type.class = "AI" and xdm.asset.type.category in ("Model") and xdm.asset.type.id = "SELF_MANAGED_MODEL"
+| alter relation = json_extract_array(xdm.asset.normalized_fields, "$['xdm.asset.relations']")
 | arrayexpand relation
-| alter relation\_type = json\_extract\_scalar(relation, "$\['xdm.asset.relation.type'\]")
-| filter relation\_type in("STORED\_IN")
-| alter relation\_asset\_id\_to\_find = json\_extract\_scalar(relation, "$\['xdm.asset.relation.asset\_id'\]")
-| dedup relation\_asset\_id\_to\_find
+| alter relation_type = json_extract_scalar(relation, "$['xdm.asset.relation.type']")
+| filter relation_type in("STORED_IN")
+| alter relation_asset_id_to_find = json_extract_scalar(relation, "$['xdm.asset.relation.asset_id']")
+| dedup relation_asset_id_to_find
 | join(
-    dataset = asset\_inventory
-) as vm\_asset vm\_asset.xdm.asset.id = relation\_asset\_id\_to\_find
-| fields xdm.asset.name as disk\_name, xdm.asset.realm as disk\_realm, xdm.asset.provider as disk\_provider, xdm.asset.type.name as disk\_type, xdm.asset.strong\_id as disk\_id
-```
+    dataset = asset_inventory
+) as vm_asset vm_asset.xdm.asset.id = relation_asset_id_to_find
+| fields xdm.asset.name as disk_name, xdm.asset.realm as disk_realm, xdm.asset.provider as disk_provider, xdm.asset.type.name as disk_type, xdm.asset.strong_id as disk_id
 
 10\. Active AI models with the number of days since last used
 
-```
-dataset = asset\_inventory
+dataset = asset_inventory
 | filter xdm.asset.type.class = "AI"
 | filter xdm.asset.type.category in ("Model")
 | join (
     dataset = findings
-    | filter xdm.finding.type\_id = 110000007 and xdm.finding.is\_active = TRUE
-    | alter days\_since\_invoked = json\_extract\_scalar(xdm.finding.extended\_fields, "$\['days\_since\_invoked'\]")
-) as model\_activity model\_activity.xdm.finding.asset\_id = xdm.asset.id
-| fields xdm.asset.name as Asset\_Name, xdm.asset.type.category as Asset\_Type, xdm.asset.first\_observed as First\_Observed, xdm.asset.provider as Cloud, xdm.asset.cloud.region as Region, days\_since\_invoked
-```
+    | filter xdm.finding.type_id = 110000007 and xdm.finding.is_active = TRUE
+    | alter days_since_invoked = json_extract_scalar(xdm.finding.extended_fields, "$['days_since_invoked']")
+) as model_activity model_activity.xdm.finding.asset_id = xdm.asset.id
+| fields xdm.asset.name as Asset_Name, xdm.asset.type.category as Asset_Type, xdm.asset.first_observed as First_Observed, xdm.asset.provider as Cloud, xdm.asset.cloud.region as Region, days_since_invoked
 
 # Cortex Cloud Application Security
-Abstract
 
 Application Security provides unified visibility and control over app security throughout the lifecycle, identifying vulnerabilities to protect data and integrity.
 
@@ -24593,7 +23981,6 @@ Prisma Cloud customers can use the Upgrade Helper to copy Application Security d
 # Cortex Cloud Data Classification
 
 ## What is Cortex Cloud Data Classification?
-Abstract
 
 Overview of the Data Classification engine.
 
@@ -24625,7 +24012,6 @@ The main screens of Data Classification management are:
     -   Collect Masked Patterns: Collects three samples for each data pattern that was classified in each object (file or table) and is masked by the Data Classification engine in your environment. Data does not leave your environment before it is masked, therefore the full data is always protected.
 
 ## How to create and validate a custom data pattern
-Abstract
 
 Learn how to use Cortex Cloud Data Classification to define specific criteria for identifying sensitive data for your unique needs.
 
@@ -24735,7 +24121,6 @@ To validate your data pattern, do the following:
 For more information, see How to disable and enable data patterns in Data Classification.How to disable and enable data patterns in Data Classification
 
 ### Custom data patterns: Guardrails and syntax guide
-Abstract
 
 Details and examples about the capabilities and limitations with regular expressions in Cortex Cloud Data Classification.
 
@@ -24878,7 +24263,6 @@ This section lists the specific regular expression characters and groupings that
 -   **Don't**: Edit the existing text in the test box and expect immediate results if previous tests failed.
 
 ## How to disable and enable data patterns in Data Classification
-Abstract
 
 How to turn data patterns on and off in Data Classification.
 
@@ -24911,7 +24295,6 @@ You can enable data patterns after they have been disabled. Once enabled, new sc
 For more information about data patterns in data classification, see What is Cortex Cloud Data Classification?.
 
 ## How to create and validate a custom data profile
-Abstract
 
 Learn how to use custom data profiles in Cortex Cloud Data Classification, which are labels that are applied to a data object and define a data-related business case.
 
@@ -24997,7 +24380,6 @@ You can manage custom data profiles as follows:
 For more information, see How to disable and enable data profiles in Cortex Cloud Data Classification.
 
 ## How to disable and enable data profiles in Cortex Cloud Data Classification
-Abstract
 
 How to turn data profiles on and off in Cortex Cloud Data Classification.
 
@@ -25055,7 +24437,6 @@ For more information about data profiles in Cortex Cloud Data Classification, se
     -   Enable
 
 ## How to report a false positive in Cortex Cloud Data Classification
-Abstract
 
 Details about the procedure for creating a support case for a false positive result in Cortex Cloud Data Classification.
 
@@ -25112,22 +24493,18 @@ How to create a support case
 4.  Click Submit. A support case is opened and you will be contacted by the Palo Alto Networks support team.
 
 # Cortex Cloud Data Security
-Abstract
 
 The Cortex Cloud Data Security solution is an agentless multi-cloud data security platform that discovers, classifies, protects, and governs sensitive data.
 
 The Cortex Cloud Data Security solution is an agentless multi-cloud data security platform that discovers, classifies, protects, and governs sensitive data.
 
 ## What is Cortex Cloud Data Security?
-Abstract
 
 Learn about Cortex Cloud Data Security capabilities and benefits.
 
 When you start managing your data assets in the cloud, this requires the implementation of comprehensive data security capabilities. The mission of Cortex Cloud Data Security is to provide you with such capabilities, in order to ensure complete visibility and real-time control over potential security risks to your data.
 
 The following image shows the Cortex Cloud Data Security dashboard:
-
-[image: data_security_dashboard_1-2026.png]
 
 ### Capabilities
 
@@ -25163,7 +24540,6 @@ Using the data detection and security capabilities of Cortex Cloud Data Securit
 -   Reduce cloud costs by identifying orphaned snapshots, shadow backups, and stale assets that contribute to unnecessary storage expenses.
 
 ## Supported assets in Cortex Cloud Data Security
-Abstract
 
 A basic summary of the supported assets in the Cortex Cloud Data Security module.
 
@@ -25291,7 +24667,6 @@ The list above refers to only data classification; however, Cortex Cloud Data Se
 For information about configuring data classification asset types, see How to configure the scanning settings for supported services.
 
 ## Cortex Cloud Data Security concepts
-Abstract
 
 A glossary of the basic concepts of Cortex Cloud Data Security.
 
@@ -25324,7 +24699,6 @@ The following is a list of the basic concepts related to Cortex Cloud Data Secur
 -   **Data security issues:** Issues reflect actionable security risks that are generated by a Data Policy. For example, “sensitive public object in private asset” is an issue referencing a scenario where an object is publicly accessible while the asset configuration does not make it entirely public.
 
 ## Cortex Cloud Data Security use cases
-Abstract
 
 Learn more about the main use cases in Cortex Cloud Data Security.
 
@@ -25369,13 +24743,10 @@ Learn more about the main use cases in Cortex Cloud Data Security.
 -   By managing large asset inventories and prioritizing financial efforts on critical resources, you can optimize cloud utilization. Additionally, its data freshness analysis helps remove outdated assets, further cutting expenses.
 
 ## Data Inventory
-Abstract
 
 Learn about the All Data Assets page, including databases, disks, and storage buckets.
 
 The All Data Assets page provides a centralized repository containing information about all data assets within your environment. Dedicated asset modules allow multi-method asset coverage, such as agentless, from various sources. Having full visibility of assets allows for timely incident response, effective threat hunting, and attack surface reduction.
-
-[image: all_data_assets_Jan2026.png]
 
 The data inventory asset card provides a unified view of an asset, consolidating attributes, enhancements, and related cases, issues, and findings. When you click an asset, the asset card opens, enabling you to easily switch between multiple assets cards at the same time.
 
@@ -25460,15 +24831,15 @@ Use the following widgets and filtering features at the top of the All Data Asse
 
 -   Assets at Risk: Displays a bar with the various risk levels. When you hover your mouse you can see the number of risks for each risk level that were found. You can also click any of the cloud platform icons (AWS, Azure, and GCP) to filter the results. Click again to remove the filter.
     
-    [image: data_inventory_4a.png]
+    
     
 -   Sensitive Assets: Displays the number of sensitive assets that were found. You can click this widget to filter the list according to these sensitive assets. The number of assets at risk changes accordingly.
     
-    [image: Data_inventory_5.png]
+    
     
 -   Sensitive Assets Open to World: Displays the number of sensitive assets that are open to the world. The number of assets at risk changes accordingly.
     
-    [image: Data_inventory_6.png]
+    
     
 
 **Filtering Features**
@@ -25486,11 +24857,11 @@ To use the Add Filters button to display all storage buckets that have credit ca
 
 1.  In the All Data Assets screen, under the row of widgets at the top of the screen, click the Add Filters button.
     
-    [image: add_filters_button.png]
+    
     
 2.  In the Select field list, select Category.
     
-    [image: select_field_category.png]
+    
     
 3.  In the Value field, enter `storage` and then press Enter.
     
@@ -25500,7 +24871,7 @@ To use the Add Filters button to display all storage buckets that have credit ca
     
     1.  In the Select field list, select: Is Open To World, and then double-click Yes.
         
-        [image: open_to_world.png]
+        
         
     2.  Click Add filter and then in the Select field list, select: Data Patterns.
         
@@ -25508,7 +24879,7 @@ To use the Add Filters button to display all storage buckets that have credit ca
         
         The filter should now appear as shown below:
         
-        [image: new_filter.png]
+        
         
     
     The asset list beneath the filter panel should now display all storage buckets that have credit card numbers that are publicly available.
@@ -25523,7 +24894,6 @@ To use the Add Filters button to display all storage buckets that have credit ca
 To clear the filter in the filter panel, click Delete.
 
 ## How to review errors in Cortex Cloud Data Security
-Abstract
 
 Learn how to access and review errors in Cortex Cloud Data Security.
 
@@ -25554,12 +24924,7 @@ Table 4. Error table columns
 | Region | The geographical location of the asset with the error. |
 | Asset Type | The type of asset, such as an Amazon S3 bucket or an RDS database. |
 
-  
-
-[image: how_to_review_errors_in_CC_data_security_01.png]
-
 ## How to configure the scanning settings for supported services
-Abstract
 
 How to edit a cloud instance, including data asset types.
 
@@ -25589,7 +24954,6 @@ How to edit a cloud instance, including data asset types.
     For more information about supported assets in Cortex Cloud Data Security, see Supported assets in Cortex Cloud Data Security.
 
 ## How to perform advanced Data Security investigations using XQL
-Abstract
 
 How to work with datasets in Cortex Cloud Data Security.
 
@@ -25601,11 +24965,11 @@ You can use the following data-related datasets:
 
 | Dataset | Description |
 | --- | --- |
-| dspm\_asset\_metadata | Contains high-level information about all data assets, including details such as their creation and modification dates, cloud service, and any tags. |
-| dspm\_asset\_table\_inventory | Provides an inventory of tables and their associated fields, which is useful for analyzing data at a more granular level. |
-| dspm\_asset\_data\_patterns | Tracks specific patterns of sensitive data, such as SSN or credit card numbers, found within your assets. |
-| dspm\_asset\_data\_profiles | Provides a summary of the data's content, including counts of sensitive fields and the percentage of sensitive data found. |
-| data\_ingestion\_health | Monitors the health of data ingestion pipelines, logging failures or issues that could lead to incomplete security monitoring. |
+| dspm_asset_metadata | Contains high-level information about all data assets, including details such as their creation and modification dates, cloud service, and any tags. |
+| dspm_asset_table_inventory | Provides an inventory of tables and their associated fields, which is useful for analyzing data at a more granular level. |
+| dspm_asset_data_patterns | Tracks specific patterns of sensitive data, such as SSN or credit card numbers, found within your assets. |
+| dspm_asset_data_profiles | Provides a summary of the data's content, including counts of sensitive fields and the percentage of sensitive data found. |
+| data_ingestion_health | Monitors the health of data ingestion pipelines, logging failures or issues that could lead to incomplete security monitoring. |
 | findings | Contains findings associated with assets discovered within your environments. For more information, see Findings and events. |
 | issues | Contains issues generated on assets within your environments. For more information, see Issues. |
 
@@ -25630,101 +24994,84 @@ For more information, see Build XQL queries.
 
 1\. All AWS data stores that contain objects with sensitive data
 
-```
 dataset = findings
-| filter xdm.finding.type\_id = 80000002 and xdm.finding.is\_active = true 
-| Join (dataset = asset\_inventory 
+| filter xdm.finding.type_id = 80000002 and xdm.finding.is_active = true 
+| Join (dataset = asset_inventory 
     | filter xdm.asset.type.class = "Data" and xdm.asset.provider = "AWS"
-    | fields xdm.asset.id as Asset\_ID, xdm.asset.name as Asset\_Name, xdm.asset.provider as Asset\_Cloud, xdm.asset.cloud.region as Region, xdm.asset.type.name as Asset\_Type) as res res.Asset\_ID = xdm.finding.asset\_id
-| alter Patterns = json\_extract\_scalar\_array(xdm.finding.normalized\_fields, "$\['xdm.data.data\_pattern'\]") 
-| alter Total\_Sensitive\_Records = json\_extract\_scalar(xdm.finding.normalized\_fields, "$\['xdm.data.statistics.records\_count'\]")  
-| fields Asset\_Name, Asset\_Type, Asset\_Cloud, Region, Patterns, Total\_Sensitive\_Records
-```
+    | fields xdm.asset.id as Asset_ID, xdm.asset.name as Asset_Name, xdm.asset.provider as Asset_Cloud, xdm.asset.cloud.region as Region, xdm.asset.type.name as Asset_Type) as res res.Asset_ID = xdm.finding.asset_id
+| alter Patterns = json_extract_scalar_array(xdm.finding.normalized_fields, "$['xdm.data.data_pattern']") 
+| alter Total_Sensitive_Records = json_extract_scalar(xdm.finding.normalized_fields, "$['xdm.data.statistics.records_count']")  
+| fields Asset_Name, Asset_Type, Asset_Cloud, Region, Patterns, Total_Sensitive_Records
 
 2\. All files containing sensitive data matching the PII data profile
 
-```
-dataset = dspm\_asset\_file\_inventory 
-| arrayexpand file\_data\_profile\_ids 
-| alter profile\_id = to\_integer(file\_data\_profile\_ids) 
-| join type = left (dataset = asset\_inventory 
-| fields xdm.asset.name, xdm.asset.id, xdm.asset.type.name ) as ai ai.xdm.asset.id = asset\_id 
-| join type = left (dataset = classification\_mgmt\_data\_profile 
+dataset = dspm_asset_file_inventory 
+| arrayexpand file_data_profile_ids 
+| alter profile_id = to_integer(file_data_profile_ids) 
+| join type = left (dataset = asset_inventory 
+| fields xdm.asset.name, xdm.asset.id, xdm.asset.type.name ) as ai ai.xdm.asset.id = asset_id 
+| join type = left (dataset = classification_mgmt_data_profile 
 | filter name = "PII" 
-| fields id, name) as cmdp cmdp.id = profile\_id 
+| fields id, name) as cmdp cmdp.id = profile_id 
 | dedup xdm.asset.id 
-| fields file\_name, file\_folder, file\_extension\_category, file\_size\_bytes, file\_data\_patterns, record\_count, xdm.asset.name, xdm.asset.id, xdm.asset.type.name 
-```
+| fields file_name, file_folder, file_extension_category, file_size_bytes, file_data_patterns, record_count, xdm.asset.name, xdm.asset.id, xdm.asset.type.name 
 
 3\. All data patterns with the number of sensitive records per pattern
 
-```
-dataset = dspm\_asset\_data\_patterns 
-| comp sum(record\_count) as Records by kind  
+dataset = dspm_asset_data_patterns 
+| comp sum(record_count) as Records by kind  
 | fields kind, Records
-```
 
 4\. All files containing sensitive PII data that is also public
 
-```
-dataset = dspm\_asset\_file\_inventory 
-| filter file\_is\_open\_to\_world = true 
-| arrayexpand file\_data\_profile\_ids 
-| alter profile\_id = to\_integer(file\_data\_profile\_ids) 
-| join type = left (dataset = asset\_inventory 
-| fields xdm.asset.name, xdm.asset.id, xdm.asset.type.name ) as ai ai.xdm.asset.id = asset\_id 
-| join type = left (dataset = classification\_mgmt\_data\_profile 
+dataset = dspm_asset_file_inventory 
+| filter file_is_open_to_world = true 
+| arrayexpand file_data_profile_ids 
+| alter profile_id = to_integer(file_data_profile_ids) 
+| join type = left (dataset = asset_inventory 
+| fields xdm.asset.name, xdm.asset.id, xdm.asset.type.name ) as ai ai.xdm.asset.id = asset_id 
+| join type = left (dataset = classification_mgmt_data_profile 
 | filter name = "PII" 
-| fields id, name) as cmdp cmdp.id = profile\_id 
+| fields id, name) as cmdp cmdp.id = profile_id 
 | dedup xdm.asset.id 
-| fields file\_name, file\_folder, file\_extension\_category, file\_size\_bytes, file\_data\_patterns, record\_count, xdm.asset.name, xdm.asset.id, xdm.asset.type.name 
-```
+| fields file_name, file_folder, file_extension_category, file_size_bytes, file_data_patterns, record_count, xdm.asset.name, xdm.asset.id, xdm.asset.type.name 
 
 5\. Data security issues related to malware
 
-```
 dataset = issues 
-| filter xdm.issue.owner = "DSPM" and xdm.issue.detection.rule\_id = "DSPM\_1010"
-| fields xdm.issue.name as Name, xdm.issue.severity as Severity, xdm.issue.domain as Domain, xdm.issue.category as Category, xdm.issue.observation\_time as Observation\_Time, xdm.issue.description as Description, xdm.issue.status.progress as Status
-```
+| filter xdm.issue.owner = "DSPM" and xdm.issue.detection.rule_id = "DSPM_1010"
+| fields xdm.issue.name as Name, xdm.issue.severity as Severity, xdm.issue.domain as Domain, xdm.issue.category as Category, xdm.issue.observation_time as Observation_Time, xdm.issue.description as Description, xdm.issue.status.progress as Status
 
 6\. All shadow backup files, such as database dumps or copies that are stored in unstructured storage
 
-```
-dataset = dspm\_asset\_file\_inventory 
-| filter file\_is\_shadow\_backup = true and file\_is\_deleted = false
-| fields file\_name, file\_folder as Folder, file\_extension\_category as File\_Type, file\_last\_modification\_time as Last\_Modified, file\_data\_patterns as Data\_Patterns, last\_classification\_time as Last\_Classified\_Time
-```
+dataset = dspm_asset_file_inventory 
+| filter file_is_shadow_backup = true and file_is_deleted = false
+| fields file_name, file_folder as Folder, file_extension_category as File_Type, file_last_modification_time as Last_Modified, file_data_patterns as Data_Patterns, last_classification_time as Last_Classified_Time
 
 7\. All assets containing the PCI data profile and data security issues
 
-```
-dataset = asset\_inventory 
-| join type = inner (dataset = dspm\_asset\_data\_profiles 
-| alter int\_data\_profile\_id = to\_integer(data\_profile\_id) 
-|join type = inner (dataset = classification\_mgmt\_data\_profile 
+dataset = asset_inventory 
+| join type = inner (dataset = dspm_asset_data_profiles 
+| alter int_data_profile_id = to_integer(data_profile_id) 
+|join type = inner (dataset = classification_mgmt_data_profile 
 | filter name = "PCI" 
-| fields id, name) as cm cm.id = int\_data\_profile\_id) as da da.asset\_id = xdm.asset.id 
-| join type = inner (dataset = issue\_to\_asset 
+| fields id, name) as cm cm.id = int_data_profile_id) as da da.asset_id = xdm.asset.id 
+| join type = inner (dataset = issue_to_asset 
 | join type = left (dataset = issues 
-| fields xdm.issue.id as issue\_id, xdm.issue.domain, xdm.issue.status.progress as progress, xdm.issue.is\_excluded as is\_excluded 
-| filter xdm.issue.domain = "POSTURE" and is\_excluded != true and progress != "RESOLVED") as is is.issue\_id = xdm.issue.id) as iss iss.xdm.asset.id = xdm.asset.id 
-| dedup asset\_id 
+| fields xdm.issue.id as issue_id, xdm.issue.domain, xdm.issue.status.progress as progress, xdm.issue.is_excluded as is_excluded 
+| filter xdm.issue.domain = "POSTURE" and is_excluded != true and progress != "RESOLVED") as is is.issue_id = xdm.issue.id) as iss iss.xdm.asset.id = xdm.asset.id 
+| dedup asset_id 
 | fields xdm.asset.id, xdm.asset.type.name, xdm.asset.name
-```
 
 8\. All assets with a tag of key X and value Y
 
-```
-dataset = asset\_inventory
+dataset = asset_inventory
 | filter xdm.asset.type.class = "Data"
 | fields xdm.asset.tags, xdm.asset.id, xdm.asset.type.id
-| alter tag1 = xdm.asset.tags -> \["Dont-delete"\], tag2 = xdm.asset.tags -> \["SensitiveBucket"\]
+| alter tag1 = xdm.asset.tags -> ["Dont-delete"], tag2 = xdm.asset.tags -> ["SensitiveBucket"]
 | filter tag1 = "forever" and tag2 = "True
-```
 
 ## How to onboard Databricks
-Abstract
 
 How to get started with the third-party Databricks data source.
 
@@ -25841,7 +25188,6 @@ At the end of the onboarding process, a pending request for Databricks approval 
 For more information, see Egress configurations.Egress configurations
 
 ## How to onboard Microsoft 365
-Abstract
 
 How to get started with the Microsoft 365 data source.
 
@@ -25886,7 +25232,6 @@ You can add Microsoft 365 as a third-party data source in Cortex Cloud Data Secu
 The Microsoft 365 integration instance should now appear in the list of data sources on the Data Sources & Integrations page.
 
 ## How to onboard on-premise file shares to Cortex Cloud Data Security
-Abstract
 
 Set up Data Security for on-premise file shares using Broker VM.
 
@@ -25918,7 +25263,6 @@ Once configured, this applet continuously:
 For information about activating the DSPM Fileshare applet, see Activate DSPM Fileshare.
 
 ## How to onboard Snowflake
-Abstract
 
 How to get started with the third-party Snowflake data source.
 
@@ -25953,7 +25297,7 @@ You can add Snowflake as a third-party data source in Cortex Cloud Data Security
         
         The account identifier can be found using the user information at the bottom left. Hover over the account you wish to onboard and select the copy option at the top right. The account identifier is usually of the format: 
         
-        (organization).\[account\]
+        (organization).[account]
         
     3.  (Optional) If you have a Snowflake account that is protected by a network policy, turn on the My Snowflake account is protected by network policies toggle button. The network policies are related to the IP allow list.
         
@@ -26006,7 +25350,6 @@ You can add Snowflake as a third-party data source in Cortex Cloud Data Security
     The Snowflake instance is now removed, including all previous scans.
 
 ## How to use information protection labels in Cortex Cloud Data Security
-Abstract
 
 Working with information protection labels in Cortex Cloud Data Security.
 
@@ -26059,14 +25402,12 @@ To enable the translation of Microsoft IDs to label names, connect to the Micros
         Only If you have connected a Microsoft 365 instance to Cortex Cloud, the information protection labels appear. See How to onboard Microsoft 365.
 
 # Cortex Cloud Identity Security
-Abstract
 
 Cortex Cloud Identity Security can help you address the security challenges of managing identity in cloud environments.
 
 Cortex Cloud Identity Security can help you address the security challenges of managing identity in cloud environments.
 
 ## What is Cortex Cloud Identity Security?
-Abstract
 
 Cortex Cloud Identity Security can help you address the security challenges of managing identity in cloud environments.
 
@@ -26086,8 +25427,6 @@ Cortex Cloud Identity Security is a set of tools, providing you the following ne
     
 
 The following image shows the Cortex Cloud Identity Security dashboard:
-
-[image: identity_security_dashboard_1-2026.png]
 
 Cortex Cloud Identity Security runs a proprietary algorithm to calculate effective permissions and entitlements of the identities across your cloud service providers (AWS, Azure, and GCP) as well as permissions in your IdPs (Entra ID). This means creating a single graphical representation of all your cloud entitlements; taking all mechanisms affecting permissions into account. For example:
 
@@ -26119,7 +25458,6 @@ Cortex Cloud Identity Security provides:
 -   **Remediation:** Use Cortex Cloud Identity Security to create fixes for all your security and compliance issues.
 
 ## Review and improve your Identity Security posture
-Abstract
 
 Learn how to review and improve your Identity Security posture with the provided use case examples.
 
@@ -26341,7 +25679,6 @@ Prioritize the remediation of these common risks found within your inventories:
 Reducing the number of nonhuman entities that are either dormant or have administrative privileges is the most effective way to improve your security score.
 
 ## How does Effective Permission Calculation work?
-Abstract
 
 An explanation of how Effective Permission Calculation works in Cortex Cloud Identity Security.
 
@@ -26411,7 +25748,6 @@ Resource-based policies are permissions that are configured on the destination r
 -   **GCP:** Resource-based policies are calculated for the following Google Cloud services: Cloud Storage, BigQuery, Cloud Pub/Sub, Cloud Key Management (KMS), Cloud Spanner, Cloud Run, Compute Engine, Cloud Functions, and Dataproc.
 
 ## Cortex Cloud Identity Security functionality
-Abstract
 
 About the functionalities of Cortex Cloud Identity Security.
 
@@ -26565,7 +25901,6 @@ In Cortex Cloud Identity Security, access is labeled in one of the following way
 -   **Public access:** When permission is granted to the public; for example, when an AWS role can be assumed by all users, or when an Amazon S3 bucket has a widely permissive resource-based policy
 
 ## Achieve the principle of least privilege access
-Abstract
 
 Use Cortex Cloud Identity Security to achieve the principle of least privilege access.
 
@@ -26642,7 +25977,6 @@ Cortex Cloud Identity Security does the following:
 If you turn off the audit logs, even briefly, this temporarily impacts the accuracy of the Last Access data, potentially showing permissions as unused when actually they were active. Full accuracy is restored 90 days after you re-enable the audit logs.
 
 ## Explore permissions using the simple and advanced access tables
-Abstract
 
 Learn how to explore permissions in Cortex Cloud Identity Security using the Simple and Advanced access tables.
 
@@ -26714,7 +26048,6 @@ When exploring a destination asset, such as a specific Amazon S3 bucket or datab
     -   This view shows how the permission is granted, the specific permission pattern used, and provides contextual data, for example, the exact sensitive data that is related to the permission.
 
 ## Create a custom detection rule in Cortex Cloud Identity Security
-Abstract
 
 Learn how to create a custom detection rule in Cortex Cloud Identity Security.
 
@@ -26783,12 +26116,8 @@ This is an example of a rule that looks for an AWS IAM user (source) with the fo
 -   Has no MFA configured
     
 -   Gets administrative permissions from an IAM role whose name starts with “PROD”
-    
-
-[image: example_identity_custom_detection_rule.png]
 
 ## Perform advanced Identity Security investigations using XQL
-Abstract
 
 Working with datasets in Cortex Cloud Identity Security.
 
@@ -26800,8 +26129,8 @@ You can use the following identity-related datasets:
 
 | Dataset | Description |
 | --- | --- |
-| ciem\_permissions\_with\_last\_access | Contains the permissions of each identity that is discovered in your environments, including the time of their last access when applicable. |
-| asset\_inventory | Contains an inventory of all the assets that are discovered in your environments. For more information, see Inventory management.Inventory management |
+| ciem_permissions_with_last_access | Contains the permissions of each identity that is discovered in your environments, including the time of their last access when applicable. |
+| asset_inventory | Contains an inventory of all the assets that are discovered in your environments. For more information, see Inventory management.Inventory management |
 | issues | Contains the issues that are related to the assets in your environments. For more information, see Issues. |
 | findings | Contains the findings that are associated with the assets that are found in your environments. For more information, see Findings and events. |
 
@@ -26828,115 +26157,92 @@ Here are some examples of identity-related queries you can run in Cortex Cloud t
 
 1\. Count the number of admin sources per account
 
-```
-dataset = ciem\_permissions\_with\_last\_access 
-| filter action\_access\_isadministrative in(true, TRUE) 
-| dedup source\_cloud\_resource\_uai, source\_cloud\_account\_id 
-| comp count(source\_cloud\_resource\_uai) as admins\_count by source\_cloud\_account\_id  
-| sort desc admins\_count
-```
+dataset = ciem_permissions_with_last_access 
+| filter action_access_isadministrative in(true, TRUE) 
+| dedup source_cloud_resource_uai, source_cloud_account_id 
+| comp count(source_cloud_resource_uai) as admins_count by source_cloud_account_id  
+| sort desc admins_count
 
 2\. Azure service principals granting write permissions on the subscription level
 
-```
-dataset =  ciem\_permissions\_with\_last\_access
-| filter dest\_cloud\_type = "AZURE" and action\_access\_level contains "Write" and grantedby\_level\_type = "AZURE\_SUBSCRIPTION" and grantedby\_cloud\_entity\_type = "service principal"
-| fields source\_cloud\_resource\_name, source\_cloud\_resource\_type, grantedby\_cloud\_entity\_name, grantedby\_level\_name, grantedby\_level\_type
-```
+dataset =  ciem_permissions_with_last_access
+| filter dest_cloud_type = "AZURE" and action_access_level contains "Write" and grantedby_level_type = "AZURE_SUBSCRIPTION" and grantedby_cloud_entity_type = "service principal"
+| fields source_cloud_resource_name, source_cloud_resource_type, grantedby_cloud_entity_name, grantedby_level_name, grantedby_level_type
 
 3\. Group permissions on production assets
 
-```
-dataset = ciem\_permissions\_with\_last\_access
-| filter dest\_cloud\_type = "GCP" and action\_access\_level = "config" and source\_cloud\_resource\_type = "user" and grantedby\_cloud\_entity\_type = "group" and wildcard\_match("prod.\*", dest\_cloud\_resource\_name)
-| fields source\_cloud\_resource\_name, grantedby\_cloud\_entity\_name, dest\_cloud\_resource\_name, dest\_cloud\_resource\_type
-```
+dataset = ciem_permissions_with_last_access
+| filter dest_cloud_type = "GCP" and action_access_level = "config" and source_cloud_resource_type = "user" and grantedby_cloud_entity_type = "group" and wildcard_match("prod.\*", dest_cloud_resource_name)
+| fields source_cloud_resource_name, grantedby_cloud_entity_name, dest_cloud_resource_name, dest_cloud_resource_type
 
 4\. Users without MFA and sensitive S3 and EC2 permissions
 
-```
-dataset =  ciem\_permissions\_with\_last\_access
-| filter source\_cloud\_type = "aws" and source\_cloud\_resource\_type = "user" and action\_access\_level contains "Config" and dest\_cloud\_service\_name in ("s3", "ec2")
-| join (dataset = asset\_inventory) as assets source\_cloud\_resource\_uai = assets.xdm.asset.id
-| filter lowercase(json\_extract\_scalar(xdm.asset.normalized\_fields, "$\['xdm.identity.has\_mfa'\]")) = "false"
-```
+dataset =  ciem_permissions_with_last_access
+| filter source_cloud_type = "aws" and source_cloud_resource_type = "user" and action_access_level contains "Config" and dest_cloud_service_name in ("s3", "ec2")
+| join (dataset = asset_inventory) as assets source_cloud_resource_uai = assets.xdm.asset.id
+| filter lowercase(json_extract_scalar(xdm.asset.normalized_fields, "$['xdm.identity.has_mfa']")) = "false"
 
 5\. Azure VM with data write permissions on the subscription levels
 
-```
-dataset = ciem\_permissions\_with\_last\_access
-| filter source\_cloud\_type = "azure" and source\_cloud\_resource\_type = "virtualMachines" and (lowercase(action\_access\_level) contains "config" or lowercase(action\_access\_level) contains "write") and dest\_cloud\_resource\_type ~= "^storageAccounts/blobServices" and grantedby\_level\_type = "AZURE\_SUBSCRIPTION"
-```
+dataset = ciem_permissions_with_last_access
+| filter source_cloud_type = "azure" and source_cloud_resource_type = "virtualMachines" and (lowercase(action_access_level) contains "config" or lowercase(action_access_level) contains "write") and dest_cloud_resource_type ~= "^storageAccounts/blobServices" and grantedby_level_type = "AZURE_SUBSCRIPTION"
 
 6\. Policies granting wildcard permissions
 
-```
-dataset =  ciem\_permissions\_with\_last\_access
- | filter dest\_cloud\_resource\_name ~= "^\\\*$" and grantedby\_cloud\_policy\_type in ("AWS\_CUSTOMER\_MANAGED\_POLICY", "AWS\_MANAGED\_POLICY") 
- | dedup grantedby\_cloud\_policy\_id 
- | fields grantedby\_cloud\_policy\_id as policy\_arn
-```
+dataset =  ciem_permissions_with_last_access
+ | filter dest_cloud_resource_name ~= "^\\\*$" and grantedby_cloud_policy_type in ("AWS_CUSTOMER_MANAGED_POLICY", "AWS_MANAGED_POLICY") 
+ | dedup grantedby_cloud_policy_id 
+ | fields grantedby_cloud_policy_id as policy_arn
 
 7\. Administrative roles open to third-party vendors and external unknown accounts
 
-```
-dataset =  ciem\_permissions\_with\_last\_access
-| filter grantedby\_cloud\_entity\_type = "role" and action\_access\_isadministrative = true and account\_access in ("EXTERNAL\_UNKNOWN", "THIRD\_PARTY\_VENDOR")
-| fields grantedby\_cloud\_entity\_name, grantedby\_cloud\_entity\_account\_name, source\_cloud\_account\_name, account\_access
-```
+dataset =  ciem_permissions_with_last_access
+| filter grantedby_cloud_entity_type = "role" and action_access_isadministrative = true and account_access in ("EXTERNAL_UNKNOWN", "THIRD_PARTY_VENDOR")
+| fields grantedby_cloud_entity_name, grantedby_cloud_entity_account_name, source_cloud_account_name, account_access
 
 8\. Show identities with unused permissions
 
-```
-dataset = ciem\_permissions\_with\_last\_access 
-| filter last\_access\_time != null and timestamp\_diff(current\_time(), last\_access\_time, "DAY") > 90 and source\_cloud\_resource\_name !~= "^\\\*$"
-| dedup source\_cloud\_resource\_name, source\_cloud\_account\_id, action\_name, dest\_cloud\_resource\_name, last\_access\_time
-| fields  source\_cloud\_resource\_name, source\_cloud\_account\_id, action\_name, dest\_cloud\_resource\_name, last\_access\_time
-```
+dataset = ciem_permissions_with_last_access 
+| filter last_access_time != null and timestamp_diff(current_time(), last_access_time, "DAY") > 90 and source_cloud_resource_name !~= "^\\\*$"
+| dedup source_cloud_resource_name, source_cloud_account_id, action_name, dest_cloud_resource_name, last_access_time
+| fields  source_cloud_resource_name, source_cloud_account_id, action_name, dest_cloud_resource_name, last_access_time
 
 9\. Unused permissions by lambda functions
 
-```
-dataset = ciem\_permissions\_with\_last\_access 
-| filter source\_cloud\_service\_name= "lambda" and source\_cloud\_resource\_type = "function" and source\_cloud\_region = "Virginia" and is\_last\_access\_supported = true 
-| alter days\_since\_used = timestamp\_diff(current\_time(), last\_access\_time, "DAY") 
-| filter days\_since\_used > 90
-| fields source\_cloud\_resource\_uai, source\_cloud\_resource\_name, days\_since\_used, action\_name, action\_access\_level 
-```
+dataset = ciem_permissions_with_last_access 
+| filter source_cloud_service_name= "lambda" and source_cloud_resource_type = "function" and source_cloud_region = "Virginia" and is_last_access_supported = true 
+| alter days_since_used = timestamp_diff(current_time(), last_access_time, "DAY") 
+| filter days_since_used > 90
+| fields source_cloud_resource_uai, source_cloud_resource_name, days_since_used, action_name, action_access_level 
 
 10\. Get all the non-admin sources that can assume an admin role
 
-```
-dataset = ciem\_permissions\_with\_last\_access 
-| filter action\_name = "sts:AssumeRole"
-| fields source\_cloud\_resource\_uai, dest\_cloud\_resource\_uai, dest\_cloud\_resource\_id, dest\_cloud\_account\_id 
-| filter source\_cloud\_resource\_uai not in(dataset = ciem\_permissions\_raw 
-| filter action\_access\_isadministrative in(true, TRUE) 
-| dedup source\_cloud\_resource\_uai 
-| fields source\_cloud\_resource\_uai) 
-| fields source\_cloud\_resource\_uai as source, dest\_cloud\_resource\_uai as dest\_uai, dest\_cloud\_resource\_id as dest\_id, dest\_cloud\_account\_id as dest\_account\_id 
-| join(dataset = ciem\_permissions\_raw 
-| filter grantedby\_cloud\_entity\_type = "role" 
-| filter action\_access\_isadministrative in(true, TRUE) 
-| dedup grantedby\_cloud\_entity\_id 
-| fields grantedby\_cloud\_entity\_account\_id, grantedby\_cloud\_entity\_id) as admin\_roles (dest\_id = admin\_roles.grantedby\_cloud\_entity\_id or (dest\_id ~= "^\\\*$" and dest\_account\_id = admin\_roles.grantedby\_cloud\_entity\_account\_id)) 
+dataset = ciem_permissions_with_last_access 
+| filter action_name = "sts:AssumeRole"
+| fields source_cloud_resource_uai, dest_cloud_resource_uai, dest_cloud_resource_id, dest_cloud_account_id 
+| filter source_cloud_resource_uai not in(dataset = ciem_permissions_raw 
+| filter action_access_isadministrative in(true, TRUE) 
+| dedup source_cloud_resource_uai 
+| fields source_cloud_resource_uai) 
+| fields source_cloud_resource_uai as source, dest_cloud_resource_uai as dest_uai, dest_cloud_resource_id as dest_id, dest_cloud_account_id as dest_account_id 
+| join(dataset = ciem_permissions_raw 
+| filter grantedby_cloud_entity_type = "role" 
+| filter action_access_isadministrative in(true, TRUE) 
+| dedup grantedby_cloud_entity_id 
+| fields grantedby_cloud_entity_account_id, grantedby_cloud_entity_id) as admin_roles (dest_id = admin_roles.grantedby_cloud_entity_id or (dest_id ~= "^\\\*$" and dest_account_id = admin_roles.grantedby_cloud_entity_account_id)) 
 | fields source
-```
 
 11\. Administrative permissions granted to EC2 instances that can access multiple services
 
-```
-dataset = ciem\_permissions\_with\_last\_access
-| filter source\_cloud\_resource\_type = "instance" and source\_cloud\_service\_name = "EC2" and action\_access\_isadministrative = true
-| comp values(action\_name) as actions by source\_cloud\_resource\_uai, source\_cloud\_resource\_name, source\_cloud\_account\_id, grantedby\_cloud\_entity\_name
-| join (dataset = asset\_inventory) as assets source\_cloud\_resource\_uai = assets.xdm.asset.id
-| alter access\_to\_services = to\_integer(json\_extract\_scalar(xdm.asset.normalized\_fields, "$\['xdm.identity.access\_statistics.services'\]"))
-| filter access\_to\_services >= 10
-| fields source\_cloud\_resource\_name, source\_cloud\_resource\_uai, access\_to\_services, grantedby\_cloud\_entity\_name
-```
+dataset = ciem_permissions_with_last_access
+| filter source_cloud_resource_type = "instance" and source_cloud_service_name = "EC2" and action_access_isadministrative = true
+| comp values(action_name) as actions by source_cloud_resource_uai, source_cloud_resource_name, source_cloud_account_id, grantedby_cloud_entity_name
+| join (dataset = asset_inventory) as assets source_cloud_resource_uai = assets.xdm.asset.id
+| alter access_to_services = to_integer(json_extract_scalar(xdm.asset.normalized_fields, "$['xdm.identity.access_statistics.services']"))
+| filter access_to_services >= 10
+| fields source_cloud_resource_name, source_cloud_resource_uai, access_to_services, grantedby_cloud_entity_name
 
 ## Ingest logs and data from Okta
-Abstract
 
 Learn more about Ingesting logs and data from Okta for use in Cortex Cloud.
 
@@ -27043,7 +26349,6 @@ Configuration data (using Collect Configuration)
 -   **XQL**: Use the following dataset for CIEM (Cloud Infrastructure Entitlements Management) visibility: `ciem_permissions_with_last_access`
 
 ## Enable inactive human identity logs on Azure in Cortex Cloud Identity Security
-Abstract
 
 Configuration information for enabling inactive human identity logs on Azure.
 
@@ -27076,7 +26381,6 @@ To configure the SignInLog log types, do the following:
 For more information, see Ingest logs from Microsoft Azure Event Hub.
 
 ## Manage RBAC and SBAC in Cortex Cloud Identity Security
-Abstract
 
 Working with RBAC and SBAC in Cortex Cloud Identity Security.
 
@@ -27125,7 +26429,6 @@ For more information about this dataset, see Perform advanced Identity Security 
 # Cloud ASM
 
 ## What is Cloud ASM?
-Abstract
 
 Cloud ASM provides visibility into all the assets in your cloud infrastructure that are exposed to the internet.
 
@@ -27151,14 +26454,12 @@ If an ASM scan finds a service on unsupported cloud provider (such as HiNet), it
 ## Cloud ASM concepts
 
 ### Scanning
-Abstract
 
 Cortex Cloud provides targeted scanning of customer networks from an attributed scanning infrastructure.
 
 Attack Surface Management (ASM) in Cortex Cloud uses data collected from global internet scans as well open-source intelligence about the internet to maintain a complete inventory of all the internet-facing assets that belong to an organization. The following topics describe the scans that Cortex Cloud uses to map and monitor your attack surface.
 
 #### Scanning cadences
-Abstract
 
 Cortex Cloud scans the internet for new services at varying cadences based on factors such as port, protocol, cloud provider ranges, and customer-attributed assets.
 
@@ -27187,7 +26488,6 @@ Below is a list of our targeted scanning cadences:
     -   Daily on configured services.
 
 #### Scanning ports and protocols
-Abstract
 
 Cortex Cloud detects protocol-validated services on the IPv4 and IPv6 space of the internet.
 
@@ -27206,7 +26506,6 @@ Cortex Xpanse at Palo Alto Networks takes an outside-in approach to network secu
 
 Our scanning activity on the ranges below is CFAA-compliant. You can mark our ranges as non-malicious in your system so that you stop getting alerts, or configure your firewall to drop traffic from our ranges.
 
-```
 35.203.210.0/23
 144.86.173.0/24
 147.185.132.0/23
@@ -27220,12 +26519,10 @@ Our scanning activity on the ranges below is CFAA-compliant. You can mark our ra
 2604:a940:300:5b6:0:0:0:0/64 
 2604:a940:301:225:0:0:0:0/64 
 2604:a940:302:118:0:0:0:0/64 
-```
 
 If you believe you have discovered abuse associated with Cortex Xpanse scans, please contact us at scaninfo@paloaltonetworks.com.
 
 ### Network mapping
-Abstract
 
 Through a network mapping process, Cortex Cloud discovers and attributes assets to organizations.
 
@@ -27253,7 +26550,6 @@ Your Internet-facing assets are always under attack from targeted and opportunis
 A primary advantage of Cortex Cloud is combining leading-edge automated network mapping analysis with expert insights and validation. Cortex XSIAM experts understand the intricacies and idiosyncrasies of asset scanning and attribution. The end-result for Cortex Cloud customers is fewer false positives and development of naming schemas and patterns that lead to broader asset discovery than what you see with fully automated scanning engines alone.
 
 ## Enable Cloud ASM
-Abstract
 
 Enable Cloud ASM data discovery to discover all your unmanaged cloud services and cloud services exposed to the internet.
 
@@ -27277,7 +26573,6 @@ The Attack Surface Management module creates findings and issues based on the fo
 -   Externally inferred CVEs
 
 ### Attack surface rules
-Abstract
 
 Attack surface rules are used to identify risks in your attack surface.
 
@@ -27361,21 +26656,19 @@ Read more...
 
 | Service information available from ASM scan | CVE information available from NVD | Match result | Details |
 | --- | --- | --- | --- |
-| Apache v 2.4.49 | CVE-2021-41773Affects cpe:2.3:a:apache:http\_server:2.4.49:\*:\*:\*:\*:\*:\*:\* | High Confidence Match | Because the CPE information from NVD matches the version of Apache indicated from the scan, this is a high confidence match. |
-| Apache v 2.4.49c | CVE-2021-41773Affects cpe:2.3:a:apache:http\_server:2.4.49:\*:\*:\*:\*:\*:\*:\* | Medium Confidence Match | Because the version numbers from the service and the NVD information match, except for the additional character in the version from the service, this is a medium confidence match. |
-| Apache v 2.4.50 | CVE-2021-41773Affects cpe:2.3:a:apache:http\_server:2.4.49:\*:\*:\*:\*:\*:\*:\* | No Match | Because the CPE information from NVD indicates a version of Apache that is different than the one we saw in the scan, this does not match. |
-| Apache v 2.4.50 (Running on Red Hat Enterprise Linux 6 (RHEL6), which is not affected by this CVE) | CVE-2022-22719Affects cpe:2.3:a:apache:http\_server:\*:\*:\*:\*:\*:\*:\*:\* (up to and including 2.4.52) | High Confidence Match | Because the CPE information from NVD matches the version of apache indicated from the scan, this is a high confidence match. Cortex Cloud cannot determine if mitigating controls are in place or the underlying OS, so this pairing will still generate a high confidence match. |
-| Apache (any version number) | CVE-2012-3526Affects cpe:2.3:a:apache:http\_server:\*:\*:\*:\*:\*:\*:\*:\* | No match | Because this CVE does not indicate any specific version number, we do not consider it a match for any version of Apache http\_server, regardless of version information. |
+| Apache v 2.4.49 | CVE-2021-41773Affects cpe:2.3:a:apache:http_server:2.4.49:\*:\*:\*:\*:\*:\*:\* | High Confidence Match | Because the CPE information from NVD matches the version of Apache indicated from the scan, this is a high confidence match. |
+| Apache v 2.4.49c | CVE-2021-41773Affects cpe:2.3:a:apache:http_server:2.4.49:\*:\*:\*:\*:\*:\*:\* | Medium Confidence Match | Because the version numbers from the service and the NVD information match, except for the additional character in the version from the service, this is a medium confidence match. |
+| Apache v 2.4.50 | CVE-2021-41773Affects cpe:2.3:a:apache:http_server:2.4.49:\*:\*:\*:\*:\*:\*:\* | No Match | Because the CPE information from NVD indicates a version of Apache that is different than the one we saw in the scan, this does not match. |
+| Apache v 2.4.50 (Running on Red Hat Enterprise Linux 6 (RHEL6), which is not affected by this CVE) | CVE-2022-22719Affects cpe:2.3:a:apache:http_server:\*:\*:\*:\*:\*:\*:\*:\* (up to and including 2.4.52) | High Confidence Match | Because the CPE information from NVD matches the version of apache indicated from the scan, this is a high confidence match. Cortex Cloud cannot determine if mitigating controls are in place or the underlying OS, so this pairing will still generate a high confidence match. |
+| Apache (any version number) | CVE-2012-3526Affects cpe:2.3:a:apache:http_server:\*:\*:\*:\*:\*:\*:\*:\* | No match | Because this CVE does not indicate any specific version number, we do not consider it a match for any version of Apache http_server, regardless of version information. |
 
 ## Attack surface assets
-Abstract
 
 The assets discovered in an attack surface management scan are called External Surface assets.
 
 The internet-facing assets that were discovered in an attack surface management (ASM) scan and attributed to your organization are available in the inventory on the Inventory → Assets → All Assets → External Surface pages. For information about External Surface assets, including domains, certificates, services, see External Surface assets.External Surface assets
 
 ## Review your unmanaged cloud services
-Abstract
 
 Review your unmanaged cloud services in your External Surface inventory.
 
@@ -27386,7 +26679,6 @@ Review your unmanaged cloud services in your External Surface inventory. Unmanag
 2.  On the Service Inventory page, filter the list of services using the filter Partially Onboarded \= Yes.
 
 ## Review unmanaged cloud issues
-Abstract
 
 View your unmanaged cloud issues, including service details.
 
@@ -27414,7 +26706,6 @@ Cortex Cloud supports the following Attack Surface Management (ASM) features in 
 | Asset Uploads and Removals | No | Yes |
 
 # Network exposure detection
-Abstract
 
 Cortex Cloud improves network security posture in your public cloud environments. It identifies assets exposed to the internet so you can prioritize and remediate risks.
 
@@ -27433,7 +26724,6 @@ Cortex Cloud publishes network exposure findings and issues based on out-of-the-
 -   What is the network path between the source and destination?
 
 ## What is Cloud Network Analyzer?
-Abstract
 
 Cloud Network Analyzer (CNA) in Cortex Cloud determines which assets are exposed to the internet, have unrestricted access to the internet, or can laterally move within a cloud account.
 
@@ -27458,8 +26748,6 @@ CNA helps you identify the following:
 
 ### Detection capabilities: inbound, outbound, east-west
 
-Abstract
-
 CNA supports inbound, outbound, and east-west exposure detection.
 
 CNA detects which assets are exposed to the internet, have unrestricted access to the internet, or can laterally move within a cloud account. CNA supports three types of internet exposure detection:
@@ -27474,7 +26762,6 @@ CNA detects which assets are exposed to the internet, have unrestricted access t
 Inbound exposure detection is referred to as “Internet exposure detection” in this documentation.
 
 ## Internet exposure detection
-Abstract
 
 CNA detects assets that are exposed to unrestricted public network access. This is called internet exposure detection.
 
@@ -27491,15 +26778,11 @@ When CNA identifies an asset that is potentially exposed to the internet, it req
 
 ### External network scanning service
 
-Abstract
-
 The external network scanning service works with CNA by performing a scan.
 
 When CNA determines that an asset is potentially exposed to the internet, it forwards the public IP address or a fully qualified domain name (FQDN) to the external scanning service. The service verifies whether the IP or FQDN already exists in its database. If a match is found, the service notifies CNA and sends the additional information retrieved by the scan. The scan covers the entire internet rather than a subset of IP addresses owned by Cortex Cloud customers.
 
 The following diagram illustrates what happens when CNA examines a virtual machine:
-
-[image: cna-how-it-works-diagram.png]
 
 As illustrated in the diagram:
 
@@ -27513,8 +26796,6 @@ As illustrated in the diagram:
     
 
 #### External scanning service details
-
-Abstract
 
 The external network scanning service collects protocol, port, and server information.
 
@@ -27531,8 +26812,6 @@ If the exposed asset is a web service, the external network scanning service als
 
 #### Scanned ports
 
-Abstract
-
 The external network scanning service scans the following protocols and ports.
 
 The external network scanning service scans the following protocols and ports.
@@ -27545,8 +26824,6 @@ The following list of ports and protocols is not exhaustive. For current and com
     
 
 ##### External scan IP ranges
-
-Abstract
 
 The external network scanning service uses the following IP ranges.
 
@@ -27579,8 +26856,6 @@ Cortex Cloud includes out-of-the box internet exposure rules and allows you to d
 
 ### Supported asset types
 
-Abstract
-
 CNA detects internet exposure for the following cloud services and asset types.
 
 CNA detects internet exposure for the following cloud services and asset types:
@@ -27595,8 +26870,6 @@ CNA detects internet exposure for the following cloud services and asset types:
 CNA supports Kubernetes containers exposed to the internet behind a load balancer or behind an ingress.
 
 ### Internet exposure detection for Kubernetes services
-
-Abstract
 
 CNA detects workloads exposed to the internet in Kubernetes clusters using Kubernetes configuration analysis and external scanning.
 
@@ -27618,15 +26891,11 @@ A workload is considered reachable from the internet when the following criteria
 
 ### Internet exposure detection for instances deployed behind a Palo Alto Networks Next-Generation firewall
 
-Abstract
-
 CNA detects inbound exposure of workloads deployed behind a Palo Alto Networks Next-Generation firewall (NGFW).
 
 CNA detects inbound exposure of workloads deployed behind a Palo Alto Networks Next-Generation firewall (NGFW). To scale security appliances in AWS, you can use Gateway Load Balancers (GWLBs) for "transparent" firewall deployments where AWS encapsulates/decapsulates traffic. This topology is considered isolated or distributed, since the firewall deployment is “embedded” within the VPC.
 
 The following diagram illustrates a network topology supported by CNA:
-
-[image: cna-example-of-isolated-single-VPC-AWS-NGFW-deployment.png]
 
 The example network topology includes a single VPC where traffic to the target web server (top right) is forced to go through the GWLB (and thus through the NGFW VM-Series instances) to allow firewall inspection of the incoming and outgoing traffic. In a real-life scenario, there may be several firewall instances in the GWLB target group, however for brevity the diagram only shows one. The firewall EC2 instance itself (bottom right) is detected as a NGFW based on its image.
 
@@ -27637,7 +26906,6 @@ Cortex Cloud analyzes your VPC topology and verifies that it is similar to the o
 Currently, CNA supports only an isolated architecture with an [AWS Gateway Load Balancer](https://docs.paloaltonetworks.com/vm-series/10-2/vm-series-deployment/set-up-the-vm-series-firewall-on-aws/vm-series-integration-with-gateway-load-balancer) (GWLB) within a single VPC. Other more centralized topologies including one security VPC that forwards traffic to other workload VPCs are currently not supported.
 
 ## Outbound exposure detection
-Abstract
 
 CNA supports outbound internet exposure detection, detecting workloads that based on their security configurations has unrestricted internet access.
 
@@ -27665,7 +26933,6 @@ CNA can detect outbound internet exposure in the following cloud services and as
 | **Managed virtual machines** | Amazon EC2 | – | – |
 
 ## East-west exposure detection
-Abstract
 
 CNA supports east-west exposure detection, detecting workloads that have unrestricted access across their VPC in the same cloud account.
 
@@ -27693,15 +26960,12 @@ CNA can detect east-west exposure in the following cloud services and asset type
 | **Managed virtual machines** | Amazon EC2 | – | – |
 
 ## Investigate an internet exposure
-Abstract
 
 You can investigate an internet exposure by navigating to Cases & Issues or using Graph Search.
 
 You can investigate assets exposed to the internet by reviewing issues detected by Cloud Network Analyzer or by using Graph Search.
 
 ### Investigate internet exposure issues
-
-Abstract
 
 investigate assets exposed to the internet by navigating to Cases & Issues.
 
@@ -27740,8 +27004,6 @@ Review internet exposure issues to learn which assets are exposed to the interne
 
 ### Investigate internet-exposed assets using Graph Search
 
-Abstract
-
 Use Graph Search to investigate assets exposed to the internet.
 
 You can use What is Graph Search? to search for and investigate internet-exposed assets.What is Graph Search?
@@ -27776,7 +27038,6 @@ You can use What is Graph Search? to search for and investigate internet-exposed
 # Vulnerability management
 
 ## Vulnerability management in Cortex Cloud
-Abstract
 
 Vulnerability management helps you identify, assess, prioritize, and remediate security vulnerabilities across your entire IT infrastructure, including endpoints, code, and cloud.
 
@@ -27795,7 +27056,6 @@ Cortex Cloud helps identify and prevent vulnerabilities across the entire applic
 Cortex Cloud vulnerability management provides the ability to identify and assess runtime vulnerabilities in every asset across traditional IT and cloud environments. For vulnerabilities detected in your software development lifecycle through application security scans, refer to the Cortex Cloud Application Security documentation.
 
 ### Cortex Cloud vulnerability concepts
-Abstract
 
 Familiarize yourself with Cortex Cloud vulnerability concepts.
 
@@ -27816,7 +27076,6 @@ A vulnerability finding is a specific instance of a vulnerability that was disco
 Cortex Cloud creates a vulnerability issue when a specific instance of a vulnerability in your environment matches a vulnerability policy. Each issue has a priority, assignee, progress status associated with it. Issues also provide contextual information about the asset on which the issue is found, exploitability, and other information required for remediation and mitigation.
 
 ### Vulnerability Management dashboard
-Abstract
 
 Visualize your most pressing risks, changes to risk over time, and remediation progress on the Vulnerability Management dashboard.
 
@@ -27861,7 +27120,6 @@ The CVRS is displayed in the Vulnerability Issues table and details are included
 You can also find the Cortex Vulnerability Risk Score and high-level risk score evidence on vulnerability findings.
 
 ## Vulnerability policies
-Abstract
 
 A vulnerability policy defines the action you want to take for a specific set of vulnerability findings.
 
@@ -28004,7 +27262,6 @@ After disabling a policy, no new issues will be created or actions taken for new
 Cortex Cloud provides several ways to view and track vulnerability data so you can monitor, investigate, and remediate vulnerabilities in your environment.
 
 ### View all Vulnerabilities
-Abstract
 
 The Vulnerabilites page displays all your vulnerabilities grouped by CVE or other vulnerability ID.
 
@@ -28013,7 +27270,6 @@ The Vulnerabilites page displays all your vulnerabilities grouped by CVE or othe
 Go to Posture Management → Vulnerability Management → Vulnerabilities.
 
 ### View vulnerability issues
-Abstract
 
 The Vulnerability Issues page displays all your vulnerability issues along with critical vulnerability intelligence and context.
 
@@ -28023,14 +27279,13 @@ The Vulnerability Issues page displays all vulnerability issues along with criti
     
 2.  The Overview tab on the Vulnerability Issues panel captures all the relevant details to further investigate the vulnerability including Summary, Vulnerable Asset and Code Details, Security Controls, and Remediation Steps. In addition, you can further isolate the vulnerability by examining the Exposure Graph.
     
-    [image: exposure-graph.png]
+    
     
 3.  Review the Exposure Graph to understand where the vulnerability originates and how it impacts Findings and Assets. Select More Info to view granular details about each of the impacted assets.
     
 4.  You can also select View Details from the Details view to be directed to the Finding or Asset in question.
 
 ### View All Vulnerability Findings
-Abstract
 
 The All Vulnerability Findings page displays every instance of every vulnerability that was discovered in your environment.
 
@@ -28039,7 +27294,6 @@ A vulnerability finding is a specific instance of a vulnerability that was disco
 Go to Posture Management → Vulnerability Management → Vulnerability Issues and click the All Vulnerability Findings button.
 
 ### View vulnerable assets
-Abstract
 
 The Vulnerable Assets page displays all assets with a vulnerability finding.
 
@@ -28048,7 +27302,6 @@ The Vulnerable Assets page displays all assets with a vulnerability finding. Thi
 Go to Posture Management → Vulnerability Management → Vulnerable Assets.
 
 ## Vulnerability Intelligence
-Abstract
 
 Vulnerability Intelligence is an in-product, real-time feed that provides vulnerability data and threat intelligence from a variety of certified upstream sources.
 
@@ -28076,7 +27329,6 @@ How to view Vulnerability Intelligence
     The details page has an Overview tab, which provides information about the vulnerability and an Affected Software tab, which shows information about all the software packages impacted by the vulnerability.
 
 ## Recast CVSS scores and CVSS severities
-Abstract
 
 Customize CVSS scores and CVSS severities in the platform to align your risk management approach with your organizational context and priorities.
 
@@ -28295,7 +27547,7 @@ XQL queries are supported for cloud security configuration rules only. XQL queri
     
     `dataset = asset_inventory | filter xdm.asset.provider = "aws" and **xdm.asset.type.id** = "LAMBDA_FUNCTION"| alter authType = json_extract_scalar(xdm.asset.raw_fields, "$.Platform Discovery.AuthType") | fields xdm.asset.id as asset_id, xdm.asset.type.class as class_name, xdm.asset.type.id as asset_type_id`
     
-4.  The query output must contain the asset\_id (representing the asset) and asset\_type\_id (representing the asset type).
+4.  The query output must contain the asset_id (representing the asset) and asset_type_id (representing the asset type).
     
     `dataset = asset_inventory | filter xdm.asset.provider = "aws" and xdm.asset.type.id = "LAMBDA_FUNCTION"| alter authType = json_extract_scalar(xdm.asset.raw_fields, "$.Platform Discovery.AuthType") | fields xdm.asset.id as **asset_id**, xdm.asset.type.class as class_name, xdm.asset.type.id as **asset_type_id**`
     
@@ -28310,19 +27562,17 @@ XQL queries are supported for cloud security configuration rules only. XQL queri
 
 Example 119. XQL query for AWS EC2 in which IMDSv2 is not configured
 
-```
-dataset = asset\_inventory 
-| filter xdm.asset.provider = "aws" and xdm.asset.type.id = "EC2\_INSTANCE"
-| alter state = json\_extract\_scalar(xdm.asset.raw\_fields, "$.Platform 
+dataset = asset_inventory 
+| filter xdm.asset.provider = "aws" and xdm.asset.type.id = "EC2_INSTANCE"
+| alter state = json_extract_scalar(xdm.asset.raw_fields, "$.Platform 
 Discovery.state.name")
-| alter httpEndpoint = json\_extract\_scalar(xdm.asset.raw\_fields, 
+| alter httpEndpoint = json_extract_scalar(xdm.asset.raw_fields, 
 "$.Platform Discovery.metadataOptions.httpEndpoint")
-| alter httpTokens = json\_extract\_scalar(xdm.asset.raw\_fields, 
+| alter httpTokens = json_extract_scalar(xdm.asset.raw_fields, 
 "$.Platform Discovery.metadataOptions.httpTokens")
 | filter state contains "running" and httpEndpoint = "enabled" and 
 httpTokens not contains "required"
-| fields xdm.asset.id as asset\_id, xdm.asset.type.id  as asset\_type\_id
-```
+| fields xdm.asset.id as asset_id, xdm.asset.type.id  as asset_type_id
 
 #### Cloud security rule status for custom configuration rules
 Out-of-the-box and custom cloud security configuration rules are enabled by default, and can be manually disabled and reenabled as needed. Additionally, the system may change the status of custom configuration rules based on resource consumption.
@@ -28372,7 +27622,7 @@ To create a Data rule:
     
 7.  Click **WHERE** to choose from the attributes of the finding. Depending on the finding you selected in the above step the list of attributes displayed will vary. Select a value and click **Search** to view the results.
     
-    [image: create-data-rule1.png]
+    
     
 8.  If you had selected the **Enable How to Fix** option in the rule creation Overview step, under **How to Fix** you can add specific actions to be taken if and when this rule is violated.
     
@@ -28400,9 +27650,6 @@ To create a network exposure rule:
 7.  Click **Show Advanced Settings**. If you select **Use External Probe Validation** as **Yes**, then **HTTP Response Code** becomes available as an option.
     
 8.  Click **Done** to save your Network Exposure Rule.
-    
-
-[image: image1.png]
 
 ### Edit a Rule
 To edit a rule:
@@ -28551,7 +27798,6 @@ A Cortex Cloud Workload Policy has the following elements:
 -   **Trusted Image policies:** Enable you to ensure the authenticity, integrity, and security of container images and VMs deployed into your Kubernetes environments. This includes actions such as limiting allowed image sources, mitigating possible image tampering, and more.
 
 #### Trusted image cloud workload policies
-Abstract
 
 Trusted image policies ensure the integrity and security of container images and VMs deployed into Kubernetes environments. Using these policies, you can be assured that your images are from a trusted source, are built on approved and validated base images, and are free from unauthorized modifications.
 
@@ -28660,11 +27906,11 @@ The evaluation of trusted image policies is based on logic that determines the f
         
         -   **For untrusted images**:
             
-            \[AssetType\] \[AssetName\] is running the image {ImageName}. that does not comply with the trust criteria defined in the Trusted Images policy \[PolicyName\].
+            [AssetType] [AssetName] is running the image {ImageName}. that does not comply with the trust criteria defined in the Trusted Images policy [PolicyName].
             
         -   **For cases when there's missing information:**
             
-            \[AssetType\] \[AssetName\] is running the image {ImageName}. Information is missing to determine compliance with the trust criteria defined in the Trusted Images policy \[PolicyName\].
+            [AssetType] [AssetName] is running the image {ImageName}. Information is missing to determine compliance with the trust criteria defined in the Trusted Images policy [PolicyName].
             
         
         The issues will also include the image name, a link to the image asset page, the relevant Kubernetes hierarchy (cluster and namespace) for Kubernetes workloads only, and more.
@@ -28713,8 +27959,6 @@ Example: Handling contradictory policies
 
 This example illustrates how Cortex determines how to allow or prevent images, and create issues, when multiple policies conflict.
 
-[image: CWP-EX-ALLOW.png]
-
 1.  User deploys the **docker.io/library/alpine:1.2.3 image**.
     
 2.  Trusted image policies are validated at set periodic scan intervals or when a resource is deployed.
@@ -28738,8 +27982,6 @@ This example illustrates how Cortex determines how to allow or prevent images, a
 Example: Preventing images based on policies with prevent actions
 
 This example illustrates how Cortex determines how images are prevented from deployment in cases where a data verdict is unavailable.
-
-[image: CWP-EX-PREVENT-PARTIAL.png]
 
 1.  User deploys the **production:alpine@sha256:554443** image with the base image of **base2**.
     
@@ -28768,8 +28010,6 @@ This example illustrates how Cortex determines how images are prevented from dep
 Example: Allowing images based on policies with prevent actions
 
 This example illustrates how Cortex determines how images are allowed to deploy in cases where a data verdict is unavailable.
-
-[image: CWP-EX-ALLOW-PARTIAL.png]
 
 1.  User deploys the **production:alpine@sha256:554443** image with the base image of **base2**.
     
@@ -29425,7 +28665,7 @@ Ensure that your cluster has the Posture Management (KSPM) Connector deployed wi
 
 You can manage these deployments from the Kubernetes Connectivity Management page.
 
-To access the Kubernetes Connectivity Management, navigate to the following URL in your tenant environment: https://\[TENANT-ADDRESS\]/cwp/k8s-management.Kubernetes connectivity management
+To access the Kubernetes Connectivity Management, navigate to the following URL in your tenant environment: https://[TENANT-ADDRESS]/cwp/k8s-management.Kubernetes connectivity management
 
 ##### **Important considerations**
 
@@ -29569,7 +28809,6 @@ This panel enables you to:
 -   Delete the rule
 
 ### Create a new Custom Detection Rule
-Abstract
 
 Create Custom Detection Rules to check your organization’s assets.
 
@@ -29616,12 +28855,7 @@ How to create a Custom Detection Rule
     | Field | Description |
     | --- | --- |
     | Kubernetes Resources | From the drop down, select one or more from the following: Namespaces: Logical partitions within a Kubernetes cluster that allow resource isolation and organization.; ReplicaSets: Ensures a specified number of pod replicas are running at all times by automatically scaling up or down.; Deployments: Manages and control pod replicas by providing declarative updates for ReplicaSets, enabling rolling updates and rollbacks.; StatefulSets: Deploys stateful applications that require persistent identity and storage, ensuring stable pod names and ordered scaling.; DaemonSets: Ensures that a copy of a specific pod runs on all or selected nodes in the cluster, commonly used for logging and monitoring agents.; Jobs: Runs one-time or short-lived workloads that complete execution and then terminate.; CronJobs: Defines scheduled jobs that run at specified times or intervals, similar to Linux cron jobs.; ClusterRoles: Defines permissions at the cluster level, granting access to resources across all namespaces.; Roles: Defines permissions within a specific namespace, restricting access to resources within that namespace.; RoleBindings: Associates a role with a user, group, or service account within a specific namespace.; ClusterRoleBindings: Associates a cluster role with users, groups, or service accounts at the cluster-wide level.; NetworkPolicies: Defines rules that control the communication between pods and other network entities within the cluster, enforcing security restrictions.; Services: Exposes a set of pods as a network service, allowing stable communication within and outside the cluster.; ServiceAccounts: Provides an identity for pods to authenticate against the Kubernetes API, allowing controlled access to resources.; Endpoints: Represents the actual network addresses of the pods backing a service, dynamically updated as pods start or stop.; Ingresses: Manages external access to services, providing HTTP/HTTPS routing, load balancing, and SSL termination.; ConfigMaps: Stores non-sensitive configuration data in key-value pairs, allowing applications to retrieve configuration without modifying container images.; Secrets: Securely stores and manage sensitive data, such as API keys, passwords, and certificates, in an encrypted format.; Nodes: Defines the physical or virtual machines that run the workloads in a Kubernetes cluster. |
-    | Define the Rule (Rego) | All custom Rego policies in Cortex must follow this pattern:
-    ```
-    package panw.compliance import rego.v1 match contains {"msg": msg} if { # Your detection logic here msg := "Description of the finding" }
-    ```
-    
-    \*\*Note:\*\* The custom rule must use the `match` term (not `deny` or others) to function properly. |
+    | Define the Rule (Rego) | All custom Rego policies in Cortex must follow this pattern: package panw.compliance import rego.v1 match contains {"msg": msg} if { # Your detection logic here msg := "Description of the finding" } \*\*Note:\*\* The custom rule must use the `match` term (not `deny` or others) to function properly. |
     
     XDR Agent settings
     
@@ -29705,7 +28939,6 @@ How to create a Custom Detection Rule
 4.  In the confirmation message, click **Delete**.
 
 # Serverless function posture security
-Abstract
 
 Cortex Cloud serverless function scanning capabilities provides comprehensive visibility into the security posture of your serverless functions across your code and CI/CD environments, without the need to install agents or disrupt your workload operations. By integrating scanning functionality directly into your serverless functions, Cortex Cloud automatically detects vulnerabilities, malware and exposed secrets early in the development process, enabling proactive risk detection and mitigation before production.
 
@@ -29718,7 +28951,7 @@ The following events trigger Cortex Cloud serverless function scans:
 
 ## Supported platforms
 
--   Supported architecture: x86\_64
+-   Supported architecture: x86_64
     
 -   Supported cloud providers:
     
@@ -30206,14 +29439,12 @@ For more information, refer to Monitor serverless function scan health.Monitor s
 # Data management
 
 ## Broker VM
-Abstract
 
 Set up a Broker VM to establish a secure connection in which you can route your endpoints, and collect and forward logs and files for analysis.
 
 Set up and configure the Broker VM to create a secure connection for routing endpoints, collecting logs, and forwarding logs and files for analysis.  Learn how to manage the Broker VM, and implement it within a high availability (HA) cluster setup.
 
 ### What is the Broker VM?
-Abstract
 
 Learn about the Cortex Cloud Broker virtual machine (VM) and why use it in your network configuration.
 
@@ -30226,7 +29457,6 @@ Cortex Cloud can leverage the Broker VM to run different services separately us
 The Broker VM is a closed, hardened appliance. To maintain its security integrity and performance standards, third-party agents cannot be installed on the Broker VM.
 
 ### Set up and configure Broker VM
-Abstract
 
 Learn more about how to set up and configure a Broker VM as a standalone broker or add the broker to a high availability (HA) cluster.
 
@@ -30423,12 +29653,12 @@ Perform the following procedures in the order listed below.
     
     To enable connection, generate an RSA Key Pair, and enter the public key in the SSH Public Key section. Once one SSH public key is added, you can Add Another. When you are finished, Save your configuration.
     
-    When using PuTTYgen to create your public and private key pairs, you need to copy the public key generated in the Public key for pasting into OpenSSH authorized\_keys file box, and paste it in the Broker VM SSH Public Key section as explained above. This public key is only available when the PuTTYgen console is open after the public key is generated. If you close the PuTTYgen console before pasting the public key, you will need to generate a new public key.
+    When using PuTTYgen to create your public and private key pairs, you need to copy the public key generated in the Public key for pasting into OpenSSH authorized_keys file box, and paste it in the Broker VM SSH Public Key section as explained above. This public key is only available when the PuTTYgen console is open after the public key is generated. If you close the PuTTYgen console before pasting the public key, you will need to generate a new public key.
     
     When you SSH the Broker VM using PuTTY or a command prompt, you need to use the **`admin`** username. For example:
     
     ```
-    ssh -i \[/path/to/private.key\] admin@\[broker\_vm\_address\]
+    ssh -i [/path/to/private.key] admin@[broker_vm_address]
     ```
     
 6.  (Optional) Update the SSL Server certificates for the Broker VM.
@@ -30471,7 +29701,6 @@ You are directed to Settings → Configurations → Data Broker → Broker VMs. 
 If you need to enable legacy SSL renegotiation, use the Broker VM Serial console.
 
 #### Broker VM image installations
-Abstract
 
 Learn more about the Broker VM image types available that are compatible with your viirtual machine (VM).
 
@@ -30489,7 +29718,6 @@ Ensure that your virtual machine (VM) is compatible with one of the following op
 | VMware ESXi | OVA | VMware ESXi 6.5 or later Set up Broker VM on VMware ESXi using vSphere Client |
 
 ##### Set up Broker VM on Microsoft Azure
-Abstract
 
 Learn how to set up your Cortex Cloud Broker virtual machine (VM) on Microsoft Azure.
 
@@ -30594,10 +29822,10 @@ Linux
         3.  Add the Azure CLI software repository:
             
             ```
-            AZ\_DIST=$(lsb\_release -cs)
+            AZ_DIST=$(lsb_release -cs)
             echo "Types: deb
             URIs: https://packages.microsoft.com/repos/azure-cli/
-            Suites: ${AZ\_DIST}
+            Suites: ${AZ_DIST}
             Components: main
             Architectures: $(dpkg --print-architecture)
             Signed-by: /etc/apt/keyrings/microsoft.gpg" | sudo tee /etc/apt/sources.list.d/azure-cli.sources
@@ -30693,7 +29921,6 @@ Linux
     -   Edit an existing outbound port rule and ensure that the settings provided above for creating a new outbound port rule match what is already configured in the rule.
 
 ##### Set up Broker VM on Alibaba Cloud
-Abstract
 
 Learn how to set up your Cortex Cloud Broker virtual machine (VM) on Alibaba Cloud.
 
@@ -30731,7 +29958,7 @@ Linux (using CLI)
 -   Example
     
     ```
-    ./ossutil64 cp Downloads/QCOW2\_broker-vm-14.0.1.qcow2 oss://kvm-images-qcow2/Cortex Cloud
+    ./ossutil64 cp Downloads/QCOW2_broker-vm-14.0.1.qcow2 oss://kvm-images-qcow2/Cortex Cloud
                                            -broker-vm-14.0.1.qcow2
     ```
     
@@ -30747,7 +29974,7 @@ macOS (using CLI)
 -   Example
     
     ```
-    ./ossutilmac64 cp Downloads/QCOW2\_broker-vm-14.0.1.qcow2 oss://kvm-images-qcow2/Cortex Cloud
+    ./ossutilmac64 cp Downloads/QCOW2_broker-vm-14.0.1.qcow2 oss://kvm-images-qcow2/Cortex Cloud
                                            -broker-vm-14.0.1.qcow2
     ```
     
@@ -30763,7 +29990,7 @@ Windows (using CMD)
 -   Example for 64-bit
     
     ```
-    D:\\ossutil>ossutil64.exe cp Downloads\\QCOW2\_broker-vm-14.0.1.qcow2 oss://kvm-images-qcow2/Cortex Cloud
+    D:\\ossutil>ossutil64.exe cp Downloads\\QCOW2_broker-vm-14.0.1.qcow2 oss://kvm-images-qcow2/Cortex Cloud
                                            -broker-vm-14.0.1.qcow2
     ```
     
@@ -30798,7 +30025,7 @@ For Linux and Windows uploads, you can use Alibaba Cloud’s graphical managemen
         
     -   Operating System/Platform: Leave Linux configured and change CentOS to Ubuntu.
         
-    -   System Architecture: Leave the default x86\_64 selected.
+    -   System Architecture: Leave the default x86_64 selected.
         
     -   Leave the rest of the fields as defined by the default or change them according to your system requirements.
         
@@ -30879,7 +30106,6 @@ For Linux and Windows uploads, you can use Alibaba Cloud’s graphical managemen
 Reboot the Broker VM before logging in for the first time.
 
 ##### Set up Broker VM on Amazon Web Services
-Abstract
 
 Learn how to set up your Cortex Cloud Broker virtual machine (VM) on AWS.
 
@@ -30909,19 +30135,19 @@ You need to log in using an AWS Identity and Access Management (IAM) user, where
     ```
     {
       "Version": "2012-10-17",
-      "Statement": \[
+      "Statement": [
         {
           "Effect": "Allow",
-          "Action": \[
+          "Action": [
             "s3:GetBucketLocation",
             "s3:GetObject",
             "s3:PutObject"
-          \],
-          "Resource": \["arn:aws:s3:::mys3bucket","arn:aws:s3:::mys3bucket/\*"\]
+          ],
+          "Resource": ["arn:aws:s3:::mys3bucket","arn:aws:s3:::mys3bucket/\*"]
         },
         {
           "Effect": "Allow",
-          "Action": \[
+          "Action": [
             "ec2:CancelConversionTask",
             "ec2:CancelExportTask",
             "ec2:CreateImage",
@@ -30946,10 +30172,10 @@ You need to log in using an AWS Identity and Access Management (IAM) user, where
             "ec2:DescribeImportImageTasks",
             "ec2:DescribeImportSnapshotTasks",
             "ec2:CancelImportTask"
-          \],
+          ],
           "Resource": "\*"
         }
-      \]
+      ]
     }
     ```
     
@@ -30981,7 +30207,7 @@ AWS CloudShell is a browser-based shell that is pre-authenticated with your Cons
     
 2.  Select the Region where your S3 bucket is located.
     
-3.  Click the CloudShell icon ([image: AWS_icon.png]) on the top navigation bar.
+3.  Click the CloudShell icon () on the top navigation bar.
     
 
 Option 2: External Terminal
@@ -30991,7 +30217,7 @@ Install the AWS CLI and configure it with the IAM user that you created.
 1.  Login to the server with admin privilege and install the AWS CLI.
     
     ```
-    \# sudo bash
+    # sudo bash
     # apt update
     # apt install awscli
     ```
@@ -30999,7 +30225,7 @@ Install the AWS CLI and configure it with the IAM user that you created.
 2.  Run the following command to configure the AWS CLI:
     
     ```
-    \# aws configure
+    # aws configure
     ```
     
     You need to specify the proper configurations for the following:
@@ -31043,19 +30269,19 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
     1.  Run the following command in the terminal:
         
         ```
-        \# vi configuration.json
+        # vi configuration.json
         ```
         
     2.  Copy and paste the following syntax into the json file.
         
-        In S3Bucket, replace <your\_bucket> with the Bucket Name and not its ARN Name. S3Key is the VMDK filename, which you should replace instead of <broker-vm-version.vmdk>.
+        In S3Bucket, replace <your_bucket> with the Bucket Name and not its ARN Name. S3Key is the VMDK filename, which you should replace instead of <broker-vm-version.vmdk>.
         
         ```
         	{
         		"Description":"Cortex Cloud Broker VM <version>",
         		"Format":"vmdk",
         		"UserBucket":{
-        			"S3Bucket":"<your\_bucket>",
+        			"S3Bucket":"<your_bucket>",
         			"S3Key":"<broker-vm-version.vmdk>"
         		}
         	}
@@ -31067,7 +30293,7 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
     1.  Run the following command in the terminal:
         
         ```
-        \# vi trust-policy.json
+        # vi trust-policy.json
         ```
         
     2.  Copy and paste the following syntax into the json file.
@@ -31075,7 +30301,7 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
         ```
         {
            "Version": "2012-10-17",
-           "Statement": \[
+           "Statement": [
               {
                  "Effect": "Allow",
                  "Principal": { "Service": "vmie.amazonaws.com" },
@@ -31086,7 +30312,7 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
                     }
                  }
               }
-           \]
+           ]
         }
         ```
         
@@ -31096,7 +30322,7 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
     1.  Run the following command in the terminal.
         
         ```
-        \# vi role-policy.json
+        # vi role-policy.json
         ```
         
     2.  Copy and paste the following syntax into the json file. Replace the <disk-image-file-bucket> and <export-bucket> with the correct bucket name. You can specify \* to configure access to all your S3 buckets.
@@ -31104,46 +30330,46 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
         ```
         {
            "Version":"2012-10-17",
-           "Statement":\[
+           "Statement":[
               {
                  "Effect": "Allow",
-                 "Action": \[
+                 "Action": [
                     "s3:GetBucketLocation",
                     "s3:GetObject",
                     "s3:ListBucket" 
-                 \],
-                 "Resource": \[
+                 ],
+                 "Resource": [
                     "arn:aws:s3:::<disk-image-file-bucket>",
                     "arn:aws:s3:::<disk-image-file-bucket>/\*"
-                 \]
+                 ]
               },
               {
                  "Effect": "Allow",
-                 "Action": \[
+                 "Action": [
                     "s3:GetBucketLocation",
                     "s3:GetObject",
                     "s3:ListBucket",
                     "s3:PutObject",
                     "s3:GetBucketAcl"
-                 \],
-                 "Resource": \[
+                 ],
+                 "Resource": [
                     "arn:aws:s3:::<export-bucket>",
                     "arn:aws:s3:::<export-bucket>/\*"
-                 \]
+                 ]
               },
               {
                  "Effect": "Allow",
-                 "Action": \[
+                 "Action": [
                     "ec2:ModifySnapshotAttribute",
                     "ec2:CopySnapshot",
                     "ec2:RegisterImage",
                     "ec2:Describe\*",
                     "ec2:ImportSnapshot", 
                     "ec2:DescribeImportSnapshotTasks"
-                 \],
+                 ],
                  "Resource": "\*"
               }
-           \]
+           ]
         }
         ```
         
@@ -31161,13 +30387,13 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
      Run the following command to start the import process:
      
      ```
-     \# aws ec2 import-snapshot --description "<Cortex Cloud Broker VM <Version>" --disk-container "file://configuration.json"
+     # aws ec2 import-snapshot --description "<Cortex Cloud Broker VM <Version>" --disk-container "file://configuration.json"
      ```
      
      To track the progress, use the task `id` value from the output and run:
      
      ```
-     \# aws ec2 describe-import-snapshot-tasks --import-task-ids import-snap-<task-id>
+     # aws ec2 describe-import-snapshot-tasks --import-task-ids import-snap-<task-id>
      ```
      
      Example 121. 
@@ -31176,7 +30402,7 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
      
      ```
      {
-         "ImportSnapshotTasks": \[
+         "ImportSnapshotTasks": [
              {
                  "Description": "Broker VM <version> snapshot import",
                  "ImportTaskId": "import-snap-12346b69617c1395t",
@@ -31191,9 +30417,9 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
                          "S3Key": "broker-vm-<version>.vmdk"
                      }
                  },
-                 "Tags": \[\]
+                 "Tags": []
              }
-         \]
+         ]
      }
      ```
      
@@ -31225,7 +30451,7 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
          
          -   Image settings
              
-             -   Architecture: x86\_64
+             -   Architecture: x86_64
                  
              -   Root device name: `/dev/sda1`
                  
@@ -31298,7 +30524,6 @@ Registration of the Broker VM to Cortex Cloud is performed from the Broker VM We
 3.  Complete the registration process by entering the token information.
 
 ##### Set up Broker VM on Google Cloud Platform (GCP)
-Abstract
 
 Learn more about how to set up your Cortex Cloud Broker VM on Google Cloud Platform.
 
@@ -31350,17 +30575,13 @@ gcloud CLI
 
 Before importing a GCP image using the gcloud CLI, ensure that you update the Google Cloud components to version 371.0.0 and above using the following command:
 
-```
 gcloud components update
-```
 
 The following command uses the minimum required parameters. For more information on permissions and available parameters, refer to the [Google Cloud SDK](https://cloud.google.com/sdk/gcloud/reference/beta/compute/images/import).
 
 Open a command prompt and run the following:
 
-```
-gcloud compute images import <VMDK image> --data-disk --source-file="gs://<image path>" --network=<network\_name> --subnet=<subnet\_name> --zone=<region> --async
-```
+gcloud compute images import <VMDK image> --data-disk --source-file="gs://<image path>" --network=<network_name> --subnet=<subnet_name> --zone=<region> --async
 
 ###### Task 5. Create a new instance of the image
 
@@ -31415,7 +30636,6 @@ When the Google Compute completes the image creation, create a new instance.
 You can now connect to the Broker VM web console using the Broker VM IP address. Connect with https over port 4443 using the format `https://<ip address>:4443`.
 
 ##### Set up Broker VM on KVM using Ubuntu
-Abstract
 
 Learn set up your Cortex Cloud Broker virtual machine (VM) on a KVM using Ubuntu.
 
@@ -31427,7 +30647,7 @@ Download a Cortex Cloud Broker VM QCOW2 image. For more information, see the vir
 
 1.  Open your kernel-based Virtual Machine (KVM) on Ubuntu.
     
-2.  Click the New VM icon ([image: ubuntu-kvm-new-vm-icon.png]) to open the Create a new virtual machine wizard.
+2.  Click the New VM icon () to open the Create a new virtual machine wizard.
     
 3.  In the Step 1 screen of the wizard, select Import existing disk image, and click Forward.
     
@@ -31463,7 +30683,6 @@ Download a Cortex Cloud Broker VM QCOW2 image. For more information, see the vir
     You new VM is now listed and available to use.
 
 ##### Set up Broker VM on Microsoft Azure
-Abstract
 
 Learn how to set up your Cortex Cloud Broker virtual machine (VM) on Microsoft Azure.
 
@@ -31568,10 +30787,10 @@ Linux
         3.  Add the Azure CLI software repository:
             
             ```
-            AZ\_DIST=$(lsb\_release -cs)
+            AZ_DIST=$(lsb_release -cs)
             echo "Types: deb
             URIs: https://packages.microsoft.com/repos/azure-cli/
-            Suites: ${AZ\_DIST}
+            Suites: ${AZ_DIST}
             Components: main
             Architectures: $(dpkg --print-architecture)
             Signed-by: /etc/apt/keyrings/microsoft.gpg" | sudo tee /etc/apt/sources.list.d/azure-cli.sources
@@ -31667,7 +30886,6 @@ Linux
     -   Edit an existing outbound port rule and ensure that the settings provided above for creating a new outbound port rule match what is already configured in the rule.
 
 ##### Set up Broker VM on Nutanix Hypervisor
-Abstract
 
 Learn how to set up your Cortex Cloud Broker virtual machine (VM) on Nutanix Hypervisor.
 
@@ -31784,7 +31002,6 @@ Perform the following procedures in the order listed below.
 Select Summary and you can use the IP Addresses and Host IP listed to connect to the VM.
 
 ##### Set up Broker VM on VMware ESXi using vSphere Client
-Abstract
 
 Learn more about how to set up you Cortex Cloud Broker VM on VMware ESXi.
 
@@ -31822,7 +31039,6 @@ Deploy the Broker VM OVA image on vSphere Client
 9.  Navigate to the resource where the new virual machine is created, right-click the resource, and select Power → Power On.
 
 #### Broker VM data collector applets
-Abstract
 
 Learn more about the different Broker VM data collector applets available to configure.
 
@@ -31835,7 +31051,6 @@ The Broker VM has a number of data collector applets that you can configure to i
 For more information on activating the Broker VM applets, see Generic on-premise data collectors.
 
 ### Manage Broker VM
-Abstract
 
 Learn more about managing your Broker VMs from the management console.
 
@@ -31895,7 +31110,7 @@ Certain fields are also exposed in the Clusters tab, when a Broker VM node is ad
 | CPU USAGE\* | CPU usage percentage of the Broker VM device that is synced every 5 minutes. |
 | CONFIGURATION STATUS\* | Broker VM configuration status. Status is defined by the following according to changes made to any of the Broker VM configurations: up to date: Broker VM configuration changes made through the Cortex Cloud console have been applied.; in progress: Broker VM configuration changes made through the Cortex Cloud console are being applied.; submitted: Broker VM configuration changes made through the Cortex Cloud console have reached the Broker VM and awaiting implementation.; failed: Broker VM configuration changes made through the Cortex Cloud console have failed. Need to open a Palo Alto Networks support ticket. |
 | DEVICE ID | Device ID allocated to the Broker VM by Cortex Cloud after registration. |
-| DEVICE NAME\* | Same as the Device ID. A [image: expired-broker.png]icon notifies of an expired Broker VM. To reconnect, generate a new token and re-register your Broker VM as described in steps 1 through 7 of [Configure the Broker VM](urn:resource:component:924525). Once registered, all previous Broker VM configurations are reinstated. |
+| DEVICE NAME\* | Same as the Device ID. A icon notifies of an expired Broker VM. To reconnect, generate a new token and re-register your Broker VM as described in steps 1 through 7 of [Configure the Broker VM](urn:resource:component:924525). Once registered, all previous Broker VM configurations are reinstated. |
 | DISK USAGE\* | Disk usage percentage from the total allocated for data caching in the Broker VM. Inside the brackets is displayed how much this is in GB from the total disk size in GB. A notification is added to the Notification Center whenever the disk space is low disk and whenever the disk size is increased. |
 | EXTERNAL INTERFACE | The IP interface the Broker VM is using to communicate with the server. For AWS and Azure cloud environments, the field displays the Internal IP value. |
 | LAST SEEN | Indicates when the Broker VM was last seen on the network. |
@@ -31917,7 +31132,6 @@ Cortex Cloud updates and enhances the Broker VM automatically through maintenanc
 -   Periodic 3rd party penetration testing
 
 #### Edit Broker VM Configuration
-Abstract
 
 Learn more about editing the configuration of a Broker VM.
 
@@ -32008,7 +31222,6 @@ Cortex Cloud validates that the certificate and key match, but does not validate
 When you are done, Save your changes.
 
 #### Increase Broker VM storage allocated for data caching
-Abstract
 
 Learn more about increasing the storage allocated for data caching in the Broker VM.
 
@@ -32059,7 +31272,6 @@ How to increase the Broker VM disk size
     In addition, when the disk is added successfully, the total size of the disk space available is updated in the DISK USAGE column on the Broker VMs page.
 
 #### Monitor Broker VM using Prometheus
-Abstract
 
 Learn more on monitoring the Broker VM using Prometheus.
 
@@ -32150,15 +31362,15 @@ This task includes setting up Prometheus and Grafana.
     services:
       prometheus:
         image: prom/prometheus:latest
-        container\_name: prometheus
+        container_name: prometheus
         restart: unless-stopped
         volumes:
          - ./prometheus.yml:/etc/prometheus/prometheus.yml
-         - prometheus\_data:/prometheus
+         - prometheus_data:/prometheus
        command:
          - '--config.file=/etc/prometheus/prometheus.yml'
          - '--storage.tsdb.path=/prometheus'
-         - '--web.console.libraries=/etc/prometheus/console\_libraries'
+         - '--web.console.libraries=/etc/prometheus/console_libraries'
          - '--web.console.templates=/etc/prometheus/consoles'
          - '--web.enable-lifecycle'
          - '--log.level=debug'
@@ -32166,15 +31378,15 @@ This task includes setting up Prometheus and Grafana.
          - '9090:9090'
      grafana:
        image: grafana/grafana-enterprise
-       container\_name: grafana
+       container_name: grafana
        restart: unless-stopped
        ports:
         - '3000:3000'
        volumes:
-         - grafana\_data:/var/lib/grafana
+         - grafana_data:/var/lib/grafana
     volumes:
-      grafana\_data: {}
-      prometheus\_data: {}
+      grafana_data: {}
+      prometheus_data: {}
     ```
     
 3.  Save and close the file.
@@ -32196,15 +31408,15 @@ You need to configure Prometheus to scrape the Broker VM metrics by creating a P
     
     ```
     global:
-      scrape\_interval: 15s
-      scrape\_timeout: 10s
-    scrape\_configs:
-      - job\_name: 'prometheus'
-        static\_configs:
-          - targets: \['<your server IP address>:9090'\]
-      - job\_name: 'node'
-        static\_configs:
-          - targets: \['<Broker VM IP address>:9100'\]
+      scrape_interval: 15s
+      scrape_timeout: 10s
+    scrape_configs:
+      - job_name: 'prometheus'
+        static_configs:
+          - targets: ['<your server IP address>:9090']
+      - job_name: 'node'
+        static_configs:
+          - targets: ['<Broker VM IP address>:9100']
     ```
     
 4.  Save and close the file.
@@ -32260,11 +31472,10 @@ You can now create dashboards in Grafana to visualize the data from Prometheus.
 4.  To monitor CPU usage, use the following metric:
     
     ```
-    100 - (avg by (instance) (rate(node\_cpu\_seconds\_total{job="node",mode="idle"}\[1m\])) \* 100)
+    100 - (avg by (instance) (rate(node_cpu_seconds_total{job="node",mode="idle"}[1m])) \* 100)
     ```
 
 #### Collect Broker VM Logs
-Abstract
 
 Learn more about collecting logs from a Broker VM to review them as part of an investigation.
 
@@ -32283,7 +31494,6 @@ You can collect logs by either regenerating the most up-to-date logs and downloa
     Logs are generated automatically, but can take up to a few minutes depending on the size of the logs.
 
 #### Upgrade Broker VM
-Abstract
 
 Learn more about upgrading the Broker VM from the Cortex Cloud management console.
 
@@ -32298,7 +31508,6 @@ Learn more about upgrading the Broker VM from the Cortex Cloud management consol
     After a Broker VM upgrade, your broker may require a reboot to finish installing important updates. A notification about this will be sent to your Cortex Cloud console Notification Center.
 
 #### Import Broker VM Configuration
-Abstract
 
 Learn more about importing one Broker VM configuration to another.
 
@@ -32325,7 +31534,6 @@ Importing Broker VM configurations allows you to copy, including applet settings
     If your source Broker VM configuration includes a WEC applet, you'll need to ensure that you update the DNS record of this Broker VM's FQDN to point to the target Broker VM IP address.
 
 #### Open Live Terminal
-Abstract
 
 Learn more about remotely connecting to a Cortex Cloud Broker VM.
 
@@ -32425,7 +31633,6 @@ Cortex Cloud enables you to connect remotely to a Broker VM directly from Cortex
     | `squid_tail` | Display the Proxy applet Squid log file in real-time. | `sudo ./sbin/squid_tail` |
 
 #### Add Broker VM to cluster
-Abstract
 
 Learn more about adding a Broker VM to a high availability cluster.
 
@@ -32458,7 +31665,6 @@ Once you add a Broker VM to a cluster, the Broker VM becomes a cluster node and 
     Adding a Broker VM to a cluster overrides all previous Broker VM settings and disables all active applets on this Broker VM. When the Broker VM is added to a cluster, the cluster configuration and cluster applet settings propagate to the Broker VM. The state of the applets on the Broker VM is dependent on the applet mode and Broker VM node role in the cluster. When the operation completes, a notification is added to the Notification Center.
 
 #### Switchover Primary Node in Cluster
-Abstract
 
 Learning more about changing the role of the current Primary node in a HA cluster.
 
@@ -32479,7 +31685,6 @@ The option is only available for a Primary node, and only if there is another av
     When the switchover is completed, the roles of the node are switched. The new node is designated as Primary and the old node becomes a standby node. In addition, a notification is added to the Notification Center.
 
 #### Remove from Cluster
-Abstract
 
 Learn more about removing a Broker VM node from a high availability cluster.
 
@@ -32504,7 +31709,6 @@ You can remove a Broker VM node from a cluster if the current node STATUS is Con
     If you've enabled a Load Balancer Health-Check on the cluster, you need to exclude this Broker VM from your Load Balancer settings.
 
 ### Broker VM High Availability Cluster
-Abstract
 
 Learn more about creating Broker VMs in a High Availability Cluster
 
@@ -32562,7 +31766,6 @@ You can configure automatic upgrades within Broker VM HA cluster nodes to update
 3.  The previous Primary node, now a standby node, is upgraded.
 
 #### Configure High Availability Cluster
-Abstract
 
 Learn how to configure a High Availablity Cluster.
 
@@ -32693,7 +31896,6 @@ For the cluster to be healthy and maintain HA and redundancy, you need at least 
 -   To add applets, see Add applet to cluster.
 
 #### Manage Broker VM clusters
-Abstract
 
 Learn more about managing your broker VM clusters from the Clusters tab of the Broker VMs page.
 
@@ -32702,7 +31904,6 @@ After you've configured a cluster, you can manage all your Broker VM clusters fr
 The Clusters tab displays in a heirarchical view the clusters with their nodes, performance stats, applets configured, and the state of each applet. You can right-click any cluster to open a menu listing the tasks available management options.
 
 ##### View cluster details
-Abstract
 
 Learn more about viewing the details of any particular cluster.
 
@@ -32730,7 +31931,6 @@ The following table describes all the fields that are available in the Clusters 
 The fields that are available in the Broker VM nodes table for each cluster are similar to many of the fields that are displayed in the table for the Broker VMs in the Brokers tab. For more information on these fields, see Manage Broker VM.
 
 ##### Edit cluster
-Abstract
 
 Learn how to edit a High Availability cluster.
 
@@ -32747,7 +31947,6 @@ An HA cluster is always configurable no matter what the status of the cluster or
 4.  Update the cluster with your changes.
 
 ##### Add applet to cluster
-Abstract
 
 Learn more about adding an applet to a High Availability cluster.
 
@@ -32789,7 +31988,6 @@ You can always add an applet to a cluster, even if the cluster status is Unavail
     Once the applet configuration is changed in a cluster, the changes are automatically applied to the cluster nodes depending on the applet and cluster node role. For example, if you add the Kafka Collector, which is an "active/passive" applet, the applet is automatically initiated and enters an active state on the Primary node and is on standby on the standby nodes. While if you add the Syslog Collector "active/active" applet, the changes automatically propagate so that the applet is active on all cluster nodes, including Primary and standby.
 
 ##### Add Broker VM to cluster
-Abstract
 
 Learn more about adding a Broker VM to a high availability cluster.
 
@@ -32822,7 +32020,6 @@ Once you add a Broker VM to a cluster, the Broker VM becomes a cluster node and 
     Adding a Broker VM to a cluster overrides all previous Broker VM settings and disables all active applets on this Broker VM. When the Broker VM is added to a cluster, the cluster configuration and cluster applet settings propagate to the Broker VM. The state of the applets on the Broker VM is dependent on the applet mode and Broker VM node role in the cluster. When the operation completes, a notification is added to the Notification Center.
 
 ##### Remove cluster
-Abstract
 
 Learn more about removing a high availability cluster.
 
@@ -32841,7 +32038,6 @@ You cannot remove a cluster that is used as a download source from which the Cor
 3.  Follow the instructions in the REMOVE CLUSTER window, whose instructions differ depending on the type of cluster you are trying to remove, and Remove the cluster.
 
 ### Broker VM notifications
-Abstract
 
 Learn about the notifications that are relevant to Cortex Cloud Broker VMs.
 
@@ -32932,7 +32128,6 @@ Notifies when a cluster was removed.
 To ensure you stay informed about Broker VM activity, you can also configure notification forwarding to forward your Broker audit logs to an email distribution list or Syslog server. For more information about the Broker VM audit logs, see Broker VM Activity in the Cortex Cloud Administrator Guide.
 
 ### Monitor Broker VM activity
-Abstract
 
 Learn more about the monitored Cortex Cloud Broker VM activities.
 
@@ -32956,12 +32151,10 @@ Certain fields are exposed and hidden by default. An asterisk (\*) is beside eve
 | Result\* | The result of the action ( `Success`, `Fail`, or `N/A`) |
 | Severity\* | Severity associated with the log: `Critical` ; `High` ; `Medium` ; `Low` ; `Informational` |
 | Timestamp\* | Date and time when the action occurred. |
-| Type\* and Sub-Type\* | Additional classifications of Broker VM logs (Type and Sub-Type): Broker VMs:-   Action on device; Add Cluster; Applet Activated; Applet Configuration; Applet connection\_test Action; Applet Deactivated; Applet License Expired; Applet Mount Share Action; Applet Mount Share Test Action; Applet preview Action; Applet Scan Now Action; Applet Set Configuration; Applet Unmount All Shares Action; Authentication succeeded; Broker Log; Cluster Configuration; Cluster Failover; Cluster health declined; Cluster health recovered; Cluster Switchover; Device configuration; Disconnect; Register; Remove Cluster; Remove Device; Rolling Upgrades; Subscription Created; Subscription Deleted; Subscription Edited
-; Broker API:-   Authentication failed |
+| Type\* and Sub-Type\* | Additional classifications of Broker VM logs (Type and Sub-Type): Broker VMs:- Action on device; Add Cluster; Applet Activated; Applet Configuration; Applet connection_test Action; Applet Deactivated; Applet License Expired; Applet Mount Share Action; Applet Mount Share Test Action; Applet preview Action; Applet Scan Now Action; Applet Set Configuration; Applet Unmount All Shares Action; Authentication succeeded; Broker Log; Cluster Configuration; Cluster Failover; Cluster health declined; Cluster health recovered; Cluster Switchover; Device configuration; Disconnect; Register; Remove Cluster; Remove Device; Rolling Upgrades; Subscription Created; Subscription Deleted; Subscription Edited ; Broker API:- Authentication failed |
 | User Name\* | Name of the user who performed the action. |
 
 ## Dataset management
-Abstract
 
 Learn more about managing your datasets and understanding your overall data storage, period-based retention.
 
@@ -33163,7 +32356,6 @@ For each dataset view listed in the table, information is available. Here are de
 | RELATED TABLES | Details the other datasets that are related to this dataset view. |
 
 ### What are datasets?
-Abstract
 
 Learn how to import, delete, and interact with custom or third-party datasets in Cortex Cloud.
 
@@ -33212,13 +32404,13 @@ Cortex Query Language (XQL) supports using different languages for dataset and f
     -   Hot Storage queries are performed on a dataset using the format **`dataset = <dataset name>`**. This is the default option.
         
         ```
-        dataset = xdr\_data
+        dataset = xdr_data
         ```
         
     -   Cold Storage queries are performed using the format **`cold_dataset = <dataset name>`**.
         
         ```
-        cold\_dataset = xdr\_data
+        cold_dataset = xdr_data
         ```
         
     
@@ -33272,7 +32464,6 @@ Copy text to clipboard
 Select Copy text to clipboard to copy the name of the dataset or dataset view to your clipboard.
 
 ### Lookup datasets
-Abstract
 
 Learn more about lookup datasets to correlate data from a data source with events in your environment.
 
@@ -33317,7 +32508,6 @@ After a lookup, a dataset is imported, you can always edit the dataset to update
 A lookup dataset can only be deleted if there are no other dependencies. For example, if a Correlation Rule is based on a lookup dataset, you wouldn't be able to delete the lookup dataset until you removed the dataset from the XQL query of the Correlation Rule.
 
 #### Import a lookup dataset
-Abstract
 
 Learn more about importing data from an external file to create or update a lookup dataset in Cortex Cloud.
 
@@ -33348,11 +32538,9 @@ Example 125. 
 
 Here's an example of a JSON file in the correct format for upload:
 
-```
-{"firstName": "NAME\_1", "SurName": "NAME\_11", "employeeID": {"id": "ID\_AAAAA\_2"}}
-{"firstName": "NAME\_2", "SurName": "NAME\_22", "employeeID": {"id": "ID\_AAAAA\_3"}}
-{"firstName": "NAME\_3", "SurName": "NAME\_32", "employeeID": {"id": "ID\_AAAAA\_4"}}
-```
+{"firstName": "NAME_1", "SurName": "NAME_11", "employeeID": {"id": "ID_AAAAA_2"}}
+{"firstName": "NAME_2", "SurName": "NAME_22", "employeeID": {"id": "ID_AAAAA_3"}}
+{"firstName": "NAME_3", "SurName": "NAME_32", "employeeID": {"id": "ID_AAAAA_4"}}
 
   
 
@@ -33362,7 +32550,7 @@ Here's an example of a JSON file in the correct format for upload:
     
 3.  (Optional) Under Name, type a new name for the target dataset.
     
-    By default, Cortex Cloud uses the name of the original file as the dataset name. You can change this name to something that will be more meaningful for your users when they query the dataset. For example, if the original file name is mrkdptusrsnov23.json, you can save the dataset as marketing\_dept\_users\_Nov\_2023.
+    By default, Cortex Cloud uses the name of the original file as the dataset name. You can change this name to something that will be more meaningful for your users when they query the dataset. For example, if the original file name is mrkdptusrsnov23.json, you can save the dataset as marketing_dept_users_Nov_2023.
     
     Dataset names can contain special characters from different languages, numbers (**`0-9`**) and underscores (**`_`**). You can create dataset names using uppercase characters, but in queries, dataset names are always treated as if they are lowercase.
     
@@ -33374,12 +32562,11 @@ Here's an example of a JSON file in the correct format for upload:
     
 5.  Click Add to add the file as a lookup.
     
-6.  After receiving a notification reporting that the upload succeeded, Refresh [image: refresh.png] to view it in your list of datasets.
+6.  After receiving a notification reporting that the upload succeeded, Refresh  to view it in your list of datasets.
     
     If the upload fails for any reason, you'll receive a notification in the Notification Center.
 
 #### Download JSON file of lookup dataset
-Abstract
 
 Learn more about downloading a lookup dataset as a JSON file.
 
@@ -33396,7 +32583,6 @@ When you download a lookup dataset with field names in a foreign language, the d
 2.  In the Datasets table, right-click the lookup dataset that you want to download as a JSON file, and select Download.
 
 #### Set time to live for lookup datasets
-Abstract
 
 Learn more about setting the time to live (TTL) for lookup datasets in Cortex Cloud.
 
@@ -33422,7 +32608,6 @@ You can specify when lookup entries expire and are removed automatically from th
     The TTL column in the Datasets table is updated with the changes and these changes are applied immediately on all existing lookup entries.
 
 ### Monitor datasets and dataset views activity
-Abstract
 
 Learn more about the monitored Cortex Cloud datasets and dataset views activities.
 
@@ -33448,12 +32633,10 @@ Certain fields are exposed and hidden by default. An asterisk (\*) is beside eve
 | Result\* | The result of the action ( `Success`, `Fail`, or `N/A`) |
 | Severity\* | Severity associated with the log: `Critical`; `High`; `Medium`; `Low`; `Informational` |
 | Timestamp\* | Date and time when the action occurred. |
-| Type\* and Sub-Type\* | Additional classifications of dataset and dataset view logs (Type and Sub-Type): Datasets:-   Create Dataset; Delete Dataset; Update Dataset
-; Dataset Views:-   Create Dataset View; Delete Dataset View; Update Dataset View |
+| Type\* and Sub-Type\* | Additional classifications of dataset and dataset view logs (Type and Sub-Type): Datasets:- Create Dataset; Delete Dataset; Update Dataset ; Dataset Views:- Create Dataset View; Delete Dataset View; Update Dataset View |
 | User Name\* | Name of the user who performed the action. |
 
 ## Manage compute units
-Abstract
 
 Learn more about managing and tracking your compute units usage for API and Cold Storage XQL queries.
 
@@ -33486,7 +32669,6 @@ Cortex Cloud uses compute units (CU) for these types of queries:
     The CU consumption of cold storage queries is based on the number of days in the query time frame. For example, when querying 1 hour of a specific day, the CU of querying this entire day is consumed. When querying 1 hour that extends past 2 days, such as from 23:50 to 00:50 of the following day, the CU of querying these two days is consumed.
 
 ### Compute units usage
-Abstract
 
 Learn more about how to compute units CU) works according to your license and available options after reaching your quota.
 
@@ -33578,7 +32760,6 @@ You can manage the instances configured for a data source on the Data Sources & 
         If you delete all the instances for a Data Source, the Data Source is not listed on the Data Sources & Integrations page.
 
 ### Add a new data source or instance
-Abstract
 
 Use the Data Source Onboarder to add a new data source or instance in Cortex Cloud.
 
@@ -33653,7 +32834,6 @@ You can add a new data source with the Data Source Onboarder. The Onboarder inst
 10.  Click Finish to return to the Data Sources & Integrations page.
 
 ### Manage cloud instances
-Abstract
 
 You can manage the cloud instances configured for a CSP on the Data Sources & Integrations page. You can check the status, edit, delete, enable, or disable instances, and initiate discovery scan.
 
@@ -33697,7 +32877,6 @@ Monitoring cloud integration instance health ensures continuous, reliable operat
         Currently, automation permission errors or missing automation permissions do not affect the Automation health status. You can view any permission errors or missing permissions in the the Permissions health status.
 
 ### Update cloud permissions after Cortex release updates
-Abstract
 
 Manage permission updates for your cloud instances following new feature releases or bug fixes.
 
@@ -33763,7 +32942,6 @@ There are some actions that can be performed specifically on cloud instances wit
 | Delete | To delete a pending instance, right-click the pending instance and select Delete. |
 
 ### Manage Kubernetes Connector instances
-Abstract
 
 You can manage the Kubernetes Connector instances on the Data Sources & Integrations page. You can check the status, edit, or delete Kubernetes Connector instances.
 
@@ -33794,7 +32972,6 @@ Navigate to Settings → Data Sources & Integrations and find the Kubernetes ins
 After uninstalling the Kubernetes connector, the connector status updates to Not connected 48 hours after the uninstall process is initiated.
 
 ### Troubleshoot errors on cloud instances
-Abstract
 
 You can troubleshoot errors on cloud instances by drilling down on an instance from the Data Sources & Integrations page.
 
@@ -33878,13 +33055,13 @@ Example 152. Examples of Outpost queries
 -   Identify Outpost errors on all Outpost accounts in the eu-west-3 region:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Outpost" and classification = "Error" and region = "eu-west-3"
+    dataset = cloud_health_auditing | filter capability = "Outpost" and classification = "Error" and region = "eu-west-3"
     ```
     
--   See all entries (error, warning, and recovery) for Outpost\_1 on cloud account Account\_A:
+-   See all entries (error, warning, and recovery) for Outpost_1 on cloud account Account_A:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Outpost" and resource\_id = “Outpost\_1” and account = "Account\_A"
+    dataset = cloud_health_auditing | filter capability = "Outpost" and resource_id = “Outpost_1” and account = "Account_A"
     ```
     
 
@@ -33937,16 +33114,16 @@ The following table describes the fields for Discovery engine entries:
 
 Example 153. Examples of Discovery engine queries
 
--   Identify API exec errors on the Discovery engine for all accounts on the AWS\_1 connector:
+-   Identify API exec errors on the Discovery engine for all accounts on the AWS_1 connector:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Discovery" and connector = "AWS\_1" and classification = “Error”
+    dataset = cloud_health_auditing | filter capability = "Discovery" and connector = "AWS_1" and classification = “Error”
     ```
     
--   See all Discovery engine activity on connector AWS\_1 for Account\_ A in the af-south-1 region:
+-   See all Discovery engine activity on connector AWS_1 for Account_ A in the af-south-1 region:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Discovery" and connector = "AWS\_1" and account = "accountA" and region = "af-south-1"
+    dataset = cloud_health_auditing | filter capability = "Discovery" and connector = "AWS_1" and account = "accountA" and region = "af-south-1"
     ```
     
 
@@ -33984,13 +33161,13 @@ Example 154. Examples of ADS queries
 -   Identify failed ADS scans on connector "a8df43e848dd42778ae7efd5a706a0fc" for EC2 assets at the asset scope level, filtered by region (northamerica-northeast2-a):
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "ADS" and classification = "failed" and connector = “a8df43e848dd42778ae7efd5a706a0fc” and type = "EC2\_INSTANCE" and scope = "Asset" and region = "northamerica-northeast2-a" 
+    dataset = cloud_health_auditing | filter capability = "ADS" and classification = "failed" and connector = “a8df43e848dd42778ae7efd5a706a0fc” and type = "EC2_INSTANCE" and scope = "Asset" and region = "northamerica-northeast2-a" 
     ```
     
--   See all ADS scans (failed and successful) on connector "a8df43e848dd42778ae7efd5a706a0fc" for EC2 assets belonging to Account\_A:
+-   See all ADS scans (failed and successful) on connector "a8df43e848dd42778ae7efd5a706a0fc" for EC2 assets belonging to Account_A:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "ADS" and connector = “a8df43e848dd42778ae7efd5a706a0fc” and type = "EC2" and account = “Account\_A”
+    dataset = cloud_health_auditing | filter capability = "ADS" and connector = “a8df43e848dd42778ae7efd5a706a0fc” and type = "EC2" and account = “Account_A”
     ```
     
 
@@ -34023,16 +33200,16 @@ The following table describes the fields for DSPM entries:
 
 Example 155. Examples of DSPM queries
 
--   Identify failed DSPM scans on the AWS\_1 connector for S3 asset types, filtered by region (ap-east-1):
+-   Identify failed DSPM scans on the AWS_1 connector for S3 asset types, filtered by region (ap-east-1):
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "DSPM" and classification = “Error” and connector = “AWS\_1” and type = "S3\_BUCKET" and region = "ap-east-1"
+    dataset = cloud_health_auditing | filter capability = "DSPM" and classification = “Error” and connector = “AWS_1” and type = "S3_BUCKET" and region = "ap-east-1"
     ```
     
--   See all DSPM scans (failed and successful) on the AWS\_1 connector, for all scanned assets on Account\_A:
+-   See all DSPM scans (failed and successful) on the AWS_1 connector, for all scanned assets on Account_A:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "DSPM" and account = "Account\_A" and connector = “AWS\_1”
+    dataset = cloud_health_auditing | filter capability = "DSPM" and account = "Account_A" and connector = “AWS_1”
     ```
     
 
@@ -34061,16 +33238,16 @@ The following table describes the fields for Registry scanning entries:
 
 Example 156. Examples of Registry scanning queries
 
--   Identify failed scans on connector GCP\_1:
+-   Identify failed scans on connector GCP_1:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Registry" and classification = “error” and connector = “GCP\_1”
+    dataset = cloud_health_auditing | filter capability = "Registry" and classification = “error” and connector = “GCP_1”
     ```
     
--   Review all registry scans (failed and successful) on connector GCP\_1 for asset Asset\_A:
+-   Review all registry scans (failed and successful) on connector GCP_1 for asset Asset_A:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Registry" and connector = “GCP\_1” and ressource\_id = "Asset\_A"
+    dataset = cloud_health_auditing | filter capability = "Registry" and connector = “GCP_1” and ressource_id = "Asset_A"
     ```
     
 
@@ -34092,11 +33269,9 @@ The following table describes the fields for Audit logs entries:
 
 Example 157. Audit logs query example
 
-Identify disruptions (errors) in audit log collection on connector AWS\_1:
+Identify disruptions (errors) in audit log collection on connector AWS_1:
 
-```
-dataset = collection\_auditing | filter instance = “AWS\_1” and log\_type = "Audit Logs" and classification = “Error”
-```
+dataset = collection_auditing | filter instance = “AWS_1” and log_type = "Audit Logs" and classification = “Error”
 
   
 
@@ -34106,13 +33281,11 @@ The following examples show how to set up correlation rules to trigger Health Co
 
 Example rule for DSPM errors
 
-In this example, a correlation rule will trigger a Health Collection issue if a DSPM scan fails on an AWS\_S3 asset on the AWS\_1 connector.
+In this example, a correlation rule will trigger a Health Collection issue if a DSPM scan fails on an AWS_S3 asset on the AWS_1 connector.
 
 Example XQL:
 
-```
-dataset = cloud\_health\_auditing | filter capability = "DSPM" and classification = “Error” and type = "AWS\_S3" and scope = "Asset" and connector = “AWS\_1”
-```
+dataset = cloud_health_auditing | filter capability = "DSPM" and classification = “Error” and type = "AWS_S3" and scope = "Asset" and connector = “AWS_1”
 
 Additional fields to specify in the correlation rule:
 
@@ -34128,13 +33301,11 @@ Additional fields to specify in the correlation rule:
 
 Example rule for Outpost errors
 
-In this example, a correlation rule will trigger a Health Collection issue if an error is recorded on account Outpost\_A in the us-east-1 region.
+In this example, a correlation rule will trigger a Health Collection issue if an error is recorded on account Outpost_A in the us-east-1 region.
 
 Example XQL:
 
-```
-dataset = cloud\_health\_auditing | filter capability = "Outpost" and account = "Outpost\_A" and region = "eu-west-3" and classification = "Error"
-```
+dataset = cloud_health_auditing | filter capability = "Outpost" and account = "Outpost_A" and region = "eu-west-3" and classification = "Error"
 
 Additional fields to specify in the correlation rule:
 
@@ -34179,7 +33350,6 @@ You can monitor and manage the health and status of your integrated serverless f
     -   Errors: Lists the serverless function scan errors from the Health log in an inventory table. Selecting an item from the Account Name column opens the All Assets inventory page (in a new tab) filtered by the serverless function asset. Clicking on the asset opens a description card with details of the error including the account, region, asset and timestamp, as well as the code in which the error was detected
 
 ## About health issues
-Abstract
 
 Cortex Cloud provides health issues to help you monitor the health and integrity of supported Cortex Cloud resources. Health issues comprise ingestion, collection, correlation, and event forwarding errors.
 
@@ -34218,9 +33388,7 @@ Cortex Cloud enforces the dedup logic to health issues. This logic reduces the l
 
 Health issues are associated with the Health domain. To query health issue data, use the following XQL:
 
-```
-dataset = alerts | filter alert\_domain = "DOMAIN\_HEALTH"
-```
+dataset = alerts | filter alert_domain = "DOMAIN_HEALTH"
 
 ### Health issue field descriptions
 
@@ -34259,7 +33427,6 @@ The following table describes the health issue fields.
 | XDR Collector Name | Host name of the XDR Collector. |
 
 ### Investigate and resolve health issues
-Abstract
 
 You can investigate and take action on health issues from the Health Issues page and the Issues Table.
 
@@ -34317,7 +33484,6 @@ Automation issues identify potential misconfigurations in automations, enabling 
 # Cortex Cloud Data Sources
 
 ## What are Cortex Cloud data sources?
-Abstract
 
 Learn more about Cortex Cloud Data Sources and a unified approach to integrations.
 
@@ -34372,7 +33538,6 @@ We are actively working to evolve the UI to create a single, unified point of co
 | Cloud Posture and Runtime Security data sources | Data Sources & Integrations page (Settings → Data Sources & Integrations → \+ Add New); Broker VMs page (Settings → Configurations → Data Broker → Broker VMs) |
 
 ## Complete data source catalog
-Abstract
 
 Learn more about the complete data source catalog available in Cortex Cloud.
 
@@ -34408,7 +33573,6 @@ Data source categories
 By consulting the specific documentation sections dedicated to each category as detailed below, you gain a complete overview of all available ingestion options that collectively form the data source catalog.
 
 ## Vendor-specific data sources
-Abstract
 
 Learn more about the third-party vendor data sources available in Cortex Cloud.
 
@@ -34535,7 +33699,6 @@ The following third-party vendors are available, which represent one of the five
 -   Zscaler Private Access (ZPA) (using Syslog Collector applet)
 
 ### Amazon Web Services
-Abstract
 
 Learn more about collecting Amazon Web Services data using a Cloud Service Provider (CSP) onboarding data source in Cortex Cloud.
 
@@ -34547,7 +33710,6 @@ Follow a wizard to onboard your Amazon Web Services (AWS) environment. The AWS o
 | Link to basic configuration Cloud Service Provider (CSP) onboarding data source instructions for Cortex Cloud NG SIEM, Cortex Cloud Enterprise license, and Cortex Cloud Enterprise+ licenses. | Onboard Amazon Web Services with basic configuration |
 
 ### Databricks
-Abstract
 
 Learn more about the Databricks data source in Cortex Cloud.
 
@@ -34559,7 +33721,6 @@ You can configure collecting Databricks logs using a Cloud Posture and Runtime S
 | Link to Cloud Posture and Runtime Security data source instructions | How to onboard Databricks |
 
 #### How to onboard Databricks
-Abstract
 
 How to get started with the third-party Databricks data source.
 
@@ -34676,7 +33837,6 @@ At the end of the onboarding process, a pending request for Databricks approval 
 For more information, see Egress configurations.Egress configurations
 
 ### Kubernetes
-Abstract
 
 Learn more about collecting Kubernetes data using a standard data source in Cortex Cloud.
 
@@ -34688,7 +33848,6 @@ You can configure collecting Kubernetes data using a standard data source with t
 | Link to standard data source instructions | Onboard the Kubernetes Connector Another relevant topic: What's new in Kubernetes Connector? |
 
 #### Onboard the Kubernetes Connector
-Abstract
 
 To onboard your Kubernetes cluster, choose the capabilities that fit your needs and download the Helm chart values. Install the Helm charts in your Kubernetes environment to grant Cortex Cloud permissions to collect the data.
 
@@ -34826,16 +33985,16 @@ This table shows the Kubernetes platform versions that have been compatibility t
 | --- | --- |
 | Unmanaged Kubernetes (k8s) | 1.30 |
 | Amazon Elastic Kubernetes Service (EKS) | 1.33 |
-|  | BottleRocket OS x86\_64 User mode agent only |  |
+|  | BottleRocket OS x86_64 User mode agent only |  |
 | BottleRocket OS aarch64 User mode agent only |  |
 | Microsoft Azure Kubernetes Service (AKS) | 1.33 |
-|  | CBL-mariner 2 x86\_64 |  |
+|  | CBL-mariner 2 x86_64 |  |
 | Google Kubernetes Engine (GKE) | 1.33 |
-|  | Google Container-Optimized OS (COS)\* x86\_64 User mode agent only |  |
+|  | Google Container-Optimized OS (COS)\* x86_64 User mode agent only |  |
 | Google Kubernetes Engine (GKE) Autopilot |  |
 | Oracle Kubernetes Engine (OKE) | 1.33 |
 | Red Hat Openshift Container Platform (OCP) | 4.16 |
-|  | RHCOS\* x86\_64 User mode agent only |  |
+|  | RHCOS\* x86_64 User mode agent only |  |
 | SUSE Rancher Kubernetes Engine 2 (RKE2) | 1.28 |
 | Talos | 1.8.3 |
 
@@ -34846,7 +34005,6 @@ In Google Container-Optimized OS release 100 and earlier, where the FANOTIFY EXE
 In RHCOS version 4.12 and earlier, the Kernel configuration may be partial for the user mode agent to properly function. In such cases, the agent will fallback to asynchronous mode.
 
 ### Microsoft Azure
-Abstract
 
 Learn more about collecting Microsoft Azure data using a Cloud Service Provider (CSP) onboarding data source in Cortex Cloud.
 
@@ -34858,7 +34016,6 @@ Follow a wizard to onboard your Microsoft Azure environment. The Azure onboardin
 | Link to basic configuration Cloud Service Provider (CSP) onboarding data source instructions for Cortex Cloud NG SIEM, Cortex Cloud Enterprise license, and Cortex Cloud Enterprise+ licenses. | Onboard Microsoft Azure with basic configuration |
 
 ### Microsoft 365 (Posture)
-Abstract
 
 Learn more about the Microsoft 365 (Posture) data source in Cortex Cloud.
 
@@ -34870,7 +34027,6 @@ You can configure collecting Microsoft 365 (Posture) logs using a Cloud Posture 
 | Link to Cloud Posture and Runtime Security data source instructions | How to onboard Microsoft 365 |
 
 #### How to onboard Microsoft 365
-Abstract
 
 How to get started with the Microsoft 365 data source.
 
@@ -34915,7 +34071,6 @@ You can add Microsoft 365 as a third-party data source in Cortex Cloud Data Secu
 The Microsoft 365 integration instance should now appear in the list of data sources on the Data Sources & Integrations page.
 
 ### Okta
-Abstract
 
 Learn more about the Okta Standard Collector and content pack integrations in Cortex Cloud.
 
@@ -34927,7 +34082,6 @@ You can configure collecting Okta logs and data using a Standard Collector or wi
 | Link to Standard Collector instructions | The following types of logs can be ingested from Okta: Activity logs; Configuration data For more information, see Ingest logs and data from Okta. |
 
 #### Ingest logs and data from Okta
-Abstract
 
 Learn more about Ingesting logs and data from Okta for use in Cortex Cloud.
 
@@ -35034,7 +34188,6 @@ Configuration data (using Collect Configuration)
 -   **XQL**: Use the following dataset for CIEM (Cloud Infrastructure Entitlements Management) visibility: `ciem_permissions_with_last_access`
 
 ### Oracle Cloud Infrastructure
-Abstract
 
 Learn more about collecting Oracle Cloud Infrastructure data using a Cloud Service Provider (CSP) onboarding data source in Cortex Cloud.
 
@@ -35046,7 +34199,6 @@ Follow a wizard to onboard your Oracle Cloud Infrastructure (OCI) environment. T
 | Link to basic configuration Cloud Service Provider (CSP) onboarding data source instructions for Cortex Cloud NG SIEM, Cortex Cloud Enterprise license, and Cortex Cloud Enterprise+ licenses. | Onboard Oracle Cloud Infrastructure with basic configuration |
 
 ### Snowflake
-Abstract
 
 Learn more about the Snowflake data source in Cortex Cloud.
 
@@ -35058,7 +34210,6 @@ You can configure collecting Snowflake data using a Cloud Posture and Runtime Se
 | Link to Cloud Posture and Runtime Security data source instructions | How to onboard Snowflake |
 
 #### How to onboard Snowflake
-Abstract
 
 How to get started with the third-party Snowflake data source.
 
@@ -35093,7 +34244,7 @@ You can add Snowflake as a third-party data source in Cortex Cloud Data Security
         
         The account identifier can be found using the user information at the bottom left. Hover over the account you wish to onboard and select the copy option at the top right. The account identifier is usually of the format: 
         
-        (organization).\[account\]
+        (organization).[account]
         
     3.  (Optional) If you have a Snowflake account that is protected by a network policy, turn on the My Snowflake account is protected by network policies toggle button. The network policies are related to the IP allow list.
         
@@ -35146,14 +34297,12 @@ You can add Snowflake as a third-party data source in Cortex Cloud Data Security
     The Snowflake instance is now removed, including all previous scans.
 
 ## Cloud service provider (CSP) onboarding
-Abstract
 
 Learn about onboarding your cloud service provider to Cortex Cloud.
 
 Onboard your cloud service provider (CSP) from the Data Sources & Integrations page.
 
 ### Ingest cloud assets
-Abstract
 
 Explains how to onboard cloud service providers from the Data Sources & Integrations page.
 
@@ -35198,7 +34347,6 @@ The additional security capabilities you can enable include:
 -   Registry scanning: Scan container registry images for vulnerabilities. malware, and secrets. You can configure your initial preference for scanning your registry. Any newly discovered registry, repository or image in the account will be scanned by default.
 
 ### Onboard Amazon Web Services
-Abstract
 
 Follow the AWS onboarding wizard and Cortex Cloud creates a custom CloudFormation authentication template to be deployed in AWS CloudFormation.
 
@@ -35321,14 +34469,13 @@ Cortex Cloud generates a CloudFormation authentication template based on the set
 
 Use the following template to create a dedicated role with the permissions required for onboarding AWS to Cortex Cloud:
 
-```
 {
   "Version": "2012-10-17",
-  "Statement": \[
+  "Statement": [
     {
       "Sid": "CortexCloudOnboarding",
       "Effect": "Allow",
-      "Action": \[
+      "Action": [
         "iam:GetRole",
         "iam:UpdateAssumeRolePolicy",
         "iam:GetPolicyVersion",
@@ -35359,35 +34506,31 @@ Use the following template to create a dedicated role with the permissions requi
         "sns:\*",
         "cloudtrail:\*",
         "cloudformation:\*"
-      \],
+      ],
       "Resource": "\*"
     }
-  \]
+  ]
 }
-```
 
 To enable serverless function scanning, grant the following permissions in your AWS account for scanning outposts and accessing logs:
 
-```
 {
  "Version": "2012-10-17",
- "Statement": \[
+ "Statement": [
    {
      "Effect": "Allow",
-     "Action": \[
+     "Action": [
        "lambda:GetFunction",
        "lambda:GetFunctionConfiguration",
        "lambda:GetLayerVersion",
        "iam:GetRole"
-     \],
+     ],
      "Resource": "\*"
    }
- \]
+ ]
 }
-```
 
 #### Onboard Amazon Web Services with basic configuration
-Abstract
 
 Follow the basic configuration AWS onboarding wizard to enable audit log collection and asset, and Cortex Cloud creates a custom CloudFormation template to be deployed in AWS CloudFormation.
 
@@ -35478,14 +34621,13 @@ Cortex Cloud generates a CloudFormation authentication template based on the set
 
 Use the following JSON template to create a dedicated role with the permissions required for onboarding AWS to Cortex Cloud:
 
-```
 {
   "Version": "2012-10-17",
-  "Statement": \[
+  "Statement": [
     {
       "Sid": "CortexCloudOnboarding",
       "Effect": "Allow",
-      "Action": \[
+      "Action": [
         "iam:GetRole",
         "iam:UpdateAssumeRolePolicy",
         "iam:GetPolicyVersion",
@@ -35516,15 +34658,13 @@ Use the following JSON template to create a dedicated role with the permissions 
         "sns:\*",
         "cloudtrail:\*",
         "cloudformation:\*"
-      \],
+      ],
       "Resource": "\*"
     }
-  \]
+  ]
 }
-```
 
 #### Manually upload template to AWS
-Abstract
 
 Learn how to manually create a stack in AWS Management Console using the CloudFormation file downloaded in the onboarding wizard.
 
@@ -35568,13 +34708,12 @@ Before you begin, ensure you have:
     
     Click Next and Next again.
     
-8.  In Review, acknowledge that CloudFormation might create IAM resources with custom names and click Submit. The stack is complete when it appears in the Stacks list with status of CREATE\_COMPLETE.
+8.  In Review, acknowledge that CloudFormation might create IAM resources with custom names and click Submit. The stack is complete when it appears in the Stacks list with status of CREATE_COMPLETE.
     
 
 When the template is successfully uploaded to AWS and the stack creation is complete, the initial discovery scan is started. When the scan is complete, you can view the discovered assets in Asset Inventory.
 
 #### Configure AWS integration instances and monitor integration instance health
-Abstract
 
 Enable automations from Data Sources & Integrations and monitor AWS integration instance health.
 
@@ -35625,7 +34764,6 @@ Monitoring AWS integration instance health ensures continuous, reliable operatio
         Currently, automation permission errors or missing automation permissions do not affect the Automation health status. You can view any permission errors or missing permissions in the the Permissions health status.
 
 ### Onboard Google Cloud Platform
-Abstract
 
 Follow the GCP onboarding wizard, and Cortex Cloud creates a custom authentication template to be applied in GCP.
 
@@ -35742,12 +34880,11 @@ Cortex Cloud generates a Terraform authentication template based on the settings
 
 Use the following template to create a dedicated role with the permissions required for onboarding GCP to Cortex Cloud.
 
-```
 {
   "title": "CortexCloudOnboarding",
   "description": "Custom role with permissions required for onboarding Cortex Cloud",
   "stage": "GA",
-  "includedPermissions": \[
+  "includedPermissions": [
     "iam.roles.create",
     "iam.roles.delete",
     "iam.roles.get",
@@ -35785,12 +34922,10 @@ Use the following template to create a dedicated role with the permissions requi
     "resourcemanager.projects.getIamPolicy",
     "resourcemanager.projects.list",
     "resourcemanager.projects.setIamPolicy"
-  \]
+  ]
 }
-```
 
 #### Onboard Google Cloud Platform with basic configuration
-Abstract
 
 Follow the basic configuration GCP onboarding wizard to enable audit log collection and asset, and Cortex Cloud creates a custom authentication template to be applied in GCP.
 
@@ -35875,12 +35010,11 @@ Cortex Cloud generates a Terraform authentication template based on the settings
 
 Use the following template to create a dedicated role with the permissions required for onboarding GCP to Cortex Cloud.
 
-```
 {
   "title": "CortexCloudOnboarding",
   "description": "Custom role with permissions required for onboarding Cortex Cloud",
   "stage": "GA",
-  "includedPermissions": \[
+  "includedPermissions": [
     "iam.roles.create",
     "iam.roles.delete",
     "iam.roles.get",
@@ -35918,12 +35052,10 @@ Use the following template to create a dedicated role with the permissions requi
     "resourcemanager.projects.getIamPolicy",
     "resourcemanager.projects.list",
     "resourcemanager.projects.setIamPolicy"
-  \]
+  ]
 }
-```
 
 #### Manually upload template to GCP
-Abstract
 
 Learn how to manually deploy the Terraform template file in Google Cloud Console.
 
@@ -35970,7 +35102,7 @@ Before you begin, ensure you have:
     
     ```
     cd ~/terraform/gcp-connector-1
-    tar -xzvf <your\_template>.tar.gz
+    tar -xzvf <your_template>.tar.gz
     ```
     
 5.  Initialize Terraform in your project directory:
@@ -35982,7 +35114,7 @@ Before you begin, ensure you have:
 6.  Apply your Terraform configuration using the downloaded parameter file. When prompted, enter the project ID if you configured one in the onboarding wizard:
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
     The Terraform template is deployed.
@@ -36079,7 +35211,6 @@ Your Cortex Cloud service account has been successfully granted the necessary pe
 You have successfully enabled the Google Workspace in your GCP cloud instance.
 
 #### Configure GCP integration instances and monitor integration instance health
-Abstract
 
 Enable automations from Data Sources & Integrations and monitor GCP integration instance health.
 
@@ -36097,7 +35228,7 @@ You can configure a new GCP integration instance or edit an existing GCP integra
     
 2.  In the GCP integration row:
     
-    -   To configure a new GCP integration instance: Click [image: three-dots.png] and then click Add New Instance or click View Details and from the New Instance drop down select the GCP cloud service provider.
+    -   To configure a new GCP integration instance: Click ⋮ and then click Add New Instance or click View Details and from the New Instance drop down select the GCP cloud service provider.
         
     -   To edit an existing GCP integration instance: Click View Details and then click the configuration pencil icon.
         
@@ -36130,7 +35261,6 @@ Monitoring GCP integration instance health ensures continuous, reliable operatio
         Currently, automation permission errors or missing automation permissions do not affect the Automation health status. You can view any permission errors or missing permissions in the the Permissions health status.
 
 #### Monitor GCP resources inside service perimeters
-Abstract
 
 Learn how to grant authorization to Cortex Cloud to scan within your GCP service perimeter.
 
@@ -36203,7 +35333,6 @@ Add Cortex Cloud authorization values to GCP perimeter
 The Cortex Cloud authorization values have been added as approved identities in GCP.
 
 ### Onboard Microsoft Azure
-Abstract
 
 Follow the Azure onboarding wizard, and Cortex creates a custom authentication template to be executed in Azure.
 
@@ -36324,12 +35453,11 @@ Cortex Cloud generates an authentication template based on the settings you conf
 
 Use the following template to create a dedicated role with the permissions required for onboarding Microsoft Azure to Cortex Cloud.
 
-```
 {
   "Name": "CortexCloudOnboarding",
   "IsCustom": true,
   "Description": "Custom role with permissions for Cortex Cloud onboarding",
-  "Actions": \[
+  "Actions": [
     "Microsoft.Authorization/roleAssignments/read",
     "Microsoft.Authorization/roleAssignments/write",
     "Microsoft.Authorization/roleAssignments/delete",
@@ -36401,20 +35529,18 @@ Use the following template to create a dedicated role with the permissions requi
     "Microsoft.aadiam/diagnosticsettings/delete",
     "microsoft.aadiam/azureADMetrics/providers/Microsoft.Insights/diagnosticSettings/write",
     "microsoft.aadiam/tenants/providers/Microsoft.Insights/diagnosticSettings/write"
-  \],
-  "NotActions": \[\],
-  "DataActions": \[\],
-  "NotDataActions": \[\],
-  "AssignableScopes": \[
-    <SUBSCRIPTION\_ID> or <MANAGEMENT\_GROUP\_ID> or <TENANT\_ID>
-  \]
+  ],
+  "NotActions": [],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    <SUBSCRIPTION_ID> or <MANAGEMENT_GROUP_ID> or <TENANT_ID>
+  ]
 }
-```
 
 Where `<SUBSCRIPTION_ID>`, `<MANAGEMENT_GROUP_ID>`, or `<TENANT_ID>` is replaced with the ID of the scope you are onboarding.
 
 #### Onboard Microsoft Azure with basic configuration
-Abstract
 
 Follow the basic configuration Microsoft Azure onboarding wizard to enable audit log collection and asset, and Cortex Cloud creates a custom authentication template.
 
@@ -36504,12 +35630,11 @@ Cortex Cloud generates an authentication template based on the settings you conf
 
 Use the following template to create a dedicated role with the permissions required for onboarding Microsoft Azure to Cortex Cloud.
 
-```
 {
   "Name": "CortexCloudOnboarding",
   "IsCustom": true,
   "Description": "Custom role with permissions for Cortex Cloud onboarding",
-  "Actions": \[
+  "Actions": [
     "Microsoft.Authorization/roleAssignments/read",
     "Microsoft.Authorization/roleAssignments/write",
     "Microsoft.Authorization/roleAssignments/delete",
@@ -36581,20 +35706,18 @@ Use the following template to create a dedicated role with the permissions requi
     "Microsoft.aadiam/diagnosticsettings/delete",
     "microsoft.aadiam/azureADMetrics/providers/Microsoft.Insights/diagnosticSettings/write",
     "microsoft.aadiam/tenants/providers/Microsoft.Insights/diagnosticSettings/write"
-  \],
-  "NotActions": \[\],
-  "DataActions": \[\],
-  "NotDataActions": \[\],
-  "AssignableScopes": \[
-    <SUBSCRIPTION\_ID> or <MANAGEMENT\_GROUP\_ID> or <TENANT\_ID>
-  \]
+  ],
+  "NotActions": [],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    <SUBSCRIPTION_ID> or <MANAGEMENT_GROUP_ID> or <TENANT_ID>
+  ]
 }
-```
 
 Where `<SUBSCRIPTION_ID>`, `<MANAGEMENT_GROUP_ID>`, or `<TENANT_ID>` is replaced with the ID of the scope you are onboarding.
 
 #### Finalize Microsoft Azure onboarding by executing the authentication template
-Abstract
 
 Learn how to execute the authentication template file in Microsoft Azure for subscriptions, tenants, and management groups. We provide instructions both for applying the Terraform template's configuration and for deploying the Microsoft Azure Resource Manager (ARM) template.
 
@@ -36647,7 +35770,7 @@ Before you begin, ensure you have:
     
     ```
     cd ~/terraform/azure-connector-1
-    tar -xzvf <your\_template>.tar.gz.
+    tar -xzvf <your_template>.tar.gz.
     ```
     
 4.  Initialize Terraform in your project directory:
@@ -36659,7 +35782,7 @@ Before you begin, ensure you have:
 5.  Apply your Terraform configuration using the downloaded parameter file:
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
     -   When the CLI prompts you for a Group ID, enter the management group ID or the root tenant ID where you want to create Cortex Cloud resources.
@@ -36761,7 +35884,6 @@ See also
 -   Introduction to Terraform for Cloud service provider (CSP) onboardingIntroduction to Terraform for Cloud service provider (CSP) onboarding
 
 #### Configure Azure integration instances and monitor integration instance health
-Abstract
 
 Enable automations from Data Sources & Integrations and monitor Azure integration instance health.
 
@@ -36779,7 +35901,7 @@ You can configure a new Azure integration instance or edit an existing Azure int
     
 2.  In the Azure integration row:
     
-    -   To configure a new Azure integration instance: Click [image: three-dots.png] and then click Add New Instance or click View Details and from the New Instance drop down select the Azure cloud service provider.
+    -   To configure a new Azure integration instance: Click ⋮ and then click Add New Instance or click View Details and from the New Instance drop down select the Azure cloud service provider.
         
     -   To edit an existing Azure integration instance: Click View Details and then click the configuration pencil icon.
         
@@ -36812,7 +35934,6 @@ Monitoring Azure integration instance health ensures continuous, reliable operat
         Currently, automation permission errors or missing automation permissions do not affect the Automation health status. You can view any permission errors or missing permissions in the the Permissions health status.
 
 ### Onboard Oracle Cloud Infrastructure
-Abstract
 
 Follow the OCI onboarding wizard, and Cortex Cloud creates a custom authentication template to be applied in OCI.
 
@@ -36891,7 +36012,6 @@ Cortex Cloud generates a Terraform authentication template based on the settings
 **Next step:** Apply the Terraform authentication template in OCI.
 
 #### Onboard Oracle Cloud Infrastructure with basic configuration
-Abstract
 
 Follow the basic configuration OCI onboarding wizard to enable audit log collection and asset, and Cortex Cloud creates a custom authentication template to be deployed in OCI.
 
@@ -36965,7 +36085,6 @@ Cortex Cloud generates a Terraform authentication template based on the settings
 **Next step:** Apply the Terraform authentication template in OCI.
 
 #### Manually upload template to OCI
-Abstract
 
 Learn how to manually deploy the Terraform template files in Oracle Cloud Infrastructure (OCI).
 
@@ -36996,7 +36115,7 @@ Before you begin, ensure you have:
     
     ```
     cd ~/terraform/oci-connector-1
-    tar -xzvf <your\_template>.tar.gz.
+    tar -xzvf <your_template>.tar.gz.
     ```
     
 4.  Initialize Terraform in your project directory:
@@ -37010,7 +36129,7 @@ Before you begin, ensure you have:
 5.  Apply your Terraform configuration using the downloaded parameter file. When prompted to enter a value, enter the tenancy OCID.
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
 6.  When prompted, review the actions the Terraform will perform, and approve them by entering **`yes`**.
@@ -37021,7 +36140,6 @@ Before you begin, ensure you have:
 When the template is successfully uploaded to OCI, the initial discovery scan starts. When the scan is complete, you can view your cloud assets in Asset Inventory. You can also view details about the instance by hovering over the instance on the Data Sources & Integrations page, and then clicking View Details.
 
 #### Configure the OCI connector for log collection
-Abstract
 
 Create an OCI service connector and define the log source within OCI and the connector's target as the OCI bucket you want to use for audit log collection.
 
@@ -37108,13 +36226,13 @@ Use the following table to guide you on which values in the output map to the ne
 
 | Connect Instance input field | Value |
 | --- | --- |
-| Organization ID | organization\_id.value |
-| Project ID | project\_id.value |
-| Folder ID | folder\_id.value |
-| Service Account Email | service\_account\_email.value |
-| Audit Logs Audit Pubsub Subscription ID | resources\_data.value.AUDIT\_LOGS.audit\_pubsub\_subscription\_id |
-| Audit Logs Service Account Email | resources\_data.value.AUDIT\_LOGS.audit\_service\_account\_email |
-| Outpost Scanner Service Account Email | resources\_data.value.OUTPOST\_SCANNER.outpost\_scanner\_service\_account\_email |
+| Organization ID | organization_id.value |
+| Project ID | project_id.value |
+| Folder ID | folder_id.value |
+| Service Account Email | service_account_email.value |
+| Audit Logs Audit Pubsub Subscription ID | resources_data.value.AUDIT_LOGS.audit_pubsub_subscription_id |
+| Audit Logs Service Account Email | resources_data.value.AUDIT_LOGS.audit_service_account_email |
+| Outpost Scanner Service Account Email | resources_data.value.OUTPOST_SCANNER.outpost_scanner_service_account_email |
 
 Azure with Terraform
 
@@ -37140,12 +36258,12 @@ Use the following table to guide you on which values in the output map to the ne
 | Resource Group Location (only for subscription scope) | Onboarded resource group location |
 | Resource Group Name | Automatically populated |
 | Audit Logs Audience | Automatically populated |
-| Audit Logs Storage Account Name | resources\_data.value.AUDIT\_LOGS.storage\_account\_name |
+| Audit Logs Storage Account Name | resources_data.value.AUDIT_LOGS.storage_account_name |
 | Audit Logs Tenant ID | Automatically populated |
-| Audit Logs Client ID | resources\_data.value.AUDIT\_LOGS.client\_id |
-| Audit Logs Namespace | resources\_data.value.AUDIT\_LOGS.namespace |
-| Audit Logs Eventhub Name | resources\_data.value.AUDIT\_LOGS.eventhub\_name |
-| Audit Logs Azure Audit Eventhub Consumer Group Name | resources\_data.value.AUDIT\_LOGS.azure\_audit\_eventhub\_consumer\_group\_name |
+| Audit Logs Client ID | resources_data.value.AUDIT_LOGS.client_id |
+| Audit Logs Namespace | resources_data.value.AUDIT_LOGS.namespace |
+| Audit Logs Eventhub Name | resources_data.value.AUDIT_LOGS.eventhub_name |
+| Audit Logs Azure Audit Eventhub Consumer Group Name | resources_data.value.AUDIT_LOGS.azure_audit_eventhub_consumer_group_name |
 
 Azure Portal
 
@@ -37206,7 +36324,7 @@ After you have downloaded the updated CloudFormation authentication template, co
     
 7.  Select to acknowledge that AWS CloudFormation might create IAM resources with custom names. Click Next.
     
-8.  Click Submit. The stack update is complete when it appears in the Stacks list with status of UPDATE\_COMPLETE.
+8.  Click Submit. The stack update is complete when it appears in the Stacks list with status of UPDATE_COMPLETE.
     
 
 Google Cloud Platform
@@ -37225,7 +36343,7 @@ After you have downloaded the updated Terraform template file, connect to Google
     
     ```
     cd ~/terraform/gcp-connector-1
-    tar -xzvf <your\_template>.tar.gz
+    tar -xzvf <your_template>.tar.gz
     ```
     
 4.  Initialize the upgrade of the Terraform in your project directory:
@@ -37237,7 +36355,7 @@ After you have downloaded the updated Terraform template file, connect to Google
 5.  Apply your Terraform configuration using the downloaded parameter file. When prompted, enter the project ID if you configured one in the onboarding wizard:
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
     The updated Terraform template is deployed.
@@ -37253,7 +36371,7 @@ After you have downloaded the updated authentication template file, lot in to Az
     
     ```
     cd ~/azure-connector-1
-    tar -xzvf <your\_template>.tar.gz.
+    tar -xzvf <your_template>.tar.gz.
     ```
     
 3.  In Cloud Shell, run the onboard.sh file:
@@ -37283,7 +36401,7 @@ After you have downloaded the updated authentication template file, use the same
     
     ```
     cd ~/terraform/azure-connector-1
-    tar -xzvf <your\_template>.tar.gz.
+    tar -xzvf <your_template>.tar.gz.
     ```
     
 4.  Initialize the upgrade of the Terraform in your project directory:
@@ -37295,7 +36413,7 @@ After you have downloaded the updated authentication template file, use the same
 5.  Apply your Terraform configuration using the downloaded parameter file. :
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
     The updated Terraform template is deployed.
@@ -37314,7 +36432,7 @@ After you have downloaded the updated authentication template file, use the same
 3.  Deploy the updated template file:
     
     ```
-    az deployment sub create  --location <LOCATION>  --subscription <SUBSCRIPTION\_ID> --template-file <JSON\_TEMPLATE> 
+    az deployment sub create  --location <LOCATION>  --subscription <SUBSCRIPTION_ID> --template-file <JSON_TEMPLATE> 
     ```
     
     where:
@@ -37329,7 +36447,6 @@ After you have downloaded the updated authentication template file, use the same
     The updated template is deployed.
 
 ### Outposts
-Abstract
 
 An outpost enables you to have security scans performed on infrastructure in a cloud account owned by you.
 
@@ -37350,7 +36467,6 @@ Outpost scan is an alternative to the recommended standard cloud scan. Cloud sca
 -   Create your outpost
 
 #### Outpost fundamentals and planning
-Abstract
 
 An outpost enables you to have security scans performed on infrastructure in a cloud account owned by you. Learn about outpost fundamentals and what to consider when planning your outpost.
 
@@ -37429,7 +36545,6 @@ For details, see Create an outpost.
 -   View and manage existing outposts by navigating to Settings → Data Sources & Integrations → Outposts
 
 #### Create an outpost
-Abstract
 
 Create an outpost for security scanning performed on infrastructure in a cloud account owned by you.
 
@@ -37557,7 +36672,7 @@ Before you begin, ensure you have:
     
     ```
     cd ~/terraform/aws-outpost-1
-    tar -xzvf <your\_template>.tar.gz
+    tar -xzvf <your_template>.tar.gz
     ```
     
 5.  Initialize Terraform in your project directory:
@@ -37569,7 +36684,7 @@ Before you begin, ensure you have:
 6.  Apply your Terraform configuration using the downloaded parameter file. When prompted, enter the subscription ID:
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
 7.  When prompted, review the actions Terraform will perform and approve them by entering **`yes`**.
@@ -37610,7 +36725,7 @@ Before you begin, ensure you have:
     
     ```
     cd ~/terraform/gcp-outpost-1
-    tar -xzvf <your\_template>.tar.gz
+    tar -xzvf <your_template>.tar.gz
     ```
     
 5.  Initialize Terraform in your project directory:
@@ -37622,7 +36737,7 @@ Before you begin, ensure you have:
 6.  Apply your Terraform configuration using the downloaded parameter file. When prompted, enter the project ID:
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
 7.  When prompted, review the actions Terraform will perform and approve them by entering **`yes`**.
@@ -37655,7 +36770,7 @@ Before you begin, ensure you have:
     az login
     ```
     
-3.  If prompted, select the subscription\_id of the designated subscription, or run:
+3.  If prompted, select the subscription_id of the designated subscription, or run:
     
     az account set --subscription `<subscription_id>`
     
@@ -37671,7 +36786,7 @@ Before you begin, ensure you have:
     
     ```
     cd ~/terraform/azure-outpost-1
-    tar -xzvf <your\_template>.tar.gz
+    tar -xzvf <your_template>.tar.gz
     ```
     
 6.  Initialize Terraform in your project directory:
@@ -37683,7 +36798,7 @@ Before you begin, ensure you have:
 7.  Apply your Terraform configuration using the downloaded parameter file. When prompted, enter the subscription ID:
     
     ```
-    terraform apply --var-file=template\_params.tfvars
+    terraform apply --var-file=template_params.tfvars
     ```
     
 8.  When prompted for `var.storaage_account_ip_whitelist`, you can leave it empty to enable access from any public IP to the storage accounts. We recommend you to limit access to selected IPs. To limit access, enter a comma-separated list of public IP addresses, including your local machine's egress IP (to enable the completion of the Terraform run). For example: `8.8.8.8, 8.8.4.4`
@@ -37718,7 +36833,6 @@ Troubleshooting
 If you have successfully executed the template in your cloud service provider and no new outpost has been created, verify that your internet connection is active. An active internet connection is necessary for the notification to be sent to Cortex Cloud to create the new outpost. If you are unable to establish an internet connection, contact customer support for a manual workaround.
 
 ### Introduction to Terraform for Cloud service provider (CSP) onboarding
-Abstract
 
 Introductory concepts for working with Terraform to facilitate cloud onboarding.
 
@@ -37946,7 +37060,7 @@ To configure registry scanning, do the following:
 
 1.  Under Additional Security Capabilities, select Registry Scanning, then click Edit Preferences.
     
-    [image: enable-container-registry-scanning.png]
+    
     
 2.  In Initial Scan Configuration, set your scanning process to focus on recently added or modified container images and exclude older ones that do not align with your current scanning objectives. This setting helps avoid unnecessary scans. Choose one of the following options:
     
@@ -38184,8 +37298,6 @@ Follow the wizard to connect your Docker Hub registry with Cortex Cloud.
     After the scan is complete, you can view the scanned images on the Container Images Inventory page. For more details, see Container Image assets.
     
     If you have selected the Scan with Broker VM option, then a Registry Scanner applet is created on the selected Broker VM or Cluster. For details, see Verify Registry Scanner connection.
-    
-    [image: registry-scanner-applet-on-boker-vm.png]
 
 ##### Manage a Docker Hub connector
 After you add a Docker Hub connector, you can modify the connector settings and configure the scanning scope to control which images are scanned in the connected registry.
@@ -38375,8 +37487,6 @@ Follow the wizard to use the Docker V2 connector in Cortex Cloud to scan and sec
     After the scan is complete, you can view the scanned images on the Container Images Inventory page. For more details, see Container Images assets.
     
     If you have selected the Scan with Broker VM option, then a Registry Scanner applet is created on the selected Broker VM or Cluster. For details, see Verify Registry Scanner connection.
-    
-    [image: registry-scanner-applet-on-boker-vm.png]
 
 ##### Manage a Docker V2 connector
 After you add a Docker V2 connector, you can modify the connector settings and configure the scanning scope to control which images are scanned in the connected registry.
@@ -38656,8 +37766,6 @@ Follow the wizard to connect the GitLab Container Registry connector in Cortex C
     -   After the scan is complete, you can view the list of scanned images on the Container Images Inventory page. For more details, see Container Image assets.
         
     -   If you have selected the Scan with Broker VM option, then a Registry Scanner applet is created on the selected Broker VM or Cluster. For details, see Verify Registry Scanner connection.
-        
-        [image: registry-scanner-applet-on-boker-vm.png]
 
 ##### Manage a Gitlab Container Registry connector
 After you add a Gitlab Container Registry connector, you can modify the connector settings and configure the scanning scope to control which images are scanned in the connected registry.
@@ -38873,8 +37981,6 @@ Follow the wizard to use the Harbor connector in Cortex Cloud to scan and secure
     After the scan is complete, you can view the scanned details on the Container Images Inventory page. For more details, see Container Images assets.
     
     If you have selected the Scan with Broker VM option, then a Registry Scanner applet is created on the selected Broker VM or Cluster. For details, see Verify Registry Scanner connection.
-    
-    [image: registry-scanner-applet-on-boker-vm.png]
 
 ##### Manage a Harbor connector
 After successfully adding a connector, you can modify the connector settings and configure the scanning scope to control which images are scanned in the connected registry.
@@ -39097,8 +38203,6 @@ Follow the wizard to connect your JFrog Container Registry with Cortex Cloud.
     -   After the scan is complete, you can view the list of scanned images on the Container Images Inventory page. For more details, see Container Image assets.
         
     -   If you have selected the Scan with Broker VM option, then a Registry Scanner applet is created on the selected Broker VM or Cluster. For details, see Verify Registry Scanner connection.
-        
-        [image: registry-scanner-applet-on-boker-vm.png]
 
 ##### Manage a JFrog connector
 After you add a JFrog connector, you can modify the connector settings and configure the scanning scope to control which images are scanned in the connected registry.
@@ -39320,8 +38424,6 @@ Follow the wizard to use the Sonatype Nexus registry connector in Cortex Cloud.
     -   After the scan is complete, you can view the list of scanned images on the Container Images Inventory page. For more details, see Container Images assets.
         
     -   If you have selected the Scan with Broker VM option, then a Registry Scanner applet is created on the selected Broker VM or Cluster. For details, see Verify Registry Scanner connection.
-        
-        [image: registry-scanner-applet-on-boker-vm.png]
 
 ##### Manage a Sonatype connector
 After you add a Sonatype connector, you can modify the connector settings and configure the scanning scope to control which images are scanned in the connected registry.
@@ -39346,7 +38448,6 @@ To manage the connector, follow these steps:
     | Disable | Stops image scanning for the connector without deleting it. |
 
 ### Cloud service provider permissions
-Abstract
 
 Grant the correct cloud service provider permissions for Cortex Cloud.
 
@@ -39363,7 +38464,6 @@ Review the permissions required for each cloud service provider:
 -   Oracle Cloud Infrastructure
 
 #### Amazon Web Services provider permissions
-Abstract
 
 List of Amazon Web Services provider permissions for Cortex Cloud.
 
@@ -39390,15 +38490,15 @@ Agentless Disk Scanning
 
 | Permission | Scope | Purpose |
 | --- | --- | --- |
-| ec2:CopyImage | Images created with managed\_by: `paloaltonetworks` tag | Create disk from Image |
-| ec2:CopySnapshot | Snapshots copied with managed\_by: `paloaltonetworks` tag | Re-encrypt snapshot with Palo Alto Network's KMS key |
-| ec2:CreateSnapshot | Snapshots created with managed\_by: `paloaltonetworks` tag | Create disk snapshot |
+| ec2:CopyImage | Images created with managed_by: `paloaltonetworks` tag | Create disk from Image |
+| ec2:CopySnapshot | Snapshots copied with managed_by: `paloaltonetworks` tag | Re-encrypt snapshot with Palo Alto Network's KMS key |
+| ec2:CreateSnapshot | Snapshots created with managed_by: `paloaltonetworks` tag | Create disk snapshot |
 | ec2:CreateTags | Only as part of CopyImage, CreateSnapshot and CopySnapshot operations | Add tags for permission scoping and cost visibility |
-| ec2:DeleteSnapshot | Snapshots with managed\_by: `paloaltonetworks` tag | Delete scanned snapshot |
-| ec2:DeregisterImage | Images with managed\_by: `paloaltonetworks` tag | Delete ephemeral re-encrypted image |
-| ec2:DescribeImages | Images with managed\_by: `paloaltonetworks` tag | Retrieve image creation status |
-| ec2:DescribeSnapshots | Snapshots with managed\_by: `paloaltonetworks` tag | Retrieve snapshot creation status |
-| ec2:ModifySnapshotAttribute | Snapshots with managed\_by: `paloaltonetworks` tag; The snapshots can be shared only with the outpost account | Share snapshot with the outpost account |
+| ec2:DeleteSnapshot | Snapshots with managed_by: `paloaltonetworks` tag | Delete scanned snapshot |
+| ec2:DeregisterImage | Images with managed_by: `paloaltonetworks` tag | Delete ephemeral re-encrypted image |
+| ec2:DescribeImages | Images with managed_by: `paloaltonetworks` tag | Retrieve image creation status |
+| ec2:DescribeSnapshots | Snapshots with managed_by: `paloaltonetworks` tag | Retrieve snapshot creation status |
+| ec2:ModifySnapshotAttribute | Snapshots with managed_by: `paloaltonetworks` tag; The snapshots can be shared only with the outpost account | Share snapshot with the outpost account |
 | kms:CreateGrant | Palo Alto Network's and customer KMS keys; Only EC2 services can use this permission | Create a new grant for a customer master key (CMK), such as to allow the re-encrypt operation |
 | kms:DescribeKey | Palo Alto Network's KMS key; Only EC2 services can use this permission | Retrieve detailed information about a customer master key (CMK), such as to allow and support a re-encrypt operation |
 | kms:GenerateDataKeyWithoutPlaintext | Palo Alto Network's KMS key; Only EC2 services can use this permission | Generate a data key for client-side encryption, such as to allow and support a re-encrypt operation |
@@ -39613,8 +38713,8 @@ Outposts
 | ec2:AssociateAddress | Resources with the request tag: `managed_by: paloaltonetworks` | Associate a static public IP address with a network interface for use with a proxy VM |
 | ec2:AttachVolume | Volumes in the specified AWS account with the `managed_by: paloaltonetworks` | Attach volume to scanner VM during deployment |
 | ec2:CreateNetworkInterface | Any region in the specified AWS account with the tag `managed_by: paloaltonetworks`; applies to network interfaces, subnets, and security groups. | Create a network interface for a scanner or proxy VM within managed subnets and security groups |
-| ec2:CreateTags | Resources with the request tag: managed\_by: `paloaltonetworks` tag | For adding tags to all resources |
-| ec2:CreateVolume | Volumes with the request tag: managed\_by: `paloaltonetworks` tag | Perform the create volume operation in EC2 |
+| ec2:CreateTags | Resources with the request tag: managed_by: `paloaltonetworks` tag | For adding tags to all resources |
+| ec2:CreateVolume | Volumes with the request tag: managed_by: `paloaltonetworks` tag | Perform the create volume operation in EC2 |
 | ec2:CreateVpcEndpoint | The VPC endpoint being created must: Have the request tag: `managed_by: paloaltonetworks`; Only reference Palo Alto Networks-managed network components (VPCs, security groups, subnets, and route tables, and so on, with the request tag: `managed_by: paloaltonetworks`); Connect to an approved VpceServiceName service as defined by policy | Create endpoints that are used by scanners to access managed services using private IP addresses |
 | ec2:DeleteNetworkInterface | Network interfaces with the request resource tag: `managed_by: paloaltonetworks` | Perform the delete network interface operation in EC2 |
 | ec2:DeleteVolume | Volumes in the specified account with the request tag: `managed_by: paloaltonetworks` | Perform the delete volume operation in EC2 |
@@ -39674,7 +38774,7 @@ Outposts
 | s3:PutBucketPolicy | S3 buckets that users own and whose name begins with the prefix: `${bucket_name}-` | Apply or update a resource-based access policy in an Amazon S3 bucket |
 | s3:PutObject | Users can Upload files to the specific `${cf_template_bucket}` without restriction.; Upload files to any S3 bucket users own that begins with the prefix: `${bucket_name}-` This upload permission applies broadly to the general contents of these prefixed buckets, including files placed specifically in the `input/`, `output/`, and `output/logs/` subfolders | Upload or replace an object in an Amazon S3 bucket |
 | sqs:DeleteMessage | Messages from any SQS queue that is already tagged with `managed_by: paloaltonetworks` and whose name begins with the prefix: `${queue_prefix}-` | For bucket communications |
-| sqs:GetQueueUrl | URL for any SQS queue that is already tagged with managed\_by: paloaltonetworks and whose name begins with the prefix: `${queue_prefix}-` | For bucket communications |
+| sqs:GetQueueUrl | URL for any SQS queue that is already tagged with managed_by: paloaltonetworks and whose name begins with the prefix: `${queue_prefix}-` | For bucket communications |
 | sqs:ListQueues | URL for any SQS queue that is already tagged with `managed_by: paloaltonetworks` and whose name begins with the prefix: `${queue_prefix}-` | For bucket communications |
 | sqs:ReceiveMessage | Messages from any SQS queue that is already tagged with `managed_by: paloaltonetworks` and whose name begins with the prefix: `${queue_prefix}-` | For bucket communications |
 | ssm:AddTagsToResource | SSM Parameter named cortex-outposts-..., but only if the tagging request itself includes the `managed_by:` `paloaltonetworks` tag | Perform the add tags to resource operation in SSM. |
@@ -39684,7 +38784,6 @@ Outposts
 | sts:AssumeRole | Resource belongs to a different AWS account than the current account | Provide temporary security credentials by assuming the specified IAM role through STS |
 
 #### Google Cloud Platform provider permissions
-Abstract
 
 List of Google Cloud Platform provider permissions for Cortex Cloud.
 
@@ -39943,7 +39042,6 @@ Outposts
 | cloudkms.keyRings.create | Create a new key ring to hold cryptographic keys, used for Bigtable encryption. Used from ST. |
 
 #### Microsoft Azure provider permissions
-Abstract
 
 List of Microsoft Azure provider permissions for Cortex Cloud.
 
@@ -40548,7 +39646,6 @@ Automations
 | Microsoft.Web/sites/write | Subscription | Set the HTTPS-only feature for the Azure App Service Web app to enforce redirection from HTTP to HTTPS. This helps remediate issues detected by the "Azure App Service Web app doesn't redirect HTTP to HTTPS" rule. Required for command: `azure-webapp-update` |
 
 #### Oracle Cloud Infrastructure provider permissions
-Abstract
 
 List of Oracle Cloud Infrastructure provider permissions for Cortex Cloud.
 
@@ -40561,7 +39658,7 @@ ADS
 | Admit group CortexOutpostGroup of tenancy CortexOutpost to associate keys in tenancy with volumes in tenancy CortexOutpost | ADS | Volumes in tenancy | Associate encryption keys with volumes during backup/restore |
 | Admit group CortexOutpostGroup of tenancy CortexOutpost to use tag-namespaces in tenancy | ADS | In tenancy | Enable tagging for permission scoping, resource tracking, and cost visibility |
 | Admit group CortexOutpostGroup of tenancy CortexOutpost to manage boot-volume-backups in tenancy where request.operation != 'DeleteBootVolumeBackup' | ADS | Excludes delete | Allow full management of boot volume backups except deletion |
-| Admit group CortexOutpostGroup of tenancy CortexOutpost to manage boot-volume-backups in tenancy where target.resource.tag.cortex\_m-o-lcaas\_id.panw\_capability = 'cortex-scan-platform' | ADS | Only boot-volume-backups tagged with panw\_capability = cortex-scan-platform | Restrict deletion to Cortex scan-related resources only |
+| Admit group CortexOutpostGroup of tenancy CortexOutpost to manage boot-volume-backups in tenancy where target.resource.tag.cortex_m-o-lcaas_id.panw_capability = 'cortex-scan-platform' | ADS | Only boot-volume-backups tagged with panw_capability = cortex-scan-platform | Restrict deletion to Cortex scan-related resources only |
 | Admit group CortexOutpostGroup of tenancy CortexOutpost to read all-resources in tenancy | ADS | In tenancy | Read-only access to all resources |
 
 Discovery Engine
@@ -40574,9 +39671,9 @@ Table 8. Dynamic Group Permissions
 
 | Permission | Scope | Purpose |
 | --- | --- | --- |
-| Allow dynamic-group registry-scan to manage buckets in tenancy | Tag-scoped (project\_id) | Manage Object Storage buckets for scan artifacts/results |
-| Allow dynamic-group registry-scan to manage objects in tenancy | Tag-scoped (project\_id) | Upload/download image layers, manifests, and reports |
-| Allow dynamic-group registry-scan to read secret-bundles in tenancy | Tag-scoped (project\_id) | Retrieve registry credentials from OCI Vault |
+| Allow dynamic-group registry-scan to manage buckets in tenancy | Tag-scoped (project_id) | Manage Object Storage buckets for scan artifacts/results |
+| Allow dynamic-group registry-scan to manage objects in tenancy | Tag-scoped (project_id) | Upload/download image layers, manifests, and reports |
+| Allow dynamic-group registry-scan to read secret-bundles in tenancy | Tag-scoped (project_id) | Retrieve registry credentials from OCI Vault |
 | Endorse dynamic-group registry-scan to read repos in any-tenancy | Cross-tenancy | Allow cross-tenancy image pulls for scans |
 
   
@@ -40585,19 +39682,18 @@ Table 9. Inherited Base Permissions for Registry scanning
 
 | Permission | Scope | Purpose |
 | --- | --- | --- |
-| Allow any-user to manage buckets in tenancy | Tag-scoped (project\_id) | Create/manage buckets for scan data |
-| Allow any-user to manage objects in tenancy | Tag-scoped (project\_id) | Read/write objects (artifacts, logs, results) |
-| Allow any-user to use keys in tenancy | Tag-scoped (project\_id) | Decrypt secrets for registry access |
-| Allow any-user to manage secret-versions in tenancy | Tag-scoped (project\_id) | Rotate credentials and manage secret versions |
-| Allow any-user to manage secrets in tenancy | Tag-scoped (project\_id) | Create/update secrets for scanners |
-| Allow any-user to manage secret-family in tenancy | Tag-scoped (project\_id) | Broader secret-management rights |
-| Allow any-user to manage vaults in tenancy | Tag-scoped (project\_id) | Create/administer Vaults for key and secret storage |
+| Allow any-user to manage buckets in tenancy | Tag-scoped (project_id) | Create/manage buckets for scan data |
+| Allow any-user to manage objects in tenancy | Tag-scoped (project_id) | Read/write objects (artifacts, logs, results) |
+| Allow any-user to use keys in tenancy | Tag-scoped (project_id) | Decrypt secrets for registry access |
+| Allow any-user to manage secret-versions in tenancy | Tag-scoped (project_id) | Rotate credentials and manage secret versions |
+| Allow any-user to manage secrets in tenancy | Tag-scoped (project_id) | Create/update secrets for scanners |
+| Allow any-user to manage secret-family in tenancy | Tag-scoped (project_id) | Broader secret-management rights |
+| Allow any-user to manage vaults in tenancy | Tag-scoped (project_id) | Create/administer Vaults for key and secret storage |
 | Allow any-user to inspect tag-family in tenancy | Global | Discover tag namespaces/definitions |
-| Allow any-user to use tag-family (namespace=cortex\_cloud, managed\_by=PANW) | Restricted | Restrict tag usage to Palo Alto-managed groups |
+| Allow any-user to use tag-family (namespace=cortex_cloud, managed_by=PANW) | Restricted | Restrict tag usage to Palo Alto-managed groups |
 | Endorse any-group to use tag-namespaces in any-tenancy | Cross-tenancy | Allow tag namespace usage across tenancies |
 
 ## Generic on-premise data collectors
-Abstract
 
 Learn more about collecting data from generic on-premise data sources in Cortex Cloud.
 
@@ -40608,14 +39704,12 @@ You can collect data from generic on-premise data collectors that are not necess
 -   **XDR Collectors**: Enables using the XDR Collectors (XDRC) configuration that is dedicated for on-premise data collection on Windows and Linux machines to gather and process logs and events from multiple sources.
 
 ### Broker VM data collector applets
-Abstract
 
 The Broker VM has a number of data collector applets that you can configure to ingest different types of data. These data collector applets are in addition to the others that are available in the Settings → Configurations → Data Collection → Collection Integrations page with a Data Collection add-on.
 
 Some data collector applets require the Data Collection add-on.
 
 #### Activate DSPM Fileshare
-Abstract
 
 Learn more about activating a Broker VM with the DSPM Fileshare applet.
 
@@ -40750,7 +39844,7 @@ After the registry scanner is initialized, perform the following steps to verify
     
 4.  Select the Registry Scanner app to open a window displaying the following information:
     
-    [image: registry-scanner-applet-on-boker-vm-window-panel.png]
+    
     
     -   Connection: Shows the app's current connection status. You can also Deactivate the app.
         
@@ -40781,7 +39875,6 @@ After the registry scanner is initialized, perform the following steps to verify
     -   Manage a Sonatype connector
 
 #### Activate Transporter
-Abstract
 
 Activate a Broker VM with a Transporter applet.
 
@@ -40852,7 +39945,6 @@ To manage Transporter applet configurations, disable connections, or deactivate 
     All existing connections are deleted but their configurations are saved in the database. When adding a new connection, you'll be prompted if you want to reuse previous configurations.
 
 ## Cloud Posture and Runtime Security data sources
-Abstract
 
 Learn more about the Cloud Posture and Runtime Security data sources in Cortex Cloud.
 
@@ -40871,7 +39963,6 @@ Relevant Cloud Posture and Runtime data source types:
 -   **Cloud data security (DSPM)**: Discovers and classifies sensitive data across managed storage, such as S3 and Cloud SQL, and self-managed databases.
 
 ### How to onboard Databricks
-Abstract
 
 How to get started with the third-party Databricks data source.
 
@@ -40988,7 +40079,6 @@ At the end of the onboarding process, a pending request for Databricks approval 
 For more information, see Egress configurations.Egress configurations
 
 ### How to onboard on-premise file shares to Cortex Cloud Data Security
-Abstract
 
 Set up Data Security for on-premise file shares using Broker VM.
 
@@ -41020,7 +40110,6 @@ Once configured, this applet continuously:
 For information about activating the DSPM Fileshare applet, see Activate DSPM Fileshare.
 
 #### Activate DSPM Fileshare
-Abstract
 
 Learn more about activating a Broker VM with the DSPM Fileshare applet.
 
@@ -41105,7 +40194,6 @@ Inventory list
 Each new connection that is created correlates to an asset in the inventory. You can see the connections by clicking Inventory → All Assets → Data → Storage Buckets.
 
 ### How to onboard Microsoft 365
-Abstract
 
 How to get started with the Microsoft 365 data source.
 
@@ -41150,7 +40238,6 @@ You can add Microsoft 365 as a third-party data source in Cortex Cloud Data Secu
 The Microsoft 365 integration instance should now appear in the list of data sources on the Data Sources & Integrations page.
 
 ### Ingest logs and data from Okta
-Abstract
 
 Learn more about Ingesting logs and data from Okta for use in Cortex Cloud.
 
@@ -41307,7 +40394,7 @@ After the registry scanner is initialized, perform the following steps to verify
     
 4.  Select the Registry Scanner app to open a window displaying the following information:
     
-    [image: registry-scanner-applet-on-boker-vm-window-panel.png]
+    
     
     -   Connection: Shows the app's current connection status. You can also Deactivate the app.
         
@@ -41338,7 +40425,6 @@ After the registry scanner is initialized, perform the following steps to verify
     -   Manage a Sonatype connector
 
 ### How to onboard Snowflake
-Abstract
 
 How to get started with the third-party Snowflake data source.
 
@@ -41373,7 +40459,7 @@ You can add Snowflake as a third-party data source in Cortex Cloud Data Security
         
         The account identifier can be found using the user information at the bottom left. Hover over the account you wish to onboard and select the copy option at the top right. The account identifier is usually of the format: 
         
-        (organization).\[account\]
+        (organization).[account]
         
     3.  (Optional) If you have a Snowflake account that is protected by a network policy, turn on the My Snowflake account is protected by network policies toggle button. The network policies are related to the IP allow list.
         
@@ -41426,7 +40512,6 @@ You can add Snowflake as a third-party data source in Cortex Cloud Data Security
     The Snowflake instance is now removed, including all previous scans.
 
 ### Activate Transporter
-Abstract
 
 Activate a Broker VM with a Transporter applet.
 
@@ -41497,7 +40582,6 @@ To manage Transporter applet configurations, disable connections, or deactivate 
     All existing connections are deleted but their configurations are saved in the database. When adding a new connection, you'll be prompted if you want to reuse previous configurations.
 
 ## Administration and troubleshooting
-Abstract
 
 Learn more about the administration and troubleshooting of the different data collector integrations in Cortex Cloud.
 
@@ -41523,7 +40607,6 @@ You can manage the instances configured for a data source on the Data Sources & 
         If you delete all the instances for a Data Source, the Data Source is not listed on the Data Sources & Integrations page.
 
 #### Add a new data source or instance
-Abstract
 
 Use the Data Source Onboarder to add a new data source or instance in Cortex Cloud.
 
@@ -41598,7 +40681,6 @@ You can add a new data source with the Data Source Onboarder. The Onboarder inst
 10.  Click Finish to return to the Data Sources & Integrations page.
 
 #### How to configure the scanning settings for supported services
-Abstract
 
 How to edit a cloud instance, including data asset types.
 
@@ -41628,7 +40710,6 @@ How to edit a cloud instance, including data asset types.
     For more information about supported assets in Cortex Cloud Data Security, see Supported assets in Cortex Cloud Data Security.
 
 #### Manage cloud instances
-Abstract
 
 You can manage the cloud instances configured for a CSP on the Data Sources & Integrations page. You can check the status, edit, delete, enable, or disable instances, and initiate discovery scan.
 
@@ -41672,7 +40753,6 @@ Monitoring cloud integration instance health ensures continuous, reliable operat
         Currently, automation permission errors or missing automation permissions do not affect the Automation health status. You can view any permission errors or missing permissions in the the Permissions health status.
 
 #### Update cloud permissions after Cortex release updates
-Abstract
 
 Manage permission updates for your cloud instances following new feature releases or bug fixes.
 
@@ -41738,7 +40818,6 @@ There are some actions that can be performed specifically on cloud instances wit
 | Delete | To delete a pending instance, right-click the pending instance and select Delete. |
 
 #### Troubleshoot errors on cloud instances
-Abstract
 
 You can troubleshoot errors on cloud instances by drilling down on an instance from the Data Sources & Integrations page.
 
@@ -41822,13 +40901,13 @@ Example 152. Examples of Outpost queries
 -   Identify Outpost errors on all Outpost accounts in the eu-west-3 region:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Outpost" and classification = "Error" and region = "eu-west-3"
+    dataset = cloud_health_auditing | filter capability = "Outpost" and classification = "Error" and region = "eu-west-3"
     ```
     
--   See all entries (error, warning, and recovery) for Outpost\_1 on cloud account Account\_A:
+-   See all entries (error, warning, and recovery) for Outpost_1 on cloud account Account_A:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Outpost" and resource\_id = “Outpost\_1” and account = "Account\_A"
+    dataset = cloud_health_auditing | filter capability = "Outpost" and resource_id = “Outpost_1” and account = "Account_A"
     ```
     
 
@@ -41881,16 +40960,16 @@ The following table describes the fields for Discovery engine entries:
 
 Example 153. Examples of Discovery engine queries
 
--   Identify API exec errors on the Discovery engine for all accounts on the AWS\_1 connector:
+-   Identify API exec errors on the Discovery engine for all accounts on the AWS_1 connector:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Discovery" and connector = "AWS\_1" and classification = “Error”
+    dataset = cloud_health_auditing | filter capability = "Discovery" and connector = "AWS_1" and classification = “Error”
     ```
     
--   See all Discovery engine activity on connector AWS\_1 for Account\_ A in the af-south-1 region:
+-   See all Discovery engine activity on connector AWS_1 for Account_ A in the af-south-1 region:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Discovery" and connector = "AWS\_1" and account = "accountA" and region = "af-south-1"
+    dataset = cloud_health_auditing | filter capability = "Discovery" and connector = "AWS_1" and account = "accountA" and region = "af-south-1"
     ```
     
 
@@ -41928,13 +41007,13 @@ Example 154. Examples of ADS queries
 -   Identify failed ADS scans on connector "a8df43e848dd42778ae7efd5a706a0fc" for EC2 assets at the asset scope level, filtered by region (northamerica-northeast2-a):
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "ADS" and classification = "failed" and connector = “a8df43e848dd42778ae7efd5a706a0fc” and type = "EC2\_INSTANCE" and scope = "Asset" and region = "northamerica-northeast2-a" 
+    dataset = cloud_health_auditing | filter capability = "ADS" and classification = "failed" and connector = “a8df43e848dd42778ae7efd5a706a0fc” and type = "EC2_INSTANCE" and scope = "Asset" and region = "northamerica-northeast2-a" 
     ```
     
--   See all ADS scans (failed and successful) on connector "a8df43e848dd42778ae7efd5a706a0fc" for EC2 assets belonging to Account\_A:
+-   See all ADS scans (failed and successful) on connector "a8df43e848dd42778ae7efd5a706a0fc" for EC2 assets belonging to Account_A:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "ADS" and connector = “a8df43e848dd42778ae7efd5a706a0fc” and type = "EC2" and account = “Account\_A”
+    dataset = cloud_health_auditing | filter capability = "ADS" and connector = “a8df43e848dd42778ae7efd5a706a0fc” and type = "EC2" and account = “Account_A”
     ```
     
 
@@ -41967,16 +41046,16 @@ The following table describes the fields for DSPM entries:
 
 Example 155. Examples of DSPM queries
 
--   Identify failed DSPM scans on the AWS\_1 connector for S3 asset types, filtered by region (ap-east-1):
+-   Identify failed DSPM scans on the AWS_1 connector for S3 asset types, filtered by region (ap-east-1):
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "DSPM" and classification = “Error” and connector = “AWS\_1” and type = "S3\_BUCKET" and region = "ap-east-1"
+    dataset = cloud_health_auditing | filter capability = "DSPM" and classification = “Error” and connector = “AWS_1” and type = "S3_BUCKET" and region = "ap-east-1"
     ```
     
--   See all DSPM scans (failed and successful) on the AWS\_1 connector, for all scanned assets on Account\_A:
+-   See all DSPM scans (failed and successful) on the AWS_1 connector, for all scanned assets on Account_A:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "DSPM" and account = "Account\_A" and connector = “AWS\_1”
+    dataset = cloud_health_auditing | filter capability = "DSPM" and account = "Account_A" and connector = “AWS_1”
     ```
     
 
@@ -42005,16 +41084,16 @@ The following table describes the fields for Registry scanning entries:
 
 Example 156. Examples of Registry scanning queries
 
--   Identify failed scans on connector GCP\_1:
+-   Identify failed scans on connector GCP_1:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Registry" and classification = “error” and connector = “GCP\_1”
+    dataset = cloud_health_auditing | filter capability = "Registry" and classification = “error” and connector = “GCP_1”
     ```
     
--   Review all registry scans (failed and successful) on connector GCP\_1 for asset Asset\_A:
+-   Review all registry scans (failed and successful) on connector GCP_1 for asset Asset_A:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Registry" and connector = “GCP\_1” and ressource\_id = "Asset\_A"
+    dataset = cloud_health_auditing | filter capability = "Registry" and connector = “GCP_1” and ressource_id = "Asset_A"
     ```
     
 
@@ -42036,11 +41115,9 @@ The following table describes the fields for Audit logs entries:
 
 Example 157. Audit logs query example
 
-Identify disruptions (errors) in audit log collection on connector AWS\_1:
+Identify disruptions (errors) in audit log collection on connector AWS_1:
 
-```
-dataset = collection\_auditing | filter instance = “AWS\_1” and log\_type = "Audit Logs" and classification = “Error”
-```
+dataset = collection_auditing | filter instance = “AWS_1” and log_type = "Audit Logs" and classification = “Error”
 
   
 
@@ -42050,13 +41127,11 @@ The following examples show how to set up correlation rules to trigger Health Co
 
 Example rule for DSPM errors
 
-In this example, a correlation rule will trigger a Health Collection issue if a DSPM scan fails on an AWS\_S3 asset on the AWS\_1 connector.
+In this example, a correlation rule will trigger a Health Collection issue if a DSPM scan fails on an AWS_S3 asset on the AWS_1 connector.
 
 Example XQL:
 
-```
-dataset = cloud\_health\_auditing | filter capability = "DSPM" and classification = “Error” and type = "AWS\_S3" and scope = "Asset" and connector = “AWS\_1”
-```
+dataset = cloud_health_auditing | filter capability = "DSPM" and classification = “Error” and type = "AWS_S3" and scope = "Asset" and connector = “AWS_1”
 
 Additional fields to specify in the correlation rule:
 
@@ -42072,13 +41147,11 @@ Additional fields to specify in the correlation rule:
 
 Example rule for Outpost errors
 
-In this example, a correlation rule will trigger a Health Collection issue if an error is recorded on account Outpost\_A in the us-east-1 region.
+In this example, a correlation rule will trigger a Health Collection issue if an error is recorded on account Outpost_A in the us-east-1 region.
 
 Example XQL:
 
-```
-dataset = cloud\_health\_auditing | filter capability = "Outpost" and account = "Outpost\_A" and region = "eu-west-3" and classification = "Error"
-```
+dataset = cloud_health_auditing | filter capability = "Outpost" and account = "Outpost_A" and region = "eu-west-3" and classification = "Error"
 
 Additional fields to specify in the correlation rule:
 
@@ -42093,7 +41166,6 @@ Additional fields to specify in the correlation rule:
 | Category | Collection |
 
 #### Manage Kubernetes Connector instances
-Abstract
 
 You can manage the Kubernetes Connector instances on the Data Sources & Integrations page. You can check the status, edit, or delete Kubernetes Connector instances.
 
@@ -42124,7 +41196,6 @@ Navigate to Settings → Data Sources & Integrations and find the Kubernetes ins
 After uninstalling the Kubernetes connector, the connector status updates to Not connected 48 hours after the uninstall process is initiated.
 
 ### Integrations
-Abstract
 
 Set up an integration instance and start ingesting cases/indicators.
 
@@ -42178,10 +41249,10 @@ From the Data Sources & Integrations page, you can perform actions on an integra
 | Action | Description |
 | --- | --- |
 | Add an instance | Configure an integration instance to connect and communicate with other products. For more information, see Add an integration instance. After configuring the instance, you can also enable/disable the integration instance, copy the instance, and view the integration fetch history. |
-| View the integration's source | View the integration settings and source code. To access this functionality, select an integration from the table and click [image: three-dots-dark.png]. |
+| View the integration's source | View the integration settings and source code. To access this functionality, select an integration from the table and click ⋮. |
 | Edit the integration's source code | Edit the integration settings and source code. For more information about editing the integration's source code, see [Create an Integration](https://xsoar.pan.dev/docs/tutorials/tut-integration-ui). \*\*Note:\*\* If the integration was installed from a content pack, you need to duplicate the integration before editing. |
-| Duplicate the integration | If you want to change the source code, and settings, or download the integration, you need to duplicate the integration. To access this functionality, select an integration from the table and click [image: three-dots-dark.png]. |
-| Show integration commands | Show the commands the integration contains. To access this functionality, select an integration from the table and click [image: three-dots-dark.png]. |
+| Duplicate the integration | If you want to change the source code, and settings, or download the integration, you need to duplicate the integration. To access this functionality, select an integration from the table and click ⋮. |
+| Show integration commands | Show the commands the integration contains. To access this functionality, select an integration from the table and click ⋮. |
 | Delete an integration instance | Although you cannot delete an integration installed from a content pack (unless a duplicate), you can delete an integration instance by either right-clicking an instance and either selecting Delete or by right-clicking an instance and selecting Settings and then deleting from the settings configuration pane. |
 | Set an integration instance to run always whenever the integration is called or on demand | For each integration instance, you have the option of setting the instance to be used only On Demand, when it is specified with the `using` argument in a playbook or the CLI. By default, the settings is Always and the integration instance is used whenever the integration is called. |
 
@@ -42206,7 +41277,6 @@ When running the command, the results are returned in the War Room or Playground
 In the Playground, you can clear the context data, if needed, which deletes everything in the Playground context data, but does not affect the actual issue or case. To clear the context, run `!DeleteContext all=yes'` from the CLI or click Clear Context Data while viewing the context data.
 
 #### Add an integration instance
-Abstract
 
 Configure an integration instance to use integration commands in playbooks, the case and issue War Rooms, and the Playground.
 
@@ -42238,7 +41308,6 @@ Before you begin:
 6.  By default, the integration instance is used whenever the integration is called. If you want to only use the integration instance when specified with the `using` argument in a playbook or the CLI, change the integration instance setting from Always to On Demand. For example, you might have two instances of an integration and want to use one instance as the default and the other instance only for manual testing on demand.
 
 #### Configure integration permissions
-Abstract
 
 Integration permissions enable you to restrict running commands to specific roles in integrations.
 
@@ -42290,7 +41359,6 @@ To view or edit integration permissions:
 4.  Save the integration permissions.
 
 #### Troubleshoot Integrations
-Abstract
 
 Learn how to troubleshoot your integration in Cortex Cloud.
 
@@ -42304,7 +41372,7 @@ The Troubleshooting Instances dashboard provides you with insight into command e
     
     In the following example, you receive a 401 unauthorized error code after testing the integration.
     
-    [image: integration-error.png]
+    
     
     Click Run Test & Download Debug Log, to download the debug file locally. You can verify what server the URL request is being forwarded to and any other reasons as to why you received this error code. The 401 unauthorized error code usually relates to invalid error credentials, expired tokens, or incorrect API settings.
     
@@ -42314,7 +41382,6 @@ The Troubleshooting Instances dashboard provides you with insight into command e
 If you are unable to fix the integration, contact Customer Support for further assistance.
 
 ### Verify collector connectivity
-Abstract
 
 Verify collector connectivity and troubleshoot collector errors.
 
@@ -42338,13 +41405,10 @@ Example 158. 
 
 This example searches for status changes on Strata IOT integrations:
 
-```
-dataset = collection\_auditing 
-|filter collector\_type = "STRATA\_IOT"
-```
+dataset = collection_auditing 
+|filter collector_type = "STRATA_IOT"
 
 ### About health issues
-Abstract
 
 Cortex Cloud provides health issues to help you monitor the health and integrity of supported Cortex Cloud resources. Health issues comprise ingestion, collection, correlation, and event forwarding errors.
 
@@ -42383,9 +41447,7 @@ Cortex Cloud enforces the dedup logic to health issues. This logic reduces the l
 
 Health issues are associated with the Health domain. To query health issue data, use the following XQL:
 
-```
-dataset = alerts | filter alert\_domain = "DOMAIN\_HEALTH"
-```
+dataset = alerts | filter alert_domain = "DOMAIN_HEALTH"
 
 #### Health issue field descriptions
 
@@ -42424,7 +41486,6 @@ The following table describes the health issue fields.
 | XDR Collector Name | Host name of the XDR Collector. |
 
 #### Investigate and resolve health issues
-Abstract
 
 You can investigate and take action on health issues from the Health Issues page and the Issues Table.
 
@@ -42480,7 +41541,6 @@ Automation issues identify potential misconfigurations in automations, enabling 
 3.  Based on the details of the automation health issue, review any related automations, such as playbooks and integrations, for possible misconfigurations.
 
 #### Monitor data ingestion health
-Abstract
 
 Learn more about data ingestion health monitoring.
 
@@ -42501,7 +41561,6 @@ In addition, Cortex Cloud has a built-in data ingestion monitoring and issues me
 -   About health issues
 
 # Marketplace
-Abstract
 
 Use the Marketplace, a centralized content portal, to manage content packs in Cortex Cloud.
 
@@ -42510,7 +41569,6 @@ Marketplace is a centralized content portal enabling you to manage downloaded co
 You can view Marketplace content packs from within Cortex Cloud.
 
 ## Cortex Marketplace
-Abstract
 
 Search the Cortex Marketplace and find content. Search by use cases, integrations, and categories.
 
@@ -42560,7 +41618,6 @@ When clicking a content pack you can view detailed information including content
 You can view Marketplace content packs from within Cortex Cloud (go to Settings → Configurations → Marketplace) or at [Cortex Developer Docs Marketplace](https://cortex.marketplace.pan.dev/marketplace/).
 
 ## Content Pack Support Types
-Abstract
 
 Types of content packs support - Cortex supported, Partner-Supported, Developer-Supported, Community-Supported.
 
@@ -42595,7 +41652,6 @@ Applies to content packs published by Palo Alto Networks or third-party develope
 Palo Alto Networks ensures that these content packs are updated to use the latest and most secure Docker images through an automated process. However, functionality may not be fully tested. We recommend fully testing and reviewing Community content packs before updating production systems.
 
 ## Cortex Cloud content
-Abstract
 
 The type of content in Cortex Cloud
 
@@ -42615,7 +41671,6 @@ In Cortex Cloud, content includes the following:
 | Scripts | Perform specific actions and are comprised of commands, which are used in playbook tasks and when running commands in the issue War Room. |
 
 ## Manage content packs
-Abstract
 
 Install, delete, update, and revert content packs.
 
@@ -42734,7 +41789,6 @@ If another content pack is dependent on the content pack you want to delete, it 
 4.  Review the warning message and click Delete.
 
 ## Marketplace FAQs
-Abstract
 
 Frequently Asked Questions about Cortex Cloud Marketplace Content
 
@@ -42764,7 +41818,6 @@ After Marketplace content is installed you can detach or duplicate the content a
 You can view all versions of a content pack in Marketplace and revert to earlier versions there. When you revert a content pack, only the content pack is reverted, not the pack dependencies.
 
 ## Content changes when upgrading Cortex Cloud versions
-Abstract
 
 Content updates when upgrading Cortex Cloud versions.
 
@@ -42809,7 +41862,6 @@ Cortex Cloud will be upgraded automatically approximately every 3 months. Durin
 -   WildFire by Palo Alto Networks
 
 # Cortex CLI
-Abstract
 
 The Cortex CLI provides a unified command interface to efficiently scan your Cloud Workload Protection (CWP), API Security and Cortex Cloud Application Security environments with a single installation, enabling you to seamlessly integrate security checks into your development process.
 
@@ -42897,20 +41949,20 @@ Connect Cortex CLI to scan supported Cortex Cloud modules and gain insights into
     
 -   **Permissions**:
     
-    -   **With upload results**: Requires a role with `CLI View/Edit` permissions.
+    -   **With upload results**: Requires a role with `CLI View/Edit` (write) permissions.
         
-    -   **Local scan only**: Requires a role with `CLI Read Only` permissions
+    -   **Local scan only**: Requires a role with `CLI Read Only` (read-only) permissions
         
     
     For more information refer to Cortex CLI.
     
--   **Roles**: Ensure the key is associated with a `CLI` or `CLI Read Only` role
+-   **Roles**: There are no out-of-the-box CLI roles. The CLI authenticates via an API key. Ensure the API key associated with your role includes the required permissions
     
 -   **API Security level**: The API key must be set to the `Standard` security level. CLI scans will fail if the security level is set to `Advanced`
     
 -   **Best practice** (required for SCA vulnerability suppression):
     
-    -   Run the CLI within your current working directory (<current\_directory\_path>). It is recommended to use the absolute file path for your current working directory
+    -   Run the CLI within your current working directory (<current_directory_path>). It is recommended to use the absolute file path for your current working directory
         
     -   Ensure that the `--repo-id` parameter includes the `<repo_owner_name>/<repo_name>` structure, with the `<repo_name>` matching the exact name of the directory
         
@@ -43003,11 +42055,11 @@ You can authenticate the Cortex CLI using one of two methods: command-line flags
 
 -   **Using command-line flags**: Provide your API credentials and base URL directly in the command using the following flags
     
-    -   `--api-base-url`: \[$CORTEX\_API\_BASE\_URL\]
+    -   `--api-base-url`: [$CORTEX_API_BASE_URL]
         
-    -   `--api-key`: \[$CORTEX\_API\_KEY\]
+    -   `--api-key`: [$CORTEX_API_KEY]
         
-    -   `--api-key-id` \[$CORTEX\_KEY\_ID\]
+    -   `--api-key-id` [$CORTEX_KEY_ID]
         
     
     For more information about these flags, refer to Cortex CLI common command line reference guide.
@@ -43111,24 +42163,22 @@ Using the Primary Key, developers can now make calls to the Public API to genera
 
 The following `curl` command demonstrates how developers can use the Primary Key to generate a new API key assigned with the `CLI Read-Only Custom` role:
 
-```
 curl --request POST \\
-  --url https://api-viso-k2ibu8behynsxbzuncdau6.xdr-qa2-uat.us.paloaltonetworks.com/public\_api/v1/api\_keys/generate \\
+  --url https://api-viso-k2ibu8behynsxbzuncdau6.xdr-qa2-uat.us.paloaltonetworks.com/public_api/v1/api_keys/generate \\
   --header 'Accept: application/json' \\
   --header 'Content-Type: application/json' \\
-  --header 'authorization: <YOUR\_PRIMARY\_KEY\_HERE>' \\
-  --header 'x-xdr-auth-id: <YOUR\_AUTH\_ID>' \\
+  --header 'authorization: <YOUR_PRIMARY_KEY_HERE>' \\
+  --header 'x-xdr-auth-id: <YOUR_AUTH_ID>' \\
   --data '{
-  "request\_data": {
-    "roles": \[
+  "request_data": {
+    "roles": [
       "CLI Read-Only Custom"
-    \],
-    "security\_level": "standard",
+    ],
+    "security_level": "standard",
     "comment": "Developer CLI Read-Only scan key",
     "expiration": 1773147108
   }
 }'
-```
 
 For more information about generating API Keys, refer to Manage API keys.
 
@@ -43143,12 +42193,12 @@ The following table describes CLI commands common to all supported Cortex CLI mo
 
 | Command | Description |
 | --- | --- |
-| \--api-base-url | The public facing API URL. To retrieve the URL, under Settings, select Configurations → API Keys → copy API URL. Required: true. \[$CORTEX\_API\_BASE\_URL\] |
-| \--api-key | The API key used for authorization. Required: true. \[$CORTEX\_API\_KEY\] |
-| \--api-key-id | The API key ID. Required: true. \[$CORTEX\_API\_KEY\_ID\] |
-| \--soft-fail | Identifies and reports errors identified during a scan but does not trigger a failing condition. Instead, the scan returns a successful result with an exit code of `0`. Unlike skipped or suppressed checks, soft fail errors are still reported but do not cause the scan to fail. Required: false. \[$CORTEX\_SOFT\_FAIL\] \*\*Note:\*\* For soft fails, a failed check matches the defined severity threshold. If multiple soft fail severities are specified, the highest severity acts as the threshold for determining a soft fail. However, a successful scan will always return an exit code of `0`, even if block-level findings (which might trigger soft fails based on severity) are present. |
+| \--api-base-url | The public facing API URL. To retrieve the URL, under Settings, select Configurations → API Keys → copy API URL. Required: true. [$CORTEX_API_BASE_URL] |
+| \--api-key | The API key used for authorization. Required: true. [$CORTEX_API_KEY] |
+| \--api-key-id | The API key ID. Required: true. [$CORTEX_API_KEY_ID] |
+| \--soft-fail | Identifies and reports errors identified during a scan but does not trigger a failing condition. Instead, the scan returns a successful result with an exit code of `0`. Unlike skipped or suppressed checks, soft fail errors are still reported but do not cause the scan to fail. Required: false. [$CORTEX_SOFT_FAIL] \*\*Note:\*\* For soft fails, a failed check matches the defined severity threshold. If multiple soft fail severities are specified, the highest severity acts as the threshold for determining a soft fail. However, a successful scan will always return an exit code of `0`, even if block-level findings (which might trigger soft fails based on severity) are present. |
 | \--log-level | Set the logging level (INFO, WARNING, ERROR) for Stdout output |
-| \--http-proxy | The HTTP proxy server URL to route traffic through \[$HTTP\_PROXY\] |
+| \--http-proxy | The HTTP proxy server URL to route traffic through [$HTTP_PROXY] |
 | \--help | Show help options |
 | \--version | Retrieves the version of the Cortex CLI currently in use |
 
@@ -43174,7 +42224,6 @@ The authentication file schema defines the authentication method (such as JWT, B
 
 Example 160. Authentication File Schema Example
 
-```
 type: headers
 creds:
     name: <header name>
@@ -43196,8 +42245,7 @@ For Bearer tokens
 type: headers
 creds:
     name: Authorization
-    value: Bearer {BEARER\_TOKEN} 
-```
+    value: Bearer {BEARER_TOKEN} 
 
   
 
@@ -43205,10 +42253,8 @@ creds:
 
 To scan API Security, run:
 
-```
         ./cortexcli  --log-level <ERROR LEVEL> –-api-base-url <API URL> --api-key <API key from the "Authenticate" step in the CLI connector screen> --auth-id 1 api scan  --api-spec-file <OPENAPI SPEC LOCATION>   --scanned-app-url <BASE URL OF THE SCANNED APP> --java-location <JAVA BIN LOCATION>
         
-```
 
 ### Output
 
@@ -43225,10 +42271,9 @@ The following schema defines the structure and format of API Security scan repor
 
 Read more...
 
-```
 {
   "reportID": "string",
-  "results": \[
+  "results": [
     {
       "id": "string",
       "name": "string",
@@ -43242,8 +42287,8 @@ Read more...
       "requestBody": "string",
       "curlCommand": "string"
     }
-  \],
-  "serverErrors": \[
+  ],
+  "serverErrors": [
     {
       "id": "string",
       "name": "string",
@@ -43257,7 +42302,7 @@ Read more...
       "requestBody": "string",
       "curlCommand": "string"
     }
-  \],
+  ],
   "scanStartTime": "string (ISO 8601 datetime)",
   "elapsedSeconds": "number",
   "hostname": "string",
@@ -43271,16 +42316,14 @@ Read more...
 }
           
       
-```
 
 The following is an example of API Security scan output.
 
 Read more...
 
-```
 {
   "reportID": "0a739ae6-d18e-11ef-8a06-263731778ec0",
-  "results": \[
+  "results": [
     {
       "id": "0",
       "name": "Server Leaks Version Information via \\"Server\\" HTTP Response Header Field",
@@ -43291,16 +42334,16 @@ Read more...
       "alert": "Server Leaks Version Information via \\"Server\\" HTTP Response Header Field",
       "tags": {
         "CWE-200": "https://cwe.mitre.org/data/definitions/200.html",
-        "OWASP\_2017\_A06": "https://owasp.org/www-project-top-ten/2017/A6\_2017-Security\_Misconfiguration.html",
-        "OWASP\_2021\_A05": "https://owasp.org/Top10/A05\_2021-Security\_Misconfiguration/",
-        "WSTG-v42-INFO-02": "https://owasp.org/www-project-web-security-testing-guide/v42/4-Web\_Application\_Security\_Testing/01-Information\_Gathering/02-Fingerprint\_Web\_Server"
+        "OWASP_2017_A06": "https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html",
+        "OWASP_2021_A05": "https://owasp.org/Top10/A05_2021-Security_Misconfiguration/",
+        "WSTG-v42-INFO-02": "https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server"
       },
       "statusCode": 404,
       "requestBody": "--d3b92f4f-e2e3-4caa-8b00-4e43c8df0d87\\r\\nContent-Disposition: form-data; name=\\"file\\"\\r\\nContent-Type: text/plain\\r\\n\\r\\n\\"John Doe\\"\\r\\n--d3b92f4f-e2e3-4caa-8b00-4e43c8df0d87--",
       "curlCommand": "curl -X POST \\"http://localhost:5000/api/v1/extract\\" -H host: localhost:5000 -H user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0 -H pragma: no-cache -H cache-control: no-cache -H accept: application/json -H content-type: multipart/form-data; boundary=d3b92f4f-e2e3-4caa-8b00-4e43c8df0d87 -H content-length: 165 -d '--d3b92f4f-e2e3-4caa-8b00-4e43c8df0d87\\r\\nContent-Disposition: form-data; name=\\"file\\"\\r\\nContent-Type: text/plain\\r\\n\\r\\n\\"John Doe\\"\\r\\n--d3b92f4f-e2e3-4caa-8b00-4e43c8df0d87--'"
     }
-  \],
-  "serverErrors": \[\],
+  ],
+  "serverErrors": [],
   "scanStartTime": "2025-01-13T11:09:04.919359+02:00",
   "elapsedSeconds": 1.349090375,
   "hostname": "My Computer",
@@ -43312,8 +42355,6 @@ Read more...
     "timeoutSeconds": 300
   }
 }
-        
-```
 
 ### Cortex CLI API Security command line reference guide
 This reference guide describes the dedicated API Security commands and flags, including the structure of base commands and subcommands. Refer to Cortex CLI common command line reference guide for Cortex CLI commands common to all supported modules.
@@ -43359,9 +42400,7 @@ For direct scanning from your Docker daemon, the image must already exist in you
 
 To scan an image that exists in your local Docker daemon, simply provide its name:
 
-```
 ./cortexcli --api-base-url <API URL> --api-key <API key from the "Authenticate" step in the CLI connector screen> --api-key-id <API key ID from the "Authenticate" step in the CLI connector screen> image scan <image name>    
-```
 
 The image scan accepts the following arguments:
 
@@ -43380,17 +42419,13 @@ For available CWP commands, refer to Cloud Workload Protection command line refe
 
 Example 161. EXAMPLE
 
-```
 ./cortexcli --api-base-url https://api.cortex.example.com --api-key your-api-key --api-key-id 1 image scan docker.io/library/nginx:latest
-```
 
   
 
 Example 162. EXAMPLE with custom Docker socket path
 
-```
 ./cortexcli --api-base-url https://api.cortex.example.com --api-key your-api-key --api-key-id 1 image scan --docker-host unix:///var/snap/docker/common/run/docker.sock my-custom-image:latest
-```
 
 By default, Cortex Cloud looks for the Docker socket at `unix:///var/run/docker.sock`.
 
@@ -43406,9 +42441,7 @@ Before you begin, ensure you have sudo privileges to execute the image scan.
 
 To scan an image from a previously saved archive file (such as a .tar file), use the --archive flag:
 
-```
 ./cortexcli --api-base-url <API URL> --api-key <API key from the "Authenticate" step in the CLI connector screen> --api-key-id <API key ID from the "Authenticate" step in the CLI connector screen> image scan --archive <archive file of container image>
-```
 
 **Note:**
 
@@ -43436,9 +42469,7 @@ By default, this will retrieve the SBOM for an image from your local Docker daem
 
 To get an SBOM for an image from your local Docker daemon:
 
-```
-./cortexcli --api-base-url <API URL> --api-key <API key from the "Authenticate" step in the CLI connector screen> --api-key-id <API key ID from the "Authenticate" step in the CLI connector screen> image sbom <image name> \[command options\]
-```
+./cortexcli --api-base-url <API URL> --api-key <API key from the "Authenticate" step in the CLI connector screen> --api-key-id <API key ID from the "Authenticate" step in the CLI connector screen> image sbom <image name> [command options]
 
 **Command**: `cortexcli image sbom`: Exports a Software Bill of Materials (SBOM) document for a container image archive.
 
@@ -43459,21 +42490,17 @@ To get an SBOM for an image from your local Docker daemon:
 
 Example 163. EXAMPLE
 
-```
 ./cortexcli --api-base-url https://api.cortex.example.com --api-key your-api-key --api-key-id 1 image sbom docker.io/library/alpine:latest
-```
 
   
 
 To export an SBOM from an image archive file, use the `--archive` flag:
 
-```
 ./cortexcli --api-base-url <API URL> --api-key <API key from the "Authenticate" step in the CLI connector screen> --api-key-id <API key ID from the "Authenticate" step in the CLI connector screen> image sbom --archive <archive file of container image>
-```
 
 **NAME**: `cortexcli image sbom` - Exports an SBOM document for an image from the local Docker daemon or an image archive.
 
-**USAGE**: `cortexcli image sbom` \[command options\] \[image name or archive file\].
+**USAGE**: `cortexcli image sbom` [command options] [image name or archive file].
 
 ### Troubleshooting
 
@@ -43524,7 +42551,7 @@ The CLI supports the following outputs:
     
 -   cyclonedx
     
--   cyclonedx\_json
+-   cyclonedx_json
     
 
 ### Code Security CLI scan behavior and output
@@ -43555,11 +42582,11 @@ To authenticate the Code Security CLI, choose one of the following methods:
     
     The following flags are required to authenticate the Code Security CLI:
     
-    -   `--api-base-url`: \[$CORTEX\_API\_BASE\_URL\]
+    -   `--api-base-url`: [$CORTEX_API_BASE_URL]
         
-    -   `--api-key`: \[$CORTEX\_API\_KEY\]
+    -   `--api-key`: [$CORTEX_API_KEY]
         
-    -   `--auth-id`. \[$CORTEX\_AUTH\_ID\]
+    -   `--auth-id`. [$CORTEX_AUTH_ID]
         
     
     For more information about these flags, refer to Cortex CLI common command line reference guide.
@@ -43607,9 +42634,7 @@ When operating the Code Security CLI within environments requiring internet acce
 ### Cortex CLI usage for Cortex Cloud Application Security
 To scan Cortex Cloud Application Security, run:
 
-```
 cortexcli –-api-base-url <API URL> --api-key <API key from the "Authenticate" step in the CLI connector screen> --api-key-id <API Key ID> code scan --directory {{DIRECTORY}} --branch main --repo-id organization/repo-name –output json --output-file-path ./output.json
-```
 
 #### Command line reference
 
@@ -43639,13 +42664,13 @@ The command structure includes global flags which are used for authentication, a
 -   **Send output to a file**: Direct the command's output to a specified file instead of displaying it in the console
     
     ```
-    ./cortexcli --api-base-url <BASE\_URL> --api-key <API\_KEY> --api-key-id <API\_KEY\_ID> code scan --branch <branch name> --repo-id <repo name> --directory <path> --output json --output-file-path <path>
+    ./cortexcli --api-base-url <BASE_URL> --api-key <API_KEY> --api-key-id <API_KEY_ID> code scan --branch <branch name> --repo-id <repo name> --directory <path> --output json --output-file-path <path>
     ```
     
 -   **Perform a scan without upload**: Run a scan for local analysis or testing without uploading the results to Cortex Cloud. This command runs a code scan and saves all standard output (human-readable format) to `scan_results.txt`
     
     ```
-    ./cortexcli --api-base-url <BASE\_URL> --api-key <API\_KEY> --api-key-id <API\_KEY\_ID> code scan --upload-mode no-upload --branch <branch name> --repo-id <repo name> --directory <path>
+    ./cortexcli --api-base-url <BASE_URL> --api-key <API_KEY> --api-key-id <API_KEY_ID> code scan --upload-mode no-upload --branch <branch name> --repo-id <repo name> --directory <path>
     ```
     
 
@@ -43675,15 +42700,14 @@ The Cortex CLI Cortex Cloud Application Security only supports single occurrence
 
 Example 164. 
 
-./cortexcli --api-base-url <YOUR\_API\_URL> --api-key <YOUR\_API\_KEY> --auth-id <YOUR\_AUTH\_ID> --framework terraform --framework "terraform cloudformation"
+./cortexcli --api-base-url <YOUR_API_URL> --api-key <YOUR_API_KEY> --auth-id <YOUR_AUTH_ID> --framework terraform --framework "terraform cloudformation"
 
   
 
 | Command/Variable | Description |
 | --- | --- |
 | \--source | The source of execution. Default source: CLI. Examples: Jenkins, GitHub Actions, CLI |
-| \--repo-id | Required for upload mode. Identity string of the repository. Format `repo_owner/repo_name`. \*\*Note:\*\* The repo-id flag must not end with `.config`, `.log` or `.ini`. `-config` is acceptable. Example 165.  `--repo-id foo.config` will be blocked; `--repo-id foo-config` will pass  
-To retrieve the repository ID, under Inventory, navigate to All Assets → Repositories (under Code) → select a repository → copy the Asset ID value from the Properties section of the side card. |
+| \--repo-id | Required for upload mode. Identity string of the repository. Format `repo_owner/repo_name`. \*\*Note:\*\* The repo-id flag must not end with `.config`, `.log` or `.ini`. `-config` is acceptable. Example 165. `--repo-id foo.config` will be blocked; `--repo-id foo-config` will pass To retrieve the repository ID, under Inventory, navigate to All Assets → Repositories (under Code) → select a repository → copy the Asset ID value from the Properties section of the side card. |
 | \--branch | Required for upload mode. Selected branch of the persisted repository |
 | \--directory | Required. The directory path to scan. Cannot be used together with `--file` |
 | \--file | The file path to scan. Cannot be used together with `--directory`. When using this option, the Cortex CLI will filter runners based on the file type provided. For example, if you specify a `.tf` file, only the Terraform and secrets frameworks will be included. You can further limit this (for example; skip secrets) by using the `--skip-framework` argument |
@@ -43695,7 +42719,7 @@ To retrieve the repository ID, under Inventory, navigate to All Assets → Repos
 | \--summary-position | Sets the position for displaying the summary information |
 | \--upload-mode | Upload mode determines the method or mode used to upload data, and includes these options: `upload` : Uploads scan results to the Cortex Cloud platform; `no-upload` : Disables uploads of scan results to the platform; `no-code`: Uploads scan findings to the platform, but without including the actual source code content (code blocks in the uploaded data |
 | \--external-modules-download-path | Specifies the directory to download external modules to. Defaults to `.external_modules` |
-| \--output Supported formats: cli, json, spdx, junitxml, sarif, cyclonedx, cyclonedx\_json | Output format for reporting |
+| \--output Supported formats: cli, json, spdx, junitxml, sarif, cyclonedx, cyclonedx_json | Output format for reporting |
 | \--output-file-path | Specifies the output path for the scan result file |
 | \--deep-analysis | Enables or disables deep analysis of the Terraform plan and related files |
 | \--repo-root-for-plan-enrichment | Enriches Terraform plan findings by mapping them to their original `.tf` files |
@@ -43704,7 +42728,7 @@ To retrieve the repository ID, under Inventory, navigate to All Assets → Repos
 | \--compact | Do not display code blocks in the output |
 | \--no-fail-on-crash | Prevents the application from failing (blocking pipelines) in the event of a scanner or backend failure. Instead of returning a `2` exit code, it will return a `0` exit code in such scenarios. |
 | \--var-file | Variable files to load in addition to the default files, Currently only supported for source Terraform (.tf file) and Helm chart scans |
-| CORTEX\_APPSEC\_VALIDATE\_SECRETS | Controls whether secret validation is performed. By default, this feature is disabled. Set `CORTEX_APPSEC_VALIDATE_SECRETS = true` to enable it |
+| CORTEX_APPSEC_VALIDATE_SECRETS | Controls whether secret validation is performed. By default, this feature is disabled. Set `CORTEX_APPSEC_VALIDATE_SECRETS = true` to enable it |
 | \--timeout | Sets the maximum time the Cortex CLI will wait for triggered local scan processes to complete. Default value: 15 minutes. Syntax: **To specify a duration**: Use a numeric value followed by a unit (for example `--timeout 10m`); **Default unit**: Numeric values entered without a unit are interpreted as seconds. For example, `30` is equal to 30 seconds.; **Supported units**: Milliseconds, seconds, minutes and hours |
 | \--help | Help |
 
@@ -43712,14 +42736,12 @@ To retrieve the repository ID, under Inventory, navigate to All Assets → Repos
 Understand more about the Cortex Query Language called XQL, so you can build queries to gain insight from the data contained in the different data sources in Cortex Cloud.
 
 ## Get started with XQL
-Abstract
 
 XQL is the Palo Alto Networks Cortex Query Language used in Cortex Cloud.
 
 XQL is the Cortex Query Language. It allows you to form complex queries against data stored in Cortex Cloud. This section introduces XQL, and it provides reference information on the various stages, functions, and aggregates that XQL supports.
 
 ### XQL language features
-Abstract
 
 Learn more about the Cortex Query Language features to query for raw network and endpoint data.
 
@@ -43729,11 +42751,9 @@ You submit XQL queries to Cortex Cloud using the Investigation & Response → Se
 
 XQL is similar to other query languages, and it uses some of the same functions as can be found in many SQL implementations, but it is not SQL. XQL forms queries in stages. Each stage performs a specific query operation and is separated by a pipe (`|`) character. To help you create an eﬀective XQL query with the proper syntax, the query ﬁeld in the user interface provides suggestions and deﬁnitions as you type. For example, the following query uses three stages to identify the dataset to query, identify the field to be retrieved from the dataset, and then set a filter that identifies which records should be retrieved as part of the query:
 
-```
-dataset = xdr\_data 
-| fields os\_actor\_process\_file\_size as osapfs 
-| filter to\_string(osapfs) = "12345"
-```
+dataset = xdr_data 
+| fields os_actor_process_file_size as osapfs 
+| filter to_string(osapfs) = "12345"
 
 **Tip:**
 
@@ -43765,7 +42785,6 @@ XQL supports:
 -   Queries against custom imported datasets.
 
 ### XQL Language Structure
-Abstract
 
 Learn more about the Cortex Query Language structure when creating a query.
 
@@ -43780,13 +42799,13 @@ In the simplest case, you can specify a dataset using one of the following forma
 -   Hot Storage queries are performed on a dataset using the format `dataset = <dataset name>`. This is the default option.
     
     ```
-    dataset = xdr\_data
+    dataset = xdr_data
     ```
     
 -   Cold Storage queries are performed using the format `cold_dataset = <dataset name>`.
     
     ```
-    cold\_dataset = xdr\_data
+    cold_dataset = xdr_data
     ```
     
 
@@ -43796,9 +42815,7 @@ You can also build a query that investigates data in both a cold dataset and hot
 
 When using the hot storage default format, this returns every `xdr_data` record contained in your Cortex Cloud instance over the time range that you provide to the Query Builder user interface. This can be a large amount of data, which might take a long time to retrieve. You can use a `limit` stage to specify how many records you want to retrieve.
 
-```
-dataset = xdr\_data | limit 5
-```
+dataset = xdr_data | limit 5
 
 The records resulting from this query, or the result set, are returned in unsorted order. Every time you run the query, it will probably return a different set of records in no specific order. To create a predictable result set, use other stages to define sort order, filter the result set to identify exactly what records you want returned, to create fields containing aggregations , and more.
 
@@ -43811,7 +42828,6 @@ In the `xdr_data` dataset, every user field included in the raw data, for networ
 For example, the `login_data` field has the `login_data_dst_normalized_user` field to display the content in the standardized format. We recommend that you use these `normalized_user` fields when building your queries to ensure the most accurate results.
 
 #### Adding comments in queries
-Abstract
 
 Learn more about adding comments in Cortex Query Language queries.
 
@@ -43826,10 +42842,10 @@ You can add comments in any section when building a query in Cortex Query Langua
     For example,
     
     ```
-    dataset = xdr\_data
-    | filter event\_type=1
+    dataset = xdr_data
+    | filter event_type=1
     //ENUM.process
-    and event\_sub\_type = 1
+    and event_sub_type = 1
     //ENUM.execution
     ```
     
@@ -43842,15 +42858,14 @@ You can add comments in any section when building a query in Cortex Query Langua
     For example,
     
     ```
-    dataset = xdr\_data 
+    dataset = xdr_data 
     | filter 
     /\*multi-line Adding comments is a great thing.
     Here is an example \*/ 
-    event\_type=1
+    event_type=1
     ```
 
 ### Supported operators
-Abstract
 
 Cortex Query Language supports specific comparison, boolean, and set operators in Cortex Cloud.
 
@@ -43867,82 +42882,17 @@ Cortex Query Language (XQL) queries support the following comparison, boolean, s
 | or | Boolean or |
 | not | Boolean not |
 | String and range operators |
-| IN, NOT IN | Returns true if the integer or string field value is one of the options specified. For example:
-```
-action\_local\_port in(5900,5999)
-```
-
-For string field values, wildcards are supported. In this example a wildcard (`*`) is used to search if the value contains the strings `"word_1"` or `"word_2"` anywhere in the output, or exactly matches the string `"word"`:
-
-```
-str\_field in ("\*word\_1\*", "\*word\_2\*", "word")
-```
-
-\*\*Note:\*\* In some cases, using an `IN` or `NOT IN` operator combined with a dataset and filterfilter stage can be a better alternative to using a join stage. |
-| CONTAINS, NOT CONTAINS | Performs a search for an integer or string. Returns true if the speciﬁed string is contained in the ﬁeld. `Contains` and `Not Contains` are also supported within arrays for integers and strings.  Example 166. 
-
-```
-lowercase(actor\_process\_image\_name) contains "psexec"
-```
-
-  
+| IN, NOT IN | Returns true if the integer or string field value is one of the options specified. For example: action_local_port in(5900,5999) For string field values, wildcards are supported. In this example a wildcard (`*`) is used to search if the value contains the strings `"word_1"` or `"word_2"` anywhere in the output, or exactly matches the string `"word"`: str_field in ("\*word_1\*", "\*word_2\*", "word") \*\*Note:\*\* In some cases, using an `IN` or `NOT IN` operator combined with a dataset and filterfilter stage can be a better alternative to using a join stage. |
+| CONTAINS, NOT CONTAINS | Performs a search for an integer or string. Returns true if the speciﬁed string is contained in the ﬁeld. `Contains` and `Not Contains` are also supported within arrays for integers and strings. Example 166. lowercase(actor_process_image_name) contains "psexec" |
+| ~= | Matches a regular expression. Example 167.  action_process_image_name ~= ".\*?\\.(?:pdf|docx)\\.exe"  
  |
-| ~= | Matches a regular expression. Example 167. 
-
-```
-action\_process\_image\_name ~= ".\*?\\.(?:pdf|docx)\\.exe"
-```
-
-  
- |
-| INCIDR, NOT INCIDR | Performs a search for an IPv4 address or IPv4 range using CIDR notation, and returns true if the address is in range. Example 168. 
-
-```
-action\_remote\_ip incidr "192.1.1.1/24"
-```
-
-  
-It is also possible to define multiple CIDRs with comma separated syntax when building a XQL query with the Query Builder or in Correlation Rules. When defining multiple CIDRs, the logical `OR` is used between the CIDRS listed, so as long as one address is in range the entire statement returns `true`. The same logic is used when using the `incidr()` function. For more information on how this logic works to determine whether the `incidr` or `not incidr` operators return `true` or `false`, see incidr. Example 169. 
-
-```
-action\_remote\_ip incidr "192.168.0.0/24, 1.168.0.0/24"
-```
-
-  
-Both the IPv4 address and CIDR ranges can be either an explicit string using quotes (`""`), such as `"192.168.0.1"`, or a string field. |
-| INCIDR6, NOT INCIDR6 | Performs a search for an IPv6 address or IPv6 range using CIDR notation, and returns true if the address is in range. Example 170. 
-
-```
-action\_remote\_ip incidr6 “3031:3233:3435:3637:0000:0000:0000:0000/64”
-```
-
-  
-It is also possible to define multiple CIDRs with comma separated syntax when building a XQL query with the Query Builder or in Correlation Rules. When defining multiple CIDRs, the logical `OR` is used between the CIDRS listed, so as long as one address is in range the entire statement returns `true`. The same logic is used when using the `incidr6()` function. For more information on how this logic works to determine whether the `incidr6` or `not incidr6` operators return `true` or `false`, see incidr6. Example 171. 
-
-```
-action\_remote\_ip incidr6 "2001:0db8:85a3:0000:0000:8a2e:0000:0000/64, fe80::/10"
-```
-
-  
-Both the IPv6 address and CIDR ranges can be either an explicit string using quotes (`""`), such as `“3031:3233:3435:3637:0000:0000:0000:0000/64”`, or a string field. |
+| INCIDR, NOT INCIDR | Performs a search for an IPv4 address or IPv4 range using CIDR notation, and returns true if the address is in range. Example 168. action_remote_ip incidr "192.1.1.1/24" It is also possible to define multiple CIDRs with comma separated syntax when building a XQL query with the Query Builder or in Correlation Rules. When defining multiple CIDRs, the logical `OR` is used between the CIDRS listed, so as long as one address is in range the entire statement returns `true`. The same logic is used when using the `incidr()` function. For more information on how this logic works to determine whether the `incidr` or `not incidr` operators return `true` or `false`, see incidr. Example 169. action_remote_ip incidr "192.168.0.0/24, 1.168.0.0/24" Both the IPv4 address and CIDR ranges can be either an explicit string using quotes (`""`), such as `"192.168.0.1"`, or a string field. |
+| INCIDR6, NOT INCIDR6 | Performs a search for an IPv6 address or IPv6 range using CIDR notation, and returns true if the address is in range. Example 170. action_remote_ip incidr6 “3031:3233:3435:3637:0000:0000:0000:0000/64” It is also possible to define multiple CIDRs with comma separated syntax when building a XQL query with the Query Builder or in Correlation Rules. When defining multiple CIDRs, the logical `OR` is used between the CIDRS listed, so as long as one address is in range the entire statement returns `true`. The same logic is used when using the `incidr6()` function. For more information on how this logic works to determine whether the `incidr6` or `not incidr6` operators return `true` or `false`, see incidr6. Example 171. action_remote_ip incidr6 "2001:0db8:85a3:0000:0000:8a2e:0000:0000/64, fe80::/10" Both the IPv6 address and CIDR ranges can be either an explicit string using quotes (`""`), such as `“3031:3233:3435:3637:0000:0000:0000:0000/64”`, or a string field. |
 | Add operator for tagging |
-| add | The `add` operator is used in combination with the `tag` command to add a single tag or list of tags to a ﬁeld that you can easily query in the dataset. Example 172.  Adding a Single Tag
-
-```
-dataset = xdr\_data | tag add "test"
-```
-
-; Adding a List of Tags
-
-```
-dataset = xdr\_data | tag add "test1", "test2", "test3"
-```
-
-  
+| add | The `add` operator is used in combination with the `tag` command to add a single tag or list of tags to a ﬁeld that you can easily query in the dataset. Example 172.  Adding a Single Tag dataset = xdr_data | tag add "test" ; Adding a List of Tags dataset = xdr_data | tag add "test1", "test2", "test3"  
  |
 
 ### Datasets and presets
-Abstract
 
 The Cortex Query Language supports built-in datasets, custom datasets, and presets.
 
@@ -43979,15 +42929,13 @@ Depending on your integrations, you can have the following datasets available fo
 | --- | --- |
 | Active Directory via Cloud Identity Engine | `pan_dss_raw` \*\*Note:\*\* To set up this Cloud Identity Engine (previously called Directory Sync Service (DSS)) dataset, you need to set up a Cloud Identity Engine. Otherwise, you will not have a `pan_dss_raw` dataset. For more information, see Set up Cloud Identity Engine.Set up Cloud Identity Engine |
 | Issues table in Cortex Cloud | issues \*\*Note:\*\* `INFO` issues are not included in this dataset.; The issue fields included in this dataset are limited to certain fields available in the API. For the full list, see [Get Alerts Multi-Events v2 API](https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR-REST-API/Get-Alerts-Multi-Events-v2). |
-| Amazon S3 | Audit logs-   All logs: `aws_s3_raw`; Normalize and enrich audit logs: `cloud_audit_logs`
-; Generic logs-   `<Vendor>_<Product>_raw`
-; Network flow logs-   All logs: `aws_s3_raw`; Normalize and enrich flow logs: `xdr_dataset` dataset with a preset called `network_story` |
-| Authentication logs (subset of xdr\_data) | Authentication logs, such as Okta: `auth_logs` \*\*Note:\*\* The fields contained in this dataset are a subset of the fields in the `xdr_data` dataset. |
+| Amazon S3 | Audit logs- All logs: `aws_s3_raw`; Normalize and enrich audit logs: `cloud_audit_logs` ; Generic logs- `<Vendor>_<Product>_raw` ; Network flow logs- All logs: `aws_s3_raw`; Normalize and enrich flow logs: `xdr_dataset` dataset with a preset called `network_story` |
+| Authentication logs (subset of xdr_data) | Authentication logs, such as Okta: `auth_logs` \*\*Note:\*\* The fields contained in this dataset are a subset of the fields in the `xdr_data` dataset. |
 | AWS CloudTrail and Amazon CloudWatch | `<Vendor>_<Product>_raw` |
 | Azure Event Hub | All logs: `MSFT_Azure_raw`; Normalize and enrich audit logs: `cloud_audit_logs` |
 | Azure Network Watcher | All logs: `MSFT_Azure_raw`; Normalize and enrich flow logs: **`xdr_dataset`** dataset with a preset called **`network_story`** |
 | BeyondTrust Privilege Management Cloud | `beyondtrust_privilege_management_raw` |
-| Box | Events (admin\_logs) `box_admin_logs_raw` Box Shield Alerts `box_shield_alerts_raw` Users `box_users_raw` Groups `box_groups_raw` |
+| Box | Events (admin_logs) `box_admin_logs_raw` Box Shield Alerts `box_shield_alerts_raw` Users `box_users_raw` Groups `box_groups_raw` |
 | Checkpoint FW1/VPN1 | `<Vendor>_<Product>_raw` |
 | Cisco ASA | Cisco ASA firewalls or Cisco AnyConnect VPN `cisco_asa_raw` |
 | Collector status change audit for collection integrations, custom collectors, and marketplace collectors. | `collection_auditing` |
@@ -44009,15 +42957,13 @@ Depending on your integrations, you can have the following datasets available fo
 | Google Cloud Platform (GCP) logs | All log types: `google_cloud_logging_raw`; Normalize and enrich audit and flow logs: `cloud_audit_logs`-   Audit logs: `cloud_audit_logs`; Network flow logs: `xdr_dataset` dataset with a preset called `network_story` |
 | Google Kubernetes Engine (GKE) | `<Vendor>_<Product>_raw` |
 | Google Workspace | Google Chrome: `google_workspace_chrome_raw`; Admin Console: `google_workspace_admin_console_raw`; Google Chat: `google_workspace_chat_raw`; Enterprise Groups: `google_workspace_enterprise_groups_raw`; Login: `google_workspace_login_raw`; Rules: `google_workspace_rules_raw`; Google drive: `google_workspace_drive_raw`; Token: `google_workspace_token_raw`; User Accounts: `google_workspace_user_accounts_raw`; SAML: `google_workspace_saml_raw`; Alerts: `google_workspace_alerts_raw`; Emails: `google_gmail_raw` |
-| Host Inventory and Vulnerability Assessment | Datasets-   `host_inventory`; `va_cves`; `va_endpoints`
-; Presets-   `host_inventory`; `host_inventory_accessibility`; `host_inventory_applications`; `host_inventory_auto_runs`; `host_inventory_cpus`; `host_inventory_daemons`; `host_inventory_disks`; `host_inventory_drivers`; `host_inventory_endpoints`; `host_inventory_extensions`; `host_inventory_groups`; `host_inventory_kbs`; `host_inventory_mounts`; `host_inventory_services`; `host_inventory_shares`; `host_inventory_users`; `host_inventory_volumes`; `host_inventory_vss` |
+| Host Inventory and Vulnerability Assessment | Datasets- `host_inventory`; `va_cves`; `va_endpoints` ; Presets- `host_inventory`; `host_inventory_accessibility`; `host_inventory_applications`; `host_inventory_auto_runs`; `host_inventory_cpus`; `host_inventory_daemons`; `host_inventory_disks`; `host_inventory_drivers`; `host_inventory_endpoints`; `host_inventory_extensions`; `host_inventory_groups`; `host_inventory_kbs`; `host_inventory_mounts`; `host_inventory_services`; `host_inventory_shares`; `host_inventory_users`; `host_inventory_volumes`; `host_inventory_vss` |
 | Cases table in Cortex Cloud | `cases` |
 | JSON or text logs from third-party source over HTTP | `<Vendor>_<Product>_raw` |
-| Login logs (subset of xdr\_data) | Login logs, such as WEC: `login_logs` \*\*Note:\*\* The fields contained in this dataset are a subset of the fields in the `xdr_data` dataset. |
+| Login logs (subset of xdr_data) | Login logs, such as WEC: `login_logs` \*\*Note:\*\* The fields contained in this dataset are a subset of the fields in the `xdr_data` dataset. |
 | Logs from third party source over FTP, FTPS, or SFTP | `<Vendor>_<Product>_raw` |
 | Microsoft 365 (email) | `msft_o365_emails_raw`; `msft_o365_users_raw`; `msft_o365_groups_raw`; `msft_o365_devices_raw`; `msft_o365_mailboxes_raw`; `msft_o365_rules_raw`; `msft_o365_contacts_raw` |
-| Microsoft Office 365 | Microsoft Office 365 audit events from Management Activity API:-   Azure AD Activity Logs: `msft_o365_azure_ad_raw`; Exchange Online: `msft_o365_exchange_online_raw`; Sharepoint Online: `msft_o365_sharepoint_online_raw`; DLP: `msft_o365_dlp_raw`; General: `msft_o365_general_raw`
-; Microsoft Office 365 emails via Microsoft’s Graph API: `msft_o365_emails_raw`; Azure AD authentication events from Microsoft Graph API: `msft_azure_ad_raw`; Azure AD audit events from Microsoft Graph API: `msft_azure_ad_audit_raw`; Alerts from Microsoft Graph Security API: `msft_graph_security_alerts_raw` |
+| Microsoft Office 365 | Microsoft Office 365 audit events from Management Activity API:- Azure AD Activity Logs: `msft_o365_azure_ad_raw`; Exchange Online: `msft_o365_exchange_online_raw`; Sharepoint Online: `msft_o365_sharepoint_online_raw`; DLP: `msft_o365_dlp_raw`; General: `msft_o365_general_raw` ; Microsoft Office 365 emails via Microsoft’s Graph API: `msft_o365_emails_raw`; Azure AD authentication events from Microsoft Graph API: `msft_azure_ad_raw`; Azure AD audit events from Microsoft Graph API: `msft_azure_ad_audit_raw`; Alerts from Microsoft Graph Security API: `msft_graph_security_alerts_raw` |
 | NetFlow | `ip_flow_ip_flow_raw` (default); When configured, uses the format `<Vendor>_<Product>_raw` |
 | Network Share logs | `<Vendor>_<Product>_raw` |
 | Okta | `okta_sso_raw` |
@@ -44037,7 +42983,7 @@ Depending on your integrations, you can have the following datasets available fo
 | ServiceNow CMDB | A ServiceNow CMDB dataset is created for each table configured for data collection using the format `servicenow_cmdb_<table name>_raw`. |
 | Salesforce.com | `salesforce_connectedapplication_raw`; `salesforce_permissionset_raw`; `salesforce_profile_raw`; `salesforce_groupmember_raw`; `salesforce_group_raw`; `salesforce_user_raw`; `salesforce_userrole_raw`; `salesforce_document_raw`; `salesforce_contentfolder_raw`; `salesforce_attachment_raw`; `salesforce_contentdistribution_raw`; `salesforce_tenantsecuritylogin_raw`; `salesforce_useraccountteammember_raw`; `salesforce_tenantsecurityuserperm_raw`; `salesforce_account_raw`; `salesforce_audit_raw`; `salesforce_login_raw`; `salesforce_eventlogfile_raw` |
 | Syslog/CEF | `<CEFVendor>_<CEFProduct>_raw` |
-| USB devices connect and disconnect events reported by the agent | `xdr_data` \*\*Note:\*\* You can query in XQL for this data and build widgets based on the `xdr_data` dataset or using the preset `device_control`.; To view in an XQL query these events, the Device Configuration of the endpoint profile must be set to Block. Otherwise, the USB events are not captured. The events are also captured when a group of device types are blocked on the endpoints with a permanent or temporary exception in place. For more information, see \[Ingest Connect and Disconnect Events of USB Devices\] in Device control.Device control |
+| USB devices connect and disconnect events reported by the agent | `xdr_data` \*\*Note:\*\* You can query in XQL for this data and build widgets based on the `xdr_data` dataset or using the preset `device_control`.; To view in an XQL query these events, the Device Configuration of the endpoint profile must be set to Block. Otherwise, the USB events are not captured. The events are also captured when a group of device types are blocked on the endpoints with a permanent or temporary exception in place. For more information, see [Ingest Connect and Disconnect Events of USB Devices] in Device control.Device control |
 | VPN logs (subset of `xdr_data`) | VPN logs, such as GlobalProtect: `vpn_logs` \*\*Note:\*\* The fields contained in this dataset are a subset of the fields in the `xdr_data` dataset. |
 | Windows Endpoints using Cortex XDR Forensics Add-on | `forensics_amcache`; `forensics_application_resource_usage`; `forensics_arp_cache`; `forensics_background_activity_monitor`; `forensics_chrome_history`; `forensics_cid_size_mru`; `forensics_command_history`; `forensics_dns_cache`; `forensics_edge_anaheim_history`; `forensics_edge_spartan_history`; `forensics_event_log`; `forensics_file_access`; `forensics_file_listing`; `forensics_firefox_history`; `forensics_handles`; `forensics_hosts_file`; `forensics_internet_explorer_history`; `forensics_jumplist`; `forensics_last_visited_pidl_mru`; `forensics_log_me_in`; `forensics_net_sessions`; `forensics_network`; `forensics_network_connectivity_usage`; `forensics_network_data_usage`; `forensics_open_save_pidl_mru`; `forensics_port_listing`; `forensics_prefetch`; `forensics_process_execution`; `forensics_process_listing`; `forensics_psreadline`; `forensics_recent_files`; `forensics_recentfilecache`; `forensics_recycle_bin`; `forensics_registry`; `forensics_remote_access`; `forensics_seven_zip_folder_history`; `forensics_shellbags`; `forensics_shimcache`; `forensics_team_viewer`; `forensics_typed_paths`; `forensics_typed_urls`; `forensics_user_access_logging`; `forensics_user_assist`; `forensics_windows_activities`; `forensics_winrar_arc_history`; `forensics_word_wheel_query` |
 | Windows event logs via Cortex XDR Windows agents | `microsoft_windows_raw` |
@@ -44056,7 +43002,6 @@ Two of the available presets are stories. These contain information stitched tog
 You use the `preset` keyword to specify a dataset in your query.
 
 ### About examples
-Abstract
 
 Learn more about the Cortex Query Language (XQL) examples provided.
 
@@ -44067,7 +43012,6 @@ For examples of queries that illustrate useful investigative queries, see the ex
 Investigation & Response → Search → Query Builder → XQL → Query Library
 
 ### JSON functions
-Abstract
 
 Learn more about how Cortex Cloud treats JSON functions in the Cortex Query Language.
 
@@ -44077,7 +43021,7 @@ The Cortex Query Language (XQL) includes a number of JSON functions. Before usin
 
 JSON field names are case sensitive, so the key to field pairing must be identical in an XQL query for results to be found. For example, if a field value is `"TIMESTAMP"` and your query is defined to look for "timestamp", no results will be found.
 
-###### <json\_path>
+###### <json_path>
 
 Each JSON function includes defining a `<json_path>` in both the regular syntax and when using the syntatic sugar format. The `<json_path>` argument identifies the data of the JSON object you want to extract using dot-notation. When using the regular syntax, the beginning of the object is represented by a `$`. This `$` is not required when using the syntatic sugar format.
 
@@ -44085,32 +43029,26 @@ Example 173. 
 
 If you have the following object:
 
-```
 {
-  "a\_field" : "This is a\_field value",
-  "b\_field" : {
-                 "c\_field" : "This is c\_field value"
+  "a_field" : "This is a_field value",
+  "b_field" : {
+                 "c_field" : "This is c_field value"
               }
 }
-```
 
 Then the path using the regular syntax:
 
-```
-$.a\_field
-```
+$.a_field
 
 Returns `"This is a_field value"`, while the path using the regular syntax:
 
-```
-$.b\_field.c\_field
-```
+$.b_field.c_field
 
 Returns `"This is c_field value"`.
 
   
 
-#### Field in <json\_path> contains characters
+#### Field in <json_path> contains characters
 
 ##### In the regular syntax
 
@@ -44120,15 +43058,11 @@ For example, when using the `json_extract` function, the previous regular syntax
 
 Previous regular syntax for the `json_extract` function:
 
-```
-json\_extract(<json\_object\_formatted\_string\>, <json\_path>)
-```
+json_extract(<json_object_formatted_string\>, <json_path>)
 
 Updated regular syntax for the `json_extract` function, where the `<json_field>` now includes single quotation marks as `'<json_field>'`:
 
-```
-json\_extract(<json\_object\_formatted\_string\>, "\['<json\_field>'\]")
-```
+json_extract(<json_object_formatted_string\>, "['<json_field>']")
 
 For each JSON function, the regular syntax can change slightly, but the `"['<json_field>']"` format is the same. The `"['<json_field>']"` identifies the data you want to extract using dot-notation, where the data extracted is dependent on your syntax.
 
@@ -44136,25 +43070,19 @@ Example 174. 
 
 If you have the following JSON object defined:
 
-```
 {"a.b": 
     {"inn": 
         {"one":1}
     }
 }
-```
 
 To extract the data `{"one":1}`, the `"['<json_field>']"` would need to be defined as `"$['a.b'].inn"` for all JSON functions. For example, when using the `json_extract` function, the regular syntax is:
 
-```
-json\_extract(field\_json\_1, "$\['a.b'\].inn")
-```
+json_extract(field_json_1, "$['a.b'].inn")
 
 To extract the data `{"inn": {"one":1}}`, the `"['<json_field>']"` would need to be defined as `"$['a.b']"` for all JSON functions. For example, when using the `json_extract` function, the regular syntax is:
 
-```
-json\_extract(field\_json\_1, "$\['a.b'\]")
-```
+json_extract(field_json_1, "$['a.b']")
 
   
 
@@ -44162,19 +43090,15 @@ Example 175. 
 
 If you have the following JSON object defined:
 
-```
 {"a.b": 
     {"inn.inn": 
         {"one":1}
     }
 }
-```
 
 To extract the data `{"one":1}`, the `"['<json_field>']"` would need to be defined as `"$['a.b']['inn.inn']"` for all JSON functions. For example, when using the `json_extract` function, the regular syntax is:
 
-```
-json\_extract(json\_field, "$\['a.b'\]\['inn.inn'\]")
-```
+json_extract(json_field, "$['a.b']['inn.inn']")
 
   
 
@@ -44186,15 +43110,11 @@ For example, when using the `json_extract` function, the previous syntatic sugar
 
 Previous syntatic sugar format for the `json_extract` function:
 
-```
-<json\_object\_formatted\_string> -> <json\_path>{}
-```
+<json_object_formatted_string> -> <json_path>{}
 
 Updated syntatic sugar format for the `json_extract` function, where the `<json_field>` now includes quotations as `"<json_field>"`:
 
-```
-<json\_object\_formatted\_string> -> \["<json\_field>"\]{}
-```
+<json_object_formatted_string> -> ["<json_field>"]{}
 
 For each JSON function, the syntax of the syntatic sugar format can change slightly, but the `["<json_field>"]` format is the same. The `["<json_field>"]` identifies the data you want to extract using dot-notation, where the data extracted is dependent on your syntax.
 
@@ -44202,25 +43122,19 @@ Example 176. 
 
 If you have the following JSON object defined:
 
-```
 {"a.b": 
     {"inn": 
         {"one":1}
     }
 }
-```
 
 To extract the data `{"one":1}`, the `["<json_field>"]` would need to be defined as `["a.b"].inn` for all JSON functions. For example, when using the `json_extract` function, the syntatic sugar format is:
 
-```
-json\_field -> \["a.b"\].inn{}
-```
+json_field -> ["a.b"].inn{}
 
 To extract the data `{"inn": {"one":1}}`, the `["<json_field>"]` would need to be defined as `["a.b"]` for all JSON functions. For example, when using the `json_extract` function, the syntatic sugar format is:
 
-```
-json\_field -> \["a.b"\]{}
-```
+json_field -> ["a.b"]{}
 
   
 
@@ -44228,22 +43142,17 @@ Example 177. 
 
 If you have the following `json_object` defined:
 
-```
 {"a.b": 
     {"inn.inn": 
         {"one":1}
     }
 }
-```
 
 To extract the data `{"one":1}`, the `["<json_field>"]` would need to be defined as `["a.b"]["inn.inn"]` for all JSON functions. For example, when using the `json_extract` function, the syntatic sugar format is:
 
-```
-json\_field -> \["a.b"\]\["inn.inn"\]{}
-```
+json_field -> ["a.b"]["inn.inn"]{}
 
 ### How to filter for empty values in the results table
-Abstract
 
 Learn how to filter for empty values in the results table in Cortex Query Language.
 
@@ -44266,16 +43175,13 @@ Example 178. 
 
 Below is an example of filtering your endpoint data in the results table to exclude all null values and any empty strings for a user.
 
-```
 config timeframe = 90d
 | dataset = endpoints
-| filter endpoint\_status in (CONNECTED, DISCONNECTED)
+| filter endpoint_status in (CONNECTED, DISCONNECTED)
 | filter user != null and user != ""
-| fields user, group\_names, endpoint\_name
-```
+| fields user, group_names, endpoint_name
 
 ### Understanding string manipulation in XQL
-Abstract
 
 Learn more about string manipulation in Cortex Query Language (XQL) using double and triple quotes.
 
@@ -44332,14 +43238,12 @@ When using the `alter` stage, you can use both single (`"<text>"`) and triple 
 
 Example 181. 
 
-```
 config timeframe = 10y 
-| dataset = test\_dataset  
+| dataset = test_dataset  
 | limit 1
 | alter test = "\\test\\"
-| alter test\_triple = """\\\\\\test\\\\"""
-| fields test, test\_triple
-```
+| alter test_triple = """\\\\\\test\\\\"""
+| fields test, test_triple
 
 **Understanding the query and results**
 
@@ -44375,7 +43279,7 @@ When using the `filter` stage, you can use both single (`"<text>"`) and triple
 
 The examples provided are based on the following data table for a dataset called `test_dataset`:
 
-| \_TIME | TEST |
+| _TIME | TEST |
 | --- | --- |
 | Mar 26th 2022 19:26:07 | 12\\t3 |
 | May 7th 2023 15:16:00 | 12 3 |
@@ -44388,16 +43292,14 @@ The examples provided are based on the following data table for a dataset called
 
 Example 182. 
 
-```
 config timeframe = 10y 
-| dataset = test\_dataset  
+| dataset = test_dataset  
 | filter test = "12\\t3\*"
 | fields test
-```
 
 **Output results table**:
 
-| \_TIME | TEST |
+| _TIME | TEST |
 | --- | --- |
 | Mar 26th 2022 19:26:07 | 12\\t3 |
 | Apr 5th 2024 11:21:02 | 12\\t34563 |
@@ -44410,16 +43312,14 @@ The asterisk (`*`) in `"12\t3*"` means to process the string field as an XQL wi
 
 Example 183. 
 
-```
 config timeframe = 10y 
-| dataset = test\_dataset  
+| dataset = test_dataset  
 | filter test = """12\\t3\*"""
 | fields test
-```
 
 **Output results table**:
 
-| \_TIME | TEST |
+| _TIME | TEST |
 | --- | --- |
 | May 7th 2023 15:16:00 | 12 3 |
 | May 9th 2025 13:22:22 | 12 35897 |
@@ -44429,7 +43329,6 @@ config timeframe = 10y
 The `\t` in `"""12\t3*"""` is processed as a tab escape character. The asterisk (`*`) in `"""12\t3*"""` means to process the string field as an XQL wildcard by matching any sequence of characters that begins with `12<tab>3`.
 
 ## Build XQL queries
-Abstract
 
 Learn more about how to build Cortex Query Language (XQL) queries using the Query Builder.
 
@@ -44440,7 +43339,6 @@ To support investigation and analysis, you can search your data by creating quer
 If you have the Cortex Agentic Assistant, you can use natural language prompts to create and run XQL queries within the chat interface. For more information, see Create and run XQL queries with Agentic Assistant chat.Cortex Agentic Assistant
 
 ### About the Query Builder
-Abstract
 
 The Query Builder facilitates threat detection, case expansion, and data analytics for suspected threats.
 
@@ -44476,7 +43374,6 @@ Cortex Cloud provides different options in the Query Builder for creating querie
 -   Graph Search to build queries to search assets, findings, and their contextual data. For more information, see How to build Graph Search queries?.
 
 ### How to build XQL queries
-Abstract
 
 Learn more about how to build XQL queries in the Query Builder.
 
@@ -44503,21 +43400,17 @@ In a dataset query, unless otherwise specified, the query runs against the `xdr
 
 The basic syntax structure for querying datasets that are not mapped to the XDM is:
 
-```
 dataset = <dataset name> 
     | <stage1> ...
     | <stage2> ... 
     | <stage3> ...
-```
 
 or
 
-```
 dataset in (<dataset name>)
     | <stage1> ...
     | <stage2> ...
     | <stage3> ...
-```
 
 You can specify a dataset using one of the following formats, which is based on the data retention offerings available in Cortex Cloud.
 
@@ -44526,7 +43419,7 @@ You can specify a dataset using one of the following formats, which is based on 
     Example 71. 
     
     ```
-    dataset = xdr\_data
+    dataset = xdr_data
     ```
     
       
@@ -44536,7 +43429,7 @@ You can specify a dataset using one of the following formats, which is based on 
     Example 72. 
     
     ```
-    cold\_dataset = xdr\_data
+    cold_dataset = xdr_data
     ```
     
       
@@ -44561,7 +43454,6 @@ For example, the `login_data` ﬁeld has the `login_data_dst_normalized_user` �
 XQL queries can contain different components, such as functions and stages, depending on the type of query you want to build. For a complete list of the syntax options available with example queries, see Stages and Functions.
 
 #### Get started with XQL queries
-Abstract
 
 Learn more about some important information before getting started with XQL queries.
 
@@ -44580,7 +43472,6 @@ Before you begin running XQL queries, consider the following information:
     If you have existing Splunk queries, you can translate them to XQL. For more information, see Translate to XQL.
 
 #### Useful XQL user interface features
-Abstract
 
 Learn about useful XQL query features in the user interface.
 
@@ -44616,7 +43507,6 @@ The user interface contains several useful features for querying data, and for v
 -   Schema: Contains schema information for every field found in the result set. This information includes the field name, data type, descriptive text (if available), and the dataset that contains the field. Contains the list of all the fields of all the datasets that were involved in the query.
 
 #### XQL Query best practices
-Abstract
 
 Learn about best practices for streamlining XQL queries.
 
@@ -44629,7 +43519,7 @@ Cortex Cloud includes built-in mechanisms for mitigating long-running queries, s
     Example 73. 
     
     ```
-    dataset = microsoft\_windows\_raw 
+    dataset = microsoft_windows_raw 
     | fields \*host\* 
     | limit 100
     ```
@@ -44643,7 +43533,6 @@ Cortex Cloud includes built-in mechanisms for mitigating long-running queries, s
 -   Select the specific fields that you would like to see in the query results.
 
 #### Expected results when querying fields
-Abstract
 
 Learn what to expect in the query results when querying fields.
 
@@ -44662,7 +43551,6 @@ The following are returned when querying fields:
 -   When no limit is explicitly stated in a `datamodel` query, a maximum of 1,000,000 results are returned (default). When this limit is applied to results using the limit stage, it will be indicated in the user interface.
 
 #### Create XQL query
-Abstract
 
 Learn how to create queries using the Cortex Query Language (XQL).
 
@@ -44697,7 +43585,7 @@ How to create a dataset query
     -   These time picker options are available in XQL queries when using the Query Builder, XQL Widgets, and when defining XQL Widgets in Reports and Dashboards.
         
     
-4.  _(Optional)_ To translate Splunk queries to XQL queries, enable Translate to XQL. If you choose to use this feature, enter your Splunk query in the Splunk field, click the arrow icon ([image: translate-to-spl-arrow.png]) to convert to XQL, and then go to Step 6.
+4.  _(Optional)_ To translate Splunk queries to XQL queries, enable Translate to XQL. If you choose to use this feature, enter your Splunk query in the Splunk field, click the arrow icon () to convert to XQL, and then go to Step 6.
     
 5.  Create your query by typing in the query field. Relevant commands, their definitions, and operators are suggested as you type.
     
@@ -44721,7 +43609,7 @@ How to create a dataset query
         Example 74. 
         
         ```
-        dataset = xdr\_data
+        dataset = xdr_data
         ```
         
           
@@ -44733,8 +43621,8 @@ How to create a dataset query
         Example 75. 
         
         ```
-        dataset = xdr\_data 
-        | filter agent\_os\_type = ENUM.AGENT\_OS\_MAC
+        dataset = xdr_data 
+        | filter agent_os_type = ENUM.AGENT_OS_MAC
         | limit 250  
         ```
         
@@ -44744,12 +43632,12 @@ How to create a dataset query
     
     -   Run the query immediately.
         
-    -   Run the query by the specified date and time, or on a specific date, by selecting the calendar icon ([image: query-calendar-icon.png]).
+    -   Run the query by the specified date and time, or on a specific date, by selecting the calendar icon ().
         
     
 7.  _(Optional)_ The Save As options save your query for future use:
     
-    -   BIOC Rule: When compatible, saves the query as a BIOC rule. The XQL query must contain a filter for the event\_type field.
+    -   BIOC Rule: When compatible, saves the query as a BIOC rule. The XQL query must contain a filter for the event_type field.
         
     -   Correlation Rule: When compatible, saves the query as a Correlation Rule. For more information, see What's a correlation rule?.
         
@@ -44764,7 +43652,6 @@ How to create a dataset query
 While the query is running, you can navigate away from the page. A notification is sent when the query has finished. You can also Cancel the query or run a new query, where you have the option to Run only new query (cancel previous) or Run both queries.
 
 #### Review XQL query results
-Abstract
 
 Learn more about reviewing the results returned from an XQL query.
 
@@ -44819,11 +43706,10 @@ Use the following options in the Query Results tab to investigate your query res
 
 | Option | Use |
 | --- | --- |
-| Table tab | Displays results in rows and columns according to the entity ﬁelds. Columns can be filtered, using their filter icons. More options ([image: table-settings.png]) displays table layout options, which are divided into different sections: In the Appearance section, you can Show line breaks for any text field in the Query Results. By default, the text in these fields are wrapped unless the Show line breaks option is selected. In addition, you can change the way rows and columns are displayed.; In the Log Format section, you can change the way that logs are displayed:-   RAW: Raw format of the entity in the database.; JSON: Condensed JSON format with key value distinctions. NULL values are not displayed.; TREE: Dynamic view of the JSON hierarchy with the option to collapse and expand the different hierarchies.
-; In the Search column section, you can find a specific column; enable or disable display of columns using the checkboxes. Show and hide rows according to a specific field in a specific event: select a cell, right-click it, and then select either Show rows with … or Hide rows with … |
+| Table tab | Displays results in rows and columns according to the entity ﬁelds. Columns can be filtered, using their filter icons. More options () displays table layout options, which are divided into different sections: In the Appearance section, you can Show line breaks for any text field in the Query Results. By default, the text in these fields are wrapped unless the Show line breaks option is selected. In addition, you can change the way rows and columns are displayed.; In the Log Format section, you can change the way that logs are displayed:- RAW: Raw format of the entity in the database.; JSON: Condensed JSON format with key value distinctions. NULL values are not displayed.; TREE: Dynamic view of the JSON hierarchy with the option to collapse and expand the different hierarchies. ; In the Search column section, you can find a specific column; enable or disable display of columns using the checkboxes. Show and hide rows according to a specific field in a specific event: select a cell, right-click it, and then select either Show rows with … or Hide rows with … |
 | Graph tab | Use the Chart Editor to visualize the query results. |
-| Advanced tab | Displays results in a table format which aggregates the entity ﬁelds into one column. You can change the layout, decide whether to Show line breaks for any text field in the results table, and change the log format from the [image: table-settings.png] menu. Select Show more to pivot an Expanded View of the event results that include NULL values. You can toggle between the JSON and Tree views, search, and Copy to clipboard. |
-| Export to File | Exports the results to a TSV (tab-separated values) ﬁle. More options ([image: table-settings.png]) works in a similar way to how it works on the Table tab.; Show more in the bottom left corner of each row opens the Expanded View of the event results that also include NULL values. Here, you can toggle between the JSON and Tree views, search, and Copy to clipboard.; Log format options change the way that logs are displayed:-   RAW: Raw format of the entity in the database.; JSON: Condensed JSON format with key value distinctions. NULL values are not displayed.; TREE: Dynamic view of the JSON hierarchy with the option to collapse and expand the diﬀerent hierarchies. |
+| Advanced tab | Displays results in a table format which aggregates the entity ﬁelds into one column. You can change the layout, decide whether to Show line breaks for any text field in the results table, and change the log format from the  menu. Select Show more to pivot an Expanded View of the event results that include NULL values. You can toggle between the JSON and Tree views, search, and Copy to clipboard. |
+| Export to File | Exports the results to a TSV (tab-separated values) ﬁle. More options () works in a similar way to how it works on the Table tab.; Show more in the bottom left corner of each row opens the Expanded View of the event results that also include NULL values. Here, you can toggle between the JSON and Tree views, search, and Copy to clipboard.; Log format options change the way that logs are displayed:-   RAW: Raw format of the entity in the database.; JSON: Condensed JSON format with key value distinctions. NULL values are not displayed.; TREE: Dynamic view of the JSON hierarchy with the option to collapse and expand the diﬀerent hierarchies. |
 | Refresh | Refreshes the query results. |
 | Free text search | Searches the query results for text that you specify in the free text search. Click the Free text search icon to reveal or hide the free text search field. |
 | Filter | Enables you to ﬁlter a particular ﬁeld in the interface that is displayed to specify your ﬁlter criteria. For integer, boolean, and timestamp (such as `_time`) ﬁelds, we recommend that you use the Filter instead of the Free text search, in order to retrieve the most accurate query results. |
@@ -44833,7 +43719,7 @@ Use the following options in the Query Results tab to investigate your query res
 
 The Save As options save your query for future use:
 
--   BIOC Rule: When compatible, saves the query as a BIOC rule. The XQL query must contain a filter for the event\_type field.
+-   BIOC Rule: When compatible, saves the query as a BIOC rule. The XQL query must contain a filter for the event_type field.
     
 -   Correlation Rule: When compatible, saves the query as a Correlation Rule. For more information, see What's a correlation rule?.
     
@@ -44869,10 +43755,9 @@ For network stories, you can pivot to the Causality View only. For cloud Cortex 
 
 ###### Add file path to Malware Profile allowed list
 
-Add a file path to your existing Malware Profile allowed list by right-clicking a <path> field, such as target\_process\_path, and select Add <path type> to malware profile allow list.
+Add a file path to your existing Malware Profile allowed list by right-clicking a <path> field, such as target_process_path, and select Add <path type> to malware profile allow list.
 
 #### Translate to XQL
-Abstract
 
 Learn how to translate your Splunk queries to XQL queries in Cortex Cloud.
 
@@ -44947,14 +43832,13 @@ How to translate a Splunk query to XQL syntax
     
 3.  Add your Splunk query to the SPL query field.
     
-4.  Click the arrow ([image: translate-to-spl-arrow.png]).
+4.  Click the arrow ().
     
     The XQL query field displays the equivalent Splunk query using the XQL syntax.
     
     You can now decide what to do with this query based on the instructions explained in Create XQL query.
 
 #### Graph query results
-Abstract
 
 Cortex Cloud enables you to generate helpful visualizations of your XQL query results.
 
@@ -44973,8 +43857,8 @@ To help you better understand your Cortex Query Language (XQL) query results and
     Enter the following query:
     
     ```
-    dataset = xdr\_data 
-    | fields action\_total\_upload, \_time 
+    dataset = xdr_data 
+    | fields action_total_upload, _time 
     | limit 10
     ```
     
@@ -44986,7 +43870,7 @@ To help you better understand your Cortex Query Language (XQL) query results and
     
     Use Chart Editor
     
-    Navigate to Query Results → Chart Editor ([image: visualizing-query-results-chart-editor.png]) to manually build and view the graph using the selected graph parameters:
+    Navigate to Query Results → Chart Editor () to manually build and view the graph using the selected graph parameters:
     
     -   Main
         
@@ -45026,8 +43910,8 @@ To help you better understand your Cortex Query Language (XQL) query results and
         Example 77. 
         
         ```
-        dataset = xdr\_data 
-        | view graph type = column header = "Test 1" xaxis = \_time yaxis = action\_total\_upload series = \_vendor
+        dataset = xdr_data 
+        | view graph type = column header = "Test 1" xaxis = _time yaxis = action_total_upload series = _vendor
         ```
         
           
@@ -45042,7 +43926,6 @@ To help you better understand your Cortex Query Language (XQL) query results and
     Select Save to Widget Library to pivot to the Widget Library and generate a custom widget based on the query results.
 
 ### XQL query entities
-Abstract
 
 Learn more about the Cortex Query Language (XQL) entities available in the Query Builder.
 
@@ -45072,7 +43955,6 @@ The Query Builder provides queries for the following types of entities:
 The Query Builder also provides flexibility for both on-demand query generation and scheduled queries.
 
 #### Create authentication query
-Abstract
 
 Learn more about creating a query to investigate any authentication activity.
 
@@ -45106,7 +43988,6 @@ How to build an authentication query
 5.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 #### Create event log query
-Abstract
 
 Learn more about creating a query to investigate Windows and Linux event log attributes and investigate event logs across endpoints.
 
@@ -45168,7 +44049,6 @@ How to build an event log query
 7.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 #### Create file query
-Abstract
 
 Learn more about creating a query to investigate the connections between file activity and endpoints.
 
@@ -45205,11 +44085,11 @@ How to build a file query
             
         -   SHA256: SHA256 hash value of the file.
             
-        -   ACTION\_DISK\_DRIVER\_NAME: The driver where the file was created.
+        -   ACTION_DISK_DRIVER_NAME: The driver where the file was created.
             
-        -   FILE\_SYSTEM\_TYPE: Operating system type where the file was run.
+        -   FILE_SYSTEM_TYPE: Operating system type where the file was run.
             
-        -   ACTION\_IS\_VFS: Denotes if the file is on a virtual file system on the disk. This is relevant only for files that are written to disk.
+        -   ACTION_IS_VFS: Denotes if the file is on a virtual file system on the disk. This is relevant only for files that are written to disk.
             
         -   DEVICE TYPE: Type of device used to run the file: Unknown, Fixed, Removable Media, CD-ROM.
             
@@ -45272,7 +44152,6 @@ How to build a file query
 8.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 #### Create image load query
-Abstract
 
 Learn more about create a query to investigate the connections between image load activity, acting processes, and endpoints.
 
@@ -45351,7 +44230,6 @@ How to build an image load query
 8.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 #### Create network connections query
-Abstract
 
 Learn more about creating a query to investigate the connections between firewall logs, endpoints, and network activity.
 
@@ -45461,7 +44339,6 @@ How to build a network connection query
 8.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 #### Create network query
-Abstract
 
 Learn more about creating a query to investigate the connections between network activity, acting processes, and endpoints.
 
@@ -45561,7 +44438,6 @@ How to build a network query
 8.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 #### Create process query
-Abstract
 
 Learn more about creating a query to investigate connections between processes, child processes, and endpoints.
 
@@ -45603,11 +44479,11 @@ How to build a process query
             
         -   PID: Process ID.
             
-        -   PROCESS\_FILE\_INFO: Metadata of the process file, including file property details, file entropy, company name, encryption status, and version number.
+        -   PROCESS_FILE_INFO: Metadata of the process file, including file property details, file entropy, company name, encryption status, and version number.
             
-        -   PROCESS\_SCHEDULED\_TASK\_NAME: Name of the task scheduled by the process to run in the Task Scheduler.
+        -   PROCESS_SCHEDULED_TASK_NAME: Name of the task scheduled by the process to run in the Task Scheduler.
             
-        -   PROCESS\_TOKEN\_INFORMATION: Bitwise token of the process privileges.
+        -   PROCESS_TOKEN_INFORMATION: Bitwise token of the process privileges.
             
         -   DEVICE TYPE: Type of device used to run the process: Unknown, Fixed, Removable Media, CD-ROM.
             
@@ -45666,7 +44542,6 @@ How to build a process query
 8.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 #### Create registry query
-Abstract
 
 Learn more about creating a query to investigate connections between registry activity, processes, and endpoints.
 
@@ -45772,7 +44647,6 @@ How to build a registry query
 8.  When you are ready, view the results of the query. For more information, see Review XQL query results.
 
 #### Query across all entities
-Abstract
 
 From the Cortex Cloud management console, you can search for endpoints and processes across all endpoint activity.
 
@@ -45834,7 +44708,6 @@ How to build a query
 7.  When ready, view the results in a query.
 
 ### Overview of the Query Center
-Abstract
 
 View information about the In Progress and Completed queries that that were run on the tenant.
 
@@ -45858,7 +44731,6 @@ The Query Center displays information about all queries that were run on the ten
 -   The default retention period for historic queries is aligned with issue retention.
 
 #### Edit and run queries in Query Center
-Abstract
 
 Learn more about viewing the results of a query, modifying a query, and rerunning queries from Query Center.
 
@@ -45975,7 +44847,6 @@ How to cancel a query
 -   If you cancel a scheduled query, only the current query is cancelled. Future recurrences of the scheduled query are not affected.
 
 ##### Query Center reference information
-Abstract
 
 Descriptions of the fields in the Query Center table.
 
@@ -45998,10 +44869,8 @@ Query Center table
 | PUBLIC API | Whether the source executing the XQL query was an XQL query API. |
 | QUERY DESCRIPTION\* | Query parameters used to run the query. |
 | QUERY ID | Unique identifier of the query. |
-| QUERY NAME\* | For saved queries, the Query Name identifies the query specified according to a randomly generated number.-   XQL queries use the format XQL-QUERY-<number>, such as XQL-QUERY-12.; Graph Search queries use the format Graph-Query-<number>, such as Graph-Query-1247.
-; For scheduled queries, the Query Name identifies the auto-generated name of the parent XQL query. Scheduled queries also display an icon to the left of the name to indicate that the XQL query is recurring. [image: query-scheduled.png] |
-| QUERY STATUS\* | Status of the query, where the options differ based on the query type: XQL queries:-   Queued: The query is queued and will run when there is an available slot.; Running; Failed; Partially completed: The query was stopped after exceeding the maximum number of permitted results. The default results for any query is a maximum of 1,000,000 results, when no limit is explicitly stated in the query. Queries based on XQL query entities are limited to 10,000 results. To reduce the number of results returned, you can adjust the query settings and rerun.; Stopped: The query was stopped by an administrator.; Completed; Deleted: The query was pruned.
-; Graph Search queries:-   Failed; Completed |
+| QUERY NAME\* | For saved queries, the Query Name identifies the query specified according to a randomly generated number.- XQL queries use the format XQL-QUERY-<number>, such as XQL-QUERY-12.; Graph Search queries use the format Graph-Query-<number>, such as Graph-Query-1247. ; For scheduled queries, the Query Name identifies the auto-generated name of the parent XQL query. Scheduled queries also display an icon to the left of the name to indicate that the XQL query is recurring. |
+| QUERY STATUS\* | Status of the query, where the options differ based on the query type: XQL queries:- Queued: The query is queued and will run when there is an available slot.; Running; Failed; Partially completed: The query was stopped after exceeding the maximum number of permitted results. The default results for any query is a maximum of 1,000,000 results, when no limit is explicitly stated in the query. Queries based on XQL query entities are limited to 10,000 results. To reduce the number of results returned, you can adjust the query settings and rerun.; Stopped: The query was stopped by an administrator.; Completed; Deleted: The query was pruned. ; Graph Search queries:- Failed; Completed |
 | QUERY SYNTAX | The exact syntax used to write the query. |
 | RESULTS SAVED\* | For XQL queries, you can choose whether to save the query results, so the output of the field is either Yes or No. Yet, for Graph Search queries, the results can't be saved and must be run each time again, so the field is always No. |
 | SIMULATED COMPUTE UNITS | Number of XQL query units that were used to execute the Hot Storage query. |
@@ -46012,7 +44881,6 @@ Query Center table
 | XQL | Indicates whether the XQL query was created by an XQL search. |
 
 ### Manage scheduled queries
-Abstract
 
 Learn how to manage your scheduled and recurring queries.
 
@@ -46044,7 +44912,6 @@ The Scheduled Queries page displays information about your scheduled and recurri
 4.  Adjust the schedule settings, and then click OK.
 
 #### Scheduled Queries reference information
-Abstract
 
 Descriptions of the fields in the Scheduled Queries table.
 
@@ -46064,13 +44931,12 @@ Scheduled Queries table
 | PUBLIC API | Whether the source executing the query was an XQL query API. |
 | QUERY DESCRIPTION | Query parameters used to run the query. |
 | QUERY ID | Unique identifier of the query. |
-| QUERY NAME | For saved queries, the Query Name identifies the query specified by the administrator.; For scheduled queries, the Query Name identifies the auto-generated name of the parent query. Scheduled queries also display an icon to the left of the name to indicate that the query is recurring. [image: query-scheduled.png] |
+| QUERY NAME | For saved queries, the Query Name identifies the query specified by the administrator.; For scheduled queries, the Query Name identifies the auto-generated name of the parent query. Scheduled queries also display an icon to the left of the name to indicate that the query is recurring.  |
 | QUERY SYNTAX | The exact syntax used to write the query. |
 | SCHEDULE TIME | Frequency or time at which the query was scheduled to run. |
 | XQL | Whether the query was created by XQL search. |
 
 ### Manage your personal query library
-Abstract
 
 Cortex Cloud provides as part of the Query Library a personal library for saving and managing your own queries.
 
@@ -46078,11 +44944,11 @@ Cortex Cloud provides as part of the Query Library a personal query library for 
 
 The queries listed in your Query Library have different icons to help you identify the different states of the queries:
 
--   [image: unshared-query-icon.png]Created by me and unshared.
+-   Created by me and unshared.
     
--   [image: query-created-by-me-shared-icon.png]Create by me and shared.
+-   Create by me and shared.
     
--   [image: query-created-by-someone-else-shared.png]Created by someone else and shared.
+-   Created by someone else and shared.
     
 
 The Query Library contains a powerful search mechanism that enables you to search in any field related to the query, such as the query name, description, creator, query text, and labels. In addition, adding a label to your query enables you to search for these queries using these labels in the Query Library.
@@ -46148,14 +45014,12 @@ How to add a query to your personal query library
     -   Delete the query. You can only delete queries that you created. If another user created the query, this option is disabled in the query menu when selecting the 3 vertical dots.
 
 ## Stages
-Abstract
 
 Learn more about the Cortex Query Language supported stages.
 
 Stages perform certain operations in evaluating queries. For example, the `dataset` stage specifies a dataset to run the query. Commonly used stages include `dataset`, `fields`, `filters`, `join`, and `sort`. The stages supported in Cortex Query Language are detailed below.
 
 ### alter
-Abstract
 
 Learn more about the Cortex Query Language `alter` stage.
 
@@ -46166,9 +45030,7 @@ Review the following topic:
 
 #### Syntax
 
-```
-alter <field1\> = <function value1\> \[, <field2> = <function value2>, ...\]
-```
+alter <field1\> = <function value1\> [, <field2> = <function value2>, ...]
 
 #### Description
 
@@ -46180,27 +45042,22 @@ After defining a field using the `alter` stage, you can apply other stages, such
 
 Given three username fields, use the coalesce function to return a username value in the `default_username` field, making sure to never have a `default_username` that is `root`.
 
-```
-dataset = xdr\_data 
-| fields actor\_primary\_username, 
-         os\_actor\_primary\_username, 
-         causality\_actor\_primary\_username 
-| alter default\_username = coalesce(actor\_primary\_username, 
-                                    os\_actor\_primary\_username, 
-                                    causality\_actor\_primary\_username)
-| filter default\_username != "root"
-```
+dataset = xdr_data 
+| fields actor_primary_username, 
+         os_actor_primary_username, 
+         causality_actor_primary_username 
+| alter default_username = coalesce(actor_primary_username, 
+                                    os_actor_primary_username, 
+                                    causality_actor_primary_username)
+| filter default_username != "root"
 
 ### arrayexpand
-Abstract
 
 Learn more about the Cortex Query Language `arrayexpand` stage.
 
 #### Syntax
 
-```
-arrayexpand <array\_field\> \[limit <limit number\>\]
-```
+arrayexpand <array_field\> [limit <limit number\>]
 
 #### Description
 
@@ -46210,18 +45067,16 @@ The `arrayexpand` stage expands the values of a multi-value array field into sep
 
 Suppose you have a dataset with a single row like this:
 
-| uid | username | array\_values |
+| uid | username | array_values |
 | --- | --- | --- |
-| 123456 | ajohnson | \[1,2,3,4,5,6,7,8,9,0\] |
+| 123456 | ajohnson | [1,2,3,4,5,6,7,8,9,0] |
 
 Then if you run an `arrayexpand` stage using the `array_values` field, with a limit of 3, the result set includes the following records:
 
-```
-dataset=my\_dataset 
-| arrayexpand array\_values limit 3
-```
+dataset=my_dataset 
+| arrayexpand array_values limit 3
 
-| uid | username | array\_values |
+| uid | username | array_values |
 | --- | --- | --- |
 | 123456 | ajohnson | 2 |
 | 123456 | ajohnson | 1 |
@@ -46231,14 +45086,11 @@ dataset=my\_dataset
 
 The result records created by `arrayexpand` are in no particular order. However, you can use the sort stage to sort the results:
 
-```
-dataset=my\_dataset 
-| arrayexpand array\_values 
-| sort asc array\_values
-```
+dataset=my_dataset 
+| arrayexpand array_values 
+| sort asc array_values
 
 ### bin
-Abstract
 
 Learn more about the Cortex Query Language `bin` stage to group events by quantity or time span.
 
@@ -46252,7 +45104,7 @@ Learn more about the Cortex Query Language `bin` stage to group events by quanti
     
 -   **Time Span**
     
-    bin <field\> span = <time\> \[timeshift = <epoch time\> \[timezone = "_`<time zone>`_"\]\]
+    bin <field\> span = <time\> [timeshift = <epoch time\> [timezone = "_`<time zone>`_"]]
     
 
 #### Description
@@ -46293,9 +45145,9 @@ The time suffix is not case sensitive.
     Return a maximum of 1,000 `xdr_data` records with the events of the `action_total_upload` field grouped by 50MB. Records with the `action_total_upload` value set to 0 or null are not included in the results.
     
     ```
-    dataset = xdr\_data
-    | filter action\_total\_upload != 0 and action\_total\_upload != null 
-    | bin action\_total\_upload bins = 50 
+    dataset = xdr_data
+    | filter action_total_upload != 0 and action_total_upload != null 
+    | bin action_total_upload bins = 50 
     | limit 1000
     ```
     
@@ -46306,8 +45158,8 @@ The time suffix is not case sensitive.
         Return a maximum of 1,000 `xdr_data` records with the events of the `_time` field grouped by 1-hour increments starting from the epoch time `1615353499`, and includes a time zone using an hours offset of `“+08:00”`.
         
         ```
-        dataset = xdr\_data 
-        | bin \_time span = 1h timeshift = 1615353499 timezone = “+08:00”
+        dataset = xdr_data 
+        | bin _time span = 1h timeshift = 1615353499 timezone = “+08:00”
         | limit 1000
         ```
         
@@ -46316,21 +45168,18 @@ The time suffix is not case sensitive.
         Return a maximum of 1,000 `xdr_data` records with the events of the `_time` field grouped by 1-hour increments starting from the epoch time `1615353499`, and includes an `"America/Los_Angeles"` time zone.
         
         ```
-        dataset = xdr\_data
-        | bin \_time span = 1h timeshift = 1615353499 timezone = “America/Los\_Angeles”
+        dataset = xdr_data
+        | bin _time span = 1h timeshift = 1615353499 timezone = “America/Los_Angeles”
         | limit 1000
         ```
 
 ### call
-Abstract
 
 Learn more about the Cortex Query Language `call` stage to reference a predefined query from the Query Library.
 
 #### Syntax
 
-```
-call "<name of predefined query>" \[<param\_name1> = <value1> <param\_name2> = <value2>....\]
-```
+call "<name of predefined query>" [<param_name1> = <value1> <param_name2> = <value2>....]
 
 #### Description
 
@@ -46340,11 +45189,9 @@ The `call` stage is used to reference a predefined query from the Query Library,
 
 For the predefined query called "CreateRole operation parsed to fields", returns a maximum of 100 records, where the `accessKeyId` equals "1234".
 
-```
 call "CreateRole operation parsed to fields"
 | filter accessKeyId = "1234"
 | limit 100
-```
 
 #### Example with Parameters
 
@@ -46352,29 +45199,22 @@ Using the same example above, this example shows how to use the same `call` stag
 
 Saved query:
 
-```
-dataset = dataset\_name 
-| filter field\_name = $key\_id
-```
+dataset = dataset_name 
+| filter field_name = $key_id
 
 Query to run with using parameters:
 
-```
-call "CreateRole operation parsed to fields" key\_id = "1234"
+call "CreateRole operation parsed to fields" key_id = "1234"
 | limit 100
-```
 
 ### comp
-Abstract
 
 Learn more about the Cortex Query Language `comp` stage that precedes functions calculating statistics.
 
 #### Syntax
 
-```
-comp <aggregate function1> (<field>) \[as <alias>\]\[,<aggregate function2>(<field>) \[as <alias>\],...\] \[by <field1>\[,<field2>...\]\]
-\[addrawdata = true|false \[as <target field>\]\]
-```
+comp <aggregate function1> (<field>) [as <alias>][,<aggregate function2>(<field>) [as <alias>],...] [by <field1>[,<field2>...]]
+[addrawdata = true|false [as <target field>]]
 
 #### Description
 
@@ -46393,14 +45233,12 @@ Use the `alias` clause to provide a column label for the `comp` results, and is 
 
 The `by` clause identifies the rows in the result set that will be aggregated. This clause is optional. Provide one or more fields to this clause. All fields with matching values are used to perform the aggregation. For example, if you had records such as:
 
-```
 number,id,product
 100,"se1","A55"
 50,"se1","A60"
 50,"se1","A60"
 25,"se2","A55"
 25,"se2","A60" 
-```
 
 The you can aggregate on the number column, and perform aggregation based on matching values in the id and/or product column. So if you sum the number column by the id column, you would get two results:
 
@@ -46432,26 +45270,22 @@ Wildcards are only supported with aggregate functions and not approximate aggreg
 
 The syntax for this is:
 
-```
-comp <aggregate function>(\*) as \* \[by \[asc|desc\] <field1>\[,<field2>...\]\]
-\[addrawdata = true|false as <target field>\]
-```
+comp <aggregate function>(\*) as \* [by [asc|desc] <field1>[,<field2>...]]
+[addrawdata = true|false as <target field>]
 
 For wildcards to work, all of the fields contained in the result set that are not identified in the `by` clause must be aggregatable.
 
 #### Examples
 
-Sum the action\_total\_download values for all records with matching pairs of values for the `actor_process_image_path` and `actor_process_command_line` fields. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing the raw data events used to display the final comp results.
+Sum the action_total_download values for all records with matching pairs of values for the `actor_process_image_path` and `actor_process_command_line` fields. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing the raw data events used to display the final comp results.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path,
-actor\_process\_command\_line as Process\_CMD,
-action\_total\_download as Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path,
+actor_process_command_line as Process_CMD,
+action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp sum(Download) as total by Process\_Path, Process\_CMD addrawdata = true as raw\_data
-```
+| comp sum(Download) as total by Process_Path, Process_CMD addrawdata = true as raw_data
 
 Using the `panw_ngfw_traffic_raw` dataset, sum the `bytes_total`, `bytes_received`, and `bytes_sent` values for every record contained in the result set with a matching value for `source_ip`. The query calculates a maximum of 1000 `xdr_data` records and includes a `raw_data` column listing the raw data events used to display the final comp results.
 
@@ -46459,12 +45293,10 @@ Using the `panw_ngfw_traffic_raw` dataset, sum the `bytes_total`, `bytes_receive
 
 The `comp` stage runs on 1000 raw data events, but only a 100 will be displayed in the `raw_data` column.
 
-```
-dataset = panw\_ngfw\_traffic\_raw
-| fields bytes\_total, bytes\_received, bytes\_sent, source\_ip
+dataset = panw_ngfw_traffic_raw
+| fields bytes_total, bytes_received, bytes_sent, source_ip
 | limit 1000
-| comp sum(\*) as \* by source\_ip addrawdata = true as raw\_data
-```
+| comp sum(\*) as \* by source_ip addrawdata = true as raw_data
 
 ###### comp Aggregate Functions
 
@@ -46474,7 +45306,7 @@ The aggregate functions you can use with the `comp` stage are:
     
 -   countcount
     
--   count\_distinctcount\_distinct
+-   count_distinctcount_distinct
     
 -   earliestearliest
     
@@ -46492,9 +45324,9 @@ The aggregate functions you can use with the `comp` stage are:
     
 -   minmin
     
--   stddev\_populationstddev\_population
+-   stddev_populationstddev_population
     
--   stddev\_samplestddev\_sample
+-   stddev_samplestddev_sample
     
 -   sumsum
     
@@ -46507,22 +45339,19 @@ The aggregate functions you can use with the `comp` stage are:
 
 The approximate aggregate functions you can use with the **`comp`** stage are:
 
--   approx\_count approx\_count
+-   approx_count approx_count
     
--   approx\_quantiles approx\_quantiles
+-   approx_quantiles approx_quantiles
     
--   approx\_top approx\_top
+-   approx_top approx_top
 
 ### config
-Abstract
 
 Learn more about the Cortex Query Language `config` stage that configures the query behavior.
 
 #### Syntax
 
-```
 config <function>
-```
 
 #### Description
 
@@ -46532,22 +45361,19 @@ The `config` stage configures the query behavior. It must be used with one of th
 
 These functions you can use with the `config` stage:
 
--   case\_sensitive
+-   case_sensitive
     
 -   timeframe
     
--   max\_runtime\_minutes
+-   max_runtime_minutes
 
 #### case_sensitive
-Abstract
 
 Learn more about the Cortex Query Language `case_sensitive` config stage.
 
 ##### Syntax
 
-```
-config case\_sensitive = true | false
-```
+config case_sensitive = true | false
 
 ##### Description
 
@@ -46557,7 +45383,7 @@ If you do not provide this stage in your query, the default behavior is `false`,
 
 Things to keep in mind about before implementing this stage
 
--   The Settings → Configurations → XQL Configuration → Case Sensitivity (case\_sensitive) setting can overwrite this `case_sensitive` configuration for all fields in the application, except for BIOCs, which will remain case insensitive no matter what this setting is set to.
+-   The Settings → Configurations → XQL Configuration → Case Sensitivity (case_sensitive) setting can overwrite this `case_sensitive` configuration for all fields in the application, except for BIOCs, which will remain case insensitive no matter what this setting is set to.
     
 -   The `config case_sensitive` stage can't be used to compare a field to an inner query. In this situation, ensure to use the `lowercase` or `uppercase` functions on the field and inner query stages and functions syntax.
     
@@ -46566,19 +45392,19 @@ Things to keep in mind about before implementing this stage
     This query won't provide the correct results of comparing the `agent_hostname` field with the inner query:
     
     ```
-    config case\_sensitive = false 
-    | dataset = xdr\_data 
-    | fields agent\_hostname
-    | filter agent\_hostname in (dataset = <lookup dataset> | fields agent\_hostname)
+    config case_sensitive = false 
+    | dataset = xdr_data 
+    | fields agent_hostname
+    | filter agent_hostname in (dataset = <lookup dataset> | fields agent_hostname)
     ```
     
     This query will provide the correct output:
     
     ```
-    config case\_sensitive = false  
-    | dataset = xdr\_data
-    | fields agent\_hostname 
-    | filter lowercase(agent\_hostname) in (dataset = <lookup dataset> | alter lower\_agent\_hostname = lowercase(agent\_hostname) | fields lower\_agent\_hostname)
+    config case_sensitive = false  
+    | dataset = xdr_data
+    | fields agent_hostname 
+    | filter lowercase(agent_hostname) in (dataset = <lookup dataset> | alter lower_agent_hostname = lowercase(agent_hostname) | fields lower_agent_hostname)
     ```
     
       
@@ -46590,7 +45416,7 @@ Things to keep in mind about before implementing this stage
     The results of this example are true, where the left side (`uppercase("a")`) is lowercase as it's not an array, and the right side (`("x", "A")`) is also an array that contains only literal strings.
     
     ```
-    | alter field\_name = if(uppercase("a") in ("x", "A"), true, false)
+    | alter field_name = if(uppercase("a") in ("x", "A"), true, false)
     ```
     
       
@@ -46600,7 +45426,7 @@ Things to keep in mind about before implementing this stage
     The results of this example are false, where the left side (`uppercase("a")`) is lowercase as it's not an array, and the right side (`"x", uppercase("a"))`) is an array that contains a function (`uppercase("a")`).
     
     ```
-    | alter field\_name = if(uppercase("a") in ("x", uppercase("a")),true, false)
+    | alter field_name = if(uppercase("a") in ("x", uppercase("a")),true, false)
     ```
     
       
@@ -46608,16 +45434,13 @@ Things to keep in mind about before implementing this stage
 
 ##### Examples
 
-```
-config case\_sensitive = true 
-| dataset = xdr\_data 
-| fields actor\_process\_image\_name as apin 
+config case_sensitive = true 
+| dataset = xdr_data 
+| fields actor_process_image_name as apin 
 | filter apin != NULL and apin contains "python" 
 | limit 100
-```
 
 #### timeframe
-Abstract
 
 Cortex Query Language `timeframe` configuration enables performing searches within a specific time frame from the query execution.
 
@@ -46717,7 +45540,7 @@ The time unit is not case sensitive.
     
     ```
     config timeframe = 10h
-    | dataset = xdr\_data
+    | dataset = xdr_data
     | limit 100
     ```
     
@@ -46727,7 +45550,7 @@ The time unit is not case sensitive.
     
     ```
     config timeframe between "2d" and "now"
-    | dataset = xdr\_data
+    | dataset = xdr_data
     | limit 100
     ```
     
@@ -46737,7 +45560,7 @@ The time unit is not case sensitive.
     
     ```
     config timeframe between "begin" and "2y"
-    | dataset = xdr\_data
+    | dataset = xdr_data
     | limit 100
     ```
     
@@ -46747,7 +45570,7 @@ The time unit is not case sensitive.
     
     ```
     config timeframe between "-4d" and "+5d"
-    | dataset = xdr\_data
+    | dataset = xdr_data
     | limit 100
     ```
     
@@ -46756,22 +45579,17 @@ The time unit is not case sensitive.
 
 From April 1, 2021 at 9:00 a.m. UTC -02:00 until April 2, 2021 at 10:00 a.m. UTC -02:00, return a maximum of 100 `xdr_data` records.
 
-```
 config timeframe between "2021-04-01 09:00:00 -0200" and "2021-04-02 10:00:00 -0200" 
-| dataset = xdr\_data 
+| dataset = xdr_data 
 | limit 100
-```
 
 #### max_runtime_minutes
-Abstract
 
 Learn more about the Cortex Query Language `max_runtime_minutes` config stage.
 
 ##### Syntax
 
-```
-config max\_runtime\_minutes = <number> | ...
-```
+config max_runtime_minutes = <number> | ...
 
 ##### Description
 
@@ -46783,24 +45601,19 @@ For more information about query limits, see XQL query management.
 
 ##### Examples
 
-```
-config max\_runtime\_minutes = 90 
-| dataset = xdr\_data 
-| fields actor\_process\_image\_name as apin 
+config max_runtime_minutes = 90 
+| dataset = xdr_data 
+| fields actor_process_image_name as apin 
 | filter apin != NULL and apin contains "python" 
 | limit 100
-```
 
 ### dedup
-Abstract
 
 Learn more about the Cortex Query Language `dedup` stage that removes duplicate occurrences of field values.
 
 #### Syntax
 
-```
-dedup <field1\>\[,<field2\>, ...\] by asc | desc <field\>
-```
+dedup <field1\>[,<field2\>, ...] by asc | desc <field\>
 
 #### Description
 
@@ -46814,52 +45627,41 @@ The `dedup` stage can only be used with fields that contain numbers or strings.
 
 Return unique values for the `actor_primary_username` field. For any given field value, return the first chronologically occurring record.
 
-```
-dataset = xdr\_data 
-| fields actor\_primary\_username as apu 
+dataset = xdr_data 
+| fields actor_primary_username as apu 
 | filter apu != null 
-| dedup apu by asc \_time
-```
+| dedup apu by asc _time
 
 Return the last chronologically occurring record for any given `actor_primary_username` value.
 
-```
-dataset = xdr\_data 
-| fields actor\_primary\_username as apu 
+dataset = xdr_data 
+| fields actor_primary_username as apu 
 | filter apu != null 
-| dedup apu by desc \_time
-```
+| dedup apu by desc _time
 
 Return the first occurrence seen by for any given `actor_primary_username`. field value.
 
-```
-dataset = xdr\_data 
-| fields actor\_primary\_username as apu 
+dataset = xdr_data 
+| fields actor_primary_username as apu 
 | filter apu != null 
 | dedup apu by asc apu
-```
 
 Return unique groups of `actor_primary_username` and `os_actor_primary_username` field values. For each unique grouping, return the pair that first appears on a record with a non-NULL `action_file_size` field.
 
-```
-dataset = xdr\_data 
-| fields actor\_primary\_username as apu, 
-         os\_actor\_primary\_username as oapu, 
-         action\_file\_size as afs 
+dataset = xdr_data 
+| fields actor_primary_username as apu, 
+         os_actor_primary_username as oapu, 
+         action_file_size as afs 
 | filter apu != null and afs != null 
 | dedup apu, oapu by asc afs
-```
 
 ### fields
-Abstract
 
 Learn more about the Cortex Query Language `fields` stage that defines the fields returned in the result set.
 
 #### Syntax
 
-```
-fields \[-\] <field\_1\> \[as <name1\>\], <field\_2\> \[as <name2\>\], ...
-```
+fields [-] <field_1\> [as <name1\>], <field_2\> [as <name2\>], ...
 
 #### Description
 
@@ -46867,25 +45669,25 @@ The `fields` stage declares which fields are returned in the result set, includi
 
 Use a wildcard (`*`) to include all fields that match the pattern. Use a minus character (`-`) to exclude a field from the result set. The following system fields cannot be excluded and are always displayed:
 
--   \_time
+-   _time
     
--   \_insert\_time
+-   _insert_time
     
--   \_raw\_log
+-   _raw_log
     
--   \_product
+-   _product
     
--   \_vendor
+-   _vendor
     
--   \_tag
+-   _tag
     
--   \_snapshot\_id
+-   _snapshot_id
     
--   \_snapshot\_log\_count
+-   _snapshot_log_count
     
--   \_snapshot\_collection\_ts
+-   _snapshot_collection_ts
     
--   \_id
+-   _id
     
 
 Use the `as` clause to set an alias for a field. If you use the `as` clause, then subsequent stages must use that alias to refer to the field.
@@ -46894,16 +45696,13 @@ Use the `as` clause to set an alias for a field. If you use the `as` clause, the
 
 Return the `action_country` field from all `xdr_data` records where the `action_country` field is both not null and not "-". Also include all fields with names that match `event_*` except for `event_type`.
 
-```
-dataset = xdr\_data 
-| fields action\_country as ac 
-| fields event\_\* 
-| fields - event\_type 
-| filter ac != null and ac != "-" 
-```
+dataset = xdr_data 
+| fields action_country as ac 
+| fields event_\* 
+| fields - event_type 
+| filter ac != null and ac != "-"
 
 ### filter
-Abstract
 
 Learn more about the Cortex Query Language `filter` stage that narrows down the displayed results.
 
@@ -46970,7 +45769,7 @@ When using the `filter` stage, you can use both single (`"<text>"`) and triple
 
 The examples provided are based on the following data table for a dataset called `test_dataset`:
 
-| \_TIME | TEST |
+| _TIME | TEST |
 | --- | --- |
 | Mar 26th 2022 19:26:07 | 12\\t3 |
 | May 7th 2023 15:16:00 | 12 3 |
@@ -46983,16 +45782,14 @@ The examples provided are based on the following data table for a dataset called
 
 Example 198. 
 
-```
 config timeframe = 10y 
-| dataset = test\_dataset  
+| dataset = test_dataset  
 | filter test = "12\\t3\*"
 | fields test
-```
 
 **Output results table**:
 
-| \_TIME | TEST |
+| _TIME | TEST |
 | --- | --- |
 | Mar 26th 2022 19:26:07 | 12\\t3 |
 | Apr 5th 2024 11:21:02 | 12\\t34563 |
@@ -47005,16 +45802,14 @@ The asterisk (`*`) in `"12\t3*"` means to process the string field as an XQL wi
 
 Example 199. 
 
-```
 config timeframe = 10y 
-| dataset = test\_dataset  
+| dataset = test_dataset  
 | filter test = """12\\t3\*"""
 | fields test
-```
 
 **Output results table**:
 
-| \_TIME | TEST |
+| _TIME | TEST |
 | --- | --- |
 | May 7th 2023 15:16:00 | 12 3 |
 | May 9th 2025 13:22:22 | 12 35897 |
@@ -47029,36 +45824,27 @@ The `\t` in `"""12\t3*"""` is processed as a tab escape character. The asterisk 
 
 Return `xdr_data` records where the `event_type` is `NETWORK` and the `event_sub_type` is `NETWORK_HTTP_HEADER`.
 
-```
-dataset = xdr\_data 
-| filter event\_type = NETWORK and event\_sub\_type = NETWORK\_HTTP\_HEADER
-```
+dataset = xdr_data 
+| filter event_type = NETWORK and event_sub_type = NETWORK_HTTP_HEADER
 
 **Note:**
 
 When entering filters to the XQL Search user interface, possible field values for fields of type `enum` are available using the auto-complete feature. However, the autocomplete can only show enum values that are known to the schema. In some cases, on data import an enum value is included that is not known to the defined schema. In this case, the value will appear in the result set as an unknown value, such as `event_type_unknown_4`. Be aware that even though this value appears in the result set, you cannot create a filter using it. For example, this query will fail, even if you know the value appears in your result set:
 
-```
-dataset = xdr\_data 
-| filter event\_type = event\_type\_unknown\_4
-```
+dataset = xdr_data 
+| filter event_type = event_type_unknown_4
 
 When using fields of type `enum`, the following syntax is supported.
 
 **Syntax format A**
 
-```
-| filter event\_type = ENUM.FILE
-```
+| filter event_type = ENUM.FILE
 
 **Syntax format B**
 
-```
-| filter event\_type = FILE
-```
+| filter event_type = FILE
 
 ### getrole
-Abstract
 
 Learn more about the Cortex Query Language `getrole` stage that enriches events with specific roles associated with usernames or endpoints.
 
@@ -47072,15 +45858,13 @@ This stage is unsupported in BIOCs and real-time Correlation Rules.
 
 #### Syntax
 
-```
-getrole <field> \[as <alias>\]
-```
+getrole <field> [as <alias>]
 
 #### Description
 
 The `getrole` stage enriches events with specific roles associated with usernames or endpoints. The `getrole` stage receives as an input a string field that is either a username in the `NETBIOS\SAM` format, such as `mydomain\myuser`, or the agent ID of a host. The agent ID can be found in the `endpoints` dataset as `endpoint_id` or in the `xdr_data` dataset as `agent_id`.
 
-The roles for this field are displayed in a column called asset\_roles in the results table. If there is one or more roles associated with the field, the values are represented as a string array, such as `['ADMIN', 'USER']`, and are listed in the asset\_roles column. If there are no roles, the resulting column is an empty array.
+The roles for this field are displayed in a column called asset_roles in the results table. If there is one or more roles associated with the field, the values are represented as a string array, such as `['ADMIN', 'USER']`, and are listed in the asset_roles column. If there are no roles, the resulting column is an empty array.
 
 You can also change the name of the column using `as` in the syntax to define an alias: `getrole <field> as <alias>`.
 
@@ -47111,39 +45895,32 @@ In addition, it is possible to use the `filter` stage with a new `ROLE` prefix t
 
 #### Examples
 
-Return a maximum of 100 `xdr_data` records with the enriched events including specific roles associated with usernames. If there are one or more roles associated with the value of the `user_id` string field column, the output is displayed in the asset\_roles column in the results table. Otherwise, the field is empty.
+Return a maximum of 100 `xdr_data` records with the enriched events including specific roles associated with usernames. If there are one or more roles associated with the value of the `user_id` string field column, the output is displayed in the asset_roles column in the results table. Otherwise, the field is empty.
 
-```
-dataset = xdr\_data
+dataset = xdr_data
 | limit 100
-| getrole user\_id
-```
+| getrole user_id
 
 Return a maximum of 100 `xdr_data` records of all the powershell executions made by the `SERVICE_ACCOUNTS` user role in the organization. The first `filter` stage indicates how to filter for the parent process, which is powershell.exe. The `fields` stage indicates the field columns to include in the results table and which ones are renamed in the table: `action_process_image_name` to `process_name` and `action_process_image_command_line` to `process_cmd`. The `getrole` stage indicates the enriched events to include for the specific roles associated with usernames. If the `ROLE.SERVICE_ACCOUNTS` role is associated with any values in the `actor_effective_username` string field column, the row is displayed in the results table. Otherwise, the entire row is excluded from the results table.
 
-```
-dataset = xdr\_data
-| filter event\_type = ENUM.PROCESS  and event\_sub\_type = ENUM.PROCESS\_START and lowercase(actor\_process\_image\_name) = "powershell.exe"
-| fields action\_process\_image\_name as process\_name, action\_process\_image\_command\_line as process\_cmd, event\_id, actor\_effective\_username
-| getrole actor\_effective\_username as user\_roles
-| filter user\_roles = ROLE.SERVICE\_ACCOUNTS
+dataset = xdr_data
+| filter event_type = ENUM.PROCESS  and event_sub_type = ENUM.PROCESS_START and lowercase(actor_process_image_name) = "powershell.exe"
+| fields action_process_image_name as process_name, action_process_image_command_line as process_cmd, event_id, actor_effective_username
+| getrole actor_effective_username as user_roles
+| filter user_roles = ROLE.SERVICE_ACCOUNTS
 | limit 100
-```
 
 ### iploc
-Abstract
 
 Learn more about the Cortex Query Language `iploc` stage that associates IPv4 addresses of fields to a list of predefined attributes related to the geolocation.
 
 #### Syntax
 
-```
 iploc <field\>
-```
 
 #### Description
 
-The `iploc` stage associates the IPv4 address of any field to a list of predefined attributes related to the geolocation. By default, when using this stage in your queries, the geolocation data is added to the results table in these predefined column names: LOC\_ASN\_ORG, LOC\_ASN\_IS\_PROXY, LOC\_ASN, LOC\_CITY, LOC\_CONTINENT, LOC\_COUNTRY, LOC\_LATLON, LOC\_REGION, and LOC\_TIMEZONE.
+The `iploc` stage associates the IPv4 address of any field to a list of predefined attributes related to the geolocation. By default, when using this stage in your queries, the geolocation data is added to the results table in these predefined column names: LOC_ASN_ORG, LOC_ASN_IS_PROXY, LOC_ASN, LOC_CITY, LOC_CONTINENT, LOC_COUNTRY, LOC_LATLON, LOC_REGION, and LOC_TIMEZONE.
 
 **Note:**
 
@@ -47171,47 +45948,38 @@ The following options are available to you when using this stage in your queries
 
 Return a maximum of 1000 `xdr_data` records with the specific geolocation data associated with the `action_remote_ip` field, where no record with a null value for `action_remote_ip` is included, and displays the name of the city in a column called `city` and a combination of the latitude and longitude in a column called `loc_latlon` with comma-separated values of latitude and longitude.
 
-```
-dataset = xdr\_data
+dataset = xdr_data
 | limit 1000 
-| filter action\_remote\_ip != null 
-| iploc action\_remote\_ip loc\_city as city, loc\_latlon
-```
+| filter action_remote_ip != null 
+| iploc action_remote_ip loc_city as city, loc_latlon
 
 Return a maximum of 1000 `xdr_data` records with all the available geolocation data with the predefined column names, and add the specified `suffix _remote_id` to each predefined column name, where no record with a null value for `action_remote_ip` is included.
 
-```
-dataset = xdr\_data 
+dataset = xdr_data 
 | limit 1000
-| filter action\_remote\_ip != null
-| iploc action\_remote\_ip suffix=\_remote\_id 
-```
+| filter action_remote_ip != null
+| iploc action_remote_ip suffix=_remote_id 
 
 Return a maximum of 1000 `xdr_data` records with the specific geolocation data associated with the `action_remote_ip` field that includes the name of the country (contained in `loc_country`) in a column called `country`, where no record with a null value for either `country` or `action_remote_ip` is included. The comp stage is used to count the number of IP addresses per country. The results are displayed in a graph type `of kind` map, where the x-axis represents the `country` and the y-axis the `action_remote_ip`.
 
-```
-dataset = xdr\_data 
+dataset = xdr_data 
 | limit 1000
-| iploc action\_remote\_ip loc\_country as country  
-| filter country != null and action\_remote\_ip  != null
-| comp count() as ip\_count by country 
-| view graph type = map xaxis = country yaxis = ip\_count
-```
+| iploc action_remote_ip loc_country as country  
+| filter country != null and action_remote_ip  != null
+| comp count() as ip_count by country 
+| view graph type = map xaxis = country yaxis = ip_count
 
 ### join
-Abstract
 
 Learn more about the Cortex Query Language `join` stage that combines the results of two queries into a single result set.
 
 #### Syntax
 
-```
-join conflict\_strategy = both|left|right 
+join conflict_strategy = both|left|right 
      type = inner|left|right 
      ((<xql query\>) 
-     as <execution\_name\> 
-     <boolean\_expr\>)
-```
+     as <execution_name\> 
+     <boolean_expr\>)
 
 #### Description
 
@@ -47222,8 +45990,8 @@ The `join()` stage combines the results of two queries into a single result set.
 | `conflict_strategy` | Identifies the join conflict strategy when there is a conflict in the column names between the 2 result sets which one should be chosen, either: `right`: The column from the inner `join` query is used (default), which implements a right outer join.; `left`: The column from the orignal result set in the dataset is used, which implements a left outer join.; `both`: Both columns are used. The original result set column from the dataset keeps the current name, while the inner `join` query result set column name includes the following suffix added to the current name `_joined_10`, such as `<original column name>_joined_10`, and depending on the number of conflicted fields the suffix increases to `_joined_11`, `_joined_12`.... |
 | `type` | Identifies the join type. `inner` Returns all the records in common between the queries that are being joined. This is the default join type.; `right` Returns all records from the join result set, plus any records from the parent result set that intersect with the join result set.; `left` Returns all records from the parent result set, plus any records from the join result set that intersect with the parent result set. |
 | <xql query\> | Provides the XQL query to be joined with the parent query. |
-| as <execution\_name\> | Provides an alias for the join query's result set. For example, if you specify an execution name of `join1`, and in the join query you return field `agent_id`, then you can subsequently refer to that field as `join1.agent_id`. |
-| <boolean\_expr\> | Identifies the conditions that must be met in order to place a record in the join result set. |
+| as <execution_name\> | Provides an alias for the join query's result set. For example, if you specify an execution name of `join1`, and in the join query you return field `agent_id`, then you can subsequently refer to that field as `join1.agent_id`. |
+| <boolean_expr\> | Identifies the conditions that must be met in order to place a record in the join result set. |
 
 **Note:**
 
@@ -47233,32 +46001,25 @@ This stage does not preserve sort order. If you are combing this stage with a so
 
 Return `microsoft_windows_raw` records, which are combined with the `xdr_data` records to include a new column called `edr`. For the `event_type` set to `EVENT_LOG`, the `actor_process_image_name` and `event_id` fields are returned from all `xdr_data` records, which are then compared to the fields inside the `microsoft_windows_raw` dataset, where `edr.event_id = edr_event_id`, and the results are added to the new `edr` column.
 
-```
-dataset  = microsoft\_windows\_raw 
-| join (dataset = xdr\_data | filter event\_type = EVENT\_LOG | fields actor\_process\_image\_name, event\_id ) 
-as edr edr.event\_id = edr\_event\_id
-```
+dataset  = microsoft_windows_raw 
+| join (dataset = xdr_data | filter event_type = EVENT_LOG | fields actor_process_image_name, event_id ) 
+as edr edr.event_id = edr_event_id
 
 Return a maximum of 100 `xdr_data` records with the events of the `agent_id`, `event_id` , and `_product` fields, where the `_product` field is displayed as `product`. The `agent_id`, `event_id`, and `_product` fields are returned from all `xdr_data` records and are then compared to the fields inside the `panw_ngfw_filedata_raw` dataset, where `_time = panw.time`, and the results are added to the new `panw` column. When there is a conflict in the column names between the 2 result sets both columns are used.
 
-```
-dataset = xdr\_data 
-| fields agent\_id, event\_id, \_product as product
-| join conflict\_strategy = both (dataset = panw\_ngfw\_filedata\_raw | fields \_product as product)
-as panw \_time = panw.\_time
+dataset = xdr_data 
+| fields agent_id, event_id, _product as product
+| join conflict_strategy = both (dataset = panw_ngfw_filedata_raw | fields _product as product)
+as panw _time = panw._time
 | limit 100
-```
 
 ### limit
-Abstract
 
 Learn more about the Cortex Query Language `limit` stage that sets the maximum number of records that can be returned in the result set.
 
 #### Syntax
 
-```
 limit <number\>
-```
 
 #### Description
 
@@ -47270,20 +46031,15 @@ Using a small limit can greatly increase the performance of your query by reduci
 
 Set the maximum number of records returned by the query to 10.
 
-```
-dataset = xdr\_data | limit 10
-```
+dataset = xdr_data | limit 10
 
 ### replacenull
-Abstract
 
 Learn more about the Cortex Query Language `replacenull` stage that replaces null field values with a text string.
 
 #### Syntax
 
-```
 replacenull <field\> = <text string\>
-```
 
 #### Description
 
@@ -47295,23 +46051,18 @@ If you use the `replacenull` stage, then all subsequent stages that refer to the
 
 Return the `action_country` field from every `xdr_data` records where the `action_country` field is null, using the text string `N/A` in the place of an empty field value.
 
-```
-dataset = xdr\_data 
-| fields action\_country as ac 
+dataset = xdr_data 
+| fields action_country as ac 
 | replacenull ac = "N/A" 
 | filter ac = "N/A"
-```
 
 ### sort
-Abstract
 
 Learn more about the Cortex Query Language `sort` stage that identifies the sort order for records returned in the result set.
 
 #### Syntax
 
-```
-sort asc|desc <field1\>\[, asc|desc <field2\>...\]
-```
+sort asc|desc <field1\>[, asc|desc <field2\>...]
 
 #### Description
 
@@ -47328,17 +46079,14 @@ Keep the following points in mind before running a query with the sort stage:
 
 Return the `action_boot_time` and `event_timestamp` fields from all `xdr_data` records. Sort the result set first by the `action_boot_time` field value in descending order, then by `event_timestamp` field in ascending order.
 
-```
-dataset = xdr\_data 
-| fields action\_boot\_time as abt, event\_timestamp as et 
+dataset = xdr_data 
+| fields action_boot_time as abt, event_timestamp as et 
 | sort desc abt, asc et
 | limit 1
-```
 
 ### Tag
-Abstract
 
-Learn more about the Cortex Query Language `tag` stage that adds a single tag or list of tags to the \_tag system ﬁeld.
+Learn more about the Cortex Query Language `tag` stage that adds a single tag or list of tags to the _tag system ﬁeld.
 
 #### Syntax
 
@@ -47363,26 +46111,21 @@ The `tag` stage is used in combination with the `add` operator to append a s
 
 In the `xdr_data` dataset, add a single tag called `"test"` to the `_tag` system field.
 
-```
-dataset = xdr\_data
+dataset = xdr_data
 | tag add "test"
-```
 
 In the `xdr_data` dataset, add a list of tags, `"test1"`, `"test2"`, and `"test3"`, to the `_tag` system field.
 
-```
-dataset = xdr\_data
+dataset = xdr_data
 | tag add "test1", "test2", "test3"
-```
 
 ### target
-Abstract
 
 Learn more about the Cortex Query Language `target` stage that saves query results to a dataset or lookup dataset.
 
 #### Syntax
 
-target type=dataset|lookup \[append=true|false\] _`<dataset name>`_
+target type=dataset|lookup [append=true|false] _`<dataset name>`_
 
 #### Description
 
@@ -47411,87 +46154,78 @@ When you create or add data to a lookup dataset using the `target` stage, the `_
 
 Save the results of a simple query to a named dataset.
 
-```
-dataset = xdr\_data 
-| fields action\_boot\_time as abt
+dataset = xdr_data 
+| fields action_boot_time as abt
 | filter abt != null
-| target type=dataset abt\_dataset
-```
+| target type=dataset abt_dataset
 
 Subsequently, you can query the new dataset. Notice that the field names used by the new dataset conform to the aliases that you used when you created the dataset:
 
-```
-dataset = abt\_dataset 
+dataset = abt_dataset 
 | filter abt = 1603986614040
-```
 
 #### Example 2
 
 The following example creates a dataset with the number of agents per country.
 
-```
-dataset = xdr\_data
-| fields agent\_id,  action\_country
-| comp count\_distinct(agent\_id) as count by action\_country
-| target type=dataset append=false agents\_per\_country
-```
+dataset = xdr_data
+| fields agent_id,  action_country
+| comp count_distinct(agent_id) as count by action_country
+| target type=dataset append=false agents_per_country
 
 This results in the following XQL JSON:
 
-```
 {
-    "tables": \[
-        "xdr\_data"
-    \],
-    "original\_query": "\\n
-    dataset=xdr\_data\\n
-    | fields agent\_id,  action\_country \\n
-    | comp count\_distinct(agent\_id) as count by action\_country\\n
-    | target type=dataset append=false agents\_per\_country\\n
+    "tables": [
+        "xdr_data"
+    ],
+    "original_query": "\\n
+    dataset=xdr_data\\n
+    | fields agent_id,  action_country \\n
+    | comp count_distinct(agent_id) as count by action_country\\n
+    | target type=dataset append=false agents_per_country\\n
     ",    "stages":
- \[
+ [
         {
-            "FIELD\_SELECT": {
-                "fields": \[
-                    {                        "name": "agent\_id",                        "as": None
+            "FIELD_SELECT": {
+                "fields": [
+                    {                        "name": "agent_id",                        "as": None
                     },
-                    {                        "name": "action\_country",                        "as": None
+                    {                        "name": "action_country",                        "as": None
                     }
-                \],
-                "exclude": \[\]
+                ],
+                "exclude": []
             }
         },
         {
             "GROUP": {
-                "aggregations": \[
+                "aggregations": [
                     {
-                        "function": "count\_distinct",
-                        "parameters": \[
-                            "$agent\_id"
-                        \],
+                        "function": "count_distinct",
+                        "parameters": [
+                            "$agent_id"
+                        ],
                         "name": "count"
                     }
-                \],
-                "key": \[
-                    "action\_country"
-                \]
+                ],
+                "key": [
+                    "action_country"
+                ]
             }
         }
-    \],
-    "output": \[
+    ],
+    "output": [
         {
             "TARGET": {
                 "type": "dataset",
-                "target": "agents\_per\_country",
+                "target": "agents_per_country",
                 "append": False
             }
         }
-    \]
+    ]
 }
-```
 
 ### top
-Abstract
 
 Learn more about the Cortex Query Language `top` stage that returns the approximate count of top elements for a field and percentage of the count results.
 
@@ -47501,40 +46235,33 @@ This stage is unsupported with Correlation Rules.
 
 #### Syntax
 
-```
-top _<integer>_ _<field>_ \[by _<field1>_ ,_<field2>_...\] \[top\_count as _<column name>_, top\_percent as _<column name>_\]
-```
+top _<integer>_ _<field>_ [by _<field1>_ ,_<field2>_...] [top_count as _<column name>_, top_percent as _<column name>_]
 
 #### Description
 
 The `top` stage returns the approximate count of top elements for a given field and the percentage of the count results relative to the total number of values for the designated field. Use this top stage to produce approximate results, which are more scalable in terms of memory usage and time.
 
-The _<integer>_ in the syntax represents the number of top elements to return. If a number is not specified, up to 10 elements are returned by default. The approximate count is listed in the results table in a column called TOP\_COUNT and the percentage in a column called TOP\_PERCENT. You can update the column names for both tables by defining `top_count as` _<column name>_ , top\_percent as _<column name>_ in the syntax. If you only define one column name to update in the syntax, the results table displays that column without displaying the other column.
+The _<integer>_ in the syntax represents the number of top elements to return. If a number is not specified, up to 10 elements are returned by default. The approximate count is listed in the results table in a column called TOP_COUNT and the percentage in a column called TOP_PERCENT. You can update the column names for both tables by defining `top_count as` _<column name>_ , top_percent as _<column name>_ in the syntax. If you only define one column name to update in the syntax, the results table displays that column without displaying the other column.
 
 #### Examples
 
-Returns a table with 3 columns called EVENT\_ID, TOP\_COUNT, and TOP\_PERCENT with up to 10 unique values for `event_id` with the corresponding counts and percentages.
+Returns a table with 3 columns called EVENT_ID, TOP_COUNT, and TOP_PERCENT with up to 10 unique values for `event_id` with the corresponding counts and percentages.
 
-```
-dataset = xdr\_data 
-| top event\_id
-```
+dataset = xdr_data 
+| top event_id
 
-Returns a table with 3 columns called ACTION\_COUNTRY, EVENT\_ID, and TOTAL with a single unique value for the `event_id` for each `action_country` with the corresponding count in the TOTAL column.
+Returns a table with 3 columns called ACTION_COUNTRY, EVENT_ID, and TOTAL with a single unique value for the `event_id` for each `action_country` with the corresponding count in the TOTAL column.
 
-```
-dataset = xdr\_data 
-| top 1 event\_id by action\_country top\_count as total
-```
+dataset = xdr_data 
+| top 1 event_id by action_country top_count as total
 
 ### transaction
-Abstract
 
 Learn more about the Cortex Query Language transaction stage used to find transactions based on events that meet certain constraints.
 
 #### Syntax
 
-transaction _`<field_1, field_2, ...>`_  \[span = _`<time>`_ \[timeshift = _`<epoch time>`_ \[timezone = "_`<time zone>`_"\]\] | startswith = _`<condition>`_ endswith = _`<condition>`_ allowunclosed= true|false\] maxevents = _`<number of events per transaction>`_
+transaction _`<field_1, field_2, ...>`_  [span = _`<time>`_ [timeshift = _`<epoch time>`_ [timezone = "_`<time zone>`_"]] | startswith = _`<condition>`_ endswith = _`<condition>`_ allowunclosed= true|false] maxevents = _`<number of events per transaction>`_
 
 #### Description
 
@@ -47579,47 +46306,34 @@ When using the transaction stage, 5 additional fields are added to the results
 
 Return a maximum of 10 events per transaction from the `xdr_data` records based on the `user` and `agent_id` fields, where the transaction time frame is 1 hour.
 
-```
-dataset=xdr\_data
-|transaction user, agent\_id span=1h timeshift = 1615353499 
+dataset=xdr_data
+|transaction user, agent_id span=1h timeshift = 1615353499 
 timezone = “+08:00” maxevents=10
-```
 
 This query results in the following XQL JSON:
 
-```
-{'TRANSACTION': {'fields': \['user', 'agent\_id'\], 'maxevents': 10, 'span': {'amount': 1, 'units': 'h', 'timeshift': None}}}
-```
+{'TRANSACTION': {'fields': ['user', 'agent_id'], 'maxevents': 10, 'span': {'amount': 1, 'units': 'h', 'timeshift': None}}}
 
 #### Example using Startswith and Endswith
 
 Return a maximum of 99 events per transaction from the `xdr_data` records based on the `f1` and `f2` fields. The starting event of each transaction is an event, where one of the fields contains a string `"str_1"`, and the ending event of each transaction is an event, where one of the fields contains a string `"str_2"`.
 
-```
-dataset=xdr\_data
-| transaction f1, f2 startswith="str\_1" endswith="str2" maxevents=99
-```
+dataset=xdr_data
+| transaction f1, f2 startswith="str_1" endswith="str2" maxevents=99
 
 This query results in the following XQL JSON:
 
-```
-{'TRANSACTION': {'fields': \['f1', 'f2'\], 'search': {'startswith': {'filter': {'free\_text': 'str\_1'}}, 'endswith': {'filter': {'free\_text': 'str2'}}}, 'maxevents': 99}}
-```
+{'TRANSACTION': {'fields': ['f1', 'f2'], 'search': {'startswith': {'filter': {'free_text': 'str_1'}}, 'endswith': {'filter': {'free_text': 'str2'}}}, 'maxevents': 99}}
 
 ### union
-Abstract
 
 Learn more about the Cortex Query Language `union` stage that combines two result sets into a single result set.
 
 #### Syntax
 
-```
 union <datasetname\>
-```
 
-```
 union (<inner xql query>)
-```
 
 #### Description
 
@@ -47633,54 +46347,43 @@ If a Cortex Query Language (XQL) query is provided to this stage, the result set
 
 First, create a dataset using the target stage. This results in a persistent stage that we can use later with a `union` stage.
 
-```
-dataset = xdr\_data
-| filter event\_type = FILE and event\_sub\_type = FILE\_WRITE 
-| fields agent\_id, action\_file\_sha256 as file\_hash, agent\_hostname 
-| target type=dataset file\_event
-```
+dataset = xdr_data
+| filter event_type = FILE and event_sub_type = FILE_WRITE 
+| fields agent_id, action_file_sha256 as file_hash, agent_hostname 
+| target type=dataset file_event
 
 Then run a second query, using `union` so that the query can access the contents of the `file_event` dataset. Notice that this second query uses the `file_hash` alias that was defined for the `file_event` dataset.
 
-```
-dataset = xdr\_data 
-| filter event\_type = PROCESS and event\_sub\_type = PROCESS\_START 
-| union file\_event
-| fields agent\_id, agent\_hostname, file\_hash, 
-      actor\_process\_image\_path as executed\_by, 
-      actor\_process\_signature\_vendor as executor\_signer 
-| filter file\_hash != null and executed\_by != null
-```
+dataset = xdr_data 
+| filter event_type = PROCESS and event_sub_type = PROCESS_START 
+| union file_event
+| fields agent_id, agent_hostname, file_hash, 
+      actor_process_image_path as executed_by, 
+      actor_process_signature_vendor as executor_signer 
+| filter file_hash != null and executed_by != null
 
 ### view
-Abstract
 
 Learn more about the Cortex Query Language `view` stage that configures the display of the result set.
 
 #### Syntax
 
-```
-view highlight fields = <field1\>\[,<field2\>,...\] values = <value1\>\[,<value2\>,...\]
-```
+view highlight fields = <field1\>[,<field2\>,...] values = <value1\>[,<value2\>,...]
 
-```
 view graph type = column|line|pie xaxis = <field1\> 
-     yaxis = <field2\> \[<optional parameters\>\]
-```
+     yaxis = <field2\> [<optional parameters\>]
 
 -   Optional `series` parameter:
     
     ```
     | view graph type = area | bubble | column | line | map | scatter
     xaxis = <field1>
-    yaxis = <field2> \[<optional parameters>\]
-    \[series = <field3> \[<optional parameters>\] \]
+    yaxis = <field2> [<optional parameters>]
+    [series = <field3> [<optional parameters>] ]
     ```
     
 
-```
 view column order = default|populated
-```
 
 #### Description
 
@@ -47710,47 +46413,38 @@ The `view()` stage configures the display of the result set in the following way
 
 Use the dedup stage collect unique combinations of `event_type` and `event_sub_type` values. Highlight the word "STREAM" when it appears in the result set.
 
-```
-dataset = xdr\_data 
-| fields event\_type, event\_sub\_type 
-| dedup event\_type, event\_sub\_type by asc \_time 
-| view highlight fields = event\_sub\_type values = "STREAM"
-```
+dataset = xdr_data 
+| fields event_type, event_sub_type 
+| dedup event_type, event_sub_type by asc _time 
+| view highlight fields = event_sub_type values = "STREAM"
 
-Count the number of unique files accessed by each user, and show a column graph of the results, where the number of unique files are grouped by username. This query uses comp count\_distinct to calculate the number of unique files per username.count\_distinct
+Count the number of unique files accessed by each user, and show a column graph of the results, where the number of unique files are grouped by username. This query uses comp count_distinct to calculate the number of unique files per username.count_distinct
 
-```
-dataset = xdr\_data 
-| fields actor\_effective\_username as username, action\_file\_path as file\_path 
-| filter file\_path != null and username != null 
-| comp count\_distinct(file\_path) as file\_count by username 
-| view graph type = column xaxis = username yaxis = file\_count series = username
-```
+dataset = xdr_data 
+| fields actor_effective_username as username, action_file_path as file_path 
+| filter file_path != null and username != null 
+| comp count_distinct(file_path) as file_count by username 
+| view graph type = column xaxis = username yaxis = file_count series = username
 
-Count the number of unique files accessed by each user, and display the results by popularity according to the most non-null values returned fields. This query uses comp count\_distinct to calculate the number of unique files per username.count\_distinct
+Count the number of unique files accessed by each user, and display the results by popularity according to the most non-null values returned fields. This query uses comp count_distinct to calculate the number of unique files per username.count_distinct
 
-```
-dataset = xdr\_data 
-| fields actor\_effective\_username as username, action\_file\_path as file\_path 
-| filter file\_path != null and username != null 
-| comp count\_distinct(file\_path) as file\_count by username 
+dataset = xdr_data 
+| fields actor_effective_username as username, action_file_path as file_path 
+| filter file_path != null and username != null 
+| comp count_distinct(file_path) as file_count by username 
 | view column order = populated
-```
 
 ### windowcomp
-Abstract
 
 Learn more about the Cortex Query Language `windowcomp` stage that precedes functions calculating statistics.
 
 #### Syntax
 
-```
-windowcomp <analytic function> (<field>)\[by <fieldA> \[,<fieldB>,...\]\] \[sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\]\] \[between 0|null|<number>|-<number> \[and 0|null|<number>|-<number>\] \[frame\_type=range\]\] \[as <alias>\]
-```
+windowcomp <analytic function> (<field>)[by <fieldA> [,<fieldB>,...]] [sort [asc|desc] <field1> [, [asc|desc] <field2>,...]] [between 0|null|<number>|-<number> [and 0|null|<number>|-<number>] [frame_type=range]] [as <alias>]
 
 **Note:**
 
-Defining a field with an analytic function is optional when using a count function. For rank and row\_number functions, it's not allowed.count
+Defining a field with an analytic function is optional when using a count function. For rank and row_number functions, it's not allowed.count
 
 #### Description
 
@@ -47758,9 +46452,7 @@ The `windowcomp` stage precedes functions calculating statistics. The results co
 
 Example 200. 
 
-```
-| windowcomp sum(field\_1) by field\_2 sort field\_3 as field\_4, min(field\_5) by field\_6 sort field\_7 as field\_8
-```
+| windowcomp sum(field_1) by field_2 sort field_3 as field_4, min(field_5) by field_6 sort field_7 as field_8
 
   
 
@@ -47770,9 +46462,9 @@ This stage includes the following functions:
 
 | Function Type | Function |
 | --- | --- |
-| Numbering functions | rank; row\_number |
-| Navigation functions | first\_value; lag; last\_value |
-| Statistical aggregate functions | stddev\_samplestddev\_sample; stddev\_populationstddev\_population |
+| Numbering functions | rank; row_number |
+| Navigation functions | first_value; lag; last_value |
+| Statistical aggregate functions | stddev_samplestddev_sample; stddev_populationstddev_population |
 | Aggregate functions | avgavg; countcount; maxmax; medianmedian; minmin; sumsum |
 
 Optional parameters
@@ -47784,39 +46476,10 @@ The optional parameters available to define in the `windowcomp` function are exp
 | By clause | `[by <fieldA> [,<fieldB>,...]` | The `by` clause is used to break up the input field rows into separate partitions, over which the `windowcomp` function is independently evaluated. Multiple partition fields are allowed when using a partition `by` clause.; When this optional clause is omitted, all rows in the input table comprise a single partition. |
 | Sort | `[sort [asc|desc] <field1> [,[asc|desc] <field2>,...]]` | Defines how field rows are ordered within a partition as either ascending (`asc`) or descending (`desc`). This clause is optional in most situations, but is required in some cases for navigation functions and `rank` function. |
 | Between window frame clause | `[between 0|null|<number>|-<number> [and 0|null|<number>|-<number>]` | Sets the window frame around the current row within a partition, over which the window function is evaluated. Numbering functions and the `lag` function can't be used in the window frame clause. Creates a window frame with a lower and upper boundary. The first boundary represents the lower boundary. The second boundary represents the upper boundary. Every boundary can include the following options: `null`: Starts at the beginning or at the end of the partition, depending on the placement of the `null`.; `0`: Is set to the current row, where the window frame starts or ends at the current row.; positive/negative `<number>`: The end of the window frame or the start of the window frame relative to the current row.-   If only a start `<number>` is defined, only a negative number is allowed: `-<number>`.; If a start `<number>` and end `<number>` are defined, the end `<number>` must be greater than the start `<number>`.
-If the `sort` is included, but the window frame clause isn't, the following window frame clause is used by default:
-```
-between null and 0
-```
-
+If the `sort` is included, but the window frame clause isn't, the following window frame clause is used by default: between null and 0 |
+| frame_type | `[frame_type=rows| range]` | Defines the option of the frame as either: `rows` (default): Computes the window frame based on physical offsets from the current row. For example, you could include two rows before and after the current row. To apply the default `frame_type=rows`, nothing needs to be added to the `windowcomp` stage syntax as it's automatically built into the query.; `range`: Computes the window frame based on a logical range of rows around the current row, based on the current row’s sort key value. The provided range value is added or subtracted to the current row's key value to define a starting or ending range boundary for the window frame. Setting the `range` with start or end numeric, nonzero boundaries requires using exactly one numeric type of sort field. When setting `frame_type=range`, the `sort` must be included in the `windowcomp` stage syntax; otherwise, only `between null and null` is supported. Example 201.  This is unsupported: | windowcomp sum(field_a) between -2 and 0 frame_type = range Yet, the following is supported: | windowcomp sum(field_a) sort desc field_b between -1 and 1 frame_type = range Or | windowcomp sum(field_a) between null and null frame_type = range  
  |
-| frame\_type | `[frame_type=rows| range]` | Defines the option of the frame as either: `rows` (default): Computes the window frame based on physical offsets from the current row. For example, you could include two rows before and after the current row. To apply the default `frame_type=rows`, nothing needs to be added to the `windowcomp` stage syntax as it's automatically built into the query.; `range`: Computes the window frame based on a logical range of rows around the current row, based on the current row’s sort key value. The provided range value is added or subtracted to the current row's key value to define a starting or ending range boundary for the window frame. Setting the `range` with start or end numeric, nonzero boundaries requires using exactly one numeric type of sort field. When setting `frame_type=range`, the `sort` must be included in the `windowcomp` stage syntax; otherwise, only `between null and null` is supported. Example 201.  This is unsupported:
-
-```
-| windowcomp sum(field\_a) between -2 and 0 frame\_type = range
-```
-
-Yet, the following is supported:
-
-```
-| windowcomp sum(field\_a) sort desc field\_b between -1 and 1 frame\_type = range
-```
-
-Or
-
-```
-| windowcomp sum(field\_a) between null and null frame\_type = range
-```
-
-  
- |
-| Alias clause | `[as <alias>]` | Use the `alias` clause to provide a column label (field name) for the `windowcomp` results. When the new field name already exists in the schema, it's replaced with the new name. Example 202.  If the `xdr_data` dataset already has a field in the schema called `existing_field`, the new `existing_field` replaces the old one.
-
-```
-dataset = xdr\_data | windowcomp sum(field\_a) as existing\_field
-```
-
-  
+| Alias clause | `[as <alias>]` | Use the `alias` clause to provide a column label (field name) for the `windowcomp` results. When the new field name already exists in the schema, it's replaced with the new name. Example 202.  If the `xdr_data` dataset already has a field in the schema called `existing_field`, the new `existing_field` replaces the old one. dataset = xdr_data | windowcomp sum(field_a) as existing_field  
  |
 
 #### Examples
@@ -47836,14 +46499,12 @@ The examples provided are based on the following data table for a dataset called
 
 Query 1: Compute the total logins for all IPs
 
-```
 dataset = ips 
-| windowcomp sum(logins) as total\_logins
-```
+| windowcomp sum(logins) as total_logins
 
 Output results table
 
-| ip | logins | category | total\_logins |
+| ip | logins | category | total_logins |
 | --- | --- | --- | --- |
 | 192.168.10.2 | 2 | server | 54 |
 | 192.168.20.5 | 2 | pc | 54 |
@@ -47854,14 +46515,12 @@ Output results table
 
 Query 2: Compute a subtotal for each category
 
-```
 dataset = ips 
-| windowcomp sum(logins) by category sort asc logins between null and null as total\_logins
-```
+| windowcomp sum(logins) by category sort asc logins between null and null as total_logins
 
 Output results table
 
-| ip | logins | category | total\_logins |
+| ip | logins | category | total_logins |
 | --- | --- | --- | --- |
 | 192.168.10.2 | 2 | server | 10 |
 | 192.168.20.4 | 8 | server | 10 |
@@ -47874,21 +46533,17 @@ Query 3: Compute a cumulative sum for each category
 
 The sum is computed with respect to the order defined using the `sort` clause. These two queries produce the same results:
 
-```
 dataset = ips 
-| windowcomp sum(logins) by category sort asc logins between null and 0 as total\_logins
-```
+| windowcomp sum(logins) by category sort asc logins between null and 0 as total_logins
 
 OR
 
-```
 dataset = ips 
-| windowcomp sum(logins) by category sort asc logins between null as total\_logins
-```
+| windowcomp sum(logins) by category sort asc logins between null as total_logins
 
 Output results table
 
-| ip | logins | category | total\_logins |
+| ip | logins | category | total_logins |
 | --- | --- | --- | --- |
 | 192.168.10.2 | 2 | server | 2 |
 | 192.168.20.4 | 8 | server | 10 |
@@ -47901,14 +46556,12 @@ Query 4: Compute a cumulative sum, where only preceding rows are analyzed.
 
 The analysis starts two rows before the current row in the partition.
 
-```
 dataset = ips 
-| windowcomp sum(logins) sort asc logins between null and -2 as total\_logins
-```
+| windowcomp sum(logins) sort asc logins between null and -2 as total_logins
 
 Output results table
 
-| ip | logins | category | total\_logins |
+| ip | logins | category | total_logins |
 | --- | --- | --- | --- |
 | 192.168.10.2 | 2 | server | NULL |
 | 192.168.20.5 | 2 | pc | NULL |
@@ -47921,14 +46574,12 @@ Query 5: Compute a changing average
 
 The lower boundary is 1 row before the current row. The upper boundary is 1 row after the current row.
 
-```
 dataset = ips 
-| windowcomp avg(logins) sort asc logins between -1 and 1 as avg\_logins
-```
+| windowcomp avg(logins) sort asc logins between -1 and 1 as avg_logins
 
 Output results table
 
-| ip | logins | category | avg\_logins |
+| ip | logins | category | avg_logins |
 | --- | --- | --- | --- |
 | 192.168.10.2 | 2 | server | 2 |
 | 192.168.20.5 | 2 | pc | 4 |
@@ -47941,14 +46592,12 @@ Query 6: Retrieve the most popular IP in each category
 
 Defines how rows in a window are partitioned and ordered in each partition.
 
-```
 dataset = ips 
-| windowcomp last\_value(ip) by category sort asc logins between null and null as most\_popular
-```
+| windowcomp last_value(ip) by category sort asc logins between null and null as most_popular
 
 Output results table
 
-| ip | logins | category | most\_popular |
+| ip | logins | category | most_popular |
 | --- | --- | --- | --- |
 | 192.168.10.2 | 2 | server | 192.168.20.4 |
 | 192.168.20.4 | 8 | server | 192.168.20.4 |
@@ -47959,10 +46608,8 @@ Output results table
 
 Query 7: Calculate the rank of each IP within the category based on the login
 
-```
 dataset = ips 
 | windowcomp rank() by category sort asc logins as rank
-```
 
 Output results table
 
@@ -47979,14 +46626,12 @@ Query 8: Retrieve the most popular IP in a specific window frame by range and no
 
 The window frame analyzes up to three rows at a time.
 
-```
 dataset = ips 
-| windowcomp last\_value(ip) by category sort asc logins between -1 and 1 as most\_popular
-```
+| windowcomp last_value(ip) by category sort asc logins between -1 and 1 as most_popular
 
 Output results table
 
-| ip | logins | category | most\_popular |
+| ip | logins | category | most_popular |
 | --- | --- | --- | --- |
 | 192.168.10.2 | 2 | server | 192.168.20.4 |
 | 192.168.20.4 | 8 | server | 192.168.20.4 |
@@ -47999,14 +46644,12 @@ Query 9: Retrieve the number of IPs that have similar logins
 
 Count in range of -1 and 1 from their login value.
 
-```
 dataset = ips | fields ip, category , logins 
-| windowcomp count() sort asc logins between -1 and 1 frame\_type = range as similar\_logins
-```
+| windowcomp count() sort asc logins between -1 and 1 frame_type = range as similar_logins
 
 Output results table
 
-| ip | logins | category | similar\_logins |
+| ip | logins | category | similar_logins |
 | --- | --- | --- | --- |
 | 192.168.10.5 | 2 | pc | 2 |
 | 192.168.10.2 | 2 | server | 2 |
@@ -48016,22 +46659,18 @@ Output results table
 | 192.168.10.1 | 23 | pc | 1 |
 
 ## Functions
-Abstract
 
 Learn more the functions that can be used with Cortex Query Language (XQL) stages in Cortex Cloud.
 
 Some Cortex Query Language (XQL) stages can call XQL functions to convert the data to a desired format. For example, the `current_time()` function returns the current timestamp, while the `extract_time()` function can obtain the hour information in the timestamp. Functions may or may not need input parameters. The `filter` and `alter` stages are the two stages that can use functions for data transformations.
 
 ### add
-Abstract
 
 Learn more about the Cortex Query Language `add()` function that adds two integers.
 
 #### Syntax
 
-```
 add (<string> | <integer>, <string> | <integer>)
-```
 
 #### Description
 
@@ -48039,24 +46678,19 @@ The `add()` function adds two positive integers. Parameters can be either intege
 
 #### Example
 
-```
-dataset = xdr\_data 
-| alter mynum = add(action\_file\_size, 3) 
-| fields action\_file\_size, mynum 
-| filter action\_file\_size > 0 
-| limit 1 
-```
+dataset = xdr_data 
+| alter mynum = add(action_file_size, 3) 
+| fields action_file_size, mynum 
+| filter action_file_size > 0 
+| limit 1
 
 ### approx_count
-Abstract
 
 Learn more about the Cortex Query Language `approx_count` approximate aggregate comp function.
 
 #### Syntax
 
-```
-comp approx\_count(_<field>_) \[as _<alias>_\] \[by _<field1>_\[,_<field2>_...\]\] \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp approx_count(_<field>_) [as _<alias>_] [by _<field1>_[,_<field2>_...]] [addrawdata = true|false [as _<target field>_]]
 
 #### Description
 
@@ -48068,22 +46702,17 @@ In addition, you can configure whether the raw data events are displayed by sett
 
 Returns a single integer value after approximately counting the number of distinct values in the `event_id` field over a group of rows.
 
-```
-dataset = xdr\_data
-| fields event\_id
-| comp approx\_count(event\_id)
-```
+dataset = xdr_data
+| fields event_id
+| comp approx_count(event_id)
 
 ### approx_quantiles
-Abstract
 
 Learn more about the Cortex Query Language `approx_quantiles` approximate aggregate comp function.
 
 #### Syntax
 
-```
-comp approx\_quantiles(_<field>_, _<number>_, _<true|false>_) \[as _<alias>_\] \[by _<field1>_\[,_<field2>_...\]\]\[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp approx_quantiles(_<field>_, _<number>_, _<true|false>_) [as _<alias>_] [by _<field1>_[,_<field2>_...]][addrawdata = true|false [as _<target field>_]]
 
 #### Description
 
@@ -48097,40 +46726,31 @@ In addition, you can configure whether the raw data events are displayed by sett
 
 Returns the approximate boundaries for a group of distinct values in the `event_id` field.
 
-```
-dataset = xdr\_data
-| fields event\_id
-| comp approx\_quantiles(event\_id, 100, true)
-```
+dataset = xdr_data
+| fields event_id
+| comp approx_quantiles(event_id, 100, true)
 
 ##### Non-Distinct Values Example
 
 Returns the approximate boundaries for a group of non-distinct values in the `event_id` field.
 
-```
-dataset = xdr\_data
-| fields event\_id
-| comp approx\_quantiles(event\_id, 100)
-```
+dataset = xdr_data
+| fields event_id
+| comp approx_quantiles(event_id, 100)
 
 ### approx_top
-Abstract
 
 Learn more about the Cortex Query Language `approx_top` approximate aggregate comp function.
 
 #### Syntax
 
-###### comp approx\_top as count
+###### comp approx_top as count
 
-```
-comp approx\_top(<string field>, <number>) \[as <alias>\] \[by <field1>\[,<field2>...\]\]\[addrawdata = true|false \[as <target field>\]\] 
-```
+comp approx_top(<string field>, <number>) [as <alias>] [by <field1>[,<field2>...]][addrawdata = true|false [as <target field>]] 
 
-###### comp approx\_top as sum
+###### comp approx_top as sum
 
-```
-comp approx\_top(<string field>, <number>, <weight string field>) \[as <alias>\] \[by <field1>\[,<field2>...\]\]\[addrawdata = true|false \[as <target field>\]\]
-```
+comp approx_top(<string field>, <number>, <weight string field>) [as <alias>] [by <field1>[,<field2>...]][addrawdata = true|false [as <target field>]]
 
 #### Description
 
@@ -48144,36 +46764,29 @@ Use this approximate aggregate function to produce approximate results, instead 
 
 #### Examples
 
-###### comp approx\_top as count
+###### comp approx_top as count
 
 Returns an approximate count of the top 10 agent IDs in the `agent_id` field that appear the most frequently. The return value is an array containing 10 JSON strings with a "value" and "count".
 
-```
-dataset = xdr\_data
-| fields agent\_id
-| comp approx\_top(agent\_id, 10)
-```
+dataset = xdr_data
+| fields agent_id
+| comp approx_top(agent_id, 10)
 
-###### comp approx\_top as sum
+###### comp approx_top as sum
 
 Returns an approximate sum of the top 10 agent IDs in the `agent_id` field by their `action_session_duration`. The return value is an array containing 10 JSON strings with a "value" and "sum" for each `agent_id`.
 
-```
-dataset = xdr\_data
-| fields agent\_id, action\_session\_duration
-| comp approx\_top(agent\_id, 10, action\_session\_duration)
-```
+dataset = xdr_data
+| fields agent_id, action_session_duration
+| comp approx_top(agent_id, 10, action_session_duration)
 
 ### array_all
-Abstract
 
 Learn more about the Cortex Query Language `array_all()` function.
 
 #### Syntax
 
-```
-array\_all(<array>, "@element"<operator>"<array element>")
-```
+array_all(<array>, "@element"<operator>"<array element>")
 
 **Note:**
 
@@ -48187,24 +46800,19 @@ The `array_all()` function returns `true` when all the elements in a particular 
 
 When the `dfe_labels` array is not empty, use the alter stage to create a new column called `x` that returns true when all the elements in the `dfe_labels` array is equal to `network`; otherwise, the function returns `false`.
 
-```
-dataset = xdr\_data
-| filter dfe\_labels != null
-| alter x = array\_all(dfe\_labels , "@element" = "network")
-| fields x, dfe\_labels
+dataset = xdr_data
+| filter dfe_labels != null
+| alter x = array_all(dfe_labels , "@element" = "network")
+| fields x, dfe_labels
 | limit 100
-```
 
 ### array_any
-Abstract
 
 Learn more about the Cortex Query Language `array_any()` function.
 
 #### Syntax
 
-```
-array\_any(<array>, "@element"<operator>"<array element>") 
-```
+array_any(<array>, "@element"<operator>"<array element>") 
 
 **Note:**
 
@@ -48218,24 +46826,19 @@ The `array_any()` function returns `true` when at least 1 element in a particula
 
 When the `dfe_labels` array is not empty, use the alter stage to create a new column called `x` that returns true when at least 1 element in the `dfe_labels` array is equal to `network`; otherwise, the function returns `false`.
 
-```
-dataset = xdr\_data
-| filter dfe\_labels != null
-| alter x = array\_any(dfe\_labels , "@element" = "network")
-| fields x, dfe\_labels
+dataset = xdr_data
+| filter dfe_labels != null
+| alter x = array_any(dfe_labels , "@element" = "network")
+| fields x, dfe_labels
 | limit 100
-```
 
 ### arrayconcat
-Abstract
 
 Learn more about the Cortex Query Language `arrayconcat()` function that returns an array containing unique values found in the original array.
 
 #### Syntax
 
-```
-arrayconcat (<array1\>,<array2\>\[,<array3\>...\])
-```
+arrayconcat (<array1\>,<array2\>[,<array3\>...])
 
 #### Description
 
@@ -48245,34 +46848,25 @@ The `arrayconcat()` function accepts two or more arrays, and it joins them into 
 
 Given three arrays:
 
-```
-first\_array : \[1,2,3\]
-second\_array : \[44,55\]
-third\_array : \[4,5,6\] 
-```
+first_array : [1,2,3]
+second_array : [44,55]
+third_array : [4,5,6] 
 
 Using this query:
 
-```
-alter all\_arrays = arrayconcat(first\_array, second\_array, third\_array)
-```
+alter all_arrays = arrayconcat(first_array, second_array, third_array)
 
 Results in an `all_arrays` field containing:
 
-```
-\[1,2,3,44,55,4,5,6\]
-```
+[1,2,3,44,55,4,5,6]
 
 ### arraycreate
-Abstract
 
 Learn more about the Cortex Query Language `arraycreate()` function that returns an array based on the given parameters defined for the array elements.
 
 #### Syntax
 
-```
 arraycreate ("<array element1>", "<array element2>",...)
-```
 
 #### Description
 
@@ -48280,53 +46874,39 @@ The `arraycreate()` function returns an array based on the given parameters defi
 
 #### Example
 
-Returns a final array to a field called x that is comprised of the elements \[1,2\].
+Returns a final array to a field called x that is comprised of the elements [1,2].
 
-```
-dataset = xdr\_data
+dataset = xdr_data
 | alter x = arraycreate("1", "2")
 | fields x
-```
 
 ### arraydistinct
-Abstract
 
 Learn more about the Cortex Query Language `arraydistinct()` function that returns an array containing unique values found in the original array.
 
 #### Syntax
 
-```
 arraydistinct (<array\>)
-```
 
 #### Description
 
 The `arraydistinct()` function accepts an array, and it returns a new array containing only unique elements found in the original array. That is, given the array:
 
-```
-\[0,1,1,1,4,5,5\]
-```
+[0,1,1,1,4,5,5]
 
 This function returns:
 
-```
-\[0,1,4,5\]
-```
+[0,1,4,5]
 
 ### arrayfilter
-Abstract
 
 Learn more about the Cortex Query Language `arrayfilter()` function.
 
 #### Syntax
 
-```
 arrayfilter(<array\>, <condition\>)
-```
 
-```
 arrayfilter(<array\>, "@element"<operator\>"<array element\>")
-```
 
 **Note:**
 
@@ -48347,13 +46927,11 @@ Though it's possible to define the `arrayfilter()` function with any condition, 
 
 When the `dfe_labels` array is not empty, use the alter stage to assign a value to a field called `x` that returns the value of the `arrayfilter` function. The `arrayfilter` function filters the `dfe_labels` array for the array element set to `network`.
 
-```
-dataset = xdr\_data 
-| filter dfe\_labels != null
-| alter x = arrayfilter(dfe\_labels , "@element" = "network") 
-| fields x, dfe\_labels 
+dataset = xdr_data 
+| filter dfe_labels != null
+| alter x = arrayfilter(dfe_labels , "@element" = "network") 
+| fields x, dfe_labels 
 | limit 100 
-```
 
 #### Advanced Example
 
@@ -48363,14 +46941,12 @@ This queries below illustrate how to check whether any IPs are included or not i
 
 This query returns results for each IP that don't match anything in the CIDRS array blocked list:
 
-```
-dataset = xdr\_data
+dataset = xdr_data
 | limit 1
 | alter cidrs = arraycreate("10.0.0.0/8","172.16.0.0/16"), ip = arraycreate("192.168.1.1", "172.16.20.18")
 | fields cidrs, ip
 | arrayexpand ip
-| alter non\_matching\_cidrs = arrayfilter(cidrs, ip not incidr "@element")
-```
+| alter non_matching_cidrs = arrayfilter(cidrs, ip not incidr "@element")
 
 Results:
 
@@ -48383,9 +46959,9 @@ The following table details for each IP the logic that is first performed before
 | 172.16.20.18 | not in 10.0.0.0/8 | TRUE |
 | 172.16.20.18 | not in 172.16.0.0/16 | FALSE |
 
-For each IP, an array of CIDRS is returned in the NON\_MATCHING\_CIDRS column, which doesn't match the CIDRS array. In addition, from the above table, `arrayfilter()` only returns anything that resolves as TRUE. This explains the query results displayed in the following table:
+For each IP, an array of CIDRS is returned in the NON_MATCHING_CIDRS column, which doesn't match the CIDRS array. In addition, from the above table, `arrayfilter()` only returns anything that resolves as TRUE. This explains the query results displayed in the following table:
 
-| IP | CIDRS | NON\_MATCHING\_CIDRS |
+| IP | CIDRS | NON_MATCHING_CIDRS |
 | --- | --- | --- |
 | 192.168.1.1 | 10.0.0.0/8,172.16.0.0/16 | 10.0.0.0/8,172.16.0.0/16 |
 | 172.16.20.18 | 10.0.0.0/8,172.16.0.0/16 | 10.0.0.0/8 |
@@ -48394,14 +46970,12 @@ For each IP, an array of CIDRS is returned in the NON\_MATCHING\_CIDRS column, w
 
 Now, let's update the query to return results for each IP that match anything in the CIDRS array:
 
-```
-dataset = xdr\_data
+dataset = xdr_data
 | limit 1
 | alter cidrs = arraycreate("10.0.0.0/8","172.16.0.0/16"), ip = arraycreate("192.168.1.1", "172.16.20.18")
 | fields cidrs, ip
 | arrayexpand ip
-| alter matching\_cidrs = arrayfilter(cidrs, ip incidr "@element")
-```
+| alter matching_cidrs = arrayfilter(cidrs, ip incidr "@element")
 
 Results:
 
@@ -48414,23 +46988,20 @@ The following table details for each IP the logic that is first performed before
 | 172.16.20.18 | in 10.0.0.0/8 | FALSE |
 | 172.16.20.18 | in 172.16.0.0/16 | TRUE |
 
-For each IP, an array of CIDRS is returned in the MATCHING\_CIDRS column, which matches the CIDRS array. In addition, from the above table, `arrayfilter()` only returns anything that resolves as TRUE. This explains the query results displayed in the following table:
+For each IP, an array of CIDRS is returned in the MATCHING_CIDRS column, which matches the CIDRS array. In addition, from the above table, `arrayfilter()` only returns anything that resolves as TRUE. This explains the query results displayed in the following table:
 
-| IP | CIDRS | MATCHING\_CIDRS |
+| IP | CIDRS | MATCHING_CIDRS |
 | --- | --- | --- |
 | 192.168.1.1 | 10.0.0.0/8,172.16.0.0/16 | empty array |
 | 172.16.20.18 | 10.0.0.0/8,172.16.0.0/16 | 172.16.0.0/16 |
 
 ### arrayindex
-Abstract
 
 Learn more about the Cortex Query Language `arrayindex()` function that returns the array element contained at the specified index.
 
 #### Syntax
 
-```
 arrayindex(<array\>, <index\>)
-```
 
 #### Description
 
@@ -48440,28 +47011,21 @@ The `arrayindex()` function returns the value contained in the specified array p
 
 Use the split function to split IP addresses into an array of octets. Return the 3rd octet contained in the IP address.
 
-```
-dataset = xdr\_data 
-| fields action\_local\_ip  as alii 
-| alter ip\_third\_octet = arrayindex(split(alii, "."), 2) 
+dataset = xdr_data 
+| fields action_local_ip  as alii 
+| alter ip_third_octet = arrayindex(split(alii, "."), 2) 
 | filter alii != null and alii != "0.0.0.0" 
-| limit 10 
-```
+| limit 10
 
 ### arrayindexof
-Abstract
 
 Learn more about the Cortex Query Language `arrayindexof()` function that returns the index value of an array.
 
 #### Syntax
 
-```
 arrayindexof(<array\>, <condition\>)
-```
 
-```
 arrayindexof(<array\>, "@element"<operator\>"<array element\>")
-```
 
 **Note:**
 
@@ -48482,35 +47046,28 @@ The `arrayindexof()` function enables you to return a value related to an array 
 
 Use the alter stage to assign a value returned by the `arrayindexof` function to a field called `x`. The `arrayindexof` function reviews the `dfe_labels` array and returns 0 if the array is not empty and the `backtrace_identities` array contains more than 1 element. Otherwise, a NULL value is assigned to the `x` field.
 
-```
-dataset in (xdr\_data) 
-| alter x = arrayindexof(dfe\_labels , array\_length(backtrace\_identities) > 1) 
-| fields x, dfe\_labels 
+dataset in (xdr_data) 
+| alter x = arrayindexof(dfe_labels , array_length(backtrace_identities) > 1) 
+| fields x, dfe_labels 
 | limit 100 
-```
 
 ###### @Element
 
 When the `dfe_labels` array is not empty, use the alter stage to assign the 0-based index value returned by the `arrayindexof` function to a field called `x`. The `arrayindexof` function reviews the `dfe_labels` array and looks for the array element set to `network`. Otherwise, a NULL value is assigned to the `x` field.
 
-```
-dataset = xdr\_data 
-| filter dfe\_labels != null
-| alter x = arrayindexof(dfe\_labels , "@element" = "network") 
-| fields x, dfe\_labels 
-| limit 100 
-```
+dataset = xdr_data 
+| filter dfe_labels != null
+| alter x = arrayindexof(dfe_labels , "@element" = "network") 
+| fields x, dfe_labels 
+| limit 100
 
 ### array_length
-Abstract
 
 Learn more about the Cortex Query Language `array_length()` function that returns the length of an array.
 
 #### Syntax
 
-```
-array\_length (<array>)
-```
+array_length (<array>)
 
 #### Description
 
@@ -48518,24 +47075,19 @@ The `array_length()` function returns the number of elements in an array. When `
 
 #### Example
 
-```
-dataset = xdr\_data 
-| fields action\_local\_ip as alii 
-| alter ip\_len = array\_length(split(alii, ".")) 
+dataset = xdr_data 
+| fields action_local_ip as alii 
+| alter ip_len = array_length(split(alii, ".")) 
 | filter alii != null and alii != "0.0.0.0" 
 | limit 1
-```
 
 ### arraymap
-Abstract
 
 Learn more about the Cortex Query Language `arraymap()` function that applies a callable function to every element of an array.
 
 #### Syntax
 
-```
 arraymap (<array\>, <function()\>)
-```
 
 #### Description
 
@@ -48543,28 +47095,23 @@ The `arraymap()` function applies a specified function to every element of an ar
 
 #### Examples
 
-Extract the MAC address from the `agent_interface_map` field. This example uses the json\_extract\_scalar, to\_json\_string, json\_extract\_array, and arraystring functions to extract the desired information.
+Extract the MAC address from the `agent_interface_map` field. This example uses the json_extract_scalar, to_json_string, json_extract_array, and arraystring functions to extract the desired information.
 
-```
-dataset = xdr\_data 
+dataset = xdr_data 
 | alter mac = 
     arraystring (
         arraymap (
-            json\_extract\_array (to\_json\_string(agent\_interface\_map),"$."),
-            json\_extract\_scalar ("@element", "$.mac")
+            json_extract_array (to_json_string(agent_interface_map),"$."),
+            json_extract_scalar ("@element", "$.mac")
         ), ",")
-```
 
 ### arraymerge
-Abstract
 
 Learn more about the Cortex Query Language `arraymerge()` function that returns an array created from a merge of the inner json-string arrays.
 
 #### Syntax
 
-```
 arraymerge(<field>)
-```
 
 #### Description
 
@@ -48572,35 +47119,28 @@ The `arraymerge()` function returns an array, which is created from a merge of t
 
 #### Example 1
 
-Returns a final array called `result` that is created from a merge of the inner json-string arrays from array `x` and array `y` with the values \["a", "b", "c", "d"\].
+Returns a final array called `result` that is created from a merge of the inner json-string arrays from array `x` and array `y` with the values ["a", "b", "c", "d"].
 
-```
-dataset = xdr\_data  
-| alter x= to\_json\_string(arraycreate("a","b")), y = to\_json\_string(arraycreate("c","d"))
+dataset = xdr_data  
+| alter x= to_json_string(arraycreate("a","b")), y = to_json_string(arraycreate("c","d"))
 | alter xy = arraycreate(x,y) 
 | alter xy=arraymerge(xy)
-```
 
 #### Example 2
 
-Returns a final array that is created from a merge of the arraymap by extracting the IP address from the agent\_interface\_map field and the first IPV4 address found in the first element of the `agent_interface_map` array. This example uses the to\_json\_string and json\_extract\_array functions to extract the desired information.
+Returns a final array that is created from a merge of the arraymap by extracting the IP address from the agent_interface_map field and the first IPV4 address found in the first element of the `agent_interface_map` array. This example uses the to_json_string and json_extract_array functions to extract the desired information.
 
-```
-dataset = xdr\_data
+dataset = xdr_data
 | alter a =
-arraymerge (arraymap (agent\_interface\_map, to\_json\_string (json\_extract\_array (to\_json\_string("@element"), "$.ipv4") ) ) )
-```
+arraymerge (arraymap (agent_interface_map, to_json_string (json_extract_array (to_json_string("@element"), "$.ipv4") ) ) )
 
 ### arrayrange
-Abstract
 
 Learn more about the Cortex Query Language `arrayrange()` function that returns a portion of an array based on specified array indices.
 
 #### Syntax
 
-```
 arrayrange (<array>, <start>, <end>)
-```
 
 #### Description
 
@@ -48610,44 +47150,31 @@ The `arrayrange()` function returns a portion, or a slice, of an array given a s
 
 So if you have an array:
 
-```
-\[0,1,2,3,4,5,6\]
-```
+[0,1,2,3,4,5,6]
 
 and you specify:
 
-```
 arrayrange(<array\>, 2, 4)
-```
 
 the function will return:
 
-```
-\[2,3\]
-```
+[2,3]
 
 If you specify an end index that is higher than the last element in the array, the resulting array contains the starting element to the end of the array.
 
-```
 arrayrange(<array\>, 2, 8)
-```
 
 The function will return:
 
-```
-\[2,3,4,5,6\]
-```
+[2,3,4,5,6]
 
 ### arraystring
-Abstract
 
 Learn more about the Cortex Query Language `arraystring()` function that returns a string from an array, where each array element is joined by a defined delimiter.
 
 #### Syntax
 
-```
 arraystring (<string\>, <delimiter\>)
-```
 
 #### Description
 
@@ -48657,16 +47184,13 @@ The `arraystring()` function returns a string from an array, where each array el
 
 Retrieve all `action_app_id_transitions` that are not null, combine each array into a string where array elements are delimited by " : ", and then use dedup the resulting string.
 
-```
-dataset = xdr\_data 
-| fields action\_app\_id\_transitions  as aait 
-| alter transitions\_string = arraystring(aait, " : ") 
-| dedup transitions\_string by asc \_time 
+dataset = xdr_data 
+| fields action_app_id_transitions  as aait 
+| alter transitions_string = arraystring(aait, " : ") 
+| dedup transitions_string by asc _time 
 | filter aait != null
-```
 
 ### avg
-Abstract
 
 Learn more about the Cortex Query Language `avg` used with both `comp` and `windowcomp` stages.
 
@@ -48674,15 +47198,11 @@ Learn more about the Cortex Query Language `avg` used with both `comp` and `wind
 
 comp stage
 
-```
-comp avg(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp avg(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 windowcomp stage
 
-```
-windowcomp avg(<field>) \[by <field> \[,<field>,...\]\] \[sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\]\] \[between 0|null|<number>|-<number> \[and 0|null|<number>|-<number>\] \[frame\_type=range\]\] \[as <alias>\]
-```
+windowcomp avg(<field>) [by <field> [,<field>,...]] [sort [asc|desc] <field1> [, [asc|desc] <field2>,...]] [between 0|null|<number>|-<number> [and 0|null|<number>|-<number>] [frame_type=range]] [as <alias>]
 
 #### Description
 
@@ -48704,38 +47224,31 @@ comp example
 
 Return a single average value of the `action_total_download` field for a group of rows, for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` values. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing a single value for the results.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp avg(Download) as average\_download by Process\_Path, Process\_CMD
-addrawdata = true as raw\_data
-```
+| comp avg(Download) as average_download by Process_Path, Process_CMD
+addrawdata = true as raw_data
 
 windowcomp example
 
 Return the events that are above average per `Process_Path` and `Process_CMD`. The query returns a maximum of 100 `xdr_data` records in a column called `avg_download`.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| windowcomp avg(Download) by Process\_Path, Process\_CMD as avg\_download
-| filter Download > avg\_download
-```
+| windowcomp avg(Download) by Process_Path, Process_CMD as avg_download
+| filter Download > avg_download
 
 ### coalesce
-Abstract
 
 Learn more about the Cortex Query Language `coalesce()` function that returns the first value that is not null from a defined list of fields.
 
 #### Syntax
 
-```
-coalesce (<field\_1>, <field\_2>,...<field\_n>)
-```
+coalesce (<field_1>, <field_2>,...<field_n>)
 
 #### Description
 
@@ -48745,26 +47258,21 @@ The `coalesce()` function takes an arbitrary number of arguments and returns the
 
 Given a list of fields that contain usernames, select the first one that is not `null` and display it in the `username` column.
 
-```
-dataset = xdr\_data 
-| fields actor\_primary\_username,
-       os\_actor\_primary\_username,
-       causality\_actor\_primary\_username 
-| alter username = coalesce(actor\_primary\_username,
-                          os\_actor\_primary\_username,
-                          causality\_actor\_primary\_username) 
-```
+dataset = xdr_data 
+| fields actor_primary_username,
+       os_actor_primary_username,
+       causality_actor_primary_username 
+| alter username = coalesce(actor_primary_username,
+                          os_actor_primary_username,
+                          causality_actor_primary_username)
 
 ### concat
-Abstract
 
 Learn more about the Cortex Query Language `concat()` function joins multiple strings into a single string.
 
 #### Syntax
 
-```
 concat (<string1\>, <string2\>, ...)
-```
 
 #### Description
 
@@ -48774,24 +47282,19 @@ The `concat()` function joins multiple strings into a single string. When using 
 
 Display the first non-NULL `action_boot_time` field value. In a second column called `abt_string`, use the `concat()` function to prepend "str: " to the value, and then display it.
 
-```
-dataset = xdr\_data 
-| fields action\_boot\_time as abt 
+dataset = xdr_data 
+| fields action_boot_time as abt 
 | filter abt != null 
-| alter abt\_string = concat("str: ", to\_string(abt)) 
-| limit 1 
-```
+| alter abt_string = concat("str: ", to_string(abt)) 
+| limit 1
 
 ### convert_from_base_64
-Abstract
 
 Learn more about the Cortex Query Language `convert_from_base_64` function.
 
 #### Syntax
 
-```
-convert\_from\_base\_64("<base64-encoded input>")
-```
+convert_from_base_64("<base64-encoded input>")
 
 #### Description
 
@@ -48801,12 +47304,9 @@ The `convert_from_base_64()` function converts the base64-encoded input to the d
 
 Returns the decoded string format `Hello world` from the base64-encoded input `"SGVsbG8gd29ybGQ="`.
 
-```
-convert\_from\_base\_64("SGVsbG8gd29ybGQ=")
-```
+convert_from_base_64("SGVsbG8gd29ybGQ=")
 
 ### count
-Abstract
 
 Learn more about the Cortex Query Language `count` function used with both `comp` and `windowcomp` stages.
 
@@ -48814,15 +47314,11 @@ Learn more about the Cortex Query Language `count` function used with both `comp
 
 comp stage
 
-```
-comp count(\[_<field>_\]) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp count([_<field>_]) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 windowcomp stage
 
-```
-windowcomp count(\[<field>\]) \[by <field> \[,<field>,...\]\] \[sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\]\] \[between 0|null|<number>|-<number> \[and 0|null|<number>|-<number>\] \[frame\_type=range\]\] \[as <alias>\] 
-```
+windowcomp count([<field>]) [by <field> [,<field>,...]] [sort [asc|desc] <field1> [, [asc|desc] <field2>,...]] [between 0|null|<number>|-<number> [and 0|null|<number>|-<number>] [frame_type=range]] [as <alias>] 
 
 #### Description
 
@@ -48839,7 +47335,7 @@ When the `count` aggregation function is used with a comp stage, the function re
 
 In addition, you can configure whether the raw data events are displayed by setting `addrawdata` to either `true` or `false` (default), which are used to configure the final `comp` results. When including raw data events in your query, the query runs for up to 50 fields that you define and displays up to 100 events.
 
-Use count\_distinct to retrieve the number of unique values in the result set.count\_distinct
+Use count_distinct to retrieve the number of unique values in the result set.count_distinct
 
 windowcomp stage
 
@@ -48856,35 +47352,28 @@ comp example
 
 Return a single count of all values found for the `actor_process_image_path` field in the group of rows, for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` values. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing a single value for the results.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp count(Process\_Path) as num\_process\_path by process\_path, process\_cmd addrawdata = true as raw\_data
-| sort desc process\_path
-```
+| comp count(Process_Path) as num_process_path by process_path, process_cmd addrawdata = true as raw_data
+| sort desc process_path
 
 windowcomp example
 
 Return a single count for the number of values found in the `dns_query_name` field for each row in the group of rows, for all records that contain matching values in the `agent_ip_addresses` field. The query returns a maximum of 100 `xdr_data` records. The results are provided in the `count_dns_query_name` column.
 
-```
-dataset = xdr\_data
+dataset = xdr_data
 | limit 100
-| windowcomp count(dns\_query\_name) by agent\_ip\_addresses as count\_dns\_query\_name
-```
+| windowcomp count(dns_query_name) by agent_ip_addresses as count_dns_query_name
 
 ### count_distinct
-Abstract
 
 Learn more about the Cortex Query Language `count_distinct` aggregate comp function that counts the number of unique values found for a field in the result set.
 
 #### Syntax
 
-```
-comp count\_distinct(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata= true|false \[as _<target field>_\]\]
-```
+comp count_distinct(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata= true|false [as _<target field>_]]
 
 #### Description
 
@@ -48898,25 +47387,20 @@ Use count to retrieve the total number of values in the result set.count
 
 Return a single count of the number of unique values found for the `actor_process_image_path` field over a group of rows, for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line values`. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing the raw data events used to display the final `comp` results.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp count\_distinct(Process\_Path) as num\_process\_path by process\_path, process\_cmd addrawdata = true as raw\_data
-| sort desc process\_path
-```
+| comp count_distinct(Process_Path) as num_process_path by process_path, process_cmd addrawdata = true as raw_data
+| sort desc process_path
 
 ### current_time
-Abstract
 
 Learn more about the Cortex Query Language `current_time()` function that returns the current time as a timestamp.
 
 #### Syntax
 
-```
-current\_time()
-```
+current_time()
 
 #### Description
 
@@ -48926,21 +47410,16 @@ The `current_time()` function returns a timestamp value representing the current
 
 From the `xdr_data` dataset, returns the events of the last 24 hours whose actor process started running more than 30 days ago.
 
-```
-dataset = xdr\_data
-| filter timestamp\_diff(current\_time(),to\_timestamp(actor\_process\_execution\_time, "MILLIS"), "DAY") > 30
-```
+dataset = xdr_data
+| filter timestamp_diff(current_time(),to_timestamp(actor_process_execution_time, "MILLIS"), "DAY") > 30
 
 ### date_floor
-Abstract
 
 Learn more about the Cortex Query Language `date_floor()` function.
 
 #### Syntax
 
-```
-date\_floor (<timestamp field>, "<time unit>" \[, "<time zone>")
-```
+date_floor (<timestamp field>, "<time unit>" [, "<time zone>")
 
 #### Description
 
@@ -48948,24 +47427,19 @@ The `date_floor()` function converts a timestamp value for a particular field or
 
 #### Example
 
-Returns a maximum of 100 `xdr_data` records with the events of the `_time` field that are less than equal to a timestamp value. The timestamp value undergoes a number of different function manipulations. The current time is first rounded to the nearest whole value for the week according to the America/Los\_Angeles time zone. This timestamp value is then converted to the Unix epoch timestamp format in seconds and is added to the -2073600 Unix epoch time. This Unix epoch time value in seconds is then converted to the final timestamp value that is used to filter the `_time` fields and return the resulting records.
+Returns a maximum of 100 `xdr_data` records with the events of the `_time` field that are less than equal to a timestamp value. The timestamp value undergoes a number of different function manipulations. The current time is first rounded to the nearest whole value for the week according to the America/Los_Angeles time zone. This timestamp value is then converted to the Unix epoch timestamp format in seconds and is added to the -2073600 Unix epoch time. This Unix epoch time value in seconds is then converted to the final timestamp value that is used to filter the `_time` fields and return the resulting records.
 
-```
-dataset = xdr\_data
-| filter \_time < to\_timestamp(add(to\_epoch(date\_floor(current\_time(),"w", "America/Los\_Angeles")),-2073600))
+dataset = xdr_data
+| filter _time < to_timestamp(add(to_epoch(date_floor(current_time(),"w", "America/Los_Angeles")),-2073600))
 | limit 100
-```
 
 ### divide
-Abstract
 
 Learn more about the Cortex Query Language `divide()` function that divides two integers.
 
 #### Syntax
 
-```
 divide (<string> | <integer>, <string> | <integer>)
-```
 
 #### Description
 
@@ -48973,24 +47447,19 @@ The `divide()` function divides two positive integers. Parameters can be either 
 
 #### Example
 
-```
-dataset = xdr\_data 
-| alter mynum = divide(action\_file\_size, 3) 
-| fields action\_file\_size, mynum 
-| filter action\_file\_size > 3 
+dataset = xdr_data 
+| alter mynum = divide(action_file_size, 3) 
+| fields action_file_size, mynum 
+| filter action_file_size > 3 
 | limit 1
-```
 
 ### earliest
-Abstract
 
 Learn more about the Cortex Query Language `earliest` aggregate comp function that returns the earliest field value found with the matching criteria.
 
 #### Syntax
 
-```
-comp earliest(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp earliest(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 #### Description
 
@@ -49002,24 +47471,19 @@ In addition, you can configure whether the raw data events are displayed by sett
 
 Return the chronologically earliest timestamp found for any given `action_total_download` value for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` fields. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing the raw data events used to display the final `comp` results.
 
-```
-dataset = xdr\_data
-| fields \_time, actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields _time, actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp earliest(\_time) as download\_time by Process\_Path, Process\_CMD addrawdata = true as raw\_data
-```
+| comp earliest(_time) as download_time by Process_Path, Process_CMD addrawdata = true as raw_data
 
 ### extract_time
-Abstract
 
 Learn more about the Cortex Query Language `extract_time()` function that returns a specified portion of a timestamp.
 
 #### Syntax
 
-```
-extract\_time (<timestamp\>, <part\>)
-```
+extract_time (<timestamp\>, <part\>)
 
 #### Description
 
@@ -49054,23 +47518,18 @@ The `extract_time()` function returns a specified part of a timestamp. The `part
 
 #### Example
 
-```
-dataset = xdr\_data 
-| alter timepart = extract\_time(current\_time(), "HOUR") 
+dataset = xdr_data 
+| alter timepart = extract_time(current_time(), "HOUR") 
 | fields timepart 
-| limit 1 
-```
+| limit 1
 
 ### extract_url_host
-Abstract
 
 Learn more about the Cortex Query Language `extract_url_host()` function.
 
 #### Syntax
 
-```
-extract\_url\_host ("<URL>")
-```
+extract_url_host ("<URL>")
 
 #### Description
 
@@ -49082,49 +47541,36 @@ The `extract_url_host()` function returns the host of the URL. The function alwa
 
 Returns `paloaltonetworks.com` from the complete URL: `https://www.paloaltonetworks.com`.
 
-```
-extract\_url\_host ("https://www.paloaltonetworks.com")
-```
+extract_url_host ("https://www.paloaltonetworks.com")
 
 Returns `a.b` for the URL: `//user:password@a.b:80/path?query`
 
-```
-extract\_url\_host ("//user:password@a.b:80/path?query")
-```
+extract_url_host ("//user:password@a.b:80/path?query")
 
 Returns `www.example.co.uk` in lowercase for the complete URL: `www.Example.Co.UK`, which includes uppercase characters.
 
-```
-extract\_url\_host ("www.Example.Co.UK")
-```
+extract_url_host ("www.Example.Co.UK")
 
 Returns `www.test.paloaltonetworks.com` for the following URL containing suffixes: `https://www.test.paloaltonetworks.com/suffix/another_suffix`
 
-```
-extract\_url\_host ("https://www.test.paloaltonetworks.com/suffix/another\_suffix")
-```
+extract_url_host ("https://www.test.paloaltonetworks.com/suffix/another_suffix")
 
 ##### Complete XQL Query Example
 
 Returns one `xdr_data` record in the results table where the host of the URL `https://www.test.paloaltonetworks.com` is listed in the `URL_HOST` column as `www.test.paloaltonetworks.com`.
 
-```
-dataset = xdr\_data 
-| alter url\_host = extract\_url\_host("https://www.test.paloaltonetworks.com") 
-| fields url\_host 
+dataset = xdr_data 
+| alter url_host = extract_url_host("https://www.test.paloaltonetworks.com") 
+| fields url_host 
 | limit 1
-```
 
 ### extract_url_pub_suffix
-Abstract
 
 Learn more about the Cortex Query Language `extract_url_pub_suffix()` function.
 
 #### Syntax
 
-```
-extract\_url\_pub\_suffix ("<URL>")
-```
+extract_url_pub_suffix ("<URL>")
 
 #### Description
 
@@ -49136,37 +47582,28 @@ The `extract_url_pub_suffix()` function returns the public suffix of the URL, su
 
 Returns `com` for the following URL: `https://paloaltonetworks.com`
 
-```
-extract\_url\_pub\_suffix ("https://paloaltonetworks.com")
-```
+extract_url_pub_suffix ("https://paloaltonetworks.com")
 
 Returns `com` for the following URL containing suffixes: `https://www.test.paloaltonetworks.com/suffix/another_suffix`
 
-```
-extract\_url\_pub\_suffix ("https://www.test.paloaltonetworks.com/suffix/another\_suffix")
-```
+extract_url_pub_suffix ("https://www.test.paloaltonetworks.com/suffix/another_suffix")
 
 ##### Complete XQL Query Example
 
 Returns one `xdr_data` record in the results table where the public suffix of the URL `https://www.paloaltonetworks.com` is listed in the `URL_PUB_SUFFIX` column as `com`.
 
-```
-dataset = xdr\_data 
-| alter url\_pub\_suffix = extract\_url\_pub\_suffix("https://paloaltonetworks.com") 
-| fields url\_pub\_suffix 
+dataset = xdr_data 
+| alter url_pub_suffix = extract_url_pub_suffix("https://paloaltonetworks.com") 
+| fields url_pub_suffix 
 | limit 1
-```
 
 ### extract_url_registered_domain
-Abstract
 
 Learn more about the Cortex Query Language `extract_url_registered_domain()` function.
 
 #### Syntax
 
-```
-extract\_url\_registered\_domain ("<URL>")
-```
+extract_url_registered_domain ("<URL>")
 
 #### Description
 
@@ -49178,49 +47615,36 @@ The `extract_url_registered_domain()` function returns the registered domain or 
 
 Returns `paloaltonetworks.com` from the complete URL: `https://www.paloaltonetworks.com`.
 
-```
-extract\_url\_registered\_domain ("https://www.paloaltonetworks.com")
-```
+extract_url_registered_domain ("https://www.paloaltonetworks.com")
 
 Returns NULL for the URL: `//user:password@a.b:80/path?query`
 
-```
-extract\_url\_registered\_domain ("//user:password@a.b:80/path?query")
-```
+extract_url_registered_domain ("//user:password@a.b:80/path?query")
 
 Returns `example.co.uk` in lowercase for the complete URL: `www.Example.Co.UK`, which includes uppercase characters.
 
-```
-extract\_url\_registered\_domain ("www.Example.Co.UK")
-```
+extract_url_registered_domain ("www.Example.Co.UK")
 
 Returns `paloaltonetworks.com` for the following URL containing suffixes: `https://www.test.paloaltonetworks.com/suffix/another_suffix`
 
-```
-extract\_url\_registered\_domain ("https://www.test.paloaltonetworks.com/suffix/another\_suffix")
-```
+extract_url_registered_domain ("https://www.test.paloaltonetworks.com/suffix/another_suffix")
 
 ##### Complete XQL query example
 
 Returns one `xdr_data` record in the results table where the registered domain of the URL `https://www.test.paloaltonetworks.com` is listed in the `REGISTERED_DOMAIN` column as `paloaltonetworks.com`.
 
-```
-dataset = xdr\_data 
-| alter registered\_domain = extract\_url\_registered\_domain("https://www.test.paloaltonetworks.com") 
-| fields registered\_domain 
+dataset = xdr_data 
+| alter registered_domain = extract_url_registered_domain("https://www.test.paloaltonetworks.com") 
+| fields registered_domain 
 | limit 1
-```
 
 ### first
-Abstract
 
 Learn more about the Cortex Query Language `first` aggregate comp function that returns the first field value found in the dataset with the matching criteria.
 
 #### Syntax
 
-```
-comp first(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp first(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 #### Description
 
@@ -49232,24 +47656,19 @@ In addition, you can configure whether the raw data events are displayed by sett
 
 Return the first timestamp found in the dataset for any given `action_total_download` value for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` fields. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing the raw data events used to display the final `comp` results.
 
-```
-dataset = xdr\_data
-| fields \_time,actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields _time,actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp first(\_time) as download\_time by Process\_Path, Process\_CMD addrawdata = true as raw\_data
-```
+| comp first(_time) as download_time by Process_Path, Process_CMD addrawdata = true as raw_data
 
 ### first_value
-Abstract
 
 Learn more about the Cortex Query Language `first_value()` navigation function that is used with a `windowcomp` stage.
 
 #### Syntax
 
-```
-windowcomp first\_value(<field>) \[by <field> \[,<field>,...\]\] sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\] \[between 0|null|<number>|-<number> \[and 0|null|<number>|-<number>\] \[frame\_type=range\]\] \[as <alias>\]
-```
+windowcomp first_value(<field>) [by <field> [,<field>,...]] sort [asc|desc] <field1> [, [asc|desc] <field2>,...] [between 0|null|<number>|-<number> [and 0|null|<number>|-<number>] [frame_type=range]] [as <alias>]
 
 #### Description
 
@@ -49259,41 +47678,33 @@ The `first_value()` function is a navigation function that is used in combinatio
 
 Return the first IP address a user authenticated from successfully.
 
-```
-preset = authentication\_story
-| filter auth\_identity not in (null, """""") and auth\_outcome = """SUCCESS""" and action\_country != UNKNOWN
-| alter et = to\_epoch(\_time), t = \_time
+preset = authentication_story
+| filter auth_identity not in (null, """""") and auth_outcome = """SUCCESS""" and action_country != UNKNOWN
+| alter et = to_epoch(_time), t = _time
 | bin t span = 1d
 | limit 100
-| windowcomp first\_value(action\_local\_ip) by auth\_identity, t sort asc et between null and null as first\_action\_local\_ip
-| fields auth\_identity , \*action\_local\_ip
-```
+| windowcomp first_value(action_local_ip) by auth_identity, t sort asc et between null and null as first_action_local_ip
+| fields auth_identity , \*action_local_ip
 
 ### floor
-Abstract
 
 Learn more about the Cortex Query Language `floor()` function that rounds a field that contains a number down to the nearest whole integer.
 
 #### Syntax
 
-```
 floor (<number>)
-```
 
 #### Description
 
 The `floor()` function converts a field that contains a number, and returns an integer rounded down to the nearest whole number.
 
 ### format_string
-Abstract
 
 Learn more about the Cortex Query Language `format_string()` function.
 
 #### Syntax
 
-```
-format\_string("<format string>", <field\_1>, <field\_2>,...<field\_n> )
-```
+format_string("<format string>", <field_1>, <field_2>,...<field_n> )
 
 #### Description
 
@@ -49304,56 +47715,51 @@ The `format_string()` function returns a string from a format string that contai
 -   STRING
     
     ```
-    dataset = xdr\_data 
-    | alter stylished\_action\_category\_appID = format\_string("-%s-", action\_category\_of\_app\_id )
-    | fields stylished\_action\_category\_appID 
+    dataset = xdr_data 
+    | alter stylished_action_category_appID = format_string("-%s-", action_category_of_app_id )
+    | fields stylished_action_category_appID 
     | limit 100
     ```
     
 -   Simple integer
     
     ```
-    dataset = xdr\_data 
-    | filter action\_remote\_ip\_int != null
-    | alter simple\_int = format\_string("%d", action\_remote\_ip\_int)
-    | fields simple\_int 
+    dataset = xdr_data 
+    | filter action_remote_ip_int != null
+    | alter simple_int = format_string("%d", action_remote_ip_int)
+    | fields simple_int 
     | limit 100
     ```
     
 -   Integer with left blank padding
     
     ```
-    dataset = xdr\_data 
-    | filter action\_remote\_ip\_int != null
-    | alter int\_with\_left\_blank = format\_string("|%100d|", action\_remote\_ip\_int)
-    | fields int\_with\_left\_blank 
+    dataset = xdr_data 
+    | filter action_remote_ip_int != null
+    | alter int_with_left_blank = format_string("|%100d|", action_remote_ip_int)
+    | fields int_with_left_blank 
     | limit 100
     ```
     
 -   Integer with left zero padding
     
     ```
-    dataset = xdr\_data 
-    | filter action\_remote\_ip\_int != null
-    | alter int\_with\_left\_zero\_padding = format\_string("+%0100d+", action\_remote\_ip\_int)
-    | fields int\_with\_left\_zero\_padding 
+    dataset = xdr_data 
+    | filter action_remote_ip_int != null
+    | alter int_with_left_zero_padding = format_string("+%0100d+", action_remote_ip_int)
+    | fields int_with_left_zero_padding 
     | limit 100
     ```
 
 ### format_timestamp
-Abstract
 
 Learn more about the Cortex Query Language `format_timestamp()` function that returns a string after formatting a timestamp according to a specified string format.
 
 #### Syntax
 
-```
-format\_timestamp("<format string>", <timestamp field>)
-```
+format_timestamp("<format string>", <timestamp field>)
 
-```
-format\_timestamp("<format string>", <timestamp field>, "<time zone>")
-```
+format_timestamp("<format string>", <timestamp field>, "<time zone>")
 
 #### Description
 
@@ -49363,23 +47769,23 @@ The `format_timestamp()` function returns a string after formatting a timestamp 
 
 -   **Without a time zone configured**
     
-    Returns a maximum of 100 `xdr_data` records, which includes a string field called `new_time` in the format `YYYY/MM/dd HH:mm:ss`, such as 2021/11/12 12:10:30. This format is detailed in the `format_timestamp` function, which defines retrieving the new\_time (`%Y/%m/%d %H:%M:%S`) from the `_time` field.
+    Returns a maximum of 100 `xdr_data` records, which includes a string field called `new_time` in the format `YYYY/MM/dd HH:mm:ss`, such as 2021/11/12 12:10:30. This format is detailed in the `format_timestamp` function, which defines retrieving the new_time (`%Y/%m/%d %H:%M:%S`) from the `_time` field.
     
     ```
-    dataset = xdr\_data
-    | alter new\_time = format\_timestamp("%Y/%m/%d %H:%M:%S", \_time) 
-    | fields new\_time 
+    dataset = xdr_data
+    | alter new_time = format_timestamp("%Y/%m/%d %H:%M:%S", _time) 
+    | fields new_time 
     | limit 100
     ```
     
 -   **With a time zone configured using an hours offset**
     
-    Returns a maximum of 100 `xdr_data` records, which includes a string field called new\_time in the format YYYY/MM/dd HH:mm:ss, such as 2021/11/12 01:53:35. This format is detailed in the `format_timestamp` function, which defines the retrieving the new\_time (`%Y/%m/%d %H:%M:%S`) from the `_time` field and adding +03:00 hours as the time zone format.
+    Returns a maximum of 100 `xdr_data` records, which includes a string field called new_time in the format YYYY/MM/dd HH:mm:ss, such as 2021/11/12 01:53:35. This format is detailed in the `format_timestamp` function, which defines the retrieving the new_time (`%Y/%m/%d %H:%M:%S`) from the `_time` field and adding +03:00 hours as the time zone format.
     
     ```
-    dataset = xdr\_data  
-    | alter new\_time = format\_timestamp("%Y/%m/%d %H:%M:%S", \_time, "+03:00") 
-    | fields new\_time 
+    dataset = xdr_data  
+    | alter new_time = format_timestamp("%Y/%m/%d %H:%M:%S", _time, "+03:00") 
+    | fields new_time 
     | limit 100
     ```
     
@@ -49388,15 +47794,14 @@ The `format_timestamp()` function returns a string after formatting a timestamp 
     Returns a maximum of 100 `xdr_data` records, which includes a string field called `new_time` in the format `YYYY/MM/dd HH:mm:ss`, such as `2021/11/12 01:53:35`. This format is detailed in the `format_timestamp` function, which defines the retrieving the `new_time` (`%Y/%m/%d %H:%M:%S`) from the `_time` field, and includes an "America/Chicago" time zone.
     
     ```
-    dataset = xdr\_data 
-    | fields \_time
-    | alter new\_time = format\_timestamp("%Y/%m/%d %H:%M:%S", \_time, "America/Chicago")
-    | fields new\_time
+    dataset = xdr_data 
+    | fields _time
+    | alter new_time = format_timestamp("%Y/%m/%d %H:%M:%S", _time, "America/Chicago")
+    | fields new_time
     | limit 100
     ```
 
 ### if
-Abstract
 
 Learn more about the Cortex Query Language `if()` function that returns a result after evaluating a condition.
 
@@ -49404,18 +47809,16 @@ Learn more about the Cortex Query Language `if()` function that returns a result
 
 Regular if statement
 
-```
-if (<boolean expression>, <true return expression>\[, <false return expression>\])
-```
+if (<boolean expression>, <true return expression>[, <false return expression>])
 
 Nested if/else statement
 
 -   ```
-    if(<boolean expression1>, <true return expression1>, <boolean expression2>, <true return expression2>\[, <boolean expression3>, <true return expression3>,...\]\[, <false return expression>\])
+    if(<boolean expression1>, <true return expression1>, <boolean expression2>, <true return expression2>[, <boolean expression3>, <true return expression3>,...][, <false return expression>])
     ```
     
 -   ```
-    if(<boolean expression1>, if(<boolean expression2>, <true return expression2> \[,<false return expression2>\])...\[,<false return expression1>\])
+    if(<boolean expression1>, if(<boolean expression2>, <true return expression2> [,<false return expression2>])...[,<false return expression1>])
     ```
     
     **Note:**
@@ -49438,16 +47841,14 @@ Regular if statement
 
 If '.exe' is present on the `action_process_image_name` field value, replace that substring with an empty string. This example uses the replace and lowercase functions, as well as the contains operator to perform the conditional check. When the '.exe' is not present, the value is returned as is.replacelowercaseSupported Operators
 
-```
-dataset = xdr\_data 
-| fields action\_process\_image\_name as apin 
+dataset = xdr_data 
+| fields action_process_image_name as apin 
 | filter apin != null 
-| alter remove\_exe\_process = 
+| alter remove_exe_process = 
     if(lowercase(apin) contains ".exe",  // boolean expression
        replace(lowercase(apin),".exe",""), // return if true
        lowercase(apin))  // return if false
 | limit 10
-```
 
 Nested if/else statement
 
@@ -49462,28 +47863,23 @@ Return a maximum of 1 `xdr_data` record from the past 7 days. The table resul
 -   If all the above expressions evaluate as `false`, return null.
     
 
-```
-config timeframe = 7d | dataset = xdr\_data 
+config timeframe = 7d | dataset = xdr_data 
 | limit 1
 | alter 
-    check\_ip = if(action\_local\_ip ~= "^10",//boolean expression1
+    check_ip = if(action_local_ip ~= "^10",//boolean expression1
                "Local 10", // true return expression1
-               action\_local\_ip ~= "^172", //boolean expression2
+               action_local_ip ~= "^172", //boolean expression2
                "Local 172 ?", //true return expression2
-               action\_local\_ip ~= "^192\\.168", //boolean expression3
+               action_local_ip ~= "^192\\.168", //boolean expression3
                "Local 192") //true return expression3
-```
 
 ### incidr
-Abstract
 
 Learn more about the Cortex Query Language `incidr()` function.
 
 #### Syntax
 
-```
-incidr(<IPv4\_address>, <CIDR1\_range1> | <CIDR1\_range1, CIDR2\_range2, ...>)
-```
+incidr(<IPv4_address>, <CIDR1_range1> | <CIDR1_range1, CIDR2_range2, ...>)
 
 #### Description
 
@@ -49499,32 +47895,32 @@ Multiple CIDRs are defined with comma separated syntax when building an XQL quer
     
     ```
     dataset = test 
-    | alter ip\_address = "192.168.0.1" 
-    | filter incidr(ip\_address, "192.168.0.0/24, 1.168.0.0/24") = true
+    | alter ip_address = "192.168.0.1" 
+    | filter incidr(ip_address, "192.168.0.0/24, 1.168.0.0/24") = true
     ```
     
 -   Function returns `false` and no results are displayed:
     
     ```
     dataset = test 
-    | alter ip\_address = "192.168.0.1" 
-    | filter incidr(ip\_address, "2.168.0.0/24, 1.168.0.0/24") = true
+    | alter ip_address = "192.168.0.1" 
+    | filter incidr(ip_address, "2.168.0.0/24, 1.168.0.0/24") = true
     ```
     
 -   Function returns `false` and no results are displayed:
     
     ```
     dataset = test 
-    | alter ip\_address = "192.168.0.1" 
-    | filter incidr(ip\_address, "192.168.0.0/24, 1.168.0.0/24") = false
+    | alter ip_address = "192.168.0.1" 
+    | filter incidr(ip_address, "192.168.0.0/24, 1.168.0.0/24") = false
     ```
     
 -   Function returns `true` and results are displayed:
     
     ```
     dataset = test 
-    | alter ip\_address = "192.168.0.1" 
-    | filter incidr(ip\_address, "2.168.0.0/24, 1.168.0.0/24") = false
+    | alter ip_address = "192.168.0.1" 
+    | filter incidr(ip_address, "2.168.0.0/24, 1.168.0.0/24") = false
     ```
     
 
@@ -49536,33 +47932,26 @@ The same logic is used when using the `incidr` and `not incidr` operators. For m
 
 Return a maximum of 10 `xdr_data` records, if the IPV4 address (`192.168.10.14`) is in range by verifying against a single CIDR (`192.168.10.0/24`):
 
-```
-alter my\_ip = "192.168.10.14"
-| alter inrange = incidr(my\_ip, "192.168.10.0/24")
+alter my_ip = "192.168.10.14"
+| alter inrange = incidr(my_ip, "192.168.10.0/24")
 | fields inrange
 | limit 10
       
-```
 
 Return a maximum of 10 `xdr_data` records, if the IPV4 address (`192.168.0.1`) is in range by verifying against multiple CIDRs (`192.168.0.0/24` or `1.168.0.0/24`):
 
-```
-dataset = xdr\_data 
-| alter ip\_address = "192.168.0.1" 
-| filter incidr(ip\_address, "192.168.0.0/24, 1.168.0.0/24") = true 
+dataset = xdr_data 
+| alter ip_address = "192.168.0.1" 
+| filter incidr(ip_address, "192.168.0.0/24, 1.168.0.0/24") = true 
 | limit 10
-```
 
 ### incidr6
-Abstract
 
 Learn more about the Cortex Query Language `incidr6()` function.
 
 #### Syntax
 
-```
-incidr6(<IPv6\_address>, <CIDR1\_range1> | <CIDR1\_range1, CIDR2\_range2, ...>)
-```
+incidr6(<IPv6_address>, <CIDR1_range1> | <CIDR1_range1, CIDR2_range2, ...>)
 
 #### Description
 
@@ -49578,32 +47967,32 @@ Multiple CIDRs are defined with comma separated syntax when building an XQL quer
     
     ```
     dataset = test 
-    | alter ip\_address = "3031:3233:3435:3637:3839:4041:4243:4445" 
-    | filter incidr(ip\_address, "3031:3233:3435:3637:0000:0000:0000:0000/64, 6081:6233:6435:6637:0000:0000:0000:0000/64") = true
+    | alter ip_address = "3031:3233:3435:3637:3839:4041:4243:4445" 
+    | filter incidr(ip_address, "3031:3233:3435:3637:0000:0000:0000:0000/64, 6081:6233:6435:6637:0000:0000:0000:0000/64") = true
     ```
     
 -   Function returns `false` and no results are displayed:
     
     ```
     dataset = test 
-    | alter ip\_address = "3031:3233:3435:3637:3839:4041:4243:4445" 
-    | filter incidr(ip\_address, "6081:6233:6435:6637:0000:0000:0000:0000/64, 7081:7234:7435:7737:0000:0000:0000:0000/64, fe80::/10") = true
+    | alter ip_address = "3031:3233:3435:3637:3839:4041:4243:4445" 
+    | filter incidr(ip_address, "6081:6233:6435:6637:0000:0000:0000:0000/64, 7081:7234:7435:7737:0000:0000:0000:0000/64, fe80::/10") = true
     ```
     
 -   Function returns `false` and no results are displayed:
     
     ```
     dataset = test 
-    | alter ip\_address = "3031:3233:3435:3637:3839:4041:4243:4445" 
-    | filter incidr(ip\_address, "3031:3233:3435:3637:0000:0000:0000:0000/64, 7081:7234:7435:7737:0000:0000:0000:0000/64, fe80::/10") = false
+    | alter ip_address = "3031:3233:3435:3637:3839:4041:4243:4445" 
+    | filter incidr(ip_address, "3031:3233:3435:3637:0000:0000:0000:0000/64, 7081:7234:7435:7737:0000:0000:0000:0000/64, fe80::/10") = false
     ```
     
 -   Function returns `true` and results are displayed:
     
     ```
     dataset = test 
-    | alter ip\_address = "3031:3233:3435:3637:3839:4041:4243:4445" 
-    | filter incidr(ip\_address, "6081:6233:6435:6637:0000:0000:0000:0000/64, 7081:7234:7435:7737:0000:0000:0000:0000/64, fe80::/10") = false
+    | alter ip_address = "3031:3233:3435:3637:3839:4041:4243:4445" 
+    | filter incidr(ip_address, "6081:6233:6435:6637:0000:0000:0000:0000/64, 7081:7234:7435:7737:0000:0000:0000:0000/64, fe80::/10") = false
     ```
     
 
@@ -49615,32 +48004,25 @@ The same logic is used when using the `incidr6` and `not incidr6` operators. For
 
 Return a maximum of 10 `xdr_data` records, if the IPV6 address (`3031:3233:3435:3637:3839:4041:4243:4445`) is in range by verifying against a single CIDR (`3031:3233:3435:3637:0000:0000:0000:0000/64`):
 
-```
-alter my\_ip = "3031:3233:3435:3637:3839:4041:4243:4445"
-| alter inrange = incidr6(my\_ip, "3031:3233:3435:3637:0000:0000:0000:0000/64")
+alter my_ip = "3031:3233:3435:3637:3839:4041:4243:4445"
+| alter inrange = incidr6(my_ip, "3031:3233:3435:3637:0000:0000:0000:0000/64")
 | fields inrange
 | limit 10
-```
 
 Return a maximum of 10 `xdr_data` records, if the IPV6 address (`3031:3233:3435:3637:3839:4041:4243:4445`) is in range by verifying against multiple CIDRs (`2001:0db8:85a3:0000:0000:8a2e:0000:0000/64` or `fe80::/10`):
 
-```
-dataset = xdr\_data 
-| alter ip\_address = "fe80::1" 
-| filter incidr6(ip\_address, "2001:0db8:85a3:0000:0000:8a2e:0000:0000/64, fe80::/10") = true 
+dataset = xdr_data 
+| alter ip_address = "fe80::1" 
+| filter incidr6(ip_address, "2001:0db8:85a3:0000:0000:8a2e:0000:0000/64, fe80::/10") = true 
 | limit 10
-```
 
 ### incidrlist
-Abstract
 
 Learn more about the Cortex Query Language `incidrlist()` function.
 
 #### Syntax
 
-```
-incidrlist(<IP\_address list>, <CIDR\_range>)
-```
+incidrlist(<IP_address list>, <CIDR_range>)
 
 #### Description
 
@@ -49650,36 +48032,29 @@ The `incidrlist()` function accepts a string containing a comma-separated list o
 
 Return `true` if any of the IP addresses fall within the specified IP range. Note that the input type is a comma-separated list of IP addresses, and not an array of IP addresses.
 
-```
 alter inrange = incidrlist("192.168.10.16,192.168.10.3", 
                            "192.168.10.0/24")
 | fields inrange
 | limit 1
       
-```
 
 If you want to evaluate a true array of IP addresses, convert the array to a comma-separated list using arraystring(). For example, using the `pan_ngfw_traffic_raw` dataset:
 
-```
-dataset = panw\_ngfw\_traffic\_raw 
-| filter dest\_ip != null
-| comp values(dest\_ip) as dips by source\_ip,action
+dataset = panw_ngfw_traffic_raw 
+| filter dest_ip != null
+| comp values(dest_ip) as dips by source_ip,action
 | alter dips = arraystring(dips, ", ")
 | alter inrange = incidrlist(dips, "192.168.10.0/24")
-| fields source\_ip, action, dips, inrange
+| fields source_ip, action, dips, inrange
 | limit 100
-```
 
 ### int_to_ip
-Abstract
 
 Learn more about the Cortex Query Language `int_to_ip()` function that safely converts a signed integer representation of an IPv4 address to a string equivalent.
 
 #### Syntax
 
-```
-int\_to\_ip(<IPv4\_integer>)
-```
+int_to_ip(<IPv4_integer>)
 
 #### Description
 
@@ -49689,26 +48064,19 @@ The `int_to_ip()` function tries to safely convert a signed integer representati
 
 Returns the IPv4 address "4.130.58.140" from the integer representation of the IPv4 address provided as 75643532.
 
-```
-int\_to\_ip(75643532)
-```
+int_to_ip(75643532)
 
 Returns the IPv4 address "251.125.197.116" from the integer representation of the IPv4 address provided as -75643532.
 
-```
-int\_to\_ip(-75643532)
-```
+int_to_ip(-75643532)
 
 ### ip_to_int
-Abstract
 
 Learn more about the Cortex Query Language `ip_to_int()` function that safely converts a string representation of an IPv4 address to an integer equivalent.
 
 #### Syntax
 
-```
-ip\_to\_int(<IPv4\_address>)
-```
+ip_to_int(<IPv4_address>)
 
 **Note:**
 
@@ -49722,20 +48090,15 @@ The `ip_to_int()` function tries to safely convert a string representation of an
 
 Returns the integer 808530483 from the string representation of the IPv4 address provided as "48.49.50.51".
 
-```
-ip\_to\_int("48.49.50.51")
-```
+ip_to_int("48.49.50.51")
 
 ### is_ipv4
-Abstract
 
 Learn more about the Cortex Query Language `is_ipv4()` function.
 
 #### Syntax
 
-```
-is\_ipv4(<IPv4\_address>)
-```
+is_ipv4(<IPv4_address>)
 
 #### Description
 
@@ -49747,11 +48110,11 @@ The `<IPv4_address>` must contain an IPv4 address in an IPv4 field. For producti
 
 #### Example
 
-Data table for ips\_test\_raw dataset
+Data table for ips_test_raw dataset
 
 The example provided is based on the following data table for a dataset called `ips_test_raw`:
 
-| \_TIME | IP | \_VENDOR | \_PRODUCT |
+| _TIME | IP | _VENDOR | _PRODUCT |
 | --- | --- | --- | --- |
 | Mar 26th 2025 19:26:07 | 1.1.1.1 | ips | test |
 | Mar 26th 2025 19:26:07 | 192.168.1.100 | ips | test |
@@ -49762,17 +48125,15 @@ The example provided is based on the following data table for a dataset called `
 
 Query: Filter the IPv4 addresses
 
-```
-dataset = ips\_test\_raw
-| alter IsIpv4 = is\_ipv4(ip)
+dataset = ips_test_raw
+| alter IsIpv4 = is_ipv4(ip)
 | filter IsIpv4
-```
 
 Output results table
 
 Returns all the IPv4 addresses from the `ip` field in the `ips_test_raw` dataset. When the `is_ipv4` function returns `true`, the results are displayed with a new IsIpv4 column (field) indicating a true value. If the function returns `false`, no results are returned.
 
-| \_TIME | IP | \_VENDOR | \_PRODUCT | ISIPV4 |
+| _TIME | IP | _VENDOR | _PRODUCT | ISIPV4 |
 | --- | --- | --- | --- | --- |
 | Mar 26th 2025 19:26:07 | 1.1.1.1 | ips | test | true |
 | Mar 26th 2025 19:26:07 | 192.168.1.100 | ips | test | true |
@@ -49780,15 +48141,12 @@ Returns all the IPv4 addresses from the `ip` field in the `ips_test_raw` dataset
 | Mar 26th 2025 19:26:07 | 172.32.0.1 | ips | test | true |
 
 ### is_known_private_ipv4
-Abstract
 
 Learn more about the Cortex Query Language `is_known_private_ipv4()` function.
 
 #### Syntax
 
-```
-is\_known\_private\_ipv4(<IPv4\_address>)
-```
+is_known_private_ipv4(<IPv4_address>)
 
 #### Description
 
@@ -49809,11 +48167,11 @@ The `<IPv4_address>` must contain an IPv4 address in an IPv4 field. For producti
 
 #### Example
 
-Data table for ips\_test\_raw dataset
+Data table for ips_test_raw dataset
 
 The example provided is based on the following data table for a dataset called `ips_test_raw`:
 
-| \_TIME | IP | \_VENDOR | \_PRODUCT |
+| _TIME | IP | _VENDOR | _PRODUCT |
 | --- | --- | --- | --- |
 | Mar 26th 2025 19:26:07 | 1.1.1.1 | ips | test |
 | Mar 26th 2025 19:26:07 | 192.168.1.100 | ips | test |
@@ -49824,30 +48182,25 @@ The example provided is based on the following data table for a dataset called `
 
 Query: Filter the IPv4 addresses belonging to a set of known private network IPs
 
-```
-dataset = ips\_test\_raw
-| alter IsKnownPrivateIpv4 = is\_known\_private\_ipv4(ip)
+dataset = ips_test_raw
+| alter IsKnownPrivateIpv4 = is_known_private_ipv4(ip)
 | filter IsKnownPrivateIpv4
-```
 
 Output results table
 
 Returns all the IPv4 addresses that belong to a set of known private network IPs from the `ip` field in the `ips_test_raw` dataset. When the `is_known_private_ipv4` function returns `true`, the results are displayed with a new IsKnownPrivateIpv4 column (field) indicating a true value. If the function returns `false`, no results are returned.
 
-| \_TIME | IP | \_VENDOR | \_PRODUCT | ISPKNOWNRIVATEIPV4 |
+| _TIME | IP | _VENDOR | _PRODUCT | ISPKNOWNRIVATEIPV4 |
 | --- | --- | --- | --- | --- |
 | Mar 26th 2025 19:26:07 | 192.168.1.100 | ips | test | true |
 
 ### is_ipv6
-Abstract
 
 Learn more about the Cortex Query Language `is_ipv6()` function.
 
 #### Syntax
 
-```
-is\_ipv6(<IPv6\_address>)
-```
+is_ipv6(<IPv6_address>)
 
 #### Description
 
@@ -49859,11 +48212,11 @@ The `<IPv6_address>` must contain an IPv6 address in an IPv6 field. For producti
 
 #### Example
 
-Data table for ips\_test\_raw dataset
+Data table for ips_test_raw dataset
 
 The example provided is based on the following data table for a dataset called `ips_test_raw`:
 
-| \_TIME | IP | \_VENDOR | \_PRODUCT |
+| _TIME | IP | _VENDOR | _PRODUCT |
 | --- | --- | --- | --- |
 | Mar 26th 2025 19:26:07 | 1.1.1.1 | ips | test |
 | Mar 26th 2025 19:26:07 | 192.168.1.100 | ips | test |
@@ -49874,31 +48227,26 @@ The example provided is based on the following data table for a dataset called `
 
 Query: Filter the IPv6 addresses
 
-```
-dataset = ips\_test\_raw
-| alter IsIpv6 = is\_ipv6(ip)
+dataset = ips_test_raw
+| alter IsIpv6 = is_ipv6(ip)
 | filter IsIpv6
-```
 
 Output results table
 
 Returns all the IPv6 addresses from the `ip` field in the `ips_test_raw` dataset. When the `is_ipv6` function returns `true`, the results are displayed with a new IsIpv6 column (field) indicating a true value. If the function returns `false`, no results are returned.
 
-| \_TIME | IP | \_VENDOR | \_PRODUCT | ISIPV6 |
+| _TIME | IP | _VENDOR | _PRODUCT | ISIPV6 |
 | --- | --- | --- | --- | --- |
 | Mar 26th 2025 19:26:07 | FF0E::1 | ips | test | true |
 | Mar 26th 2025 19:26:07 | 2606:4700:4700::1111 | ips | test | true |
 
 ### is_known_private_ipv6
-Abstract
 
 Learn more about the Cortex Query Language `is_known_private_ipv6()` function.
 
 #### Syntax
 
-```
-is\_known\_private\_ipv6(<IPv6\_address>)
-```
+is_known_private_ipv6(<IPv6_address>)
 
 #### Description
 
@@ -49917,11 +48265,11 @@ The `<IPv6_address>` must contain an IPv6 address in an IPv6 field. For producti
 
 #### Example
 
-Data table for ips\_test\_raw dataset
+Data table for ips_test_raw dataset
 
 The example provided is based on the following data table for a dataset called `ips_test_raw`:
 
-| \_TIME | IP | \_VENDOR | \_PRODUCT |
+| _TIME | IP | _VENDOR | _PRODUCT |
 | --- | --- | --- | --- |
 | Mar 26th 2025 19:26:07 | FC00::1 | ips | test |
 | Mar 26th 2025 19:26:07 | 192.168.1.100 | ips | test |
@@ -49932,22 +48280,19 @@ The example provided is based on the following data table for a dataset called `
 
 Query: Filter the IPv6 addresses belonging to a set of known private network IPs
 
-```
-dataset = ips\_test\_raw
-| alter IsKnownPrivateIpv6 = is\_known\_private\_ipv6(ip)
+dataset = ips_test_raw
+| alter IsKnownPrivateIpv6 = is_known_private_ipv6(ip)
 | filter IsKnownPrivateIpv6
-```
 
 Output results table
 
 Returns all the IPv6 addresses that belong to a set of known private network IPs from the `ip` field in the `ips_test_raw` dataset. When the `is_known_private_ipv6` function returns `true`, the results are displayed with a new IsKnownPrivateIpv6 column (field) indicating a true value. If the function returns `false`, no results are returned.
 
-| \_TIME | IP | \_VENDOR | \_PRODUCT | ISKNOWNPRIVATEIPV6 |
+| _TIME | IP | _VENDOR | _PRODUCT | ISKNOWNPRIVATEIPV6 |
 | --- | --- | --- | --- | --- |
 | Mar 26th 2025 19:26:07 | FC00::1 | ips | test | true |
 
 ### json_extract
-Abstract
 
 Learn more about the Cortex Query Language `json_extract()` function that accepts a string representing a JSON object, and returns a field value from that object.
 
@@ -49959,33 +48304,25 @@ Before using this JSON function, it's important that you understand how Cortex C
 
 ##### Regular Syntax
 
-```
-json\_extract(<json\_object\_formatted\_string\>, <json\_path>)
-```
+json_extract(<json_object_formatted_string\>, <json_path>)
 
-When a field in the <json\_path> contains characters, such as a dot (.) or colon (:), use the syntax:
+When a field in the <json_path> contains characters, such as a dot (.) or colon (:), use the syntax:
 
-```
-json\_extract(<json\_object\_formatted\_string\>, "\['<json\_field>'\]")
-```
+json_extract(<json_object_formatted_string\>, "['<json_field>']")
 
 ##### Syntactic Sugar Format
 
 To make it easier for you to write your XQL queries, you can also use the following syntactic sugar format.
 
-```
-<json\_object\_formatted\_string> -> <json\_path>{}
-```
+<json_object_formatted_string> -> <json_path>{}
 
 When a field in the `<json_path>` contains characters, such as a dot (.) or colon (:), use the syntax:
 
-```
-<json\_object\_formatted\_string> -> \["<json\_field>"\]{}
-```
+<json_object_formatted_string> -> ["<json_field>"]{}
 
 #### Description
 
-The `json_extract()` function extracts inner JSON objects by retrieving the value from the identified field. The returned datatype is always a string. If the input string does not represent a JSON object, this function fails to parse. To convert a string field to a JSON object, use the to\_json\_string function.
+The `json_extract()` function extracts inner JSON objects by retrieving the value from the identified field. The returned datatype is always a string. If the input string does not represent a JSON object, this function fails to parse. To convert a string field to a JSON object, use the to_json_string function.
 
 **Important:**
 
@@ -49993,32 +48330,27 @@ JSON field names are case sensitive, so the key to field pairing must be identic
 
 **Note:**
 
-The field value is always returned as a string. To return the scalar values, which are not an object or an array, use json\_extract\_scalar.
+The field value is always returned as a string. To return the scalar values, which are not an object or an array, use json_extract_scalar.
 
 #### Examples
 
 Return the `storage_device_name` value from the `action_file_device_info` field.
 
-```
-dataset = xdr\_data 
-| fields action\_file\_device\_info as afdi 
-| alter sdn = json\_extract(to\_json\_string(afdi), "$.storage\_device\_name") 
+dataset = xdr_data 
+| fields action_file_device_info as afdi 
+| alter sdn = json_extract(to_json_string(afdi), "$.storage_device_name") 
 | filter afdi != null
-```
 
 Using Syntactic Sugar Format
 
 The same example above with a syntactic sugar format.
 
-```
-dataset = xdr\_data
-| fields action\_file\_device\_info as afdi
-| alter sdn = to\_json\_string(afdi)->storage\_device\_name{}
+dataset = xdr_data
+| fields action_file_device_info as afdi
+| alter sdn = to_json_string(afdi)->storage_device_name{}
 | filter afdi != null
-```
 
 ### json_extract_array
-Abstract
 
 Learn more about the Cortex Query Language `json_extract_array()` function that accepts a string representing a JSON array, and returns an XQL-native array.
 
@@ -50030,33 +48362,25 @@ Before using this JSON function, it's important that you understand how Cortex C
 
 ##### Regular Syntax
 
-```
-json\_extract\_array(<json\_array\_string\>, <json\_path\>)
-```
+json_extract_array(<json_array_string\>, <json_path\>)
 
 When a field in the `<json_path>` contains characters, such as a dot (.) or colon (:), use the syntax:
 
-```
-json\_extract\_array(<json\_array\_string\>, "\['<json\_field>'\]")
-```
+json_extract_array(<json_array_string\>, "['<json_field>']")
 
 ##### Syntactic Sugar Format
 
 To make it easier for you to write your XQL queries, you can also use the following syntactic sugar format.
 
-```
-<json\_array\_string> -> <json\_path>\[\]
-```
+<json_array_string> -> <json_path>[]
 
 When a field in the `<json_path>` contains characters, such as a dot (.) or colon (:), use the syntax:
 
-```
-<json\_array\_string> -> \["<json\_field>"\]\[\]
-```
+<json_array_string> -> ["<json_field>"][]
 
 #### Description
 
-The `json_extract_array()` function accepts a string representing a JSON array, and returns an XQL-native array. To convert a string field to a JSON object, use the to\_json\_string function.
+The `json_extract_array()` function accepts a string representing a JSON array, and returns an XQL-native array. To convert a string field to a JSON object, use the to_json_string function.
 
 **Important:**
 
@@ -50068,28 +48392,23 @@ JSON field names are case sensitive, so the key to field pairing must be identic
 
 Extract the first IPV4 address found in the first element of the `agent_interface_map` array.
 
-```
-dataset = xdr\_data 
-| fields agent\_interface\_map as aim 
-| alter ipv4 = json\_extract\_array(to\_json\_string(arrayindex(aim, 0)) , "$.ipv4") 
+dataset = xdr_data 
+| fields agent_interface_map as aim 
+| alter ipv4 = json_extract_array(to_json_string(arrayindex(aim, 0)) , "$.ipv4") 
 | filter aim != null 
 | limit 10
-```
 
 ##### Syntactic Sugar Format
 
 The same example above with a syntactic sugar format.
 
-```
-dataset = xdr\_data
-| fields agent\_interface\_map as aim
-| alter ipv4 = to\_json\_string(aim)->\[0\].ipv4\[0\]
+dataset = xdr_data
+| fields agent_interface_map as aim
+| alter ipv4 = to_json_string(aim)->[0].ipv4[0]
 | filter aim != null
 | limit 10
-```
 
 ### json_extract_scalar
-Abstract
 
 Learn more about the Cortex Query Language `json_extract_scalar()` function.
 
@@ -50101,33 +48420,25 @@ Before using this JSON function, it's important that you understand how Cortex C
 
 ##### Regular Syntax
 
-```
-json\_extract\_scalar(<json\_object\_formatted\_string\>, <field\_path\>)
-```
+json_extract_scalar(<json_object_formatted_string\>, <field_path\>)
 
 When a field in the `<json_path>` contains characters, such as a dot (.) or colon (:), use the syntax:
 
-```
-json\_extract\_scalar(<json\_object\_formatted\_string\>, "\['<json\_field>'\]")
-```
+json_extract_scalar(<json_object_formatted_string\>, "['<json_field>']")
 
 ##### Syntactic Sugar Format
 
 To make it easier for you to write your XQL queries, you can also use the following syntactic sugar format:
 
-```
-<json\_object\_formatted\_string> -> <field\_path>
-```
+<json_object_formatted_string> -> <field_path>
 
 When a field in the `<json_path>` contains characters, such as a dot (.) or colon (:), use the syntax:
 
-```
-<json\_object\_formatted\_string> -> \["<json\_field>"\]
-```
+<json_object_formatted_string> -> ["<json_field>"]
 
 #### Description
 
-The `json_extract_scalar()` function accepts a string representing a JSON object, and it retrieves the value from the identified field as a string. This function always returns a string. If the JSON field is an object or array, it will return a null value. To retrieve an XQL-native datatype, use an appropriate function, such as `to_float` or `to_integer`. If the input string does not represent a JSON object, this function fails to parse. To convert a string field to a JSON object, use the to\_json\_string function.
+The `json_extract_scalar()` function accepts a string representing a JSON object, and it retrieves the value from the identified field as a string. This function always returns a string. If the JSON field is an object or array, it will return a null value. To retrieve an XQL-native datatype, use an appropriate function, such as `to_float` or `to_integer`. If the input string does not represent a JSON object, this function fails to parse. To convert a string field to a JSON object, use the to_json_string function.
 
 **Important:**
 
@@ -50141,38 +48452,31 @@ There are two ways that you can build this query either with a filter using an X
 
 Option A - Filter using an XQL-native datatype
 
-```
-dataset = xdr\_data 
-| fields action\_file\_device\_info as afdi 
-| alter sdn = to\_integer(json\_extract\_scalar(to\_json\_string(afdi), "$.storage\_device\_drive\_type")) 
+dataset = xdr_data 
+| fields action_file_device_info as afdi 
+| alter sdn = to_integer(json_extract_scalar(to_json_string(afdi), "$.storage_device_drive_type")) 
 | filter sdn = 1 
 | limit 10
-```
 
 Option B - Filter using a string
 
-```
-dataset = xdr\_data 
-| fields action\_file\_device\_info as afdi 
-| alter sdn = json\_extract\_scalar(to\_json\_string(afdi), "$.storage\_device\_drive\_type") 
+dataset = xdr_data 
+| fields action_file_device_info as afdi 
+| alter sdn = json_extract_scalar(to_json_string(afdi), "$.storage_device_drive_type") 
 | filter sdn = "1" 
 | limit 10
-```
 
 Using Syntactic Sugar Format
 
 The same example above with a syntactic sugar format.
 
-```
-dataset = xdr\_data
-| fields action\_file\_device\_info as afdi
-| alter sdn = to\_integer(to\_json\_string(afdi)->storage\_device\_drive\_type)
+dataset = xdr_data
+| fields action_file_device_info as afdi
+| alter sdn = to_integer(to_json_string(afdi)->storage_device_drive_type)
 | filter sdn = 1
 | limit 10
-```
 
 ### json_extract_scalar_array
-Abstract
 
 Learn more about the Cortex Query Language `json_extract_scalar_array()` function.
 
@@ -50182,9 +48486,7 @@ Before using this JSON function, it's important that you understand how Cortex C
 
 #### Syntax
 
-```
-json\_extract\_scalar\_array(<json\_array\_string\>, <json\_path\>)
-```
+json_extract_scalar_array(<json_array_string\>, <json_path\>)
 
 **Important:**
 
@@ -50192,7 +48494,7 @@ A field in the `<json_path>` that contains characters, such as a dot (.) or colo
 
 #### Description
 
-The `json_extract_scalar_array()` function accepts a string representing a JSON array, and returns an XQL-native array. This function is equivalent to the json\_extract\_array except that the final output isn't displayed in double quotes ("..."). To convert a string field to a JSON object, use the to\_json\_string function.
+The `json_extract_scalar_array()` function accepts a string representing a JSON array, and returns an XQL-native array. This function is equivalent to the json_extract_array except that the final output isn't displayed in double quotes ("..."). To convert a string field to a JSON object, use the to_json_string function.
 
 **Important:**
 
@@ -50202,28 +48504,25 @@ JSON field names are case sensitive, so the key to field pairing must be identic
 
 Extract the first IPV4 address found in the first element of the `agent_interface_map` array. The values of the IPv4 addresses in the array will not contain any double quotes.
 
-```
-dataset = xdr\_data 
-| fields agent\_interface\_map as aim 
-| alter ipv4 = json\_extract\_scalar\_array(to\_json\_string(arrayindex(aim, 0)) , "$.ipv4") 
+dataset = xdr_data 
+| fields agent_interface_map as aim 
+| alter ipv4 = json_extract_scalar_array(to_json_string(arrayindex(aim, 0)) , "$.ipv4") 
 | filter aim != null 
 | limit 10
-```
 
 Final output with 1 row from the results table. Notice that the IPV4 column doesn't contain any double quotes (`" "`) around the IP address `172.16.15.42`:
 
-| \_TIME | AIM | \_PRODUCT | \_VENDOR | INSERT\_TIMESTAMP | IPV4 |
+| _TIME | AIM | _PRODUCT | _VENDOR | INSERT_TIMESTAMP | IPV4 |
 | --- | --- | --- | --- | --- | --- |
 | Aug 9th 2023 10:04:39 | `[{"ipv4":["172.16.15.42"], "ipv6": [], "mac": "00:50:56:9f:30:a9"}]` | XDR agent | PANW | Aug 17th 2023 19:25:48 | 172.16.15.42 |
 
 In contrast, compare the above results to the same query using the `json_extract_array()` function. The final output with the same row from the results table has in the IPV4 column the IP address in double quotes `"172.16.15.42"`.
 
-| \_TIME | AIM | \_PRODUCT | \_VENDOR | INSERT\_TIMESTAMP | IPV4 |
+| _TIME | AIM | _PRODUCT | _VENDOR | INSERT_TIMESTAMP | IPV4 |
 | --- | --- | --- | --- | --- | --- |
 | Aug 9th 2023 10:04:39 | `[{"ipv4":["172.16.15.42"], "ipv6": [], "mac": "00:50:56:9f:30:a9"}]` | XDR agent | PANW | Aug 17th 2023 19:25:48 | "172.16.15.42" |
 
 ### json_path_extract
-Abstract
 
 Learn more about the Cortex Query Language `json_path_extract()` function.
 
@@ -50238,9 +48537,7 @@ Learn more about the Cortex Query Language `json_path_extract()` function.
 
 ##### Regular Syntax
 
-```
-json\_path\_extract(<json\_field>, <json\_path>)
-```
+json_path_extract(<json_field>, <json_path>)
 
 ##### Syntactic Sugar Format
 
@@ -50249,13 +48546,13 @@ To make it easier for you to write your XQL queries, you can also use the follow
 -   Using triple quotes:
     
     ```
-    <json\_field> ->-> """<json\_path>"""
+    <json_field> ->-> """<json_path>"""
     ```
     
 -   Using single quotes:
     
     ```
-    <json\_field> ->-> "<json\_path>"
+    <json_field> ->-> "<json_path>"
     ```
     
 
@@ -50290,73 +48587,33 @@ Defines a JSON object called `Firewall`, which is contained in the JSON file cal
 -   `i`: Outputs all of the JSON array Index values from the `ServerAccessConfig` JSON array according to its index location from the start (0 Index) to the mentioned index value as displayed in column I of the query output below.
     
 
-```
-dataset = xdr\_data | limit 1 
+dataset = xdr_data | limit 1 
 | alter 
-    json\_field = "{\\"Firewall\\": {\\"ServerAccessConfig\\": \[{\\"category\\": \\"policy\\",\\"author\\": \\"NRees\\",\\"name\\": \\"CustomerSuccess\_NoAccess\\",\\"priority\\": 8.95},{\\"category\\": \\"rule\\",\\"author\\": \\"EWaugh\\",\\"name\\": \\"AllowAccess\_10\_10\_10\_10\\",\\"id\\": \\"0-553-21311-3\\",\\"priority\\": 12.99},{\\"category\\": \\"policy\\",\\"author\\": \\"HMelville\\",\\"name\\": \\"SOC\_Access\\",\\"priority\\": 8.99},{\\"category\\": \\"rule\\",\\"author\\": \\"JTolkien\\",\\"name\\": \\"AllowAccess\_JIT\\",\\"id\\": \\"0-395-19395-8\\",\\"priority\\": 22.99}\],\\"Reviewer\\": {\\"UserName\\": \\"jdow\\",\\"Role\\": \\"Admin\\"}}}"
-| alter a = json\_path\_extract(json\_field, "$.Firewall.ServerAccessConfig\[\*\].author") 
-| alter b = json\_path\_extract(json\_field, "$..\*\[?(@.priority==22.99)\].author") 
-| alter c = json\_path\_extract(json\_field, "$..author") 
-| alter d = json\_path\_extract(json\_field, "$.Firewall.\*") 
-| alter e = json\_path\_extract(json\_field, "$.Firewall..priority") 
-| alter f = json\_path\_extract(json\_field, "$..ServerAccessConfig\[(@.length-1)\]") 
-| alter g = json\_path\_extract(json\_field, "$..ServerAccessConfig\[-1:\]") 
-| alter h = json\_path\_extract(json\_field, "$..ServerAccessConfig\[0,1\]") 
-| alter i = json\_path\_extract(json\_field, "$..ServerAccessConfig\[:2\]")
-| fields json\_field, a, b, c, d, e, f, g, h, i
-```
+    json_field = "{\\"Firewall\\": {\\"ServerAccessConfig\\": [{\\"category\\": \\"policy\\",\\"author\\": \\"NRees\\",\\"name\\": \\"CustomerSuccess_NoAccess\\",\\"priority\\": 8.95},{\\"category\\": \\"rule\\",\\"author\\": \\"EWaugh\\",\\"name\\": \\"AllowAccess_10_10_10_10\\",\\"id\\": \\"0-553-21311-3\\",\\"priority\\": 12.99},{\\"category\\": \\"policy\\",\\"author\\": \\"HMelville\\",\\"name\\": \\"SOC_Access\\",\\"priority\\": 8.99},{\\"category\\": \\"rule\\",\\"author\\": \\"JTolkien\\",\\"name\\": \\"AllowAccess_JIT\\",\\"id\\": \\"0-395-19395-8\\",\\"priority\\": 22.99}],\\"Reviewer\\": {\\"UserName\\": \\"jdow\\",\\"Role\\": \\"Admin\\"}}}"
+| alter a = json_path_extract(json_field, "$.Firewall.ServerAccessConfig[\*].author") 
+| alter b = json_path_extract(json_field, "$..\*[?(@.priority==22.99)].author") 
+| alter c = json_path_extract(json_field, "$..author") 
+| alter d = json_path_extract(json_field, "$.Firewall.\*") 
+| alter e = json_path_extract(json_field, "$.Firewall..priority") 
+| alter f = json_path_extract(json_field, "$..ServerAccessConfig[(@.length-1)]") 
+| alter g = json_path_extract(json_field, "$..ServerAccessConfig[-1:]") 
+| alter h = json_path_extract(json_field, "$..ServerAccessConfig[0,1]") 
+| alter i = json_path_extract(json_field, "$..ServerAccessConfig[:2]")
+| fields json_field, a, b, c, d, e, f, g, h, i
 
 ##### Sample output of query
 
-| \_TIME | JSON\_FIELD | A | B | C | D | E | F | G | H | I | \_PRODUCT | \_VENDOR | INSERT\_TIMESTAMP |
+| _TIME | JSON_FIELD | A | B | C | D | E | F | G | H | I | _PRODUCT | _VENDOR | INSERT_TIMESTAMP |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Jan 20th 2025 18:51:42 | 
-```
-{  "Firewall": {    "ServerAccessConfig": \[      {        "category": "policy",         "author": "NRees",         "name": "CustomerSuccess\_NoAccess",        "priority": 8.95       },       {         "category": "rule",         "author": "EWaugh",         "name": "AllowAccess\_10\_10\_10\_10",         "id": "0-553-21311-3",         "priority": 12.99       },       {         "category": "policy",         "author": "HMelville",         "name": "SOC\_Access",         "priority": 8.99       },       {         "category": "rule",        "author": "JTolkien",         "name": "AllowAccess\_JIT",         "id": "0-395-19395-8",        "priority": 22.99       }     \],     "Reviewer": {       "UserName": "jdow",       "Role": "Admin"     }  }}
-```
-
- | NRees, EWaugh, HMelville, JTolkien | JTolkien | NRees, EWaugh, HMelville ,JTolkien | 
-
-```
-{    "ServerAccessConfig": \[      {        "category": "policy",         "author": "NRees",         "name": "CustomerSuccess\_NoAccess",        "priority": 8.95       },       {         "category": "rule",         "author": "EWaugh",         "name": "AllowAccess\_10\_10\_10\_10",         "id": "0-553-21311-3",         "priority": 12.99       },       {         "category": "policy",         "author": "HMelville",         "name": "SOC\_Access",         "priority": 8.99       },       {         "category": "rule",        "author": "JTolkien",         "name": "AllowAccess\_JIT",         "id": "0-395-19395-8",        "priority": 22.99       }     \],     "Reviewer": {       "UserName": "jdow",       "Role": "Admin"     }  }
-```
-
- | 8.95, 12.99, 8.99, 22.99 | 
-
-```
-\[  {     "category": "rule",     "author": "JTolkien",     "name": "AllowAccess\_JIT",     "id": "0-395-19395-8",     "priority": 22.99   } \]
-```
-
- | 
-
-```
-\[   {     "category": "rule",     "author": "JTolkien",     "name": "AllowAccess\_JIT",     "id": "0-395-19395-8",     "priority": 22.99   } \]
-```
-
- | 
-
-```
-\[   {     "category": "policy",     "author": "NRees",     "name": "CustomerSuccess\_NoAccess",     "priority": 8.95   },   {     "category": "rule",     "author": "EWaugh",     "name": "AllowAccess\_10\_10\_10\_10",     "id": "0-553-21311-3",     "priority": 12.99   } \]
-```
-
- | 
-
-```
-\[   {     "category": "policy",     "author": "NRees",     "name": "CustomerSuccess\_NoAccess",     "priority": 8.95  },   {     "category": "rule",     "author": "EWaugh",     "name": "AllowAccess\_10\_10\_10\_10",     "id": "0-553-21311-3",     "priority": 12.99   } \]
-```
-
- | Fusion | PANW | Jan 20th 2025 19:09:12 |
+| Jan 20th 2025 18:51:42 | {  "Firewall": {    "ServerAccessConfig": [      {        "category": "policy",         "author": "NRees",         "name": "CustomerSuccess_NoAccess",        "priority": 8.95       },       {         "category": "rule",         "author": "EWaugh",         "name": "AllowAccess_10_10_10_10",         "id": "0-553-21311-3",         "priority": 12.99       },       {         "category": "policy",         "author": "HMelville",         "name": "SOC_Access",         "priority": 8.99       },       {         "category": "rule",        "author": "JTolkien",         "name": "AllowAccess_JIT",         "id": "0-395-19395-8",        "priority": 22.99       }     ],     "Reviewer": {       "UserName": "jdow",       "Role": "Admin"     }  }} | NRees, EWaugh, HMelville, JTolkien | JTolkien | NRees, EWaugh, HMelville ,JTolkien | {    "ServerAccessConfig": [      {        "category": "policy",         "author": "NRees",         "name": "CustomerSuccess_NoAccess",        "priority": 8.95       },       {         "category": "rule",         "author": "EWaugh",         "name": "AllowAccess_10_10_10_10",         "id": "0-553-21311-3",         "priority": 12.99       },       {         "category": "policy",         "author": "HMelville",         "name": "SOC_Access",         "priority": 8.99       },       {         "category": "rule",        "author": "JTolkien",         "name": "AllowAccess_JIT",         "id": "0-395-19395-8",        "priority": 22.99       }     ],     "Reviewer": {       "UserName": "jdow",       "Role": "Admin"     }  } | 8.95, 12.99, 8.99, 22.99 | [  {     "category": "rule",     "author": "JTolkien",     "name": "AllowAccess_JIT",     "id": "0-395-19395-8",     "priority": 22.99   } ] | [   {     "category": "rule",     "author": "JTolkien",     "name": "AllowAccess_JIT",     "id": "0-395-19395-8",     "priority": 22.99   } ] | [   {     "category": "policy",     "author": "NRees",     "name": "CustomerSuccess_NoAccess",     "priority": 8.95   },   {     "category": "rule",     "author": "EWaugh",     "name": "AllowAccess_10_10_10_10",     "id": "0-553-21311-3",     "priority": 12.99   } ] | [   {     "category": "policy",     "author": "NRees",     "name": "CustomerSuccess_NoAccess",     "priority": 8.95  },   {     "category": "rule",     "author": "EWaugh",     "name": "AllowAccess_10_10_10_10",     "id": "0-553-21311-3",     "priority": 12.99   } ] | Fusion | PANW | Jan 20th 2025 19:09:12 |
 
 ### lag
-Abstract
 
 Learn more about the Cortex Query Language `lag()` navigation function that is used with a `windowcomp` stage.
 
 #### Syntax
 
-```
-windowcomp lag(<field>) \[by <field> \[,<field>,...\]\] sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\] \[as <alias>\]
-```
+windowcomp lag(<field>) [by <field> [,<field>,...]] sort [asc|desc] <field1> [, [asc|desc] <field2>,...] [as <alias>]
 
 #### Description
 
@@ -50366,24 +48623,19 @@ The `lag()` function is a navigation function that is used in combination with a
 
 Retrieve for each event the timestamp of the previous successful login since the last one.
 
-```
-preset = authentication\_story
-| filter auth\_identity not in (null, """""") and auth\_outcome = """SUCCESS"""
-| alter ep = to\_epoch(\_time)
+preset = authentication_story
+| filter auth_identity not in (null, """""") and auth_outcome = """SUCCESS"""
+| alter ep = to_epoch(_time)
 | limit 100
-| windowcomp lag(\_time) by auth\_identity sort asc ep as previous\_login
-```
+| windowcomp lag(_time) by auth_identity sort asc ep as previous_login
 
 ### last
-Abstract
 
 Learn more about the Cortex Query Language **`last`** aggregate comp function that returns the last field value found in the dataset with the matching criteria.
 
 #### Syntax
 
-```
-comp last(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp last(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 #### Description
 
@@ -50395,24 +48647,19 @@ In addition, you can configure whether the raw data events are displayed by sett
 
 Return the last timestamp found in the dataset for any given `action_total_download` value for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` fields. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing the raw data events used to display the final `comp` results.
 
-```
-dataset = xdr\_data
-| fields \_time, actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields _time, actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp last(\_time) as download\_time by Process\_Path, Process\_CMD addrawdata = true as raw\_data
-```
+| comp last(_time) as download_time by Process_Path, Process_CMD addrawdata = true as raw_data
 
 ### last_value
-Abstract
 
 Learn more about the Cortex Query Language `last_value()` navigation function that is used with a `windowcomp` stage.
 
 #### Syntax
 
-```
-windowcomp last\_value(<field>) \[by <field> \[,<field>,...\]\] sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\] \[between 0|null|<number>|-<number> \[and 0|null|<number>|-<number>\] \[frame\_type=range\]\] \[as <alias>\]
-```
+windowcomp last_value(<field>) [by <field> [,<field>,...]] sort [asc|desc] <field1> [, [asc|desc] <field2>,...] [between 0|null|<number>|-<number> [and 0|null|<number>|-<number>] [frame_type=range]] [as <alias>]
 
 #### Description
 
@@ -50422,26 +48669,21 @@ The `last_value()` function is a navigation function that is used in combination
 
 Return the last IP address a user authenticated from successfully.
 
-```
-preset = authentication\_story
-| filter auth\_identity not in (null, """""") and auth\_outcome = """SUCCESS""" and action\_country != UNKNOWN
-| alter et = to\_epoch(\_time), t = \_time
+preset = authentication_story
+| filter auth_identity not in (null, """""") and auth_outcome = """SUCCESS""" and action_country != UNKNOWN
+| alter et = to_epoch(_time), t = _time
 | bin t span = 1d
 | limit 100
-| windowcomp last\_value(action\_local\_ip) by auth\_identity, t sort asc et between null and null as first\_action\_local\_ip
-| fields auth\_identity , \*action\_local\_ip
-```
+| windowcomp last_value(action_local_ip) by auth_identity, t sort asc et between null and null as first_action_local_ip
+| fields auth_identity , \*action_local_ip
 
 ### latest
-Abstract
 
 Learn more about the Cortex Query Language `latest` aggregate comp function that returns the latest field value found with the matching criteria.
 
 #### Syntax
 
-```
-comp latest(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp latest(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 #### Description
 
@@ -50453,24 +48695,19 @@ In addition, you can configure whether the raw data events are displayed by sett
 
 Return the chronologically latest timestamp found for any given `action_total_download` value for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` fields. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing the raw data events used to display the final `comp` results.
 
-```
-dataset = xdr\_data
-| fields \_time, actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields _time, actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp latest(\_time) as download\_time by Process\_Path, Process\_CMD addrawdata = true as raw\_data
-```
+| comp latest(_time) as download_time by Process_Path, Process_CMD addrawdata = true as raw_data
 
 ### len
-Abstract
 
 Learn more about the Cortex Query Language `len` function that returns the number of characters contained in a string.
 
 #### Syntax
 
-```
 len (<string\>)
-```
 
 #### Description
 
@@ -50480,23 +48717,18 @@ The `len()` function returns the number of characters contained in a string.
 
 Show domain names that are more than 100 characters in length.
 
-```
-dataset = xdr\_data 
-| fields dns\_query\_name 
-| filter len(dns\_query\_name) > 100 
-| limit 10 
-```
+dataset = xdr_data 
+| fields dns_query_name 
+| filter len(dns_query_name) > 100 
+| limit 10
 
 ### list
-Abstract
 
 Learn more about the Cortex Query Language `list` aggregate comp function that returns an array for up to 100 values for a field in the result set.
 
 #### Syntax
 
-```
-comp list(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp list(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 #### Description
 
@@ -50508,24 +48740,19 @@ In addition, you can configure whether the raw data events are displayed by sett
 
 Return an array containing up to 100 values seen for the `action_total_download` field over a group of rows, for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` values. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing the raw data events used to display the final `comp` results.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download Download
 | filter Download > 0
 | limit 100
-| comp list(Download) as list\_download by Process\_Path, Process\_CMD addrawdata = true as raw\_data
-```
+| comp list(Download) as list_download by Process_Path, Process_CMD addrawdata = true as raw_data
 
 ### lowercase
-Abstract
 
 Learn more about the Cortex Query Language `lowercase()` function that converts a string field to all lowercase letters.
 
 #### Syntax
 
-```
 lowercase (<string>)
-```
 
 #### Description
 
@@ -50535,32 +48762,23 @@ The `lowercase()` function converts a string field value to all lowercase.
 
 Convert all `actor_process_image_name` field values that are not null to lowercase, and return a list of unique values.
 
-```
-dataset = xdr\_data 
-| fields actor\_process\_image\_name as apin 
-| dedup apin by asc \_time 
+dataset = xdr_data 
+| fields actor_process_image_name as apin 
+| dedup apin by asc _time 
 | filter apin != null 
 | alter apin = lowercase(apin)
-```
 
 ### ltrim, rtrim, trim
-Abstract
 
 Learn more about the Cortex Query Language `ltrim()`, `rtrim()`, and `trim()` functions that remove `trim_characters` from a string.
 
 #### Syntax
 
-```
-trim (<string\>,\[trim\_characters\])
-```
+trim (<string\>,[trim_characters])
 
-```
-rtrim (<string\>,\[trim\_characters\])
-```
+rtrim (<string\>,[trim_characters])
 
-```
-ltrim (<string\>,\[trim\_characters\])
-```
+ltrim (<string\>,[trim_characters])
 
 #### Description
 
@@ -50599,7 +48817,7 @@ Keep in mind the following important points before using these functions, where 
     
       
     
--   trim\_characters don't support regular expressions or escape characters.
+-   trim_characters don't support regular expressions or escape characters.
     
     Example 204. 
     
@@ -50670,19 +48888,16 @@ Keep in mind the following important points before using these functions, where 
 
 A complete query example, where the output results of each `ltrim()`, `rtrim()`, and `trim()` function is detailed in the comments.
 
-```
-config timeframe = 1w | dataset = xdr\_data
+config timeframe = 1w | dataset = xdr_data
 | limit 1
 | alter
-    example\_1 = rtrim("explorer.exe", "x.e"), // ---> "explorer"
-    example\_2 = ltrim("hello world", "leh"), // ---> "o world"
-    example\_3 = trim("  apple\*  ", " "), // ---> "apple\*"
-    example\_4 = ltrim("\*\*\*a\*aapple\*", "\*A") // ---> "a\*aapple\*"
+    example_1 = rtrim("explorer.exe", "x.e"), // ---> "explorer"
+    example_2 = ltrim("hello world", "leh"), // ---> "o world"
+    example_3 = trim("  apple\*  ", " "), // ---> "apple\*"
+    example_4 = ltrim("\*\*\*a\*aapple\*", "\*A") // ---> "a\*aapple\*"
 | fields example\*
-```
 
 ### max
-Abstract
 
 Learn more about the Cortex Query Language `max` function used with both `comp` and `windowcomp` stages.
 
@@ -50690,15 +48905,11 @@ Learn more about the Cortex Query Language `max` function used with both `comp` 
 
 comp stage
 
-```
-comp max(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp max(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 windowcomp stage
 
-```
-windowcomp max(<field>) \[by <field> \[,<field>,...\]\] \[sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\]\] \[between 0|null|<number>|-<number> \[and 0|null|<number>|-<number>\] \[frame\_type=range\]\] \[as <alias>\]
-```
+windowcomp max(<field>) [by <field> [,<field>,...]] [sort [asc|desc] <field1> [, [asc|desc] <field2>,...]] [between 0|null|<number>|-<number> [and 0|null|<number>|-<number>] [frame_type=range]] [as <alias>]
 
 #### Description
 
@@ -50720,26 +48931,21 @@ comp example
 
 Return a single maximum value of the `action_total_download` field for a group of rows, for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` values. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing a single value for the results.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp max(Download) as max\_download by Process\_Path, Process\_CMD addrawdata = true as raw\_data
-```
+| comp max(Download) as max_download by Process_Path, Process_CMD addrawdata = true as raw_data
 
 windowcomp example
 
 Return the last login time. The query returns a maximum of 100 `authentication_story` records in a column called `action_user_agent`.
 
-```
-preset = authentication\_story
+preset = authentication_story
 | limit 100
-| windowcomp max(\_time) by action\_user\_agent
-```
+| windowcomp max(_time) by action_user_agent
 
 ### median
-Abstract
 
 Learn more about the Cortex Query Language `median` function used with both `comp` and `windowcomp` stages.
 
@@ -50747,15 +48953,11 @@ Learn more about the Cortex Query Language `median` function used with both `com
 
 comp stage
 
-```
-comp median(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp median(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 windowcomp stage
 
-```
-windowcomp median(<field>) \[by <field> \[,<field>,...\]\] \[as <alias>\] 
-```
+windowcomp median(<field>) [by <field> [,<field>,...]] [as <alias>] 
 
 #### Description
 
@@ -50777,30 +48979,25 @@ comp example
 
 Return a single median value of the `action_total_download` field over a group of rows, for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` values. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing a single value for the results.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp median(Download) as median\_download by Process\_Path, Process\_CMD
-addrawdata = true as raw\_data
-```
+| comp median(Download) as median_download by Process_Path, Process_CMD
+addrawdata = true as raw_data
 
 windowcomp example
 
 Return all events where the `Download` field is greater than the median by reviewing each individual event and how it compares to the median. The query returns a maximum of 100 `xdr_data` records in a column called `median_download`.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| windowcomp median(Download) by Process\_Path, Process\_CMD as median\_download
-| filter Download > median\_download 
-```
+| windowcomp median(Download) by Process_Path, Process_CMD as median_download
+| filter Download > median_download
 
 ### min
-Abstract
 
 Learn more about the Cortex Query Language `min` function used with both `comp` and `windowcomp` stages.
 
@@ -50808,15 +49005,11 @@ Learn more about the Cortex Query Language `min` function used with both `comp` 
 
 comp stage
 
-```
-comp min(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp min(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 windowcomp stage
 
-```
-windowcomp min(<field>) \[by <field> \[,<field>,...\]\] \[sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\]\] \[between 0|null|<number>|-<number> \[and 0|null|<number>|-<number>\] \[frame\_type=range\]\] \[as <alias>\] 
-```
+windowcomp min(<field>) [by <field> [,<field>,...]] [sort [asc|desc] <field1> [, [asc|desc] <field2>,...]] [between 0|null|<number>|-<number> [and 0|null|<number>|-<number>] [frame_type=range]] [as <alias>] 
 
 #### Description
 
@@ -50838,34 +49031,27 @@ comp example
 
 Return a single minimum value of the `action_total_download` field for a group of rows, for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` values. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing a single value for the results.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp min(Download) as min\_download by Process\_Path, Process\_CMD addrawdata = true as raw\_data
-```
+| comp min(Download) as min_download by Process_Path, Process_CMD addrawdata = true as raw_data
 
 windowcomp example
 
 Return the first login time. The query returns a maximum of 100 `authentication_story` records in a column called `action_user_agent`.
 
-```
-preset = authentication\_story
+preset = authentication_story
 | limit 100
-| windowcomp min(\_time) by action\_user\_agent
-```
+| windowcomp min(_time) by action_user_agent
 
 ### multiply
-Abstract
 
 Learn more about the Cortex Query Language `multiply()` function that multiplies two integers.
 
 #### Syntax
 
-```
 multiply (<string> | <integer>, <string> | <integer>)
-```
 
 #### Description
 
@@ -50873,24 +49059,19 @@ The `multiply()` function multiplies two positive integers. Parameters can be ei
 
 #### Example
 
-```
-dataset = xdr\_data 
-| alter mynum = multiply(action\_file\_size, 3) 
-| fields action\_file\_size, mynum 
-| filter action\_file\_size > 0 
+dataset = xdr_data 
+| alter mynum = multiply(action_file_size, 3) 
+| fields action_file_size, mynum 
+| filter action_file_size > 0 
 | limit 1
-```
 
 ### object_create
-Abstract
 
 Learn more about the Cortex Query Language `object_create()` function.
 
 #### Syntax
 
-```
-object\_create ("<key1>", "<value1>", "<key2>", "<value2>",...)
-```
+object_create ("<key1>", "<value1>", "<key2>", "<value2>",...)
 
 #### Description
 
@@ -50900,22 +49081,17 @@ The `object_create()` function returns an object based on the given parameters d
 
 Returns a final object to a field called `a` that contains the key and value pair `{“2”:“password”}`, where the "password" value is comprised by joining 2 values together.
 
-```
-dataset = xdr\_data
-| alter a = object\_create("2", concat("pass", "word"))
+dataset = xdr_data
+| alter a = object_create("2", concat("pass", "word"))
 | fields a
-```
 
 ### object_merge
-Abstract
 
 Learn more about the Cortex Query Language `object_merge()` function.
 
 #### Syntax
 
-```
-object\_merge(<obj1>, <obj2>, <obj3>, ...)
-```
+object_merge(<obj1>, <obj2>, <obj3>, ...)
 
 #### Description
 
@@ -50925,31 +49101,24 @@ The `object_merge()` function returns a new object, which is created from a merg
 
 Two objects are created and merged, where some key names are duplicated, including `name`, `last_name`, and `age`. Since the `name` value is the same for both objects, the same name is used in the new object. Yet, the `last_name` and `age` key values differ, so the values from the second object are used in the new object.
 
-```
-dataset = xdr\_data
+dataset = xdr_data
 | alter
-  obj1 = object\_create("name", "jane", "last\_name", "doe", "age", 33),
-  obj2 = object\_create("name", "jane", "last\_name", "simon", "age", 34, "city", "new-york")
-| alter result = object\_merge(obj1, obj2)
+  obj1 = object_create("name", "jane", "last_name", "doe", "age", 33),
+  obj2 = object_create("name", "jane", "last_name", "simon", "age", 34, "city", "new-york")
+| alter result = object_merge(obj1, obj2)
 | fields result
-```
 
 The function returns the following new object in the RESULT column of the results table:
 
-```
-{"name": "jane", "last\_name": "simon", "age": 34, "city": "new-york"}
-```
+{"name": "jane", "last_name": "simon", "age": 34, "city": "new-york"}
 
 ### parse_epoch
-Abstract
 
 Learn more about the Cortex Query Language `parse_epoch()` function that returns a Unix epoch TIMESTAMP object.
 
 #### Syntax
 
-```
-parse\_epoch("<format string>", <timestamp field>\[, "<time zone>",\] \["<time unit>"\])
-```
+parse_epoch("<format string>", <timestamp field>[, "<time zone>",] ["<time unit>"])
 
 #### Description
 
@@ -50970,44 +49139,39 @@ The order of the `<time zone>` and `<time unit>` matters. The `<time zone>` must
 
 -   With a time zone configured:
     
-    Returns a maximum of 100 `xdr_data` records, which includes a timestamp field called `new_time` in the format `MMM dd YYYY HH:mm:ss`, such as `Dec 25th 2008 04:30:00`. This `new_time` field is comprised by taking a character string representation of a timestamp "Thu Dec 25 07:30:00 2008" and adding to it +03:00 hours as the time zone format. This string timestamp is then converted to a Unix epoch TIMESTAMP object in milliseconds using the `parse_epoch` function, and this resulting value is converted to the final timestamp using the to\_timestamp function.
+    Returns a maximum of 100 `xdr_data` records, which includes a timestamp field called `new_time` in the format `MMM dd YYYY HH:mm:ss`, such as `Dec 25th 2008 04:30:00`. This `new_time` field is comprised by taking a character string representation of a timestamp "Thu Dec 25 07:30:00 2008" and adding to it +03:00 hours as the time zone format. This string timestamp is then converted to a Unix epoch TIMESTAMP object in milliseconds using the `parse_epoch` function, and this resulting value is converted to the final timestamp using the to_timestamp function.
     
     ```
-    dataset = xdr\_data
-    | alter new\_time = to\_timestamp(parse\_epoch("%c", "Thu Dec 25 07:30:00 2008", "+3", "millis"))
-    | fields new\_time
+    dataset = xdr_data
+    | alter new_time = to_timestamp(parse_epoch("%c", "Thu Dec 25 07:30:00 2008", "+3", "millis"))
+    | fields new_time
     | limit 100
     ```
     
 -   Without a time zone or time unit configured:
     
-    Returns a maximum of 100 `xdr_data` records, which includes a timestamp field called `new_time` in the format `MMM dd YYYY HH:mm:ss`, such as `Dec 25th 2008 04:30:00`. This `new_time` field is comprised by taking a character string representation of a timestamp "Thu Dec 25 07:30:00 2008" and adding to it a UTC time zone format (default when none configured). This string timestamp is then converted to a Unix epoch TIMESTAMP object in seconds (default when none configured) using the `parse_epoch` function, and this resulting value is converted to the final timestamp using the to\_timestamp function.
+    Returns a maximum of 100 `xdr_data` records, which includes a timestamp field called `new_time` in the format `MMM dd YYYY HH:mm:ss`, such as `Dec 25th 2008 04:30:00`. This `new_time` field is comprised by taking a character string representation of a timestamp "Thu Dec 25 07:30:00 2008" and adding to it a UTC time zone format (default when none configured). This string timestamp is then converted to a Unix epoch TIMESTAMP object in seconds (default when none configured) using the `parse_epoch` function, and this resulting value is converted to the final timestamp using the to_timestamp function.
     
     ```
-    dataset = xdr\_data
-    | alter new\_time = to\_timestamp(parse\_epoch("%c", "Thu Dec 25 07:30:00 2008"))
-    | fields new\_time
+    dataset = xdr_data
+    | alter new_time = to_timestamp(parse_epoch("%c", "Thu Dec 25 07:30:00 2008"))
+    | fields new_time
     | limit 100
     ```
 
 ### parse_timestamp
-Abstract
 
 Learn more about the Cortex Query Language `parse_timestamp()` function that returns a TIMESTAMP object.
 
 #### Syntax
 
-```
-parse\_timestamp("<format time string>", "<time string>" | format\_string(<time field>) | <time string field>)
-```
+parse_timestamp("<format time string>", "<time string>" | format_string(<time field>) | <time string field>)
 
-```
-parse\_timestamp("<format time string>", "<time string>" | format\_string(<time field>) | <time string field>, "<time zone>")
-```
+parse_timestamp("<format time string>", "<time string>" | format_string(<time field>) | <time string field>, "<time zone>")
 
 #### Description
 
-The `parse_timestamp()` function returns a TIMESTAMP object after converting a string representation of a timestamp. The `<time zone>` offset is optional to configure using an hours offset, such as “+08:00”, or using a time zone name from the [List of Supported Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), such as "America/Chicago". The `parse_timestamp()` function can include both an alter stage and format\_string function. For more information, see the examples below. The `format_string` function contains the format elements that define how the `parse_timestamp` string is formatted. Each element in the `parse_timestamp` string must have a corresponding element in `format_string`. The location of each element in the `format_string` must match the location of each element in `parse_timestamp`.
+The `parse_timestamp()` function returns a TIMESTAMP object after converting a string representation of a timestamp. The `<time zone>` offset is optional to configure using an hours offset, such as “+08:00”, or using a time zone name from the [List of Supported Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), such as "America/Chicago". The `parse_timestamp()` function can include both an alter stage and format_string function. For more information, see the examples below. The `format_string` function contains the format elements that define how the `parse_timestamp` string is formatted. Each element in the `parse_timestamp` string must have a corresponding element in `format_string`. The location of each element in the `format_string` must match the location of each element in `parse_timestamp`.
 
 #### Examples
 
@@ -51016,9 +49180,9 @@ The `parse_timestamp()` function returns a TIMESTAMP object after converting a s
     Returns a maximum of 100 `microsoft_dhcp_raw` records, which includes a TIMESTAMP object in the `p_t_test` field in the format MMM dd YYYY HH:mm:ss, such as Jun 25th 2021 18:31:25. This format is detailed in the `format_string` function, which includes merging both the `date` and `time` fields.
     
     ```
-    dataset = microsoft\_dhcp\_raw 
-    | alter p\_t\_test = parse\_timestamp("%m/%d/%Y %H:%M:%S", format\_string("%s %s", date, time)) 
-    | fields p\_t\_test 
+    dataset = microsoft_dhcp_raw 
+    | alter p_t_test = parse_timestamp("%m/%d/%Y %H:%M:%S", format_string("%s %s", date, time)) 
+    | fields p_t_test 
     | limit 100
     ```
     
@@ -51027,9 +49191,9 @@ The `parse_timestamp()` function returns a TIMESTAMP object after converting a s
     Returns a maximum of 100 `microsoft_dhcp_raw` records, which includes a TIMESTAMP object in the `p_t_test` field in the format MMM dd YYYY HH:mm:ss, such as Jun 25th 2021 18:31:25. This format is detailed in the `format_string` function, which includes merging both the `date` and `time` fields, and includes a "Asia/Singapore" time zone.
     
     ```
-    dataset = microsoft\_dhcp\_raw 
-    | alter p\_t\_test = parse\_timestamp("%m/%d/%Y %H:%M:%S", format\_string("%s %s", date, time), "Asia/Singapore") 
-    | fields p\_t\_test 
+    dataset = microsoft_dhcp_raw 
+    | alter p_t_test = parse_timestamp("%m/%d/%Y %H:%M:%S", format_string("%s %s", date, time), "Asia/Singapore") 
+    | fields p_t_test 
     | limit 100
     ```
     
@@ -51038,9 +49202,9 @@ The `parse_timestamp()` function returns a TIMESTAMP object after converting a s
     Returns a maximum of 100 `microsoft_dhcp_raw` records, which includes a TIMESTAMP object in the `p_t_test` field in the format MMM dd YYYY HH:mm:ss, such as Jun 25th 2021 18:31:25. This format is detailed in the `format_string` function, which includes merging both the `date` and `time` fields, and includes a time zone using an hours offset of "+08:00".
     
     ```
-    dataset = microsoft\_dhcp\_raw 
-    | alter p\_t\_test = parse\_timestamp("%m/%d/%Y %H:%M:%S", format\_string("%s %s", date, time), "+08:00") 
-    | fields p\_t\_test 
+    dataset = microsoft_dhcp_raw 
+    | alter p_t_test = parse_timestamp("%m/%d/%Y %H:%M:%S", format_string("%s %s", date, time), "+08:00") 
+    | fields p_t_test 
     | limit 100
     ```
     
@@ -51049,38 +49213,32 @@ The `parse_timestamp()` function returns a TIMESTAMP object after converting a s
     Returns a single `xdr_data` record, which includes both, a manually added time string, "Jun 25 2024 18:31:25.723", in the `time_string` field and a TIMESTAMP object in the `p_t_test` field, such as Jun 25 2024 18:31:25, as the result of the `parse_timestamp()` function. Notice that the format element `%E*S` is used to capture seconds including any level of factional precision, such as milliseconds.
     
     ```
-    dataset = xdr\_data  
+    dataset = xdr_data  
     | limit 1
-    | alter time\_string = "Jun 25 2024 18:31:25.723"
-    | alter p\_t\_test = parse\_timestamp("%h %d %Y %H:%M:%E3S", time\_string) 
-    | fields p\_t\_test, time\_string  
+    | alter time_string = "Jun 25 2024 18:31:25.723"
+    | alter p_t_test = parse_timestamp("%h %d %Y %H:%M:%E3S", time_string) 
+    | fields p_t_test, time_string  
     ```
 
 ### pow
-Abstract
 
 Learn more about the Cortex Query Language `pow()` function that returns the value of a number raised to the power of another number.
 
 #### Syntax
 
-```
 pow (<x,n>)
-```
 
 #### Description
 
 The `pow()` function returns the value of a number (`x`) raised to the power of another number (`n`).
 
 ### rank
-Abstract
 
 Learn more about the Cortex Query Language `rank()` numbering function that is used with a `windowcomp` stage.
 
 #### Syntax
 
-```
-windowcomp rank() \[by <field> \[,<field>,...\]\] sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\] \[as <alias>\]
-```
+windowcomp rank() [by <field> [,<field>,...]] sort [asc|desc] <field1> [, [asc|desc] <field2>,...] [as <alias>]
 
 #### Description
 
@@ -51090,20 +49248,17 @@ The `rank()` function is a numbering function that is used in combination with a
 
 Return an average ranking for the avgerage CPU usage on `metric_type=HOST`. Allows you to see changes in the CPU usage compared to all hosts in the environment. The query returns a maximum of 100 `it_metrics` records. The results are ordered by `ft` in decending order in the `rank` column.
 
-```
-  dataset = it\_metrics
-| filter metric\_type = HOST
-| alter cpu\_avg\_str = to\_string(cpu\_avg)
-| alter ft = date\_floor(\_time, "w")
-| alter dt = date\_floor(\_time, "d")
+  dataset = it_metrics
+| filter metric_type = HOST
+| alter cpu_avg_str = to_string(cpu_avg)
+| alter ft = date_floor(_time, "w")
+| alter dt = date_floor(_time, "d")
 | limit 100
-| windowcomp rank() by ft sort desc cpu\_avg\_str as rank
-| filter (agent\_hostname contains $host\_name)
+| windowcomp rank() by ft sort desc cpu_avg_str as rank
+| filter (agent_hostname contains $host_name)
 | comp avg(rank) by dt
-```
 
 ### regexcapture
-Abstract
 
 Learn more about the Cortex Query Language `regexcapture()` function used in Parsing Rules to extract data from fields using regular expression named groups from a given string.
 
@@ -51113,9 +49268,7 @@ The `regexcapture()` function is only supported in the XQL syntax for Parsing Ru
 
 #### Syntax
 
-```
 regexcapture(<field>, "<pattern>")
-```
 
 #### Description
 
@@ -51129,29 +49282,22 @@ Parsing Rule to ceate a dataset called `my_regexcapture_test`, where the vendor 
 
 Parsing Rule:
 
-```
-\[INGEST:vendor="regexcapture\_vendor", product="regexcapture\_product", target\_dataset="my\_regexcapture\_test"\]
-alter regexcaptureResult = regexcapture(\_raw\_log,"^(?P<ip>\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}) - (?P<user>\\w+) \\\[(?P<timestamp>.+)\\\] (?P<request>.+) (?P<status>\\d{3}) (?P<bytes>\\d+)");
-```
+[INGEST:vendor="regexcapture_vendor", product="regexcapture_product", target_dataset="my_regexcapture_test"]
+alter regexcaptureResult = regexcapture(_raw_log,"^(?P<ip>\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}) - (?P<user>\\w+) [(?P<timestamp>.+)] (?P<request>.+) (?P<status>\\d{3}) (?P<bytes>\\d+)");
 
 Log:
 
-```
-192.168.1.1 - john \[10/Mar/2024:12:34:56 +0000\] GET /index.html HTTP/1.1 200 1234
-```
+192.168.1.1 - john [10/Mar/2024:12:34:56 +0000] GET /index.html HTTP/1.1 200 1234
 
 XQL Query:
 
 For the `my_regexcapture_test` dataset, returns the `regexcaptureResult` field output.
 
-```
-dataset = my\_regexcapture\_test 
+dataset = my_regexcapture_test 
 | fields regexcaptureResult
-```
 
 regexcaptureResult field output:
 
-```
 {
   "ip": "192.168.1.1",
   "user": "john",
@@ -51160,18 +49306,14 @@ regexcaptureResult field output:
   "status": "200",
   "bytes": "1234"
 }
-```
 
 ### regextract
-Abstract
 
 Learn more about the Cortex Query Language `regextract()` function that uses regular expressions to assemble an array of matching substrings from a string.
 
 #### Syntax
 
-```
-regextract (<string\_value\>, <pattern\>)
-```
+regextract (<string_value\>, <pattern\>)
 
 #### Description
 
@@ -51191,11 +49333,10 @@ Without a capturing group
 
 Extract the `Account Name` from the `action_evtlog_message`. Use the arrayindex and split functions to extract the actual account name from the array created by `regextract`.
 
-```
-dataset = xdr\_data 
-| fields action\_evtlog\_message as aem 
+dataset = xdr_data 
+| fields action_evtlog_message as aem 
 | filter aem != null 
-| alter account\_name = 
+| alter account_name = 
     arrayindex(
         split(
             arrayindex(
@@ -51203,34 +49344,28 @@ dataset = xdr\_data
             ,0)
         , ":")
     ,1) 
-| filter account\_name != null 
+| filter account_name != null 
 | limit 10 
-```
 
 Using one capturing group
 
 Extract from the `log_example` field all of the values included for the id objects.
 
-```
-dataset = xdr\_data 
+dataset = xdr_data 
 | limit 1
 | alter
-    log\_example = "{\\"events\\":\[{\\"id\\": \\"1\\", \\"type\\": \\"process\\", \\"size\\": 123, \\"processID\\": 40540},{\\"id\\": \\"2\\", \\"type\\": \\"request\\", \\"size\\": 456, \\"srcOS\\": \\"MAC\\"}\],\\"host\\": \\"LocalHost\\",\\"date\\": {\\"day\\": 4, \\"month\\": 7, \\"year\\": 2024},\\"tags\\":\[\\"agent\\", \\"auth\\", \\"low\\"\]}"
+    log_example = "{\\"events\\":[{\\"id\\": \\"1\\", \\"type\\": \\"process\\", \\"size\\": 123, \\"processID\\": 40540},{\\"id\\": \\"2\\", \\"type\\": \\"request\\", \\"size\\": 456, \\"srcOS\\": \\"MAC\\"}],\\"host\\": \\"LocalHost\\",\\"date\\": {\\"day\\": 4, \\"month\\": 7, \\"year\\": 2024},\\"tags\\":[\\"agent\\", \\"auth\\", \\"low\\"]}"
 | alter 
-    one\_capture\_group\_usage = regextract(log\_example, "\\"id\\":\\s\*\\"(\[^\\"\]+)\\"")
-| fields log\_example, one\_capture\_group\_usage
-```
+    one_capture_group_usage = regextract(log_example, "\\"id\\":\\s\*\\"([^\\"]+)\\"")
+| fields log_example, one_capture_group_usage
 
 ### replace
-Abstract
 
 Learn more about the Cortex Query Language `replace()` function that performs a substring replacement.
 
 #### Syntax
 
-```
-replace (<field>, "<old\_substring>", "<new\_string>")
-```
+replace (<field>, "<old_substring>", "<new_string>")
 
 #### Description
 
@@ -51240,28 +49375,23 @@ The `replace()` function accepts a string field, and replaces all occurrences of
 
 If '.exe' is present on the `action_process_image_name` field value, replace that substring with an empty string. This example uses the if and lowercase functions, as well as the contains operator to perform the conditional check.
 
-```
-dataset = xdr\_data 
-| fields action\_process\_image\_name as apin 
+dataset = xdr_data 
+| fields action_process_image_name as apin 
 | filter apin != null 
-| alter remove\_exe\_process = if(lowercase(apin) contains ".exe",
+| alter remove_exe_process = if(lowercase(apin) contains ".exe",
                               replace(lowercase(apin),".exe",""),
                               lowercase(apin)) 
 | limit 10
-```
 
 See also the ltrim, rtrim, trim function example.
 
 ### replex
-Abstract
 
 Learn more about the Cortex Query Language `replex()` function that uses a regular expression to identify and replace substrings.
 
 #### Syntax
 
-```
-replex (<string\>, <pattern\>, <new\_string\>)
-```
+replex (<string\>, <pattern\>, <new_string\>)
 
 #### Description
 
@@ -51273,25 +49403,20 @@ XQL uses [RE2](https://github.com/google/re2/wiki/Syntax) for its regular expres
 
 For any `agent_id` that contains a dotted decimal IP address, mask the IP address. Use the dedup stage to reduce the result set to first-seen `agent_id` values.
 
-```
-dataset = xdr\_data 
-| fields agent\_id 
-| alter clean\_agent\_id = replex(agent\_id, 
-                              "\[\\d\]+\\.\[\\d\]+\\.\[\\d\]+\\.\[\\d\]+", 
+dataset = xdr_data 
+| fields agent_id 
+| alter clean_agent_id = replex(agent_id, 
+                              "[\\d]+\\.[\\d]+\\.[\\d]+\\.[\\d]+", 
                               "xxx.xxx.xx.xx") 
-| dedup agent\_id by asc \_time
-```
+| dedup agent_id by asc _time
 
 ### round
-Abstract
 
 Learn more about the Cortex Query Language `round()` function that returns the input value rounded to the nearest integer.
 
 #### Syntax
 
-```
 round (<float\> | <integer\>)
-```
 
 #### Description
 
@@ -51299,25 +49424,20 @@ The `round()` function accepts either a float or an integer as an input value, a
 
 #### Example
 
-```
-dataset = xdr\_data 
-| alter mynum = divide(action\_file\_size, 7) 
+dataset = xdr_data 
+| alter mynum = divide(action_file_size, 7) 
 | alter mynum2 = round(mynum)  
-| fields action\_file\_size, mynum, mynum2 
-| filter action\_file\_size > 3 
-| limit 1 
-```
+| fields action_file_size, mynum, mynum2 
+| filter action_file_size > 3 
+| limit 1
 
 ### row_number
-Abstract
 
 Learn more about the Cortex Query Language `row_number()` numbering function that is used with a `windowcomp` stage.
 
 #### Syntax
 
-```
-windowcomp row\_number() \[by <field> \[,<field>,...\]\] \[sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\]\] \[as <alias>\]
-```
+windowcomp row_number() [by <field> [,<field>,...]] [sort [asc|desc] <field1> [, [asc|desc] <field2>,...]] [as <alias>]
 
 #### Description
 
@@ -51327,22 +49447,17 @@ The `row_number()` function is a numbering function that is used in combination 
 
 Return a single value for the sequential row ordinal (1-based) for each row in the group of rows. The query returns a maximum of 100 `xdr_data` records. The results are ordered by the `source_ip` in ascending order in the `row_number_dns_query_name` column.
 
-```
-dataset = xdr\_data                                                                                          
+dataset = xdr_data                                                                                          
 | limit 100                                                                      
-| windowcomp row\_number() sort source\_ip as row\_number\_dns\_query\_name
-```
+| windowcomp row_number() sort source_ip as row_number_dns_query_name
 
 ### split
-Abstract
 
 Learn more about the Cortex Query Language `split()` function that splits a string and returns an array of string parts.
 
 #### Syntax
 
-```
-split (<value> \[, <string\_delimiter\>\])
-```
+split (<value> [, <string_delimiter\>])
 
 #### Description
 
@@ -51352,15 +49467,12 @@ The `split()` function splits a string using an optional delimiter, and returns 
 
 Split IP addresses into an array, each element of the array containing an IP octet.
 
-```
-dataset = xdr\_data 
-| fields action\_local\_ip  as alii 
-| alter ip\_octets = split(alii, ".") 
-| limit 10 
-```
+dataset = xdr_data 
+| fields action_local_ip  as alii 
+| alter ip_octets = split(alii, ".") 
+| limit 10
 
 ### stddev_population
-Abstract
 
 Learn more about the Cortex Query Language `stddev_population()` function used with both `comp` and `windowcomp` stages.
 
@@ -51368,15 +49480,11 @@ Learn more about the Cortex Query Language `stddev_population()` function used w
 
 comp stage
 
-```
-comp stddev\_population(<field>) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp stddev_population(<field>) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 windowcomp stage
 
-```
-windowcomp stddev\_population(<field>) \[by <field> \[,<field>,...\]\] \[sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\]\] \[between 0|null|<number>|-<number> \[and 0|null|<number>|-<number>\] \[frame\_type=range\]\] \[as <alias>\] 
-```
+windowcomp stddev_population(<field>) [by <field> [,<field>,...]] [sort [asc|desc] <field1> [, [asc|desc] <field2>,...]] [between 0|null|<number>|-<number> [and 0|null|<number>|-<number>] [frame_type=range]] [as <alias>] 
 
 #### Description
 
@@ -51398,25 +49506,20 @@ comp example
 
 Calculates a maximum of 100 `metrics_source` records, where the `_broker_device_id` is `655AYUWF`, and include a single population (biased) variance value of the `total_size_rate` field for a group of rows.
 
-```
-dataset = metrics\_source 
-| filter \_broker\_device\_id = "655AYUWF" 
-| comp stddev\_population(total\_size\_rate)
+dataset = metrics_source 
+| filter _broker_device_id = "655AYUWF" 
+| comp stddev_population(total_size_rate)
 | limit 100
-```
 
 windowcomp example
 
 Return maximum of 100 `metrics_source` records and include a single population (biased) variance value of the `total_size_rate` field for each row in the group of rows, for all records that contain matching values in the `_broker_device_id` field. The results are provided in the `stddev_population` column.
 
-```
-dataset = metrics\_source
+dataset = metrics_source
 | limit 100
-| windowcomp stddev\_population(total\_size\_rate) by \_broker\_device\_id as \`stddev\_population\`
-```
+| windowcomp stddev_population(total_size_rate) by _broker_device_id as \`stddev_population\`
 
 ### stddev_sample
-Abstract
 
 Learn more about the Cortex Query Language `stddev_sample()` function used with both `comp` and `windowcomp` stages.
 
@@ -51424,15 +49527,11 @@ Learn more about the Cortex Query Language `stddev_sample()` function used with 
 
 comp stage
 
-```
-comp stddev\_sample(<field>) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp stddev_sample(<field>) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 windowcomp stage
 
-```
-windowcomp stddev\_sample(<field>) \[by <field> \[,<field>,...\]\] \[sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\]\] \[between 0|null|<number>|-<number> \[and 0|null|<number>|-<number>\] \[frame\_type=range\]\] \[as <alias>\]
-```
+windowcomp stddev_sample(<field>) [by <field> [,<field>,...]] [sort [asc|desc] <field1> [, [asc|desc] <field2>,...]] [between 0|null|<number>|-<number> [and 0|null|<number>|-<number>] [frame_type=range]] [as <alias>]
 
 #### Description
 
@@ -51454,33 +49553,26 @@ comp stage example
 
 Calculate a maximum of 100 `metrics_source` records, where the `_broker_device_ip` is `172.16.1.25`, and include a single sample (unbiased) standard deviation value of the `total_size_bytes` field for a group of rows.
 
-```
-dataset = metrics\_source 
-| filter \_broker\_device\_ip = "172.16.1.25" 
-| comp stddev\_sample(total\_size\_bytes)
+dataset = metrics_source 
+| filter _broker_device_ip = "172.16.1.25" 
+| comp stddev_sample(total_size_bytes)
 | limit 100
-```
 
 windowcomp stage example
 
 Return a maximum of 100 `metrics_source` records and include a single sample (unbiased) standard deviation value of the `total_size_rate` field for each row in the group of rows, for all records that contain matching values in the `_broker_device_id` field. The results are provided in the `stddev_sample` column.
 
-```
-dataset = metrics\_source
+dataset = metrics_source
 | limit 100
-| windowcomp stddev\_sample(total\_size\_rate) by \_broker\_device\_id as \`stddev\_sample\` 
-```
+| windowcomp stddev_sample(total_size_rate) by _broker_device_id as \`stddev_sample\`
 
 ### string_count
-Abstract
 
 Learn more about the Cortex Query Language `string_count()` function that returns the number of times a substring appears in a string.
 
 #### Syntax
 
-```
-string\_count (<string\>, <pattern\>)
-```
+string_count (<string\>, <pattern\>)
 
 #### Description
 
@@ -51488,22 +49580,17 @@ The `string_count()` function returns the number of times a substring appears in
 
 #### Example
 
-```
-dataset = xdr\_data 
-| fields actor\_primary\_username as apu 
-| filter string\_count(apu, "e") > 1 
-```
+dataset = xdr_data 
+| fields actor_primary_username as apu 
+| filter string_count(apu, "e") > 1
 
 ### subtract
-Abstract
 
 Learn more about the Cortex Query Language `subtract()` function that subtracts two integers.
 
 #### Syntax
 
-```
 subtract (<string1> | <integer1>, <string2> | <integer2>)
-```
 
 #### Description
 
@@ -51511,16 +49598,13 @@ The `subtract()` function subtracts two positive integers by subtracting the sec
 
 #### Example
 
-```
-dataset = xdr\_data 
-| alter mynum = subtract(action\_file\_size, 3) 
-| fields action\_file\_size, mynum 
-| filter action\_file\_size > 3 
-| limit 1 
-```
+dataset = xdr_data 
+| alter mynum = subtract(action_file_size, 3) 
+| fields action_file_size, mynum 
+| filter action_file_size > 3 
+| limit 1
 
 ### sum
-Abstract
 
 Cortex Query Language `sum` function used with both `comp` and `windowcomp` stages.
 
@@ -51528,15 +49612,11 @@ Cortex Query Language `sum` function used with both `comp` and `windowcomp` stag
 
 comp stage
 
-```
-comp sum(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp sum(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 windowcomp
 
-```
-windowcomp sum(<field>) \[by <field> \[,<field>,...\]\] \[sort \[asc|desc\] <field1> \[, \[asc|desc\] <field2>,...\]\] \[between 0|null|<number>|-<number> \[and 0|null|<number>|-<number>\] \[frame\_type=range\]\] \[as <alias>\] 
-```
+windowcomp sum(<field>) [by <field> [,<field>,...]] [sort [asc|desc] <field1> [, [asc|desc] <field2>,...]] [between 0|null|<number>|-<number> [and 0|null|<number>|-<number>] [frame_type=range]] [as <alias>] 
 
 #### Description
 
@@ -51558,81 +49638,67 @@ comp example
 
 Return a single sum of the `action_total_download` field for a group of rows, for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` values. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing a single value for the results.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp sum(Download) as total\_download by Process\_Path, Process\_CMD addrawdata = true as raw\_data
-```
+| comp sum(Download) as total_download by Process_Path, Process_CMD addrawdata = true as raw_data
 
 windowcomp
 
 Return the download to upload ratio per process. The query returns a maximum of 100 `xdr_data` records in new columns called `sum_upload` and `sum_download`.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download, action\_total\_upload as Upload
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download, action_total_upload as Upload
 | filter Download > 0
 | limit 100
-| windowcomp sum(Download) by Process\_Path, Process\_CMD as sum\_download
-| windowcomp sum(Upload) by Process\_Path, Process\_CMD as sum\_upload
+| windowcomp sum(Download) by Process_Path, Process_CMD as sum_download
+| windowcomp sum(Upload) by Process_Path, Process_CMD as sum_upload
 | fields - Download ,Upload
-| dedup Process\_CMD, Process\_Path, sum\_download ,sum\_upload
-| alter ration = divide(sum\_download ,sum\_upload)
-```
+| dedup Process_CMD, Process_Path, sum_download ,sum_upload
+| alter ration = divide(sum_download ,sum_upload)
 
 ### time_frame_end
-Abstract
 
 Learn more about the Cortex Query Language `time_frame_end()` function that returns the end time of the time range specified for the query.
 
 #### Syntax
 
-```
-time\_frame\_end(<time frame>)
-```
+time_frame_end(<time frame>)
 
 #### Description
 
 The `time_frame_end()` function returns the timestamp object for the string representation of the end of the time frame configured for the query in the format MMM dd YYYY HH:mm:ss, such as Jun 8th 2022 15:20:06. You can configure the time frame using the config timeframe function, where the range can be relative or exact.
 
-If the time frame is relative, for example last 24H, the function returns the current\_time. This function is useful when the query uses a custom time frame whose end time is in the past.
+If the time frame is relative, for example last 24H, the function returns the current_time. This function is useful when the query uses a custom time frame whose end time is in the past.
 
 #### Example 1 - Relative Time
 
-For the last 5 days from when the query is sent, returns a maximum of 100 `xdr_data` records with the events of the \_time field with a new field called "x". The "x" field lists the final timestamp at the end of 5 days from when the query was sent for the events in descending order. For more information on this relative timeframe range, see the config timeframe function.
+For the last 5 days from when the query is sent, returns a maximum of 100 `xdr_data` records with the events of the _time field with a new field called "x". The "x" field lists the final timestamp at the end of 5 days from when the query was sent for the events in descending order. For more information on this relative timeframe range, see the config timeframe function.
 
-```
 config timeframe = 5d
-| dataset = xdr\_data
-| alter x = time\_frame\_end()
+| dataset = xdr_data
+| alter x = time_frame_end()
 | fields x
 | sort desc x
-```
 
 #### Example 2 - Relative Time
 
-For the last 5 days from when the query is run until now, returns a maximum of 100 xdr\_data records with the events of the \_time field with a new field called "x". The "x" field lists the final timestamp at the end of 5 days from when the query runs for the events in descending order. For more information on this relative time frame range, see the config timeframe function.
+For the last 5 days from when the query is run until now, returns a maximum of 100 xdr_data records with the events of the _time field with a new field called "x". The "x" field lists the final timestamp at the end of 5 days from when the query runs for the events in descending order. For more information on this relative time frame range, see the config timeframe function.
 
-```
 config timeframe = between "5d" and "now"
-| dataset = xdr\_data
-| alter x = time\_frame\_end()
+| dataset = xdr_data
+| alter x = time_frame_end()
 | fields x
 | sort desc
-```
 
 ### timestamp_diff
-Abstract
 
 Learn more about the Cortex Query Language `timestamp_diff()` function that returns the difference between two timestamp objects.
 
 #### Syntax
 
-```
-timestamp\_diff (<timestamp1\>, <timestamp2\>, <part\>)
-```
+timestamp_diff (<timestamp1\>, <timestamp2\>, <part\>)
 
 #### Description
 
@@ -51655,26 +49721,21 @@ Supported parts are:
 
 #### Example
 
-```
-dataset = xdr\_data 
-| filter story\_publish\_timestamp != null 
-| alter ts = to\_timestamp(story\_publish\_timestamp, "MILLIS") 
-| alter ct = current\_time() 
-| alter diff = timestamp\_diff(ct, ts, "MINUTE") 
+dataset = xdr_data 
+| filter story_publish_timestamp != null 
+| alter ts = to_timestamp(story_publish_timestamp, "MILLIS") 
+| alter ct = current_time() 
+| alter diff = timestamp_diff(ct, ts, "MINUTE") 
 | fields ts, ct, diff 
 | limit 1
-```
 
 ### timestamp_seconds
-Abstract
 
 Learn more about the Cortex Query Language `timestamp_seconds()` function.
 
 #### Syntax
 
-```
-timestamp\_seconds (<integer>)
-```
+timestamp_seconds (<integer>)
 
 #### Description
 
@@ -51688,20 +49749,15 @@ Endpoint Detection and Response (EDR) columns store epoch milliseconds values so
 
 Display a human-readable timestamp for the `action_file_access_time` field.
 
-```
-alter access\_timestamp = timestamp\_seconds(1611882205) | limit 1 
-```
+alter access_timestamp = timestamp_seconds(1611882205) | limit 1
 
 ### to_boolean
-Abstract
 
 Learn more about the Cortex Query Language `to_boolean()` function that converts a string to a boolean.
 
 #### Syntax
 
-```
-to\_boolean(<string>)
-```
+to_boolean(<string>)
 
 #### Description
 
@@ -51710,15 +49766,12 @@ The `to_boolean()` function converts a string that represents a boolean to a boo
 The input value to this string must be either `TRUE` or `FALSE`, case insensitive.
 
 ### to_epoch
-Abstract
 
 Learn more about the Cortex Query Language `to_epoch()` function that converts a timestamp value for a field or function to the Unix epoch timestamp format.
 
 #### Syntax
 
-```
-to\_epoch (<timestamp>, <time unit>)
-```
+to_epoch (<timestamp>, <time unit>)
 
 #### Description
 
@@ -51735,50 +49788,40 @@ The `to_epoch()` function converts a timestamp value for a particular field or f
 
 Returns a maximum of 100 `xdr_data` records with the events of the `_time` field, which includes a timestamp field in the Unix epoch format called `ts`. The ts field contains the equivalent Unix epoch values in milliseconds for the timestamps listed in the `_time` field.
 
-```
-dataset = xdr\_data
-| filter \_time != null
-| alter ts = to\_epoch(\_time, "MILLIS")
+dataset = xdr_data
+| filter _time != null
+| alter ts = to_epoch(_time, "MILLIS")
 | fields ts
 | limit 100
-```
 
 ### to_float
-Abstract
 
 Learn more about the Cortex Query Language `to_float()` function that converts a string to a floating point number.
 
 #### Syntax
 
-```
-to\_float(<string>)
-```
+to_float(<string>)
 
 #### Description
 
-The `to_float()` function converts a string that represents a number to a floating point number. This function is identical to the to\_number function.
+The `to_float()` function converts a string that represents a number to a floating point number. This function is identical to the to_number function.
 
 #### Examples
 
 Display the first 10 IP addresses that begin with a value greater than `192`. Use the split function to split the IP address by '.', and then use the arrayindex function to retrieve the first value in the resulting array. Convert this to a number and perform an arithmetic compare to arrive at a result set.
 
-```
-dataset = xdr\_data 
-| fields action\_local\_ip  as alii 
-| filter to\_float(arrayindex(split(alii, "."),0))  > 192 
-| limit 10 
-```
+dataset = xdr_data 
+| fields action_local_ip  as alii 
+| filter to_float(arrayindex(split(alii, "."),0))  > 192 
+| limit 10
 
 ### to_integer
-Abstract
 
 Learn more about the Cortex Query Language `to_integer()` function that converts a string field to an integer.
 
 #### Syntax
 
-```
-to\_integer(<string>)
-```
+to_integer(<string>)
 
 #### Description
 
@@ -51790,76 +49833,61 @@ It is an error to provide a string to this function that contains a floating poi
 
 Display the first 10 IP addresses that begin with a value greater than 192. Use the split function to split the IP address by '.', and then use the arrayindex function to retrieve the first value in the resulting array. Convert this to a number and perform an arithmetic compare to arrive at a result set.
 
-```
-dataset = xdr\_data 
-| fields action\_local\_ip  as alii 
-| filter to\_integer(arrayindex(split(alii, "."),0))  > 192 
-| limit 10 
-```
+dataset = xdr_data 
+| fields action_local_ip  as alii 
+| filter to_integer(arrayindex(split(alii, "."),0))  > 192 
+| limit 10
 
 ### to_json_string
-Abstract
 
 Learn more about the Cortex Query Language `to_json_string()` function that accepts all data types and returns its contents as a JSON formatted string.
 
 #### Syntax
 
-```
-to\_json\_string(<data type\>)
-```
+to_json_string(<data type\>)
 
 #### Description
 
-The `to_json_string()` function accepts all data types, such as integers, booleans, strings, and returns it as a JSON formatted string. This function always returns a string. When the input is an object or an array, the function returns a JSON formatted string of the input. When the input string is a string, it returns the string as is. You can then use the JSON formatted string or string returned by this function with the json\_extract, json\_extract\_array, and json\_extract\_scalar functions.
+The `to_json_string()` function accepts all data types, such as integers, booleans, strings, and returns it as a JSON formatted string. This function always returns a string. When the input is an object or an array, the function returns a JSON formatted string of the input. When the input string is a string, it returns the string as is. You can then use the JSON formatted string or string returned by this function with the json_extract, json_extract_array, and json_extract_scalar functions.
 
 #### Examples
 
 Return the `action_file_device_info` field in JSON format.
 
-```
-dataset = xdr\_data 
-| fields action\_file\_device\_info as afdi
+dataset = xdr_data 
+| fields action_file_device_info as afdi
 | filter afdi != null  
-| alter the\_json\_string = to\_json\_string(afdi) 
+| alter the_json_string = to_json_string(afdi) 
 | limit 10
-```
 
 ### to_number
-Abstract
 
 Learn more about the Cortex Query Language `to_number()` function that converts a string to a number.
 
 #### Syntax
 
-```
-to\_number (<string>)
-```
+to_number (<string>)
 
 #### Description
 
-The `to_number()` function converts a string that represents a number to a floating point number. This function is identical to the to\_float function.
+The `to_number()` function converts a string that represents a number to a floating point number. This function is identical to the to_float function.
 
 #### Examples
 
 Display the first 10 IP addresses that begin with a value greater than 192. Use the split function to split the IP address by '.', and then use the arrayindex function to retrieve the first value in the resulting array. Convert this to a number and perform an arithmetic compare to arrive at a result set.
 
-```
-dataset = xdr\_data 
-| fields action\_local\_ip  as alii 
-| filter to\_number(arrayindex(split(alii, "."),0))  > 192 
-| limit 10 
-```
+dataset = xdr_data 
+| fields action_local_ip  as alii 
+| filter to_number(arrayindex(split(alii, "."),0))  > 192 
+| limit 10
 
 ### to_string
-Abstract
 
 Learn more about the Cortex Query Language `to_string` function that converts a number value to a string.
 
 #### Syntax
 
-```
-to\_string (<field>)
-```
+to_string (<field>)
 
 #### Description
 
@@ -51869,24 +49897,19 @@ The `to_string()` function converts a number value of a given field to a string.
 
 Display the first non-NULL `action_boot_time` field value. In a second column called `abt_string`, use the concat function to prepend "str: " to the value, and then display it.
 
-```
-dataset = xdr\_data 
-| fields action\_boot\_time as abt 
+dataset = xdr_data 
+| fields action_boot_time as abt 
 | filter abt != null 
-| alter abt\_string = concat("str: ", to\_string(abt)) 
-| limit 1 
-```
+| alter abt_string = concat("str: ", to_string(abt)) 
+| limit 1
 
 ### to_timestamp
-Abstract
 
 Learn more about the Cortex Query Language `to_timestamp()` function that converts an integer to a timestamp.
 
 #### Syntax
 
-```
-to\_timestamp (<integer\>, <units\>)
-```
+to_timestamp (<integer\>, <units\>)
 
 #### Description
 
@@ -51901,23 +49924,18 @@ The `to_timestamp()` function converts an integer to a timestamp. This function 
 
 #### Example
 
-```
-dataset = xdr\_data 
-| filter story\_publish\_timestamp != null 
-| alter ts = to\_timestamp(story\_publish\_timestamp, "MILLIS") 
-| fields ts 
-```
+dataset = xdr_data 
+| filter story_publish_timestamp != null 
+| alter ts = to_timestamp(story_publish_timestamp, "MILLIS") 
+| fields ts
 
 ### uppercase
-Abstract
 
 Learn more about the Cortex Query Language `uppercase()` function that converts a string field to all uppercase letters.
 
 #### Syntax
 
-```
 uppercase (<string>)
-```
 
 #### Description
 
@@ -51927,24 +49945,19 @@ The `uppercase()` function converts a string field value to all uppercase.
 
 Convert all `actor_process_image_name` field values that are not null to uppercase, and return a list of unique values.
 
-```
-dataset = xdr\_data 
-| fields actor\_process\_image\_name as apin 
-| dedup apin by asc \_time 
+dataset = xdr_data 
+| fields actor_process_image_name as apin 
+| dedup apin by asc _time 
 | filter apin != null 
 | alter apin = uppercase(apin)
-```
 
 ### values
-Abstract
 
 Cortex Query Language `comp values` aggregate returns an array for all the values seen for the field in the result set.
 
 #### Syntax
 
-```
-comp values(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp values(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 #### Description
 
@@ -51956,24 +49969,19 @@ In addition, you can configure whether the raw data events are displayed by sett
 
 Return an array containing all the values seen for the `action_total_download` field for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` values. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing the raw data events used to display the final `comp` results. In addition, this example contains a number of fields defined as aliases: `actor_process_image_path` uses the alias `Process_Path`, `actor_process_command_line` uses the alias `Process_CMD`, `action_total_download` uses the alias `Download`, and `Download` uses the alias `values_download`.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp values(Download) as values\_download by Process\_Path, Process\_CMD addrawdata = true as raw\_data
-```
+| comp values(Download) as values_download by Process_Path, Process_CMD addrawdata = true as raw_data
 
 ### var
-Abstract
 
 Learn more about the Cortex Query Language `var` aggregate comp function that returns the variance value of a field in the result set.
 
 #### Syntax
 
-```
-comp var(_<field>_) \[as _<alias>_\] by _<field\_1>_,_<field\_2>_ \[addrawdata = true|false \[as _<target field>_\]\]
-```
+comp var(_<field>_) [as _<alias>_] by _<field_1>_,_<field_2>_ [addrawdata = true|false [as _<target field>_]]
 
 #### Description
 
@@ -51985,25 +49993,20 @@ In addition, you can configure whether the raw data events are displayed by sett
 
 Return the variance of the `action_total_download` field for all records that have matching values for their `actor_process_image_path` and `actor_process_command_line` values. The query calculates a maximum of 100 `xdr_data` records and includes a `raw_data` column listing the raw data events used to display the final `comp` results.
 
-```
-dataset = xdr\_data
-| fields actor\_process\_image\_path as Process\_Path, actor\_process\_command\_line as Process\_CMD, action\_total\_download as Download
+dataset = xdr_data
+| fields actor_process_image_path as Process_Path, actor_process_command_line as Process_CMD, action_total_download as Download
 | filter Download > 0
 | limit 100
-| comp var(Download) as variance\_download by Process\_Path, Process\_CMD
-addrawdata = true as raw\_data
-```
+| comp var(Download) as variance_download by Process_Path, Process_CMD
+addrawdata = true as raw_data
 
 ### wildcard_match
-Abstract
 
 Learn more about the Cortex Query Language `wildcard_match()` function.
 
 #### Syntax
 
-```
-wildcard\_match(<string\_value>, <wildcard\_pattern>)
-```
+wildcard_match(<string_value>, <wildcard_pattern>)
 
 #### Description
 
@@ -52022,7 +50025,7 @@ Lookup dataset sample data
 
 The examples provided below are based on running queries using a lookup dataset called `lookup_app_category`. Here's some sample data of the dataset table:
 
-| \_TIIME | APP\_CATEGORY |
+| _TIIME | APP_CATEGORY |
 | --- | --- |
 | Aug 31 2024 12:13:48 | general-internet |
 | Sep 1st 2024 12:13:11 | general-internet |
@@ -52033,21 +50036,19 @@ The examples provided below are based on running queries using a lookup dataset 
 | Sep 6th 2024 12:05:03 | general-internet |
 | Sep 6th 2024 15:22:36 | multicast-ip |
 
-Example 1: wildcard\_match with filter and \*
+Example 1: wildcard_match with filter and \*
 
 Return a maximum of 100 records from a lookup dataset called `lookup_app_category`. The `pattern` field defines the wildcard pattern as `general-*`. When this wildcard pattern is found in the `app_category` field, the `wildcard_match` returns `true` and the matching events are listed in the table results with the `pattern` field displaying the defined pattern.
 
-```
-dataset = lookup\_app\_category 
+dataset = lookup_app_category 
 | alter pattern = "general-\*" 
-| filter wildcard\_match(app\_category, pattern)
-| fields pattern, app\_category
+| filter wildcard_match(app_category, pattern)
+| fields pattern, app_category
 | limit 100
-```
 
 Sample output table results:
 
-| PATTERN | \_TIIME | APP\_CATEGORY |
+| PATTERN | _TIIME | APP_CATEGORY |
 | --- | --- | --- |
 | general-\* | Aug 31 2024 12:13:48 | general-internet |
 | general-\* | Sep 1st 2024 12:13:11 | general-internet |
@@ -52057,52 +50058,46 @@ Sample output table results:
 | general-\* | Sep 5th 2024 03:13:19 | general-dns |
 | general-\* | Sep 6th 2024 12:05:03 | general-internet |
 
-Example 2: wildcard\_match with filter and ?
+Example 2: wildcard_match with filter and ?
 
 Return a maximum of 100 records from a lookup dataset called `lookup_app_category`. The `pattern` field defines the wildcard pattern as `general-??`. When this wildcard pattern is found in the `app_category` field, the `wildcard_match` returns `true` and the matching events are listed in the table results with the `pattern` field displaying the defined pattern.
 
-```
-dataset = lookup\_app\_category 
+dataset = lookup_app_category 
 | alter pattern = "general-??" 
-| filter wildcard\_match(app\_category, pattern)
-| fields pattern, app\_category
+| filter wildcard_match(app_category, pattern)
+| fields pattern, app_category
 | limit 100
-```
 
 Sample output table results:
 
-| PATTERN | \_TIIME | APP\_CATEGORY |
+| PATTERN | _TIIME | APP_CATEGORY |
 | --- | --- | --- |
 | general-?? | Sep 3th 2024 09:13:37 | general-ip |
 | general-?? | Sep 4th 2024 11:13:25 | general-ip |
 
-Example 3: wildcard\_match with alter, \*, and ?
+Example 3: wildcard_match with alter, \*, and ?
 
 Return a maximum of 100 records from a lookup dataset called `lookup_app_category`. The `pattern` field defines the wildcard pattern as `*-i??`. When this wildcard pattern is found in the `app_category` field, the `wildcard_match` returns `true` and is passed to the `pattern` field, and the events found are listed in the table results.
 
-```
-dataset = lookup\_app\_category 
+dataset = lookup_app_category 
 | alter pattern = "\*-i??" 
-| alter test = wildcard\_match(app\_category, pattern)
-| fields test, pattern, app\_category
+| alter test = wildcard_match(app_category, pattern)
+| fields test, pattern, app_category
 | limit 100
-```
 
 Sample output table results:
 
-| PATTERN | \_TIIME | APP\_CATEGORY |
+| PATTERN | _TIIME | APP_CATEGORY |
 | --- | --- | --- |
 | true | Sep 3th 2024 09:13:37 | general-ip |
 | true | Sep 4th 2024 11:13:25 | general-ip |
 | true | Sep 6th 2024 15:22:36 | multicast-ip |
 
 # Graph Search
-Abstract
 
 Learn more about Graph Search in Cortex Cloud.
 
 ## What is Graph Search?
-Abstract
 
 Learn more about how to use Graph Search to search assets, findings, and their contextual data.
 
@@ -52114,12 +50109,9 @@ Graph Search provides an interactive and visually intuitive way for you to searc
 
 Graph Search queries are created using the built-in query interface embedded in the Query Builder. Every query is structured to use a certain pattern and includes default data objects that you define by selecting the ones you want to query from the data collected in the applicable datasets based on the data sources configured. The resulting graph provides an illustration of your selections, which you can export to a PNG, SVG, or TSV file. In addition, Graph Search contains a Query Library for saving and managing your own queries, queries shared with you, and built-in Graph Search queries provided by Palo Alto Networks.
 
- [image: movie__2_.png] Show me around Graph Search
-
-[image: What_is_Graph_Search_July.gif]
+  Show me around Graph Search
 
 ## Get started with Graph Search queries
-Abstract
 
 Learn more about how to get started before building a Graph Search query.
 
@@ -52149,7 +50141,6 @@ Before you start to search assets and findings by their relationships by buildin
 -   **Learn more about the Graph Search Query Library and run the built-in queries**: Graph Search contains a Query Library for saving and managing your own queries, queries shared with you, and built-in Graph Search queries provided by Palo Alto Networks. We recommend that you run these built-in queries as these examples provide common, important, and popular use cases. For more information, see Manage the Graph Search Query Library.
 
 ## How to build Graph Search queries?
-Abstract
 
 Learn more about building Graph Search queries using the built-in query interface.
 
@@ -52163,11 +50154,7 @@ To support multi-cloud and hybrid environments efficiently and intuitively, Grap
 
 You submit Graph Search queries using the Investigation & Response → Search → Query Builder → Graph Search built-in query interface.
 
-[image: How_to_build_Graph_Search_queries_July.png]
-
- [image: movie__2_.png] Show me around the Graph Search built-in query interface
-
-[image: How_to_build_Graph_Search_queries_July.gif]
+  Show me around the Graph Search built-in query interface
 
 Keywords in the query interface
 
@@ -52203,7 +50190,6 @@ Providing feedback
 Use the Have Feedback? link in the Graph Search query interface to provide valuable feedback about the feature and any improvements you'd recommend.
 
 ## Understand Graph Search query results
-Abstract
 
 Learn more about the Graph Search query results.
 
@@ -52261,32 +50247,28 @@ The Graph Search resulting graph displays the paths according to the nodes and c
     
     -   + and \- icons: Use the plus and minus icons to zoom in and out of the graph.
         
-    -   [image: centering_icon.png]: Use the diamond icon to center your graph after you've manipulated the output.
+    -   : Use the diamond icon to center your graph after you've manipulated the output.
         
-    -   [image: layers_icon.png]: Use the layers icon to easily add or remove additional information to the graph without having to define these parameters in your Graph Search query. You can decide when to include these built-in layers, as needed. The following are available:
+    -   : Use the layers icon to easily add or remove additional information to the graph without having to define these parameters in your Graph Search query. You can decide when to include these built-in layers, as needed. The following are available:
         
         -   Public Exposure to the Internet: Tracks the asset nodes with internet exposure that could be targeted for external surface attacks by displaying the exposure path. A Globe node called Internet is added to the graph, which links all exposed asset nodes to this Globe node. You can expand this connection by clicking the + icon to reveal the full internet path to include, for example, the NIC, Subnet, and Gateway. In the exposure path, you can select each node, or hover on it and select More Info, you'll see more information displayed in a dialog box. You can click View Details to drill down even further on the asset node to display more information on the node depending on the data collected for that asset node selected. Internet paths are collapsed by default.
             
         -   Related Cases: Displays the number of related Cases for each asset node with a breakdown by severity.
             
-        -   Runtime Events: Adds 100 most recent runtime events to the graph results, which are refreshed every hour. This enables you to investigate real-time activity and identify critical events, such as access to sensitive information typically contained in a storage bucket, which generate issues and cases. All the bucket nodes in the path include a runtime icon [image: runtime_icon.png] underneath and run an animation on all the bucket and virtual machine nodes. You can click the runtime icon to reveal more info, such as connection details and runtime events. Click Show Recent Events to display the Runtime Events table with more details on the last 100 events.
+        -   Runtime Events: Adds 100 most recent runtime events to the graph results, which are refreshed every hour. This enables you to investigate real-time activity and identify critical events, such as access to sensitive information typically contained in a storage bucket, which generate issues and cases. All the bucket nodes in the path include a runtime icon  underneath and run an animation on all the bucket and virtual machine nodes. You can click the runtime icon to reveal more info, such as connection details and runtime events. Click Show Recent Events to display the Runtime Events table with more details on the last 100 events.
             
         
         The results from the different layers are displayed in tabs in the node dialog box, which enables you to quickly switch from one layer to the other.
         
-    -   [image: Group_nodes_icon.png]: Use the Group nodes icon to group by the Cloud Provider, Cloud Account, or Cloud Region. Selecting one of these grouping enables you to view the graph results in an aggregated format, providing a clearer and more organized perspective of the data. This feature also helps to Identify patterns and trends more easily in your data by grouping similar entities together. In the future, the Group nodes feature will be expanded to enable additional groupings.
+    -   : Use the Group nodes icon to group by the Cloud Provider, Cloud Account, or Cloud Region. Selecting one of these grouping enables you to view the graph results in an aggregated format, providing a clearer and more organized perspective of the data. This feature also helps to Identify patterns and trends more easily in your data by grouping similar entities together. In the future, the Group nodes feature will be expanded to enable additional groupings.
         
     
 
- [image: movie__2_.png] Show me an example of Graph Search results with general tips and tricks
+  Show me an example of Graph Search results with general tips and tricks
 
-[image: Understand_Graph_Search_results_with_general_tips_and_tricks_July_doc.gif]
-
- [image: movie__2_.png] Show me how to use the layers and group node icons in the Graph Search results
+  Show me how to use the layers and group node icons in the Graph Search results
 
 This example focuses on using the layers icon to add or remove additional information to the graph and how to group information together using the Group node icon.
-
-[image: Understand_Graph_Search_query_results_July_Layers_and_Group_Nodes.gif]
 
 Table view columns
 
@@ -52424,7 +50406,6 @@ Below is a list of the default columns that are displayed with in any finding ta
     -   File Code Line
 
 ## Create Graph Search query
-Abstract
 
 Learn how to create Graph Search queries in Cortex Cloud.
 
@@ -52503,7 +50484,6 @@ Build Graph Search queries to search your assets and findings by their relations
      For more information about the Query Library, see Manage the Graph Search Query Library.
 
 ## Graph Search examples
-Abstract
 
 Learn how to build Graph Search queries by working through a few examples.
 
@@ -52589,7 +50569,6 @@ This example takes you through building a query with asset nodes. The query look
 **Graph Search results:** A graph displaying all the virtual machines in your network that are connected to the internet with a network interface attached, are contained in a subnet, and part of a VPC.
 
 ## Manage the Graph Search Query Library
-Abstract
 
 Learn more about the Cortex Cloud Graph Search Query Library to manage your queries.
 
@@ -52609,13 +50588,13 @@ The Query Library consists of two tables called Query Library (default) and My R
 
 The queries listed in your Query Library table have different icons to help you identify the different states of the queries:
 
--   [image: unshared-query-icon.png]Created by me and unshared.
+-   Created by me and unshared.
     
--   [image: query-created-by-me-shared-icon.png]Created by me and shared.
+-   Created by me and shared.
     
--   [image: query-created-by-someone-else-shared.png]Created by someone else and shared.
+-   Created by someone else and shared.
     
--   [image: PANW_Query.png]Created by Palo Alto Networks.
+-   Created by Palo Alto Networks.
     
 
 ### Adding queries to the Query Library
@@ -52695,7 +50674,6 @@ As needed, you can return to your queries in the Query Library to manage your qu
 -   Remove the query. You can only remove queries that you created. If another user created the query or for Palo Alto Networks, this pivot (right-click) option is disabled in the query menu.
 
 ## Edit and run queries in Query Center
-Abstract
 
 Learn more about viewing the results of a query, modifying a query, and rerunning queries from Query Center.
 
@@ -52812,7 +50790,6 @@ How to cancel a query
 -   If you cancel a scheduled query, only the current query is cancelled. Future recurrences of the scheduled query are not affected.
 
 ### Query Center reference information
-Abstract
 
 Descriptions of the fields in the Query Center table.
 
@@ -52835,10 +50812,8 @@ Query Center table
 | PUBLIC API | Whether the source executing the XQL query was an XQL query API. |
 | QUERY DESCRIPTION\* | Query parameters used to run the query. |
 | QUERY ID | Unique identifier of the query. |
-| QUERY NAME\* | For saved queries, the Query Name identifies the query specified according to a randomly generated number.-   XQL queries use the format XQL-QUERY-<number>, such as XQL-QUERY-12.; Graph Search queries use the format Graph-Query-<number>, such as Graph-Query-1247.
-; For scheduled queries, the Query Name identifies the auto-generated name of the parent XQL query. Scheduled queries also display an icon to the left of the name to indicate that the XQL query is recurring. [image: query-scheduled.png] |
-| QUERY STATUS\* | Status of the query, where the options differ based on the query type: XQL queries:-   Queued: The query is queued and will run when there is an available slot.; Running; Failed; Partially completed: The query was stopped after exceeding the maximum number of permitted results. The default results for any query is a maximum of 1,000,000 results, when no limit is explicitly stated in the query. Queries based on XQL query entities are limited to 10,000 results. To reduce the number of results returned, you can adjust the query settings and rerun.; Stopped: The query was stopped by an administrator.; Completed; Deleted: The query was pruned.
-; Graph Search queries:-   Failed; Completed |
+| QUERY NAME\* | For saved queries, the Query Name identifies the query specified according to a randomly generated number.- XQL queries use the format XQL-QUERY-<number>, such as XQL-QUERY-12.; Graph Search queries use the format Graph-Query-<number>, such as Graph-Query-1247. ; For scheduled queries, the Query Name identifies the auto-generated name of the parent XQL query. Scheduled queries also display an icon to the left of the name to indicate that the XQL query is recurring. |
+| QUERY STATUS\* | Status of the query, where the options differ based on the query type: XQL queries:- Queued: The query is queued and will run when there is an available slot.; Running; Failed; Partially completed: The query was stopped after exceeding the maximum number of permitted results. The default results for any query is a maximum of 1,000,000 results, when no limit is explicitly stated in the query. Queries based on XQL query entities are limited to 10,000 results. To reduce the number of results returned, you can adjust the query settings and rerun.; Stopped: The query was stopped by an administrator.; Completed; Deleted: The query was pruned. ; Graph Search queries:- Failed; Completed |
 | QUERY SYNTAX | The exact syntax used to write the query. |
 | RESULTS SAVED\* | For XQL queries, you can choose whether to save the query results, so the output of the field is either Yes or No. Yet, for Graph Search queries, the results can't be saved and must be run each time again, so the field is always No. |
 | SIMULATED COMPUTE UNITS | Number of XQL query units that were used to execute the Hot Storage query. |
@@ -52883,7 +50858,6 @@ Below are the findings categories that are supported, along with the name of the
 | Vulnerability | Vulnerability Finding |
 
 ## FAQ on Graph Search
-Abstract
 
 Answer some frequently asked questions relating to Graph Search.
 
@@ -52934,16 +50908,16 @@ When reviewing the graph results of any Graph Search query, you can use the Grou
 
 -   On the right side of the graph results, there are different icons that can help you drilldown into your graph results. These two icons provide built-in manipulations without having to make any changes to your Graph Search query:
     
-    -   [image: layers_icon.png]: Use the layers icon to easily add or remove additional information to the graph without having to define these parameters in your Graph Search query. You can decide when to include these built-in layers, as needed. The following are available:
+    -   : Use the layers icon to easily add or remove additional information to the graph without having to define these parameters in your Graph Search query. You can decide when to include these built-in layers, as needed. The following are available:
         
         -   Public Exposure to the Internet: Tracks the asset nodes with internet exposure that could be targeted for external surface attacks by displaying the exposure path. A Globe node called Internet is added to the graph, which links all exposed asset nodes to this Globe node. You can expand this connection by clicking the + icon to reveal the full internet path to include, for example, the NIC, Subnet, and Gateway. In the exposure path, you can select each node, or hover on it and select More Info, you'll see more information displayed in a dialog box. You can click View Details to drill down even further on the asset node to display more information on the node depending on the data collected for that asset node selected. Internet paths are collapsed by default.
             
         -   Related Cases: Displays the number of related Cases for each asset node with a breakdown by severity.
             
-        -   Runtime Events: Adds 100 most recent runtime events to the graph results, which are refreshed every hour. This enables you to investigate real-time activity and identify critical events, such as access to sensitive information typically contained in a storage bucket, which generate issues and cases. All the bucket nodes in the path include a runtime icon [image: runtime_icon.png] underneath and run an animation on all the bucket and virtual machine nodes. You can click the runtime icon to reveal more info, such as connection details and runtime events. Click Show Recent Events to display the Runtime Events table with more details on the last 100 events.
+        -   Runtime Events: Adds 100 most recent runtime events to the graph results, which are refreshed every hour. This enables you to investigate real-time activity and identify critical events, such as access to sensitive information typically contained in a storage bucket, which generate issues and cases. All the bucket nodes in the path include a runtime icon  underneath and run an animation on all the bucket and virtual machine nodes. You can click the runtime icon to reveal more info, such as connection details and runtime events. Click Show Recent Events to display the Runtime Events table with more details on the last 100 events.
             
         
-    -   [image: Group_nodes_icon.png]: Use the Group nodes icon to group by the Cloud Provider, Cloud Account, or Cloud Region. Selecting one of these grouping enables you to view the graph results in an aggregated format, providing a clearer and more organized perspective of the data. This feature also helps to Identify patterns and trends more easily in your data by grouping similar entities together. In the future, the Group nodes feature will be expanded to enable additional groupings.
+    -   : Use the Group nodes icon to group by the Cloud Provider, Cloud Account, or Cloud Region. Selecting one of these grouping enables you to view the graph results in an aggregated format, providing a clearer and more organized perspective of the data. This feature also helps to Identify patterns and trends more easily in your data by grouping similar entities together. In the future, the Group nodes feature will be expanded to enable additional groupings.
         
     
 -   Vulnerability finding nodes automatically display under the node a breakdown of severity.
@@ -52976,7 +50950,7 @@ The following table describes the fields that are available for each API specifi
 
 Click the API asset to open the side card. Each tab includes detailed information from the parsed data of the API.
 
-You can add Comments ([image: api_specification_comments.png]) to the specification, providing additional context about the API endpoints or other relevant information.
+You can add Comments () to the specification, providing additional context about the API endpoints or other relevant information.
 
 ## Overview
 

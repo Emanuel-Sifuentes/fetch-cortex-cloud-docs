@@ -42,8 +42,8 @@ These scripts fix conversion artifacts that the fetch script's post-processing d
 
 ```bash
 bash scripts/fix_abstract_lines.sh              # Strip standalone "Abstract" metadata lines from 43 files
-python scripts/fix_escaped_chars_in_fences.py   # Unescape \#  \[  \] inside fenced code blocks (file 216)
-python scripts/fix_escaped_underscores.py       # Unescape \_ globally + strip U+2028 line separators
+python scripts/fix_escaped_chars_in_fences.py   # Unescape #  [  ] inside fenced code blocks (file 216)
+python scripts/fix_escaped_underscores.py       # Unescape _ globally + strip U+2028 line separators
 ```
 
 The broken table fixes (urgency metrics, SCA matrix, scanner attributes, IaC grid) were applied manually to the individual source files — see findings.md for details.

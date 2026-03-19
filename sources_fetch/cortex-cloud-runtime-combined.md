@@ -12,9 +12,6 @@ Cortex Cloud is an easily extensible platform to consolidate Application Securit
 -   **Cloud Runtime**: Stop an attacker from exploiting risks present in your cloud environment.
     
 -   **SOC**: Detect and respond.
-    
-
-[image: image7.png]
 
 ### Key features
 -   **Visibility**–Get complete visibility across your entire cloud estate:
@@ -96,7 +93,6 @@ Cortex Cloud is an easily extensible platform to consolidate Application Securit
     -   Build your own Remediation Playbooks: Cortex Cloud offers a no code automation wizard to build your own security playbooks.
 
 ## What is Cortex Cloud Runtime Security?
-Abstract
 
 Learn about Cortex Cloud and the key integrated capabilities.
 
@@ -105,12 +101,8 @@ Cortex Cloud Runtime Security includes:
 -   CDR, CWP and WAAS together with the complete Cloud Native Application Protection Platform (CNAPP) collusion, CSPM, CIEM, DSPM, AI-SPM, Agentless Scanning, ASPM and CI/CD Security.
     
 -   Cloud Standard Success.
-    
-
-[image: runtime-security.png]
 
 ## Agentic AI in Cortex Cloud
-Abstract
 
 Use the Cortex Agentic Assistant to investigate cases, perform threat hunting, and create scripts. Embed and run LLM prompts in playbooks. View AI case summaries.
 
@@ -154,7 +146,6 @@ Cortex Cloud integrates advanced artificial intelligence to streamline security 
 -   United States (US)
 
 ### Cortex Agentic Assistant
-Abstract
 
 Learn about the Cortex Agentic Assistant and key integrated capabilities.
 
@@ -212,7 +203,6 @@ The system Help Center Agent provides fast access to documentation. You can ask 
 To view how your organization utilizes the Cortex Agentic Assistant, including information on agent plans, user prompts, as well as open cases, see the Cortex Agentic Assistant dashboard.
 
 #### Agentic Assistant use cases
-Abstract
 
 Recommended prompts to automate your SOC using the Cortex Agentic Assistant
 
@@ -251,7 +241,6 @@ Additional examples of possible relevant prompts are:
 For more information on investigations, see Use Cortex Agentic Assistant chat in an investigation.Use Cortex Agentic Assistant chat in an investigation
 
 #### Agentic Assistant security
-Abstract
 
 Learn about how the Agentic Assistant is built using Agentic AI security principles.
 
@@ -332,19 +321,13 @@ After you onboard your cloud or code providers, the data collected by Cortex Clo
 -   Finally, the several hundred posture risk issues that Cortex Cloud detected are now grouped into few Posture Cases that you can remediate are displayed on the right of the Command Center UI.
     
 
-The Command Center also provides you details on the total number of assets in your environment, number of issues closed as well as the amount of time saved. [image: image12.png] 
+The Command Center also provides you details on the total number of assets in your environment, number of issues closed as well as the amount of time saved.  
 
 Cortex Cloud includes a unified **Asset Inventory**, which provides a complete list of your different assets in a single place. Here you can see your AI models and deployments, Applications, APIs, and all your Compute instances, Data assets, and Identities.
 
-[image: image9.png]
-
 Select **View Dashboard** to get an in-depth view of all your assets.
 
-[image: image13.png]
-
 Now that you have an overview of your environment and all the assets, you can navigate to **Cases** to view and resolve your issues as well as create a New Case.
-
-[image: image5.png]
 
 Now that you have familiarized yourself with Cortex Cloud, consider taking the following actions to begin securing your cloud resources:
 
@@ -355,7 +338,6 @@ Now that you have familiarized yourself with Cortex Cloud, consider taking the f
 -   View dashboards and assets
 
 ## In-product support case creation
-Abstract
 
 Open a support case directly in Cortex Cloud and record your console to capture your issues and have the case handled efficiently.
 
@@ -517,7 +499,6 @@ The following table outlines how the system counts workloads based on your purch
 | Both Cloud Posture and Cloud Runtime | Runtime quota full | Posture: Total usage (including excess). Runtime: Total usage (over-quota) | Spillover only occurs from Posture to Runtime; it does not occur in the reverse. Excess Posture workloads are added back to the Posture counter, and any over-quota usage is shown there. |
 
 ### Data retention
-Abstract
 
 Learn more about the default retention periods for all Cortex Cloud licenses and the available retention add-ons.
 
@@ -552,7 +533,6 @@ To ensure the reliability, efficiency, and availability of Cortex Cloud for all 
 You are therefore required to utilize a reasonable volume of data ingestion, number of connected data sources, and API usage, based on your number of cloud assets protected by Cortex Cloud (“Fair Usage Policy”). If, in our sole and reasonable discretion, we determine that your usage of Cortex Cloud violates this Fair Usage Policy, we reserve the right to take appropriate action regarding such use, including without limitation, limiting the frequency and/or volume of data ingestions, limiting the number of connected data sources, and/or limiting the API usage, to bring your usage of Cortex Cloud in alignment with this Fair Usage policy.
 
 ###### Agent Audit log notification format
-Abstract
 
 An email account or a syslog receiver are the notification channels through which the Agent Audit log is communicated.
 
@@ -571,14 +551,11 @@ Cortex Cloud forwards the Agent Audit log to these external data resources:
 
 Example 7. 
 
-```
 <182>1 2020-10-04T10:41:14.608731Z cortexxdr - - - - CEF:0|Palo Alto Networks|Cortex XDR Agent|Cortex XDR Agent 7.2.0.63060|Agent Audit Logs|Agent Service|9|dvchost=WORKGROUP shost=Test-Agent cat=Monitoring end=1601808073102 rt=1601808074596 cs1Label=agentversion cs1=7.2.0.63060 cs2Label=subtype cs2=Stop cs3Label=result cs3=N\\/A cs4Label=reason cs4=None msg=XDR service cyserver was stopped on Test-Agent tenantname=Test tenantCDLid=123456 CSPaccountname=1234
-```
 
 # Endpoint security
 
 ## Endpoint protection
-Abstract
 
 This topic provides an overview of traditional endpoint protection versus the protection of endpoints using Cortex Cloud.
 
@@ -590,10 +567,7 @@ Cortex Cloud takes a more efficient and effective approach to prevent attacks th
 
 Cortex Cloud provides a multi-method protection solution with exploit protection modules that target software vulnerabilities in processes that open non-executable files and malware protection modules that examine executable files, DLLs, and macros for malicious signatures and behavior. Using this multi-method approach, along with AI analysis Cortex Cloud can prevent all types of attacks, whether these are known or unknown threats.
 
-[image: cortex-xdr-multi-method-prevention.png]
-
 ### Malware protection
-Abstract
 
 Cortex Cloud prevents malware attacks and provides protection on endpoints based on the different operating systems.
 
@@ -670,7 +644,6 @@ Linux
 | Reverse shell protection | Enables Cortex Cloud to prevent attempts to redirect standard input and output streams to network sockets. |
 
 ### Exploit protection
-Abstract
 
 Cortex Cloud prevents exploit attempts and provides protection on endpoints based on the different operating systems.
 
@@ -688,7 +661,6 @@ The following table lists the types of exploits for which Cortex Cloud provides 
 | Kernel protection | Protects the kernel against kernel threats and exploits. |
 
 ### File analysis and protection flow
-Abstract
 
 The Cortex XDR agent utilizes advanced multi-method protection and prevention techniques to protect from both known and unknown malware and software exploits.
 
@@ -697,8 +669,6 @@ The Cortex XDR agent utilizes advanced multi-method protection and prevention te
 #### Exploit protection for protected processes
 
 In a typical attack scenario, an attacker attempts to gain control of a system by first corrupting or bypassing memory allocation or handlers. Using memory-corruption techniques, such as buffer overflows and heap corruption, a hacker can trigger a bug in the software or exploit a vulnerability in a process. The attacker must then manipulate a program to run code provided or specified by the attacker while evading detection. If the attacker gains access to the operating system, the attacker can then upload malware, such as Trojan horses (programs that contain malicious executable files), or can otherwise use the system to their advantage. The Cortex XDR agent prevents such exploit attempts by employing roadblocks—or traps—at each stage of an exploitation attempt.
-
-[image: end-c1.png]
 
 When a user opens a non-executable file, such as a PDF or Word document, and the process that opened the file is protected, the Cortex XDR agent seamlessly injects code into the software. This occurs at the earliest possible stage before any files belonging to the process are loaded into memory. The Cortex XDR agent then activates one or more protection modules inside the protected process. Each protection module targets a specific exploitation technique and is designed to prevent attacks on program vulnerabilities based on memory corruption or logic flaws.
 
@@ -709,8 +679,6 @@ The default endpoint security policy protects the most vulnerable and most commo
 #### Malware Protection
 
 The Cortex XDR agent provides malware protection in a series of four evaluation phases:
-
-[image: end-c2.png]
 
 ##### Phase 1: Evaluation of child process protection policy
 
@@ -780,7 +748,6 @@ If the prior evaluation phases do not identify a file as malware, the Cortex XDR
 If no malicious behavior is detected, the Cortex XDR agent permits the file (process) to continue running but continues to monitor the behavior for the lifetime of the process.
 
 ### Endpoint protection capabilities
-Abstract
 
 The endpoint protection capabilities vary depending on the platform (operating system) that is used on each of your endpoints.
 
@@ -789,43 +756,42 @@ Each security profile provides a tailored list of protection capabilities that y
 | Protection capability | Windows | Mac | Linux |
 | --- | --- | --- | --- |
 | Exploit security profiles |
-| **Browser exploits protection** Browsers can be subject to exploitation attempts from malicious web pages and exploit kits that are embedded in compromised websites. By enabling this capability, the Cortex XDR agent automatically protects browsers from common exploitation attempts. | [image: check-mark.png] | [image: check-mark.png] | — |
-| **Logical exploits protection** Attackers can use existing mechanisms in the operating system—such as DLL-loading processes or built in system processes—to execute malicious code. By enabling this capability, the Cortex XDR agent automatically protects endpoints from attacks that try to leverage common operating system mechanisms for malicious purposes. | [image: check-mark.png] | [image: check-mark.png] | — |
-| **Known vulnerable processes protection** Common applications in the operating system, such as PDF readers, Office applications, and even processes that are a part of the operating system itself can contain bugs and vulnerabilities that an attacker can exploit. By enabling this capability, the Cortex XDR agent protects these processes from attacks which try to exploit known process vulnerabilities. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Exploit protection for additional processes** To extend protection to third-party processes that are not protected by the default policy from exploitation attempts, you can add additional processes to this capability. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Operating system exploit protection** Attackers commonly leverage the operating system itself to accomplish a malicious action. By enabling this capability, the Cortex XDR agent protects operating system mechanisms such as privilege escalation and prevents them from being used for malicious purposes. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Unpatched vulnerabilities protection** If you have Windows endpoints in your network that are unpatched and exposed to a known vulnerability, Palo Alto Networks strongly recommends that you upgrade to the latest Windows Update that has a fix for that vulnerability. If you choose not to patch the endpoint, the Unpatched Vulnerabilities Protection capability allows the Cortex XDR agent to apply a workaround to protect the endpoints from the known vulnerability. | [image: check-mark.png] | — | — |
+| **Browser exploits protection** Browsers can be subject to exploitation attempts from malicious web pages and exploit kits that are embedded in compromised websites. By enabling this capability, the Cortex XDR agent automatically protects browsers from common exploitation attempts. | ✓ | ✓ | — |
+| **Logical exploits protection** Attackers can use existing mechanisms in the operating system—such as DLL-loading processes or built in system processes—to execute malicious code. By enabling this capability, the Cortex XDR agent automatically protects endpoints from attacks that try to leverage common operating system mechanisms for malicious purposes. | ✓ | ✓ | — |
+| **Known vulnerable processes protection** Common applications in the operating system, such as PDF readers, Office applications, and even processes that are a part of the operating system itself can contain bugs and vulnerabilities that an attacker can exploit. By enabling this capability, the Cortex XDR agent protects these processes from attacks which try to exploit known process vulnerabilities. | ✓ | ✓ | ✓ |
+| **Exploit protection for additional processes** To extend protection to third-party processes that are not protected by the default policy from exploitation attempts, you can add additional processes to this capability. | ✓ | ✓ | ✓ |
+| **Operating system exploit protection** Attackers commonly leverage the operating system itself to accomplish a malicious action. By enabling this capability, the Cortex XDR agent protects operating system mechanisms such as privilege escalation and prevents them from being used for malicious purposes. | ✓ | ✓ | ✓ |
+| **Unpatched vulnerabilities protection** If you have Windows endpoints in your network that are unpatched and exposed to a known vulnerability, Palo Alto Networks strongly recommends that you upgrade to the latest Windows Update that has a fix for that vulnerability. If you choose not to patch the endpoint, the Unpatched Vulnerabilities Protection capability allows the Cortex XDR agent to apply a workaround to protect the endpoints from the known vulnerability. | ✓ | — | — |
 | Malware security profiles |
-| **Behavioral threat protection** Prevents sophisticated attacks that leverage built-in OS executables and common administration utilities by continuously monitoring endpoint activity for malicious causality chains. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Credential gathering protection** Targets attempts to access and harvest passwords and credentials. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Anti webshell protection** Prevents web shell attacks by continuously monitoring endpoints for processes that try to drop malicious files. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Financial malware threat protection** Targets attempts to access or steal financial or banking information. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Cryptominers protection** Prevents cryptomining by monitoring for processes which attempt to locate or steal cryptocurrencies. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **In-process shellcode protection** Targets attempts to run in-process shellcodes that load malicious code. | [image: check-mark.png] | — | — |
-| **Ransomware protection** Targets encryption based activity associated with ransomware to analyze and halt ransomware before any data loss occurs. | [image: check-mark.png] | [image: check-mark.png] | — |
-| **Prevent malicious child process execution** Prevents script-based attacks used to deliver malware by blocking known targeted processes from launching child processes commonly used to bypass traditional security approaches. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Portable executables and DLLs examination** Analyzes and prevents malicious executable and DLL files from running. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **ELF files examination** Analyzes and prevents malicious ELF files from being executed or written to disk. | — | — | [image: check-mark.png] |
-| **Local file threat examination** Analyzes and quarantines malicious PHP files arriving from the web server. | — | — | [image: check-mark.png] |
-| **Office files examination** Analyzes and prevents malicious macros embedded in Microsoft Office files from running. | [image: check-mark.png] | — | — |
-| **JScript files examination** Analyzes and prevent malicious JScript files from being executed or written to disk. | [image: check-mark.png] | — | — |
-| **Mach-O files examination** Analyzes and prevents malicious mach-o files from loading and running. | — | [image: check-mark.png] | [image: check-mark.png] |
-| **DMG files examination** Analyzes and prevents malicious DMG files from running. | — | [image: check-mark.png] | — |
-| **Reverse shell protection** Detects suspicious or abnormal network activity from shell processes and terminate the malicious shell process. | — | — | [image: check-mark.png] |
-| **Network packet inspection engine** Analyzes network packet data to detect malicious behavior. | [image: check-mark.png] | — | — |
-| **Dynamic kernel protection** Protect the endpoint from kernel-level threats such as bootkits, rootkits, and susceptible drivers. | [image: check-mark.png] | — | — |
-| **Container-escaping attempts** | — | — | [image: check-mark.png] |
-| **Cryptocurrency wallets protection** Protection for cryptocurrency wallets stored on endpoints. | [image: check-mark.png] | [image: check-mark.png] | — |
-| **LDAP query protection** Analyze and act upon suspicious LDAP queries sent by the agent to a Domain Controller, to detect and block Active Directory reconnaissance attacks. | [image: check-mark.png] | — | — |
-| **Malicious device protection** Protect your systems from unauthorized hardware attacks and malicious USB devices. The Malicious Device Prevention module identifies and blocks Human Interface Device (HID) tools, such as the "USB Rubber Ducky", that exploit device trust to inject unauthorized keystrokes and similar actions. This feature reduces the physical attack surface, and prevents hardware-based social engineering threats from compromising data. | — | [image: check-mark.png] | — |
+| **Behavioral threat protection** Prevents sophisticated attacks that leverage built-in OS executables and common administration utilities by continuously monitoring endpoint activity for malicious causality chains. | ✓ | ✓ | ✓ |
+| **Credential gathering protection** Targets attempts to access and harvest passwords and credentials. | ✓ | ✓ | ✓ |
+| **Anti webshell protection** Prevents web shell attacks by continuously monitoring endpoints for processes that try to drop malicious files. | ✓ | ✓ | ✓ |
+| **Financial malware threat protection** Targets attempts to access or steal financial or banking information. | ✓ | ✓ | ✓ |
+| **Cryptominers protection** Prevents cryptomining by monitoring for processes which attempt to locate or steal cryptocurrencies. | ✓ | ✓ | ✓ |
+| **In-process shellcode protection** Targets attempts to run in-process shellcodes that load malicious code. | ✓ | — | — |
+| **Ransomware protection** Targets encryption based activity associated with ransomware to analyze and halt ransomware before any data loss occurs. | ✓ | ✓ | — |
+| **Prevent malicious child process execution** Prevents script-based attacks used to deliver malware by blocking known targeted processes from launching child processes commonly used to bypass traditional security approaches. | ✓ | ✓ | ✓ |
+| **Portable executables and DLLs examination** Analyzes and prevents malicious executable and DLL files from running. | ✓ | ✓ | ✓ |
+| **ELF files examination** Analyzes and prevents malicious ELF files from being executed or written to disk. | — | — | ✓ |
+| **Local file threat examination** Analyzes and quarantines malicious PHP files arriving from the web server. | — | — | ✓ |
+| **Office files examination** Analyzes and prevents malicious macros embedded in Microsoft Office files from running. | ✓ | — | — |
+| **JScript files examination** Analyzes and prevent malicious JScript files from being executed or written to disk. | ✓ | — | — |
+| **Mach-O files examination** Analyzes and prevents malicious mach-o files from loading and running. | — | ✓ | ✓ |
+| **DMG files examination** Analyzes and prevents malicious DMG files from running. | — | ✓ | — |
+| **Reverse shell protection** Detects suspicious or abnormal network activity from shell processes and terminate the malicious shell process. | — | — | ✓ |
+| **Network packet inspection engine** Analyzes network packet data to detect malicious behavior. | ✓ | — | — |
+| **Dynamic kernel protection** Protect the endpoint from kernel-level threats such as bootkits, rootkits, and susceptible drivers. | ✓ | — | — |
+| **Container-escaping attempts** | — | — | ✓ |
+| **Cryptocurrency wallets protection** Protection for cryptocurrency wallets stored on endpoints. | ✓ | ✓ | — |
+| **LDAP query protection** Analyze and act upon suspicious LDAP queries sent by the agent to a Domain Controller, to detect and block Active Directory reconnaissance attacks. | ✓ | — | — |
+| **Malicious device protection** Protect your systems from unauthorized hardware attacks and malicious USB devices. The Malicious Device Prevention module identifies and blocks Human Interface Device (HID) tools, such as the "USB Rubber Ducky", that exploit device trust to inject unauthorized keystrokes and similar actions. This feature reduces the physical attack surface, and prevents hardware-based social engineering threats from compromising data. | — | ✓ | — |
 | Restrictions security profiles |
-| **Execution paths** Many attack scenarios are based on writing malicious executable files to certain folders such as the local temp or download folder and then running them. Use this capability to restrict the locations from which executable files can run. | [image: check-mark.png] | — | — |
-| **Network locations** To prevent attack scenarios that are based on writing malicious files to remote folders, you can restrict access to all network locations except for those that you explicitly trust. | [image: check-mark.png] | — | — |
-| **Removable media** To prevent malicious code from gaining access to endpoints using external media such as a removable drive, you can restrict the executable files, that users can launch from external drives attached to the endpoints in your network. | [image: check-mark.png] | — | — |
-| **Optical drive** To prevent malicious code from gaining access to endpoints using optical disc drives (CD, DVD, and Blu-ray), you can restrict the executable files, that users can launch from optical disc drives connected to the endpoints in your network. | [image: check-mark.png] | — | — |
+| **Execution paths** Many attack scenarios are based on writing malicious executable files to certain folders such as the local temp or download folder and then running them. Use this capability to restrict the locations from which executable files can run. | ✓ | — | — |
+| **Network locations** To prevent attack scenarios that are based on writing malicious files to remote folders, you can restrict access to all network locations except for those that you explicitly trust. | ✓ | — | — |
+| **Removable media** To prevent malicious code from gaining access to endpoints using external media such as a removable drive, you can restrict the executable files, that users can launch from external drives attached to the endpoints in your network. | ✓ | — | — |
+| **Optical drive** To prevent malicious code from gaining access to endpoints using optical disc drives (CD, DVD, and Blu-ray), you can restrict the executable files, that users can launch from optical disc drives connected to the endpoints in your network. | ✓ | — | — |
 
 ### Endpoint protection modules
-Abstract
 
 Security modules are activated for your endpoints depending on the chosen security profile and the operating system on the endpoint.
 
@@ -837,51 +803,50 @@ The following table lists the modules and the platforms on which they are suppor
 
 | Module | Windows | Mac | Linux |
 | --- | --- | --- | --- |
-| **Anti-Ransomware** Targets encryption-based activity associated with ransomware and have the ability to analyze and halt ransomware activity before any data loss occurs. | [image: check-mark.png] | [image: check-mark.png] | — |
-| **APC protection** Prevents attacks that change the execution order of a process by redirecting an asynchronous procedure call (APC) to point to the malicious shellcode. | [image: check-mark.png] | — | — |
-| **Behavioral threat** Prevents sophisticated attacks that leverage built-in OS executables and common administration utilities by continuously monitoring endpoint activity for malicious causality chains. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Brute force protection** Prevents attackers from hijacking the process control flow by monitoring memory layout enumeration attempts. | — | — | [image: check-mark.png] |
-| **Child process protection** Prevents script-based attacks that are used to deliver malware, such as ransomware, by blocking known targeted processes from launching child processes that are commonly used to bypass traditional security approaches. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Container escaping protection** Prevents container-escaping attempts | — | — | [image: check-mark.png] |
-| **CPL protection** Protects against vulnerabilities related to the display routine for Windows Control Panel Library (CPL) shortcut images, which can be used as a malware infection vector. | [image: check-mark.png] | — | — |
-| **Data Execution Prevention (DEP)** Prevents areas of memory defined to contain only data from running executable code. | [image: check-mark.png] | — | — |
-| **DLL hijacking** Prevents DLL-hijacking attacks where the attacker attempts to load dynamic-link libraries on Windows operating systems from unsecured locations to gain control of a process. | [image: check-mark.png] | — | — |
-| **DLL security** Prevents access to crucial DLL metadata from untrusted code locations. | [image: check-mark.png] | — | — |
-| **Dylib hijacking** Prevents Dylib-hijacking attacks where the attacker attempts to load dynamic libraries on Mac operating systems from unsecured locations to gain control of a process. | — | [image: check-mark.png] | — |
-| **Exploit kit fingerprint** Protects against the fingerprinting technique used by browser exploit kits to identify information: such as the OS or applications which run on an endpoint—that attackers can leverage when launching an attack to evade protection capabilities. | [image: check-mark.png] | — | — |
-| **Font protection** Prevents improper font handling, a common target of exploits. | [image: check-mark.png] | — | — |
-| **Gatekeeper enhancement** Enhances the macOS gatekeeper functionality that allows apps to run based on their digital signature. This module provides an additional layer of protection by extending gatekeeper functionality to bundles and child processes so you can enforce the signature level of your choice. | — | [image: check-mark.png] | — |
-| **Hash exception** Halts execution of files that an administrator identified as malware regardless of the WildFire verdict. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Hot patch protection** Prevents the use of system functions to bypass DEP and address space layout randomization (ASLR). | [image: check-mark.png] | — | — |
-| **Java deserialization** Blocks attempts to execute malicious code during the Java objects deserialization process on Java-based servers. | [image: check-mark.png] | — | [image: check-mark.png] |
-| **JIT** Prevents an attacker from bypassing the operating system's memory mitigations using just-in-time (JIT) compilation engines. | [image: check-mark.png] | [image: check-mark.png] | — |
-| **Kernel Integrity Monitor (KIM)** Prevents rootkit and vulnerability exploitation on Linux endpoints. On the first detection of suspicious rootkit behavior, the behavioral threat protection (BTP) module generates a Cortex XDR Agent alert. Cortex Cloud stitches logs about the process that loaded the kernel module with other logs relating to the kernel module to aid in the alert investigation. When the Cortex XDR agent detects subsequent rootkit behavior, it blocks the activity. | — | — | [image: check-mark.png] |
-| **LDAP query protection** Analyzes and acts upon suspicious LDAP queries received by the Domain Controller, to detect and block Active Directory reconnaissance attacks. | [image: check-mark.png] | — | — |
-| **Local analysis** Examines hundreds of characteristics of an unknown executable file, DLL, or macro to determine if it is likely to be malware. The local analysis module uses a static set of pattern-matching rules that inspect multiple file features and attributes, and a statistical model that was developed using machine learning on WildFire threat intelligence. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Local Threat Evaluation Engine (LTEE)** Protects against malicious PHP files arriving from the web server. | — | — | [image: check-mark.png] |
-| **Local privilege escalation protection** Prevents attackers from performing malicious activities that require privileges that are higher than those assigned to the attacked or malicious process. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **Malicious device protection** Protects your systems from unauthorized hardware attacks and malicious Human Interface Devices (HIDs) such as malicious USB devices. | — | [image: check-mark.png] | — |
-| **Master Boot Record (MBR) Model** Protects against malicious Master Boot Record (MBR) manipulations. | [image: check-mark.png] | — | — |
-| **Network packet inspection engine** Analyze network packet data to detect malicious behavior already at the network level. The engine leverages both Palo Alto Networks NGFW content rules, and new Cortex XDR content rules created by the Research Team which are updated through the security content. | [image: check-mark.png] | — | — |
-| **Null dereference** Prevents malicious code from mapping to address zero in the memory space, making null dereference vulnerabilities unexploitable. | [image: check-mark.png] | — | — |
-| **Restricted execution - local path** Prevents unauthorized execution from a local path. | [image: check-mark.png] | — | — |
-| **Restricted execution - network location** Prevents unauthorized execution from a network path. | [image: check-mark.png] | — | — |
-| **Restricted execution - removable media** Prevents unauthorized execution from removable media. | [image: check-mark.png] | — | — |
-| **Reverse shell protection** Blocks malicious activity where an attacker redirects standard input and output streams to network sockets. | — | — | [image: check-mark.png] |
-| **ROP** Protects against the use of return-oriented programming (ROP) by protecting APIs used in ROP chains. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **SEH** Prevents hijacking of the structured exception handler (SEH), a commonly exploited control structure that can contain multiple SEH blocks that form a linked list chain, which contains a sequence of function records. | [image: check-mark.png] | — | — |
-| **Shellcode protection** Reserves and protects certain areas of memory commonly used to house payloads using heap spray techniques. | — | — | [image: check-mark.png] |
-| **ShellLink** Prevents shell-link logical vulnerabilities. | [image: check-mark.png] | — | — |
-| **SO hijacking protection** Prevents dynamic loading of libraries from unsecured locations to gain control of a process. | — | — | [image: check-mark.png] |
-| **SysExit** Prevents using system calls to bypass other protection capabilities. | [image: check-mark.png] | — | — |
-| **UASLR** Improves or altogether implements ASLR (address space layout randomization) with greater entropy, robustness, and strict enforcement. | [image: check-mark.png] | — | — |
-| **UEFI BTP** Reinforces the malware protection from pre-boot attacks. | [image: check-mark.png] | — | — |
-| **Vulnerable drivers protection** Detect attempts to load vulnerable drivers. | [image: check-mark.png] | — | — |
-| **WildFire** Leverages WildFire for threat intelligence to determine whether a file is malware. In the case of unknown files, Cortex XDR can forward samples to WildFire for in-depth analysis. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
-| **WildFire post-detection (malware and grayware)** Identifies a file that was previously allowed to run on an endpoint that is now determined to be malware. Post-detection events provide notifications for each endpoint on which the file is executed. | [image: check-mark.png] | [image: check-mark.png] | [image: check-mark.png] |
+| **Anti-Ransomware** Targets encryption-based activity associated with ransomware and have the ability to analyze and halt ransomware activity before any data loss occurs. | ✓ | ✓ | — |
+| **APC protection** Prevents attacks that change the execution order of a process by redirecting an asynchronous procedure call (APC) to point to the malicious shellcode. | ✓ | — | — |
+| **Behavioral threat** Prevents sophisticated attacks that leverage built-in OS executables and common administration utilities by continuously monitoring endpoint activity for malicious causality chains. | ✓ | ✓ | ✓ |
+| **Brute force protection** Prevents attackers from hijacking the process control flow by monitoring memory layout enumeration attempts. | — | — | ✓ |
+| **Child process protection** Prevents script-based attacks that are used to deliver malware, such as ransomware, by blocking known targeted processes from launching child processes that are commonly used to bypass traditional security approaches. | ✓ | ✓ | ✓ |
+| **Container escaping protection** Prevents container-escaping attempts | — | — | ✓ |
+| **CPL protection** Protects against vulnerabilities related to the display routine for Windows Control Panel Library (CPL) shortcut images, which can be used as a malware infection vector. | ✓ | — | — |
+| **Data Execution Prevention (DEP)** Prevents areas of memory defined to contain only data from running executable code. | ✓ | — | — |
+| **DLL hijacking** Prevents DLL-hijacking attacks where the attacker attempts to load dynamic-link libraries on Windows operating systems from unsecured locations to gain control of a process. | ✓ | — | — |
+| **DLL security** Prevents access to crucial DLL metadata from untrusted code locations. | ✓ | — | — |
+| **Dylib hijacking** Prevents Dylib-hijacking attacks where the attacker attempts to load dynamic libraries on Mac operating systems from unsecured locations to gain control of a process. | — | ✓ | — |
+| **Exploit kit fingerprint** Protects against the fingerprinting technique used by browser exploit kits to identify information: such as the OS or applications which run on an endpoint—that attackers can leverage when launching an attack to evade protection capabilities. | ✓ | — | — |
+| **Font protection** Prevents improper font handling, a common target of exploits. | ✓ | — | — |
+| **Gatekeeper enhancement** Enhances the macOS gatekeeper functionality that allows apps to run based on their digital signature. This module provides an additional layer of protection by extending gatekeeper functionality to bundles and child processes so you can enforce the signature level of your choice. | — | ✓ | — |
+| **Hash exception** Halts execution of files that an administrator identified as malware regardless of the WildFire verdict. | ✓ | ✓ | ✓ |
+| **Hot patch protection** Prevents the use of system functions to bypass DEP and address space layout randomization (ASLR). | ✓ | — | — |
+| **Java deserialization** Blocks attempts to execute malicious code during the Java objects deserialization process on Java-based servers. | ✓ | — | ✓ |
+| **JIT** Prevents an attacker from bypassing the operating system's memory mitigations using just-in-time (JIT) compilation engines. | ✓ | ✓ | — |
+| **Kernel Integrity Monitor (KIM)** Prevents rootkit and vulnerability exploitation on Linux endpoints. On the first detection of suspicious rootkit behavior, the behavioral threat protection (BTP) module generates a Cortex XDR Agent alert. Cortex Cloud stitches logs about the process that loaded the kernel module with other logs relating to the kernel module to aid in the alert investigation. When the Cortex XDR agent detects subsequent rootkit behavior, it blocks the activity. | — | — | ✓ |
+| **LDAP query protection** Analyzes and acts upon suspicious LDAP queries received by the Domain Controller, to detect and block Active Directory reconnaissance attacks. | ✓ | — | — |
+| **Local analysis** Examines hundreds of characteristics of an unknown executable file, DLL, or macro to determine if it is likely to be malware. The local analysis module uses a static set of pattern-matching rules that inspect multiple file features and attributes, and a statistical model that was developed using machine learning on WildFire threat intelligence. | ✓ | ✓ | ✓ |
+| **Local Threat Evaluation Engine (LTEE)** Protects against malicious PHP files arriving from the web server. | — | — | ✓ |
+| **Local privilege escalation protection** Prevents attackers from performing malicious activities that require privileges that are higher than those assigned to the attacked or malicious process. | ✓ | ✓ | ✓ |
+| **Malicious device protection** Protects your systems from unauthorized hardware attacks and malicious Human Interface Devices (HIDs) such as malicious USB devices. | — | ✓ | — |
+| **Master Boot Record (MBR) Model** Protects against malicious Master Boot Record (MBR) manipulations. | ✓ | — | — |
+| **Network packet inspection engine** Analyze network packet data to detect malicious behavior already at the network level. The engine leverages both Palo Alto Networks NGFW content rules, and new Cortex XDR content rules created by the Research Team which are updated through the security content. | ✓ | — | — |
+| **Null dereference** Prevents malicious code from mapping to address zero in the memory space, making null dereference vulnerabilities unexploitable. | ✓ | — | — |
+| **Restricted execution - local path** Prevents unauthorized execution from a local path. | ✓ | — | — |
+| **Restricted execution - network location** Prevents unauthorized execution from a network path. | ✓ | — | — |
+| **Restricted execution - removable media** Prevents unauthorized execution from removable media. | ✓ | — | — |
+| **Reverse shell protection** Blocks malicious activity where an attacker redirects standard input and output streams to network sockets. | — | — | ✓ |
+| **ROP** Protects against the use of return-oriented programming (ROP) by protecting APIs used in ROP chains. | ✓ | ✓ | ✓ |
+| **SEH** Prevents hijacking of the structured exception handler (SEH), a commonly exploited control structure that can contain multiple SEH blocks that form a linked list chain, which contains a sequence of function records. | ✓ | — | — |
+| **Shellcode protection** Reserves and protects certain areas of memory commonly used to house payloads using heap spray techniques. | — | — | ✓ |
+| **ShellLink** Prevents shell-link logical vulnerabilities. | ✓ | — | — |
+| **SO hijacking protection** Prevents dynamic loading of libraries from unsecured locations to gain control of a process. | — | — | ✓ |
+| **SysExit** Prevents using system calls to bypass other protection capabilities. | ✓ | — | — |
+| **UASLR** Improves or altogether implements ASLR (address space layout randomization) with greater entropy, robustness, and strict enforcement. | ✓ | — | — |
+| **UEFI BTP** Reinforces the malware protection from pre-boot attacks. | ✓ | — | — |
+| **Vulnerable drivers protection** Detect attempts to load vulnerable drivers. | ✓ | — | — |
+| **WildFire** Leverages WildFire for threat intelligence to determine whether a file is malware. In the case of unknown files, Cortex XDR can forward samples to WildFire for in-depth analysis. | ✓ | ✓ | ✓ |
+| **WildFire post-detection (malware and grayware)** Identifies a file that was previously allowed to run on an endpoint that is now determined to be malware. Post-detection events provide notifications for each endpoint on which the file is executed. | ✓ | ✓ | ✓ |
 
 ### Processes protected by exploit security policy
-Abstract
 
 Application processes that run on your endpoint are protected by the exploit security policy.
 
@@ -890,11 +855,11 @@ By default, your exploit security profile protects endpoints from attack techniq
 | Windows processes protected by exploit security policy |
 | --- |
 | **Browser exploits protection** |
-| \[updated version of Adobe Flash Player for Firefox installed on endpoint\]; browser\_broker.exe; chrome.exe; firefox.exe | flashutil\_activex.exe; iexplore.exe; microsoftedge.exe; microsoftedgecp.exe; opera\_plugin\_wrapper.exe | opera.exe; plugin-container.exe; safari.exe; webkit2webprocess.exe |
+| [updated version of Adobe Flash Player for Firefox installed on endpoint]; browser_broker.exe; chrome.exe; firefox.exe | flashutil_activex.exe; iexplore.exe; microsoftedge.exe; microsoftedgecp.exe; opera_plugin_wrapper.exe | opera.exe; plugin-container.exe; safari.exe; webkit2webprocess.exe |
 | **Logical exploits protection** |
 | cliconfg.exe; dism.exe; dllhost.exe | excel.exe; migwiz.exe; mmc.exe | powerpnt.exe; sysprep.exe; winword.exe |
 | **Known vulnerable processes protection** |
-| 7z.exe; 7zfm.exe; 7zg.exe; acrobat.exe; acrord32.exe; acrord32info.exe; allplayer.exe; applemobiledeviceservice.exe; apwebgrb.exe; armsvc.exe; blazehdtv.exe; bsplayer.exe; cmd.exe; eqnedt32.exe; excel.exe; flashfxp.exe; fltldr.exe; fontdrvhost.exe; foxit reader.exe; foxitreader.exe; groovemonitor.exe; hxmail.exe; i\_view32.exe; infopath.exe | ipodservice.exe; itunes.exe; ituneshelper.exe; journal.exe; jqs.exe; microsoft.photos.exe; msaccess.exe; mspub.exe; mstsc.exe; nginx.exe; notepad++.exe; nslookup.exe; outlook.exe; powerpnt.exe; pptview.exe; qttask.exe; quicktimeplayer.exe; rar.exe; reader\_sl.exe; realconverter.exe; realplay.exe; realsched.exe; skype.exe; skypeapp.exe; skypehost.exe | SLMail.exe; soffice.exe; telnet.exe; unrar.exe; vboxservice.exe; vboxsvc.exe; vboxtray.exe; video.ui.exe; visio.exe; vlc.exe; vmware-authd.exe; vmware-hostd.exe; vmware-vmx.exe; vpreview.exe; vprintproxy.exe; wab.exe; w3wp.exe; winrar.exe; winword.exe; wireshark.exe; wmplayer.exe; wmpnetwk.exe; xpsrchvw.exe |
+| 7z.exe; 7zfm.exe; 7zg.exe; acrobat.exe; acrord32.exe; acrord32info.exe; allplayer.exe; applemobiledeviceservice.exe; apwebgrb.exe; armsvc.exe; blazehdtv.exe; bsplayer.exe; cmd.exe; eqnedt32.exe; excel.exe; flashfxp.exe; fltldr.exe; fontdrvhost.exe; foxit reader.exe; foxitreader.exe; groovemonitor.exe; hxmail.exe; i_view32.exe; infopath.exe | ipodservice.exe; itunes.exe; ituneshelper.exe; journal.exe; jqs.exe; microsoft.photos.exe; msaccess.exe; mspub.exe; mstsc.exe; nginx.exe; notepad++.exe; nslookup.exe; outlook.exe; powerpnt.exe; pptview.exe; qttask.exe; quicktimeplayer.exe; rar.exe; reader_sl.exe; realconverter.exe; realplay.exe; realsched.exe; skype.exe; skypeapp.exe; skypehost.exe | SLMail.exe; soffice.exe; telnet.exe; unrar.exe; vboxservice.exe; vboxsvc.exe; vboxtray.exe; video.ui.exe; visio.exe; vlc.exe; vmware-authd.exe; vmware-hostd.exe; vmware-vmx.exe; vpreview.exe; vprintproxy.exe; wab.exe; w3wp.exe; winrar.exe; winword.exe; wireshark.exe; wmplayer.exe; wmpnetwk.exe; xpsrchvw.exe |
 | **Operating system exploit protection** |
 | ctfmon.exe; dllhost.exe; dns.exe; lsass.exe; msmpeng.exe | runtimebroker.exe; spoolsv.exe; svchost.exe; taskeng.exe | taskhost.exe; wmiprvse.exe; wmiprvse.exe; wwahost.exe |
 
@@ -910,10 +875,9 @@ By default, your exploit security profile protects endpoints from attack techniq
 | Linux processes protected by exploit security policy |
 | --- |
 | **Known vulnerable processes protection** |
-| anacron; apache2; authproxy; bluetoothd; charon; chronyd\*; couriertcpd; cron; crond; cupsd; cyrus\_pop3d; danted; dhcpd; dovecot; exim; ftpd; httpd; ibserver; identd; lighttpd; java; kamailio \*chronyd is injected in some scenarios, depending on the OS. | mailman; master; mongod; mysqld; mysqld\_safe; named; ndsd; nginx; nmbd; node; nscd; php; php5-fpm; pmmasterd; pop2d; pop3d; postgres; proftpd; qmgr; rpcbind; rsync | samba; saned; sendmail; sendmail.sendmail; smartd; smbd; snmpd; squid; squid3; starter; syslog-ng; tinyproxy; vsftpd; wickedd-dhcp4; wickedd-dhcp6; winbindd; xinetd |
+| anacron; apache2; authproxy; bluetoothd; charon; chronyd\*; couriertcpd; cron; crond; cupsd; cyrus_pop3d; danted; dhcpd; dovecot; exim; ftpd; httpd; ibserver; identd; lighttpd; java; kamailio \*chronyd is injected in some scenarios, depending on the OS. | mailman; master; mongod; mysqld; mysqld_safe; named; ndsd; nginx; nmbd; node; nscd; php; php5-fpm; pmmasterd; pop2d; pop3d; postgres; proftpd; qmgr; rpcbind; rsync | samba; saned; sendmail; sendmail.sendmail; smartd; smbd; snmpd; squid; squid3; starter; syslog-ng; tinyproxy; vsftpd; wickedd-dhcp4; wickedd-dhcp6; winbindd; xinetd |
 
 ### File Integrity Monitoring (FIM)
-Abstract
 
 Learn about File Integrity Monitoring (FIM) capabilities in Cortex Cloud.
 
@@ -1076,14 +1040,13 @@ After you define the required File Integrity Monitoring profiles, configure poli
 
 After you apply File Integrity Monitoring rules in your environment, use the Inventory → Endpoints → File Integrity Monitoring page to monitor events. The most recent events are displayed on the page. You can sort the results and use the filters menu to narrow down the results.
 
-Use XQL to view all FIM events by querying the ‘xdr\_dataset’ with the filter ‘fim\_event = TRUE’.
+Use XQL to view all FIM events by querying the ‘xdr_dataset’ with the filter ‘fim_event = TRUE’.
 
 **Note:**
 
 It is possible to ingest up to 15,000 events per day (24 hours) for each host/container.
 
 ### WildFire analysis concepts
-Abstract
 
 Learn about the analysis concepts used by Wildfire.
 
@@ -1180,7 +1143,6 @@ If Cortex Cloud does not have a verdict for the file, it queries WildFire and op
 For information on file-examination settings, see Set up malware prevention profiles.Set up malware prevention profiles
 
 ### Guidelines for keeping Cortex XDR agents and content updated
-Abstract
 
 Learn more about how to control Cortex XDR agent and content upgrades.
 
@@ -1240,8 +1202,6 @@ The following is an example of a rollout plan for deploying a Cortex XDR agent u
 
 **Phase 5: Full rollout:** Complete the rollout by updating the remaining 20% of the organization’s endpoints. By this point, the majority of systems should have been thoroughly tested, reducing the risk of issues in the final stage. Once complete, 100% of the organization will be updated.
 
-[image: agentupgradeflow.gif]
-
   
 
 #### Guidelines for planning content updates
@@ -1263,8 +1223,6 @@ The following is an example of a rollout plan over a period of one week for depl
 **Phase 3: 60% rollout:** Content is automatically deployed on day 3 following a delay period defined in the profile.
 
 **Phase 4: Full rollout:** Increase the deployment to include medium and high-risk systems, until the entire organization is updated.
-
-[image: contentupgradeflow.gif]
 
   
 
@@ -1364,8 +1322,6 @@ When a new content update is available, Cortex Cloud notifies the Cortex XDR age
 
 You can configure whether to update content per endpoint or use the global settings.
 
-[image: content_version_breakdown.png]
-
 Content update settings per endpoint
 
 Configure content update options for agents within the organization to ensure it is always protected with the latest security measures.
@@ -1404,7 +1360,6 @@ Global content update settings
     | Enable minor content version updates | To enforce immediate protection against the latest threats, enable minor content updates. Otherwise, the content updates in your network occur only on major releases. |
 
 ### About content updates
-Abstract
 
 To increase security coverage and quickly resolve any issues in policy, Palo Alto Networks can seamlessly deliver software packages called content updates.
 
@@ -1461,7 +1416,6 @@ Otherwise, if you want the Cortex XDR agent to retrieve the latest content from 
 -   Initiate a check-in using the `Cytool checkin` command.
 
 ### Endpoint data collection
-Abstract
 
 To aid in endpoint detection and issue investigation, the Cortex XDR agent collects endpoint information when an issue is generated.
 
@@ -1497,19 +1451,15 @@ When the Cortex XDR agent generates an issue on endpoint activity, the following
 | Network | Accept; Connect; Create; Listen; Close; Bind | Source IP address and port; Destination IP address and port; Failed connection; Protocol (TCP/UDP); Resolve hostnames on local network |
 | Network protocols | DNS request and UDP response; HTTP connect; HTTP disconnect; HTTP proxy parsing | Origin country; Remote IP address and port; Local IP address and port; Destination IP address and port if proxy connection; Network connection ID; IPv6 connection status (true/false); External hostname |
 | Network statistics | On-close statistics; Periodic statistics | Upload volume on TCP link; Download volume on TCP link Traps sends statistics both when a connection is closed, and at periodic intervals while the connection remains open. |
-| Registry | Registry value:-   Deletion; Set
-; Registry key:-   Creation; Deletion; Rename; Addition; Modification (set information); Restore; Save
-\*\*Important:\*\* Registry key is collected as a real key name, and not as a symbolic link. Example 19.  Instead of `HKEY_LOCAL_MACHINE\System\CurrentControlSet`, which is a symbolic link`, KEY_LOCAL_MACHINE\System\ControlSet001` will be collected.  
-Example 20.  Instead of `HKEY_CURRENT_USER`, `HKEY_USERS\<SID>` will be collected, where SID is a SID of the current user.  
- | Registry path of the modified value or key; Name of the modified value or key; Data of the modified value |
+| Registry | Registry value:- Deletion; Set ; Registry key:- Creation; Deletion; Rename; Addition; Modification (set information); Restore; Save \*\*Important:\*\* Registry key is collected as a real key name, and not as a symbolic link. Example 19. Instead of `HKEY_LOCAL_MACHINE\System\CurrentControlSet`, which is a symbolic link`, KEY_LOCAL_MACHINE\System\ControlSet001` will be collected. Example 20. Instead of `HKEY_CURRENT_USER`, `HKEY_USERS\<SID>` will be collected, where SID is a SID of the current user. | Registry path of the modified value or key; Name of the modified value or key; Data of the modified value |
 | Session | Log on; Log off; Connect; Disconnect | Interactive log-on (log-on at a computer console using credentials such as a username and password); Session ID; Session State (equivalent to the event type); Local (physically on the computer) or remote (connected using a terminal services session) |
 | Host status | Boot; Suspend; Resume | Host name; OS Version; Domain; Previous and current state |
 | Agent status | Agent start |  |
 | User presence | User Detection | Detection when a user is present or idle per active user session on the computer. |
-| RPC calls | RpcCall; RpcPreCall | action\_rpc\_interface\_uuid; action\_rpc\_interface\_version\_major; action\_rpc\_interface\_version\_minor; action\_rpc\_func\_opnum; action\_rpc\_func\_str\_call\_fields (optional); action\_rpc\_func\_int\_call\_fields (optional); action\_rpc\_interface\_name; action\_rpc\_func\_name |
-| System calls | Syscall types change frequently, and can be observed in each event's data. | action\_syscall\_string\_params; action\_syscall\_int\_params; action\_syscall\_target\_instance\_id; action\_syscall\_target\_image\_path; action\_syscall\_target\_image\_name; action\_syscall\_target\_os\_pid; action\_syscall\_target\_thread\_id; address\_mapping |
+| RPC calls | RpcCall; RpcPreCall | action_rpc_interface_uuid; action_rpc_interface_version_major; action_rpc_interface_version_minor; action_rpc_func_opnum; action_rpc_func_str_call_fields (optional); action_rpc_func_int_call_fields (optional); action_rpc_interface_name; action_rpc_func_name |
+| System calls | Syscall types change frequently, and can be observed in each event's data. | action_syscall_string_params; action_syscall_int_params; action_syscall_target_instance_id; action_syscall_target_image_path; action_syscall_target_image_name; action_syscall_target_os_pid; action_syscall_target_thread_id; address_mapping |
 | Event log | See the table below for the list of Windows Event Logs that can be sent to the server. |
-| .Net events | .NET DLL Loaded; .NET DLL Loaded From Buffer; Amsi Bypass Attempt; Suspicious .NET To Win32 Calls; .NET To Native Shellcode Execution Attempt; Malicious C# Compilation and Execution Attempt; Powershell Script Execution; Obfuscated Powershell Execution Attempt; Deserialization Exploit Attempt; Webshell Execution Attempt; Suspicious ASPX execution; Exchange Vulnerability Attempt; SharePoint JWT Vulnerability Attempt | DotNetCommon\_DotnetCallstack; DotNetCommon\_CLRVersion; DotNetCommon\_ContentVersion; DotNetCommon\_EdrAssemblyVersion; DotNetCommon\_AppDomainId; Other attributes may be added, depending on the event type and context. |
+| .Net events | .NET DLL Loaded; .NET DLL Loaded From Buffer; Amsi Bypass Attempt; Suspicious .NET To Win32 Calls; .NET To Native Shellcode Execution Attempt; Malicious C# Compilation and Execution Attempt; Powershell Script Execution; Obfuscated Powershell Execution Attempt; Deserialization Exploit Attempt; Webshell Execution Attempt; Suspicious ASPX execution; Exchange Vulnerability Attempt; SharePoint JWT Vulnerability Attempt | DotNetCommon_DotnetCallstack; DotNetCommon_CLRVersion; DotNetCommon_ContentVersion; DotNetCommon_EdrAssemblyVersion; DotNetCommon_AppDomainId; Other attributes may be added, depending on the event type and context. |
 
 #### Windows event logs collected for Windows endpoints
 
@@ -1561,15 +1511,13 @@ For more information on how to set up Windows event logs collection, see Microso
 | Category | Events | Attributes |
 | --- | --- | --- |
 | Files | Create; Open; Write; Delete | Full path of the file; Hash of the file \*\*Note:\*\* For specific files only and only if the file was written. |
-| Copy; Move (rename) | Full paths of both the original and the modified files |
-| Change owner (chown); Change mode (chmod) | Full path of the file; Newly set owner/attributes |
+| Copy; Move (rename) | Full paths of both the original and the modified files | | Change owner (chown); Change mode (chmod) | Full path of the file; Newly set owner/attributes |
 | Network | Listen; Accept; Connect; Connect failure; Disconnect | Source IP address and port for explicit binds; Destination IP address and port; Failed TCP connections; Protocol (TCP/UDP) |
 | Process | Start | PID of the child process; PID of the parent process; Full image path of the process; Command line of the process; Hash of the image (SHA256 & MD5) |
 | Stop | PID of the stopped process |
 | Event log | Authentication | Provider Name; Data fields; Message |
 
 ## Install and manage endpoints
-Abstract
 
 Learn how to set up profiles, policies and other settings for endpoint protection, how to install Cortex XDR agent on endpoints, and how to manage them after installation.
 
@@ -1580,14 +1528,12 @@ Several endpoint management tasks can be performed remotely by administrators, f
 To stay up to date with the latest policy and endpoint status, Cortex Cloud communicates regularly with your Cortex XDR agents. For example, when you upgrade your endpoints to the latest release, Cortex Cloud creates an installation package and distributes it to the agent on their next communication. Similarly, the agent can send back data from the endpoint to Cortex Cloud, such as data gathered on the endpoint or tech support files. In Cortex Cloud, there are two types of communication.
 
 ### Set up endpoint protection
-Abstract
 
 Set up endpoint protection profiles and policies, exceptions, endpoint hardening, and other endpoint settings.
 
 Set up endpoint protection profiles and policies, exceptions, endpoint hardening, and other endpoint settings.
 
 #### Set up endpoint profiles and exception rules
-Abstract
 
 Endpoint security profiles can be used immediately, or customized, to protect your endpoints from threats.
 
@@ -1600,7 +1546,6 @@ While security rules enable you to block or allow files to run on your endpoints
 Profiles associated with one or more targets that are beyond the scope of your defined user permissions are locked, and cannot be edited.
 
 ##### Set up malware prevention profiles
-Abstract
 
 Configure malware prevention profiles to control the actions taken by Cortex XDR agents when known malware, macros, and unknown files try to run.
 
@@ -2260,7 +2205,6 @@ Create a new policy rule from the Policy Rules page
 3.  Configure a new policy that includes your new profile.
 
 ##### Set up exploit prevention profiles
-Abstract
 
 Exploit prevention profiles control the action that the Cortex XDR agent takes when attempts to exploit software vulnerabilities or flaws occur.
 
@@ -2533,7 +2477,6 @@ Create a new policy rule from the Policy Rules page
 3.  Configure a new policy that includes your new profile.
 
 ##### Set up agent settings profiles
-Abstract
 
 Use agent settings profiles to customize Cortex XDR agent settings for different platforms and groups of users.
 
@@ -2569,7 +2512,7 @@ The tasks below are organized according to the operating systems used by your or
     | --- | --- | --- |
     | Tray Icon | Visible (default); Hidden | Choose whether you want the Cortex XDR agent icon to be Visible or Hidden in the notification area (system tray). |
     | XDR Agent Console Access | Enabled; Disabled | When enabled, allows access to Cortex Cloud. |
-    | XDR Agent User Notifications | Enabled; Disabled | Enable this option to operate display notifications in the notifications area on the endpoint. When you enable notifications, you can use the default notification messages that are displayed for each option, or provide custom text for each notification type. You can also customize a notification footer. Options include: Device Control Violation Notifications \*\*Note:\*\* Disabling Device Control Violation notifications is only supported on endpoints running Cortex XDR agent version 8.6 and above. ; Live Terminal User Notifications: You can select to Request end-user permission to start the session. If the end user denies the request, you will not be able to initiate a Live Terminal session on the endpoint.; Live Terminal Active Session Indication: Enable this option to display a blinking light ([image: live-terminal-indication.png]) on the tray icon for the duration of the remote session to indicate to the end user that a Live Terminal session is in progress.; Persistent Isolation Notification; Endpoint Network Isolation Notification; Endpoint Network Un-Isolation Notification; Blocked Connectivity Notification; Exploit/Malware Events Set to Block; Restriction Events Set to Block; Restriction Events Set to Notify User; Notification Footer Text; USB Device Was Blocked; USB Disk Drive Was Allowed in Read-Only Mode \*\*Note:\*\* You can enable the option to maintain a persistent notification regarding the disconnection of the endpoint from the network. The settings Persistent Isolation Notification and Blocked Connectivity Notification must be enabled. Until the threat on the endpoint has been removed, the endpoint remains disconnected from the network. |
+    | XDR Agent User Notifications | Enabled; Disabled | Enable this option to operate display notifications in the notifications area on the endpoint. When you enable notifications, you can use the default notification messages that are displayed for each option, or provide custom text for each notification type. You can also customize a notification footer. Options include: Device Control Violation Notifications \*\*Note:\*\* Disabling Device Control Violation notifications is only supported on endpoints running Cortex XDR agent version 8.6 and above. ; Live Terminal User Notifications: You can select to Request end-user permission to start the session. If the end user denies the request, you will not be able to initiate a Live Terminal session on the endpoint.; Live Terminal Active Session Indication: Enable this option to display a blinking light () on the tray icon for the duration of the remote session to indicate to the end user that a Live Terminal session is in progress.; Persistent Isolation Notification; Endpoint Network Isolation Notification; Endpoint Network Un-Isolation Notification; Blocked Connectivity Notification; Exploit/Malware Events Set to Block; Restriction Events Set to Block; Restriction Events Set to Notify User; Notification Footer Text; USB Device Was Blocked; USB Disk Drive Was Allowed in Read-Only Mode \*\*Note:\*\* You can enable the option to maintain a persistent notification regarding the disconnection of the endpoint from the network. The settings Persistent Isolation Notification and Blocked Connectivity Notification must be enabled. Until the threat on the endpoint has been removed, the endpoint remains disconnected from the network. |
     
 4.  Customize Agent Security settings. By default, the Cortex XDR agent protects all agent components. However, you can configure protection with more granularity for Cortex XDR agent services, processes, files, registry values and tampering protection.
     
@@ -2658,11 +2601,7 @@ The tasks below are organized according to the operating systems used by your or
     **Notice:**
     
     Requires Forensics Add-on. When enabled, the Cortex XDR agent collects detailed information about what happened on your endpoint, to create a forensics database. Define the following to enable collection and collection time intervals for the following entity types: Process Execution; File Access; Persistence; Command History; Network; Remote Access; Search Collections Data collected by the agent is displayed on the tenant's Forensics page. |
-    | Distributed Network Scan | Enabled; Disabled \*\*Note:\*\* To enable access to these options, scroll down to Network Location Configuration, and set Action Mode to Enabled. | 
-    
-    When enabled, the Cortex XDR agent scans your network using Ping or Nmap to provide updated identifiers of your unmanaged network assets. Ping scans return the IP address, MAC address, Hostname, and Platform, whereas Nmap will scan the most common ports for the IP address, Hostname, Platform, and OS version. Ping is a lighter scan, that generates icmp requests to peers and does not use external tools. Nmap will make more noise on the network, but the resulting can be better, and also supports operating system detection. Ping scans are performed in 30 minute intervals. Nmap scans are performed in 60 minute intervals. The scan is performed according to the subnets detected in each network interface found on the endpoint, and up to a maximum of ~1K IP addresses calculated according to agent\_ip/22. For example, an agent with the IP address 121.121.121.121 will be assigned the scan range: 121.121.120.1 - 121.121.123.254 (1024 addresses). Each agent is assigned scan ranges randomly from all the scannable subnets, so the same agent can scan multiple subnets. The following criteria affect the scan: There must be at least two endpoints detected in order to assign a scan.; Network Location Configuration must be enabled.; Subnet masking settings and service name configurations influence the scan.; Excluded IP address ranges are not scanned. In the Network Location Configuration section, set the Action Mode to Enabled.; In the Distributed Network Scan section, set the Action Mode to Enabled.; In Scan Mode, select Nmap or Ping. \*\*Note:\*\* When using Nmap, the Cortex XDR agent downloads an Nmap driver for the duration of the scan and removes the driver upon completion. If an Nmap scan is in process, Cortex Cloud identifies the Nmap driver and places any additional scans in a queue. The scan is performed according to the subnets detected in each network interface found on the endpoint.; If you want to exclude IP address ranges, select Excluded IP Address Ranges. The IP address ranges are populated from your network configurations.; If you selected Nmap, enable or disable OS Fingerprinting of the IP address. Depending on the type of scan you defined, the agent Ping scan takes 30 minutes, and Nmap takes 60 minutes. Following each scan, Cortex XDR aggregates the IP addresses that were collected, and displays the results in the Asset Management table.
-    
-     |
+    | Distributed Network Scan | Enabled; Disabled \*\*Note:\*\* To enable access to these options, scroll down to Network Location Configuration, and set Action Mode to Enabled. | When enabled, the Cortex XDR agent scans your network using Ping or Nmap to provide updated identifiers of your unmanaged network assets. Ping scans return the IP address, MAC address, Hostname, and Platform, whereas Nmap will scan the most common ports for the IP address, Hostname, Platform, and OS version. Ping is a lighter scan, that generates icmp requests to peers and does not use external tools. Nmap will make more noise on the network, but the resulting can be better, and also supports operating system detection. Ping scans are performed in 30 minute intervals. Nmap scans are performed in 60 minute intervals. The scan is performed according to the subnets detected in each network interface found on the endpoint, and up to a maximum of ~1K IP addresses calculated according to agent_ip/22. For example, an agent with the IP address 121.121.121.121 will be assigned the scan range: 121.121.120.1 - 121.121.123.254 (1024 addresses). Each agent is assigned scan ranges randomly from all the scannable subnets, so the same agent can scan multiple subnets. The following criteria affect the scan: There must be at least two endpoints detected in order to assign a scan.; Network Location Configuration must be enabled.; Subnet masking settings and service name configurations influence the scan.; Excluded IP address ranges are not scanned. In the Network Location Configuration section, set the Action Mode to Enabled.; In the Distributed Network Scan section, set the Action Mode to Enabled.; In Scan Mode, select Nmap or Ping. \*\*Note:\*\* When using Nmap, the Cortex XDR agent downloads an Nmap driver for the duration of the scan and removes the driver upon completion. If an Nmap scan is in process, Cortex Cloud identifies the Nmap driver and places any additional scans in a queue. The scan is performed according to the subnets detected in each network interface found on the endpoint.; If you want to exclude IP address ranges, select Excluded IP Address Ranges. The IP address ranges are populated from your network configurations.; If you selected Nmap, enable or disable OS Fingerprinting of the IP address. Depending on the type of scan you defined, the agent Ping scan takes 30 minutes, and Nmap takes 60 minutes. Following each scan, Cortex XDR aggregates the IP addresses that were collected, and displays the results in the Asset Management table. |
     
 9.  Configure XDR Cloud for hosts running on cloud platforms. By default (auto-detect mode), the agent detects whether an endpoint is a cloud-based (container) installation or a permanent installation, and uses license allocation accordingly.
     
@@ -2836,7 +2775,7 @@ Create a new policy rule from the Policy Rules page
     | :-- | :-- | :-- |
     | Tray Icon | Visible (default); Hidden | Choose whether you want the Cortex XDR agent icon to be Visible or Hidden in the notification area (system tray). |
     | XDR Agent Console Access | Enabled; Disabled | When enabled, allows access to Cortex Cloud. |
-    | XDR Agent User Notifications | Enabled; Disabled | Enable this option to operate display notifications in the notifications area on the endpoint. When you enable notifications, you can use the default notification messages that are displayed for each option, or provide custom text for each notification type. You can also customize a notification footer. Options include: Device Control Violation Notifications \*\*Note:\*\* Disabling Device Control Violation notifications is only supported on endpoints running Cortex XDR agent version 8.6 and above. ; Live Terminal User Notifications: You can select to Request end-user permission to start the session. If the end user denies the request, you will not be able to initiate a Live Terminal session on the endpoint. You can select to Request end-user permission to start the session. If the end user denies the request, you will not be able to initiate a Live Terminal session on the endpoint.; Live Terminal Active Session Indication: Enable this option to display a blinking light ([image: live-terminal-indication.png]) on the status bar for the duration of the remote session to indicate to the end user that a Live Terminal session is in progress.; Persistent Isolation Notification; Endpoint Network Isolation Notification; Endpoint Network Un-Isolation Notification; Blocked Connectivity Notification; Exploit/Malware Events Set to Block; Restriction Events Set to Block; Restriction Events Set to Notify User; Notification Footer Text; USB Device Was Blocked; USB Disk Drive Was Allowed in Read-Only Mode \*\*Note:\*\* You can enable the option to maintain a persistent notification regarding the disconnection of the endpoint from the network. The settings Persistent Isolation Notification and Blocked Connectivity Notification must be enabled. Until the threat on the endpoint has been removed, the endpoint remains disconnected from the network. |
+    | XDR Agent User Notifications | Enabled; Disabled | Enable this option to operate display notifications in the notifications area on the endpoint. When you enable notifications, you can use the default notification messages that are displayed for each option, or provide custom text for each notification type. You can also customize a notification footer. Options include: Device Control Violation Notifications \*\*Note:\*\* Disabling Device Control Violation notifications is only supported on endpoints running Cortex XDR agent version 8.6 and above. ; Live Terminal User Notifications: You can select to Request end-user permission to start the session. If the end user denies the request, you will not be able to initiate a Live Terminal session on the endpoint. You can select to Request end-user permission to start the session. If the end user denies the request, you will not be able to initiate a Live Terminal session on the endpoint.; Live Terminal Active Session Indication: Enable this option to display a blinking light () on the status bar for the duration of the remote session to indicate to the end user that a Live Terminal session is in progress.; Persistent Isolation Notification; Endpoint Network Isolation Notification; Endpoint Network Un-Isolation Notification; Blocked Connectivity Notification; Exploit/Malware Events Set to Block; Restriction Events Set to Block; Restriction Events Set to Notify User; Notification Footer Text; USB Device Was Blocked; USB Disk Drive Was Allowed in Read-Only Mode \*\*Note:\*\* You can enable the option to maintain a persistent notification regarding the disconnection of the endpoint from the network. The settings Persistent Isolation Notification and Blocked Connectivity Notification must be enabled. Until the threat on the endpoint has been removed, the endpoint remains disconnected from the network. |
     
 4.  For Agent Security, configure XDR Agent Tampering Protection (default is Enabled). By default, the Cortex XDR agent protects all agent components.
     
@@ -3215,7 +3154,6 @@ Create a new policy rule from the Policy Rules page
 3.  Configure a new policy that includes your new profile.
 
 ##### Set up restrictions prevention profiles
-Abstract
 
 Restrictions prevention profiles limit where executables can run on an endpoint.
 
@@ -3285,7 +3223,7 @@ To customize the configuration for specific Cortex XDR agents, configure a new r
     
     | Item | Option | More details |
     | :-- | :-- | :-- |
-    | Action Mode | Enabled; Disabled | When user-defined BIOC prevention rules are present in the system, you can enable them here. Ensure that the user-defined BIOC prevention rules that you want to enable only contain the following: **Investigation types:** file\_event; process\_execution; remote\_code\_execution; network\_event; windows\_event\_log; module\_event **Subtypes:** file\_event; network\_event; registry\_event; windows\_event\_log Other event subtypes are not supported here, and rules containing them will not be available for selection. \*\*Note:\*\* Configure custom BIOC prevention rules here: |
+    | Action Mode | Enabled; Disabled | When user-defined BIOC prevention rules are present in the system, you can enable them here. Ensure that the user-defined BIOC prevention rules that you want to enable only contain the following: **Investigation types:** file_event; process_execution; remote_code_execution; network_event; windows_event_log; module_event **Subtypes:** file_event; network_event; registry_event; windows_event_log Other event subtypes are not supported here, and rules containing them will not be available for selection. \*\*Note:\*\* Configure custom BIOC prevention rules here: |
     
 7.  To save the profile, click Create.
     
@@ -3343,7 +3281,7 @@ Create a new policy rule from the Policy Rules page
     
     | Item | Option | More details |
     | :-- | :-- | :-- |
-    | Action Mode | Enabled; Disabled | When user-defined BIOC prevention rules are present in the system, you can enable them here. Ensure that the user-defined BIOC prevention rules that you want to enable only contain the following: **Investigation types:** file\_event; process\_execution; remote\_code\_execution; network\_event; windows\_event\_log; module\_event **Subtypes:** file\_event; network\_event; registry\_event; windows\_event\_log Other event subtypes are not supported here, and rules containing them will not be available for selection. \*\*Note:\*\* Configure custom BIOC prevention rules here: |
+    | Action Mode | Enabled; Disabled | When user-defined BIOC prevention rules are present in the system, you can enable them here. Ensure that the user-defined BIOC prevention rules that you want to enable only contain the following: **Investigation types:** file_event; process_execution; remote_code_execution; network_event; windows_event_log; module_event **Subtypes:** file_event; network_event; registry_event; windows_event_log Other event subtypes are not supported here, and rules containing them will not be available for selection. \*\*Note:\*\* Configure custom BIOC prevention rules here: |
     
 3.  To save the profile, click Create.
     
@@ -3401,7 +3339,7 @@ Create a new policy rule from the Policy Rules page
     
     | Item | Option | More details |
     | :-- | :-- | :-- |
-    | Action Mode | Enabled; Disabled | When user-defined BIOC prevention rules are present in the system, you can enable them here. Ensure that the user-defined BIOC prevention rules that you want to enable only contain the following: **Investigation types:** file\_event; process\_execution; remote\_code\_execution; network\_event; windows\_event\_log; module\_event **Subtypes:** file\_event; network\_event; registry\_event; windows\_event\_log Other event subtypes are not supported here, and rules containing them will not be available for selection. \*\*Note:\*\* Configure custom BIOC prevention rules here: |
+    | Action Mode | Enabled; Disabled | When user-defined BIOC prevention rules are present in the system, you can enable them here. Ensure that the user-defined BIOC prevention rules that you want to enable only contain the following: **Investigation types:** file_event; process_execution; remote_code_execution; network_event; windows_event_log; module_event **Subtypes:** file_event; network_event; registry_event; windows_event_log Other event subtypes are not supported here, and rules containing them will not be available for selection. \*\*Note:\*\* Configure custom BIOC prevention rules here: |
     
 3.  To save the profile, click Create.
     
@@ -3473,36 +3411,13 @@ The configuration of each of the resources is based on allow/deny lists.
     | Process List | Allowed list Denied list | Add process Example 22.  `curl`  
      |
     | Networking | Allowed list Denied list |  |
-    | Listing Ports |  | Add ports Example 23. 
-    ```
-    8080 8080-8083 - for range
-    ```
-    
-      
+    | Listing Ports |  | Add ports Example 23.  8080 8080-8083 - for range  
      |
-    | Outbound Internet Ports |  | Add ports Example 24. 
-    
-    ```
-    22 22-25 - for range
-    ```
-    
-      
+    | Outbound Internet Ports |  | Add ports Example 24.  22 22-25 - for range  
      |
-    | Outbound IPs |  | Add IPs Example 25. 
-    
-    ```
-    198.51.100.0/24 198.51.100.1
-    ```
-    
-      
+    | Outbound IPs |  | Add IPs Example 25.  198.51.100.0/24 198.51.100.1  
      |
-    | Domains |  | Add domains Example 26. 
-    
-    ```
-    example.com \*ample.co\* \* - for all domains. 
-    ```
-    
-    \*\*Note:\*\* Wildcards are supported.  
+    | Domains |  | Add domains Example 26.  example.com \*ample.co\* \* - for all domains. \*\*Note:\*\* Wildcards are supported.  
      |
     | Files & Folders | Allowed list Denied list | Add file paths and/or folders Example 27.  `/tmp/example/`  
      |
@@ -3539,7 +3454,6 @@ Create a new policy rule from the Policy Rules page
 3.  Configure a new policy that includes your new profile.
 
 ##### Set up exception profiles and rules
-Abstract
 
 Exception profiles can be configured to override security policies for known processes, files, digital signers, URLs, BTP rules, telephone numbers, and other exceptions.
 
@@ -3556,7 +3470,6 @@ Exception profiles override the security policy in scenarios such as:
 -   Import exceptions from the Cortex Cloud support team
 
 ###### Exception configuration
-Abstract
 
 Learn how to configure exceptions from your baseline policy.
 
@@ -3606,7 +3519,6 @@ If you don't migrate the legacy exceptions, you can continue to create exception
 After the migration, you can Add a support exception rule or Add a legacy exception rule.
 
 ###### Issue exclusions
-Abstract
 
 Learn how to review and manage issue exclusions.
 
@@ -3625,7 +3537,7 @@ The following table describes both the default fields and additional optional fi
 
 | Field | Description |
 | --- | --- |
-| [image: check-box.png] | Checkbox to select one or more issue exclusions on which you want to perform actions. |
+| ☐ | Checkbox to select one or more issue exclusions on which you want to perform actions. |
 | Backward Scan Status | Exclusion policy status for historic data, either enabled if you want to apply the policy to previous issues, or disabled if you don’t want to apply the policy to previous issues. |
 | Comment | Administrator-provided comment that describes the purpose or reason for the exclusion policy. |
 | Description | Text summary of the policy that displays the match criteria. |
@@ -3637,7 +3549,6 @@ The following table describes both the default fields and additional optional fi
 | User Email | The administrative user's email address. |
 
 ###### Add an issue exclusion rule
-Abstract
 
 Learn how to create a rule to exclude certain criteria from displaying issue notifications in Cortex Cloud.
 
@@ -3717,7 +3628,6 @@ Build your own issue exclusion rule.
 7.  Click Create to create the issue exception rule.
 
 ###### Add an IOC or BIOC rule exception
-Abstract
 
 Learn how to add an IOC or BIOC rule exception.
 
@@ -3727,13 +3637,13 @@ In case you need to map fields returned in an XQL process query to your exceptio
 
 | IOC/BIOC suppression rule conditions | Process query result fields |
 | --- | --- |
-| Process Sha256 | actor\_process\_image\_sha256 |
-| Process Name | actor\_process\_image\_name |
-| Process Path | actor\_process\_image\_path |
-| Signed By Vendor | actor\_process\_signature\_vendor |
-| User Name | actor\_effective\_username |
-| Cgo Full Path | actor\_process\_command\_line |
-| Process Cmd   | causality\_actor\_process\_image\_path |
+| Process Sha256 | actor_process_image_sha256 |
+| Process Name | actor_process_image_name |
+| Process Path | actor_process_image_path |
+| Signed By Vendor | actor_process_signature_vendor |
+| User Name | actor_effective_username |
+| Cgo Full Path | actor_process_command_line |
+| Process Cmd   | causality_actor_process_image_path |
 
 **Note:**
 
@@ -3777,7 +3687,6 @@ You can choose to export a BIOC rule exception.
     -   Export all Exceptions as non-specific: Export and apply specific exceptions to BIOC rules
 
 ###### Add a disable prevention rule for endpoints
-Abstract
 
 You can create granular exceptions to prevention actions defined for your endpoints.
 
@@ -3837,7 +3746,6 @@ You can create granular exceptions to prevention actions defined for your endpoi
 11.  Review the configurations for the exception, and if the risks are acceptable to you, select I understand the risk, and then click Create.
 
 ###### Add a disable injection and prevention rule
-Abstract
 
 You can generate a temporary exception to bypass a process from prevention modules and injections.
 
@@ -3871,7 +3779,6 @@ You can generate a temporary exception to bypass a process from prevention modul
 9.  Click Yes, to confirm that you acknowledge that the selected rules will be disabled.
 
 ###### Add a support exception rule for endpoints
-Abstract
 
 Learn how to add a support exception rule.
 
@@ -3905,7 +3812,6 @@ If you don't migrate the legacy exceptions, you can continue to create exception
 -   Set up restrictions prevention profiles
 
 ###### Add a legacy exception rule for endpoints
-Abstract
 
 Learn how to use Cortex Cloud Legacy Exception rules to configure an exception to prevention and protection modules on endpoints for selected profiles.
 
@@ -3962,10 +3868,7 @@ Your migrated rules are displayed on the Settings → Exception Configurations �
     |  | Operational Agent Exceptions | Windows | Add to your allow list the file or folder paths to exclude from evaluation. Use ? to match a single character or \* to match any string of characters. \*\*Note:\*\* This exception prevents the agent from examining the specified file. Use with caution, as it may unintentionally allow unwanted or malicious behavior to go undetected. |
     |  | Portable executable files (Windows) | Linux | Add to your allow list the file or folder paths to exclude from evaluation. Use ? to match a single character or \* to match any string of characters. |
     |  | Mach-O files (macOS) | Linux | Add to your allow list the file or folder paths to exclude from evaluation. Use ? to match a single character or \* to match any string of characters. |
-    | 
-    Restrictions
-    
-     | Executable Files | Windows | Add to your allow list the file or folder paths to exclude from evaluation. Use ? to match a single character or \* to match any string of characters. |
+    | Restrictions | Executable Files | Windows | Add to your allow list the file or folder paths to exclude from evaluation. Use ? to match a single character or \* to match any string of characters. |
     |  | Network Location Files | Windows | Add to your allow list the file or folder paths to exclude from evaluation. Use ? to match a single character or \* to match any string of characters. |
     |  | Optical Drive Files | Windows | Add to your allow list the file or folder paths to exclude from evaluation. Use ? to match a single character or \* to match any string of characters. |
     |  | Removable Media Files | Windows | Add to your allow list the file or folder paths to exclude from evaluation. Use ? to match a single character or \* to match any string of characters. |
@@ -3999,7 +3902,6 @@ If you don't migrate the legacy exceptions, you can continue to create exception
 -   Set up restrictions prevention profiles
 
 ###### Add a new exceptions security profile
-Abstract
 
 Learn how to add a new exceptions security profile.
 
@@ -4095,7 +3997,6 @@ How to create an endpoint-specific exception
     If you want to remove an exceptions profile from your network, go to the Profiles page, right-click, and select Delete.
 
 ###### Add a global endpoint policy exception
-Abstract
 
 Learn how to define and manage global endpoint policy exceptions in Cortex Cloud.
 
@@ -4309,7 +4210,6 @@ Select \+ Import/Export to Export your exceptions list and/or Import from File.
 The exported file is encoded in Base64 and cannot be edited.
 
 #### Define endpoint groups
-Abstract
 
 Define an endpoint group and then apply policy rules and manage specific endpoints.
 
@@ -4372,7 +4272,6 @@ At any time, you can return to the Groups page to view and manage your endpoint 
 -   View endpoints: Pivot from an endpoint group to a filtered list of endpoints on the All Endpoints page where you can quickly view and initiate actions on the endpoints within the group.
 
 #### Configure global agent settings
-Abstract
 
 The different Cortex XDR agents that operate on your endpoints require configuration of different global settings.
 
@@ -4467,7 +4366,6 @@ In addition to the customizable Agent Settings Profiles for each Operating Syste
      Data for a deleted endpoint is retained for 90 days since the endpoint’s last connection to the system. If a deleted endpoint reconnects, Cortex Cloud recovers its existing data.
 
 #### Apply profiles to endpoints
-Abstract
 
 Learn how to apply security profiles to your endpoints, depending on the platform used.
 
@@ -4524,7 +4422,6 @@ Each policy you create must apply to one or more endpoints or endpoint groups. T
     The exported file is encoded in Base64 and cannot be edited.
 
 #### Create an agent installation package
-Abstract
 
 Learn how to create a Cortex XDR agent installation package to deploy to your endpoints.
 
@@ -4654,7 +4551,7 @@ To install the Cortex XDR agent software, you must use a valid installation pack
                     
                 3.  Navigate to the AWS Lambda service, and upload the layer and add it to the function’s configuration.
                     
-                4.  Save the current Lamba handler setting in the ORIGINAL\_HANDLER environment variable.
+                4.  Save the current Lamba handler setting in the ORIGINAL_HANDLER environment variable.
                     
                 5.  Change the Lambda handler setting to cortex.handler.
                     
@@ -4667,7 +4564,7 @@ To install the Cortex XDR agent software, you must use a valid installation pack
                     
                 3.  Create a new AWS layer with the downloaded bundle, copy the new layer ARN value, and add the new layer using the copied ARN.
                     
-                4.  Save the current Lamba handler setting in the ORIGINAL\_HANDLER environment variable.
+                4.  Save the current Lamba handler setting in the ORIGINAL_HANDLER environment variable.
                     
                 5.  Change the Lambda handler setting to cortex.handler.
                     
@@ -4684,7 +4581,6 @@ To install the Cortex XDR agent software, you must use a valid installation pack
     When the status of the package shows `Completed`, right-click the package, and click Download.
 
 ##### Manage an agent installation package
-Abstract
 
 Learn how to make changes such as deleting an agent installation package or editing the package name.
 
@@ -4700,10 +4596,9 @@ You can manage agent installation packages on the Agent Installations page. To m
     
 -   Copy text to clipboard to copy the text from a specific field in the row of an installation package.
     
--   Hide installation packages. Using the Hide option provides a quick method to filter out results based on a specific value in the table. You can also use the filters at the top of the page to build a filter from scratch. To create a persistent filter, save ([image: save-icon.png]) it.
+-   Hide installation packages. Using the Hide option provides a quick method to filter out results based on a specific value in the table. You can also use the filters at the top of the page to build a filter from scratch. To create a persistent filter, save () it.
 
 #### Harden endpoint security
-Abstract
 
 By hardening your endpoints with Cortex XDR agent, you can make these endpoints more secure and safer from attackers.
 
@@ -4750,7 +4645,6 @@ The following table describes for each capability the supported platforms and mi
 | Disk Encryption Provides visibility into endpoints that encrypt their hard drives using BitLocker or FileVault. | ✓ | ✓ | – |
 
 ##### Device control
-Abstract
 
 Protect your Windows and macOS-based endpoints from connecting to malicious USB-connected removable devices, to Bluetooth devices, and to print jobs.
 
@@ -4813,9 +4707,7 @@ To apply device control in your organization, define device control profiles tha
 
 | Profile | Description |
 | --- | --- |
-| Configuration Profile | Allow or block these device type groups: Disk Drives (USB-connected); CD-Rom Drives (USB-connected); Floppy Disk Drives (USB-connected); (Windows only) Windows Portable Devices (USB-connected); (Windows only) Bluetooth Devices (block, allow, or custom types)-   The Custom option includes configuration options for specific Bluetooth Classes (Bluetooth Classic) device types, and for Low Energy Services (Bluetooth Low Energy). When you select an option in Bluetooth Classes, the right pane of the dialog box provides a detailed list of device types that belong to the selected class. You can choose all, or some of the items in this list.
-; Print Jobs (all, or custom types)-   When set to Block, all print jobs sent from the endpoint will be blocked.; When set to Custom, the following options are available: Network printer jobs only when outside Corp. network blocks print jobs sent to network printers while the endpoint is not on the corporate network. Network printer jobs (internal/VPN) blocks print jobs sent to network printers while the endpoint is connected to the network via VPN or an internal connection. Local printer jobs blocks print jobs sent to a printer which is directly connected to an endpoint. Printing to file (Windows only) blocks print jobs that are saved as a file. This option only blocks the print driver.
-\*\*Note:\*\* For network printer print jobs, ensure that you also configure the Agent Settings profile, Network Location Configuration option. This setting must be set to Enabled, and configured. If you do not enable and configure this setting, all network printer operations will be treated as internal network print jobs.; The Print Job option does not block connections to a printer, but blocks print jobs according to the type of print job. You cannot block use of a specific printer with this feature. Any print job that is not sent via the endpoint's printer spooler, such as a file uploaded to a remote software based printing service, will not be blocked.; Cortex Cloud relies on the [device class](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors) assigned by the operating system. Add a new device configuration profile. The Cortex XDR agent relies on the device class assigned by the operating system. For Windows endpoints only, you can configure additional device classes. Add a custom device class. |
+| Configuration Profile | Allow or block these device type groups: Disk Drives (USB-connected); CD-Rom Drives (USB-connected); Floppy Disk Drives (USB-connected); (Windows only) Windows Portable Devices (USB-connected); (Windows only) Bluetooth Devices (block, allow, or custom types)- The Custom option includes configuration options for specific Bluetooth Classes (Bluetooth Classic) device types, and for Low Energy Services (Bluetooth Low Energy). When you select an option in Bluetooth Classes, the right pane of the dialog box provides a detailed list of device types that belong to the selected class. You can choose all, or some of the items in this list. ; Print Jobs (all, or custom types)- When set to Block, all print jobs sent from the endpoint will be blocked.; When set to Custom, the following options are available: Network printer jobs only when outside Corp. network blocks print jobs sent to network printers while the endpoint is not on the corporate network. Network printer jobs (internal/VPN) blocks print jobs sent to network printers while the endpoint is connected to the network via VPN or an internal connection. Local printer jobs blocks print jobs sent to a printer which is directly connected to an endpoint. Printing to file (Windows only) blocks print jobs that are saved as a file. This option only blocks the print driver. \*\*Note:\*\* For network printer print jobs, ensure that you also configure the Agent Settings profile, Network Location Configuration option. This setting must be set to Enabled, and configured. If you do not enable and configure this setting, all network printer operations will be treated as internal network print jobs.; The Print Job option does not block connections to a printer, but blocks print jobs according to the type of print job. You cannot block use of a specific printer with this feature. Any print job that is not sent via the endpoint's printer spooler, such as a file uploaded to a remote software based printing service, will not be blocked.; Cortex Cloud relies on the [device class](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors) assigned by the operating system. Add a new device configuration profile. The Cortex XDR agent relies on the device class assigned by the operating system. For Windows endpoints only, you can configure additional device classes. Add a custom device class. |
 | Exceptions Profile | Allow specific devices according to device types and vendor. You can further specify a specific product and/or product serial number. Add a new device exceptions profile. |
 
 Device Configuration and Device Exceptions profiles are configured for each operating system separately. After you configure a device control profile, Apply device control profiles to your endpoints.
@@ -5097,21 +4989,20 @@ Examples of XQL queries that query the USB device data.
 -   This query returns the **`action_device_usb_product_name`** field from all **`xdr_data`** records, where the **`event_type`** is **`DEVICE`** and the **`event_sub_type`** is **`DEVICE_PLUG`**.
     
     ```
-    dataset = xdr\_data
-    | filter event\_type = DEVICE and event\_sub\_type = DEVICE\_PLUG
-    | fields action\_device\_usb\_product\_name
+    dataset = xdr_data
+    | filter event_type = DEVICE and event_sub_type = DEVICE_PLUG
+    | fields action_device_usb_product_name
     ```
     
 -   This query returns the **`action_device_usb_vendor_name`** field from all **`device_control`** records (preset of the **`xdr_data`** dataset) where the **`event_type`** is **`DEVICE`**.
     
     ```
-    preset = device\_control
-    | filter event\_type = DEVICE
-    | fields action\_device\_usb\_vendor\_name
+    preset = device_control
+    | filter event_type = DEVICE
+    | fields action_device_usb_vendor_name
     ```
 
 ##### Host firewall
-Abstract
 
 Control communications on your endpoints based on the network location of your device by using the Cortex XDR host firewall.
 
@@ -5126,7 +5017,6 @@ The following apply Cortex Cloud host firewall policy rules on your endpoints:
 | Linux | Not supported. |
 
 ###### Host firewall for Windows
-Abstract
 
 Control communications on your endpoints based on the network location of your device by using the host firewall.
 
@@ -5375,7 +5265,6 @@ To gain deeper visibility into all the host firewall activity that occurred on a
 To collect the log file, right-click the event containing the endpoint you are interested in and select Collect Detailed Host Firewall Logs. Alternatively, you can perform this action for multiple endpoints from Endpoints Administration.
 
 ###### Host firewall for macOS
-Abstract
 
 Control communications on your endpoints based on the network location of your device by using the host firewall.
 
@@ -5513,7 +5402,6 @@ To view only the communication events on the endpoint to which the Cortex Cloud 
 Additionally, to monitor the communication on your macOS endpoint, you can use the following operating system utilities: From the endpoint System Preferences → Security and Privacy → Firewall → Firewall options, you can view the list of blocked and allowed applications in the firewall. The Cortex Cloud host firewall blocks only incoming communications on Mac endpoints, still allowing outbound communication initiated from the endpoint.
 
 ##### Disk encryption
-Abstract
 
 For enhanced security, you can configure and apply disk encryption profiles to the disks of your Windows and Mac endpoints.
 
@@ -5644,7 +5532,6 @@ After you define the required disk encryption profiles, configure Protection Pol
 6.  Monitor the endpoint encryption status.
 
 ##### Host Inventory
-Abstract
 
 Review the inventory of all your hosts (endpoints), and identify in the inventory any IT and security issues in your network.
 
@@ -5681,7 +5568,7 @@ The Cortex Cloud Host Inventory includes the following entities and information,
 
 For each entity, Cortex Cloud lists all the details about the entity, and the details about the endpoint it applies to. For example, the default Services view lists a separate row for every service on every endpoint:
 
-Alternatively, to better understand the overall presence of each entity on the total number of endpoints, you can switch to an aggregated view (click [image: aggregate-icon.png]) and group the data by the main entity. You can also sort and filter according to the number of affected endpoints. For example, in the Services aggregated view, you can sort by the number of affected endpoints to identify the least commonly deployed service in your network. To get a closer view of all endpoints, right-click and select View affected endpoints.
+Alternatively, to better understand the overall presence of each entity on the total number of endpoints, you can switch to an aggregated view (click ) and group the data by the main entity. You can also sort and filter according to the number of affected endpoints. For example, in the Services aggregated view, you can sort by the number of affected endpoints to identify the least commonly deployed service in your network. To get a closer view of all endpoints, right-click and select View affected endpoints.
 
 ###### View Host Inventory
 
@@ -5709,7 +5596,6 @@ If you have Cloud Posture Security, Cloud Runtime Security, or Cortex XSIAM Prem
 | Users to Groups | A list mapping all the users, local and in your domain, to the existing user groups on an endpoint. \*\*Note:\*\* Cortex Cloud includes only the first 10,000 results per endpoint.; Cortex Cloud lists only users that belong to each group directly, and does not include users who belong to a group within the main group.; If a local users group includes a domain user (whose credentials are stored on the Domain Controller server and not on the endpoint), Cortex Cloud includes this user in the user-to-group mapping, but does not include it in the user's insights view. |
 
 ##### Vulnerability Assessment
-Abstract
 
 Perform a vulnerability assessment of all endpoints in your network using Cortex Cloud. This includes CVE, endpoint, and application analysis.
 
@@ -5726,8 +5612,7 @@ The following are prerequisites for Cortex Cloud to perform a vulnerability asse
 | Requirement | Description |
 | --- | --- |
 | Licenses and Add-ons |  |
-| Supported Platforms | **Windows**-   Cortex XDR agent 8.3 or a later release.; Cortex Cloud collects all the information about the operating system and the installed applications, and calculates CVE.; CVEs that apply to applications that are installed by one user aren't detected when another user without the application installed is logged in during the scan.
-; **MacOS**-   Cortex XDR agent 8.3 or a later release.; Cortex Cloud collects all the information about the operating system and the installed applications, and calculates CVE. |
+| Supported Platforms | **Windows**- Cortex XDR agent 8.3 or a later release.; Cortex Cloud collects all the information about the operating system and the installed applications, and calculates CVE.; CVEs that apply to applications that are installed by one user aren't detected when another user without the application installed is logged in during the scan. ; **MacOS**- Cortex XDR agent 8.3 or a later release.; Cortex Cloud collects all the information about the operating system and the installed applications, and calculates CVE. |
 | Setup and Permissions | Ensure Host Inventory Data Collection is enabled for your Cortex XDR agent.Set up agent settings profiles |
 | Certificates for Windows and macOS | When Advanced Vulnerability and Assessment is enabled, these certificates are a prerequisite for Windows and macOS. Download the certificates from [here](https://docs-cortex.paloaltonetworks.com/v/u/EJVLvtinTtrAb~Na9XuXag). Import the _Digicert Trusted Root G4_ certificate into the Trusted Root Certification Authorities store in the local machine.; In some environments, if the scan does not initialize, the _DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1_ certificate, may also be required. Import the signed certificate into the Intermediate Certification Authorities store in the local machine. |
 | Limitations | Some CVEs may be outdated if the Cortex XDR agent wasn't updated recently.; Application versions which have reached end-of-life (EOL) may have their version listed as 0. This doesn't affect the detection of the CVEs.; Some applications are listed twice. One of the instances may display `invalid version`, however, this doesn't affect the functionality.; The scanning process may impact performance on the Cortex XDR agent during scanning. The scan may take up to two minutes. |
@@ -5772,7 +5657,7 @@ You can perform the following actions from Cortex Cloud as you analyze the exist
 
 ###### Endpoint Analysis
 
-To help you assess the vulnerability status of an endpoint, Cortex Cloud provides a full list of all installed applications and existing CVEs per endpoint and also assigns each endpoint a vulnerability severity score that reflects the highest NIST vulnerability score detected on the endpoint. This information helps you to determine the best course of action for remediating each endpoint. From Inventory → Endpoints+Host Inventory → Vulnerability Assessment, select Endpoints on the upper-right bar. This information is also available in the va\_endpoints dataset. In addition, the host\_inventory\_endpoints preset lists all endpoints, CVE data, and additional metadata regarding the endpoint information. You can use this dataset and preset to build queries in XQL Search.
+To help you assess the vulnerability status of an endpoint, Cortex Cloud provides a full list of all installed applications and existing CVEs per endpoint and also assigns each endpoint a vulnerability severity score that reflects the highest NIST vulnerability score detected on the endpoint. This information helps you to determine the best course of action for remediating each endpoint. From Inventory → Endpoints+Host Inventory → Vulnerability Assessment, select Endpoints on the upper-right bar. This information is also available in the va_endpoints dataset. In addition, the host_inventory_endpoints preset lists all endpoints, CVE data, and additional metadata regarding the endpoint information. You can use this dataset and preset to build queries in XQL Search.
 
 For each vulnerability, Cortex XDR displays the following default and optional values.
 
@@ -5816,7 +5701,6 @@ From Inventory → Endpoints → Host Inventory, select Applications.
 -   To view in-depth details about the application, left-click the application name.
 
 #### Set a Cortex XDR agent Critical Environment version
-Abstract
 
 Set the Cortex XDR agent as a Critical Environment (CE) version.
 
@@ -5846,7 +5730,6 @@ Setting an endpoint with a CE agent version requires you to define your agent co
     Navigate to Inventory → Endpoints → All Endpoints. In the table, locate the Version Type field to view whether the endpoint is defined as a Standard or Critical Environment agent.
 
 #### Set an application proxy for Cortex XDR agents
-Abstract
 
 Set an application-specific proxy for the Cortex XDR agent without affecting the communication of other applications on the endpoint.
 
@@ -5886,14 +5769,12 @@ How to set an agent proxy in Cortex Cloud
     When you disable the proxy configuration, all proxies associated with that agent are removed. The agent resumes communication with the Cortex Cloud server through the system-wide proxy. If a system-wide proxy is not defined, the agent resumes direct communication with the Cortex Cloud server. If neither a system-wide proxy nor direct communication exists, the agent will disconnect from Cortex Cloud.
 
 ### Manage endpoint protection
-Abstract
 
 The Cortex XDR agent is installed on each of your endpoints, and you can manage the agents using Cortex Cloud.
 
 The Cortex XDR agent is installed on each of your endpoints, and you can perform various management activities on the agents, using Cortex Cloud.
 
 #### Move agents between managing servers
-Abstract
 
 You can move Cortex XDR agents to other Cortex Cloud managing servers.
 
@@ -5936,18 +5817,17 @@ How to move Cortex XDR agents to other managing servers
         
     2.  Right-click + Alt to open the options menu in advanced mode, and select Endpoint Control → Change managing server. This option is available only for an administrator in a supported Cortex Cloud version.
         
-        [image: change-agent-managing-server-menu.png]
+        
         
     3.  Enter the ID number of the installation package you obtained in Step 1. If you selected agents running on different operating systems, for example, Windows and Linux, you must provide an ID for each operating system. When done, click Move.
         
-        [image: change-agent-managing-server.png]
+        
         
 4.  Track the action.
     
     When you track the action in the Action Center, the original managing server will keep displaying In progress (Sent) status also after the action has ended successfully, since the agent no longer reports to this managing server. The new managing server will add this as a new agent registration action.
 
 #### Manage endpoint tags
-Abstract
 
 Segment your endpoints according to dynamic tags.
 
@@ -6061,7 +5941,6 @@ Using API, you can maintain the available tag list by permanently removing unuse
 -   `/public_api/v1/tags/agents/delete_permanently/`
 
 #### Set an alias for an endpoint
-Abstract
 
 Configure an alias to identify one or more endpoints by a name that is different from the endpoint hostname.
 
@@ -6084,7 +5963,6 @@ To identify one or more endpoints by a name that is different from the endpoint 
 6.  Use the Quick Launcher to search the endpoints by alias across Cortex Cloud.
 
 #### Manage endpoint prevention profiles
-Abstract
 
 You can manage the endpoint prevention profiles of your Cortex XDR agent endpoints in various ways, including editing, duplicating, and populating endpoint prevention policy rules.
 
@@ -6199,7 +6077,6 @@ The following table displays the fields that are available on the Prevention Pro
 | Usage Count | The number of policy rules that use the profile. If you want to delete a profile, ensure that this cell displays "0". |
 
 #### Upgrade Cortex XDR agents
-Abstract
 
 You can upgrade the Cortex XDR agent software by using the appropriate method for the endpoint operating system.
 
@@ -6278,7 +6155,6 @@ How to upgrade Cortex XDR agent software
     -   After you upgrade on an endpoint with Cortex Cloud Device Control rules, you need to reboot the endpoint for the rules to take effect.
 
 #### Restart agent
-Abstract
 
 Learn how to restart the agent on the endpoint.
 
@@ -6291,7 +6167,6 @@ As soon as the action is confirmed, the restart command triggers a restart of th
 2.  Select I agree, and then click OK to confirm restarting the agent on all selected endpoints.
 
 #### Uninstall the Cortex XDR agent
-Abstract
 
 Uninstall Cortex XDR agent from one or more endpoints at any time using the Action Center, or one-by-one using the All Endpoints page.
 
@@ -6349,7 +6224,6 @@ If you want to uninstall the Cortex XDR agent from the endpoint, you can do so f
 3.  In the confirmation dialog box that appears, select I agree, and click OK.
 
 #### Clear agent database
-Abstract
 
 Learn how to clear the Cortex XDR agent database.
 
@@ -6380,7 +6254,6 @@ Clearing the agent database is available only when using the debugging mode, and
         You can only right-click to cancel the clear agent database for actions with a pending status.
 
 #### Delete Cortex XDR agents
-Abstract
 
 Delete endpoints from Cortex Cloud tenant views.
 
@@ -6415,7 +6288,6 @@ The following workflow describes how to delete the Cortex XDR agent from one or 
 3.  Select Endpoint Control → Delete Endpoint.
 
 #### Manage agent tokens
-Abstract
 
 Manage tokens per agent to retrieve the password used to run functions at the agent.
 
@@ -6479,7 +6351,6 @@ Two types of tokens can be set:
         You can now use the password to run functions on the agent.
 
 #### Retrieve support file password
-Abstract
 
 Learn how to retrieve the password to access files from the Tech Support File (TSF), which is generated in a zip format protected by an encrypted password.
 
@@ -6492,7 +6363,7 @@ From Cortex XDR agent, the Tech Support File (TSF) is generated in a zip format 
 
 1.  Retrieve Support File Password from Inventory → Endpoints → All Endpoints.
     
-    1.  At the top of the page, click the key icon [image: Screenshot_2025-08-04_at_15_40_52.png] (Tokens and Passwords) and select Retrieve Support File Password.
+    1.  At the top of the page, click the key icon  (Tokens and Passwords) and select Retrieve Support File Password.
         
     2.  In the Retrieve Support File Password dialog box, in the Encrypted Password field, paste the token that you copied from the metadata file located in the saved file when running the Cytool log collect.
         
@@ -6509,7 +6380,6 @@ From Cortex XDR agent, the Tech Support File (TSF) is generated in a zip format 
     4.  Click the copy button to copy the password displayed and then click Ok. Use the password to unzip the TSF file.
 
 #### Monitor agent operational status
-Abstract
 
 You can view the operational status of any Cortex XDR agent that you manage.
 
@@ -6534,13 +6404,9 @@ The operational status that the agent reports varies according to the exceptions
 | Partially protected | Windows XDR data collection is not running, or not set; Behavioral threat protection is not running; Malware protection is not running; Exploit protection is not running Mac Operating system adaptive mode\*; XDR Data Collection is not running, or not set; Behavioral threat protection is not running; Malware protection is not running; Exploit protection is not running Linux Kernel module not loaded\*\*; Kernel module compatible but not loaded\*\*; Kernel version not compatible\*\*; XDR Data Collection is not running, or not set; Behavioral threat protection is not running; Anti-malware flow is asynchronous; Malware protection is not running; Exploit protection is not running \*\*Note:\*\* Any of the listed items could lead to a partially protected state. Refer to the Cortex Cloud management console for specific reasons for the state. |
 | Unprotected | Windows, Mac, and Linux: Behavioral threat protection and Malware protection are not running; Exploit protection and malware protection are not running; The content is unavailable |
 | Local Resource Impact | Windows, Mac, Linux Machine CPU impact on the agent operation; Machine memory impact on the agent operation In addition to the status, either one of the following sub-statuses appear: Low local available memory; No local available memory |
-| 
-**Caution:**
-
-Status can have the following implications on the endpoint: \*(`Status`): The exploit protection module is not running.; \*\*(`Status`):-   XDR data collection is not running; Behavioral threat protection is not running; Anti-malware flow is asynchronous; Local privilege escalation protection is asynchronous |
+| **Caution:** Status can have the following implications on the endpoint: \*(`Status`): The exploit protection module is not running.; \*\*(`Status`):- XDR data collection is not running; Behavioral threat protection is not running; Anti-malware flow is asynchronous; Local privilege escalation protection is asynchronous |
 
 #### Monitor agent activity
-Abstract
 
 You can monitor the activity of any Cortex Cloud Cortex XDR agent that you manage.
 
@@ -6560,17 +6426,11 @@ You can customize your view of the logs by adding or removing filters to the Age
 | Received Time | Date and time when the action was received by the agent and reported back to Cortex Cloud. |
 | Result | The result of the action (Success, Fail, or N/A) |
 | Severity | Severity associated with the log: Critical; High; Medium; Low; Informational |
-| Type and Sub-Type | Additional classification of agent log (Type and Sub-Type): Installation:-   Install; Uninstall; Upgrade
-; Policy change:-   Local Configuration Change; Content Update; Policy Update; Process Exception; Hash Exception
-; Agent service:-   Service start (reported only when the agent fails to start and the RESULT is `Fail`); Service stopped; Anti-Tampering (reported when anti-tamper protection is disabled locally on an agent)
-; Agent modules:-   Module initialization; Local analysis module; Local analysis feature extraction
-; Agent status:-   Fully protected; OS incompatible; Software incompatible; Kernel driver initialization; Kernel extension initialization; Proxy communication; Quota exceeded (reported when old prevention data is being deleted from the endpoint); Minimal content
-; Action:-   Endpoint Token; Scan; File retrieval; Terminate process; Isolate; Cancel isolation; Payload execution; Quarantine; Restore; Block IP address; Unblock IP address; Tagging |
+| Type and Sub-Type | Additional classification of agent log (Type and Sub-Type): Installation:- Install; Uninstall; Upgrade ; Policy change:- Local Configuration Change; Content Update; Policy Update; Process Exception; Hash Exception ; Agent service:- Service start (reported only when the agent fails to start and the RESULT is `Fail`); Service stopped; Anti-Tampering (reported when anti-tamper protection is disabled locally on an agent) ; Agent modules:- Module initialization; Local analysis module; Local analysis feature extraction ; Agent status:- Fully protected; OS incompatible; Software incompatible; Kernel driver initialization; Kernel extension initialization; Proxy communication; Quota exceeded (reported when old prevention data is being deleted from the endpoint); Minimal content ; Action:- Endpoint Token; Scan; File retrieval; Terminate process; Isolate; Cancel isolation; Payload execution; Quarantine; Restore; Block IP address; Unblock IP address; Tagging |
 | Timestamp | Date and time when the action occurred. |
 | XDR Agent Version | The version of the XDR agent running on the endpoint. |
 
 #### Monitor agent upgrade status
-Abstract
 
 From Inventory → Endpoints → All Endpoints, you can view the upgrade status of any Cortex XDR agent that you manage.
 
@@ -6586,7 +6446,6 @@ From Cortex Cloud, you have full visibility into the Cortex XDR agent upgrade st
 ## Endpoint DLP
 
 ### Cortex Data Loss Prevention (DLP) module overview
-Abstract
 
 Learn about Cortex Data Loss Prevention (DLP) module, which provides a solution to prevent sensitive data exfiltration.
 
@@ -6598,9 +6457,7 @@ This highlights Cortex's benefit of proactively safeguarding sensitive informati
 
 **Prerequisite:**
 
--   Onboard tenant to the new Cortex & Cloud Platform
-    
--   Endpoint DLP add-on license for Cortex & Cloud platforms
+-   Endpoint DLP add-on license
     
 -   Cortex agent 9.1 and above for Windows and macOS
     
@@ -6621,9 +6478,8 @@ This highlights Cortex's benefit of proactively safeguarding sensitive informati
 
 | File types/extensions | OS support |
 | --- | --- |
-| asm, bmp, c, cpp, csv, cxx, doc, docx, h, hpp, img, java, jpeg, jpg, js, m, pdf, png, ppt, pptx, ppsx, ps1, py, r, rtf, s, tif, tiff, txt, v, vbs, vsd, vsdx, xls, xlsx, xps | Windows, macOS |
-| c++, cgi, dotx, jav, key, numbers, oxps, pages, pl, potx, rb, verilog, vh, vhd1, vlg, xsltx | Windows |
-| Ole, Pdf, Rtf, Csv, Txt, Jpg, Png, Bmp, Xml, JavaClass, JavaScript, Perl, PowerShell, Python, Ruby, Vbs, hxx, cs, vhd, vhdx, sx | macOS |
+| asm, bmp, c, c++, cgi, cpp, cs, csv, cxx, doc, docx, dotx, h, hpp, img, jav, java, jpeg, jpg, js, key, m, numbers, oxps, pages, pdf, pl, png, potx, ppsx, ppt, pptx, ps1, py, r, rb, rtf, s, S, tif, tiff, txt, v, vbs, verilog, vh, vhd1, vlg, vsd, vsdm, vsdx, xls, xlsx, xps, xsltx | Windows |
+| Bmp, Csv, JavaClass, JavaScript, Jpg, Ole, Pdf, Perl, Plist, Png, PowerShell, Python, Rtf, Ruby, Txt, Vbs | macOS |
 
 #### Agent limitations
 
@@ -6646,7 +6502,7 @@ This highlights Cortex's benefit of proactively safeguarding sensitive informati
     
     -   When the Dropbox Backup is enabled, it triggers a DLP alert when opening a sensitive file.
         
-    -   Support for the WhatsApp app for Windows desktop is limited to the UWP edition. There is a new version of WhatsApp (v 2.3000.1209\* at the time of this publication), which effectively embeds the web version of WhatsApp into a desktop application using Edge's Webview2 engine, which is not yet supported.
+    -   Support for the WhatsApp app for Windows desktop is limited to the UWP edition. There is a new version of WhatsApp (v 2.3000.1209\* at the time of this publication) that embeds the web version of WhatsApp in a desktop application using Edge's Webview2 engine, which is not yet supported.
         
     
 
@@ -6681,7 +6537,6 @@ Verify that the user has the correct permissions in the linked role for access a
 2.  Go to the relevant role, right-click and select Edit Role , and in the Components tab, verify under Data Security that the settings are configured to View/Edit.
 
 ### Personas workflow for DLP
-Abstract
 
 The data security administrator and data security viewer are responsible for identifying DLP requirements for creating data-in-motion rules and investigating issues and cases.
 
@@ -6760,8 +6615,6 @@ HITS show the number of raised issues. This only appears when the BLOCK or REPOR
 
 Refer to Modules → Data Security → Data Security Issues → Threats, to view the details of the alert or incident that the DLP system has flagged. The issue is raised when a user action or system event matches the conditions of the data-in-motion rule.
 
-[image: HITS_DLP_screen.png]
-
 A raised issue from DLP is an alert triggered by a DLP system. This alert indicates that someone has performed an action that violates a policy designed to protect sensitive data.
 
 The DLP system automatically detects a policy violation, such as a user trying to download a document containing credit card information from Google Drive. This raises an issue. The issue includes details about the user, the type of data involved, and the action that was attempted.
@@ -6800,7 +6653,7 @@ The extensions are not enabled for Incognito or InPrivate modes in Chrome and Ed
 
 Enabling the extension in Cortex
 
-1.  Navigate to Modules+Data Security+Endpoint Data-in-Motion Rules → Endpoint DLP Settings
+1.  Navigate to Modules → Data Security → Endpoint Data-in-Motion Rules → Endpoint DLP Settings.
     
 2.  For Cortex Data Security Extension (Web DLP Channel), select the browser extension activation mode. Refer to Configure endpoint DLP settings for more information.
     
@@ -6864,20 +6717,20 @@ You must first deploy the CDSx extension from the Microsoft Edge policy.
     
     ; ===== Start CDSX Policy
     ; Chrome
-    \[HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionSettings\]
+    [HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionSettings]
     
-    \[HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionSettings\\aalncdhjokfcbldaemnehledpfpibopi\]
-    "installation\_mode"="force\_installed"
-    "update\_url"="file:///C:\\\\ProgramData\\\\Cyvera\\\\Everyone\\\\CDSX\\\\extension.xml"
-    "toolbar\_pin"="force\_pinned"
+    [HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Google\\Chrome\\ExtensionSettings\\aalncdhjokfcbldaemnehledpfpibopi]
+    "installation_mode"="force_installed"
+    "update_url"="file:///C:\\\\ProgramData\\\\Cyvera\\\\Everyone\\\\CDSX\\\\extension.xml"
+    "toolbar_pin"="force_pinned"
     
     ; Edge
-    \[HKEY\_LOCAL\_MACHINE\\Software\\Policies\\Microsoft\\Edge\\ExtensionSettings\]
+    [HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Edge\\ExtensionSettings]
     
-    \[HKEY\_LOCAL\_MACHINE\\Software\\Policies\\Microsoft\\Edge\\ExtensionSettings\\aalncdhjokfcbldaemnehledpfpibopi\]
-    "installation\_mode"="force\_installed"
-    "update\_url"="file:///C:\\\\ProgramData\\\\Cyvera\\\\Everyone\\\\CDSX\\\\extension.xml"
-    "toolbar\_state"="force\_shown"
+    [HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\Edge\\ExtensionSettings\\aalncdhjokfcbldaemnehledpfpibopi]
+    "installation_mode"="force_installed"
+    "update_url"="file:///C:\\\\ProgramData\\\\Cyvera\\\\Everyone\\\\CDSX\\\\extension.xml"
+    "toolbar_state"="force_shown"
     
     ; ===== End CDSX Policy
     ```
@@ -6918,11 +6771,11 @@ The following steps describe how to create a new configuration profile in JAMF t
                 <dict>
                   <key>aalncdhjokfcbldaemnehledpfpibopi</key>
                   <dict>
-                    <key>installation\_mode</key>
-                    <string>force\_installed</string>
-                    <key>toolbar\_pin</key>
-                    <string>force\_pinned</string>
-                    <key>update\_url</key>
+                    <key>installation_mode</key>
+                    <string>force_installed</string>
+                    <key>toolbar_pin</key>
+                    <string>force_pinned</string>
+                    <key>update_url</key>
                     <string>file:///Library/Application Support/PaloAltoNetworks/Traps/cdsx/extension.xml</string>
                   </dict>
                 </dict>
@@ -6946,11 +6799,11 @@ The following steps describe how to create a new configuration profile in JAMF t
                 <dict>
                   <key>aalncdhjokfcbldaemnehledpfpibopi</key>
                   <dict>
-                    <key>installation\_mode</key>
-                    <string>force\_installed</string>
-                    <key>toolbar\_state</key>
-                    <string>force\_shown</string>
-                    <key>update\_url</key>
+                    <key>installation_mode</key>
+                    <string>force_installed</string>
+                    <key>toolbar_state</key>
+                    <string>force_shown</string>
+                    <key>update_url</key>
                     <string>file:///Library/Application Support/PaloAltoNetworks/Traps/cdsx/extension.xml</string>
                   </dict>
                 </dict>
@@ -6982,11 +6835,11 @@ After creating the application, you can select them from the application groups.
 
 Add a custom web application that appears in the Custom Web-Application Group of the Endpoint Application Groups. You can select the source or destination when defining the data-in-motion rule.
 
-1.  Navigate to Modules+Endpoint Data-in-Motion Rules+Endpoint Applications.
+1.  Navigate to Modules → Endpoint Data-in-Motion Rules → Endpoint Applications.
     
 2.  Click New Application and select Custom Web Application.
     
-3.  In New Custom Web Application , enter the application name, enter the URLs or domain of the web application, and then click [image: dlp_enter_icon.png].
+3.  In New Custom Web Application , enter the application name, enter the URLs or domain of the web application, and then click .
     
     A web application is added to the list. You can add other custom web applications.
     
@@ -7040,10 +6893,6 @@ To create a data-in-motion rule:
     2.  Choose the Action to implement when the rule criteria are met, such as blocking the transfer or notifying relevant parties.
         
     3.  Select the Action for Partial Classification to implement when partial classification occurs. Partial classification refers to a situation where the classification process is incomplete, such as due to a timeout or classification failure.
-        
-        **Note:**
-        
-        This is not supported in the Beta release.
         
     4.  Select the Severity of the rule you are creating.
         
@@ -7288,9 +7137,9 @@ From the three-dot menu, you can open the issue in a new tab, copy the issue URL
 
 Some other important actions:
 
--   Retrieve File: From the asset card, click [image: Image_20-01-2026_at_10_16.jpeg] to obtain a copy of the file that triggered the security alert.
+-   Retrieve File: From the asset card, click  to obtain a copy of the file that triggered the security alert.
     
--   Click [image: Image_22-01-2026_at_16_43.jpeg] to open the related rule that triggered the issue.
+-   Click  to open the related rule that triggered the issue.
     
 
 At the top of the card, you can view information about the issue, including the severity, detection tags, category, and detection method. In the tabs, you can see more information about the cause of the issue, take any actions required, and see the remediation suggestions.
@@ -7331,7 +7180,6 @@ A visual representation of the running playbook that is assigned to the issue. F
 ## Detection rules
 
 ### What are detection rules?
-Abstract
 
 Cortex Cloud uses rules to detect threats and generate issues.
 
@@ -7344,7 +7192,6 @@ Cortex Cloud uses rules to detect the threats in your network and to generate is
 -   Correlation Rules: Correlation rules help you analyze the relationship between multiple events from multiple sources by using the Cortex Query Language (XQL) based engine.
 
 #### What's an IOC?
-Abstract
 
 Indicators of compromise (IOCs) alert you about known malicious objects on your endpoints.
 
@@ -7369,12 +7216,11 @@ You can define the following types of IOCs:
 -   SHA256 hash
     
 
-After you load or define IOCs, the tenant checks for matches in the xdr\_data dataset that contains all the information collected about the endpoints and the network. Cortex Cloud looks for IOC matches in all data collected in the past and continues to evaluate any new data it receives in the future.
+After you load or define IOCs, the tenant checks for matches in the xdr_data dataset that contains all the information collected about the endpoints and the network. Cortex Cloud looks for IOC matches in all data collected in the past and continues to evaluate any new data it receives in the future.
 
 Issues for IOCs are identified by the source type of the IOC.
 
 ##### IOC rule details
-Abstract
 
 Manage all indicators of compromise (IOCs) configured from or uploaded to Cortex Cloud.
 
@@ -7404,7 +7250,6 @@ The following table describes the fields that are available for each IOC rule in
 | VENDORS | A list of threat intelligence vendors from which this IOC was obtained. |
 
 ##### Create an IOC rule
-Abstract
 
 From the Cortex Cloud management console, you can upload or configure the indicator of compromise (IOC) rules criteria.
 
@@ -7476,7 +7321,6 @@ To ensure your IOC rules generate issues efficiently and do not overcrowd your I
     3.  Click Save.
 
 #### What's a BIOC?
-Abstract
 
 Behavioral indicators of compromise (BIOCs) alert you to respond to potentially compromising behaviors.
 
@@ -7489,7 +7333,6 @@ As soon as you create or enable a BIOC rule, the tenant begins to monitor input 
 To further enhance the BIOC rule capabilities, you can also configure BIOC rules as custom prevention rules and incorporate them with your Restrictions profiles. The tenant can then generate behavioral threat prevention issues based on your custom prevention rules in addition to the BIOC detection issues.
 
 ##### BIOC rule details
-Abstract
 
 From the Cortex Cloud management console, you can define your own rules based on behavior with the behavioral indicator of compromise (BIOC) rules.
 
@@ -7546,7 +7389,6 @@ The following table describes the fields that are available for each Analytics B
 | TAGS | Filter the results according to Detector Tags. This tag enables you to filter for specific detectors such as Identity Threat, Identity Analytics, and others. |
 
 ##### Create a BIOC rule
-Abstract
 
 You can configure rules for behavioral indicators of compromise (BIOCs) to generate an issue on an identified threat.
 
@@ -7582,12 +7424,10 @@ You can create a new BIOC rule in a similar way as you create a search with Quer
 
 The following is an example of creating a BIOC rule in XQL.
 
-```
-dataset = xdr\_data 
-| filter event\_type = PROCESS and 
-         event\_sub\_type = PROCESS\_START and 
-         action\_process\_image\_name ~= ".\*?\\.(?:pdf|docx)\\.exe" 
-```
+dataset = xdr_data 
+| filter event_type = PROCESS and 
+         event_sub_type = PROCESS_START and 
+         action_process_image_name ~= ".\*?\\.(?:pdf|docx)\\.exe" 
 
 The following describes the `event_type` values for which you can create a BIOC rule.
 
@@ -7620,7 +7460,7 @@ To create a BIOC rule:
     
     1.  Click XQL Search.
         
-    2.  The XQL query field is where you define the parameters of your query for the BIOC rule. To help you create an effective XQL query, the search field provides suggestions as you type. The XQL query must at a minimum filter on the `event_type` field in order for it to be a valid BIOC rule. In addition, you can create BIOC rules using the `xdr_data` and `cloud_audit_log` datasets and presets for these datasets. Currently, you cannot create a BIOC rule on customized datasets and only the `filter` stage, `alter` stage, and functions without any aggregations are supported for XQL queries that define a BIOC. For BIOC rules, the field values in XQL are evaluated as case insensitive (`config case_sensitive = false`). After configuring the XQL query for your BIOC rule and the syntax is valid, a [image: valid-bioc.png] indication is displayed, and it is possible to add the BIOC rule.
+    2.  The XQL query field is where you define the parameters of your query for the BIOC rule. To help you create an effective XQL query, the search field provides suggestions as you type. The XQL query must at a minimum filter on the `event_type` field in order for it to be a valid BIOC rule. In addition, you can create BIOC rules using the `xdr_data` and `cloud_audit_log` datasets and presets for these datasets. Currently, you cannot create a BIOC rule on customized datasets and only the `filter` stage, `alter` stage, and functions without any aggregations are supported for XQL queries that define a BIOC. For BIOC rules, the field values in XQL are evaluated as case insensitive (`config case_sensitive = false`). After configuring the XQL query for your BIOC rule and the syntax is valid, a  indication is displayed, and it is possible to add the BIOC rule.
         
     3.  Click Test BIOC. Rules that you do not refine enough can generate thousands of issues. It is highly recommended that you test the behavior of a new or edited BIOC rule before you save it.
         
@@ -7715,30 +7555,30 @@ Supported investigation types
 
 To be eligible for conversion into a custom prevention rule, a BIOC rule must be based on one of the following investigation types:
 
--   file\_event
+-   file_event
     
--   process\_execution
+-   process_execution
     
--   remote\_code\_execution
+-   remote_code_execution
     
--   network\_event
+-   network_event
     
--   registry\_event
+-   registry_event
     
--   windows\_event\_log
+-   windows_event_log
     
--   module\_event
+-   module_event
     
 
 Available subtypes:
 
--   file\_event
+-   file_event
     
--   network\_event
+-   network_event
     
--   registry\_event
+-   registry_event
     
--   windows\_event\_log
+-   windows_event_log
     
 
 Query structure requirements
@@ -7749,7 +7589,7 @@ The structure of your XQL query is critical for custom prevention rule compatibi
     
 -   Select PANW as the vendor.
     
--   If you use action\_module\_signature\_vendor, the investigation type must be module\_event.
+-   If you use action_module_signature_vendor, the investigation type must be module_event.
     
 -   The `NOT IN` operator is not supported for custom prevention rule conversion. If you need to exclude certain values, structure your query to use positive matching, for example include `IN` with `AND` conditions, or use a regular expression that excludes the desired values.
     
@@ -7760,32 +7600,32 @@ The following table lists all fields supported for custom prevention rule conver
 
 | XQL Field | Supported Operating System |
 | --- | --- |
-| os\_actor\_process\_image\_path | Windows, macOS, Linux |
-| os\_actor\_process\_command\_line | Windows, macOS, Linux |
-| os\_actor\_process\_image\_md5 | Windows, macOS, Linux |
-| os\_actor\_process\_image\_sha256 | Windows, macOS, Linux |
-| os\_actor\_process\_os\_pid | Windows, macOS, Linux |
-| action\_evtlog\_description | Windows |
-| action\_evtlog\_message | Windows |
-| action\_evtlog\_provider\_name | Windows |
-| action\_evtlog\_username | Windows |
-| action\_registry\_key\_name | Windows |
-| action\_registry\_value\_name | Windows |
-| action\_registry\_data | Windows |
-| action\_module\_path | Windows |
-| action\_module\_md5 | Windows |
-| action\_module\_sha256 | Windows |
-| action\_module\_signature\_vendor | Windows |
-| actor\_process\_signature\_vendor | Windows |
-| causality\_actor\_process\_signature\_vendor | Windows |
-| os\_actor\_process\_signature\_vendor | Windows |
-| actor\_process\_signature\_status | Windows |
-| causality\_actor\_process\_signature\_status | Windows |
-| os\_actor\_process\_signature\_status | Windows |
-| action\_remote\_process\_image\_name | Windows |
-| action\_remote\_process\_image\_path | Windows |
-| action\_remote\_process\_image\_command\_line | Windows |
-| action\_remote\_process\_os\_pid | Windows |
+| os_actor_process_image_path | Windows, macOS, Linux |
+| os_actor_process_command_line | Windows, macOS, Linux |
+| os_actor_process_image_md5 | Windows, macOS, Linux |
+| os_actor_process_image_sha256 | Windows, macOS, Linux |
+| os_actor_process_os_pid | Windows, macOS, Linux |
+| action_evtlog_description | Windows |
+| action_evtlog_message | Windows |
+| action_evtlog_provider_name | Windows |
+| action_evtlog_username | Windows |
+| action_registry_key_name | Windows |
+| action_registry_value_name | Windows |
+| action_registry_data | Windows |
+| action_module_path | Windows |
+| action_module_md5 | Windows |
+| action_module_sha256 | Windows |
+| action_module_signature_vendor | Windows |
+| actor_process_signature_vendor | Windows |
+| causality_actor_process_signature_vendor | Windows |
+| os_actor_process_signature_vendor | Windows |
+| actor_process_signature_status | Windows |
+| causality_actor_process_signature_status | Windows |
+| os_actor_process_signature_status | Windows |
+| action_remote_process_image_name | Windows |
+| action_remote_process_image_path | Windows |
+| action_remote_process_image_command_line | Windows |
+| action_remote_process_os_pid | Windows |
 
 To configure a BIOC rule as a prevention rule:
 
@@ -7872,7 +7712,6 @@ To configure a BIOC rule as a prevention rule:
         -   In the Description field, you can see the rule name that generated the prevention issue.
 
 ##### Manage Global BIOC Rules
-Abstract
 
 Update and copy BIOC rules, and add rule exceptions in Cortex Cloud.
 
@@ -7911,7 +7750,6 @@ Add an exception to global BIOC rules
 You cannot edit global rules, but you can add exceptions to the rule. For more information about rule exceptions, see Add a rule exception.Add an IOC or BIOC rule exception
 
 #### What's a correlation rule?
-Abstract
 
 Correlation rules help you analyze correlations of multi-events from multiple sources by using the Cortex Query Language based engine for creating scheduled rules.
 
@@ -7931,7 +7769,6 @@ Some examples of events for which you might want to create correlation rules are
 After you configure your correlation rules, you can manage them in Threat Management → Detection Rules → Correlations, and view and analyze the generated issues in Cases and the Issues Table. In addition, issues generated by correlation rules are factored into the number of cases displayed in the dashboards.
 
 ##### Correlation rule details
-Abstract
 
 In the Correlation Rules page, you can view all of your enabled rules in a table format and the various fields displayed.
 
@@ -7976,7 +7813,7 @@ Certain fields are exposed and hidden by default. An asterisk (\*) is beside eve
 | ALERT CATEGORY\* | Type of issue as configured when creating the rule. Collection; Credential Access; Dropper; Evasion; Execution; Evasive; Exfiltration; File Privilege Manipulation; File Type Obfuscation; Infiltration; Lateral Movement; Persistence; Privilege Escalation; Reconnaissance; Tampering; Other |
 | DATASET\* | The text displayed here depends on the resulting action configured for the correlation rule when the rule was created. alerts—When your resulting action for the rule was configured to Generate issue.; Dataset name—When your resulting action for the rule was configured to Save to dataset. |
 | DESCRIPTION\* | The description for the Correlation Rule that was configured when the rule was created. |
-| DRILL-DOWN QUERY | Displays the Drill-Down Query that you configured for additional information about the issue for further investigation using Cortex Query Language (XQL) when you created the rule. If you did not configure one, the field is left empty. After configuration, any issue generated for the Correlation Rule has a right-click pivot menu Open Drilldown Query option, an Open drilldown query link after you investigate any contributing events, and a quick action Open Drilldown Query icon ([image: drilldown-icon.png]) that is accessible in the Issues page, which opens a new browser tab in XQL Search to run this query. If you do not define a Drill-Down Query, no right-click menu option, link, or icon is displayed. The Drill-Down Query Time Frame can be configured as either. Generated Issue—Uses the time frame of the issue that is generated, which is the first event and last event timestamps for the issue (default option).; XQL Search—Uses the time frame from when the Correlation Rule was run in XQL Search. |
+| DRILL-DOWN QUERY | Displays the Drill-Down Query that you configured for additional information about the issue for further investigation using Cortex Query Language (XQL) when you created the rule. If you did not configure one, the field is left empty. After configuration, any issue generated for the Correlation Rule has a right-click pivot menu Open Drilldown Query option, an Open drilldown query link after you investigate any contributing events, and a quick action Open Drilldown Query icon () that is accessible in the Issues page, which opens a new browser tab in XQL Search to run this query. If you do not define a Drill-Down Query, no right-click menu option, link, or icon is displayed. The Drill-Down Query Time Frame can be configured as either. Generated Issue—Uses the time frame of the issue that is generated, which is the first event and last event timestamps for the issue (default option).; XQL Search—Uses the time frame from when the Correlation Rule was run in XQL Search. |
 | FAILURE REASON | For a Correlation Rule with an error, displays the error message, which can be one of the following. Invalid query; Query timeout; Dependency correlation did not complete; Unknown error; Delayed rule—This rule is running past its scheduled time, which can cause delayed results.; Dataset does not exist: <name of dataset> \*\*Note:\*\* Only an administrator can create and view queries built with an unknown dataset that currently does not exist in Cortex Cloud. |
 | INSERTION DATE | Date and time when the Correlation Rule was created. |
 | LAST EXECUTION\* | Date and time when the correlation rule was last executed. Indicates a correlation rule with an error by displaying the last execution time in a red font and providing a description of the correlation rule Error when hovering over the field. |
@@ -7997,7 +7834,6 @@ Certain fields are exposed and hidden by default. An asterisk (\*) is beside eve
 | XQL SEARCH | Displays the XQL definition for the correlation rule that was configured in XQL Search when the rule was created. |
 
 ##### Create a correlation rule
-Abstract
 
 Create new correlation rules from either the Correlation Rules page or when building a query in XQL Search, or import a many correlation rules from a file.
 
@@ -8164,13 +8000,13 @@ Create a correlation rule from scratch
         For example.
         
         ```
-        The user $user\_name has made $count failed login requests to $dest in a 24 hours period
+        The user $user_name has made $count failed login requests to $dest in a 24 hours period
         ```
         
         Output.
         
         ```
-        The user lab\_admin has made 234 failed login requests to 10.10.32.44 in a 24 hours period
+        The user lab_admin has made 234 failed login requests to 10.10.32.44 in a 24 hours period
         ```
         
         **Note:**
@@ -8179,7 +8015,7 @@ Create a correlation rule from scratch
         
     -   Drill-Down Query (Optional): You can configure a Drill-Down Query for additional information about the issue for further investigation using XQL. This XQL query can accept parameters from the issue output for the Correlation Rule. Yet, keep in mind that when you create the Correlation Rule, Cortex Cloud does not know in advance if the parameters exist or contain the correct values. As a result, Cortex Cloud enables you to save the query, but the query can fail when you try and run it. You can also refer to field names using dollar signs (**`$`**) as explained in the Issue Description.
         
-        Once configured any issue generated for the Correlation Rule has a right-click pivot menu Open Drilldown Query option, an Open drilldown query link after you investigate a contributing event, and a quick action Open Drilldown Query icon ([image: drilldown-icon.png]) that is accessible in the Issues page, which opens a new browser tab in XQL Search to run this query. If you do not define a Drill-Down Query, no right-click pivot menu option, link, or icon is displayed.
+        Once configured any issue generated for the Correlation Rule has a right-click pivot menu Open Drilldown Query option, an Open drilldown query link after you investigate a contributing event, and a quick action Open Drilldown Query icon () that is accessible in the Issues page, which opens a new browser tab in XQL Search to run this query. If you do not define a Drill-Down Query, no right-click pivot menu option, link, or icon is displayed.
         
     -   Drill-Down Query Time Frame: Select the time frame used to run the Drill-Down Query from one of the following options, which provides more informative details about the issue generated by the Correlation Rule.
         
@@ -8282,7 +8118,6 @@ You can import a number of correlation rules from a JSON file. This facilitates 
 To import a file containing correlation rules, select Threat Management → Detection Rules → Correlations and click Import at the top right corner of the page.
 
 ##### Field replacement syntax in correlation rules
-Abstract
 
 Learn more about how to use field replacement syntax when creating correlation rules.
 
@@ -8292,9 +8127,7 @@ Standard field replacement
 
 Syntax
 
-```
 $<field>
-```
 
 Example 29. 
 
@@ -8355,9 +8188,7 @@ When field names contain characters that are not permitted in the standard `$<fi
 
 Syntax
 
-```
 $\`<field>\`
-```
 
 Example 32. 
 
@@ -8372,7 +8203,6 @@ If the Annual Sales Report - Q1 2025 field is a saved value containing `Executiv
 `Report Title: Executive Summary`
 
 ##### Manage correlation rules
-Abstract
 
 View and manage your correlation rules
 
@@ -8409,7 +8239,6 @@ Right-click actions for managing correlation rules
 -   Hide rows with ‘<Rule Description>’: Filter the correlation rules list to hide the correlation cules with a specific field value that you select in the table. On certain fields that are null, this option does not display.
 
 ##### Monitor correlation rules
-Abstract
 
 You can monitor your correlation executions with the `correlations_auditing` dataset.
 
@@ -8426,16 +8255,16 @@ In the `correlations_auditing` dataset, audit entries are added as follows:
 
 **Note:**
 
-In the dataset, the Query start time and Query end time indicate the time frame of the data that was queried. The actual start and end times of the correlation rule execution are recorded in the \_time field for the Initiated and Completed entries.
+In the dataset, the Query start time and Query end time indicate the time frame of the data that was queried. The actual start and end times of the correlation rule execution are recorded in the _time field for the Initiated and Completed entries.
 
-###### Field descriptions for the correlations\_auditing dataset
+###### Field descriptions for the correlations_auditing dataset
 
-The following table describes the fields in the correlations\_auditing dataset:
+The following table describes the fields in the correlations_auditing dataset:
 
 | Field | Description |
 | --- | --- |
-| \_time | Timestamp of the audit. For entries with an Initiated or Initiated Manually status, this is the start time of the correlation rule execution. For entries with a Completed or Error status, this is the end time of the rule execution. |
-| \_id | Unique identifier of the audit entry. |
+| _time | Timestamp of the audit. For entries with an Initiated or Initiated Manually status, this is the start time of the correlation rule execution. For entries with a Completed or Error status, this is the end time of the rule execution. |
+| _id | Unique identifier of the audit entry. |
 | Rule ID | Unique identification number for the correlation rule. |
 | Name | Correlation rule name. |
 | Status | The status of the correlation rule query. Possible values are Initiated, Initiated Manually, Completed, and Error. |
@@ -8463,7 +8292,6 @@ The following table describes the fields in the correlations\_auditing dataset:
 | Alert name | Name of the issue that the correlation rule will generate. |
 
 ##### Troubleshoot server errors in scheduled correlation rules
-Abstract
 
 Learn more about how to troubleshoot server errors in scheduled correlation rules.
 
@@ -8506,9 +8334,7 @@ Error related to the alert
 
 Error message
 
-```
 A server error occurred while generating the alert.
-```
 
 Steps to perform
 
@@ -8525,7 +8351,7 @@ This error typically points to issues with the output alert configuration's comp
         Limits the length of the calculated `array_field` field to return only the first 1000 elements:
         
         ```
-        arrayrange(array\_field, 0, 1000)
+        arrayrange(array_field, 0, 1000)
         ```
         
           
@@ -8537,7 +8363,7 @@ This error typically points to issues with the output alert configuration's comp
         Limits the length of the `string_field` field, which is set to an unlimited length, to return the first 1000 characters:
         
         ```
-        rtrim(string\_field, len(string\_field) - 1000)
+        rtrim(string_field, len(string_field) - 1000)
         ```
         
           
@@ -8563,7 +8389,6 @@ If the steps explained above don't resolve the issue, contact our support team a
 -   A list of the troubleshooting steps you've already attempted from the list provided above.
 
 #### Manage IOC and BIOC rules
-Abstract
 
 Edit, export, copy, disable, or remove rules, and add rule exceptions for existing indicators in Cortex Cloud.
 
@@ -8682,7 +8507,6 @@ When a BIOC rule is disabled automatically by Cortex Cloud, for example due to t
 You can re-enable a rule granularly for detection, prevention, or both in the same way.
 
 #### Attack surface rules
-Abstract
 
 Attack surface rules identify and assign severity to risks in your attack surface.
 
@@ -8701,7 +8525,6 @@ Right-click any row in the Attack Surface Rules table to perform the following a
 ## Analytics
 
 ### Analytics overview
-Abstract
 
 Cortex Cloud uses an Analytics engine to examine logs and data from your sensors.
 
@@ -8746,36 +8569,18 @@ To detect anomalous behavior, Cortex Cloud can analyze logs and data from a vari
 #### Coverage of MITRE Attack tactics
 Network attacks follow predictable patterns. If you interfere with any portion of this pattern, you can neutralize the attack. The adversarial behaviors making up these patterns are collected in a universally accessible, continuously updated knowledge base called the [MITRE ATT&CK™ knowledge base of tactics](https://attack.mitre.org/).
 
-[image: attack-tactics.png]
-
 The Analytics Engine can generate an issue for any of the following attack tactics as defined in the MITRE Attack database.
 
 | Tactic | Description |
 | --- | --- |
 | Execution | After attackers gain a foothold in your network, they can use various techniques to execute malicious code on a local or remote endpoint. Cortex Cloud detects malware and grayware on your network using a combination of network activity, endpoint data from your Cortex XDR agents, and evaluation of suspicious files using the WildFire cloud service. |
-| 
-Persistence
-
- | To carry out a malicious action, an attacker can try techniques that maintain access in a network or on an endpoint. An attacker can initiate configuration changes—such as a system restart or failure—that require the endpoint to restart a remote access tool or open a back door that allows the attacker to regain access on the endpoint. |
-| 
-
-Discovery
-
- | When an attacker has access to a part of your network, they use discovery techniques to explore and identify subnets, servers and services that are hosted on those endpoints. They aim to identify vulnerabilities within your network. Cortex Cloud detects these tactics by looking for indicators in your internal network traffic such as changes in connectivity patterns, including increased rates of connections, failed connections, and port scans. |
-| 
-
-Lateral Movement
-
- | To expand the footprint inside your network, an attacker uses lateral movement techniques to obtain credentials for additional access to more data in the network. The Analytics Engine detects attacks during this phase by examining administrative operations (such as SSH, RDP, and HTTP), file share access, and user credential usage that is beyond the norm for your network. Cortex Cloud looks for indicators like increased administrative activity, SMB usage, and remote code execution. |
-| 
-
-Command and Control
-
- | The command and control tactic allows an attacker to remotely issue commands to an endpoint and receive information from it. The Analytics Engine identifies intruders using this tactic by looking for anomalies in outbound connections, DNS lookups, and endpoint processes with bound ports. Cortex Cloud detects unexplained changes in the periodicity of connections and failed DNS lookups, changes in random DNS lookups, and other indicators that suggest an attacker has gained initial control of a system. |
+| Persistence | To carry out a malicious action, an attacker can try techniques that maintain access in a network or on an endpoint. An attacker can initiate configuration changes—such as a system restart or failure—that require the endpoint to restart a remote access tool or open a back door that allows the attacker to regain access on the endpoint. |
+| Discovery | When an attacker has access to a part of your network, they use discovery techniques to explore and identify subnets, servers and services that are hosted on those endpoints. They aim to identify vulnerabilities within your network. Cortex Cloud detects these tactics by looking for indicators in your internal network traffic such as changes in connectivity patterns, including increased rates of connections, failed connections, and port scans. |
+| Lateral Movement | To expand the footprint inside your network, an attacker uses lateral movement techniques to obtain credentials for additional access to more data in the network. The Analytics Engine detects attacks during this phase by examining administrative operations (such as SSH, RDP, and HTTP), file share access, and user credential usage that is beyond the norm for your network. Cortex Cloud looks for indicators like increased administrative activity, SMB usage, and remote code execution. |
+| Command and Control | The command and control tactic allows an attacker to remotely issue commands to an endpoint and receive information from it. The Analytics Engine identifies intruders using this tactic by looking for anomalies in outbound connections, DNS lookups, and endpoint processes with bound ports. Cortex Cloud detects unexplained changes in the periodicity of connections and failed DNS lookups, changes in random DNS lookups, and other indicators that suggest an attacker has gained initial control of a system. |
 | Exfiltration | Exfiltration tactics are techniques used to retrieve data from a network, such as valuable enterprise data. Cortex Cloud identifies this type of attack by examining outbound connections with a focus on the volume of data being transferred. Increases in this volume are an important symptom of data exfiltration. |
 
 #### Review MITRE ATT&CK framework coverage
-Abstract
 
 You can see a breakdown of the protection modules and detection rules in place for each MITRE tactic and technique on the MITRE ATT&CK Framework Coverage dashboard. Review the elements that affect your coverage, and identify coverage gaps in your framework.
 
@@ -8829,7 +8634,6 @@ The Cortex Cloud Analytics engine generates an issue when it detects suspicious 
 In addition to standard Analytics issues, there is another category of issues generated by _Analytics behavioral indicators of compromise (ABIOCs)_. In contrast to standard Analytics issues, Analytics BIOCs (ABIOCs)—indicate a single event of suspicious behavior with an identified chain of causality. To identify the context and chain of causality, ABIOCs leverage user, endpoint, and network profiles. The profile is generated by the Analytics Engine and can be based on a simple statistical profile or a more complex machine-learning profile. Cortex Cloud tailors each ABIOC to your specific environment after analyzing your logs and data sources and continually tunes and delivers new ABIOCs with content updates.
 
 #### View and manage Analytics rules
-Abstract
 
 View and manage all Analytics rules
 
@@ -8943,10 +8747,9 @@ To enable Identity Analytics, you must first:
 -   Activate Cortex Cloud Analytics
     
 
-After configuring your Cloud Identity Engine instance and Cortex Cloud Analytics, select Settings ([image: 403822_spr.png]) → Configurations → Cortex Cloud - Analytics, and in the Featured in Analytics section, Enable Identity Analytics.
+After configuring your Cloud Identity Engine instance and Cortex Cloud Analytics, select Settings () → Configurations → Cortex Cloud - Analytics, and in the Featured in Analytics section, Enable Identity Analytics.
 
 #### Identity Threat Module (ITDR)
-Abstract
 
 Identity threat coverage targeting compromised accounts and insider threats
 
@@ -9063,7 +8866,6 @@ Granting access and configuration permissions for API security capabilities in t
 -   **Workload owner**: Application owners are responsible for building and modifying their applications, and they need to understand what is required to align their assets and API endpoints with established security standards. Their goal is to apply necessary fixes to achieve a consistent and secure posture.
 
 ## Personas workflow
-Abstract
 
 Cortex API security distributes responsibilities across SOC analysts, security practitioners, and workload owners.
 
@@ -9155,15 +8957,15 @@ The following fields are exposed in the Endpoints table. To add table properties
 | API Category | Associated category of the API. For example, the API could be associated with **Payment**. |
 | HTTP method | The supported HTTP method. |
 | Risk factors | Indication of the risk type associated with the API:
-| Internet Exposure ([image: internet_exposure_icon.png]) | No Authentication ([image: no_authentication.png]) | Insecure Encryption |
+| Internet Exposure () | No Authentication () | Insecure Encryption |
 | --- | --- | --- |
-| Sensitive Data ([image: sensitive_data.png]) | No Encryption ([image: no_encryption.png]) | Unknown Encryption |
+| Sensitive Data () | No Encryption () | Unknown Encryption |
 
  |
 | API spec name | API specification name is obtained from the `title` field of the specification imported to Cortex Cloud. |
 | API spec conformance | Indicates if the endpoint was found/not found in the specification. Undefined: Indicates that the endpoint from the gateway is not found in any known specification document.; Match: Indicates there's a match between the API path of the endpoint and a specification.; Mismatch: Indicates that the API path is the same in the endpoint and specification, but there is a missing query parameter in the specification.; Conflict: Indicates when the API endpoint matches more than one API specification file. |
 | Provider | Gateway provider. |
-| Source | Indicates the service from which the data was obtained: Kong; Apigee; F5 BIG-IP LTM; Configuration [image: source_configuration.png]: Indicates that the source is from the API specification.; Amazon API gateway; Azure API Management; XDR agent |
+| Source | Indicates the service from which the data was obtained: Kong; Apigee; F5 BIG-IP LTM; Configuration : Indicates that the source is from the API specification.; Amazon API gateway; Azure API Management; XDR agent |
 | Inspected | Number of requests or connections that have been analyzed and verified by Cortex Cloud. |
 | Request/Response sensitive data | Shows the sensitive data type in the request/response, such as passwords, credit card numbers, SSNs, or bank account numbers. Refer to What is Cortex Cloud Data Classification? for more information.What is Cortex Cloud Data Classification? \*\*Note:\*\* Data classification findings are only available for enabled profiles. |
 | Request/Response content types | Data format sent/received in the request/response of the API calls. application/json; application/xml; application/x-www-form-urlencoded; multipart/form-data |
@@ -9192,7 +8994,7 @@ Shows the highlights and properties of the API endpoint.
 | Cloud region | Region of the cloud provider. |
 | Asset groups | Assigned asset groups to the API endpoint. |
 | Applications | Shows the business applications related to the API endpoint. Clicking the application opens the business application page.Business application assets \*\*Note:\*\* To link APIs to business applications, the two prerequisites must be met: The VM must have XDR agent with WAAS enabled.; Applications must be defined in Application Security Posture Management (ASPM).Application Security Posture Management (ASPM) |
-| Relations | The Relations graph shows the connections between the API endpoint, API gateway, and VMs. This mirrors what's shown in the Graph Search.Graph Search Click the API Gateway or API Endpoint to view more details about the asset. [image: relations_search_graph] |
+| Relations | The Relations graph shows the connections between the API endpoint, API gateway, and VMs. This mirrors what's shown in the Graph Search.Graph Search Click the API Gateway or API Endpoint to view more details about the asset.  |
 | Account ID | Cloud account ID. |
 | Cases/Issues/Findings | The link from the number opens the page where you can review the details. Refer to Cases and issues for detailed information.Cases and issues You can view all API security issues and cases detected by Cortex Cloud. |
 | **Related Assets** Shows the data from the source of the traffic. If the source of the traffic is from the gateway, the related asset data shows AWS API Gateway or Azure Gateway, the name of the gateway, and the stage.; If the source of the traffic is from a specification from the gateway, the related asset data shows the API specification, the name of the specification, and the gateway provider.; If the source of the traffic is from the XDR agent, the related asset data shows the agent ID. |
@@ -9306,7 +9108,7 @@ The following outlines the streamlined actions a SOC analyst takes when detectin
             Click Run to run a preconfigured XQL query.
             
         
-        [image: issues_api_endpoints_page]
+        
         
     
 
@@ -9323,7 +9125,6 @@ The following outlines the streamlined actions a SOC analyst takes when detectin
     -   **Improvement**: Conduct post-incident review, update policies/playbooks, and recommend security enhancements.
 
 ### Configure API security from end to end
-Abstract
 
 Secure your API landscape through third-party integrations and agent-based protection policies.
 
@@ -9345,7 +9146,7 @@ Settings in Cortex Cloud
 
 In Cortex Cloud, set up the AWS API Gateway data source to integrate with the AWS API Gateway.
 
-1.  From Settings → Data Sources , click [image: add_data_source.png] and search for AWS API Gateway and then click Connect or Connect Another Instance.
+1.  From Settings → Data Sources , click  and search for AWS API Gateway and then click Connect or Connect Another Instance.
     
 2.  In the AWS API Collector wizard, enter a relevant name and click Create and Proceed.
     
@@ -9450,11 +9251,11 @@ Configure the settings in the AWS Management Console to integrate with Cortex Cl
     
     ```
     aws logs put-subscription-filter \\
-        --log-group-name "<YOUR\_LOG\_GROUP\_NAME>" \\
-        --filter-name "<any\_filter\_name>" \\
+        --log-group-name "<YOUR_LOG_GROUP_NAME>" \\
+        --filter-name "<any_filter_name>" \\
         --filter-pattern "" \\
-        --destination-arn "arn:aws:firehose:region:123456789012:deliverystream/<YOUR\_DELIVERY\_STREAM>" \\
-        --role-arn "arn:aws:iam::<ACCOUNT\_ID>:role/<YOUR\_IAM\_ROLE>"
+        --destination-arn "arn:aws:firehose:region:123456789012:deliverystream/<YOUR_DELIVERY_STREAM>" \\
+        --role-arn "arn:aws:iam::<ACCOUNT_ID>:role/<YOUR_IAM_ROLE>"
     ```
     
     **Important:**
@@ -9565,7 +9366,7 @@ Follow the steps to configure the policy.
     
     1.  You can create a policy on a specific API or choose to create a policy on all APIs.
         
-    2.  From Inbound Processing, click [image: code_bracket.png].
+    2.  From Inbound Processing, click .
         
         The Policies screen opens. There are three sections:
         
@@ -9699,11 +9500,11 @@ The steps include the prerequisites that run the automated script that deploys f
     
     | Variable | Description |
     | --- | --- |
-    | PROJECT\_ID | Google project ID where Apigee is provisioned. |
-    | ORG | Apigee organization. By default, this is the same as PROJECT\_ID. |
+    | PROJECT_ID | Google project ID where Apigee is provisioned. |
+    | ORG | Apigee organization. By default, this is the same as PROJECT_ID. |
     | ENV | In Apigee, from the left-side menu, click Environments and copy the name of the environment you want to use. |
-    | TARGET\_URL | Copy the URL for your Apigee Collector from the Custom Collectors page. For example, `https://api-{tenant external URL}/logs/v1/event.` |
-    | APIsec\_API\_KEY | Token generated from Cortex Cloud. |
+    | TARGET_URL | Copy the URL for your Apigee Collector from the Custom Collectors page. For example, `https://api-{tenant external URL}/logs/v1/event.` |
+    | APIsec_API_KEY | Token generated from Cortex Cloud. |
     
 2.  Check that the GCP user running the script has `IAM` permissions.
     
@@ -9743,14 +9544,14 @@ The steps include the prerequisites that run the automated script that deploys f
     
 6.  (Optional) Exclude unwanted domains from being tracked by APIsec:
     
-    1.  Uncomment: DOMAIN\_EXCLUSION\_LIST.
+    1.  Uncomment: DOMAIN_EXCLUSION_LIST.
         
     2.  Add the domains to exclude.
         
     3.  Edit `deploy.sh` and set the following variables:
         
         ```
-        export DOMAIN\_EXCLUSION\_LIST="domain1,domain2"
+        export DOMAIN_EXCLUSION_LIST="domain1,domain2"
         ```
         
 7.  Discontinue the integration:
@@ -9758,8 +9559,8 @@ The steps include the prerequisites that run the automated script that deploys f
     1.  Edit `undeploy.sh`:
         
         ```
-        export PROJECT\_ID=example-project-id
-        export ORG=$PROJECT\_ID
+        export PROJECT_ID=example-project-id
+        export ORG=$PROJECT_ID
         export ENVIRONMENT=example-env
         ```
         
@@ -9823,21 +9624,21 @@ If you have an existing hookand would like to integrate with the shared flow, ru
         
         ```
         configuration:
-          active\_configuration: 
+          active_configuration: 
           properties:
             compute:
               region: 
               zone:     
         core:
               account: 
-              disable\_usage\_reporting: 
+              disable_usage_reporting: 
               project: 
         credential:
-          access\_token: **<Copy this value>**
-          id\_token: 
-          token\_expiry: 
+          access_token: **<Copy this value>**
+          id_token: 
+          token_expiry: 
         sentinels:
-          config\_sentinel: 
+          config_sentinel: 
         ```
         
     2.  Copy the `<access_token>` value from the output.
@@ -9849,7 +9650,7 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     "https://apigee.googleapis.com/v1/organizations/
     <ORG>/environments/<ENVIRONMENT>/resourcefiles/
     properties" -H 
-    "Authorization: Bearer <access\_token from above>"
+    "Authorization: Bearer <access_token from above>"
     ```
     
 4.  Generate Key Value Map (KVM), which stores the Cortex API key that's encrypted
@@ -9858,7 +9659,7 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     curl --silent -X POST 
     "https://apigee.googleapis.com/v1/organizations/
     <ORG>/environments/<ENVIRONMENT>/keyvaluemaps" -H 
-    "Authorization: Bearer <access\_token from above>" 
+    "Authorization: Bearer <access_token from above>" 
     -H "Content-Type: application/json" --data-raw 
     '{"name": "'"APISec-KVM"'", "encrypted": true}'
     ```
@@ -9869,8 +9670,8 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     curl --silent -X DELETE 
     "https://apigee.googleapis.com/v1/organizations/
     <ORG>/environments/<ENVIRONMENT>/keyvaluemaps/
-    $APISEC\_KVM\_NAME" -H "Authorization: Bearer 
-    <access\_token from above>"
+    $APISEC_KVM_NAME" -H "Authorization: Bearer 
+    <access_token from above>"
     ```
     
     Add the Cortex API key entry to the created KVM.
@@ -9878,8 +9679,8 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     ```
     curl --silent -X POST "https://apigee.googleapis.com/
     v1/organizations/<ORG>/environments/<ENVIRONMENT>/
-    keyvaluemaps/$APISEC\_KVM\_NAME/entries" -H 
-    "Authorization: Bearer <access\_token from above>" 
+    keyvaluemaps/$APISEC_KVM_NAME/entries" -H 
+    "Authorization: Bearer <access_token from above>" 
     -H "Content-Type: application/json" --data-raw 
     '{"name": "api-key","value": "'"<Generated key 
     from cortex env>"'"}'
@@ -9901,7 +9702,7 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     ```
     curl --silent -X POST --data-binary "<sf>.zip" -H 
     "Content-Type: application/octet-stream" -H 
-    "Authorization: Bearer <access\_token from above>" 
+    "Authorization: Bearer <access_token from above>" 
     "https://apigee.googleapis.com/v1/organizations/$ORG/
     sharedflows?action=import&name=<sf>"
     ```
@@ -9913,7 +9714,7 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     ```
     curl --silent -X GET "https://apigee.googleapis.com/
     v1/organizations/<ORG>/sharedflows/<sf>" -H 
-    "Authorization: Bearer <access\_token from above>"
+    "Authorization: Bearer <access_token from above>"
     ```
     
     Output:
@@ -9926,9 +9727,9 @@ If you have an existing hookand would like to integrate with the shared flow, ru
         "subType": "SharedFlow"
       },
       "name": "sf-api-sec-extension-postflow",
-      "revision": \[
+      "revision": [
         "1" // This is the revision number
-      \],
+      ],
       "latestRevisionId": "1"
     }
     ```
@@ -9937,7 +9738,7 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     
     ```
     curl --silent -X POST -H "Authorization: 
-    Bearer <access\_token from above>" 
+    Bearer <access_token from above>" 
     "https://apigee.googleapis.com/
     v1/organizations/$ORG/environments/<ENVIRONMENT>/
     sharedflows/$sf/revisions/<REVISION>/
@@ -10057,15 +9858,15 @@ Example 36. Kong as docker container
     This can be done by passing the following arguments to the `docker run` command, assuming `./plugin_directory/kong` is the directory containing the `plugins/panw-apisec-http-log/ directory`.
     
     ```
-    \-v "./plugin\_directory/kong:/tmp/custom\_plugins/kong" \\
-    -e "KONG\_LUA\_PACKAGE\_PATH=/tmp/custom\_plugins/?.lua;;" \\
-    -e "KONG\_PLUGINS=bundled,panw-apisec-http-log"
+    \-v "./plugin_directory/kong:/tmp/custom_plugins/kong" \\
+    -e "KONG_LUA_PACKAGE_PATH=/tmp/custom_plugins/?.lua;;" \\
+    -e "KONG_PLUGINS=bundled,panw-apisec-http-log"
     ```
     
     You may want to adjust the size of the nginx body buffer which is used by Kong internally. This size sets the upper limit on the amount of HTTP body bytes that can be mirrored by the plugin. By default, this value is 8192 bytes (8 KB). To change it, another argument can be passed to the docker - for example, setting it to 128 KB:
     
     ```
-    \-e "KONG\_NGINX\_HTTP\_CLIENT\_BODY\_BUFFER\_SIZE=128k"
+    \-e "KONG_NGINX_HTTP_CLIENT_BODY_BUFFER_SIZE=128k"
     ```
     
     See [https://nginx.org/en/docs/syntax.html](http://%20https://nginx.org/en/docs/syntax.html) for information on the allowed values of this variable.
@@ -10077,7 +9878,7 @@ Example 36. Kong as docker container
 2.  To verify that the plugin is installed, query Kong’s Admin API using the following command:
     
     ```
-    curl admin-api-hostname:8001 | jq .configuration.loaded\_plugins.'"panw-apisec-http-log"'
+    curl admin-api-hostname:8001 | jq .configuration.loaded_plugins.'"panw-apisec-http-log"'
     ```
     
     This prints **true** to the terminal if the plugin is loaded into the Kong instance.
@@ -10116,7 +9917,7 @@ Add and configure the plugin.
     | Tags | An optional set of strings for grouping and filtering, \*\*Note:\*\* Use commas to separate tags. | Empty |
     | Keepalive | An optional value in milliseconds that defines how long an idle connection will live before being closed. | 60000 (60 seconds) |
     | Timeout | An optional timeout in milliseconds when sending data to Cortex. | 10000 (10 seconds) |
-    | Max body size | The maximum body size to mirror in bytes (for example: 1024 is 1KB). Any bytes beyond this size are omitted from the request and response bodies. Must be <= 4 MB and <= the value of Kong's nginx\_http\_client\_body\_buffer\_size setting. | 131072 (128 KB), or the nginx body buffer size if it’s smaller. |
+    | Max body size | The maximum body size to mirror in bytes (for example: 1024 is 1KB). Any bytes beyond this size are omitted from the request and response bodies. Must be <= 4 MB and <= the value of Kong's nginx_http_client_body_buffer_size setting. | 131072 (128 KB), or the nginx body buffer size if it’s smaller. |
     | Queue Concurrency Limit | The number of queue delivery timers. -1 indicates unlimited. | 1 |
     | Queue.Initial Retry Delay | Time in seconds before the initial retry is made for a failing batch. | 0.01 (10 milliseconds) |
     | Queue.Max Batch Size | Maximum number of entries that can be processed at a time. | 1 |
@@ -10179,7 +9980,7 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
     
     **LX Workspaces**:
     
-    -   Click Import. In the General Properties page, enter a Name and for Source, select apisec\_bigip\_plugin\_tar.gz .
+    -   Click Import. In the General Properties page, enter a Name and for Source, select apisec_bigip_plugin_tar.gz .
         
         **Note:**
         
@@ -10187,9 +9988,9 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
         
     -   In the General Properties page, enter:
         
-        -   Name: Enter the name panw\_apisec\_workspace.
+        -   Name: Enter the name panw_apisec_workspace.
             
-        -   Source: Select apisec\_bigip\_plugin\_tar.gz.
+        -   Source: Select apisec_bigip_plugin_tar.gz.
             
         
     -   Select Import to import the plugin.
@@ -10201,9 +10002,9 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
         
     -   In the General Properties page, enter:
         
-        -   Name: Enter panw\_apisec\_plugin.
+        -   Name: Enter panw_apisec_plugin.
             
-        -   From Workspace: Select panw\_apisec\_workspace.
+        -   From Workspace: Select panw_apisec_workspace.
             
         
     -   Click Finished.
@@ -10211,36 +10012,36 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
     
 4.  Navigate to System → File Management → Data Group File List → Import.
     
-    -   From File Name, select the panw\_apisec\_config.txt file that was extracted from the zip that was downloaded from Cortex Cloud.
+    -   From File Name, select the panw_apisec_config.txt file that was extracted from the zip that was downloaded from Cortex Cloud.
         
-    -   In the Name field, select Create New and enter panw\_apisec\_config.
+    -   In the Name field, select Create New and enter panw_apisec_config.
         
     -   From File Contents, select String.
         
-    -   For Data Group Name, enter panw\_apisec\_config.
+    -   For Data Group Name, enter panw_apisec_config.
         
     -   Click Import.
         
     
 5.  Navigate to System → File Management → Data Group File List.
     
-    -   Click panw\_apisec\_config.
+    -   Click panw_apisec_config.
         
     -   In Definition, fill in the values for the following:
         
         ```
-        "context\_account\_id" := "",
-        "context\_provider" := "",
-        "context\_region" := "",
-        "cortex\_collector\_key" := "",
-        "cortex\_collector\_url" := "",
+        "context_account_id" := "",
+        "context_provider" := "",
+        "context_region" := "",
+        "cortex_collector_key" := "",
+        "cortex_collector_url" := "",
         ```
         
         -   Paste the F5 VIG-IP LTM Collector key you copied from Cortex Cloud in the `"cortex_collector_key"`.
             
-        -   From Cortex Cloud, go to Data Sources & Integrations and from F5 BIG\_IP LTM , copy the API URL and paste it in the `"cortex_collector_url"`.
+        -   From Cortex Cloud, go to Data Sources & Integrations and from F5 BIG_IP LTM , copy the API URL and paste it in the `"cortex_collector_url"`.
             
-            [image: F5_data_source.png]
+            
             
         -   The `context_account_id`, `context_provider`, and `context_region` depend on the cloud environment. In this instance, AWS is the example:
             
@@ -10252,11 +10053,11 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
                 
             
             ```
-            "context\_account\_id" := "12345",
-            "context\_provider" := "AWS",
-            "context\_region" := "us-east-2",
-            "cortex\_collector\_key" := "collector key",
-            "cortex\_collector\_url" := "API URL",
+            "context_account_id" := "12345",
+            "context_provider" := "AWS",
+            "context_region" := "us-east-2",
+            "cortex_collector_key" := "collector key",
+            "cortex_collector_url" := "API URL",
             ```
             
         -   Click Update.
@@ -10269,11 +10070,11 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
         
     -   In the Resources tab, under iRules, click Manage.
         
-    -   From the Available list, navigate to /Common/panw\_apisec\_plugin and select panw\_apisec\_data\_collection and panw\_apisec\_set\_ssl\_data , and then click the left arrow button to move them to the Enabled list.
+    -   From the Available list, navigate to /Common/panw_apisec_plugin and select panw_apisec_data_collection and panw_apisec_set_ssl_data , and then click the left arrow button to move them to the Enabled list.
         
         **Note:**
         
-        Select panw\_apisec\_set\_ssl\_data only if your client SSL profile is enabled.
+        Select panw_apisec_set_ssl_data only if your client SSL profile is enabled.
         
     -   Click Finished.
         
@@ -10283,7 +10084,6 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
 7.  Test the request/response and verify that the logs are sent to Cortex Cloud. This can be verified by checking that the counter has increased. The scanned API endpoint metadata from f5-bigip is ready for investigation in the API inventory.
 
 #### Agent-based protection
-Abstract
 
 Protect your workloads from various types of injection attacks, exploitation attempts, known vulnerabilities, automated tools, and more.
 
@@ -10355,7 +10155,6 @@ The following limitations currently exist for WAAS protection features:
     -   gRPC
 
 ##### Set up Web and API Security profiles
-Abstract
 
 Web and API Security profiles provide comprehensive real-time detection and protection for web-based applications and APIs running on Linux-based workloads.
 
@@ -10434,7 +10233,6 @@ Create a new policy rule from the Policy Rules page
 3.  Configure a new policy that includes your new profile.
 
 ##### Apply Web and API Security profiles to workloads
-Abstract
 
 Learn how to apply Web and API Security profiles to workloads, using policies.
 
@@ -10495,7 +10293,6 @@ Each policy you create must apply to one or more workload or workload groups. Th
     The exported file is encoded in Base64 and cannot be edited.
 
 ##### Manage Web and API Security prevention profiles
-Abstract
 
 You can manage the Web and API Security prevention profiles in various ways, including editing, duplicating, and populating prevention policy rules.
 
@@ -10580,7 +10377,6 @@ The following table displays the fields that are available on the Prevention Pro
 | Usage Count | The number of policy rules that use the profile. If you want to delete a profile, ensure that this cell displays "0". |
 
 ##### Add a disable prevention rule for cloud workloads
-Abstract
 
 You can create granular exceptions to prevention actions defined for your cloud workloads.
 
@@ -10643,7 +10439,6 @@ You can create granular exceptions to prevention actions defined for your worklo
 12.  Review the configurations for the exception, and if the risks are acceptable to you, select I understand the risk, and then click Create.
 
 ##### Add a support exception rule for cloud workloads
-Abstract
 
 Learn how to add a support exception rule.
 
@@ -10663,7 +10458,6 @@ You can define and manage exceptions based on files received from the customer s
 4.  Click Import.
 
 ##### Add a legacy exception rule for cloud workloads
-Abstract
 
 Learn how to use Cortex Cloud Legacy Exception rules to configure an exception to prevention and protection modules on cloud workloads for selected profiles.
 
@@ -10702,7 +10496,6 @@ Items included in allow lists may continue to generate Cortex Cloud security eve
     Your rule is created, and can be viewed at the following location: Settings → Exceptions Configuration → Legacy Agent Exceptions.
 
 ##### Additional workload management tasks
-Abstract
 
 Several management activities that can be performed on workloads are accessible from Inventory → Endpoints → All Endpoints and from Inventory → Endpoints → Groups.
 
@@ -10731,7 +10524,7 @@ The following table describes the fields that are available for each API specifi
 
 Click the API asset to open the side card. Each tab includes detailed information from the parsed data of the API.
 
-You can add Comments ([image: api_specification_comments.png]) to the specification, providing additional context about the API endpoints or other relevant information.
+You can add Comments () to the specification, providing additional context about the API endpoints or other relevant information.
 
 #### Overview
 
@@ -10807,20 +10600,16 @@ Cortex Cloud enables you to import YAML or JSON files. After importing the file,
 # Review inventory and explore your cloud environment
 
 ## Asset management
-Abstract
 
 A comprehensive overview and management interface for all assets in your environment, ensuring complete visibility, control, and protection.
 
 A comprehensive overview and management interface for all assets in your environment, ensuring complete visibility, control, and protection.
 
 ### All Assets
-Abstract
 
 Learn about the All Assets page, under Asset Inventory.
 
 The All Assets page provides a centralized repository containing information about all assets within your environment, including enterprise, multi-cloud, code, and external surfaces. Dedicated asset modules allow multi-method asset coverage, such as agent, agentless, logs, from various sources. Having full visibility of assets allows for timely incident response, effective threat hunting, and attack surface reduction.
-
-[image: AssetInventory2__1_.gif]
 
 The asset card provides a unified view of an asset, consolidating attributes, enhancements, and related cases, issues, or findings. The Highlights section provides an overview of the security risks associated with the asset. When you click an asset, the asset card opens in a tab, enabling users to easily switch between multiple asset cards at the same time.
 
@@ -11040,7 +10829,6 @@ Applications
 The Applications tab identifies any embedded applications within the image, helping you assess security risks associated with the bundled software.
 
 #### Kubernetes Cluster
-Abstract
 
 Learn about the Kubernetes Cluster feature, under the Asset Inventory page.
 
@@ -11096,7 +10884,7 @@ _VM images Table:_ The VM images table displays all the VM images added to your
 | Provider | Cloud Account Provider |
 | Name | Name of the VM image |
 | Region | Geographical location within a cloud provider's infrastructure where that VM image is located |
-| Architecture | Architecture of the VM image. For example: x86\_64 |
+| Architecture | Architecture of the VM image. For example: x86_64 |
 | Image OS | The OS distribution version. For example: 2020 or 20 |
 | OS Distribution | Operating System distribution details |
 | Operating System  | Operating System on the VM image |
@@ -11138,7 +10926,6 @@ Vulnerabilities\- Lists all the vulnerability findings during VM image scans.
 Packages - All the packages with related vulnerabilities found during the VM image scans.
 
 #### Cortex Cloud discovery catalog
-Abstract
 
 Cortex Cloud discovers assets across CSPs by querying APIs to build a complete inventory and provide visibility.
 
@@ -11161,14 +10948,13 @@ Criteria for inclusion
 
 A resource is included as a distinct asset in the catalog only if it meets a specific criterion:
 
--   The Resource Ingestion Template (RIT) used to discover the resource must have a defined resource\_type.
+-   The Resource Ingestion Template (RIT) used to discover the resource must have a defined resource_type.
     
--   If the resource\_type field is blank, the information gathered may be used to enrich other assets, but it will not create a new, standalone asset in the catalog.
+-   If the resource_type field is blank, the information gathered may be used to enrich other assets, but it will not create a new, standalone asset in the catalog.
     
 -   The asset information is structured using a Class > Category > Type hierarchy.
 
 ### Network configuration
-Abstract
 
 Cortex Cloud Network Configuration provides a representation of your network assets by collecting and analyzing your network resources.
 
@@ -11198,7 +10984,6 @@ With the data aggregated by Cortex Cloud Network Configuration, you can locate a
 -   Monitor network data communications both within and outside your network.
 
 #### Configure your network parameters
-Abstract
 
 Define the IP address ranges and domain names used by Cortex Cloud to identify your network assets.
 
@@ -11240,7 +11025,7 @@ Internal IP address ranges and domain names must be defined in order to track an
     
 2.  In the Internal Domain Suffixes section, +Add the domain suffix you want to include as part of your internal network. For example, **`acme.com`**.
     
-3.  Select [image: network-mapper-enter.png] to add to the Domains List.
+3.  Select  to add to the Domains List.
     
 
 ##### IP address ranges fields
@@ -11256,7 +11041,6 @@ Internal IP address ranges and domain names must be defined in order to track an
 | Modification Time | The timestamp shows when this range was last changed. |
 
 ### Asset Groups
-Abstract
 
 Learn about the Asset Groups feature, under the Asset Inventory.
 
@@ -11290,7 +11074,6 @@ Once your Asset Group has been defined, you can use it in specific areas of the 
 When you create or edit an Asset Group, the changes are applied immediately to new assets and to existing assets that have been updated. However, it may take a few hours for the changes to appear on existing assets that have not been updated.
 
 ### Asset Roles
-Abstract
 
 View asset roles and the number of assets that are associated with each role. Learn how to manage asset roles for users and endpoints.
 
@@ -11320,7 +11103,6 @@ The Asset Roles Configuration page displays the asset roles, their type, the num
 To edit an asset role, right-click and select Edit Asset Role. Depending on the type of asset, you can manage the user asset role list or the endpoint asset role list for the asset role.
 
 #### Manage Asset Roles for Endpoints
-Abstract
 
 Learn how to edit the host lists assigned to asset roles.
 
@@ -11355,7 +11137,6 @@ Excluding a manually added endpoint ensures that even if in the future the endpo
 To change the name of an endpoint, right-click the endpoint name and Edit Endpoint.
 
 #### Manage Asset Roles for Users
-Abstract
 
 Learn how to edit the user lists assigned to asset roles.
 
@@ -11397,7 +11178,6 @@ Excluding a manually added user ensures that even if in the future the user is d
 To change the name of a user, right-click the user name and Edit User.
 
 ##### Honey user
-Abstract
 
 Honey users are decoy users designed to attract potential attackers.
 
@@ -11420,7 +11200,6 @@ Configure a honey user
 3.  Select Add User → Add New and enter the honey user account details in the NetBIOS\\SAM Account format.
 
 ### Manage Asset Scores
-Abstract
 
 Learn how to view and investigate User Scores and Host Scores using the Asset Scores page.
 
@@ -11486,7 +11265,6 @@ To investigate your users and hosts:
     Some User Associated Insights may not appear as part of the User Associated Incidents due to the insight generation mechanism. For example, when an insight related to one of the assets in an incident is generated a few days after the associated incident, the insight may not be associated with the incident.
 
 ### Vulnerability Assessment
-Abstract
 
 Perform a vulnerability assessment of all endpoints in your network using Cortex Cloud. This includes CVE, endpoint, and application analysis.
 
@@ -11503,8 +11281,7 @@ The following are prerequisites for Cortex Cloud to perform a vulnerability asse
 | Requirement | Description |
 | --- | --- |
 | Licenses and Add-ons |  |
-| Supported Platforms | **Windows**-   Cortex XDR agent 8.3 or a later release.; Cortex Cloud collects all the information about the operating system and the installed applications, and calculates CVE.; CVEs that apply to applications that are installed by one user aren't detected when another user without the application installed is logged in during the scan.
-; **MacOS**-   Cortex XDR agent 8.3 or a later release.; Cortex Cloud collects all the information about the operating system and the installed applications, and calculates CVE. |
+| Supported Platforms | **Windows**- Cortex XDR agent 8.3 or a later release.; Cortex Cloud collects all the information about the operating system and the installed applications, and calculates CVE.; CVEs that apply to applications that are installed by one user aren't detected when another user without the application installed is logged in during the scan. ; **MacOS**- Cortex XDR agent 8.3 or a later release.; Cortex Cloud collects all the information about the operating system and the installed applications, and calculates CVE. |
 | Setup and Permissions | Ensure Host Inventory Data Collection is enabled for your Cortex XDR agent.Set up agent settings profiles |
 | Certificates for Windows and macOS | When Advanced Vulnerability and Assessment is enabled, these certificates are a prerequisite for Windows and macOS. Download the certificates from [here](https://docs-cortex.paloaltonetworks.com/v/u/EJVLvtinTtrAb~Na9XuXag). Import the _Digicert Trusted Root G4_ certificate into the Trusted Root Certification Authorities store in the local machine.; In some environments, if the scan does not initialize, the _DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1_ certificate, may also be required. Import the signed certificate into the Intermediate Certification Authorities store in the local machine. |
 | Limitations | Some CVEs may be outdated if the Cortex XDR agent wasn't updated recently.; Application versions which have reached end-of-life (EOL) may have their version listed as 0. This doesn't affect the detection of the CVEs.; Some applications are listed twice. One of the instances may display `invalid version`, however, this doesn't affect the functionality.; The scanning process may impact performance on the Cortex XDR agent during scanning. The scan may take up to two minutes. |
@@ -11549,7 +11326,7 @@ You can perform the following actions from Cortex Cloud as you analyze the exist
 
 #### Endpoint Analysis
 
-To help you assess the vulnerability status of an endpoint, Cortex Cloud provides a full list of all installed applications and existing CVEs per endpoint and also assigns each endpoint a vulnerability severity score that reflects the highest NIST vulnerability score detected on the endpoint. This information helps you to determine the best course of action for remediating each endpoint. From Inventory → Endpoints+Host Inventory → Vulnerability Assessment, select Endpoints on the upper-right bar. This information is also available in the va\_endpoints dataset. In addition, the host\_inventory\_endpoints preset lists all endpoints, CVE data, and additional metadata regarding the endpoint information. You can use this dataset and preset to build queries in XQL Search.
+To help you assess the vulnerability status of an endpoint, Cortex Cloud provides a full list of all installed applications and existing CVEs per endpoint and also assigns each endpoint a vulnerability severity score that reflects the highest NIST vulnerability score detected on the endpoint. This information helps you to determine the best course of action for remediating each endpoint. From Inventory → Endpoints+Host Inventory → Vulnerability Assessment, select Endpoints on the upper-right bar. This information is also available in the va_endpoints dataset. In addition, the host_inventory_endpoints preset lists all endpoints, CVE data, and additional metadata regarding the endpoint information. You can use this dataset and preset to build queries in XQL Search.
 
 For each vulnerability, Cortex XDR displays the following default and optional values.
 
@@ -11597,7 +11374,6 @@ From Inventory → Endpoints → Host Inventory, select Applications.
 ## Investigation and response
 
 ### Investigate issues
-Abstract
 
 Cortex Cloud generates issues to bring your attention to security risks in your framework.
 
@@ -11620,7 +11396,6 @@ Issues help you to monitor and control the security of your system framework by 
     Integrations enable you to ingest events, such as phishing emails, SIEM events, from third-party security and management vendors. You might need to configure the integrations to determine how events are classified as events. For example, for email integrations, you might want to classify items based on the subject field, but for SIEM events, you want to classify by event type.
 
 #### Overview of the Issues page
-Abstract
 
 The Issues page consolidates all non-informational issues from your detection sources.
 
@@ -11638,7 +11413,7 @@ Every 12 hours, the system enforces a cleanup policy to remove the oldest issues
 
 Cortex Cloud processes and displays the names of users in the following standardized format, also termed “normalized user”.
 
-**``_`<company domain>`_\_`<username>`_``**
+**``_`<company domain>`__`<username>`_``**
 
 As a result, any issue triggered based on network, authentication, or login events displays the User Name in the standardized format in the Issues and Cases pages. This impacts every issue for Cortex Cloud Analytics and Cortex Cloud Analytics BIOC, including Correlation, BIOC, and IOC issues triggered on one of these event types.
 
@@ -11654,9 +11429,7 @@ You can highlight issues that are important to you by tagging speciﬁc issue at
 
 To see a full list of issue fields and descriptions, run the following query in the Query Builder:
 
-```
 datamodel dataset = issues
-```
 
 #### Link or unlink issues from a case
 You can link and unlink issues from cases. An issue can be assigned to more than one case, and the case domain can be different from the issue domain.
@@ -11670,7 +11443,6 @@ Unlink an issue from a case
 From the Issues page, select the issue that you want to unlink, right-click and select Manage Issue+Unlink from case. You can select one or more cases to unlink the issue. You cannot bulk select issues to unlink.
 
 #### Run an automation on an issue
-Abstract
 
 Save time and expense by using playbooks and Quick Actions to automatically investigate and take remedial action on issues.
 
@@ -11708,13 +11480,10 @@ You can create automation rules that automatically run a playbook or Quick Actio
 For more information, see Automation in Cortex Cloud.
 
 #### Use the War Room in an investigation
-Abstract
 
 Use the War Room for real-time investigation into a case, to filter war room entries, and to disable indicator notifications.
 
 The War Room contains an audit trail of all automatic or manual actions that take place in a case or issue. A War Room is where you can review and interact with your case or issue. Cortex Cloud provides machine learning insights to suggest the most effective analysts and command-sets. Each case and issue has a unique War Room.
-
-[image: war-room-overview.png]
 
 Within Cortex Cloud, real-time investigation is facilitated through the War Room, which is powered by ChatOps. In the War Room you can take the following actions:
 
@@ -11835,7 +11604,7 @@ The syntax to reference attributes in the UAI is `${asset.xdm.asset.attributenam
 
 Run commands in the Automations browser
 
-You can view and run commands and scripts (not system commands, operations, and notifications) in the Automations Browser, by clicking [image: exclamation-cli.png] next to the CLI.
+You can view and run commands and scripts (not system commands, operations, and notifications) in the Automations Browser, by clicking  next to the CLI.
 
 The Automations Browser enables you to run commands and all associated arguments. The scripts and commands are separated into sections such as scripts and built-in commands. In each argument, you can do the following:
 
@@ -11887,7 +11656,6 @@ To run the Python command returning Hello World using backticks:
 `` !py script=`demisto.results("hello world")` ``
 
 #### Use the Work Plan in an investigation
-Abstract
 
 A Work Plan is a visual representation of the running playbook that is assigned to a case. Use it to monitor and manage a playbook workflow.
 
@@ -11917,21 +11685,21 @@ A playbook will not continue its execution path if a prior task has failed; you 
 
 | Task | Description |
 | --- | --- |
-| [image: standard_task.png] | [image: arrow.png]**Standard manual task** An arrow with a light blue square background indicates a standard manual task. The following are kinds of standard tasks. Manual Standard task (no lightning bolt logo): These tasks are used where usually it's not possible to automate them. You can add comments, assign them to an owner, and set a due date. The analyst who is responsible for the investigation needs to complete the task before the Work Plan can continue. A user icon ( [image: user_icon.png]) indicates the task requires manual inputs.; Automated Standard task (with lightning bolt script logo): A single command or script that is set to automatically run when the Work Plan execution reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the Work Plan can continue.; Automated Standard task (with Builtin logo): A single system command or script that is set to automatically run when the Work Plan reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the Work Plan can continue.; Automated Standard task (with Multi Command logo): A generic single command or script that can be used with multiple integrations is set to automatically run when the Work Plan reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the Work Plan can continue. |
-| [image: condition_task.png] | [image: conditional_icon.png]**Conditional task** A diamond icon in a purple square background indicates a conditional task used as decision trees in your Work Plan. The following are kinds of conditional tasks. Manual conditional task. A user icon ( [image: user_icon.png]) indicates the task requires manual inputs.a; Automated conditional task (with the lightning bolt script logo).; Automated conditional task that uses a system script (with the Builtin logo). |
-| [image: data_collection_task.png] | [image: data_collection_icon.png]**Data collection task / Communication task** The speech bubble in a turquoise background  indicates a data collection task. This task prompts the receivers to respond to a multi-question form and submit replies, even if they are not Cortex users. A user icon ( [image: user_icon.png]) indicates the task requires manual inputs. |
-| [image: sub-playbook_task.png] | [image: sub-playbook_icon.png]**Sub-playbook task** The workflow icon in a blue background indicates that the task is a playbook nested within the parent playbook. You can view the playbook by opening the task and selecting Open sub-playbook. |
-| [image: task-error-new-logo.png] | **Task containing an error** Scripts or sub-playbooks that have errors are designated by a red triangle. You need to open the script or sub-playbook to review the errors. |
-| [image: update_scripts.png] | **Task containing a deprecated script or needs to be updated** Scripts or sub-playbooks that have updates or are deprecated are designated by a yellow triangle. You need to update the scripts, integration commands, or sub-playbook tasks to their most current version. |
-| [image: skip.png] | [image: skip_icon.png]**Set to skip** When a task is set to skip, the skip icon will be orange. |
-| [image: breakpoint.png] | [image: breakpoint_icon.png]**Breakpoint** When the Work Plan reaches a breakpoint, the task has an orange line at the top to indicate the breakpoint. |
-| [image: overriden.png] | [image: overidden_icon.png]**Overridden inputs or outputs** When a task is set to have overridden inputs or outputs, the word Input or Output appears in orange. |
-| [image: pending.png] | [image: pending_icon.png]**Pending/in queue task** When the Work Plan starts to run, all tasks that are about to be performed are gray. |
-| [image: running.png] | [image: running_icon.png]**Running/ in progress task** A spinning circle inside the gray square indicates a running/in progress  task. |
-| [image: completed.png] | [image: completed_icon.png]**Completed task** The green square indicates a completed task. |
-| [image: waiting.png] | [image: waiting_icon.png]**Waiting task** The orange square indicates that the task is pending action. If you hover over the icon on the top left corner, details about the reason the task is in waiting mode appear. The user icon ( [image: user_icon.png]) indicates the task requires you to open it and manually mark it as complete. A speech bubble icon ([image: bubble_icon.png]) indicates the task is waiting for a questionnaire to be completed. |
-| [image: failed.png] | **Failed task** The red warning icon indicates that the task failed to complete as expected and requires manual inspection and troubleshooting. Contact your Cortex Cloud administrator. If you hover on the icon on the top left corner, details about the specific problem appear. If a red warning icon is paired with the clock icon ([image: hourglass_icon.png]), the task’s SLA is overdue. |
-| [image: skipped.png] | [image: skipped_icon.png]**Skipped task** The task will look faded to indicate it was not executed. This can happen if this task was set to be skipped when an error occurs, or if it is in a branch that was not executed if a condition wasn’t met. |
+|  | →**Standard manual task** An arrow with a light blue square background indicates a standard manual task. The following are kinds of standard tasks. Manual Standard task (no lightning bolt logo): These tasks are used where usually it's not possible to automate them. You can add comments, assign them to an owner, and set a due date. The analyst who is responsible for the investigation needs to complete the task before the Work Plan can continue. A user icon ( ) indicates the task requires manual inputs.; Automated Standard task (with lightning bolt script logo): A single command or script that is set to automatically run when the Work Plan execution reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the Work Plan can continue.; Automated Standard task (with Builtin logo): A single system command or script that is set to automatically run when the Work Plan reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the Work Plan can continue.; Automated Standard task (with Multi Command logo): A generic single command or script that can be used with multiple integrations is set to automatically run when the Work Plan reaches this step. Some scripts need arguments in order to run - make sure to set them up properly. If left empty, the analyst who is responsible for the investigation will need to complete them so the script will run and the Work Plan can continue. |
+|  | **Conditional task** A diamond icon in a purple square background indicates a conditional task used as decision trees in your Work Plan. The following are kinds of conditional tasks. Manual conditional task. A user icon ( ) indicates the task requires manual inputs.a; Automated conditional task (with the lightning bolt script logo).; Automated conditional task that uses a system script (with the Builtin logo). |
+|  | **Data collection task / Communication task** The speech bubble in a turquoise background  indicates a data collection task. This task prompts the receivers to respond to a multi-question form and submit replies, even if they are not Cortex users. A user icon ( ) indicates the task requires manual inputs. |
+|  | **Sub-playbook task** The workflow icon in a blue background indicates that the task is a playbook nested within the parent playbook. You can view the playbook by opening the task and selecting Open sub-playbook. |
+|  | **Task containing an error** Scripts or sub-playbooks that have errors are designated by a red triangle. You need to open the script or sub-playbook to review the errors. |
+|  | **Task containing a deprecated script or needs to be updated** Scripts or sub-playbooks that have updates or are deprecated are designated by a yellow triangle. You need to update the scripts, integration commands, or sub-playbook tasks to their most current version. |
+|  | **Set to skip** When a task is set to skip, the skip icon will be orange. |
+|  | **Breakpoint** When the Work Plan reaches a breakpoint, the task has an orange line at the top to indicate the breakpoint. |
+|  | **Overridden inputs or outputs** When a task is set to have overridden inputs or outputs, the word Input or Output appears in orange. |
+|  | **Pending/in queue task** When the Work Plan starts to run, all tasks that are about to be performed are gray. |
+|  | **Running/ in progress task** A spinning circle inside the gray square indicates a running/in progress  task. |
+|  | **Completed task** The green square indicates a completed task. |
+|  | **Waiting task** The orange square indicates that the task is pending action. If you hover over the icon on the top left corner, details about the reason the task is in waiting mode appear. The user icon ( ) indicates the task requires you to open it and manually mark it as complete. A speech bubble icon () indicates the task is waiting for a questionnaire to be completed. |
+|  | **Failed task** The red warning icon indicates that the task failed to complete as expected and requires manual inspection and troubleshooting. Contact your Cortex Cloud administrator. If you hover on the icon on the top left corner, details about the specific problem appear. If a red warning icon is paired with the clock icon (), the task’s SLA is overdue. |
+|  | **Skipped task** The task will look faded to indicate it was not executed. This can happen if this task was set to be skipped when an error occurs, or if it is in a branch that was not executed if a condition wasn’t met. |
 
 ##### Add ad-hoc tasks to the Work Plan
 
@@ -11961,7 +11729,6 @@ When you create a task, add a name, automation, and description. The name and de
 5.  To run the Work Plan again click the Run Again icon.
 
 #### Issue syncing
-Abstract
 
 Set up integrations that mirror Cortex issues with external applications, such as Jira or ServiceNow.
 
@@ -12060,19 +11827,15 @@ Example 39. 
 
 The following example shows an automation run on an issue to create a ServiceNow ticket that is synced in an outbound flow with the ticket.
 
-[image: Outbound_SNOW_sync_example.png]
-
   
 
 ##### Run a War Room command to create and sync a ticket
 
 You can run the following command in the War Room to create an external ticket and define the syncing configuration:
 
-```
-!jira-create-issue-quick-action summary="<summary>" project\_key="<key>" issue\_type\_name="<type>" 
-description="<description>" using="<instance>" mirroring\_link\_to\_object="true" 
-mirroring\_sync\_direction="<syncDirection>" mirroring\_outbound\_profile\_id="<profileID>"
-```
+!jira-create-issue-quick-action summary="<summary>" project_key="<key>" issue_type_name="<type>" 
+description="<description>" using="<instance>" mirroring_link_to_object="true" 
+mirroring_sync_direction="<syncDirection>" mirroring_outbound_profile_id="<profileID>"
 
 **Tip:**
 
@@ -12082,12 +11845,10 @@ Example 40. 
 
 The following example creates a Jira Bug ticket for the Project Key SCRUM, with an Outbound sync configuration:
 
-```
 !jira-create-issue-quick-action summary="Restrict ingress on AWS Network ACLs for admin ports 22 and 3349" 
-project\_key="SCRUM" issue\_type\_name="Bug" description="We identified that multiple AWS Network ACLS are 
-allowing inbound (ingress) traffic on admin ports" using="JiraV3" mirroring\_link\_to\_object="true" 
-mirroring\_sync\_direction="OUTBOUND" mirroring\_outbound\_profile\_id="h8e14996-8695-5396-9g87-f08suu907486"
-```
+project_key="SCRUM" issue_type_name="Bug" description="We identified that multiple AWS Network ACLS are 
+allowing inbound (ingress) traffic on admin ports" using="JiraV3" mirroring_link_to_object="true" 
+mirroring_sync_direction="OUTBOUND" mirroring_outbound_profile_id="h8e14996-8695-5396-9g87-f08suu907486"
 
   
 
@@ -12162,8 +11923,6 @@ You can set up automation rules that create external tickets when certain issues
 Example 41. 
 
 The following example shows an automation rule that creates a Jira ticket with bi-directional syncing when a Critical Posture issue is triggered.
-
-[image: issue_sync_automation_rule.png]
 
   
 
@@ -12313,7 +12072,6 @@ Consider the following limitations of issue mirroring:
 -   Currently, a specific set of fields is supported.
 
 #### Causality view
-Abstract
 
 See the causality of an issue—the entire process execution chain that led up to the issue in the Cortex Cloud app.
 
@@ -12321,9 +12079,7 @@ The causality view provides an interactive visualization of a Causality Instance
 
 To open the casualty, right-click on an issue in the Cases or Issues pages. The causality view comprises the causality instance chain, Information overview, Forensics highlights, and the All Events table. Click on nodes on the causality chain to see details about each entity in the Information overview and All Events table. You can also take actions on the processes in the chain by clicking Actions or right-clicking a specific node.
 
- [image: movie__2_.png] Show me more
-
-[image: Causality_chain_4.gif]
+  Show me more
 
 The following sections describe the different areas of the causality view:
 
@@ -12333,9 +12089,9 @@ Includes the graphical representation of the Causality Instance (CI), built from
 
 The Causality Group Owner (CGO) is displayed on the left side of the chain. The CGO is the process that is responsible for all the other processes, events, and issues in the chain. You need the entire CI to fully understand why the issue occurred. The process node displays icons to indicate when an RPC protocol or code injection event was executed on another process from either a local or remote host.
 
--   [image: causality-injected-event.png] Injected Node
+-    Injected Node
     
--   [image: causality-remote-ip.png] Remote IP address
+-    Remote IP address
     
 
 Causality data is displayed as follows:
@@ -12349,7 +12105,7 @@ Causality data is displayed as follows:
 
 ##### Navigation
 
-You can move the chain, extend it, and modify it. To adjust the appearance of the CI chain, use the size controls on the right. You can also move the chain by selecting and dragging it. To return the chain to its original position and size, click [image: causality-view-reset-icon.png] in the lower-right of the CI graph.
+You can move the chain, extend it, and modify it. To adjust the appearance of the CI chain, use the size controls on the right. You can also move the chain by selecting and dragging it. To return the chain to its original position and size, click  in the lower-right of the CI graph.
 
 ##### Identity Threat data
 
@@ -12410,7 +12166,7 @@ The All Events table displays up to 100,000 related events for the process node 
 
 To continue the investigation, you can perform the following actions from the right-click pivot menu:
 
--   Add <path type> to malware profile allow list from the Process and File table. For example, target\_process\_path, src\_process\_path, file\_path, or os\_parent\_path.
+-   Add <path type> to malware profile allow list from the Process and File table. For example, target_process_path, src_process_path, file_path, or os_parent_path.
     
 -   For the behavioral threat protection results, you can take action on the initiator to add it to an allow list or block list, terminate it, or quarantine it.
     
@@ -12422,7 +12178,6 @@ To continue the investigation, you can perform the following actions from the ri
 To view statistics for files on VirusTotal, you can pivot from the Initiator MD5 or SHA256 value of the file on the Files tab.
 
 ##### Cloud causality view
-Abstract
 
 See the causality of a cloud-type issue—the entire process execution chain that led up to the issue in the Cortex Cloud app.
 
@@ -12465,7 +12220,7 @@ Causality data is displayed as follows:
 
 ###### Navigation
 
-You can move the chain, extend it, and modify it. To adjust the appearance of the CI chain, use the size controls on the right. You can also move the chain by selecting and dragging it. To return the chain to its original position and size, click [image: causality-view-reset-icon.png] in the lower-right of the CI graph.
+You can move the chain, extend it, and modify it. To adjust the appearance of the CI chain, use the size controls on the right. You can also move the chain by selecting and dragging it. To return the chain to its original position and size, click  in the lower-right of the CI graph.
 
 ###### Information Overview
 
@@ -12473,7 +12228,7 @@ Summarizes information about the issue you are analyzing, including the type of 
 
 ###### All Events table
 
-Displays up to 100,000 related events and up to 1,000 related issues. In the All Events table, Cortex Cloud displays detailed information about each of the related events. To simplify your investigation, Cortex Cloud scans your Cortex Cloud data aggregating the events that have the same Identity or Resource and displays the entry with an [image: cloud-causality-aggregated-events.png] aggregated icon. Right-click and select Show Grouped Events to view the aggregated entries.
+Displays up to 100,000 related events and up to 1,000 related issues. In the All Events table, Cortex Cloud displays detailed information about each of the related events. To simplify your investigation, Cortex Cloud scans your Cortex Cloud data aggregating the events that have the same Identity or Resource and displays the entry with an  aggregated icon. Right-click and select Show Grouped Events to view the aggregated entries.
 
 Entries highlighted in red indicate that the specific event created an issue. To continue the investigation, right-click to View in XQL. To continue the investigation, in the Issues table, right-click an issue to see the available actions.
 
@@ -12483,17 +12238,16 @@ The following table lists the cloud resource icons:
 
 | Icon | Type of Resource |
 | --- | --- |
-| [image: cloud-causality-compute-instance.png] | Compute instance resource |
-| [image: cloud-causality-disks.png] | Disk resource |
-| [image: cloud-causality-general.png] | General resource |
-| [image: cloud-causality-images.png] | Image resource |
-| [image: cloud-causality-network-interface.png] | Network interface resource |
-| [image: cloud-causality-fw.png] | Security group (FW rule) resource |
-| [image: cloud-causality-bucket.png] | Storage bucket resource |
-| [image: cloud-causality-vpc.png] | Virtual private cloud (VPC) resource |
+|  | Compute instance resource |
+|  | Disk resource |
+|  | General resource |
+|  | Image resource |
+|  | Network interface resource |
+|  | Security group (FW rule) resource |
+|  | Storage bucket resource |
+|  | Virtual private cloud (VPC) resource |
 
 ##### SaaS causality view
-Abstract
 
 Learn more about the SaaS causality view used to identify and investigate SaaS-specific data associated with SaaS-related issues and SaaS audit logs.
 
@@ -12540,11 +12294,11 @@ The SaaS causality view presents a single event CI chain. The CI chain is built 
 
 ###### Navigation
 
-You can move the chain, extend it, and modify it. To adjust the appearance of the CI chain, use the size controls on the right. You can also move the chain by selecting and dragging it. To return the chain to its original position and size, click [image: causality-view-reset-icon.png] in the lower-right of the CI graph.
+You can move the chain, extend it, and modify it. To adjust the appearance of the CI chain, use the size controls on the right. You can also move the chain by selecting and dragging it. To return the chain to its original position and size, click  in the lower-right of the CI graph.
 
 ###### All Events table
 
-Displays up to 100,000 related events and up to 1,000 related issues. In the All Events table, Cortex Cloud displays detailed information about each of the related events. To simplify your investigation, Cortex Cloud scans your Cortex Cloud data aggregating the events that have the same Identity or Resource and displays the entry with an [image: cloud-causality-aggregated-events.png] aggregated icon. Right-click and select Show Grouped Events to view the aggregated entries.
+Displays up to 100,000 related events and up to 1,000 related issues. In the All Events table, Cortex Cloud displays detailed information about each of the related events. To simplify your investigation, Cortex Cloud scans your Cortex Cloud data aggregating the events that have the same Identity or Resource and displays the entry with an  aggregated icon. Right-click and select Show Grouped Events to view the aggregated entries.
 
 Entries highlighted in red indicate that the specific event created an issue. To continue the investigation, right-click to View in XQL. To continue the investigation, in the Issues table, right-click an issue to see the available actions.
 
@@ -12554,17 +12308,16 @@ The following table lists the SaaS resource icons:
 
 | Icon | Type of resource |
 | --- | --- |
-| [image: saas-resource-1.png] | Google Workspace Admin Console |
-| [image: saas-resource-2.png] | Google Workspace for Google Drive |
-| [image: saas-resource-3.png] | Microsoft Office 365 Exchange Online |
-| [image: saas-resource-4.png] | Microsoft 365 Office Groups |
-| [image: saas-resource-5.png] | Microsoft Office 365 OneDrive |
-| [image: saas-resource-6.png] | Microsoft Office 365 SharePoint Online |
-| [image: saas-resource-7.png] | Microsoft Office 365 Skype for Business |
-| [image: saas-resource-8.png] | Microsoft Office 365 Teams |
+|  | Google Workspace Admin Console |
+|  | Google Workspace for Google Drive |
+|  | Microsoft Office 365 Exchange Online |
+|  | Microsoft 365 Office Groups |
+|  | Microsoft Office 365 OneDrive |
+|  | Microsoft Office 365 SharePoint Online |
+|  | Microsoft Office 365 Skype for Business |
+|  | Microsoft Office 365 Teams |
 
 ##### Timeline
-Abstract
 
 From the Cortex Cloud tenant you can view the sequence (or timeline) of events and issues that are involved in any particular threat.
 
@@ -12602,7 +12355,6 @@ The lanes depict when the activity occurred and provide additional statistics th
 Cortex Cloud displays up to 100,000 issues, BIOCs and Correlation Rules (triggered and informational), and events. Click on a node in the activity area of the Timeline to filter the results. You also can create filters to search for specific events.
 
 ##### Network causality view
-Abstract
 
 The network causality view shows a chain of individual network processes that triggered an issue as part of a particular sequence of operation.
 
@@ -12641,7 +12393,7 @@ WildFire verdict descriptions
 
 ###### Navigation
 
-You can move the chain, extend it, and modify it. To adjust the appearance of the CI chain, use the size controls on the right. You can also move the chain by selecting and dragging it. To return the chain to its original position and size, click [image: causality-view-reset-icon.png] in the lower-right of the CI graph.
+You can move the chain, extend it, and modify it. To adjust the appearance of the CI chain, use the size controls on the right. You can also move the chain by selecting and dragging it. To return the chain to its original position and size, click  in the lower-right of the CI graph.
 
 ###### Actions
 
@@ -12683,9 +12435,9 @@ Causality action icons mark the actions that were taken on a process or event. P
 
 | Icon | Description |
 | --- | --- |
-| [image: Blacklist__action_icon_.png] [image: Blacklist_-_pending__action_icon_.png] | Blocklist |
-| [image: Quarantine__action_icon_.png] [image: Quarantine_-_pending__action_icon_.png] | Quarantine |
-| [image: Whitelist__action_icon_.png] [image: Whitelist_-_pending__action_icon_.png] | Allowlist |
+|   | Blocklist |
+|   | Quarantine |
+|   | Allowlist |
 
 ###### Causality alert icons
 
@@ -12693,20 +12445,18 @@ Causality alert icons indicate the type of alert that was triggered.
 
 | Icon | Description |
 | --- | --- |
-| [image: 3rd_party__causality_alert_icon_.png] | 3rd party |
-| [image: Agent__causality_alert_icon_.png] | XDR Agent |
-| [image: Analytics__causality_alert_icon_.png] | Analytics |
-| [image: BIOC__causality_alert_icon_.png] | BIOC |
-| [image: Firewall__causality_alert_icon_.png] | Firewall |
-| [image: General_alert__causality_alert_icon_.png] | General alert |
-| [image: Identity_analytics__causality_alert_icon_.png] | Identity analytics |
-| [image: IOC__causality_alert_icon_.png] | IOC |
+|  | 3rd party |
+|  | XDR Agent |
+|  | Analytics |
+|  | BIOC |
+|  | Firewall |
+|  | General alert |
+|  | Identity analytics |
+|  | IOC |
 
 Example 43. 
 
 A number next to the alert icon indicates that there are multiple alerts. This icon show that there are three alerts and the selected alert is a BIOC alert. You can scroll through the alerts in the Information Overview.
-
-[image: Muliple_BIOC_alerts.png]
 
   
 
@@ -12716,24 +12466,24 @@ Cloud event icons indicate the type of cloud event or process.
 
 | Icon | Description |
 | --- | --- |
-| [image: Cloud_admin__cloud_event_icon_.png] | Cloud admin |
-| [image: Compute_disks__cloud_event_icon_.png] | Compute disks |
-| [image: Compute_instances__cloud_event_icon_.png] | Compute instances |
-| [image: Container_escaped__cloud_event_icon_.png] | Container escaped |
-| [image: Drive__cloud_event_icon_.png] | Drive |
-| [image: Exchange__cloud_event_icon_.png] | Exchange |
-| [image: General_resource__cloud_event_icon_.png] | General resource |
-| [image: Groups__cloud_event_icon_.png] | Groups |
-| [image: Images__cloud_event_icon_.png] | Images |
-| [image: Network_interfaces__cloud_event_icon_.png] | Network |
-| [image: Onedrive__cloud_event_icon_.png] | Onedrive |
-| [image: Security_groups-_FW_rules__cloud_event_icon_.png] | Security groups- FW rules |
-| [image: Sharepoint__cloud_event_icon_.png] | Sharepoint |
-| [image: Skype__cloud_event_icon_.png] | Skype |
-| [image: Storage_buckets__cloud_event_icon_.png] | Storage buckets |
-| [image: Subnets__cloud_event_icon_.png] | Subnets |
-| [image: Teams__cloud_event_icon_.png] | Teams |
-| [image: VPCs__cloud_event_icon_.png] | VPCs |
+|  | Cloud admin |
+|  | Compute disks |
+|  | Compute instances |
+|  | Container escaped |
+|  | Drive |
+|  | Exchange |
+|  | General resource |
+|  | Groups |
+|  | Images |
+|  | Network |
+|  | Onedrive |
+|  | Security groups- FW rules |
+|  | Sharepoint |
+|  | Skype |
+|  | Storage buckets |
+|  | Subnets |
+|  | Teams |
+|  | VPCs |
 
 ###### Event icons
 
@@ -12741,28 +12491,28 @@ Event icons indicate the type of activity that occurred.
 
 | Icon | Description |
 | --- | --- |
-| [image: DotNet__event_icon_.png] | DotNet |
-| [image: Event_log__event_icon_.png] | Event log |
-| [image: File__event_icon_.png] | File |
-| [image: Firewall__event_icon_.png] | Firewall |
-| [image: Host__event_icon_.png] | Host |
-| [image: Host_group__event_icon_.png] | Host group |
-| [image: Identity_analytics__event_icon_.png] | Identity analytics |
-| [image: Internet__event_icon_.png] | Internet |
-| [image: Malware_alert__event_icon_.png] | Malware |
-| [image: Mobile__event_icon_.png] | Mobile |
-| [image: Module_load__event_icon_.png] | Module load |
-| [image: Multi-user__event_icon_.png] | Multi-user |
-| [image: Network__event_icon_.png] | Network |
-| [image: Potential_prevention__event_icon_.png] | Potential prevention |
-| [image: Range__event_icon_.png] | Range |
-| [image: Registry__event_icon_.png] | Registry |
-| [image: Router__event_icon_.png] | TCP Protocol |
-| [image: Server__event_icon_.png] | Server |
-| [image: Unknown__event_icon_.png] | Unknown event |
-| [image: User_session__event_icon_.png] | User session |
-| [image: VOIP__event_icon_.png] | VOIP |
-| [image: VPN__event_icon_.png] | VPN |
+|  | DotNet |
+|  | Event log |
+|  | File |
+|  | Firewall |
+|  | Host |
+|  | Host group |
+|  | Identity analytics |
+|  | Internet |
+|  | Malware |
+|  | Mobile |
+|  | Module load |
+|  | Multi-user |
+|  | Network |
+|  | Potential prevention |
+|  | Range |
+|  | Registry |
+|  | TCP Protocol |
+|  | Server |
+|  | Unknown event |
+|  | User session |
+|  | VOIP |
+|  | VPN |
 
 ###### Left node icons
 
@@ -12770,11 +12520,11 @@ Left node icons provide additional information about a process.
 
 | Icon | Description |
 | --- | --- |
-| [image: Injection__left_node_icon_.png] | Injected node |
-| [image: Last_actor__left_node_icon_.png] | Last actor |
-| [image: Remote_IP__left_node_icon_.png] | Remote terminal session |
-| [image: RPC__left_node_icon_.png] | RPC |
-| [image: Unknown_process__left_node_icon_.png] | Unknown process |
+|  | Injected node |
+|  | Last actor |
+|  | Remote terminal session |
+|  | RPC |
+|  | Unknown process |
 
 ###### Node icons
 
@@ -12782,44 +12532,44 @@ Node icons indicate the type of process or event that occurred in the chain.
 
 | Icon | Description |
 | --- | --- |
-| [image: Adobe__node_icon_.png] | Adobe |
-| [image: Attachment__node_icon_.png] | Attachment |
-| [image: Chrome__node_icon_.png] | Chrome |
-| [image: Cloud__node_icon_.png] | Remote IP Address |
-| [image: Email__node_icon_.png] | Email |
-| [image: Endpoint__node_icon_.png] | Endpoint |
-| [image: Excel__node_icon_.png] | Excel |
-| [image: Firefox__node_icon_.png] | Firefox |
-| [image: Generic_process__node_icon_.png] | Generic process |
-| [image: Internet_Explorer__node_icon_.png] | Internet Explorer |
-| [image: IP__node_icon_.png] | IP address |
-| [image: Link__node_icon_.png] | Link |
-| [image: mySQL__node_icon_.png] | mySQL |
-| [image: Outlook__node_icon_.png] | Outlook |
-| [image: Powerpoint__node_icon_.png] | Powerpoint |
-| [image: Putty__node_icon_.png] | Putty |
-| [image: Sender__node_icon_.png] | Sender |
-| [image: Unknown__node_icon_.png] | Unknown |
-| [image: User__node_icon_.png] | User |
-| [image: Word__node_icon_.png] | Word |
+|  | Adobe |
+|  | Attachment |
+|  | Chrome |
+|  | Remote IP Address |
+|  | Email |
+|  | Endpoint |
+|  | Excel |
+|  | Firefox |
+|  | Generic process |
+|  | Internet Explorer |
+|  | IP address |
+|  | Link |
+|  | mySQL |
+|  | Outlook |
+|  | Powerpoint |
+|  | Putty |
+|  | Sender |
+|  | Unknown |
+|  | User |
+|  | Word |
 
 ###### Other icons
 
 | Icons | Description |
 | --- | --- |
-| [image: Benign.png] | Benign |
-| [image: Container.png] | Container |
-| [image: CGO__text_icon_.png] | Causality Group Owner (CGO). |
-| [image: Default__other_icon_.png] | Default |
-| [image: Grayware.png] | Grayware |
-| [image: In-evaluation.png] | In-evaluation |
-| [image: Malware.png] | Malware |
-| [image: Quarantine__other_icon_.png] | Quarantine |
-| [image: Still_running__text_icon_.png] | Still running |
-| [image: Unknown_sample.png] | Unknown sample |
-| [image: User__text_icon_.png] | User |
-| [image: WF_Download__other_icon_.png] | WF download |
-| [image: WF_Download_unsuccessful__other_icon_.png] | WF download unsuccessful |
+|  | Benign |
+|  | Container |
+|  | Causality Group Owner (CGO). |
+|  | Default |
+|  | Grayware |
+|  | In-evaluation |
+|  | Malware |
+|  | Quarantine |
+|  | Still running |
+|  | Unknown sample |
+|  | User |
+|  | WF download |
+|  | WF download unsuccessful |
 
 ###### Examples
 
@@ -12827,15 +12577,11 @@ Example 44.  
 
 The following example shows a XDR Agent alert was triggered on a File.
 
-[image: Example_Agent_alert.png]
-
   
 
 Example 45.  
 
 In this example, a NGFW alert was triggered on a TCP Protocol that called a remote IP address, that created an unknown process.
-
-[image: Example_NGFW_alert.png]
 
   
 
@@ -12843,20 +12589,15 @@ Example 46.  
 
 In this example, the highlighted process node represents the real parent that executed the process. Click on the node for more details about the parent process. The pen icon on the first process nodes indicates that this process is "last actor". The syringe icon on the last process node indicates that this process is an "injected node".
 
-[image: Example_starting_process.png]
-
   
 
 Example 47.  
 
 In this example, two alerts were triggered on an email that was sent to two recipients and included attachments and links.
 
-[image: Example_Email_alert.png]
-
 #### Issue investigation actions
 
 ##### Copy issues
-Abstract
 
 You can copy an issue into memory.
 
@@ -12880,7 +12621,6 @@ How to copy an issue value
 3.  Paste the URL into an email or use it as needed to share the information.
 
 ##### Update issue fields
-Abstract
 
 Use a playbook, script, or command to update issue fields.
 
@@ -12943,11 +12683,8 @@ You can update issue fields by running the `setIssue` and `setIssueStatus` comma
     Example 50. Example of using the setIssueStatus command in a playbook
     
     The following example shows how the `setIssueStatus` command can be used in a playbook task. In this example, the task sets a custom issue status (Triage). The custom issue status was created before setting up the playbook.
-    
-    [image: setAlertStatus_playbook_example.png]
 
 ##### Create profile exceptions
-Abstract
 
 You can create profile exceptions for agent related issues.
 
@@ -12971,7 +12708,6 @@ For Cortex XDR agent related issues, you can create profile exceptions for Windo
     2.  In the Profiles table, locate the OS in which you created your global or profile exception and right-click to view or edit the exception properties.
 
 ##### Investigate contributing events
-Abstract
 
 You can investigate the events created by an issue.
 
@@ -12992,11 +12728,10 @@ How to investigate contributing events
     The drilldown query can accept parameters from the issue output for the correlation rule. In addition, the issue time frame used to run the drilldown query provides more details about the issue generated by the correlation rule. The time frame is the minimum and maximum timestamps of the events for the issue. If there is only one event, the event timestamp is the time frame used for the query.
 
 ##### Create a featured field
-Abstract
 
 You can label specific issue attributes as featured fields.
 
-To help you to track issues involving specific hosts, users, and IP addresses, you can label specific issue attributes as featured fields. Issues that contain a matching featured field value are identified with a [image: featured-alert-field-flag.png] flag in the Name field of the Issues table. After setting up featured fields, you can use them filter the Issues table and to create case scoring rules.
+To help you to track issues involving specific hosts, users, and IP addresses, you can label specific issue attributes as featured fields. Issues that contain a matching featured field value are identified with a  flag in the Name field of the Issues table. After setting up featured fields, you can use them filter the Issues table and to create case scoring rules.
 
 **Note:**
 
@@ -13024,7 +12759,6 @@ How to create a featured field
 4.  (Optional) Create a case scoring rule using the Contains Featured fields to further highlight and prioritize issues containing the Host, User, and IP address attributes. For more information, see [???](urn:resource:component:1159841).
 
 ##### View generating BIOC or IOC rule
-Abstract
 
 You can view the BIOC or IOC rules that generated issues directly from the Issues table.
 
@@ -13039,7 +12773,6 @@ You can easily view and edit the BIOC and IOC rules that generated issues direct
 3.  Review the rule, if necessary, right-click to perform available actions.
 
 ##### Add a file path to a malware profile allow list
-Abstract
 
 You can add a file path to an existing malware profile.
 
@@ -13061,7 +12794,6 @@ During investigation, if you deem a file path to be safe, you can add the file p
 For more information about malware prevention profiles, see Set up malware prevention profiles.Set up malware prevention profiles
 
 ##### Retrieve additional issue details
-Abstract
 
 Access additional information relating to an issue, including related files and memory content analysis.
 
@@ -13096,7 +12828,6 @@ To help you with issue analysis, Cortex Cloud can provide related files and memo
     If you require assistance from Palo Alto Networks support to investigate the issue, make sure to provide the downloaded ZIP file.
 
 ##### Export issue details to a file
-Abstract
 
 You can review issue details offline by exporting issues to a TSV file.
 
@@ -13104,14 +12835,13 @@ To archive, continue investigation offline, or parse issue details, you can expo
 
 1.  From the Issues page, adjust the filters to identify the issues you want to export.
     
-2.  When you are satisfied with the results, click the download icon ([image: download-to-file-icon.png]).
+2.  When you are satisfied with the results, click the download icon ().
     
     The icon is grayed out when there are no results.
     
     Cortex Cloud exports the filtered result set to the TSV file.
 
 ##### Exclude an issue
-Abstract
 
 You can exclude issues that are not deemed to be a threat.
 
@@ -13128,7 +12858,6 @@ How to exclude an issue
     A notification displays indicating the exclusion is in progress.
 
 ##### Query case and issue data
-Abstract
 
 You can run queries on case and issue data with the `cases` and `issues` datasets.
 
@@ -13152,18 +12881,13 @@ You can query case and issue data in the `cases` and `issues` datasets. When usi
 
 The `issues` dataset is categorized by domain. To query only security issues, use the following XQL:
 
-```
-dataset = issues | filter issue\_domain = "SECURITY"
-```
+dataset = issues | filter issue_domain = "SECURITY"
 
 To query only posture issues, use the following XQL:
 
-```
-dataset = issues | filter issue\_domain = "POSTURE"
-```
+dataset = issues | filter issue_domain = "POSTURE"
 
 ### Review findings
-Abstract
 
 Review findings for an asset to gain insights into an asset’s posture status.
 
@@ -13171,9 +12895,7 @@ Findings provide knowledge about an asset by leveraging the data we collect from
 
 Click on a finding from any location in the UI to open the findings card. For more information, see Findings card. To view all findings, go to Issues+Findings table. You can also see findings for a specific asset by opening the asset card.
 
- [image: movie__2_.png] Show me more
-
-[image: Findings.gif]
+  Show me more
 
 #### Types of findings
 
@@ -13209,12 +12931,9 @@ Example 51. 
 
 The following query searches for all findings for AssetA:
 
-```
-dataset = findings | filter xdm.finding.asset\_name = "AssetA"
-```
+dataset = findings | filter xdm.finding.asset_name = "AssetA"
 
 #### Findings card
-Abstract
 
 The Findings card provides information about a selected finding, including the Finding ID, category, and associated asset.
 
@@ -13234,7 +12953,6 @@ The information in this card is context specific, therefore some sections are no
 | Data | Normalized finding data. |
 
 ### Investigate artifacts and assets
-Abstract
 
 You can investigate specific artifacts and assets on dedicated views related to IP address, Network Assets, and File and Process Hash information.
 
@@ -13249,7 +12967,6 @@ From the Cases view, open the Key Assets & Artifact tab to see the assets and ar
     Displays Hosts and Users details. For hosts with a Cortex XDR agent installed, click on the host name to see more information in the Details panel.
 
 #### Investigate an IP address
-Abstract
 
 Investigate cases, connections, and threat intelligence reports related to a specific IP address on the IP View.
 
@@ -13317,7 +13034,6 @@ How to investigate an IP address
     Depending on the current IOC and EDL status, the Actions button is displayed.
 
 #### Investigate an asset
-Abstract
 
 Investigate host assets and view host insights on the Asset View.
 
@@ -13361,7 +13077,6 @@ How to investigate an asset
 5.  Perform actions on the host.
 
 #### Investigate a file and process hash
-Abstract
 
 Investigate cases, actions, and threat intelligence reports related to a specific file or process hash on the Hash View.
 
@@ -13439,7 +13154,6 @@ How to investigate a file or process hash
 5.  (Optional) Perform actions on the hash.
 
 #### Investigate a user
-Abstract
 
 Investigate user assets associated with your cases.
 
@@ -13614,14 +13328,12 @@ How to investigate a user
         -   Recent Authentications
 
 ### Investigate endpoints
-Abstract
 
 You can investigate and take actions on your endpoints in the Action Center.
 
 You can investigate and take actions on your endpoints in the Action Center.
 
 #### Overview of the Action Center
-Abstract
 
 From the Action Center, you can track the progress of all investigation, response, and maintenance actions performed on your endpoints.
 
@@ -13651,7 +13363,6 @@ The main All Actions tab displays the most recent actions initiated in your depl
 For actions that can take a while to complete, the Action Center tracks the action progress and displays the action status and current progress description for each stage. For example, after initiating an agent upgrade action, Cortex Cloud monitors all stages from the Pending request until the action status is Completed. Throughout the action lifetime, you can view the number of endpoints on which the action was successful and the number of endpoints on which the action failed. After a period of 90 days since the action creation, the action is removed from Cortex Cloud and is no longer displayed in the Action Center. You cannot delete actions manually.
 
 ##### Initiate and monitor endpoint actions
-Abstract
 
 Take these steps to initiate and monitor actions on your endpoints.
 
@@ -13701,7 +13412,6 @@ Create new administrative actions using the Action Center wizard:
     -   **Restore:** Restore quarantined files.
 
 ##### Action Center reference information
-Abstract
 
 See descriptions of the fields in the Action Center.
 
@@ -13728,7 +13438,6 @@ Read more...
 | Additional Data | Malicious Files | Additional data, if any is available, for the action. For malware scans, this field is titled Malicious Files and indicates the number of malicious files identified during the scan. |
 
 #### Manage endpoints
-Abstract
 
 You can view and take actions on endpoints on the All Endpoints page.
 
@@ -13818,7 +13527,6 @@ The following table describes both the default and additional optional fields th
 | User | User that was last logged into the endpoint. On Android endpoints, the Cortex Cloud tenant identifies the user from the email prefix specified during app activation. |
 
 #### Retrieve files from an endpoint
-Abstract
 
 You can retrieve files from one or more endpoints by initiating a files retrieval request.
 
@@ -13875,7 +13583,6 @@ If you want to prevent Cortex Cloud from retrieving files from an endpoint runni
 Disabling File Retrieval does not take effect on file retrieval actions that are in progress.
 
 #### Retrieve support logs from an endpoint
-Abstract
 
 Retrieve support logs from an endpoint when additional forensic data is needed.
 
@@ -13915,7 +13622,6 @@ How to retrieve support files
     To open the file you will need the support file password. For more information, see Retrieve support file password.
 
 #### Scan an endpoint for malware
-Abstract
 
 The agent can scan your Windows and Mac endpoints and attached removable drives for dormant malware that is not actively attempting to run.
 
@@ -13976,7 +13682,6 @@ You can take actions to manage and investigate files, including:
 -   Import hashes from the Endpoint Security Manager or from external feeds.
 
 #### Manage file execution
-Abstract
 
 Set rules for the execution (or running) of particular files on your endpoints in Cortex Cloud.
 
@@ -13998,7 +13703,7 @@ How to add a file to the allow or block list or allow list
     
 2.  Select Add to Block List or Add to Allow List.
     
-3.  Enter the SHA-256 hash of the file and click [image: blue-arrow.png].
+3.  Enter the SHA-256 hash of the file and click →.
     
     You can add up to 100 file hashes at one time. If you add a comment, it is added to all the hashes you added in this action.
     
@@ -14013,7 +13718,6 @@ How to add a file to the allow or block list or allow list
 7.  To manage the file hashes on the Block List or the Allow List, right-click a file to see the available actions.
 
 #### Manage quarantined files
-Abstract
 
 You can review and manage all files that have been quarantined by the agent due to a security case.
 
@@ -14071,7 +13775,6 @@ You can quarantine a file in the following ways:
     -   Permanently delete quarantined files on the endpoint: Right-click and select Delete all files by SHA256.
 
 #### Review WildFire analysis details
-Abstract
 
 For each file, Cortex Cloud receives a file verdict and the WildFire Analysis Report detailing additional information you can use to assess the nature of a file.
 
@@ -14083,7 +13786,7 @@ WildFire analysis details are available for files that receive a WildFire verdic
 
 1.  Open the WildFire report.
     
-    If you are investigating a case in the case detail view you can see artifact details on the Key Assets & Artifacts tab. Under Artifacts, identify a file with a WildFire verdict and click Wildfire Analysis Report ([image: WF-report-icon.png]). If you are analyzing an issue, hover over the issue and Investigate. You can open ([image: WF-report-icon.png]) the WildFire report of any file included in the issue's Causality Chain.
+    If you are investigating a case in the case detail view you can see artifact details on the Key Assets & Artifacts tab. Under Artifacts, identify a file with a WildFire verdict and click Wildfire Analysis Report (). If you are analyzing an issue, hover over the issue and Investigate. You can open () the WildFire report of any file included in the issue's Causality Chain.
     
     **Note:**
     
@@ -14095,7 +13798,7 @@ WildFire analysis details are available for files that receive a WildFire verdic
     
 3.  (Optional) Download the WildFire report.
     
-    If you want to download the WildFire report as it was generated by the WildFire service, click ([image: WF-report-download-icon.png]). The report is downloaded in PDF format.
+    If you want to download the WildFire report as it was generated by the WildFire service, click (). The report is downloaded in PDF format.
     
 
 Report an incorrect verdict to Palo Alto Networks
@@ -14104,7 +13807,7 @@ If you know the WildFire verdict is incorrect, for example, WildFire assigned a 
 
 1.  Open the WildFire report and verify the verdict that you are reporting.
     
-2.  Click Report Verdict as Incorrect ([image: WF-report-verdict-as-incorrect-icon.png]).
+2.  Click Report Verdict as Incorrect ().
     
 3.  Under Suggested Verdict, suggest a new verdict.
     
@@ -14117,7 +13820,6 @@ If you know the WildFire verdict is incorrect, for example, WildFire assigned a 
     The threat team will perform further analysis of the sample to determine whether it should be reclassified. If a malware sample is determined to be safe, the signature for the file is disabled in an upcoming antivirus signature update. If a benign file is determined to be malicious, a new signature is generated. After the investigation is complete, you will receive an email describing the action that was taken.
 
 #### Import file hash exceptions
-Abstract
 
 You can import file hash exceptions from the Endpoint Security Manager or from external feeds.
 
@@ -14138,7 +13840,6 @@ The Action Center displays information on files that are quarantined, or include
     Cortex Cloud imports your hashes. Depending on the assigned verdict, Cortex Cloud then distributes them to the allow list or block list.
 
 ### Cortex Assistant
-Abstract
 
 Cortex Assistant is designed to streamline processes by simplifying case triaging, investigation, and remediation. It enables you to seamlessly uncover new insights on hashes, hosts, and more. You can get tailored suggestions, and run actions in natural language from anywhere without losing context.
 
@@ -14170,7 +13871,6 @@ To increase usability, you can create a personalized keyboard shortcut: Settings
 Cortex Assistant is developed in accordance with responsible AI principles. Customer data is not used to train the AI models, and your data is private and secure. For added security, user prompts are processed within the tenant's region. Safety and security measures include user confirmation for write actions and adherence to RBAC permissions. At the same time, explainability is maintained by providing the logic behind answers and offering a feedback option for user opinions.
 
 #### Cortex Assistant layout
-Abstract
 
 Understand the main components in Cortex Assistant: search bar, insights and suggestions, action log, and feedback.
 
@@ -14191,7 +13891,6 @@ Below that, Cortex Assistant offers suggestions, which are divided into three co
 -   Respond: Take action by running recommended playbooks or scripts, enabling you to initiate response actions based on Cortex Assistant's suggestions.
 
 #### Cortex Assistant capabilities
-Abstract
 
 Understand Cortex Assistant's capabilities and how to use them.
 
@@ -14224,7 +13923,6 @@ Use Cortex Assistant to navigate in Cortex Cloud. You can search in navigation m
 Additionally, you can enter multiple search terms, and Cortex Assistant will search for pages that include either of the terms (as if there were a logical OR between the words).
 
 ### Response actions
-Abstract
 
 During the case investigation, various response actions are available.
 
@@ -14241,7 +13939,6 @@ For response actions that rely on the Cortex XDR agent, the following table desc
 | **Search and Destroy Malicious Files** Searches for the presence of known and suspected malicious files on endpoints, and destroys the file on endpoints where it exists. | ✓ Agent 7.2 and later | ✓ Agent 7.3 and later on macOS 10.15.4 and later | — |
 
 #### Initiate a Live Terminal session
-Abstract
 
 Initiate a Live Terminal session from the Cortex Cloud management console to control the endpoint remotely.
 
@@ -14292,10 +13989,10 @@ You can run PowerShell 5.0 or a later release on Live Terminal of Windows.
     Live Terminal Session Summary
     Initiated by user username@paloaltonetworks.com on target TrapsClient1 at Jun 27th 2019 14:17:45
     
-    Jun 27th 2019 13:56:13	Live Terminal session has started	\[success\]
-    Jun 27th 2019 14:00:45	Kill process calc.exe (4920)	\[success\]
-    Jun 27th 2019 14:11:46	Live Terminal session end request	\[success\]
-    Jun 27th 2019 14:11:47	Live Terminal session has ended	\[success\]
+    Jun 27th 2019 13:56:13	Live Terminal session has started	[success]
+    Jun 27th 2019 14:00:45	Kill process calc.exe (4920)	[success]
+    Jun 27th 2019 14:11:46	Live Terminal session end request	[success]
+    Jun 27th 2019 14:11:47	Live Terminal session has ended	[success]
     
     
     No artifacts marked as interesting
@@ -14310,7 +14007,7 @@ From the Live Terminal you can monitor processes running on the endpoint. The Ta
 
 1.  From the Live Terminal session, open the Task Manager to navigate the active processes on the endpoint.
     
-    You can toggle between a sorted list of processes and the default process tree view ([image: tree-view.png]). You can also export the list of processes and process details to a comma-separated values file. If the process is known as malware, the row displays a red indicator and identifies the file using a malware attribute.
+    You can toggle between a sorted list of processes and the default process tree view (). You can also export the list of processes and process details to a comma-separated values file. If the process is known as malware, the row displays a red indicator and identifies the file using a malware attribute.
     
 2.  Right-click the process to take the following actions:
     
@@ -14451,7 +14148,6 @@ If you want to prevent Cortex Cloud from initiating Live Terminal remote session
 Disabling Live Terminal does not take effect on sessions that are in progress.
 
 #### Isolate an endpoint
-Abstract
 
 In the event that an endpoint is compromised, you can immediately isolate it to reduce an attacker’s mobility.
 
@@ -14474,8 +14170,7 @@ Network isolation is supported for endpoints that meet the following requirement
 | --- | --- |
 | Windows | Agent 6.0 or later.; (VDI) Network isolation allow list in the agent settings profile is configured to ensure VDI sessions remain uninterrupted. For more information, see Set up agent settings profiles.Set up agent settings profiles |
 | Mac | Agent 7.3 or later.; MacOS 10.15.4 or later.; Cortex Cloud Network extension is enabled on the endpoint. Network isolation on Mac endpoints does not terminate active connections that were initiated before the agent was installed on the endpoint. |
-| Linux | iptables and ip6tables.; Agent 7.7 or later.; Linux kernel with the following enabled:-   CONFIG\_NETFILTER; CONFIG\_IP\_NF\_IPTABLES; CONFIG\_IP\_NF\_MATCH\_OWNER
-; Network isolation allow list configured in the agent settings profile. Network isolation on Linux endpoints is based on the defined IP addresses and ports. |
+| Linux | iptables and ip6tables.; Agent 7.7 or later.; Linux kernel with the following enabled:- CONFIG_NETFILTER; CONFIG_IP_NF_IPTABLES; CONFIG_IP_NF_MATCH_OWNER ; Network isolation allow list configured in the agent settings profile. Network isolation on Linux endpoints is based on the defined IP addresses and ports. |
 
 How to isolate an endpoint
 
@@ -14515,7 +14210,6 @@ How to isolate an endpoint
 If file system operations become unresponsive during isolation, such as being unable to list folder content, unmount the mounted network shares.
 
 #### Pause endpoint protection
-Abstract
 
 Disable the Cortex XDR agent protection capabilities on an endpoint.
 
@@ -14553,7 +14247,6 @@ How to pause endpoint protection modules
     Go to Investigation & Response → Response → Action Center and locate Action Type Pause Endpoint Protection or Resume Endpoint Protection.
 
 #### Remediate changes from malicious activity
-Abstract
 
 You can obtain action remediation suggestions from Cortex Cloud about malicious causality chains that have been detected.
 
@@ -14615,7 +14308,6 @@ How to initiate remediation suggestions
     Go to Investigation & Response+Response → Action Center → All Actions and locate your remediation process in the Action Type field. Right-click Additional data to open the Detailed Results window.
 
 #### Search and destroy malicious files
-Abstract
 
 Cortex Cloud enables you to effectively hunt down any identified malicious file that may exist on any of your endpoints.
 
@@ -14718,7 +14410,6 @@ When you know a file is malicious, you can destroy all of its instances on your 
     Cortex Cloud displays the summary of the file destroy action. If you need to change your settings, go Back. If all the details are correct, click Run. The File destroy action is added to the Action Center.
 
 #### Manage external dynamic lists
-Abstract
 
 Configure and manage your external dynamic lists in Cortex Cloud.
 
@@ -14837,7 +14528,6 @@ To maintain an EDL, you must meet the following requirements:
     4.  If desired, select one or more IP addresses or domain names, right-click and Delete any entries that you no longer want included on the lists.
 
 #### Collect a memory image
-Abstract
 
 Collect a memory image from a Windows endpoint.
 
@@ -14876,7 +14566,6 @@ How to collect a memory image
 Requires the Forensics add-on
 
 #### Forensic investigations
-Abstract
 
 Learn about forensics, how to create forensic investigations, how to create and manage data collections, and how to assess other forensic related settings.
 
@@ -14887,7 +14576,6 @@ Investigations are comprised of one or more data collections from endpoints with
 -   Triage collections enable you to collect detailed information about specific activities that occurred on an endpoint. The triage functionality is configurable and supports the collection of all currently supported forensic artifacts, user-defined file paths, a full file listing for all of the connected drives, full event logs, and registry hives. The amount of data collected during a triage can be large, so triages are limited to ten or fewer endpoints per collection.
 
 ##### Manage an investigation
-Abstract
 
 Manage an investigation by adding collections, managing alerts, adjusting the timeline, analyzing assets and artifacts.
 
@@ -14916,7 +14604,6 @@ The Forensic Investigation fields shows information relating to the investigatio
 | Created | Timestamp of when the investigation was created. |
 
 ###### Create a new investigation
-Abstract
 
 Learn how to create a forensics investigation. This includes adding a collection, exporting the data collection, managing alerts and key assets & artifacts.
 
@@ -14945,7 +14632,6 @@ Create a forensics investigation that includes all the relevant forensics data. 
 8.  Click UTC Timezone to configure the timezone and timestamp format. Refer to Configure server settings for information on setting up your timezone.Configure server settings
 
 ###### Edit an investigation
-Abstract
 
 Edit an existing investigation from the Forensic Investigations page.
 
@@ -14956,7 +14642,6 @@ From the list of active investigations, you can edit the name, description or up
 2.  In the Edit Investigation widget, you can update the Investigation Name, Description, and Permissions. For more information, refer to User permissions.
 
 ###### Close an investigation
-Abstract
 
 Close an existing investigation from the Forensic Investigations page.
 
@@ -14981,7 +14666,6 @@ When you close an investigation, Palo Alto Networks has a grace period of 24 hou
     -   Permanently delete: Delete the investigation and all associated data immediately. This action can't be canceled.
 
 ###### User permissions
-Abstract
 
 You can assign users to the investigation for them to view and manage the investigation.
 
@@ -15006,21 +14690,18 @@ The Permissions fields describe the following information:
 | Permissions | Options are None, View, View/Edit |
 
 ##### Data collection
-Abstract
 
 This section includes information related to each collection type.
 
 The data collection section includes information related to each collection type.
 
 ###### Hunting
-Abstract
 
 Search for specific data across a large number of hosts.
 
 Hunting enables investigators to search for specific data across a large number of hosts. Hunt collections provide more details about where something occurred. Hunting examples include finding which endpoints executed a piece of malware, which users accessed a particular file, or which endpoints were accessed by a specific user.
 
 ###### Create a hunt
-Abstract
 
 Hunt collections enable you to search endpoints for suspicious activity to contribute to helping resolve the investigation.
 
@@ -15053,7 +14734,6 @@ When adding a new hunt collection, you can select from various artifact types fo
 You can save hunts in an incomplete state and edit them later. After a hunt has run, you cannot edit it. Instead, you can duplicate the hunt with the same configuration.
 
 ###### Hunt results
-Abstract
 
 The hunt results page consolidates information collected by the Cortex XDR agent enabling you to investigate and take action on your endpoints.
 
@@ -15061,15 +14741,13 @@ The hunt results page consolidates information collected by the Cortex XDR agent
 
 ###### Review process execution search results
 
-Abstract
-
 Manage the process execution artifacts collected from the endpoints.
 
 The Process Execution table displays a normalized table containing an overview of all of the different process execution artifacts collected from the endpoints. Investigate the following detailed fields:
 
 **Note:**
 
-The grouping button ([image: forensics-grouping-button-icon.png]) shows the number of affected endpoints grouped by executable name. This enables you to perform hunting via frequency analysis (referred to as stacking) and provides a birds eye view of potential malware files that require further analysis.
+The grouping button () shows the number of affected endpoints grouped by executable name. This enables you to perform hunting via frequency analysis (referred to as stacking) and provides a birds eye view of potential malware files that require further analysis.
 
 | Field | Description |
 | --- | --- |
@@ -15087,8 +14765,6 @@ The grouping button ([image: forensics-grouping-button-icon.png]) shows the numb
 
 ###### Review file access
 
-Abstract
-
 Manage file access collected from endpoints.
 
 The File Access table displays a normalized table containing an overview of all of the different file access artifacts collected from the endpoints. Investigate the following detailed fields:
@@ -15103,15 +14779,13 @@ The File Access table displays a normalized table containing an overview of all 
 
 ###### Review persistence search results
 
-Abstract
-
 Manage persistence artifacts collected from the endpoints.
 
 The Persistence table displays a normalized table containing an overview of all of the application persistence artifacts collected from the endpoints. Investigate the following detailed fields:
 
 **Note:**
 
-The grouping button ([image: forensics-grouping-button-icon.png]) shows the number of affected endpoints grouped by file path. This enables you to perform hunting via frequency analysis (referred to as stacking) and provides a birds eye view of potential malware files that require further analysis.
+The grouping button () shows the number of affected endpoints grouped by file path. This enables you to perform hunting via frequency analysis (referred to as stacking) and provides a birds eye view of potential malware files that require further analysis.
 
 | Field | Description |
 | --- | --- |
@@ -15131,8 +14805,6 @@ The grouping button ([image: forensics-grouping-button-icon.png]) shows the numb
 
 ###### Review network data search results
 
-Abstract
-
 Manage the different network artifacts collected on the endpoints.
 
 The Network table displays an overview of the different types of network artifacts collected on the endpoints. Investigate the following detailed fields:
@@ -15146,8 +14818,6 @@ The Network table displays an overview of the different types of network artifac
 | Type | Type of network artifact. |
 
 ###### Review remote access search results
-
-Abstract
 
 Manage the remote access artifacts collected from the endpoints.
 
@@ -15167,8 +14837,6 @@ The Remote Access table displays a normalized table containing an overview of al
 | User | User account associated with remote access connection. |
 
 ###### Review archive history search results
-
-Abstract
 
 Manage archive processes that were executed on an endpoint.
 
@@ -15205,7 +14873,6 @@ The collection results for the Core Linux artifacts include information about ea
 | User Login & Session History | Shows records of user login sessions from the last command, showing who logged in, from where, and for how long. This is essential for auditing user access and investigating unauthorized logins. |
 
 ###### Hunt status
-Abstract
 
 In the Actions table, you can scroll or use the filters to see the status of any search within a hunt across any of the targeted endpoints.
 
@@ -15228,14 +14895,12 @@ Using this information, you can identify the successful and failed searches and 
 | Creation time | Timestamp when the search was created. |
 
 ###### Triage
-Abstract
 
 Triage collection gathers a wide range of artifacts that can be used to help understand the event that occurred on an endpoint.
 
 Triage enables you to do a in-depth analysis of a specific endpoint to fully understand the activities that occurred on that endpoint. The triage functionality is configurable and supports the collection of all currently supported forensic artifacts, user-defined file paths, a full file listing for all of the connected drives, full event logs, and registry hives. The amount of data collected during a triage can be large, so triages are limited to ten or fewer endpoints per collection.
 
 ###### Create a triage
-Abstract
 
 Triage collections enable you to obtain additional information for certain activities that have occurred on the endpoints. This helps towards the forensics analytics of an investigation.
 
@@ -15264,7 +14929,6 @@ Triage supports data collection from both online and offline hosts, on both Wi
 9.  Click Save Collection and Exit or click Next to continue.
 
 ###### Upload an offline triage package
-Abstract
 
 Use the Upload Offline Triage to upload archives containing forensic data collected by the offline collector.
 
@@ -15276,7 +14940,7 @@ Use the Upload Offline Triage to upload archives containing forensic data collec
     
 2.  Click the link of the relevant investigation.
     
-3.  When in the Collections page, search for or select the triage and click the menu options button ([image: menu_options_button.png]) to select Upload Offline Package.
+3.  When in the Collections page, search for or select the triage and click the menu options button () to select Upload Offline Package.
     
 4.  Drag and drop or use the browse link to search for the file. More than one offline triage package can be uploaded at a time.
     
@@ -15287,7 +14951,6 @@ Use the Upload Offline Triage to upload archives containing forensic data collec
 5.  Click Done.
 
 ###### Offline triage collection
-Abstract
 
 Offline triage collection is supported for endpoints with no network connection or no Cortex XDR agent currently installed.
 
@@ -15299,7 +14962,7 @@ Note that the procedure differs between Windows, macOS, and Linux.
 
 1.  Select Investigation & Response → Forensics.
     
-2.  Click the investigation link and from the Collections tab, find the triage and click the menu options button ([image: menu_options_button.png])/ Depending on the system type of the endpoint, select Download 32-bit Collector or Download 64-bit Collector .
+2.  Click the investigation link and from the Collections tab, find the triage and click the menu options button ()/ Depending on the system type of the endpoint, select Download 32-bit Collector or Download 64-bit Collector .
     
 3.  Copy the downloaded file to a location accessible from the targeted endpoint.
     
@@ -15309,7 +14972,7 @@ Note that the procedure differs between Windows, macOS, and Linux.
     
     After the collection is completed, a zip file with the hostname and a timestamp in the file name is created in the same directory as the executable.
     
-5.  From the Collections page, select the triage and click the menu options button ([image: menu_options_button.png]) and select Upload Offline Package.
+5.  From the Collections page, select the triage and click the menu options button () and select Upload Offline Package.
     
 6.  In the Import Offline Triage dialog, browse for or drag and drop the zip file, and click Done.
     
@@ -15324,7 +14987,7 @@ Note that the procedure differs between Windows, macOS, and Linux.
 
 1.  Select Investigation & Response → Forensics.
     
-2.  Click the investigation link and from the Collections tab, find the triage and click the menu options button ([image: menu_options_button.png]) and select Download Collector.
+2.  Click the investigation link and from the Collections tab, find the triage and click the menu options button () and select Download Collector.
     
 3.  Open the folder containing the zip file and run the command `xattr -c <triage_configuration_name>.zip` to remove any extended attributes that macOS might have applied to the file.
     
@@ -15334,7 +14997,7 @@ Note that the procedure differs between Windows, macOS, and Linux.
     
     After the collection is completed, a zip file with the hostname and a timestamp in the file name is created in the same directory as the executable.
     
-6.  From the Collections page, select the triage and click the menu options button ([image: menu_options_button.png]) and select Upload Offline Package.
+6.  From the Collections page, select the triage and click the menu options button () and select Upload Offline Package.
     
 7.  In the Import Offline Triage dialog, browse for or drag and drop the zip file, and click Done.
     
@@ -15349,7 +15012,7 @@ Note that the procedure differs between Windows, macOS, and Linux.
 
 1.  Select Investigation & Response → Forensics.
     
-2.  Click the investigation link and from the Collections tab, find the triage and click the menu options button ([image: menu_options_button.png]) and select Download x86 Collector or Download ARM64 Collector.
+2.  Click the investigation link and from the Collections tab, find the triage and click the menu options button () and select Download x86 Collector or Download ARM64 Collector.
     
 3.  Copy the downloaded zip file to a destination that is accessible from the targeted endpoint.
     
@@ -15357,7 +15020,7 @@ Note that the procedure differs between Windows, macOS, and Linux.
     
     After the collection is completed, a zip file with the hostname and a timestamp in the file name is created in the same directory as the executable.
     
-5.  From the Collections page, select the triage and click the menu options button ([image: menu_options_button.png]) and select Upload Offline Package.
+5.  From the Collections page, select the triage and click the menu options button () and select Upload Offline Package.
     
 6.  In the Import Offline Triage dialog, browse for or drag and drop the zip file, and click Done.
     
@@ -15368,7 +15031,6 @@ Note that the procedure differs between Windows, macOS, and Linux.
     Security software running on the endpoint (including the Cortex agent) can interfere with or block the execution of the offline triage collector. Disable any security software on the endpoint while the collector is running, or whitelist the collector in your security software before running the offline triage collector.
 
 ###### Triage results
-Abstract
 
 You can drill down from the triage collection to review the results.
 
@@ -15381,7 +15043,6 @@ The triage results page is divided into the following tabs:
 -   Host Timeline: Displays a list of normalized, per-host timelines that include multiple forensic artifacts in a single table.
 
 ###### Triage status
-Abstract
 
 From the Actions table, you can view the search status of all the artifacts for the triage.
 
@@ -15419,42 +15080,33 @@ You can create a search query by adding any of the following artifacts available
 
 | Category from Hunt Collection | Default Timeout | Artifacts collected from endpoint(s) \*\*Note:\*\* Data collected during a Triage Collection is categorized into Artifacts, Volatiles, and File Collection | Supported Filters |
 | --- | --- | --- | --- |
-| Archive History (Windows only) | 60 minutes | (Windows) 7-Zip Folder History: A registry key containing a list of archive files accessed using 7-Zip.; (Windows) WinRAR ArcHistory: A registry key containing a list of archive files accessed using WinRAR. | File Name: regular expression (case-insensitive) Example: \[0-9A-F\]{8}\\.exe; File Path: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\\*.exe |
+| Archive History (Windows only) | 60 minutes | (Windows) 7-Zip Folder History: A registry key containing a list of archive files accessed using 7-Zip.; (Windows) WinRAR ArcHistory: A registry key containing a list of archive files accessed using WinRAR. | File Name: regular expression (case-insensitive) Example: [0-9A-F]{8}\\.exe; File Path: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\\*.exe |
 | Browser History | 60 minutes | (Windows, macOS) Chrome; (Windows, macOS) Chromium-Based; (Windows, macOS) Firefox; (Windows) Edge-Anaheim; (Windows) Edge-Spartan; (Windows) Internet Explorer; (macOS) Quarantine; (macOS) Safari | URL: goog\*.\\.com; History File Path: path (wildcards ? \* \*\* supported) Example: C:\\Users\\\*\\AppData\\Local\\BraveSoftware\\Brave-Browser\\\*\\History |
-| Command History | 60 minutes | (Windows) PSReadline: A record of commands typed into a PowerShell terminal by the user. The history file is enabled by default, starting with PowerShell 5 on Windows 10 or newer.; (macOS) Shell History: Commands recorded to the history files for Bash and Zsh shells. | Search Regex: regular expression (case-insensitive) Example: \[0-9A-F\]{8}\\.exe |
-| Deleted Files (Windows only) | 180 minutes | (Windows) Recycle Bin: A Folder used by Windows as temporary storage for deleted files before permanent deletion. | File Name: regular expression (case-insensitive) Example: \[0-9A-F\]{8}\\.exe; File Path: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\\*.exe; User Search: User SID or User Name selector. Example: ACME\\jsmith |
-| File Access | 60 minutes | (Windows) Jumplists: A feature of the Windows Taskbar that provides shortcuts to users for recently accessed files or applications.; (Windows) OpenSavePidlMRU: A registry key containing a list of recently opened and saved files for a user’s account.; (Windows) Recent Files: Contents of the shortcut (.lnk) files found in a user's Recent folder. These files represent files recently accessed for a user account.; (Windows) ShellBags: Registry keys that record user layout preferences for each folder with which the user interacts.; (Windows) TypedPaths: A registry key containing a list of paths that the user typed into the Windows Explorer path bar.; (macOS) Recent Documents: Plist files located within a user's Library directory that contain a list of documents accessed by that user. | Target File Name: regular expression (case-insensitive) Example: \[0-9A-F\]{8}\\.exe; Target File Path: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\\*.exe; User Search: User SID or User Name selector. Example: ACME\\jsmith |
-| File Search | 180 minutes | (Windows, macOS) File Search: Search for a file across endpoints by specifying a file path that can include wildcards, and then filter those results based on the file size, the file name (supports regular expressions), or file hash (MD5, SHA1, or SHA256). | File Path: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\\*.exe; File Name: regular expression (case-insensitive) Example: \[0-9A-F\]{8}\\.exe; File Hash: Supports MD5, SHA1, and SHA256. Example: f9d9b9ded9a67aa3cfdbd5002f3b524b265c4086c188e1be7c936ab25627bf01; Size Example: >= 100 MB |
-| Log Search | 180 minutes | (Windows) Event Log: A component of Microsoft Windows, where the user can view a record of events that occurred within a system or process.; (macOS) Apple Unified Logs: Predicate is a custom filter component for Apple Unified Logs. | Event Log Channel: Does not support wildcards. Example: Security; Event ID: Example: 4624; Providers: Does not support wildcards. Example: Security; Message: regular expression (case-insensitive) Example: \[0-9A-F\]{8}\\.exe; Predicate: Custom filter component for Apple Unified Logs. Example: eventType=logEvent AND eventMessage Contains abc |
+| Command History | 60 minutes | (Windows) PSReadline: A record of commands typed into a PowerShell terminal by the user. The history file is enabled by default, starting with PowerShell 5 on Windows 10 or newer.; (macOS) Shell History: Commands recorded to the history files for Bash and Zsh shells. | Search Regex: regular expression (case-insensitive) Example: [0-9A-F]{8}\\.exe |
+| Deleted Files (Windows only) | 180 minutes | (Windows) Recycle Bin: A Folder used by Windows as temporary storage for deleted files before permanent deletion. | File Name: regular expression (case-insensitive) Example: [0-9A-F]{8}\\.exe; File Path: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\\*.exe; User Search: User SID or User Name selector. Example: ACME\\jsmith |
+| File Access | 60 minutes | (Windows) Jumplists: A feature of the Windows Taskbar that provides shortcuts to users for recently accessed files or applications.; (Windows) OpenSavePidlMRU: A registry key containing a list of recently opened and saved files for a user’s account.; (Windows) Recent Files: Contents of the shortcut (.lnk) files found in a user's Recent folder. These files represent files recently accessed for a user account.; (Windows) ShellBags: Registry keys that record user layout preferences for each folder with which the user interacts.; (Windows) TypedPaths: A registry key containing a list of paths that the user typed into the Windows Explorer path bar.; (macOS) Recent Documents: Plist files located within a user's Library directory that contain a list of documents accessed by that user. | Target File Name: regular expression (case-insensitive) Example: [0-9A-F]{8}\\.exe; Target File Path: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\\*.exe; User Search: User SID or User Name selector. Example: ACME\\jsmith |
+| File Search | 180 minutes | (Windows, macOS) File Search: Search for a file across endpoints by specifying a file path that can include wildcards, and then filter those results based on the file size, the file name (supports regular expressions), or file hash (MD5, SHA1, or SHA256). | File Path: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\\*.exe; File Name: regular expression (case-insensitive) Example: [0-9A-F]{8}\\.exe; File Hash: Supports MD5, SHA1, and SHA256. Example: f9d9b9ded9a67aa3cfdbd5002f3b524b265c4086c188e1be7c936ab25627bf01; Size Example: >= 100 MB |
+| Log Search | 180 minutes | (Windows) Event Log: A component of Microsoft Windows, where the user can view a record of events that occurred within a system or process.; (macOS) Apple Unified Logs: Predicate is a custom filter component for Apple Unified Logs. | Event Log Channel: Does not support wildcards. Example: Security; Event ID: Example: 4624; Providers: Does not support wildcards. Example: Security; Message: regular expression (case-insensitive) Example: [0-9A-F]{8}\\.exe; Predicate: Custom filter component for Apple Unified Logs. Example: eventType=logEvent AND eventMessage Contains abc |
 | Network Data | 60 minutes | (Windows) ARP Cache: A cache of Address Resolution Protocol (ARP) records for resolved MAC and IP addresses.; (Windows) DNS Cache: A cache of Domain Name System (DNS) records for resolved domains and IP addresses.; (Windows, macOS) Hosts File: Listing of entries from the etc/hosts file.; (macOS) Recent Places: A plist file located within a user's Library directory that contains a list of recently accessed servers and hosts. | IP Address: IPv4 or IPv6 addresses. Example: 10.0.0.5; Domain: regular expression (case-insensitive) Example: goo.\*\\.com; Path: path (wildcards ? \* \*\* supported) Example: /Volumes/VMware\*; User Search: User SID or User Name selector. Example: ACME\\jsmith |
-| Persistence | 60 minutes | (Windows) Drivers: Windows device drivers installed on each endpoint.; (Windows) Registry Persistence: A collection of registry keys that can be used for malware persistence.; (Windows) Scheduled Tasks: Tasks used to execute Windows programs or scripts at specified intervals.; (Windows) Services: Windows applications that run in the background and do not require user interaction.; (Windows) Shim Databases: Databases used by the Application Compatibility Infrastructure to apply shims to executables for backwards compatibility. These databases can be used to inject malicious code into legitimate processes and maintain persistence on an endpoint.; (Windows) Startup Folder: Contents of the shortcut .lnk files found in the Startup folder for both the system and users. The folders are used to launch applications during system startup or user logon.; (Windows) WMI Persistence: List of WMI EventConsumers and any EventFilters that are bound to them using a FilterToConsumerBinding. WMI EventConsumers can be used for fileless malware persistence.; (macOS) Cron: A system utility that executes programs or scripts at specified intervals.; (macOS) Launchd: Listing of applications and daemons configured to launch using the launchd process.; (macOS) Login Items: Plist files that contain applications, files, or folders configured to launch during user login. | Registry Path: path (wildcards ? \* \*\* supported) Example: HKEY\_USERS\\\*\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\\*; Executable Path: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\test.exe; User Search: User SID or User Name selector. Example: ACME\\jsmith; SHA256: Supports SHA256 hashes. Example: f9d9b9ded9a67aa3cfdbd5002f3b524b265c4086c188e1be7c936ab25627bf01; Command: regular expression (case-insensitive) Example: /bin/sh /private/etc/periodic/weekly/.\* |
-| Process Execution | 60 minutes | (Windows) Amcache: A registry hive used by the Application Compatibility Infrastructure to cache the details of executed or installed programs.; (Windows) Background Activity Monitor: Per-user registry keys created by Background Activity Monitor (BAM) service to store the full paths of executable files and a timestamp, indicating when they were last executed.; (Windows) CidSizeMRU: A registry key containing a list of recently launched applications.; (Windows) LastVisitedPidlMRU: A registry key containing a list of the applications and folder paths associated with recently opened files found in the user’s OpenSavePidMRU key.; (Windows) Prefetch: A type of file created to optimize application startup in Windows. These files contain a run count for each application, between one and eight timestamps of the most recent executions, and a record of all the files opened for a set duration after the application was started.; (Windows) Recentfilecache: A cache created by the Application Compatibility Infrastructure to store the details of executed or installed programs (Windows 7 only).; (Windows) Shimcache: A registry key used by the Application Compatibility Infrastructure to cache details about local executables.; (Windows) UserAssist: A registry value that records a count for each application that a user launches via the Windows UI.; (Windows) Windows Activities: A database containing user activity for a particular Microsoft user account, potentially across multiple devices. This is also called the Windows Timeline.; (macOS) CoreAnalytics: A diagnostic log that contains details of files executed on the system.; (macOS) Recent Applications: A plist file located within a user's Library directory that contains a list of applications opened by that user. | Executable File Name: regular expression (case-insensitive) Example: \[0-9A-F\]{8}\\.exe; Executable Path: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\test.exe; User Search: User SID or User Name selector. Example: ACME\\jsmith; SHA256: Supports SHA256 hashes. Example: f9d9b9ded9a67aa3cfdbd5002f3b524b265c4086c188e1be7c936ab25627bf01 |
-| Registry Search (Windows only) | 180 minutes | (Windows) Registry Search: Registry listings collected during Forensic investigation. | Path: path (wildcards ? \* \*\* supported) Example: HKEY\_USERS\\\*\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\\*; Data: regular expression (case-insensitive) Example: \[0-9A-F\]{8}\\.exe |
-| Remote Access (Windows only) | 60 minutes | (Windows) AnyDesk Connection Logs: Records of activity found in the AnyDesk connection logs.; (Windows) AnyDesk Trace Logs: Records of activity found in the AnyDesk trace logs.; (Windows) LogMein: Records of activity found in the LogMeIn event logs.; (Windows) TeamViewer: Records of incoming TeamViewer connections found in the Connections\_incoming.txt file.; (Windows) User Access Logging: A Windows Server feature that records details about client access to the server. Only found on Windows Server 2012 and newer. | IP Address: IPv4 or IPv6 addresses Example: 10.0.0.5; User Search: User SID or User Name selector. Example: ACME\\jsmith |
+| Persistence | 60 minutes | (Windows) Drivers: Windows device drivers installed on each endpoint.; (Windows) Registry Persistence: A collection of registry keys that can be used for malware persistence.; (Windows) Scheduled Tasks: Tasks used to execute Windows programs or scripts at specified intervals.; (Windows) Services: Windows applications that run in the background and do not require user interaction.; (Windows) Shim Databases: Databases used by the Application Compatibility Infrastructure to apply shims to executables for backwards compatibility. These databases can be used to inject malicious code into legitimate processes and maintain persistence on an endpoint.; (Windows) Startup Folder: Contents of the shortcut .lnk files found in the Startup folder for both the system and users. The folders are used to launch applications during system startup or user logon.; (Windows) WMI Persistence: List of WMI EventConsumers and any EventFilters that are bound to them using a FilterToConsumerBinding. WMI EventConsumers can be used for fileless malware persistence.; (macOS) Cron: A system utility that executes programs or scripts at specified intervals.; (macOS) Launchd: Listing of applications and daemons configured to launch using the launchd process.; (macOS) Login Items: Plist files that contain applications, files, or folders configured to launch during user login. | Registry Path: path (wildcards ? \* \*\* supported) Example: HKEY_USERS\\\*\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\\*; Executable Path: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\test.exe; User Search: User SID or User Name selector. Example: ACME\\jsmith; SHA256: Supports SHA256 hashes. Example: f9d9b9ded9a67aa3cfdbd5002f3b524b265c4086c188e1be7c936ab25627bf01; Command: regular expression (case-insensitive) Example: /bin/sh /private/etc/periodic/weekly/.\* |
+| Process Execution | 60 minutes | (Windows) Amcache: A registry hive used by the Application Compatibility Infrastructure to cache the details of executed or installed programs.; (Windows) Background Activity Monitor: Per-user registry keys created by Background Activity Monitor (BAM) service to store the full paths of executable files and a timestamp, indicating when they were last executed.; (Windows) CidSizeMRU: A registry key containing a list of recently launched applications.; (Windows) LastVisitedPidlMRU: A registry key containing a list of the applications and folder paths associated with recently opened files found in the user’s OpenSavePidMRU key.; (Windows) Prefetch: A type of file created to optimize application startup in Windows. These files contain a run count for each application, between one and eight timestamps of the most recent executions, and a record of all the files opened for a set duration after the application was started.; (Windows) Recentfilecache: A cache created by the Application Compatibility Infrastructure to store the details of executed or installed programs (Windows 7 only).; (Windows) Shimcache: A registry key used by the Application Compatibility Infrastructure to cache details about local executables.; (Windows) UserAssist: A registry value that records a count for each application that a user launches via the Windows UI.; (Windows) Windows Activities: A database containing user activity for a particular Microsoft user account, potentially across multiple devices. This is also called the Windows Timeline.; (macOS) CoreAnalytics: A diagnostic log that contains details of files executed on the system.; (macOS) Recent Applications: A plist file located within a user's Library directory that contains a list of applications opened by that user. | Executable File Name: regular expression (case-insensitive) Example: [0-9A-F]{8}\\.exe; Executable Path: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\test.exe; User Search: User SID or User Name selector. Example: ACME\\jsmith; SHA256: Supports SHA256 hashes. Example: f9d9b9ded9a67aa3cfdbd5002f3b524b265c4086c188e1be7c936ab25627bf01 |
+| Registry Search (Windows only) | 180 minutes | (Windows) Registry Search: Registry listings collected during Forensic investigation. | Path: path (wildcards ? \* \*\* supported) Example: HKEY_USERS\\\*\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\\*; Data: regular expression (case-insensitive) Example: [0-9A-F]{8}\\.exe |
+| Remote Access (Windows only) | 60 minutes | (Windows) AnyDesk Connection Logs: Records of activity found in the AnyDesk connection logs.; (Windows) AnyDesk Trace Logs: Records of activity found in the AnyDesk trace logs.; (Windows) LogMein: Records of activity found in the LogMeIn event logs.; (Windows) TeamViewer: Records of incoming TeamViewer connections found in the Connections_incoming.txt file.; (Windows) User Access Logging: A Windows Server feature that records details about client access to the server. Only found on Windows Server 2012 and newer. | IP Address: IPv4 or IPv6 addresses Example: 10.0.0.5; User Search: User SID or User Name selector. Example: ACME\\jsmith |
 | System Statistics (Windows only) | 60 - 120 minutes | (Windows) Application Resource Usage: A table in the System Resource Usage database that stores statistics pertaining to resource usage by running applications.; (Windows) Network Connectivity Usage: A table in the System Resource Usage database that stores statistics pertaining to network connections, containing the start time and duration of the connections for each network interface.; (Windows) Network Data Usage: A table in the System Resource Usage database that stores statistics pertaining to network data usage for running applications. Includes application path, network interface, bytes sent, and bytes received. | Application: path (wildcards ? \* \*\* supported) Example: C:Windows\\Temp\\\*\*\\test.exe; User Search: User SID or User Name selector. Example: ACME\\jsmith |
-| User Searches | 60 minutes | (Windows) WordWheelQuery: Registry key containing a list of terms that a user searched for in Windows Explorer.; (macOS) Spotlights Shortcuts: A plist file that contains the Spotlight search terms entered by each user and the items that they selected from the search results. | User Search: User SID or User Name selector. Example: PANW\\jsmith; Search Regex: regular expression (case-insensitive) Example: \[0-9A-F\]{8}\\.exe |
+| User Searches | 60 minutes | (Windows) WordWheelQuery: Registry key containing a list of terms that a user searched for in Windows Explorer.; (macOS) Spotlights Shortcuts: A plist file that contains the Spotlight search terms entered by each user and the items that they selected from the search results. | User Search: User SID or User Name selector. Example: PANW\\jsmith; Search Regex: regular expression (case-insensitive) Example: [0-9A-F]{8}\\.exe |
 | **Linux** |
 | Core Linux | 60 minutes | Authorized Keys: Contains public keys that are permitted to log in as a specific user via SSH. Attackers can add their own keys to this file to gain persistent access to a system. | Comment: regular expression (case-sensitive) Example: tar\\cvzf.\* |
-| Known Hosts: The known\_hosts file stores the public keys of SSH servers that a user has connected to. This helps to verify the server's identity and prevent man-in-the-middle attacks by alerting the user if the server's key changes. | Host: IP or hostname (regular expression) Example: 4\\.2\\.2\\.\*, \*\\.google\\.com |
-| System Information: Provides fundamental hardware and system information, including manufacturer, model, UUID, and memory details. This helps identify and profile the system. | File Name: regular expression (case-sensitive) Example: \[0-9A-F\]{8} |
-| Systemd Journal: | None required |
-| Running Processes: A detailed snapshot of running processes on the system. This includes process identifiers, user context, executable path, parent-child relationships, state, and performance metrics. It is a cornerstone artifact for live system analysis. | File Name: regular expression (case-sensitive) Example: \[0-9A-F\]{8}; Process Owner: Entries are either numeric UIDs or text usernames. Example: 1001; Path: file path Example: /usr/local/share/\*/bin/\* |
-| Network Connections: Lists active network connections and listening ports. Essential for identifying unauthorized network communications, malware command and control (C2) channels, or unexpected listening services. | Local IP: IPv4 or IPv6 addresses Example: 10.0.0.5; Local Port; Local IP; Remote IP; Remote Port; Netstat Command Line; Netstat Process Name; Netstat Process Path |
-| Firewall Rules: Firewall rules (for example, from iptables) that control network traffic. Analyzing these rules is important for understanding the network security posture and identifying potentially malicious or overly permissive configurations. \*\*Note:\*\* Supported only for the UFW tool (Firewall managment tool for some Linux distributions such as Ubuntu) | Source: regular expression (case-insensitive) Example: \[0-9A-F\]{8}\\.exe; Destination: regular expression (case-insensitive) Example: \[0-9A-F\]{8}\\.exe |
-| Kernel Modules: Lists kernel modules on the system, their state, and the associated file path. Malicious actors may use custom kernel modules (rootkits) to hide their presence or gain privileged access. | Module Name: regular expression (case-insensitive); Module Path: path |
-| Environment Variables: Lists environment variables for a given context (for example, a user's shell or a specific process). These variables define the execution environment and can contain important paths, configurations, or sensitive data. | Key: regular expression (case-sensitive); Value: regular expression (case-sensitive) |
-| Mounted Filesystems: Lists all mounted file systems, their sources (devices), types, and unique identifiers. This is useful for discovering connected storage, network shares, and understanding the file system layout. | None required |
-| User Login & Session History: Records of user login sessions from the last command, showing who logged in, from where, and for how long. This is essential for auditing user access and investigating unauthorized logins. | User Login |
-| Command History: Detailed records of commands from user shell history files (for example, bash\_history, .zsh\_history). This artifact is essential for tracking user activity and command execution. | Command:; Executed by: Entries are either numeric UIDs or text usernames. Example: 1001 |
-| Auditd Rules: Refers to the log data collected by the Linux Audit Daemon, which is a core component of security auditing. It records a detailed, chronological trail of system events based on a set of pre-configured rules. | Command:; Executed by: Entries are either numeric UIDs or text usernames. Example: 1001; Auditd Exe: |
-| System-Wide Configuration: Key-value pairs parsed from various configuration files within the `/etc` directory, such as `/etc/resolv.conf` for DNS settings. This artifact helps understand the system's network and operational configuration. | Source: regular expression (case-insensitive) Example: \[0-9A-F\]{8}\\.exe |
-| File Listing: A plain text file used in digital forensics to create a detailed timeline of a file system activity. | File Name: regular expression (case-sensitive) Example: \[0-9A-F\]{8}; User Id: Entries are either numeric UIDs or text usernames. Example: 100001; Group Id: Entries are either numeric GIDs or text group names. Example: 0, 1 |
-| Files & Processes: The artifact lists the files opened by the processes. This listing is essential for mapping a process directly to the files, loaded libraries, and network sockets it's using, which can immediately reveal hidden activities or active connections. | File Name: regular expression (case-sensitive) Example: \[0-9A-F\]{8}; User Id: Entries are either numeric UIDs or text usernames. Example: 100001 |
-| System Configuration Files: Shell profile files (for example, .bashrc, .profile) that contain commands and configurations executed at session startup. They are analyzed for persistence mechanisms, aliases, and malicious environment modifications. | None required |
-| Service Status: Lists system daemons or services (for example, from systemd). Analyzing these is key to understanding which long-running processes are configured on the system and to spot malicious or unnecessary services. | File Name: regular expression (case-sensitive) Example: \[0-9A-F\]{8}; Path: file path Example: Example: /usr/local/share/\*/bin/\*; Command: |
+| Known Hosts: The known_hosts file stores the public keys of SSH servers that a user has connected to. This helps to verify the server's identity and prevent man-in-the-middle attacks by alerting the user if the server's key changes. | Host: IP or hostname (regular expression) Example: 4\\.2\\.2\\.\*, \*\\.google\\.com | | System Information: Provides fundamental hardware and system information, including manufacturer, model, UUID, and memory details. This helps identify and profile the system. | File Name: regular expression (case-sensitive) Example: [0-9A-F]{8} |
+| Systemd Journal: | None required | | Running Processes: A detailed snapshot of running processes on the system. This includes process identifiers, user context, executable path, parent-child relationships, state, and performance metrics. It is a cornerstone artifact for live system analysis. | File Name: regular expression (case-sensitive) Example: [0-9A-F]{8}; Process Owner: Entries are either numeric UIDs or text usernames. Example: 1001; Path: file path Example: /usr/local/share/\*/bin/\* |
+| Network Connections: Lists active network connections and listening ports. Essential for identifying unauthorized network communications, malware command and control (C2) channels, or unexpected listening services. | Local IP: IPv4 or IPv6 addresses Example: 10.0.0.5; Local Port; Local IP; Remote IP; Remote Port; Netstat Command Line; Netstat Process Name; Netstat Process Path | | Firewall Rules: Firewall rules (for example, from iptables) that control network traffic. Analyzing these rules is important for understanding the network security posture and identifying potentially malicious or overly permissive configurations. \*\*Note:\*\* Supported only for the UFW tool (Firewall managment tool for some Linux distributions such as Ubuntu) | Source: regular expression (case-insensitive) Example: [0-9A-F]{8}\\.exe; Destination: regular expression (case-insensitive) Example: [0-9A-F]{8}\\.exe |
+| Kernel Modules: Lists kernel modules on the system, their state, and the associated file path. Malicious actors may use custom kernel modules (rootkits) to hide their presence or gain privileged access. | Module Name: regular expression (case-insensitive); Module Path: path | | Environment Variables: Lists environment variables for a given context (for example, a user's shell or a specific process). These variables define the execution environment and can contain important paths, configurations, or sensitive data. | Key: regular expression (case-sensitive); Value: regular expression (case-sensitive) |
+| Mounted Filesystems: Lists all mounted file systems, their sources (devices), types, and unique identifiers. This is useful for discovering connected storage, network shares, and understanding the file system layout. | None required | | User Login & Session History: Records of user login sessions from the last command, showing who logged in, from where, and for how long. This is essential for auditing user access and investigating unauthorized logins. | User Login |
+| Command History: Detailed records of commands from user shell history files (for example, bash_history, .zsh_history). This artifact is essential for tracking user activity and command execution. | Command:; Executed by: Entries are either numeric UIDs or text usernames. Example: 1001 | | Auditd Rules: Refers to the log data collected by the Linux Audit Daemon, which is a core component of security auditing. It records a detailed, chronological trail of system events based on a set of pre-configured rules. | Command:; Executed by: Entries are either numeric UIDs or text usernames. Example: 1001; Auditd Exe: |
+| System-Wide Configuration: Key-value pairs parsed from various configuration files within the `/etc` directory, such as `/etc/resolv.conf` for DNS settings. This artifact helps understand the system's network and operational configuration. | Source: regular expression (case-insensitive) Example: [0-9A-F]{8}\\.exe | | File Listing: A plain text file used in digital forensics to create a detailed timeline of a file system activity. | File Name: regular expression (case-sensitive) Example: [0-9A-F]{8}; User Id: Entries are either numeric UIDs or text usernames. Example: 100001; Group Id: Entries are either numeric GIDs or text group names. Example: 0, 1 |
+| Files & Processes: The artifact lists the files opened by the processes. This listing is essential for mapping a process directly to the files, loaded libraries, and network sockets it's using, which can immediately reveal hidden activities or active connections. | File Name: regular expression (case-sensitive) Example: [0-9A-F]{8}; User Id: Entries are either numeric UIDs or text usernames. Example: 100001 | | System Configuration Files: Shell profile files (for example, .bashrc, .profile) that contain commands and configurations executed at session startup. They are analyzed for persistence mechanisms, aliases, and malicious environment modifications. | None required |
+| Service Status: Lists system daemons or services (for example, from systemd). Analyzing these is key to understanding which long-running processes are configured on the system and to spot malicious or unnecessary services. | File Name: regular expression (case-sensitive) Example: [0-9A-F]{8}; Path: file path Example: Example: /usr/local/share/\*/bin/\*; Command: |
 
 ##### Analysis and documentation
-Abstract
 
 Learn more about your investigation by reviewing the additional data for analysis and documentation purposes.
 
@@ -15467,7 +15119,6 @@ Forensic investigations include additional data for analysis and documentation p
 -   Key Assets & Artifacts
 
 ###### Review alerts
-Abstract
 
 The alerts table displays all the collections within the investigation that has identified suspicious or malicious activity within the forensics data sets.
 
@@ -15486,7 +15137,6 @@ The following actions are available for a selected alert.
 -   Manage alerts
 
 ###### Investigation timeline
-Abstract
 
 Investigation timeline shows the tagged forensic artifacts that were tagged. The tags display details of the forensic data collected from the endpoints.
 
@@ -15526,7 +15176,6 @@ The Timeline table displays the following fields:
     2.  Right-click and select Clear timeline entry. The tag is removed from the artifact and the row is removed from the Timeline table.
 
 ###### Key assets & artifacts
-Abstract
 
 Displays the forensic investigation based on the tagged data and aligns it to the corresponding category.
 
@@ -15600,13 +15249,12 @@ The following table for Data Access displays all the items that have been tagged
 | Size | Size of the file. |
 
 ##### Export
-Abstract
 
 Select the export option to export data collection for long-term retention or offline analysis.
 
 You can export the data collection for long-term retention or offline analysis.
 
-From the collections page, choose a search item from a hunt collection or the endpoint from a triage collection and click the export icon ([image: forensics_export_icon.png]). For export of all items, select the Export All option from the Exports button at the top of the Collections page.
+From the collections page, choose a search item from a hunt collection or the endpoint from a triage collection and click the export icon (). For export of all items, select the Export All option from the Exports button at the top of the Collections page.
 
 **Note:**
 
@@ -15627,7 +15275,6 @@ The Investigation Exports table displays the status of the requested exports for
 | Bin icon | Enables you to delete the compressed export file. |
 
 ### Quick Launcher
-Abstract
 
 The Quick Launcher provides a quick, in-context shortcut that you can use to search for information, perform common investigation tasks, or initiate actions.
 
@@ -15666,7 +15313,6 @@ You can open the Quick Launcher by clicking the Quick Launcher icon located in t
 You can also prepopulate searches in Quick Launcher by selecting text in the app or selecting a node in the Causality or Timeline Views.
 
 ### Research a known threat
-Abstract
 
 Cortex Cloud enables you to investigate any threat, also referred to as a lead, which has been detected.
 
@@ -15702,13 +15348,10 @@ To research a known threat
 ## Monitor dashboards and reports
 
 ### About dashboards
-Abstract
 
 Learn more about dashboards, which help you to monitor system activity and security operations in your environment.
 
 Dashboards help you monitor system activity and security operations in your environment. Each dashboard consists of widgets that summarize information about your tenant's activities in a graphical or tabular format, enabling you to effectively monitor your cases and overall activity in your environment.
-
-[image: Agent_management_DB.png]
 
 When you sign in to Cortex Cloud, your default dashboard is displayed. To change the displayed dashboard, you can select from the list of predefined and custom dashboards using the dashboard menu, or manage them centrally from the Dashboard Manager.
 
@@ -15768,19 +15411,18 @@ From the Dashboard Manager, you can take the following actions:
 
 The following icons in the Dashboard Manager (under the Source column) help you identify the security access and status of your dashboards:
 
--   [image: unshared-query-icon.png]:
+-   :
     
     -   A Restricted custom dashboard you created (Owner) that is not currently shared with anyone else.
         
     -   A custom dashboard you created that is currently shared with other users or user groups.
         
     
--   [image: query-created-by-someone-else-shared.png]: A custom dashboard created by another user that has been shared with you (either individually or through a user group).
+-   : A custom dashboard created by another user that has been shared with you (either individually or through a user group).
     
--   [image: PANW_Query.png]: A standard system dashboard provided by Palo Alto Networks. These are always Public and can't be deleted, or have their ownership transferred.
+-   : A standard system dashboard provided by Palo Alto Networks. These are always Public and can't be deleted, or have their ownership transferred.
 
 #### Command Center dashboards
-Abstract
 
 Learn more about Command Center dashboards, which are system-provided dashboards.
 
@@ -15797,7 +15439,6 @@ These dashboards are read-only and are provided by Palo Alto Networks to ensure 
 -   Some of the dashboard’s animations are not fully supported by the Safari web browser. We recommend that you view the dashboard with an alternative web browser.
 
 ##### Cortex Agentic Assistant dashboard
-Abstract
 
 See a dynamic overview of how AI Agentic technology is utilized across your organization.
 
@@ -15822,7 +15463,6 @@ The primary information displayed on the Cortex Agentix Assistant dashboard is l
 -   Agent Grid: The grid shows the five AI agents that users engaged with most frequently in the past seven days. Clicking on an agent opens the agent card, which provides more details about the roles that can access the agent and the actions available to the agent. Other Agents represent all other enabled agents, such as system and custom agents. Clicking on Other Agents brings to you the Agentix Hub, where you can view all agents.
 
 ##### Cortex Cloud Command Center
-Abstract
 
 Introduction to the Cortex Cloud Command Center and its capabilities.
 
@@ -15831,8 +15471,6 @@ Introduction to the Cortex Cloud Command Center and its capabilities.
 Cortex Cloud Command Center serves as your centralized landing experience designed to provide immediate visibility into your security posture and current environmental status. It presents a high-level summary of your account health, asset distribution, and assets at risk to help you get a snapshot of your compliance and vulnerability posture. Through a unified view of your security domains, you can monitor open threat cases and posture issues sorted by severity and impact. This interface provides direct pathways to your inventory searches, operational dashboards, graphs, and compliance reports while highlighting top-priority issues.
 
 The following image shows the Cortex Cloud Command Center dashboard:
-
-[image: cortex_cloud_command_center_dashboard.png]
 
 ###### Interactive Navigation and Drilldown
 
@@ -15874,7 +15512,6 @@ The lower sections of Cortex Cloud Command Center aggregate your high-impact ris
 In addition, navigation links are provided, enabling you to select Manage Vulnerabilities or View Compliance Center to transition from these summaries to your specialized management environments.
 
 #### Predefined dashboards
-Abstract
 
 Learn more about predefined dashboards, which are out-of-the-box dashboards providedby Palo Alto Networks.
 
@@ -15913,21 +15550,18 @@ Available predefined dashboards
 | Troubleshooting Playbooks | Provides the ability to identify and resolve issues with playbooks and tasks through focused error analysis and runtime metrics. |
 
 #### Reports
-Abstract
 
 Create, edit, and customize reports in Cortex Cloud. Schedule reports with Cron expressions.
 
 Reports contain statistical data in the form of widgets, which enable you to analyze data from inside or outside Cortex Cloud, in different formats such as graphs, pie charts, or text from information. After generating a report, it also appears in the Reports tab, so you can use the report again.
 
 ##### Report templates
-Abstract
 
 View, import, export, create, and modify report templates
 
 On the Report Templates page, you can view, delete, import, export, create, and modify report templates. You can also select and generate multiple reports.
 
 ### Build custom dashboards and reports
-Abstract
 
 Custom dashboards and reports can support your day-to-day operations by providing options that are tailored to your unique workflow.
 
@@ -15957,7 +15591,6 @@ Dashboards and reports are built from widgets. You can drag any widgets from the
     -   If you don't have permission to edit a widget, create a copy of the widget.
 
 #### Build a custom dashboard
-Abstract
 
 Build customized dashboards to display and filter the information that is most relevant to you.
 
@@ -16009,7 +15642,6 @@ By default, all new custom dashboards are Restricted and visible only to you (th
 11.  Click Generate to complete your dashboard.
 
 #### Manage your Widget Library
-Abstract
 
 Create, search, and view custom widgets in Cortex Cloud, or use predefined widgets.
 
@@ -16049,7 +15681,6 @@ From the Widget Library you can take the following actions:
 -   **Manage visibility**: If you are the Owner of a custom widget, you can change its status from Restricted to Public. This makes the widget available in the Widget Library for all other users who have the required permissions. For more information, see Manage access to custom dashboards.
 
 ### Fine-tune dashboards and reports
-Abstract
 
 Fine tune your custom dashboards and report by adding custom XQL widgets, fixed filters and inputs, and dashboard drilldowns.
 
@@ -16074,7 +15705,6 @@ Dashboard drilldowns
 Enable dashboard users to access interactive data insights when clicking on data points in widgets. Drilldowns can trigger contextual changes on the dashboard, or they can link to an XQL search, a custom URL, another dashboard, or a report. Users can hover over a widget to see details about the drilldown, and click a value to trigger the drilldown.
 
 #### Create a custom widget using a script
-Abstract
 
 Create a custom script based widget. Use custom widgets in dashboards and reports.
 
@@ -16148,7 +15778,6 @@ You can manage your script widgets directly from the Widget Library:
 -   Editing: Only the person who created the script widget (the owner) or an administrator can modify the underlying script code in the Automation section.
 
 ##### Script-based widget examples
-Abstract
 
 Create script based widgets based on scripts for reports and dashboards in Cortex Cloud.
 
@@ -16170,25 +15799,23 @@ If your script returns a time duration, configure the widget with the graph type
 
 Example:
 
-```
 import requests
 
 def main():
-    api\_key = 'PUTYOURKEYHERE'
+    api_key = 'PUTYOURKEYHERE'
     symbol = 'PANW'
-    api\_url = f'https://www.alphavantage.co/query?function=GLOBAL\_QUOTE&symbol={symbol}&apikey={api\_key}'
+    api_url = f'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={symbol}&apikey={api_key}'
 
-    response = requests.get(api\_url)
+    response = requests.get(api_url)
     data = response.json()
 
-    price\_str = data\['Global Quote'\]\['05. price'\]
-    price\_int = int(float(price\_str))
+    price_str = data['Global Quote']['05. price']
+    price_int = int(float(price_str))
 
-    return\_results(price\_int)
+    return_results(price_int)
 
-if \_\_name\_\_ in ('\_\_main\_\_', '\_\_builtin\_\_', 'builtins'):
+if __name__ in ('__main__', '__builtin__', 'builtins'):
     main()
-```
 
 ###### Pie, Line, or Column Chart
 
@@ -16196,67 +15823,61 @@ Example 1
 
 The following example script creates random, mock data to simulate a stock price fluctuating over a short period of time. Use this example to build your own script that brings in third-party data and display trends using a pie, line, or column chart.
 
-```
 import random
 import json
 from datetime import datetime, timedelta
 
 def main():
-    chart\_data = \[\]
-    start\_time = datetime.strptime("13:00", "%H:%M")
+    chart_data = []
+    start_time = datetime.strptime("13:00", "%H:%M")
 
     # Start the price at a realistic value
-    current\_price = 202.0
+    current_price = 202.0
 
     # Simulate 50 data points
     for i in range(50):
         # Generate a time label in 1-minute jumps
-        time\_label = (start\_time + timedelta(minutes=i)).strftime("%H:%M")
+        time_label = (start_time + timedelta(minutes=i)).strftime("%H:%M")
 
         # Create the data point for the chart
-        data\_point = {
-            "name": time\_label,
-            "data": \[int(current\_price)\],
-            "groups": \[\]
+        data_point = {
+            "name": time_label,
+            "data": [int(current_price)],
+            "groups": []
         }
-        chart\_data.append(data\_point)
+        chart_data.append(data_point)
 
         # Simulate the next price by adding a small change to the current price
-        price\_change = random.uniform(-1.5, 1.5) # A small drift up or down
-        current\_price += price\_change
+        price_change = random.uniform(-1.5, 1.5) # A small drift up or down
+        current_price += price_change
 
     # Return the data formatted exactly as in your working script
-    return\_results({
+    return_results({
         "Type": 1,
         "ContentsFormat": "json",
-        "Contents": json.dumps(chart\_data)
+        "Contents": json.dumps(chart_data)
     })
 
-
-if \_\_name\_\_ in ('\_\_main\_\_', '\_\_builtin\_\_', 'builtins'):
+if __name__ in ('__main__', '__builtin__', 'builtins'):
     main()
-```
 
 When used in a widget:
-
-[image: stockgraph-examplescript.png]
 
 Example 2
 
 The following example script generates simulated data representing the count of security incidents (or other events) broken down by severity level for each day of the week (Monday to Friday). Use this example to build your own script to create a stacked column chart. Configure the widget with graph type Column subtype Stacked.
 
-```
 import json
 import random
 
 def main():
-    chart\_data = \[\]
-    days = \["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"\]
-    severities = \["Critical", "High", "Medium", "Low", "Info"\]
+    chart_data = []
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    severities = ["Critical", "High", "Medium", "Low", "Info"]
 
     for day in days:
-        groups\_list = \[\]
-        daily\_total = 0
+        groups_list = []
+        daily_total = 0
 
         for severity in severities:
             count = 0
@@ -16271,28 +15892,24 @@ def main():
             else:
                 count = random.randint(5, 30)
 
-            daily\_total += count
-            groups\_list.append({"name": severity, "data": \[count\]})
+            daily_total += count
+            groups_list.append({"name": severity, "data": [count]})
 
-        chart\_data.append({
+        chart_data.append({
             "name": day,
-            "data": \[daily\_total\],
-            "groups": groups\_list
+            "data": [daily_total],
+            "groups": groups_list
         })
 
-    return\_results({
+    return_results({
         "Type": 1,
         "ContentsFormat": "json",
-        "Contents": json.dumps(chart\_data)
+        "Contents": json.dumps(chart_data)
     })
-```
 
 When used in a widget:
 
-[image: severitybyday-examplescript.png]
-
 #### Create a text widget
-Abstract
 
 Learn more about adding text widgets to dashboards for context, instructions, or additional information alongside data visualizations.
 
@@ -16357,7 +15974,6 @@ From the Dashboard Manager, you can right-click an existing dashboard and choose
 8.  Choose your report builder options and Save Template.
 
 #### Create custom XQL widgets
-Abstract
 
 You can create custom XQL widgets based on a Cortex Query Language (XQL) query, and add parameters that you can configure as fixed filters or dashboard drilldowns.
 
@@ -16400,7 +16016,7 @@ How to create a custom XQL widget
     The dataset in a query is defined as:
     
     ```
-    dataset = amazon\_aws\_raw\*
+    dataset = amazon_aws_raw\*
     ```
     
     If there are multiple datasets that begin with `amazon_aws_raw` in their name, such as `amazon_aws_raw_eu_view` and `amazon_aws_raw_us1_view`, these views will be included.
@@ -16432,7 +16048,7 @@ How to create a custom XQL widget
         Single value parameters are based on static predefined values. In this example, the dashboard user will be able to select a domain from a list of predefined domains.
         
         ```
-        dataset = agent\_auditing | filter domain = $domain
+        dataset = agent_auditing | filter domain = $domain
         ```
         
           
@@ -16446,7 +16062,7 @@ How to create a custom XQL widget
         You can configure this parameter with static predefined values, or dynamic values that are pulled from an XQL query.
         
         ```
-        dataset = agent\_auditing | filter endpoint\_name IN ($endpointname)
+        dataset = agent_auditing | filter endpoint_name IN ($endpointname)
         ```
         
           
@@ -16475,7 +16091,7 @@ How to create a custom XQL widget
     
     Use Chart Editor
     
-    Under Query Results → Chart Editor ([image: visualizing-query-results-chart-editor.png]), manually build and view the graph using the selected graph parameters:
+    Under Query Results → Chart Editor (), manually build and view the graph using the selected graph parameters:
     
     -   Main
         
@@ -16515,7 +16131,7 @@ How to create a custom XQL widget
         Example 85. 
         
         ```
-        view graph type = column subtype = grouped header = “Test 1” xaxis = \_time yaxis = \_product,action\_total\_upload series = \_vendor
+        view graph type = column subtype = grouped header = “Test 1” xaxis = _time yaxis = _product,action_total_upload series = _vendor
         ```
         
           
@@ -16528,7 +16144,6 @@ How to create a custom XQL widget
     The custom widget appears in the list of existing widgets.
 
 ##### Configure filters and inputs for custom XQL widgets
-Abstract
 
 Learn more about configuring fixed filters on your dashboards to enable dashboard users to alter the scope of the dashboard.
 
@@ -16615,7 +16230,7 @@ How to configure fixed dashboard filters
         
         Example 86. Example
         
-        In this example, the endpoint\_name field is configured. The dashboard user will be able to filter by one or more values from the `endpoint_name` field.
+        In this example, the endpoint_name field is configured. The dashboard user will be able to filter by one or more values from the `endpoint_name` field.
         
         `dataset =endpoints | fields endpoint_name`
         
@@ -16635,7 +16250,6 @@ How to configure fixed dashboard filters
     After the initial setup, when you access your dashboard the filters and inputs might need further refinement. You can make changes to the configured parameters in the XQL widgets, and update the Filters & Inputs on your dashboard until you are satisfied with the results.
 
 ##### Configure dashboard drilldowns
-Abstract
 
 Learn more about configuring drilldowns on custom dashboards providing interactive data insights when clicking data points in a widget.
 
@@ -16694,18 +16308,18 @@ How to configure dashboard drilldowns
         | --- | --- |
         | XQL Query | Define the query that you want to run on drilldown. Type **`$`** to see autocomplete options for variables that are available in the widget drilldown. For example, in a table widget $first.name selects the leftmost column name in the table. For more information, see Variables in drilldowns. |
         
-        In the following example two parameters are passed from a table widget to an XQL query. The first parameter with the cell value that the user clicked on, and a second parameter with the cell value in the request\_url column in the row that the user clicked.
+        In the following example two parameters are passed from a table widget to an XQL query. The first parameter with the cell value that the user clicked on, and a second parameter with the cell value in the request_url column in the row that the user clicked.
         
         ```
-        dataset=xdr\_data
-        |filter event\_type=**$y\_axis.value** and requestUri=**$row.request\_url**
-        |fields action\_download, action\_remote\_ip as remote\_ip,
-        actor\_process\_image\_name as process\_name
-        |comp count\_distinct(action\_download) as total\_download by process\_name,
-        remote\_ip, remote\_hostname
-        |sort desc total\_download
+        dataset=xdr_data
+        |filter event_type=**$y_axis.value** and requestUri=**$row.request_url**
+        |fields action_download, action_remote_ip as remote_ip,
+        actor_process_image_name as process_name
+        |comp count_distinct(action_download) as total_download by process_name,
+        remote_ip, remote_hostname
+        |sort desc total_download
         |limit 10
-        |view graph type=single subtype=standard xaxis=remote\_ip yaxis=total\_download
+        |view graph type=single subtype=standard xaxis=remote_ip yaxis=total_download
         ```
         
     -   Open custom URL: Opens an external URL based on a clicked value.
@@ -16716,11 +16330,11 @@ How to configure dashboard drilldowns
         | --- | --- |
         | URL Address | Type the URL. To create a dynamic drilldown, you can include Available parameters. For more information about the parameters, see Variables in drilldowns. |
         
-        In the following URL, the **`$x_axis.value`** parameter represents cortex products names. On drilldown, the $x\_axis.value is replaced with the clicked product name in the pie chart.
+        In the following URL, the **`$x_axis.value`** parameter represents cortex products names. On drilldown, the $x_axis.value is replaced with the clicked product name in the pie chart.
         
-        https://www.paloaltonetworks.com/cortex/cortex-$x\_axis.value
+        https://www.paloaltonetworks.com/cortex/cortex-$x_axis.value
         
-        [image: DD_example_Cortex_piechart.png]
+        
         
     -   Generate Report: Runs a report from a clicked value.
         
@@ -16728,7 +16342,6 @@ How to configure dashboard drilldowns
 4.  Save the changes for the widget and dashboard.
 
 ###### Variables in drilldowns
-Abstract
 
 Learn about the widget variable values that you can use in dashboard drilldowns.
 
@@ -16737,8 +16350,6 @@ The following tabs are organized according to widget type and describes the widg
 Chart
 
 (Area, Bubble, Column, Funnel, Line, Map, Pie, Scatter, or Word Cloud)
-
-[image: DD_example_chart.png]
 
 -   **`$x_axis.name`**: Selects the x-axis name.
     
@@ -16751,16 +16362,12 @@ Chart
 
 Single value or gauge
 
-[image: DD_example_gauge.png]
-
 -   **`$y_axis.name`**: Selects the y-axis name that the single value represents.
     
 -   **`$y_axis.value`**: Selects the y-axis value for the clicked value.
     
 
 Table
-
-[image: DD_example_table.png]
 
 -   **`$first.name`**: Selects the leftmost column name in the table.
     
@@ -16773,7 +16380,6 @@ Table
 -   **`$row.<field_name>`**: Selects the field (column) from the clicked table row.
 
 ### Run or schedule reports
-Abstract
 
 You can run reports that are based on dashboard templates, or you can create reports from scratch.
 
@@ -16803,16 +16409,16 @@ Dashboard sharing icons
 
 The following icons in the Dashboard Manager (under the Source column) and in the Dashboards page header menu help you identify the security access of your dashboards:
 
--   [image: unshared-query-icon.png]:
+-   :
     
     -   A Restricted custom dashboard you created (Owner) that is not currently shared with anyone else.
         
     -   A custom dashboard you created that is currently shared with other users or user groups.
         
     
--   [image: query-created-by-someone-else-shared.png]: A custom dashboard created by another user that has been shared with you (either individually or through a user group).
+-   : A custom dashboard created by another user that has been shared with you (either individually or through a user group).
     
--   [image: PANW_Query.png]: A standard system dashboard provided by Palo Alto Networks. These are always Public and can't be deleted, or have their ownership transferred.
+-   : A standard system dashboard provided by Palo Alto Networks. These are always Public and can't be deleted, or have their ownership transferred.
     
 
 #### Run a report based on a dashboard
@@ -16936,14 +16542,12 @@ You can receive an email or send a notification to a syslog server if a report f
 # Data management
 
 ## Broker VM
-Abstract
 
 Set up a Broker VM to establish a secure connection in which you can route your endpoints, and collect and forward logs and files for analysis.
 
 Set up and configure the Broker VM to create a secure connection for routing endpoints, collecting logs, and forwarding logs and files for analysis.  Learn how to manage the Broker VM, and implement it within a high availability (HA) cluster setup.
 
 ### What is the Broker VM?
-Abstract
 
 Learn about the Cortex Cloud Broker virtual machine (VM) and why use it in your network configuration.
 
@@ -16956,7 +16560,6 @@ Cortex Cloud can leverage the Broker VM to run different services separately us
 The Broker VM is a closed, hardened appliance. To maintain its security integrity and performance standards, third-party agents cannot be installed on the Broker VM.
 
 ### Set up and configure Broker VM
-Abstract
 
 Learn more about how to set up and configure a Broker VM as a standalone broker or add the broker to a high availability (HA) cluster.
 
@@ -17153,12 +16756,12 @@ Perform the following procedures in the order listed below.
     
     To enable connection, generate an RSA Key Pair, and enter the public key in the SSH Public Key section. Once one SSH public key is added, you can Add Another. When you are finished, Save your configuration.
     
-    When using PuTTYgen to create your public and private key pairs, you need to copy the public key generated in the Public key for pasting into OpenSSH authorized\_keys file box, and paste it in the Broker VM SSH Public Key section as explained above. This public key is only available when the PuTTYgen console is open after the public key is generated. If you close the PuTTYgen console before pasting the public key, you will need to generate a new public key.
+    When using PuTTYgen to create your public and private key pairs, you need to copy the public key generated in the Public key for pasting into OpenSSH authorized_keys file box, and paste it in the Broker VM SSH Public Key section as explained above. This public key is only available when the PuTTYgen console is open after the public key is generated. If you close the PuTTYgen console before pasting the public key, you will need to generate a new public key.
     
     When you SSH the Broker VM using PuTTY or a command prompt, you need to use the **`admin`** username. For example:
     
     ```
-    ssh -i \[/path/to/private.key\] admin@\[broker\_vm\_address\]
+    ssh -i [/path/to/private.key] admin@[broker_vm_address]
     ```
     
 6.  (Optional) Update the SSL Server certificates for the Broker VM.
@@ -17201,7 +16804,6 @@ You are directed to Settings → Configurations → Data Broker → Broker VMs. 
 If you need to enable legacy SSL renegotiation, use the Broker VM Serial console.
 
 #### Broker VM image installations
-Abstract
 
 Learn more about the Broker VM image types available that are compatible with your viirtual machine (VM).
 
@@ -17219,7 +16821,6 @@ Ensure that your virtual machine (VM) is compatible with one of the following op
 | VMware ESXi | OVA | VMware ESXi 6.5 or later Set up Broker VM on VMware ESXi using vSphere Client |
 
 ##### Set up Broker VM on Alibaba Cloud
-Abstract
 
 Learn how to set up your Cortex Cloud Broker virtual machine (VM) on Alibaba Cloud.
 
@@ -17257,7 +16858,7 @@ Linux (using CLI)
 -   Example
     
     ```
-    ./ossutil64 cp Downloads/QCOW2\_broker-vm-14.0.1.qcow2 oss://kvm-images-qcow2/Cortex Cloud
+    ./ossutil64 cp Downloads/QCOW2_broker-vm-14.0.1.qcow2 oss://kvm-images-qcow2/Cortex Cloud
                                            -broker-vm-14.0.1.qcow2
     ```
     
@@ -17273,7 +16874,7 @@ macOS (using CLI)
 -   Example
     
     ```
-    ./ossutilmac64 cp Downloads/QCOW2\_broker-vm-14.0.1.qcow2 oss://kvm-images-qcow2/Cortex Cloud
+    ./ossutilmac64 cp Downloads/QCOW2_broker-vm-14.0.1.qcow2 oss://kvm-images-qcow2/Cortex Cloud
                                            -broker-vm-14.0.1.qcow2
     ```
     
@@ -17289,7 +16890,7 @@ Windows (using CMD)
 -   Example for 64-bit
     
     ```
-    D:\\ossutil>ossutil64.exe cp Downloads\\QCOW2\_broker-vm-14.0.1.qcow2 oss://kvm-images-qcow2/Cortex Cloud
+    D:\\ossutil>ossutil64.exe cp Downloads\\QCOW2_broker-vm-14.0.1.qcow2 oss://kvm-images-qcow2/Cortex Cloud
                                            -broker-vm-14.0.1.qcow2
     ```
     
@@ -17324,7 +16925,7 @@ For Linux and Windows uploads, you can use Alibaba Cloud’s graphical managemen
         
     -   Operating System/Platform: Leave Linux configured and change CentOS to Ubuntu.
         
-    -   System Architecture: Leave the default x86\_64 selected.
+    -   System Architecture: Leave the default x86_64 selected.
         
     -   Leave the rest of the fields as defined by the default or change them according to your system requirements.
         
@@ -17405,7 +17006,6 @@ For Linux and Windows uploads, you can use Alibaba Cloud’s graphical managemen
 Reboot the Broker VM before logging in for the first time.
 
 ##### Set up Broker VM on Amazon Web Services
-Abstract
 
 Learn how to set up your Cortex Cloud Broker virtual machine (VM) on AWS.
 
@@ -17435,19 +17035,19 @@ You need to log in using an AWS Identity and Access Management (IAM) user, where
     ```
     {
       "Version": "2012-10-17",
-      "Statement": \[
+      "Statement": [
         {
           "Effect": "Allow",
-          "Action": \[
+          "Action": [
             "s3:GetBucketLocation",
             "s3:GetObject",
             "s3:PutObject"
-          \],
-          "Resource": \["arn:aws:s3:::mys3bucket","arn:aws:s3:::mys3bucket/\*"\]
+          ],
+          "Resource": ["arn:aws:s3:::mys3bucket","arn:aws:s3:::mys3bucket/\*"]
         },
         {
           "Effect": "Allow",
-          "Action": \[
+          "Action": [
             "ec2:CancelConversionTask",
             "ec2:CancelExportTask",
             "ec2:CreateImage",
@@ -17472,10 +17072,10 @@ You need to log in using an AWS Identity and Access Management (IAM) user, where
             "ec2:DescribeImportImageTasks",
             "ec2:DescribeImportSnapshotTasks",
             "ec2:CancelImportTask"
-          \],
+          ],
           "Resource": "\*"
         }
-      \]
+      ]
     }
     ```
     
@@ -17507,7 +17107,7 @@ AWS CloudShell is a browser-based shell that is pre-authenticated with your Cons
     
 2.  Select the Region where your S3 bucket is located.
     
-3.  Click the CloudShell icon ([image: AWS_icon.png]) on the top navigation bar.
+3.  Click the CloudShell icon () on the top navigation bar.
     
 
 Option 2: External Terminal
@@ -17517,7 +17117,7 @@ Install the AWS CLI and configure it with the IAM user that you created.
 1.  Login to the server with admin privilege and install the AWS CLI.
     
     ```
-    \# sudo bash
+    # sudo bash
     # apt update
     # apt install awscli
     ```
@@ -17525,7 +17125,7 @@ Install the AWS CLI and configure it with the IAM user that you created.
 2.  Run the following command to configure the AWS CLI:
     
     ```
-    \# aws configure
+    # aws configure
     ```
     
     You need to specify the proper configurations for the following:
@@ -17569,19 +17169,19 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
     1.  Run the following command in the terminal:
         
         ```
-        \# vi configuration.json
+        # vi configuration.json
         ```
         
     2.  Copy and paste the following syntax into the json file.
         
-        In S3Bucket, replace <your\_bucket> with the Bucket Name and not its ARN Name. S3Key is the VMDK filename, which you should replace instead of <broker-vm-version.vmdk>.
+        In S3Bucket, replace <your_bucket> with the Bucket Name and not its ARN Name. S3Key is the VMDK filename, which you should replace instead of <broker-vm-version.vmdk>.
         
         ```
         	{
         		"Description":"Cortex Cloud Broker VM <version>",
         		"Format":"vmdk",
         		"UserBucket":{
-        			"S3Bucket":"<your\_bucket>",
+        			"S3Bucket":"<your_bucket>",
         			"S3Key":"<broker-vm-version.vmdk>"
         		}
         	}
@@ -17593,7 +17193,7 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
     1.  Run the following command in the terminal:
         
         ```
-        \# vi trust-policy.json
+        # vi trust-policy.json
         ```
         
     2.  Copy and paste the following syntax into the json file.
@@ -17601,7 +17201,7 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
         ```
         {
            "Version": "2012-10-17",
-           "Statement": \[
+           "Statement": [
               {
                  "Effect": "Allow",
                  "Principal": { "Service": "vmie.amazonaws.com" },
@@ -17612,7 +17212,7 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
                     }
                  }
               }
-           \]
+           ]
         }
         ```
         
@@ -17622,7 +17222,7 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
     1.  Run the following command in the terminal.
         
         ```
-        \# vi role-policy.json
+        # vi role-policy.json
         ```
         
     2.  Copy and paste the following syntax into the json file. Replace the <disk-image-file-bucket> and <export-bucket> with the correct bucket name. You can specify \* to configure access to all your S3 buckets.
@@ -17630,46 +17230,46 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
         ```
         {
            "Version":"2012-10-17",
-           "Statement":\[
+           "Statement":[
               {
                  "Effect": "Allow",
-                 "Action": \[
+                 "Action": [
                     "s3:GetBucketLocation",
                     "s3:GetObject",
                     "s3:ListBucket" 
-                 \],
-                 "Resource": \[
+                 ],
+                 "Resource": [
                     "arn:aws:s3:::<disk-image-file-bucket>",
                     "arn:aws:s3:::<disk-image-file-bucket>/\*"
-                 \]
+                 ]
               },
               {
                  "Effect": "Allow",
-                 "Action": \[
+                 "Action": [
                     "s3:GetBucketLocation",
                     "s3:GetObject",
                     "s3:ListBucket",
                     "s3:PutObject",
                     "s3:GetBucketAcl"
-                 \],
-                 "Resource": \[
+                 ],
+                 "Resource": [
                     "arn:aws:s3:::<export-bucket>",
                     "arn:aws:s3:::<export-bucket>/\*"
-                 \]
+                 ]
               },
               {
                  "Effect": "Allow",
-                 "Action": \[
+                 "Action": [
                     "ec2:ModifySnapshotAttribute",
                     "ec2:CopySnapshot",
                     "ec2:RegisterImage",
                     "ec2:Describe\*",
                     "ec2:ImportSnapshot", 
                     "ec2:DescribeImportSnapshotTasks"
-                 \],
+                 ],
                  "Resource": "\*"
               }
-           \]
+           ]
         }
         ```
         
@@ -17687,13 +17287,13 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
      Run the following command to start the import process:
      
      ```
-     \# aws ec2 import-snapshot --description "<Cortex Cloud Broker VM <Version>" --disk-container "file://configuration.json"
+     # aws ec2 import-snapshot --description "<Cortex Cloud Broker VM <Version>" --disk-container "file://configuration.json"
      ```
      
      To track the progress, use the task `id` value from the output and run:
      
      ```
-     \# aws ec2 describe-import-snapshot-tasks --import-task-ids import-snap-<task-id>
+     # aws ec2 describe-import-snapshot-tasks --import-task-ids import-snap-<task-id>
      ```
      
      Example 121. 
@@ -17702,7 +17302,7 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
      
      ```
      {
-         "ImportSnapshotTasks": \[
+         "ImportSnapshotTasks": [
              {
                  "Description": "Broker VM <version> snapshot import",
                  "ImportTaskId": "import-snap-12346b69617c1395t",
@@ -17717,9 +17317,9 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
                          "S3Key": "broker-vm-<version>.vmdk"
                      }
                  },
-                 "Tags": \[\]
+                 "Tags": []
              }
-         \]
+         ]
      }
      ```
      
@@ -17751,7 +17351,7 @@ To create an AMI image, you need to download Broker VM VMDK file from the Cortex
          
          -   Image settings
              
-             -   Architecture: x86\_64
+             -   Architecture: x86_64
                  
              -   Root device name: `/dev/sda1`
                  
@@ -17824,7 +17424,6 @@ Registration of the Broker VM to Cortex Cloud is performed from the Broker VM We
 3.  Complete the registration process by entering the token information.
 
 ##### Set up Broker VM on Google Cloud Platform (GCP)
-Abstract
 
 Learn more about how to set up your Cortex Cloud Broker VM on Google Cloud Platform.
 
@@ -17876,17 +17475,13 @@ gcloud CLI
 
 Before importing a GCP image using the gcloud CLI, ensure that you update the Google Cloud components to version 371.0.0 and above using the following command:
 
-```
 gcloud components update
-```
 
 The following command uses the minimum required parameters. For more information on permissions and available parameters, refer to the [Google Cloud SDK](https://cloud.google.com/sdk/gcloud/reference/beta/compute/images/import).
 
 Open a command prompt and run the following:
 
-```
-gcloud compute images import <VMDK image> --data-disk --source-file="gs://<image path>" --network=<network\_name> --subnet=<subnet\_name> --zone=<region> --async
-```
+gcloud compute images import <VMDK image> --data-disk --source-file="gs://<image path>" --network=<network_name> --subnet=<subnet_name> --zone=<region> --async
 
 ###### Task 5. Create a new instance of the image
 
@@ -17941,7 +17536,6 @@ When the Google Compute completes the image creation, create a new instance.
 You can now connect to the Broker VM web console using the Broker VM IP address. Connect with https over port 4443 using the format `https://<ip address>:4443`.
 
 ##### Set up Broker VM on KVM using Ubuntu
-Abstract
 
 Learn set up your Cortex Cloud Broker virtual machine (VM) on a KVM using Ubuntu.
 
@@ -17953,7 +17547,7 @@ Download a Cortex Cloud Broker VM QCOW2 image. For more information, see the vir
 
 1.  Open your kernel-based Virtual Machine (KVM) on Ubuntu.
     
-2.  Click the New VM icon ([image: ubuntu-kvm-new-vm-icon.png]) to open the Create a new virtual machine wizard.
+2.  Click the New VM icon () to open the Create a new virtual machine wizard.
     
 3.  In the Step 1 screen of the wizard, select Import existing disk image, and click Forward.
     
@@ -17989,7 +17583,6 @@ Download a Cortex Cloud Broker VM QCOW2 image. For more information, see the vir
     You new VM is now listed and available to use.
 
 ##### Set up Broker VM on Microsoft Azure
-Abstract
 
 Learn how to set up your Cortex Cloud Broker virtual machine (VM) on Microsoft Azure.
 
@@ -18094,10 +17687,10 @@ Linux
         3.  Add the Azure CLI software repository:
             
             ```
-            AZ\_DIST=$(lsb\_release -cs)
+            AZ_DIST=$(lsb_release -cs)
             echo "Types: deb
             URIs: https://packages.microsoft.com/repos/azure-cli/
-            Suites: ${AZ\_DIST}
+            Suites: ${AZ_DIST}
             Components: main
             Architectures: $(dpkg --print-architecture)
             Signed-by: /etc/apt/keyrings/microsoft.gpg" | sudo tee /etc/apt/sources.list.d/azure-cli.sources
@@ -18193,7 +17786,6 @@ Linux
     -   Edit an existing outbound port rule and ensure that the settings provided above for creating a new outbound port rule match what is already configured in the rule.
 
 ##### Set up Broker VM on Microsoft Hyper-V
-Abstract
 
 Learn how to set up your Cortex Cloud Broker virtual machine (VM) on Microsoft Hyper-V.
 
@@ -18231,7 +17823,6 @@ Perform the following procedures in the order listed below.
     The Broker VM console now displays.
 
 ##### Set up Broker VM on Nutanix Hypervisor
-Abstract
 
 Learn how to set up your Cortex Cloud Broker virtual machine (VM) on Nutanix Hypervisor.
 
@@ -18348,7 +17939,6 @@ Perform the following procedures in the order listed below.
 Select Summary and you can use the IP Addresses and Host IP listed to connect to the VM.
 
 ##### Set up Broker VM on VMware ESXi using vSphere Client
-Abstract
 
 Learn more about how to set up you Cortex Cloud Broker VM on VMware ESXi.
 
@@ -18386,7 +17976,6 @@ Deploy the Broker VM OVA image on vSphere Client
 9.  Navigate to the resource where the new virual machine is created, right-click the resource, and select Power → Power On.
 
 #### Broker VM data collector applets
-Abstract
 
 Learn more about the different Broker VM data collector applets available to configure.
 
@@ -18399,7 +17988,6 @@ The Broker VM has a number of data collector applets that you can configure to i
 For more information on activating the Broker VM applets, see Generic on-premise data collectors.
 
 ### Manage Broker VM
-Abstract
 
 Learn more about managing your Broker VMs from the management console.
 
@@ -18459,7 +18047,7 @@ Certain fields are also exposed in the Clusters tab, when a Broker VM node is ad
 | CPU USAGE\* | CPU usage percentage of the Broker VM device that is synced every 5 minutes. |
 | CONFIGURATION STATUS\* | Broker VM configuration status. Status is defined by the following according to changes made to any of the Broker VM configurations: up to date: Broker VM configuration changes made through the Cortex Cloud console have been applied.; in progress: Broker VM configuration changes made through the Cortex Cloud console are being applied.; submitted: Broker VM configuration changes made through the Cortex Cloud console have reached the Broker VM and awaiting implementation.; failed: Broker VM configuration changes made through the Cortex Cloud console have failed. Need to open a Palo Alto Networks support ticket. |
 | DEVICE ID | Device ID allocated to the Broker VM by Cortex Cloud after registration. |
-| DEVICE NAME\* | Same as the Device ID. A [image: expired-broker.png]icon notifies of an expired Broker VM. To reconnect, generate a new token and re-register your Broker VM as described in steps 1 through 7 of [Configure the Broker VM](urn:resource:component:924525). Once registered, all previous Broker VM configurations are reinstated. |
+| DEVICE NAME\* | Same as the Device ID. A icon notifies of an expired Broker VM. To reconnect, generate a new token and re-register your Broker VM as described in steps 1 through 7 of [Configure the Broker VM](urn:resource:component:924525). Once registered, all previous Broker VM configurations are reinstated. |
 | DISK USAGE\* | Disk usage percentage from the total allocated for data caching in the Broker VM. Inside the brackets is displayed how much this is in GB from the total disk size in GB. A notification is added to the Notification Center whenever the disk space is low disk and whenever the disk size is increased. |
 | EXTERNAL INTERFACE | The IP interface the Broker VM is using to communicate with the server. For AWS and Azure cloud environments, the field displays the Internal IP value. |
 | LAST SEEN | Indicates when the Broker VM was last seen on the network. |
@@ -18481,7 +18069,6 @@ Cortex Cloud updates and enhances the Broker VM automatically through maintenanc
 -   Periodic 3rd party penetration testing
 
 #### Edit Broker VM Configuration
-Abstract
 
 Learn more about editing the configuration of a Broker VM.
 
@@ -18572,7 +18159,6 @@ Cortex Cloud validates that the certificate and key match, but does not validate
 When you are done, Save your changes.
 
 #### Increase Broker VM storage allocated for data caching
-Abstract
 
 Learn more about increasing the storage allocated for data caching in the Broker VM.
 
@@ -18623,7 +18209,6 @@ How to increase the Broker VM disk size
     In addition, when the disk is added successfully, the total size of the disk space available is updated in the DISK USAGE column on the Broker VMs page.
 
 #### Monitor Broker VM using Prometheus
-Abstract
 
 Learn more on monitoring the Broker VM using Prometheus.
 
@@ -18714,15 +18299,15 @@ This task includes setting up Prometheus and Grafana.
     services:
       prometheus:
         image: prom/prometheus:latest
-        container\_name: prometheus
+        container_name: prometheus
         restart: unless-stopped
         volumes:
          - ./prometheus.yml:/etc/prometheus/prometheus.yml
-         - prometheus\_data:/prometheus
+         - prometheus_data:/prometheus
        command:
          - '--config.file=/etc/prometheus/prometheus.yml'
          - '--storage.tsdb.path=/prometheus'
-         - '--web.console.libraries=/etc/prometheus/console\_libraries'
+         - '--web.console.libraries=/etc/prometheus/console_libraries'
          - '--web.console.templates=/etc/prometheus/consoles'
          - '--web.enable-lifecycle'
          - '--log.level=debug'
@@ -18730,15 +18315,15 @@ This task includes setting up Prometheus and Grafana.
          - '9090:9090'
      grafana:
        image: grafana/grafana-enterprise
-       container\_name: grafana
+       container_name: grafana
        restart: unless-stopped
        ports:
         - '3000:3000'
        volumes:
-         - grafana\_data:/var/lib/grafana
+         - grafana_data:/var/lib/grafana
     volumes:
-      grafana\_data: {}
-      prometheus\_data: {}
+      grafana_data: {}
+      prometheus_data: {}
     ```
     
 3.  Save and close the file.
@@ -18760,15 +18345,15 @@ You need to configure Prometheus to scrape the Broker VM metrics by creating a P
     
     ```
     global:
-      scrape\_interval: 15s
-      scrape\_timeout: 10s
-    scrape\_configs:
-      - job\_name: 'prometheus'
-        static\_configs:
-          - targets: \['<your server IP address>:9090'\]
-      - job\_name: 'node'
-        static\_configs:
-          - targets: \['<Broker VM IP address>:9100'\]
+      scrape_interval: 15s
+      scrape_timeout: 10s
+    scrape_configs:
+      - job_name: 'prometheus'
+        static_configs:
+          - targets: ['<your server IP address>:9090']
+      - job_name: 'node'
+        static_configs:
+          - targets: ['<Broker VM IP address>:9100']
     ```
     
 4.  Save and close the file.
@@ -18824,11 +18409,10 @@ You can now create dashboards in Grafana to visualize the data from Prometheus.
 4.  To monitor CPU usage, use the following metric:
     
     ```
-    100 - (avg by (instance) (rate(node\_cpu\_seconds\_total{job="node",mode="idle"}\[1m\])) \* 100)
+    100 - (avg by (instance) (rate(node_cpu_seconds_total{job="node",mode="idle"}[1m])) \* 100)
     ```
 
 #### Collect Broker VM Logs
-Abstract
 
 Learn more about collecting logs from a Broker VM to review them as part of an investigation.
 
@@ -18847,7 +18431,6 @@ You can collect logs by either regenerating the most up-to-date logs and downloa
     Logs are generated automatically, but can take up to a few minutes depending on the size of the logs.
 
 #### Upgrade Broker VM
-Abstract
 
 Learn more about upgrading the Broker VM from the Cortex Cloud management console.
 
@@ -18862,7 +18445,6 @@ Learn more about upgrading the Broker VM from the Cortex Cloud management consol
     After a Broker VM upgrade, your broker may require a reboot to finish installing important updates. A notification about this will be sent to your Cortex Cloud console Notification Center.
 
 #### Import Broker VM Configuration
-Abstract
 
 Learn more about importing one Broker VM configuration to another.
 
@@ -18889,7 +18471,6 @@ Importing Broker VM configurations allows you to copy, including applet settings
     If your source Broker VM configuration includes a WEC applet, you'll need to ensure that you update the DNS record of this Broker VM's FQDN to point to the target Broker VM IP address.
 
 #### Open Live Terminal
-Abstract
 
 Learn more about remotely connecting to a Cortex Cloud Broker VM.
 
@@ -18989,7 +18570,6 @@ Cortex Cloud enables you to connect remotely to a Broker VM directly from Cortex
     | `squid_tail` | Display the Proxy applet Squid log file in real-time. | `sudo ./sbin/squid_tail` |
 
 #### Add Broker VM to cluster
-Abstract
 
 Learn more about adding a Broker VM to a high availability cluster.
 
@@ -19022,7 +18602,6 @@ Once you add a Broker VM to a cluster, the Broker VM becomes a cluster node and 
     Adding a Broker VM to a cluster overrides all previous Broker VM settings and disables all active applets on this Broker VM. When the Broker VM is added to a cluster, the cluster configuration and cluster applet settings propagate to the Broker VM. The state of the applets on the Broker VM is dependent on the applet mode and Broker VM node role in the cluster. When the operation completes, a notification is added to the Notification Center.
 
 #### Switchover Primary Node in Cluster
-Abstract
 
 Learning more about changing the role of the current Primary node in a HA cluster.
 
@@ -19043,7 +18622,6 @@ The option is only available for a Primary node, and only if there is another av
     When the switchover is completed, the roles of the node are switched. The new node is designated as Primary and the old node becomes a standby node. In addition, a notification is added to the Notification Center.
 
 #### Remove from Cluster
-Abstract
 
 Learn more about removing a Broker VM node from a high availability cluster.
 
@@ -19068,7 +18646,6 @@ You can remove a Broker VM node from a cluster if the current node STATUS is Con
     If you've enabled a Load Balancer Health-Check on the cluster, you need to exclude this Broker VM from your Load Balancer settings.
 
 ### Manage Broker VM data collector applets
-Abstract
 
 Learn more about managing your Broker VM data collector applets from the Broker VMs page.
 
@@ -19103,7 +18680,6 @@ The following additional options are only available to specific Broker VM data c
     -   Collection Configuration: Enables you to view or edit existing events or add new events to the collect.
 
 #### Activate DSPM Fileshare
-Abstract
 
 Learn more about activating a Broker VM with the DSPM Fileshare applet.
 
@@ -19188,7 +18764,6 @@ Inventory list
 Each new connection that is created correlates to an asset in the inventory. You can see the connections by clicking Inventory → All Assets → Data → Storage Buckets.
 
 ### Broker VM High Availability Cluster
-Abstract
 
 Learn more about creating Broker VMs in a High Availability Cluster
 
@@ -19246,7 +18821,6 @@ You can configure automatic upgrades within Broker VM HA cluster nodes to update
 3.  The previous Primary node, now a standby node, is upgraded.
 
 #### Configure High Availability Cluster
-Abstract
 
 Learn how to configure a High Availablity Cluster.
 
@@ -19377,7 +18951,6 @@ For the cluster to be healthy and maintain HA and redundancy, you need at least 
 -   To add applets, see Add applet to cluster.
 
 #### Manage Broker VM clusters
-Abstract
 
 Learn more about managing your broker VM clusters from the Clusters tab of the Broker VMs page.
 
@@ -19386,7 +18959,6 @@ After you've configured a cluster, you can manage all your Broker VM clusters fr
 The Clusters tab displays in a heirarchical view the clusters with their nodes, performance stats, applets configured, and the state of each applet. You can right-click any cluster to open a menu listing the tasks available management options.
 
 ##### View cluster details
-Abstract
 
 Learn more about viewing the details of any particular cluster.
 
@@ -19414,7 +18986,6 @@ The following table describes all the fields that are available in the Clusters 
 The fields that are available in the Broker VM nodes table for each cluster are similar to many of the fields that are displayed in the table for the Broker VMs in the Brokers tab. For more information on these fields, see Manage Broker VM.
 
 ##### Edit cluster
-Abstract
 
 Learn how to edit a High Availability cluster.
 
@@ -19431,7 +19002,6 @@ An HA cluster is always configurable no matter what the status of the cluster or
 4.  Update the cluster with your changes.
 
 ##### Add applet to cluster
-Abstract
 
 Learn more about adding an applet to a High Availability cluster.
 
@@ -19473,7 +19043,6 @@ You can always add an applet to a cluster, even if the cluster status is Unavail
     Once the applet configuration is changed in a cluster, the changes are automatically applied to the cluster nodes depending on the applet and cluster node role. For example, if you add the Kafka Collector, which is an "active/passive" applet, the applet is automatically initiated and enters an active state on the Primary node and is on standby on the standby nodes. While if you add the Syslog Collector "active/active" applet, the changes automatically propagate so that the applet is active on all cluster nodes, including Primary and standby.
 
 ##### Add Broker VM to cluster
-Abstract
 
 Learn more about adding a Broker VM to a high availability cluster.
 
@@ -19506,7 +19075,6 @@ Once you add a Broker VM to a cluster, the Broker VM becomes a cluster node and 
     Adding a Broker VM to a cluster overrides all previous Broker VM settings and disables all active applets on this Broker VM. When the Broker VM is added to a cluster, the cluster configuration and cluster applet settings propagate to the Broker VM. The state of the applets on the Broker VM is dependent on the applet mode and Broker VM node role in the cluster. When the operation completes, a notification is added to the Notification Center.
 
 ##### Remove cluster
-Abstract
 
 Learn more about removing a high availability cluster.
 
@@ -19525,7 +19093,6 @@ You cannot remove a cluster that is used as a download source from which the Cor
 3.  Follow the instructions in the REMOVE CLUSTER window, whose instructions differ depending on the type of cluster you are trying to remove, and Remove the cluster.
 
 ### Broker VM notifications
-Abstract
 
 Learn about the notifications that are relevant to Cortex Cloud Broker VMs.
 
@@ -19616,7 +19183,6 @@ Notifies when a cluster was removed.
 To ensure you stay informed about Broker VM activity, you can also configure notification forwarding to forward your Broker audit logs to an email distribution list or Syslog server. For more information about the Broker VM audit logs, see Broker VM Activity in the Cortex Cloud Administrator Guide.
 
 ### Monitor Broker VM activity
-Abstract
 
 Learn more about the monitored Cortex Cloud Broker VM activities.
 
@@ -19640,12 +19206,10 @@ Certain fields are exposed and hidden by default. An asterisk (\*) is beside eve
 | Result\* | The result of the action ( `Success`, `Fail`, or `N/A`) |
 | Severity\* | Severity associated with the log: `Critical` ; `High` ; `Medium` ; `Low` ; `Informational` |
 | Timestamp\* | Date and time when the action occurred. |
-| Type\* and Sub-Type\* | Additional classifications of Broker VM logs (Type and Sub-Type): Broker VMs:-   Action on device; Add Cluster; Applet Activated; Applet Configuration; Applet connection\_test Action; Applet Deactivated; Applet License Expired; Applet Mount Share Action; Applet Mount Share Test Action; Applet preview Action; Applet Scan Now Action; Applet Set Configuration; Applet Unmount All Shares Action; Authentication succeeded; Broker Log; Cluster Configuration; Cluster Failover; Cluster health declined; Cluster health recovered; Cluster Switchover; Device configuration; Disconnect; Register; Remove Cluster; Remove Device; Rolling Upgrades; Subscription Created; Subscription Deleted; Subscription Edited
-; Broker API:-   Authentication failed |
+| Type\* and Sub-Type\* | Additional classifications of Broker VM logs (Type and Sub-Type): Broker VMs:- Action on device; Add Cluster; Applet Activated; Applet Configuration; Applet connection_test Action; Applet Deactivated; Applet License Expired; Applet Mount Share Action; Applet Mount Share Test Action; Applet preview Action; Applet Scan Now Action; Applet Set Configuration; Applet Unmount All Shares Action; Authentication succeeded; Broker Log; Cluster Configuration; Cluster Failover; Cluster health declined; Cluster health recovered; Cluster Switchover; Device configuration; Disconnect; Register; Remove Cluster; Remove Device; Rolling Upgrades; Subscription Created; Subscription Deleted; Subscription Edited ; Broker API:- Authentication failed |
 | User Name\* | Name of the user who performed the action. |
 
 ### Troubleshoot Broker VM applet errors
-Abstract
 
 Learn more about how to verify the Broker VM applet application, connectivity, and processing errors and troubleshoot.
 
@@ -19674,16 +19238,14 @@ Example 124. 
 
 This example searches for status changes of the Local Agent Settings applet, where the `_broker_device_id` is `LVVTKM6S`:
 
-```
-dataset = collection\_auditing 
-|filter  collector\_type = "Local Agent Settings" and \_broker\_device\_id = "LVVTKM6S"
-```
+dataset = collection_auditing 
+|filter  collector_type = "Local Agent Settings" and _broker_device_id = "LVVTKM6S"
 
 Output results:
 
 The results indicate that the Local Agent Settings applet was active on Jan 10th 2025 16:25:21. On Jan 18th 2025 11:15:26, this applet had a connectivity error relating to an inaccessible URL, and this issue was resolved on Jan 18th 2025 16:27:26 when the applet was back to an active status.
 
-| COLLECTOR\_TYPE | INSTANCE | CLASSIFICATION | DESCRIPTION | \_BROKER\_DEVICE\_ID | \_BROKER\_DEVICE\_NAME | \_BROKER\_IP\_ADDRESS | \_TIME |
+| COLLECTOR_TYPE | INSTANCE | CLASSIFICATION | DESCRIPTION | _BROKER_DEVICE_ID | _BROKER_DEVICE_NAME | _BROKER_IP_ADDRESS | _TIME |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Local Agent Settings | LVVTKM6S | INFORMATION | The applet is back to an active status | LVVTKM6S | LVVTKM6S | 155.11.23.22 | Jan 18th 2025 16:27:26 |
 | Local Agent Settings | LVVTKM6S | ERROR | There is at least one inaccessible url. The broker VM needs to communicate with the same URLs that the agents communicate with. | LVVTKM6S | LVVTKM6S | 155.11.23.22 | Jan 18th 2025 11:15:26 |
@@ -19695,39 +19257,39 @@ Understand how to troubleshoot
 
 To help you troubleshoot your supported Broker VM applets, the table below lists the different possible warning and error event types, including the applicable error or warning that is displayed when you left-click the applet on the Broker VM page, the description displayed in the `collection_auditing` dataset, the root cause of the problem, and the recommended action to resolve the problem. We recommend that you use this table as a first resource to troubleshoot your application, connectivity, and processing errors.
 
-| Applet | Event Type | Broker VM page message | Description in the collection\_auditing dataset | Root Cause | Recommended Action |
+| Applet | Event Type | Broker VM page message | Description in the collection_auditing dataset | Root Cause | Recommended Action |
 | --- | --- | --- | --- | --- | --- |
 | Database Collector | Warning | The query has been running for over <X> minutes. driver: <driver>, server: <server>, port: <port>, database: <database>, query title: <query title>. | One of the queries has been running for too long. | A long-running query was detected. This may indicate inefficiencies in the query logic or large data retrieval. | Consider optimizing the query.; Check database performance.; Try running the query directly on the database. Check runtime and verify the issue is the query and not the collector.; If the problem persists, contact support for further assistance. |
-| Database Collector | Warning | Could not parse the initial value. driver: <driver>, server: <server>, port: <port>, database: <database>, query title: <query title>, initial value: <initial\_value>. | Could not parse the initial value for a query. | The rising column initial value failed to parse when initializing the query parameters from the configuration. | Validate the initial value has a valid format.; If the problem persists, contact support for further assistance. |
+| Database Collector | Warning | Could not parse the initial value. driver: <driver>, server: <server>, port: <port>, database: <database>, query title: <query title>, initial value: <initial_value>. | Could not parse the initial value for a query. | The rising column initial value failed to parse when initializing the query parameters from the configuration. | Validate the initial value has a valid format.; If the problem persists, contact support for further assistance. |
 | Database Collector | Warning | The system couldn't run the new snapshot query because the results from your previous query are still uploading. | The system couldn't run the new snapshot query because the results from your previous query are still uploading. | The query kept running for a long time even when a new execution was supposed to start. | First, on the server side, confirm that the query is taking a long time. If it is, increase the collection interval to prevent the next run from overlapping with the current query. |
 | Database Collector | Warning | The snapshot query and data upload were canceled because they either exceeded the <X> hour time limit or encountered an internal error. | The snapshot query and data upload were canceled because they took too long, or encountered an internal error. | The query and data upload were canceled because they exceeded the time limit. | On the server, confirm the query is taking a long time. |
 | Database Collector | Error | Could not connect to the database. driver: <driver>, server: <server>, port: <port>, database: <database>. | Could not connect to the database. | An issue occurred when the collector tried to establish an initial connection to the specified database. | Check database connectivity and credentials.; Check database for refused connections and reasons.; If the problem persists, contact support for further assistance. |
 | Database Collector | Error | Could not run the query. driver: <driver>, server: <server>, port: <port>, database: <database>, query title: <query title>. | Could not run one of the configured queries. | An issue occurred while executing one of the configured queries, possibly due to syntax or permissions. | Check the query syntax and database permissions.; Ensure all fields are properly defined.; Try running the query directly on the database.; If the problem persists, contact support for further assistance. |
 | Database Collector | Error | Could not write the state to server cache. | Could not write data to the server cache. | The collector encountered an error while trying to write data to the server's cache. | This issue can occur intermittently. If the problem persists, contact support for further assistance. |
 | Database Collector | Error | Could not stream the collector results to the server. | Could not stream results to the server. | An issue occurred where results could not be streamed to the tenant due to an internal component failure. | This issue can occur intermittently. If the problem persists, contact support for further assistance. |
-| Files and Folders Collector | Warning | The total file size in the folder <folder\_path> for file type <file\_type> has exceeded the allowed 30 MB limit in replace mode | The total folder size exceeded the allowed 30MB limit in replace mode. | An issue that occurs when the total folder size exceeds the allowed 30MB limit in Replace mode for the Storage Method as defined in the Data Source Mapping. For more information, see Activate Files and Folders Collector. | This issue occurs when the total folder size exceeds the allowed 30MB limit in Replace mode for the Storage Method as defined in the Data Source Mapping. For more information, see Activate Files and Folders Collector. |
+| Files and Folders Collector | Warning | The total file size in the folder <folder_path> for file type <file_type> has exceeded the allowed 30 MB limit in replace mode | The total folder size exceeded the allowed 30MB limit in replace mode. | An issue that occurs when the total folder size exceeds the allowed 30MB limit in Replace mode for the Storage Method as defined in the Data Source Mapping. For more information, see Activate Files and Folders Collector. | This issue occurs when the total folder size exceeds the allowed 30MB limit in Replace mode for the Storage Method as defined in the Data Source Mapping. For more information, see Activate Files and Folders Collector. |
 | Files and Folders Collector/FTP Collector | Error | Failed to stream collector results to server | Could not write data to server cache. | An issue occurred where the collector failed to stream data to an internal component, preventing it from reaching the tenant. | This issue can occur intermittently. If the problem persists, contact support for further assistance. |
-| Files and Folders Collector | Error | Invalid mount detected at path <folder\_path> | Invalid mount point detected. | An issue that occurs when an invalid mount point is detected. | Make sure the path configured is the correct path and there are no permissions issues.; If the problem persists, contact support for further assistance. |
-| FTP Collector | Error | Failed to load SSH key for server <server> at path <folder\_path> | Failed to load SSH key. | The SSH key file for SFTP connections could not be loaded or parsed. | Verify the SSH key configuration. If the problem continues, contact support for further assistance. |
-| FTP Collector | Error | Failed to login to server <server> at path <folder\_path> due to an SSL Certification error. | Failed to login to the server due to an SSL Certification error. | SSL/TLS certificate validation failed during secure FTP connection. | Verify the server's certificates. Ensure the Certificate Authority (CA) is valid and trusted. |
-| FTP Collector | Error | Login failed for server <server> at path <folder\_path> with user <username>. | Login failed for the server. | FTP authentication failed due to incorrect username/password. | Check the configured login details and permissions. Ensure the correct username and password are used. |
-| FTP Collector | Error | Failed to login to server <server> at path <folder\_path> with user <username> as the connection timed out. | Failed to login to the server as the connection timed out. | Connection attempt to the FTP server timed out. | Check the network connection and confirm the FTP server is accessible from the Broker VM. |
-| FTP Collector | Error | Failed to connect to server <server> at path <folder\_path>. | Failed to connect to server. | Unable to establish a connection to the FTP server. | Confirm the server can be accessed and there are no network restrictions. If the problem continues, contact support for further assistance. |
-| FTP Collector | Error | Connection to the FTP server <server> at path <folder\_path> timed out while trying to list the directory content. This probably happened as the server is using Active mode, but only Passive mode is supported. | Connection to the FTP server timed out while trying to list the directory content. This probably happened as the server is using Active mode, but only Passive mode is supported. | FTP server failed to list directory contents, likely due to Active/Passive mode misconfiguration. | Configure the FTP server to use Passive mode, and verify directory listing permissions. If the problem continues, contact support for further assistance. |
-| FTP Collector | Error | Failed to access the path <folder\_path> on server <server>. The path doesn't exist, is unavailable, or access was denied due to permissions. | The specified path couldn't be accessed as either the path doesn't exist, is unavailable, or access was denied due to permissions. | The configured path does not exist, is unavailable, or access was denied due to permissions. | Make sure the configured path is correct and that there are no permissions issues. If the problem continues, contact support for further assistance. |
-| Kafka Collector | Warning | Failed to parse a log from the configured server list: <bootstrap\_server\_list>. The log does not match the expected format <expected\_type>. Consider using the 'RAW' type to ingest logs in their current format. | Log parsing failed due to an unexpected format for Apache Kafka servers. | The user configured the port to receive logs from type CEF or LEEF, but the logs are either of a different type or contain errors. | Verify the logs in the Apache Kafka topics are in the correct format. If the format doesn't match, consider using the 'RAW' log type in the collector configuration. |
-| Kafka Collector | Error | Could not create an Apache Kafka dialer for the configured server list: <bootstrap\_server\_list> | Could not create an Apache Kafka dialer for the Kafka client. | Attempt to create the SSL/SASL dialer configuration failed during initialization. | Verify the Apache Kafka configuration, including SSL/SASL settings, and ensure that the certificates are valid and correctly configured. If the problem continues, contact support for further assistance. |
-| Kafka Collector | Error | Failed to retrieve a topic list from the configured server list: <bootstrap\_server\_list> | Failed to retrieve a topic list from the Apache Kafka servers. | The collector failed to retrieve a topic list from the Apache Kafka servers. | Check for any network connectivity issues and the status of the Apache Kafka server. If the problem continues for an extended period, contact support for further assistance. |
-| Kafka Collector | Error | Failed to create an Apache Kafka consumer for the configured server list: <bootstrap\_server\_list> | Failed to create an Apache Kafka consumer. | The collector failed to create a consumer for any of the configured topics. | Check for any network connectivity issues and the status of the Apache Kafka server. If the problem continues for an extended period, contact support for further assistance. |
-| Kafka Collector | Error | Failed to read a message using the Apache Kafka consumer from the configured server list: <bootstrap\_server\_list> | Failed to read a message using the Apache Kafka consumer. | An error occurred while the collector was reading messages using the Apache Kafka consumer. | Review the collector's logs for more specific error details. If the problem continues, contact support for further assistance. |
-| Kafka Collector | Error | Couldn't retrieve the number of partitions for the topic from the configured server list: <bootstrap\_server\_list> | Couldn't retrieve the number of partitions for the topic. | The collector failed to retrieve the partition list from the Apache Kafka server. | Check for any network connectivity issues and the status of the Apache Kafka server. If the problem continues for an extended period, contact support for further assistance. |
-| Kafka Collector | Error | There are no configured topics available on the configured server list: <bootstrap\_server\_list> | There are no configured topics available on the Apache Kafka servers. | The topic patterns configured don't match any existing topics on the Kafka Collector applets. The system will automatically try again to find them. | This is mainly an informational message. The system will automatically try again to find the topics. If the topics are expected to exist, verify the topic names and patterns in the collector configuration. |
-| Local Agent Settings | Warning | Failed to download and store <package\_type> (version: <version>, os: <os>) inside the Broker VM for agent package caching | Failed to download and store content/installer for agent package caching. | An issue that occurs while downloading the content/installer and extracting it. | If the problem persists, contact support for further assistance. |
-| Local Agent Settings | Warning | The Broker VM failed to process request of agent package cache update <package\_type>. | Failed to process request of agent package cache update. | Broker VM failed to get the list of content/installer from the tenant. | If the problem persists, contact support for further assistance. |
+| Files and Folders Collector | Error | Invalid mount detected at path <folder_path> | Invalid mount point detected. | An issue that occurs when an invalid mount point is detected. | Make sure the path configured is the correct path and there are no permissions issues.; If the problem persists, contact support for further assistance. |
+| FTP Collector | Error | Failed to load SSH key for server <server> at path <folder_path> | Failed to load SSH key. | The SSH key file for SFTP connections could not be loaded or parsed. | Verify the SSH key configuration. If the problem continues, contact support for further assistance. |
+| FTP Collector | Error | Failed to login to server <server> at path <folder_path> due to an SSL Certification error. | Failed to login to the server due to an SSL Certification error. | SSL/TLS certificate validation failed during secure FTP connection. | Verify the server's certificates. Ensure the Certificate Authority (CA) is valid and trusted. |
+| FTP Collector | Error | Login failed for server <server> at path <folder_path> with user <username>. | Login failed for the server. | FTP authentication failed due to incorrect username/password. | Check the configured login details and permissions. Ensure the correct username and password are used. |
+| FTP Collector | Error | Failed to login to server <server> at path <folder_path> with user <username> as the connection timed out. | Failed to login to the server as the connection timed out. | Connection attempt to the FTP server timed out. | Check the network connection and confirm the FTP server is accessible from the Broker VM. |
+| FTP Collector | Error | Failed to connect to server <server> at path <folder_path>. | Failed to connect to server. | Unable to establish a connection to the FTP server. | Confirm the server can be accessed and there are no network restrictions. If the problem continues, contact support for further assistance. |
+| FTP Collector | Error | Connection to the FTP server <server> at path <folder_path> timed out while trying to list the directory content. This probably happened as the server is using Active mode, but only Passive mode is supported. | Connection to the FTP server timed out while trying to list the directory content. This probably happened as the server is using Active mode, but only Passive mode is supported. | FTP server failed to list directory contents, likely due to Active/Passive mode misconfiguration. | Configure the FTP server to use Passive mode, and verify directory listing permissions. If the problem continues, contact support for further assistance. |
+| FTP Collector | Error | Failed to access the path <folder_path> on server <server>. The path doesn't exist, is unavailable, or access was denied due to permissions. | The specified path couldn't be accessed as either the path doesn't exist, is unavailable, or access was denied due to permissions. | The configured path does not exist, is unavailable, or access was denied due to permissions. | Make sure the configured path is correct and that there are no permissions issues. If the problem continues, contact support for further assistance. |
+| Kafka Collector | Warning | Failed to parse a log from the configured server list: <bootstrap_server_list>. The log does not match the expected format <expected_type>. Consider using the 'RAW' type to ingest logs in their current format. | Log parsing failed due to an unexpected format for Apache Kafka servers. | The user configured the port to receive logs from type CEF or LEEF, but the logs are either of a different type or contain errors. | Verify the logs in the Apache Kafka topics are in the correct format. If the format doesn't match, consider using the 'RAW' log type in the collector configuration. |
+| Kafka Collector | Error | Could not create an Apache Kafka dialer for the configured server list: <bootstrap_server_list> | Could not create an Apache Kafka dialer for the Kafka client. | Attempt to create the SSL/SASL dialer configuration failed during initialization. | Verify the Apache Kafka configuration, including SSL/SASL settings, and ensure that the certificates are valid and correctly configured. If the problem continues, contact support for further assistance. |
+| Kafka Collector | Error | Failed to retrieve a topic list from the configured server list: <bootstrap_server_list> | Failed to retrieve a topic list from the Apache Kafka servers. | The collector failed to retrieve a topic list from the Apache Kafka servers. | Check for any network connectivity issues and the status of the Apache Kafka server. If the problem continues for an extended period, contact support for further assistance. |
+| Kafka Collector | Error | Failed to create an Apache Kafka consumer for the configured server list: <bootstrap_server_list> | Failed to create an Apache Kafka consumer. | The collector failed to create a consumer for any of the configured topics. | Check for any network connectivity issues and the status of the Apache Kafka server. If the problem continues for an extended period, contact support for further assistance. |
+| Kafka Collector | Error | Failed to read a message using the Apache Kafka consumer from the configured server list: <bootstrap_server_list> | Failed to read a message using the Apache Kafka consumer. | An error occurred while the collector was reading messages using the Apache Kafka consumer. | Review the collector's logs for more specific error details. If the problem continues, contact support for further assistance. |
+| Kafka Collector | Error | Couldn't retrieve the number of partitions for the topic from the configured server list: <bootstrap_server_list> | Couldn't retrieve the number of partitions for the topic. | The collector failed to retrieve the partition list from the Apache Kafka server. | Check for any network connectivity issues and the status of the Apache Kafka server. If the problem continues for an extended period, contact support for further assistance. |
+| Kafka Collector | Error | There are no configured topics available on the configured server list: <bootstrap_server_list> | There are no configured topics available on the Apache Kafka servers. | The topic patterns configured don't match any existing topics on the Kafka Collector applets. The system will automatically try again to find them. | This is mainly an informational message. The system will automatically try again to find the topics. If the topics are expected to exist, verify the topic names and patterns in the collector configuration. |
+| Local Agent Settings | Warning | Failed to download and store <package_type> (version: <version>, os: <os>) inside the Broker VM for agent package caching | Failed to download and store content/installer for agent package caching. | An issue that occurs while downloading the content/installer and extracting it. | If the problem persists, contact support for further assistance. |
+| Local Agent Settings | Warning | The Broker VM failed to process request of agent package cache update <package_type>. | Failed to process request of agent package cache update. | Broker VM failed to get the list of content/installer from the tenant. | If the problem persists, contact support for further assistance. |
 | Local Agent Settings | Warning | The disk space allocated for agent installer and content caching exceeds 90% (&lt;number&gt; GB). | The disk space allocated for agent installer and content caching exceeds 90%. | Agent installer and content caching exceeds 90% of the allocated disk space for. | If you intend to use the Broker VM for agent installer and content caching, you must use extra disk space. For more information, Increase Broker VM storage allocated for data caching. |
 | Local Agent Settings | Error | Inaccessible url:<url> The Broker VM needs to communicate with the same URLs as the Agents. | There is at least one inaccessible URL. The Broker VM needs to communicate with the same URLs that the agents communicate with. | An issue with the accessibility to a URL as the Broker VM needs to communicate with the same URLs as the Agents. | Make sure the URL is not blocked by the firewall.; Try running a curl command on the URL marked as inaccessible inside the VM: `curl -I <URL>`; Contact support for further assistance |
 | Local Agent Settings | Error | No more disk space available for agent installer and content caching. | No more disk space available for agent installer and content caching. | Agent installer and content caching exceeds 100% of the allocated disk space for. | If you intend to use the Broker VM for agent installer and content caching, you must use extra disk space. For more information, Increase Broker VM storage allocated for data caching. |
-| NetFlow Collector | Warning | Received a NetFlow packet with an unsupported protocol version on port <dest\_port>. The supported versions are <supported\_versions>. | Received a NetFlow packet with an unsupported protocol version. | The NetFlow Collector received packets using an unsupported protocol version by the current implementation. | Ensure the NetFlow exporter is configured to use one of the supported NetFlow versions. Verify that only NetFlow traffic is being sent to the configured port. If the problem continues, contact support for further assistance. |
+| NetFlow Collector | Warning | Received a NetFlow packet with an unsupported protocol version on port <dest_port>. The supported versions are <supported_versions>. | Received a NetFlow packet with an unsupported protocol version. | The NetFlow Collector received packets using an unsupported protocol version by the current implementation. | Ensure the NetFlow exporter is configured to use one of the supported NetFlow versions. Verify that only NetFlow traffic is being sent to the configured port. If the problem continues, contact support for further assistance. |
 | Network Mapper | Warning | Part of the IP range configured has no hosts. Check the Broker VM logs for more details. | Part of the IP range configured has no hosts. Check the Broker VM logs for more details. | The Network Mapper wasn't able to detect any active hosts in part of the configured IP range during the scanning process. | Verify the configured IP range and ensure hosts are active and reachable. If the problem continues for an extended period, contact support for further assistance. |
 | Syslog Collector | Warning | First log over the connection doesn't have the expected type. Log format: <received format>, expected format: <expected format>. The connection has been closed by the collector.  vendor: <vendor>, product: <product>, source: <source ip>, port: <destination port>. | The initial received log over the connection does not match the expected log format. | The Syslog collector applet was configured to receive logs of a specific type, and the logs that were received through the configured port are either of a different type or contain errors. | Check the logs transmitted over the connection and ensure they match the log type specified in the configuration. |
 | Syslog Collector | Warning | Log size exceeded 65 KB for <source ip>, on port: <dest port> (vendor: <vendor>, product: <product>). This may happen if a single log entry is too large or if logs lack end-of-line delimiters, causing them to merge and exceed the size limit. | A log entry exceeded the maximum allowed size. | The issue is caused by either a log exceeding 65 KB or logs missing an end-of-line delimiter, which causes them to aggregate as 'partial logs' and hit the 65 KB limit. | Ensure the logs are within the size limit and include an end-of-line delimiter. |
@@ -19743,10 +19305,9 @@ To help you troubleshoot your supported Broker VM applets, the table below lists
 | Database Collector/ Files and Folders Collector/ FTP Collector/ Kafka Collector/ NetFlow Collector/ Network Mapper/ WEC / Syslog Collector | Error | The collector could not connect to the third-party persistence service. This issue must be resolved to restore functionality. | Failed to establish an initial connection to the persistence service. | The persistence service for the data collector applet, is not functioning properly. As a result, the applet is unable to operate since this service is essential for its functionality. | If the problem persists, contact support for further assistance. |
 | Database Collector/ Files and Folders Collector/ FTP Collector/ Kafka Collector/ NetFlow Collector/ Network Mapper/ WEC / Syslog Collector | Error | The collector is unable to read from the persistence service. This issue must be resolved to restore functionality. | Unable to read from the persistence service. | The persistence service for the applets, is not functioning properly. As a result, the applet is unable to operate since this service is essential for its functionality. | The data collector applet is unable to read from the persistence service. This issue must be resolved to restore functionality. |
 | Database Collector/ Files and Folders Collector/ FTP Collector/ Kafka Collector/ NetFlow Collector/ Network Mapper/ WEC / Syslog Collector | Error | The collector could not reach the receptor (Tenant) to transmit data. This issue must be resolved to restore functionality. | Unable to connect to the receptor for data transmission. | The applet can't send logs to the tenant due to some network problem. | Review the network setup and check for any firewalls, proxies, or other network components that could potentially cause interruptions. |
-| Files and Folders Collector/ FTP Collector | Warning | Failed to parse log from <folder\_path> (vendor: <vendor>, product: <product>. The log does not match the expected format <expected\_type>, as configured for this folder path. Consider using the 'RAW' type to ingest logs in their current format. | Log parsing failed due to an unexpected format. | The user configured the port to receive logs from type CEF or LEEF, but the logs are either of a different type or contain errors. | Verify the logs in the configured folder path and ensure they match the expected format. As a workaround, consider using the 'RAW' log type in the collector configuration. |
+| Files and Folders Collector/ FTP Collector | Warning | Failed to parse log from <folder_path> (vendor: <vendor>, product: <product>. The log does not match the expected format <expected_type>, as configured for this folder path. Consider using the 'RAW' type to ingest logs in their current format. | Log parsing failed due to an unexpected format. | The user configured the port to receive logs from type CEF or LEEF, but the logs are either of a different type or contain errors. | Verify the logs in the configured folder path and ensure they match the expected format. As a workaround, consider using the 'RAW' log type in the collector configuration. |
 
 ## Dataset management
-Abstract
 
 Learn more about managing your datasets and understanding your overall data storage, period-based retention.
 
@@ -19948,7 +19509,6 @@ For each dataset view listed in the table, information is available. Here are de
 | RELATED TABLES | Details the other datasets that are related to this dataset view. |
 
 ### What are datasets?
-Abstract
 
 Learn how to import, delete, and interact with custom or third-party datasets in Cortex Cloud.
 
@@ -19997,13 +19557,13 @@ Cortex Query Language (XQL) supports using different languages for dataset and f
     -   Hot Storage queries are performed on a dataset using the format **`dataset = <dataset name>`**. This is the default option.
         
         ```
-        dataset = xdr\_data
+        dataset = xdr_data
         ```
         
     -   Cold Storage queries are performed using the format **`cold_dataset = <dataset name>`**.
         
         ```
-        cold\_dataset = xdr\_data
+        cold_dataset = xdr_data
         ```
         
     
@@ -20057,7 +19617,6 @@ Copy text to clipboard
 Select Copy text to clipboard to copy the name of the dataset or dataset view to your clipboard.
 
 ### Lookup datasets
-Abstract
 
 Learn more about lookup datasets to correlate data from a data source with events in your environment.
 
@@ -20102,7 +19661,6 @@ After a lookup, a dataset is imported, you can always edit the dataset to update
 A lookup dataset can only be deleted if there are no other dependencies. For example, if a Correlation Rule is based on a lookup dataset, you wouldn't be able to delete the lookup dataset until you removed the dataset from the XQL query of the Correlation Rule.
 
 #### Import a lookup dataset
-Abstract
 
 Learn more about importing data from an external file to create or update a lookup dataset in Cortex Cloud.
 
@@ -20133,11 +19691,9 @@ Example 125. 
 
 Here's an example of a JSON file in the correct format for upload:
 
-```
-{"firstName": "NAME\_1", "SurName": "NAME\_11", "employeeID": {"id": "ID\_AAAAA\_2"}}
-{"firstName": "NAME\_2", "SurName": "NAME\_22", "employeeID": {"id": "ID\_AAAAA\_3"}}
-{"firstName": "NAME\_3", "SurName": "NAME\_32", "employeeID": {"id": "ID\_AAAAA\_4"}}
-```
+{"firstName": "NAME_1", "SurName": "NAME_11", "employeeID": {"id": "ID_AAAAA_2"}}
+{"firstName": "NAME_2", "SurName": "NAME_22", "employeeID": {"id": "ID_AAAAA_3"}}
+{"firstName": "NAME_3", "SurName": "NAME_32", "employeeID": {"id": "ID_AAAAA_4"}}
 
   
 
@@ -20147,7 +19703,7 @@ Here's an example of a JSON file in the correct format for upload:
     
 3.  (Optional) Under Name, type a new name for the target dataset.
     
-    By default, Cortex Cloud uses the name of the original file as the dataset name. You can change this name to something that will be more meaningful for your users when they query the dataset. For example, if the original file name is mrkdptusrsnov23.json, you can save the dataset as marketing\_dept\_users\_Nov\_2023.
+    By default, Cortex Cloud uses the name of the original file as the dataset name. You can change this name to something that will be more meaningful for your users when they query the dataset. For example, if the original file name is mrkdptusrsnov23.json, you can save the dataset as marketing_dept_users_Nov_2023.
     
     Dataset names can contain special characters from different languages, numbers (**`0-9`**) and underscores (**`_`**). You can create dataset names using uppercase characters, but in queries, dataset names are always treated as if they are lowercase.
     
@@ -20159,12 +19715,11 @@ Here's an example of a JSON file in the correct format for upload:
     
 5.  Click Add to add the file as a lookup.
     
-6.  After receiving a notification reporting that the upload succeeded, Refresh [image: refresh.png] to view it in your list of datasets.
+6.  After receiving a notification reporting that the upload succeeded, Refresh  to view it in your list of datasets.
     
     If the upload fails for any reason, you'll receive a notification in the Notification Center.
 
 #### Download JSON file of lookup dataset
-Abstract
 
 Learn more about downloading a lookup dataset as a JSON file.
 
@@ -20181,7 +19736,6 @@ When you download a lookup dataset with field names in a foreign language, the d
 2.  In the Datasets table, right-click the lookup dataset that you want to download as a JSON file, and select Download.
 
 #### Set time to live for lookup datasets
-Abstract
 
 Learn more about setting the time to live (TTL) for lookup datasets in Cortex Cloud.
 
@@ -20207,7 +19761,6 @@ You can specify when lookup entries expire and are removed automatically from th
     The TTL column in the Datasets table is updated with the changes and these changes are applied immediately on all existing lookup entries.
 
 ### Monitor datasets and dataset views activity
-Abstract
 
 Learn more about the monitored Cortex Cloud datasets and dataset views activities.
 
@@ -20233,12 +19786,10 @@ Certain fields are exposed and hidden by default. An asterisk (\*) is beside eve
 | Result\* | The result of the action ( `Success`, `Fail`, or `N/A`) |
 | Severity\* | Severity associated with the log: `Critical`; `High`; `Medium`; `Low`; `Informational` |
 | Timestamp\* | Date and time when the action occurred. |
-| Type\* and Sub-Type\* | Additional classifications of dataset and dataset view logs (Type and Sub-Type): Datasets:-   Create Dataset; Delete Dataset; Update Dataset
-; Dataset Views:-   Create Dataset View; Delete Dataset View; Update Dataset View |
+| Type\* and Sub-Type\* | Additional classifications of dataset and dataset view logs (Type and Sub-Type): Datasets:- Create Dataset; Delete Dataset; Update Dataset ; Dataset Views:- Create Dataset View; Delete Dataset View; Update Dataset View |
 | User Name\* | Name of the user who performed the action. |
 
 ## Manage Event Forwarding
-Abstract
 
 Save your ingested, parsed data in an external location by exporting your event logs to a temporary GCP storage bucket.
 
@@ -20331,7 +19882,6 @@ Before you begin, ensure that you have the view/edit permission for Data Managem
     3.  Process the received message to initiate the download of the corresponding file.
 
 ### Endpoints Event Forwarding - included/excluded fields by event type
-Abstract
 
 Learn more about the included/excluded fields by event type for Endpoint Event Forwarding in Cortex Cloud.
 
@@ -20347,125 +19897,73 @@ The table below lists the types of events exported for the endpoints and the fie
 
 | Exported event type | Included field | Excluded field |
 | --- | --- | --- |
-| **Network** | action\_socket\_type | is\_boot\_replay |
-| action\_remote\_ip | action\_proxy |
-| action\_remote\_port | action\_network\_app\_ids |
-| action\_local\_ip | action\_network\_rule\_ids |
-| action\_local\_port | action\_network\_dpi\_fields |
-| action\_network\_connection\_id | action\_network\_is\_loopback |
-| action\_network\_is\_server | action\_upload |
-| action\_network\_creation\_time | action\_download |
-| action\_total\_upload | action\_network\_stats\_seq |
-| action\_total\_download | action\_network\_is\_ipv6 |
-| action\_network\_protocol |  |
-| action\_network\_stats\_is\_last |  |
-| **Process** | uuid / \_id | action\_process\_causality\_id |
-| action\_process\_os\_pid | action\_process\_is\_causality\_root |
-| action\_process\_instance\_id | action\_process\_is\_replay |
-| action\_process\_image\_md5 | action\_process\_yara\_file\_scan\_result |
-| action\_process\_image\_sha256 | action\_process\_wf\_verdict |
-| action\_process\_image\_path | action\_process\_static\_analysis\_score |
-| action\_process\_image\_name | execution\_actor\_causality\_id |
-| action\_process\_image\_extension | action\_process\_ns\_pid |
-| action\_process\_image\_command\_line | action\_process\_container\_id |
-| action\_process\_signature\_product | action\_process\_is\_container\_root |
-| action\_process\_signature\_vendor | action\_process\_image\_command\_line\_indices |
-| action\_process\_signature\_is\_embedded | action\_process\_is\_special |
-| action\_process\_signature\_status | action\_process\_ns\_user\_sid |
-| action\_process\_integrity\_level | action\_process\_ns\_user\_real\_sid |
-| action\_process\_username | action\_process\_file\_size |
-| action\_process\_user\_sid | action\_process\_file\_create\_time |
-| action\_process\_in\_txn | action\_process\_file\_mod\_time |
-| action\_process\_pe\_load\_info | action\_process\_remote\_session\_ip |
-| action\_process\_peb | action\_process\_file\_info |
-| action\_process\_peb32 | action\_process\_device\_info |
-| action\_process\_last\_writer\_actor | execution\_actor\_instance\_id |
-| action\_process\_token | action\_process\_user\_real\_sid |
-| action\_process\_privileges | action\_process\_requested\_parent\_pid |
-| action\_process\_fds | action\_process\_requested\_parent\_iid |
-| action\_process\_scheduled\_task\_name |  |
-| action\_process\_termination\_date |  |
-| action\_process\_instance\_execution\_time |  |
-| action\_process\_termination\_code |  |
-| **File** | action\_file\_path | action\_file\_wf\_verdict |
-| action\_file\_name | action\_file\_yara\_file\_scan\_result |
-| action\_file\_previous\_file\_path | action\_file\_dir\_query |
-| action\_file\_previous\_file\_name | action\_file\_previous\_device\_info |
-| action\_file\_md5 | action\_file\_device\_info |
-| action\_file\_sha256 | action\_file\_reparse\_path |
-| action\_file\_size | action\_file\_reparse\_count |
-| action\_file\_attributes | action\_file\_dirty\_reason |
-| action\_file\_create\_time | action\_file\_remote\_ip |
-| action\_file\_mod\_time | action\_file\_remote\_port |
-| action\_file\_access\_time | action\_file\_remote\_file\_ip |
-| action\_file\_type | action\_file\_remote\_file\_host |
-| action\_file\_operation\_flags | action\_file\_sec\_desc |
-| action\_file\_mode | action\_file\_previous\_file\_extension |
-| action\_file\_owner | action\_file\_extension |
-| action\_file\_owner\_name | action\_file\_archive\_list |
-| action\_file\_group | action\_file\_contents |
-| action\_file\_group\_name |  |
-| action\_file\_device\_type |  |
-| action\_file\_signature\_product |  |
-| action\_file\_signature\_vendor |  |
-| action\_file\_signature\_is\_embedded |  |
-| action\_file\_signature\_status |  |
-| action\_file\_pe\_info |  |
-| action\_file\_prev\_type |  |
-| action\_file\_last\_writer\_actor |  |
-| action\_file\_is\_anonymous |  |
-| **Registry** | action\_registry\_value\_type |  |
-| action\_registry\_key\_name |  |
-| action\_registry\_data |  |
-| action\_registry\_value\_name |  |
-| action\_registry\_old\_key\_name |  |
-| action\_registry\_file\_path |  |
-| action\_registry\_return\_val |  |
-| **Injection** | action\_remote\_process\_thread\_id | action\_remote\_process\_causality\_id |
-| action\_remote\_process\_os\_pid | action\_remote\_process\_is\_causality\_root |
-| action\_remote\_process\_instance\_id | action\_remote\_process\_is\_replay |
-| action\_remote\_process\_image\_md5 | action\_remote\_process\_image\_extension |
-| action\_remote\_process\_image\_sha256 | action\_remote\_process\_image\_command\_line\_indices |
-| action\_remote\_process\_image\_path | action\_remote\_process\_is\_special |
-| action\_remote\_process\_image\_name | action\_remote\_process\_file\_size |
-| action\_remote\_process\_image\_command\_line | action\_remote\_process\_file\_create\_time |
-| action\_remote\_process\_signature\_product | action\_remote\_process\_file\_mod\_time |
-| action\_remote\_process\_signature\_vendor | action\_remote\_process\_file\_info |
-| action\_remote\_process\_signature\_is\_embedded |  |
-| action\_remote\_process\_signature\_status |  |
-| action\_remote\_process\_thread\_start\_address |  |
-| action\_remote\_process\_integrity\_level |  |
-| action\_remote\_process\_username |  |
-| action\_remote\_process\_user\_sid |  |
-| address\_mapping |  |
-| **Load Image** | action\_module\_path | action\_module\_is\_replay |
-| action\_module\_md5 | action\_module\_yara\_file\_scan\_result |
-| action\_module\_sha256 | action\_module\_file\_size |
-| action\_module\_base\_address | action\_module\_file\_create\_time |
-| action\_module\_image\_size | action\_module\_file\_mod\_time |
-| action\_module\_signature\_product | action\_module\_file\_access\_time |
-| action\_module\_signature\_vendor | action\_module\_device\_info |
-| action\_module\_signature\_is\_embedded | action\_module\_wf\_verdict |
-| action\_module\_signature\_status |  |
-| action\_module\_file\_info |  |
-| action\_module\_last\_writer\_actor |  |
-| action\_module\_other\_load\_location |  |
-| action\_module\_page\_protection |  |
-| action\_module\_system\_properties |  |
-| action\_module\_code\_integrity |  |
-| action\_module\_boot\_code\_integrity |  |
-| **User Status Change** | action\_user\_status |  |
-| action\_username |  |
-| action\_user\_status\_sid |  |
-| action\_user\_session\_id |  |
-| action\_user\_is\_local\_session |  |
-| **Host Status Change** | action\_boot\_time |  |
-| action\_powered\_off |  |
-| **Agent Status Change** |  | action\_boot\_instance\_cleanup\_required |
-|  | agent\_status\_component |
-| **Host Metadata Discovery/Change** | host\_metadata\_interface\_map |  |
-| host\_metadata\_hostname |  |
-| host\_metadata\_domain |  |
+| **Network** | action_socket_type | is_boot_replay |
+| action_remote_ip | action_proxy | | action_remote_port | action_network_app_ids |
+| action_local_ip | action_network_rule_ids | | action_local_port | action_network_dpi_fields |
+| action_network_connection_id | action_network_is_loopback | | action_network_is_server | action_upload |
+| action_network_creation_time | action_download | | action_total_upload | action_network_stats_seq |
+| action_total_download | action_network_is_ipv6 | | action_network_protocol | |
+| action_network_stats_is_last | |
+| **Process** | uuid / _id | action_process_causality_id |
+| action_process_os_pid | action_process_is_causality_root | | action_process_instance_id | action_process_is_replay |
+| action_process_image_md5 | action_process_yara_file_scan_result | | action_process_image_sha256 | action_process_wf_verdict |
+| action_process_image_path | action_process_static_analysis_score | | action_process_image_name | execution_actor_causality_id |
+| action_process_image_extension | action_process_ns_pid | | action_process_image_command_line | action_process_container_id |
+| action_process_signature_product | action_process_is_container_root | | action_process_signature_vendor | action_process_image_command_line_indices |
+| action_process_signature_is_embedded | action_process_is_special | | action_process_signature_status | action_process_ns_user_sid |
+| action_process_integrity_level | action_process_ns_user_real_sid | | action_process_username | action_process_file_size |
+| action_process_user_sid | action_process_file_create_time | | action_process_in_txn | action_process_file_mod_time |
+| action_process_pe_load_info | action_process_remote_session_ip | | action_process_peb | action_process_file_info |
+| action_process_peb32 | action_process_device_info | | action_process_last_writer_actor | execution_actor_instance_id |
+| action_process_token | action_process_user_real_sid | | action_process_privileges | action_process_requested_parent_pid |
+| action_process_fds | action_process_requested_parent_iid | | action_process_scheduled_task_name | |
+| action_process_termination_date | | | action_process_instance_execution_time | |
+| action_process_termination_code | |
+| **File** | action_file_path | action_file_wf_verdict |
+| action_file_name | action_file_yara_file_scan_result | | action_file_previous_file_path | action_file_dir_query |
+| action_file_previous_file_name | action_file_previous_device_info | | action_file_md5 | action_file_device_info |
+| action_file_sha256 | action_file_reparse_path | | action_file_size | action_file_reparse_count |
+| action_file_attributes | action_file_dirty_reason | | action_file_create_time | action_file_remote_ip |
+| action_file_mod_time | action_file_remote_port | | action_file_access_time | action_file_remote_file_ip |
+| action_file_type | action_file_remote_file_host | | action_file_operation_flags | action_file_sec_desc |
+| action_file_mode | action_file_previous_file_extension | | action_file_owner | action_file_extension |
+| action_file_owner_name | action_file_archive_list | | action_file_group | action_file_contents |
+| action_file_group_name | | | action_file_device_type | |
+| action_file_signature_product | | | action_file_signature_vendor | |
+| action_file_signature_is_embedded | | | action_file_signature_status | |
+| action_file_pe_info | | | action_file_prev_type | |
+| action_file_last_writer_actor | | | action_file_is_anonymous | |
+| **Registry** | action_registry_value_type |  |
+| action_registry_key_name | | | action_registry_data | |
+| action_registry_value_name | | | action_registry_old_key_name | |
+| action_registry_file_path | | | action_registry_return_val | |
+| **Injection** | action_remote_process_thread_id | action_remote_process_causality_id |
+| action_remote_process_os_pid | action_remote_process_is_causality_root | | action_remote_process_instance_id | action_remote_process_is_replay |
+| action_remote_process_image_md5 | action_remote_process_image_extension | | action_remote_process_image_sha256 | action_remote_process_image_command_line_indices |
+| action_remote_process_image_path | action_remote_process_is_special | | action_remote_process_image_name | action_remote_process_file_size |
+| action_remote_process_image_command_line | action_remote_process_file_create_time | | action_remote_process_signature_product | action_remote_process_file_mod_time |
+| action_remote_process_signature_vendor | action_remote_process_file_info | | action_remote_process_signature_is_embedded | |
+| action_remote_process_signature_status | | | action_remote_process_thread_start_address | |
+| action_remote_process_integrity_level | | | action_remote_process_username | |
+| action_remote_process_user_sid | | | address_mapping | |
+| **Load Image** | action_module_path | action_module_is_replay |
+| action_module_md5 | action_module_yara_file_scan_result | | action_module_sha256 | action_module_file_size |
+| action_module_base_address | action_module_file_create_time | | action_module_image_size | action_module_file_mod_time |
+| action_module_signature_product | action_module_file_access_time | | action_module_signature_vendor | action_module_device_info |
+| action_module_signature_is_embedded | action_module_wf_verdict | | action_module_signature_status | |
+| action_module_file_info | | | action_module_last_writer_actor | |
+| action_module_other_load_location | | | action_module_page_protection | |
+| action_module_system_properties | | | action_module_code_integrity | |
+| action_module_boot_code_integrity | |
+| **User Status Change** | action_user_status |  |
+| action_username | | | action_user_status_sid | |
+| action_user_session_id | | | action_user_is_local_session | |
+| **Host Status Change** | action_boot_time |  |
+| action_powered_off | |
+| **Agent Status Change** |  | action_boot_instance_cleanup_required |
+| | agent_status_component |
+| **Host Metadata Discovery/Change** | host_metadata_interface_map |  |
+| host_metadata_hostname | | | host_metadata_domain | |
 
 #### Common fields for all event types
 
@@ -20473,71 +19971,70 @@ The table below lists the common fields for all event types and the fields that 
 
 | Common fields for all event types | Included field | Excluded field |
 | --- | --- | --- |
-| **Agent** | agent\_content\_version | agent\_install\_type |
-|  | agent\_hostname | event\_utc\_diff\_minutes |
-|  | agent\_interface\_map | manifest\_file\_version |
-|  | agent\_os\_sub\_type | source\_message\_id |
-|  | agent\_os\_type | zip\_id |
-|  | agent\_version | agent\_request\_time |
-|  | agent\_id | server\_request\_time |
-|  | agent\_ip\_addresses | agent\_id\_hash |
-|  | agent\_ip\_addresses\_v6 | agent\_id\_hash\_bre |
-|  |  | backtrace\_identities |
-|  |  | \_product |
-|  |  | \_vendor |
-|  |  | actor\_fields |
-|  |  | agent\_is\_vdi |
-| **Common** | event\_version | event\_is\_impersonated |
-|  | event\_type | event\_is\_replay |
-|  | event\_sub\_type | event\_impersonation\_status |
-|  | event\_id | event\_is\_simulated |
-|  | event\_timestamp | event\_user\_presence |
-|  | event\_rpc\_interface\_uuid | agent\_host\_boot\_time |
-|  | event\_rpc\_func\_opnum | agent\_session\_start\_time |
-|  |  | event\_validity\_enum |
-|  |  | event\_invalidity\_field |
-|  |  | event\_rpc\_inteface\_version\_major |
-|  |  | event\_rpc\_inteface\_version\_minor |
-|  |  | event\_rpc\_protocol |
-|  |  | event\_address\_mapped |
-|  |  | event\_user\_presence\_status |
-| **Actor** | os\_actor\_local\_ip | actor\_ns\_user\_sid |
-|  | os\_actor\_local\_port | actor\_process\_auth\_id |
-|  | os\_actor\_primary\_user\_sid | actor\_process\_causality\_id |
-|  | os\_actor\_primary\_username | actor\_process\_ns\_pid |
-|  | os\_actor\_process\_command\_line | actor\_process\_session\_id |
-|  | os\_actor\_process\_image\_md5 | actor\_process\_signature\_is\_embedded |
-|  | os\_actor\_process\_image\_name | actor\_process\_signature\_product |
-|  | os\_actor\_process\_image\_path | actor\_process\_signature\_vendor |
-|  | os\_actor\_process\_image\_sha256 | actor\_remote\_host |
-|  | os\_actor\_process\_signature\_status | actor\_remote\_pipe\_name |
-|  | os\_actor\_process\_logon\_id | actor\_remote\_port |
-|  | os\_actor\_process\_os\_pid | actor\_rpc\_interface\_version\_major |
-|  | os\_actor\_remote\_ip | actor\_rpc\_interface\_version\_minor |
-|  | os\_actor\_process\_instance\_id | actor\_rpc\_protocol |
-|  | os\_actor\_thread\_thread\_id | actor\_type |
-|  |  | actor\_rpc\_func\_opnum |
-|  |  | actor\_rpc\_interface\_uuid |
-|  |  | actor\_process\_device\_info |
-|  |  | actor\_process\_execution\_time |
-|  |  | actor\_process\_file\_create\_time |
-|  |  | actor\_process\_file\_mod\_time |
-|  |  | actor\_process\_file\_size |
-|  |  | actor\_process\_image\_extension |
-|  |  | actor\_process\_instance\_id |
-|  |  | actor\_process\_command\_line\_indices |
-|  |  | actor\_process\_integrity\_level |
-|  |  | actor\_process\_is\_special |
-|  |  | actor\_process\_last\_writer\_actor |
-|  |  | actor\_process\_instance\_id |
-|  |  | actor\_thread\_thread\_id |
-|  |  | actor\_is\_injected\_thread |
-|  |  | actor\_causality\_id |
-|  |  | actor\_effective\_username |
-|  |  | actor\_effective\_user\_sid |
+| **Agent** | agent_content_version | agent_install_type |
+|  | agent_hostname | event_utc_diff_minutes |
+|  | agent_interface_map | manifest_file_version |
+|  | agent_os_sub_type | source_message_id |
+|  | agent_os_type | zip_id |
+|  | agent_version | agent_request_time |
+|  | agent_id | server_request_time |
+|  | agent_ip_addresses | agent_id_hash |
+|  | agent_ip_addresses_v6 | agent_id_hash_bre |
+|  |  | backtrace_identities |
+|  |  | _product |
+|  |  | _vendor |
+|  |  | actor_fields |
+|  |  | agent_is_vdi |
+| **Common** | event_version | event_is_impersonated |
+|  | event_type | event_is_replay |
+|  | event_sub_type | event_impersonation_status |
+|  | event_id | event_is_simulated |
+|  | event_timestamp | event_user_presence |
+|  | event_rpc_interface_uuid | agent_host_boot_time |
+|  | event_rpc_func_opnum | agent_session_start_time |
+|  |  | event_validity_enum |
+|  |  | event_invalidity_field |
+|  |  | event_rpc_inteface_version_major |
+|  |  | event_rpc_inteface_version_minor |
+|  |  | event_rpc_protocol |
+|  |  | event_address_mapped |
+|  |  | event_user_presence_status |
+| **Actor** | os_actor_local_ip | actor_ns_user_sid |
+|  | os_actor_local_port | actor_process_auth_id |
+|  | os_actor_primary_user_sid | actor_process_causality_id |
+|  | os_actor_primary_username | actor_process_ns_pid |
+|  | os_actor_process_command_line | actor_process_session_id |
+|  | os_actor_process_image_md5 | actor_process_signature_is_embedded |
+|  | os_actor_process_image_name | actor_process_signature_product |
+|  | os_actor_process_image_path | actor_process_signature_vendor |
+|  | os_actor_process_image_sha256 | actor_remote_host |
+|  | os_actor_process_signature_status | actor_remote_pipe_name |
+|  | os_actor_process_logon_id | actor_remote_port |
+|  | os_actor_process_os_pid | actor_rpc_interface_version_major |
+|  | os_actor_remote_ip | actor_rpc_interface_version_minor |
+|  | os_actor_process_instance_id | actor_rpc_protocol |
+|  | os_actor_thread_thread_id | actor_type |
+|  |  | actor_rpc_func_opnum |
+|  |  | actor_rpc_interface_uuid |
+|  |  | actor_process_device_info |
+|  |  | actor_process_execution_time |
+|  |  | actor_process_file_create_time |
+|  |  | actor_process_file_mod_time |
+|  |  | actor_process_file_size |
+|  |  | actor_process_image_extension |
+|  |  | actor_process_instance_id |
+|  |  | actor_process_command_line_indices |
+|  |  | actor_process_integrity_level |
+|  |  | actor_process_is_special |
+|  |  | actor_process_last_writer_actor |
+|  |  | actor_process_instance_id |
+|  |  | actor_thread_thread_id |
+|  |  | actor_is_injected_thread |
+|  |  | actor_causality_id |
+|  |  | actor_effective_username |
+|  |  | actor_effective_user_sid |
 
 ## Manage compute units
-Abstract
 
 Learn more about managing and tracking your compute units usage for API and Cold Storage XQL queries.
 
@@ -20570,7 +20067,6 @@ Cortex Cloud uses compute units (CU) for these types of queries:
     The CU consumption of cold storage queries is based on the number of days in the query time frame. For example, when querying 1 hour of a specific day, the CU of querying this entire day is consumed. When querying 1 hour that extends past 2 days, such as from 23:50 to 00:50 of the following day, the CU of querying these two days is consumed.
 
 ### Compute units usage
-Abstract
 
 Learn more about how to compute units CU) works according to your license and available options after reaching your quota.
 
@@ -20645,7 +20141,6 @@ How to manage your CU usage for your queries
 # Cortex Cloud Data Sources
 
 ## What are Cortex Cloud data sources?
-Abstract
 
 Learn more about Cortex Cloud Data Sources and a unified approach to integrations.
 
@@ -20700,7 +20195,6 @@ We are actively working to evolve the UI to create a single, unified point of co
 | Cloud Posture and Runtime Security data sources | Data Sources & Integrations page (Settings → Data Sources & Integrations → \+ Add New); Broker VMs page (Settings → Configurations → Data Broker → Broker VMs) |
 
 ## Complete data source catalog
-Abstract
 
 Learn more about the complete data source catalog available in Cortex Cloud.
 
@@ -20736,7 +20230,6 @@ Data source categories
 By consulting the specific documentation sections dedicated to each category as detailed below, you gain a complete overview of all available ingestion options that collectively form the data source catalog.
 
 ## Vendor-specific data sources
-Abstract
 
 Learn more about the third-party vendor data sources available in Cortex Cloud.
 
@@ -20863,7 +20356,6 @@ The following third-party vendors are available, which represent one of the five
 -   Zscaler Private Access (ZPA) (using Syslog Collector applet)
 
 ### Amazon S3
-Abstract
 
 Learn more about the Amazon S3 standard data source and content pack integrations in Cortex Cloud.
 
@@ -20872,14 +20364,10 @@ You can configure collecting Amazon S3 logs using a standard data source or with
 | Amazon S3 vendor | Description |
 | --- | --- |
 | Standard data source overview | Forward different types of logs to Cortex Cloud from Amazon Simple Storage Service (Amazon S3) using the Amazon S3 data source. |
-| Links to standard data source instructions | The following types of logs can be ingested from Amazon S3: **Audit logs**: See Ingest audit logs from AWS Cloud Trail; **Flow logs**: See Ingest network flow logs from Amazon S3; **Generic logs**: See Ingest generic logs from Amazon S3-   **BeyondTust Privilege Management Cloud logs**: See BeyondTrust Privilege Management Cloud
-; **Route 53 logs**: See Ingest network Route 53 logs from Amazon S3 Configuring these types of Amazon S3 logs can include following these instructions: Create an assumed role; Configure data collection from Amazon S3 manually |
-| Links to content pack/integration details | The [AWS - S3](https://cortex.marketplace.pan.dev/marketplace/details/AWSS3) content pack provides integration with the Amazon Web Services Simple Storage Service (S3) for management, security controls, and visibility of stored objects. It includes the following integration:-   [AWS - S3](https://xsoar.pan.dev/docs/reference/integrations/aws---s3): Use this integration to manage Amazon Web Services Simple Storage Service (S3) objects and security configurations, including listing contents, setting encryption, and blocking public access. Commands are included for fetching bucket encryption status (**`aws-s3-get-bucket-encryption`**), controlling public access settings (**`aws-s3-put-public-access-block`**, **`aws-s3-get-public-access-block`**), and listing objects within a bucket, with support for pagination, delimiters, and prefixes (**`aws-s3-list-objects`**), alongside core support for authentication using AWS STS session tokens.
-; The [AWS - Route53](https://cortex.marketplace.pan.dev/marketplace/details/AWSRoute53) content pack provides an interface to manage the Amazon Web Services managed Cloud DNS service. It includes the following integration:-   [AWS - Route53](https://xsoar.pan.dev/docs/reference/integrations/aws---route53): Use this integration to manage the Amazon Web Services managed Cloud DNS service. Commands included allow users to list resource record sets, address issues such as when a set is missing its TTL value, and manage configurations related to AWS authentication like STS endpoint resolution logic.
-; The [AWS - CloudTrail](https://cortex.marketplace.pan.dev/marketplace/details/AWSCloudTrail) content pack provides functionality for interacting with an AWS CloudTrail trail via automation and includes rules for parsing and modeling ingested audit logs. It also includes the following integration:-   [AWS - CloudTrail](https://xsoar.pan.dev/docs/reference/integrations/aws---cloud-trail): Use this integration to interact with a CloudTrail trail on AWS via playbooks and the Playground. It includes commands that enable retrieving information about the trail status using **`aws-cloudtrail-get-trail-status`**, and manage authentication configurations like specifying the AWS STS endpoint resolution logic. |
+| Links to standard data source instructions | The following types of logs can be ingested from Amazon S3: **Audit logs**: See Ingest audit logs from AWS Cloud Trail; **Flow logs**: See Ingest network flow logs from Amazon S3; **Generic logs**: See Ingest generic logs from Amazon S3- **BeyondTust Privilege Management Cloud logs**: See BeyondTrust Privilege Management Cloud ; **Route 53 logs**: See Ingest network Route 53 logs from Amazon S3 Configuring these types of Amazon S3 logs can include following these instructions: Create an assumed role; Configure data collection from Amazon S3 manually |
+| Links to content pack/integration details | The [AWS - S3](https://cortex.marketplace.pan.dev/marketplace/details/AWSS3) content pack provides integration with the Amazon Web Services Simple Storage Service (S3) for management, security controls, and visibility of stored objects. It includes the following integration:- [AWS - S3](https://xsoar.pan.dev/docs/reference/integrations/aws---s3): Use this integration to manage Amazon Web Services Simple Storage Service (S3) objects and security configurations, including listing contents, setting encryption, and blocking public access. Commands are included for fetching bucket encryption status (**`aws-s3-get-bucket-encryption`**), controlling public access settings (**`aws-s3-put-public-access-block`**, **`aws-s3-get-public-access-block`**), and listing objects within a bucket, with support for pagination, delimiters, and prefixes (**`aws-s3-list-objects`**), alongside core support for authentication using AWS STS session tokens. ; The [AWS - Route53](https://cortex.marketplace.pan.dev/marketplace/details/AWSRoute53) content pack provides an interface to manage the Amazon Web Services managed Cloud DNS service. It includes the following integration:- [AWS - Route53](https://xsoar.pan.dev/docs/reference/integrations/aws---route53): Use this integration to manage the Amazon Web Services managed Cloud DNS service. Commands included allow users to list resource record sets, address issues such as when a set is missing its TTL value, and manage configurations related to AWS authentication like STS endpoint resolution logic. ; The [AWS - CloudTrail](https://cortex.marketplace.pan.dev/marketplace/details/AWSCloudTrail) content pack provides functionality for interacting with an AWS CloudTrail trail via automation and includes rules for parsing and modeling ingested audit logs. It also includes the following integration:- [AWS - CloudTrail](https://xsoar.pan.dev/docs/reference/integrations/aws---cloud-trail): Use this integration to interact with a CloudTrail trail on AWS via playbooks and the Playground. It includes commands that enable retrieving information about the trail status using **`aws-cloudtrail-get-trail-status`**, and manage authentication configurations like specifying the AWS STS endpoint resolution logic. |
 
 #### Ingest audit logs from AWS Cloud Trail
-Abstract
 
 Take advantage of Cortex Cloud investigation capabilities and set up audit log ingestion for your AWS CloudTrail logs.
 
@@ -21010,7 +20498,7 @@ To configure Cortex Cloud to receive audit logs from Amazon S3 via AWS Cloudtrai
             
             You can retrieve your bucket’s ARN by opening the [Amazon S3 Console](https://console.aws.amazon.com/s3/) in a browser window. In the Buckets section, select the bucket that you created for collecting the AWS CloudTrail logs, click Copy ARN, and paste the ARN in the field.
             
-            [image: bucket-copy-arn.png]
+            
             
             **Note:**
             
@@ -21019,21 +20507,21 @@ To configure Cortex Cloud to receive audit logs from Amazon S3 via AWS Cloudtrai
             ```
             {
               "Version": "2012-10-17",
-              "Statement": \[
+              "Statement": [
                 {
                   "Effect": "Allow",
                   "Principal": {
                     "Service": "s3.amazonaws.com"
                   },
                   "Action": "SQS:SendMessage",
-                  "Resource": "\[Leave automatically generated ARN for the SQS queue defined by AWS\]",
+                  "Resource": "[Leave automatically generated ARN for the SQS queue defined by AWS]",
                   "Condition": {
                     "ArnLike": {
-                      "aws:SourceArn": "\[ARN of your Amazon S3 bucket\]"
+                      "aws:SourceArn": "[ARN of your Amazon S3 bucket]"
                     }
                   }
                 },
-              \]
+              ]
             }
             ```
             
@@ -21060,9 +20548,9 @@ To configure Cortex Cloud to receive audit logs from Amazon S3 via AWS Cloudtrai
             
         -   Specify SQS queue: You can either select Choose from your SQS queues and then select the SQS queue, or select Enter SQS queue ARN and specify the ARN in the SQS queue field.
             
-            You can retrieve your SQS queue ARN by opening another instance of the AWS Management Console in a browser window, and opening the [Amazon SQS Console](https://console.aws.amazon.com/sqs/), and selecting the Amazon SQS that you created. In the Details section, under ARN, click the copy icon ([image: copy-icon.png])), and paste the ARN in the field.
+            You can retrieve your SQS queue ARN by opening another instance of the AWS Management Console in a browser window, and opening the [Amazon SQS Console](https://console.aws.amazon.com/sqs/), and selecting the Amazon SQS that you created. In the Details section, under ARN, click the copy icon ()), and paste the ARN in the field.
             
-            [image: sqs-arn2.png]
+            
             
         
     3.  Click Save changes.
@@ -21115,34 +20603,34 @@ To configure Cortex Cloud to receive audit logs from Amazon S3 via AWS Cloudtrai
             ```
             {
               "Version": "2012-10-17",
-              "Statement": \[
+              "Statement": [
                 {
                   "Effect": "Allow",
                   "Principal": {
                     "Service": "s3.amazonaws.com"
                   },
                   "Action": "SQS:SendMessage",
-                  "Resource": "\[Leave automatically generated ARN for the SQS queue defined by AWS\]",
+                  "Resource": "[Leave automatically generated ARN for the SQS queue defined by AWS]",
                   "Condition": {
                     "ArnLike": {
-                      "aws:SourceArn": "\[ARN of your Amazon S3 bucket\]"
+                      "aws:SourceArn": "[ARN of your Amazon S3 bucket]"
                     }
                   }
                 },
                {
-                  "Sid": "\_\_receiver\_statement",
+                  "Sid": "__receiver_statement",
                   "Effect": "Allow",
                   "Principal": {
-                    "AWS": "\[Add the ARN for the AWS IAM user\]"
+                    "AWS": "[Add the ARN for the AWS IAM user]"
                   },
-                  "Action": \[
+                  "Action": [
                     "SQS:ChangeMessageVisibility",
                     "SQS:DeleteMessage",
                     "SQS:ReceiveMessage"
-                  \],
-                  "Resource": "\[Leave automatically generated ARN for the SQS queue defined by AWS\]"
+                  ],
+                  "Resource": "[Leave automatically generated ARN for the SQS queue defined by AWS]"
                 }
-              \]
+              ]
             }
             ```
             
@@ -21185,7 +20673,6 @@ To configure Cortex Cloud to receive audit logs from Amazon S3 via AWS Cloudtrai
         Once events start to come in, a green check mark appears underneath the Amazon S3 configuration with the number of logs received.
 
 #### Ingest network flow logs from Amazon S3
-Abstract
 
 Take advantage of Cortex Cloud investigation capabilities and set up network flow log ingestion for your Amazon S3 logs using an AWS CloudFormation Script.
 
@@ -21269,7 +20756,7 @@ Configure Cortex Cloud to receive network flow logs from Amazon S3 using the Clo
                 
             -   Upload a template file: Choose file, and select the `cortex-xdr-create-s3-with-sqs-flow-logs.json` file that you downloaded from Cortex XDR.
                 
-                [image: create-stack.png]
+                
                 
             
         
@@ -21287,7 +20774,7 @@ Configure Cortex Cloud to receive network flow logs from Amazon S3 using the Clo
                 
             -   Queue Name: Specify the name for your Amazon SQS queue to create, where you can leave the default populated name as xdr-flow or create a new one. The name must be unique.
                 
-                [image: specify-stack-details.png]
+                
                 
             
         
@@ -21313,7 +20800,7 @@ Configure Cortex Cloud to receive network flow logs from Amazon S3 using the Clo
         
     2.  From the list of Your VPCs, select the checkbox beside the VPC that you want to configure to create flow logs, and then select Actions → Create flow log.
         
-        [image: your-vpcs.png]
+        
         
     3.  Configure the following Flow log settings:
         
@@ -21329,7 +20816,7 @@ Configure Cortex Cloud to receive network flow logs from Amazon S3 using the Clo
             
             You can retrieve your bucket’s ARN by opening another instance of the AWS Management Console in a browser window and opening the [Amazon S3 console](https://console.aws.amazon.com/s3/). In the Buckets section, select the bucket that you created for collecting the Amazon S3 flow logs when you created your stack, click Copy ARN, and paste the ARN in this field.
             
-            [image: bucket-copy-arn.png]
+            
             
         -   Log record format: Select Custom Format, and in the Log Format field, specify the following fields to include in the flow log record, which you can select from the list displayed:
             
@@ -21458,7 +20945,6 @@ Configure Cortex Cloud to receive network flow logs from Amazon S3 using the Clo
         When events start to come in, a green check mark appears underneath the Amazon S3 configuration with the number of logs received.
 
 #### Ingest generic logs from Amazon S3
-Abstract
 
 Take advantage of Cortex Cloud investigation capabilities and set up generic log ingestion for your Amazon S3 logs.
 
@@ -21542,7 +21028,7 @@ Configure Cortex Cloud to receive generic logs from Amazon S3:
             
             You can retrieve your bucket’s ARN by opening the [Amazon S3 Console](https://console.aws.amazon.com/s3/) in a browser window. In the Buckets section, select the bucket that you created for collecting the Amazon S3 flow logs, click Copy ARN, and paste the ARN in the field.
             
-            [image: bucket-copy-arn.png]
+            
             
             **Note:**
             
@@ -21551,21 +21037,21 @@ Configure Cortex Cloud to receive generic logs from Amazon S3:
             ```
             {
               "Version": "2012-10-17",
-              "Statement": \[
+              "Statement": [
                 {
                   "Effect": "Allow",
                   "Principal": {
                     "Service": "s3.amazonaws.com"
                   },
                   "Action": "SQS:SendMessage",
-                  "Resource": "\[Leave automatically generated ARN for the SQS queue defined by AWS\]",
+                  "Resource": "[Leave automatically generated ARN for the SQS queue defined by AWS]",
                   "Condition": {
                     "ArnLike": {
-                      "aws:SourceArn": "\[ARN of your Amazon S3 bucket\]"
+                      "aws:SourceArn": "[ARN of your Amazon S3 bucket]"
                     }
                   }
                 }
-              \]
+              ]
             }
             ```
             
@@ -21592,9 +21078,9 @@ Configure Cortex Cloud to receive generic logs from Amazon S3:
             
         -   Specify SQS queue: You can either select Choose from your SQS queues and then select the SQS queue, or select Enter SQS queue ARN and specify the ARN in the SQS queue field.
             
-            You can retrieve your SQS queue ARN by opening another instance of the AWS Management Console in a browser window, and opening the [Amazon SQS Console](https://console.aws.amazon.com/sqs/), and selecting the Amazon SQS that you created. In the Details section, under ARN, click the copy icon ([image: copy-icon.png])), and paste the ARN in the field.
+            You can retrieve your SQS queue ARN by opening another instance of the AWS Management Console in a browser window, and opening the [Amazon SQS Console](https://console.aws.amazon.com/sqs/), and selecting the Amazon SQS that you created. In the Details section, under ARN, click the copy icon ()), and paste the ARN in the field.
             
-            [image: sqs-arn2.png]
+            
             
         
     3.  Click Save changes.
@@ -21647,34 +21133,34 @@ Configure Cortex Cloud to receive generic logs from Amazon S3:
             ```
             {
               "Version": "2012-10-17",
-              "Statement": \[
+              "Statement": [
                 {
                   "Effect": "Allow",
                   "Principal": {
                     "Service": "s3.amazonaws.com"
                   },
                   "Action": "SQS:SendMessage",
-                  "Resource": "\[Leave automatically generated ARN for the SQS queue defined by AWS\]",
+                  "Resource": "[Leave automatically generated ARN for the SQS queue defined by AWS]",
                   "Condition": {
                     "ArnLike": {
-                      "aws:SourceArn": "\[ARN of your Amazon S3 bucket\]"
+                      "aws:SourceArn": "[ARN of your Amazon S3 bucket]"
                     }
                   }
                 },
                {
-                  "Sid": "\_\_receiver\_statement",
+                  "Sid": "__receiver_statement",
                   "Effect": "Allow",
                   "Principal": {
-                    "AWS": "\[Add the ARN for the AWS IAM user\]"
+                    "AWS": "[Add the ARN for the AWS IAM user]"
                   },
-                  "Action": \[
+                  "Action": [
                     "SQS:ChangeMessageVisibility",
                     "SQS:DeleteMessage",
                     "SQS:ReceiveMessage"
-                  \],
-                  "Resource": "\[Leave automatically generated ARN for the SQS queue defined by AWS\]"
+                  ],
+                  "Resource": "[Leave automatically generated ARN for the SQS queue defined by AWS]"
                 }
-              \]
+              ]
             }
             ```
             
@@ -21762,7 +21248,6 @@ Configure Cortex Cloud to receive generic logs from Amazon S3:
         When events start to come in, a green check mark appears underneath the Amazon S3 configuration with the number of logs received.
 
 #### Ingest network Route 53 logs from Amazon S3
-Abstract
 
 Take advantage of Cortex Cloud investigation capabilities and set up network Route 53 ingestion for your Amazon S3 logs using an AWS CloudFormation Script.
 
@@ -21973,7 +21458,6 @@ Configure Cortex Cloud to receive network Route 53 DNS logs from Amazon S3 using
         When events start to come in, a green check mark appears underneath the Amazon S3 configuration with the number of logs received.
 
 #### Create an assumed role
-Abstract
 
 Learn about creating an AWS Assumed Role for Cortex Cloud.
 
@@ -22011,13 +21495,13 @@ When creating the S3 bucket and SQS, follow any other relevant instructions prov
         
         -   You can retrieve your bucket’s ARN by opening the [Amazon S3 Console](https://console.aws.amazon.com/s3/) in a browser window. In the Buckets section, select the bucket, click Copy ARN, and paste the ARN in the field.
             
-        -   You can retrieve the SQS queue ARN by opening another instance of the AWS Management Console in a browser window, and opening the [Amazon SQS Console](https://console.aws.amazon.com/sqs/), and selecting the Amazon SQS that you created. In the Details section, under ARN, click the copy icon ([image: copy-icon.png])), and paste the ARN in the field.
+        -   You can retrieve the SQS queue ARN by opening another instance of the AWS Management Console in a browser window, and opening the [Amazon SQS Console](https://console.aws.amazon.com/sqs/), and selecting the Amazon SQS that you created. In the Details section, under ARN, click the copy icon ()), and paste the ARN in the field.
             
         
         ```
         {
             "Version": "2012-10-17",
-            "Statement": \[
+            "Statement": [
                 {
                     "Effect": "Allow",
                     "Action": "s3:GetObject",
@@ -22025,14 +21509,14 @@ When creating the S3 bucket and SQS, follow any other relevant instructions prov
                 },
                 {
                     "Effect": "Allow",
-                     "Action": \[
+                     "Action": [
                         "sqs:ReceiveMessage",
                         "sqs:DeleteMessage",
                         "sqs:ChangeMessageVisibility"
-                    \],
+                    ],
                     "Resource": "<sqs-arn>"
                 }
-            \]
+            ]
         }
         ```
         
@@ -22076,24 +21560,24 @@ When creating the S3 bucket and SQS, follow any other relevant instructions prov
                 -   Value: Enter the value of the External ID, a unique alphanumeric string, by generating a secure UUIDv4 using an [Online UUID Generator](https://www.uuidgenerator.net/version4). Copy the External ID as you will use this when configuring the Amazon S3 Collector in Cortex Cloud.
                     
                 
-                [image: add_condition.png]
+                
                 
                 When you are finished, click Add condition.
                 
             
         
-        [image: select_trusted_entity_updated.png]
+        
         
     3.  Click Next and add permissions by selecting the policy you created.
         
-        [image: add_permissions.png]
+        
         
 3.  Click Next to name, review, and create.
     
     -   Role name: Specify a name for the new role, and click Create role.
         
     
-    [image: name_review_create.png]
+    
     
 4.  Copy the Policy ARN and Role ARN for future use by opening the policy and role that you created.
     
@@ -22110,7 +21594,6 @@ When creating the S3 bucket and SQS, follow any other relevant instructions prov
     -   Ingest generic logs from Amazon S3.Ingest generic logs from Amazon S3
 
 #### Configure data collection from Amazon S3 manually
-Abstract
 
 Set up network flow log ingestion for your Amazon S3 logs manually (without a script).
 
@@ -22239,7 +21722,6 @@ Configure Cortex Cloud to receive network flow logs from Amazon S3 manually.
         Once events start to come in, a green check mark appears underneath the Amazon S3 configuration with the number of logs received.
 
 ### Amazon Web Services
-Abstract
 
 Learn more about collecting Amazon Web Services data using a Cloud Service Provider (CSP) onboarding data source in Cortex Cloud.
 
@@ -22251,7 +21733,6 @@ Follow a wizard to onboard your Amazon Web Services (AWS) environment. The AWS o
 | Link to basic configuration Cloud Service Provider (CSP) onboarding data source instructions for Cortex Cloud NG SIEM, Cortex Cloud Enterprise license, and Cortex Cloud Enterprise+ licenses. | Onboard Amazon Web Services with basic configuration |
 
 ### API Security
-Abstract
 
 Learn more about retrieving and collecting API data for API Security using different standard data sources in Cortex Cloud.
 
@@ -22293,7 +21774,6 @@ Kong vendor
 | Link to standard data source instructions | Ingest KongIngest Kong |
 
 #### Ingest data for API security
-Abstract
 
 Ingest API data to analyze and identify potential security threats.
 
@@ -22306,7 +21786,7 @@ Settings in Cortex Cloud
 
 In Cortex Cloud, set up the AWS API Gateway data source to integrate with the AWS API Gateway.
 
-1.  From Settings → Data Sources , click [image: add_data_source.png] and search for AWS API Gateway and then click Connect or Connect Another Instance.
+1.  From Settings → Data Sources , click  and search for AWS API Gateway and then click Connect or Connect Another Instance.
     
 2.  In the AWS API Collector wizard, enter a relevant name and click Create and Proceed.
     
@@ -22411,11 +21891,11 @@ Configure the settings in the AWS Management Console to integrate with Cortex Cl
     
     ```
     aws logs put-subscription-filter \\
-        --log-group-name "<YOUR\_LOG\_GROUP\_NAME>" \\
-        --filter-name "<any\_filter\_name>" \\
+        --log-group-name "<YOUR_LOG_GROUP_NAME>" \\
+        --filter-name "<any_filter_name>" \\
         --filter-pattern "" \\
-        --destination-arn "arn:aws:firehose:region:123456789012:deliverystream/<YOUR\_DELIVERY\_STREAM>" \\
-        --role-arn "arn:aws:iam::<ACCOUNT\_ID>:role/<YOUR\_IAM\_ROLE>"
+        --destination-arn "arn:aws:firehose:region:123456789012:deliverystream/<YOUR_DELIVERY_STREAM>" \\
+        --role-arn "arn:aws:iam::<ACCOUNT_ID>:role/<YOUR_IAM_ROLE>"
     ```
     
     **Important:**
@@ -22526,7 +22006,7 @@ Follow the steps to configure the policy.
     
     1.  You can create a policy on a specific API or choose to create a policy on all APIs.
         
-    2.  From Inbound Processing, click [image: code_bracket.png].
+    2.  From Inbound Processing, click .
         
         The Policies screen opens. There are three sections:
         
@@ -22660,11 +22140,11 @@ The steps include the prerequisites that run the automated script that deploys f
     
     | Variable | Description |
     | --- | --- |
-    | PROJECT\_ID | Google project ID where Apigee is provisioned. |
-    | ORG | Apigee organization. By default, this is the same as PROJECT\_ID. |
+    | PROJECT_ID | Google project ID where Apigee is provisioned. |
+    | ORG | Apigee organization. By default, this is the same as PROJECT_ID. |
     | ENV | In Apigee, from the left-side menu, click Environments and copy the name of the environment you want to use. |
-    | TARGET\_URL | Copy the URL for your Apigee Collector from the Custom Collectors page. For example, `https://api-{tenant external URL}/logs/v1/event.` |
-    | APIsec\_API\_KEY | Token generated from Cortex Cloud. |
+    | TARGET_URL | Copy the URL for your Apigee Collector from the Custom Collectors page. For example, `https://api-{tenant external URL}/logs/v1/event.` |
+    | APIsec_API_KEY | Token generated from Cortex Cloud. |
     
 2.  Check that the GCP user running the script has `IAM` permissions.
     
@@ -22704,14 +22184,14 @@ The steps include the prerequisites that run the automated script that deploys f
     
 6.  (Optional) Exclude unwanted domains from being tracked by APIsec:
     
-    1.  Uncomment: DOMAIN\_EXCLUSION\_LIST.
+    1.  Uncomment: DOMAIN_EXCLUSION_LIST.
         
     2.  Add the domains to exclude.
         
     3.  Edit `deploy.sh` and set the following variables:
         
         ```
-        export DOMAIN\_EXCLUSION\_LIST="domain1,domain2"
+        export DOMAIN_EXCLUSION_LIST="domain1,domain2"
         ```
         
 7.  Discontinue the integration:
@@ -22719,8 +22199,8 @@ The steps include the prerequisites that run the automated script that deploys f
     1.  Edit `undeploy.sh`:
         
         ```
-        export PROJECT\_ID=example-project-id
-        export ORG=$PROJECT\_ID
+        export PROJECT_ID=example-project-id
+        export ORG=$PROJECT_ID
         export ENVIRONMENT=example-env
         ```
         
@@ -22784,21 +22264,21 @@ If you have an existing hookand would like to integrate with the shared flow, ru
         
         ```
         configuration:
-          active\_configuration: 
+          active_configuration: 
           properties:
             compute:
               region: 
               zone:     
         core:
               account: 
-              disable\_usage\_reporting: 
+              disable_usage_reporting: 
               project: 
         credential:
-          access\_token: **<Copy this value>**
-          id\_token: 
-          token\_expiry: 
+          access_token: **<Copy this value>**
+          id_token: 
+          token_expiry: 
         sentinels:
-          config\_sentinel: 
+          config_sentinel: 
         ```
         
     2.  Copy the `<access_token>` value from the output.
@@ -22810,7 +22290,7 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     "https://apigee.googleapis.com/v1/organizations/
     <ORG>/environments/<ENVIRONMENT>/resourcefiles/
     properties" -H 
-    "Authorization: Bearer <access\_token from above>"
+    "Authorization: Bearer <access_token from above>"
     ```
     
 4.  Generate Key Value Map (KVM), which stores the Cortex API key that's encrypted
@@ -22819,7 +22299,7 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     curl --silent -X POST 
     "https://apigee.googleapis.com/v1/organizations/
     <ORG>/environments/<ENVIRONMENT>/keyvaluemaps" -H 
-    "Authorization: Bearer <access\_token from above>" 
+    "Authorization: Bearer <access_token from above>" 
     -H "Content-Type: application/json" --data-raw 
     '{"name": "'"APISec-KVM"'", "encrypted": true}'
     ```
@@ -22830,8 +22310,8 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     curl --silent -X DELETE 
     "https://apigee.googleapis.com/v1/organizations/
     <ORG>/environments/<ENVIRONMENT>/keyvaluemaps/
-    $APISEC\_KVM\_NAME" -H "Authorization: Bearer 
-    <access\_token from above>"
+    $APISEC_KVM_NAME" -H "Authorization: Bearer 
+    <access_token from above>"
     ```
     
     Add the Cortex API key entry to the created KVM.
@@ -22839,8 +22319,8 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     ```
     curl --silent -X POST "https://apigee.googleapis.com/
     v1/organizations/<ORG>/environments/<ENVIRONMENT>/
-    keyvaluemaps/$APISEC\_KVM\_NAME/entries" -H 
-    "Authorization: Bearer <access\_token from above>" 
+    keyvaluemaps/$APISEC_KVM_NAME/entries" -H 
+    "Authorization: Bearer <access_token from above>" 
     -H "Content-Type: application/json" --data-raw 
     '{"name": "api-key","value": "'"<Generated key 
     from cortex env>"'"}'
@@ -22862,7 +22342,7 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     ```
     curl --silent -X POST --data-binary "<sf>.zip" -H 
     "Content-Type: application/octet-stream" -H 
-    "Authorization: Bearer <access\_token from above>" 
+    "Authorization: Bearer <access_token from above>" 
     "https://apigee.googleapis.com/v1/organizations/$ORG/
     sharedflows?action=import&name=<sf>"
     ```
@@ -22874,7 +22354,7 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     ```
     curl --silent -X GET "https://apigee.googleapis.com/
     v1/organizations/<ORG>/sharedflows/<sf>" -H 
-    "Authorization: Bearer <access\_token from above>"
+    "Authorization: Bearer <access_token from above>"
     ```
     
     Output:
@@ -22887,9 +22367,9 @@ If you have an existing hookand would like to integrate with the shared flow, ru
         "subType": "SharedFlow"
       },
       "name": "sf-api-sec-extension-postflow",
-      "revision": \[
+      "revision": [
         "1" // This is the revision number
-      \],
+      ],
       "latestRevisionId": "1"
     }
     ```
@@ -22898,7 +22378,7 @@ If you have an existing hookand would like to integrate with the shared flow, ru
     
     ```
     curl --silent -X POST -H "Authorization: 
-    Bearer <access\_token from above>" 
+    Bearer <access_token from above>" 
     "https://apigee.googleapis.com/
     v1/organizations/$ORG/environments/<ENVIRONMENT>/
     sharedflows/$sf/revisions/<REVISION>/
@@ -23018,15 +22498,15 @@ Example 127. Kong as docker container
     This can be done by passing the following arguments to the `docker run` command, assuming `./plugin_directory/kong` is the directory containing the `plugins/panw-apisec-http-log/ directory`.
     
     ```
-    \-v "./plugin\_directory/kong:/tmp/custom\_plugins/kong" \\
-    -e "KONG\_LUA\_PACKAGE\_PATH=/tmp/custom\_plugins/?.lua;;" \\
-    -e "KONG\_PLUGINS=bundled,panw-apisec-http-log"
+    \-v "./plugin_directory/kong:/tmp/custom_plugins/kong" \\
+    -e "KONG_LUA_PACKAGE_PATH=/tmp/custom_plugins/?.lua;;" \\
+    -e "KONG_PLUGINS=bundled,panw-apisec-http-log"
     ```
     
     You may want to adjust the size of the nginx body buffer which is used by Kong internally. This size sets the upper limit on the amount of HTTP body bytes that can be mirrored by the plugin. By default, this value is 8192 bytes (8 KB). To change it, another argument can be passed to the docker - for example, setting it to 128 KB:
     
     ```
-    \-e "KONG\_NGINX\_HTTP\_CLIENT\_BODY\_BUFFER\_SIZE=128k"
+    \-e "KONG_NGINX_HTTP_CLIENT_BODY_BUFFER_SIZE=128k"
     ```
     
     See [https://nginx.org/en/docs/syntax.html](http://%20https://nginx.org/en/docs/syntax.html) for information on the allowed values of this variable.
@@ -23038,7 +22518,7 @@ Example 127. Kong as docker container
 2.  To verify that the plugin is installed, query Kong’s Admin API using the following command:
     
     ```
-    curl admin-api-hostname:8001 | jq .configuration.loaded\_plugins.'"panw-apisec-http-log"'
+    curl admin-api-hostname:8001 | jq .configuration.loaded_plugins.'"panw-apisec-http-log"'
     ```
     
     This prints **true** to the terminal if the plugin is loaded into the Kong instance.
@@ -23077,7 +22557,7 @@ Add and configure the plugin.
     | Tags | An optional set of strings for grouping and filtering, \*\*Note:\*\* Use commas to separate tags. | Empty |
     | Keepalive | An optional value in milliseconds that defines how long an idle connection will live before being closed. | 60000 (60 seconds) |
     | Timeout | An optional timeout in milliseconds when sending data to Cortex. | 10000 (10 seconds) |
-    | Max body size | The maximum body size to mirror in bytes (for example: 1024 is 1KB). Any bytes beyond this size are omitted from the request and response bodies. Must be <= 4 MB and <= the value of Kong's nginx\_http\_client\_body\_buffer\_size setting. | 131072 (128 KB), or the nginx body buffer size if it’s smaller. |
+    | Max body size | The maximum body size to mirror in bytes (for example: 1024 is 1KB). Any bytes beyond this size are omitted from the request and response bodies. Must be <= 4 MB and <= the value of Kong's nginx_http_client_body_buffer_size setting. | 131072 (128 KB), or the nginx body buffer size if it’s smaller. |
     | Queue Concurrency Limit | The number of queue delivery timers. -1 indicates unlimited. | 1 |
     | Queue.Initial Retry Delay | Time in seconds before the initial retry is made for a failing batch. | 0.01 (10 milliseconds) |
     | Queue.Max Batch Size | Maximum number of entries that can be processed at a time. | 1 |
@@ -23140,7 +22620,7 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
     
     **LX Workspaces**:
     
-    -   Click Import. In the General Properties page, enter a Name and for Source, select apisec\_bigip\_plugin\_tar.gz .
+    -   Click Import. In the General Properties page, enter a Name and for Source, select apisec_bigip_plugin_tar.gz .
         
         **Note:**
         
@@ -23148,9 +22628,9 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
         
     -   In the General Properties page, enter:
         
-        -   Name: Enter the name panw\_apisec\_workspace.
+        -   Name: Enter the name panw_apisec_workspace.
             
-        -   Source: Select apisec\_bigip\_plugin\_tar.gz.
+        -   Source: Select apisec_bigip_plugin_tar.gz.
             
         
     -   Select Import to import the plugin.
@@ -23162,9 +22642,9 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
         
     -   In the General Properties page, enter:
         
-        -   Name: Enter panw\_apisec\_plugin.
+        -   Name: Enter panw_apisec_plugin.
             
-        -   From Workspace: Select panw\_apisec\_workspace.
+        -   From Workspace: Select panw_apisec_workspace.
             
         
     -   Click Finished.
@@ -23172,36 +22652,36 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
     
 4.  Navigate to System → File Management → Data Group File List → Import.
     
-    -   From File Name, select the panw\_apisec\_config.txt file that was extracted from the zip that was downloaded from Cortex Cloud.
+    -   From File Name, select the panw_apisec_config.txt file that was extracted from the zip that was downloaded from Cortex Cloud.
         
-    -   In the Name field, select Create New and enter panw\_apisec\_config.
+    -   In the Name field, select Create New and enter panw_apisec_config.
         
     -   From File Contents, select String.
         
-    -   For Data Group Name, enter panw\_apisec\_config.
+    -   For Data Group Name, enter panw_apisec_config.
         
     -   Click Import.
         
     
 5.  Navigate to System → File Management → Data Group File List.
     
-    -   Click panw\_apisec\_config.
+    -   Click panw_apisec_config.
         
     -   In Definition, fill in the values for the following:
         
         ```
-        "context\_account\_id" := "",
-        "context\_provider" := "",
-        "context\_region" := "",
-        "cortex\_collector\_key" := "",
-        "cortex\_collector\_url" := "",
+        "context_account_id" := "",
+        "context_provider" := "",
+        "context_region" := "",
+        "cortex_collector_key" := "",
+        "cortex_collector_url" := "",
         ```
         
         -   Paste the F5 VIG-IP LTM Collector key you copied from Cortex Cloud in the `"cortex_collector_key"`.
             
-        -   From Cortex Cloud, go to Data Sources & Integrations and from F5 BIG\_IP LTM , copy the API URL and paste it in the `"cortex_collector_url"`.
+        -   From Cortex Cloud, go to Data Sources & Integrations and from F5 BIG_IP LTM , copy the API URL and paste it in the `"cortex_collector_url"`.
             
-            [image: F5_data_source.png]
+            
             
         -   The `context_account_id`, `context_provider`, and `context_region` depend on the cloud environment. In this instance, AWS is the example:
             
@@ -23213,11 +22693,11 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
                 
             
             ```
-            "context\_account\_id" := "12345",
-            "context\_provider" := "AWS",
-            "context\_region" := "us-east-2",
-            "cortex\_collector\_key" := "collector key",
-            "cortex\_collector\_url" := "API URL",
+            "context_account_id" := "12345",
+            "context_provider" := "AWS",
+            "context_region" := "us-east-2",
+            "cortex_collector_key" := "collector key",
+            "cortex_collector_url" := "API URL",
             ```
             
         -   Click Update.
@@ -23230,11 +22710,11 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
         
     -   In the Resources tab, under iRules, click Manage.
         
-    -   From the Available list, navigate to /Common/panw\_apisec\_plugin and select panw\_apisec\_data\_collection and panw\_apisec\_set\_ssl\_data , and then click the left arrow button to move them to the Enabled list.
+    -   From the Available list, navigate to /Common/panw_apisec_plugin and select panw_apisec_data_collection and panw_apisec_set_ssl_data , and then click the left arrow button to move them to the Enabled list.
         
         **Note:**
         
-        Select panw\_apisec\_set\_ssl\_data only if your client SSL profile is enabled.
+        Select panw_apisec_set_ssl_data only if your client SSL profile is enabled.
         
     -   Click Finished.
         
@@ -23244,7 +22724,6 @@ In Cortex Cloud, set up the F5 data source to integrate with the F5 API Gateway.
 7.  Test the request/response and verify that the logs are sent to Cortex Cloud. This can be verified by checking that the counter has increased. The scanned API endpoint metadata from f5-bigip is ready for investigation in the API inventory.
 
 ### Azure Event Hub
-Abstract
 
 Learn more about the Azure Event Hub standard data source and content pack in Cortex Cloud.
 
@@ -23257,7 +22736,6 @@ You can configure collecting Azure Event Hub logs using a standard data source o
 | Link to content pack details | [Azure Logs](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftEntraID): Use this content pack to ingest and normalize various Azure logs to the Cortex Data Model (XDM) schema, including Azure Entra ID events ingested via the Office 365 data source, and Azure Logs ingested via the Microsoft Azure Event Hub data source. It includes modeling and parsing rules for log normalization. |
 
 #### Ingest logs from Microsoft Azure Event Hub
-Abstract
 
 Ingest logs from Microsoft Azure Event Hub with an option to ingest audit logs to use in Cortex Cloud authentication stories.
 
@@ -23462,7 +22940,6 @@ Configure the Azure Event Hub collection in Cortex Cloud:
         When events start to come in, a green check mark appears underneath the Azure Event Hub configuration with the amount of data received.
 
 ### BeyondTrust Privilege Management Cloud
-Abstract
 
 Learn more about collecting BeyondTrust Privilege Management Cloud logs using a standard data source in Cortex Cloud.
 
@@ -23474,7 +22951,6 @@ You can configure collecting BeyondTrust Privilege Management Cloud logs using a
 | Link to standard data source instructions | Ingest logs from BeyondTrust Privilege Management Cloud |
 
 #### Ingest logs from BeyondTrust Privilege Management Cloud
-Abstract
 
 Extend Cortex Cloud visibility into logs from BeyondTrust Privilege Management Cloud.
 
@@ -23515,7 +22991,6 @@ Configure BeyondTrust Privilege Management Cloud collection in Cortex Cloud.
 3.  After Cortex Cloud begins receiving data from BeyondTrust Privilege Management Cloud, you can use XQL Search to search your logs using the `beyondtrust_privilege_management_raw` dataset that you configured when setting up your Amazon S3 data collector.
 
 ### Box
-Abstract
 
 Learn more about the Box standard data source and content pack integrations in Cortex Cloud.
 
@@ -23524,13 +22999,10 @@ You can configure collecting Box logs and data using a standard data source or w
 | Box vendor | Description |
 | --- | --- |
 | Standard data source overview | Forward different types of data from Box enterprise accounts to Cortex Cloud using the Box data source. |
-| Link to standard data source instructions | The following types of data can be ingested from Dropbox: Events and security alerts-   Events (admin\_logs); Box Shield Alerts
-; Directory and metadata-   Users; Groups
-For more information, see Ingest logs and data from Box. |
+| Link to standard data source instructions | The following types of data can be ingested from Dropbox: Events and security alerts- Events (admin_logs); Box Shield Alerts ; Directory and metadata- Users; Groups For more information, see Ingest logs and data from Box. |
 | Links to content pack integration details | The [Box](https://cortex.marketplace.pan.dev/marketplace/details/Box) content pack contains classifiers, issue fields and types, and parsing and modeling rules to normalize Box data in Cortex Cloud. It also includes the following integrations: [Box Event Collector](https://xsoar.pan.dev/docs/reference/integrations/box-events-collector): Use this integration to collect events from Box's logs. It includes a command to get Box events.; [Box V2](https://xsoar.pan.dev/docs/reference/integrations/box-v2): Use this integration to manage Box users. It includes commands to search Box content and manage file folders and share links. |
 
 #### Ingest logs and data from Box
-Abstract
 
 Learn more about ingesting logs and data from Box enterprise accounts via the Box REST APIs.
 
@@ -23551,7 +23023,7 @@ The Fetch Intervals are non-configurable.
 | Type of data | Description | Collection method | Fetch interval | Dataset name | Normalized data |
 | --- | --- | --- | --- | --- | --- |
 | **Events and security alerts** |
-| Events (admin\_logs) | Retrieves events related to file/folder management, permission changes, access and login activities, user/groups management, folder collaboration, file/folder sharing, security settings changes, tasks, permission changes on folders, storage expiration and data retention, and workflows. | Appends data | 60 seconds | `box_admin_logs_raw` | When relevant, Cortex Cloud normalizes SaaS audit event logs into stories, which are collected in a dataset called `saas_audit_logs`. |
+| Events (admin_logs) | Retrieves events related to file/folder management, permission changes, access and login activities, user/groups management, folder collaboration, file/folder sharing, security settings changes, tasks, permission changes on folders, storage expiration and data retention, and workflows. | Appends data | 60 seconds | `box_admin_logs_raw` | When relevant, Cortex Cloud normalizes SaaS audit event logs into stories, which are collected in a dataset called `saas_audit_logs`. |
 | Box Shield Alerts | Retrieves security alerts related to suspicious locations, suspicious sessions, anomalous download, and malicious content. \*\*Note:\*\* Collecting Box Shield Alerts requires implementing [Box Shield](https://www.box.com/shield), | Appends data | 60 seconds | `box_shield_alerts_raw` | — |
 | **Directory and metadata** |
 | Users | Lists user data. | Overwrites data | 10 minutes | `box_users_raw` | — |
@@ -23601,7 +23073,7 @@ Configure Cortex Cloud to receive logs and data from Box.
             | --- | --- |
             | Manage users | Users |
             | Manage groups | Groups \*\*Note:\*\* There is a current bug with the Groups API from Box. If you don't configure the Box app with the proper permissions for managing groups data, the Groups API from Box won't return an error message to Cortex Cloud indicating that the API failed to receive the data, and the Groups data will not be collected. |
-            | Manage enterprise properties | Events (admin\_logs); Box Shield Alerts |
+            | Manage enterprise properties | Events (admin_logs); Box Shield Alerts |
             
         
         Once completed, scroll up in the tab to Save Changes.
@@ -23647,7 +23119,7 @@ Configure Cortex Cloud to receive logs and data from Box.
         
         -   Events and security alerts
             
-            -   Events (admin\_logs): Collects events related to file/folder management, permission changes, access and login activities, user/groups management, folder collaboration, file/folder sharing, security settings changes, tasks, permission changes on folders, storage expiration and data retention, and workflows.
+            -   Events (admin_logs): Collects events related to file/folder management, permission changes, access and login activities, user/groups management, folder collaboration, file/folder sharing, security settings changes, tasks, permission changes on folders, storage expiration and data retention, and workflows.
                 
             -   Box Shield Alerts: Collects security alerts related to suspicious locations, suspicious sessions, anomalous download, and malicious content.
                 
@@ -23672,7 +23144,6 @@ Configure Cortex Cloud to receive logs and data from Box.
     When events start to come in, a green check mark appears underneath the Box configuration.
 
 ### Check Point FW1/VPN1
-Abstract
 
 Learn more about collecting Check Point FW1/VPN1 logs using a Syslog Collector applet and content pack integration in Cortex Cloud.
 
@@ -23685,7 +23156,6 @@ You can configure collecting Check Point FW1/VPN1 logs using a Broker VM Syslog 
 | Link to content pack/integration details | The [Check Point Firewall](https://cortex.marketplace.pan.dev/marketplace/details/CheckpointFirewall/) content pack manages Check Point firewall devices via API, allowing the reading information, sending commands, and orchestrating configuration and blocking actions. It contains a modeling rule (**`CheckPoint Firewall Collection`**) and several playbooks (for example Checkpoint - Block IP - Append Group, Checkpoint - Publish&Install configuration, Checkpoint - Block IP - Custom Block Rule, and Checkpoint - Block URL). It also includes the following integration: [CheckPoint Firewall v2](https://xsoar.pan.dev/docs/reference/integrations/check-point-firewall-v2): Use this integration to read information and send commands to the Check Point Firewall server. It includes commands for handling threat protection and profiles, such as **`checkpoint-set-threat-protection`** and **`checkpoint-add-threat-profile`**. |
 
 ### Cisco ASA firewalls and AnyConnect
-Abstract
 
 Learn more about collecting Cisco ASA firewall and AnyConnect VPN logs using a Syslog Collector applet and content pack integration in Cortex Cloud.
 
@@ -23698,7 +23168,6 @@ You can configure collecting Cisco ASA firewall and AnyConnect VPN logs using a 
 | Link to content pack/integration instructions | The [Cisco ASA](https://cortex.marketplace.pan.dev/marketplace/details/CiscoASA/) content pack interacts with the Cisco Adaptive Security Appliance Software via an API to manage interfaces, rules, and network objects. The content pack includes the following integration: [Cisco Adaptive Security Appliance Software](https://xsoar.pan.dev/docs/reference/integrations/cisco-asa): Use this integration to manage interfaces, rules, and network objects on the Cisco Adaptive Security Appliance Software platform. This integration includes commands for listing and managing network object groups, local user groups, local users, time ranges, security object groups, user objects, interface information, configuration backup, and creating, listing, getting, editing, and deleting firewall rules, along with the command to save the running configuration to memory (**`cisco-asa-write-memory`**). |
 
 ### Corelight Zeek
-Abstract
 
 Learn more about collecting Corelight Zeek logs using a Syslog Collector applet and content pack integration in Cortex Cloud.
 
@@ -23711,7 +23180,6 @@ You can configure collecting Corelight Zeek logs using a Broker VM Syslog Collec
 | Link to content pack/integration details | The [Corelight Zeek](https://cortex.marketplace.pan.dev/marketplace/details/CorelightZeek) content pack provides data normalization capabilities through rules for parsing and modeling network protocol logs that are ingested via a Syslog collector on the Broker VM into Cortex Cloud. It includes **`Corelight Zeek Modeling Rules`** and **`Corelight Zeek Parsing Rules`**. |
 
 ### Cribl
-Abstract
 
 Learn more about collecting Cribl logs using a standard data source in Cortex Cloud.
 
@@ -23723,7 +23191,6 @@ You can configure collecting Cribl data using a standard data source:
 | Link to standard data source instructions | Ingest data from Cribl Configuring this data source includes this topic: Data source UUIDs |
 
 #### Ingest data from Cribl
-Abstract
 
 Ingest third-party data collected by Cribl.
 
@@ -23811,8 +23278,7 @@ For general information about configuring destinations, refer to  [Cribl docume
 | Cortex Cloud URL | XSIAM Endpoint field | Paste the API URL obtained from Cortex Cloud. |
 | Authorization token | Authorization Token field | Paste the authorization token obtained from Cortex Cloud. |
 | Advanced Settings | Compress toggle | Ensure that Compress is disabled. |
-| HTTP headers | Extra HTTP headers | Add extra HTTP headers for each data source: Source-identifier: Search the table supplied in this topic for the vendor and product. The data source UUIDs table lists the data sources that can be identified by Cortex Cloud, using their corresponding UUIDs. These UUIDs are required to map data collected by Cribl to the Cortex Cloud destination.-   If you find the desired vendor and product, copy the corresponding UUID from the table and paste here. This UUID will allow Cortex Cloud to leverage all the data ingested from the data source, such as identifiers, pipeline sources such as IP addresses, devices, and so on. Data from sources known to Cortex Cloud are saved in the appropriate datasets–the same datasets as those used by dedicated data collectors in Cortex Cloud. **Note:** Do not use the generic UUID for a data source that is known to Cortex Cloud and appears in the table. \*\*Note:\*\* When the logs are in CEF format, Cortex Cloud reads events row by row to look for the Vendor and Product configured in the logs. When the values are populated in the event log row, Cortex Cloud uses these values even if you specified a value in the Vendor and Product fields in the Cribl collector settings. However, when the values are blank in the event log row, Cortex Cloud uses the Vendor and Product that you specified in the Cribl collector settings. If you did not specify a Vendor or Product in the Cribl collector settings, and the values are blank in the event log row, the values for both fields are set to unknown. ; If you can't find the desired vendor and product source in the table, copy the generic UUID provided in the first row of the table, and paste here. Data from sources that are not specifically mentioned will be saved in a separate searchable dataset. The dataset name will be reflect the vendor and product names that you enter next in the following format: `vendor_product_raw`. If the vendor-product you are connecting has a content pack in the Marketplace (with matching parsing/modeling rules) use the same vendor-product definition in order to apply these rules on it.
-; Format: json; Vendor: When using the UUID for unknown data sources, you must enter the vendor name.; Product: When using the UUID for unknown data sources, you must enter the product name. |
+| HTTP headers | Extra HTTP headers | Add extra HTTP headers for each data source: Source-identifier: Search the table supplied in this topic for the vendor and product. The data source UUIDs table lists the data sources that can be identified by Cortex Cloud, using their corresponding UUIDs. These UUIDs are required to map data collected by Cribl to the Cortex Cloud destination.- If you find the desired vendor and product, copy the corresponding UUID from the table and paste here. This UUID will allow Cortex Cloud to leverage all the data ingested from the data source, such as identifiers, pipeline sources such as IP addresses, devices, and so on. Data from sources known to Cortex Cloud are saved in the appropriate datasets–the same datasets as those used by dedicated data collectors in Cortex Cloud. **Note:** Do not use the generic UUID for a data source that is known to Cortex Cloud and appears in the table. \*\*Note:\*\* When the logs are in CEF format, Cortex Cloud reads events row by row to look for the Vendor and Product configured in the logs. When the values are populated in the event log row, Cortex Cloud uses these values even if you specified a value in the Vendor and Product fields in the Cribl collector settings. However, when the values are blank in the event log row, Cortex Cloud uses the Vendor and Product that you specified in the Cribl collector settings. If you did not specify a Vendor or Product in the Cribl collector settings, and the values are blank in the event log row, the values for both fields are set to unknown. ; If you can't find the desired vendor and product source in the table, copy the generic UUID provided in the first row of the table, and paste here. Data from sources that are not specifically mentioned will be saved in a separate searchable dataset. The dataset name will be reflect the vendor and product names that you enter next in the following format: `vendor_product_raw`. If the vendor-product you are connecting has a content pack in the Marketplace (with matching parsing/modeling rules) use the same vendor-product definition in order to apply these rules on it. ; Format: json; Vendor: When using the UUID for unknown data sources, you must enter the vendor name.; Product: When using the UUID for unknown data sources, you must enter the product name. |
 | Mapping | Passthru option | Map the data source(s) that you created in Task 1 to the XSIAM data destination created in this task. Ensure that you select the Passthru option. |
 | Deployment | Commit & Deploy Deploy | When mapping is complete, click Commit & Deploy, and then click Deploy. |
 
@@ -23848,7 +23314,6 @@ Use the Disable and Delete options with extreme caution.
 2.  In the Are you sure? dialog box, type `delete`, and then click Delete.
 
 ##### Data source UUIDs
-Abstract
 
 Data source UUIDs
 
@@ -23924,7 +23389,6 @@ Data source UUIDs
 | Workday | Workday | 00d4e740702d4eb2939a87c2318513dd |
 
 ### Databricks
-Abstract
 
 Learn more about the Databricks data source in Cortex Cloud.
 
@@ -23936,7 +23400,6 @@ You can configure collecting Databricks logs using a Cloud Posture and Runtime S
 | Link to Cloud Posture and Runtime Security data source instructions | How to onboard Databricks |
 
 #### How to onboard Databricks
-Abstract
 
 How to get started with the third-party Databricks data source.
 
@@ -24053,7 +23516,6 @@ At the end of the onboarding process, a pending request for Databricks approval 
 For more information, see Egress configurations.Egress configurations
 
 ### Dropbox
-Abstract
 
 Learn more about the Dropbox standard data source and content pack integrations in Cortex Cloud.
 
@@ -24062,13 +23524,10 @@ You can configure collecting Dropbox logs and data using a standard data source 
 | Dropbox vendor | Description |
 | --- | --- |
 | Standard data source overview | Forward different types of data from Dropbox Business accounts to Cortex Cloud using the Dropbox data source. |
-| Link to standard data source instructions | The following types of data can be ingested from Dropbox: Log collection-   Events
-; Directory and metadata-   Member Devices; Users; Groups
-For more information, see Ingest logs and data from Dropbox. |
+| Link to standard data source instructions | The following types of data can be ingested from Dropbox: Log collection- Events ; Directory and metadata- Member Devices; Users; Groups For more information, see Ingest logs and data from Dropbox. |
 | Links to content pack/ integration details | The [Dropbox](https://cortex.marketplace.pan.dev/marketplace/details/Dropbox/) content pack fetches and collects security events from Dropbox logs. It includes Correlation Rules, Modeling Rules, Parsing Rules, a Playbook, and a Cortex Cloud Dashboard. It also includes the following integration: [Dropbox Event Collector](https://xsoar.pan.dev/docs/reference/integrations/dropbox-events-collector): Use this integration to collect events from Dropbox logs. It contains commands such as **`dropbox-auth-start`** to initiate the authorization process, **`dropbox-auth-complete`** to finish authorization, **`dropbox-auth-test`** to check connectivity, **`dropbox-auth-reset`** to reset authentication, and **`dropbox-get-events`** to retrieve events. |
 
 #### Ingest logs and data from Dropbox
-Abstract
 
 Ingest logs and data from Dropbox Business accounts via the Dropbox Business API.
 
@@ -24089,10 +23548,10 @@ The Fetch Interval is non-configurable.
 | Type of data | Description | Collection method | Fetch interval | Dataset name | Normalized data |
 | --- | --- | --- | --- | --- | --- |
 | **Log collection** |
-| Events | Retrieves team events, including access events, administrative events, file/folders events, security settings events, and more. [team\_log/get\_events](https://www.dropbox.com/developers/documentation/http/teams#team_log-get_events) | Appends data | 60 seconds | `dropbox_events_raw` | When relevant, Cortex Cloud normalizes SaaS audit event logs into stories, which are collected in a dataset called `saas_audit_logs`. |
+| Events | Retrieves team events, including access events, administrative events, file/folders events, security settings events, and more. [team_log/get_events](https://www.dropbox.com/developers/documentation/http/teams#team_log-get_events) | Appends data | 60 seconds | `dropbox_events_raw` | When relevant, Cortex Cloud normalizes SaaS audit event logs into stories, which are collected in a dataset called `saas_audit_logs`. |
 | **Directory and metadata** |
-| Member Devices | Lists all device sessions of a team. [team/devices/list\_members\_devices](https://www.dropbox.com/developers/documentation/http/teams#team-devices-list_members_devices) | Overwrites data | 10 minutes | `dropbox_members_devices_raw` | — |
-| Users | Lists members of a group. [team/members/list\_v2](https://www.dropbox.com/developers/documentation/http/teams#team-members-list) | Overwrites data | 10 minutes | `dropbox_users_raw` | — |
+| Member Devices | Lists all device sessions of a team. [team/devices/list_members_devices](https://www.dropbox.com/developers/documentation/http/teams#team-devices-list_members_devices) | Overwrites data | 10 minutes | `dropbox_members_devices_raw` | — |
+| Users | Lists members of a group. [team/members/list_v2](https://www.dropbox.com/developers/documentation/http/teams#team-members-list) | Overwrites data | 10 minutes | `dropbox_users_raw` | — |
 | Groups | Lists groups on a team. [team/groups/list](https://www.dropbox.com/developers/documentation/http/teams#team-groups-list) | Overwrites data | 10 minutes | `dropbox_groups_raw` | — |
 
 **Prerequisite:**
@@ -24119,8 +23578,8 @@ Configure Cortex Cloud to receive logs and data from Dropbox.
     
     | Section heading | Permission | Data to collect |
     | --- | --- | --- |
-    | Account Info | account\_info.read | All types of data |
-    | Team Data | team\_data.member | All types of data |
+    | Account Info | account_info.read | All types of data |
+    | Team Data | team_data.member | All types of data |
     | Members | members.read | Users |
     | groups.read | Groups |
     | Sessions | sessions.list | Member Devices |
@@ -24163,7 +23622,7 @@ Configure Cortex Cloud to receive logs and data from Dropbox.
         
         -   Log collection
             
-            -   Events (get\_events}: Retrieves team events, including access events, administrative events, file/folders events, security settings events and more.
+            -   Events (get_events}: Retrieves team events, including access events, administrative events, file/folders events, security settings events and more.
                 
             
             **Note:**
@@ -24192,7 +23651,6 @@ Configure Cortex Cloud to receive logs and data from Dropbox.
      After events start to come in, a green check mark appears underneath the Dropbox configuration.
 
 ### Elasticsearch Filebeat
-Abstract
 
 Learn more about the Elasticsearch Filebeat custom collector (standard data source) in Cortex Cloud.
 
@@ -24208,7 +23666,6 @@ You can ingest logs related to file activity on your endpoints and servers witho
 | Link to custom - Filebeat based Collector (standard data source) instructions | Ingest logs from Elasticsearch Filebeat |
 
 #### Ingest logs from Elasticsearch Filebeat
-Abstract
 
 Cortex Cloud can ingest logs from Elasticsearch Filebeat, a file system logger that logs file activity on your endpoints and servers.
 
@@ -24218,15 +23675,13 @@ Requires the Data Collection add-on.
 
 If you want to ingest logs about file activity on your endpoints and servers and do not use the Cortex XDR agent, you can install Elasticsearch Filebeat as a system logger and then forward those logs to Cortex Cloud. To facilitate log ingestion, Cortex Cloud supports the same protocols that Filebeat and Elasticsearch use to communicate. Cortex Cloud supports using Filebeat up to version 8.2 with the Filebeat data collector. Cortex Cloud also supports logs in single line format or multiline format. For more information on handling messages that span multiple lines of text in Elasticsearch Filebeat, see [Manage Multiline Messages](https://www.elastic.co/guide/en/beats/filebeat/current/multiline-examples.html).
 
-Cortex Cloud supports all sections in the `filebeat.yml` configuration file, such as support for Filebeat fields and tags. As a result, this enables you to use the [add\_fields](https://www.elastic.co/guide/en/beats/filebeat/current/add-fields.html) processor to identify the product/vendor for the data collected by Filebeat so the collected events go through the ingestion flow (Parsing Rules). To configure the product/vendor ensure that you use the default `fields` attribute, as opposed to the `target` attribute, as shown in the following example.
+Cortex Cloud supports all sections in the `filebeat.yml` configuration file, such as support for Filebeat fields and tags. As a result, this enables you to use the [add_fields](https://www.elastic.co/guide/en/beats/filebeat/current/add-fields.html) processor to identify the product/vendor for the data collected by Filebeat so the collected events go through the ingestion flow (Parsing Rules). To configure the product/vendor ensure that you use the default `fields` attribute, as opposed to the `target` attribute, as shown in the following example.
 
-```
 processors:
-  - add\_fields:
+  - add_fields:
       fields:
         vendor: <Vendor>
         product: <Product>
-```
 
 To provide additional context during investigations, Cortex Cloud automatically creates a new Cortex Query Language (XQL) dataset from your Filebeat logs. You can then use the XQL dataset to search across the logs Cortex Cloud received from Filebeat.
 
@@ -24254,7 +23709,7 @@ To receive logs, you configure collection settings for Filebeat in Cortex Cloud 
     
     1.  Under the output.elasticsearch section, configure the following entities:
         
-        [image: filebeat-setup.png]
+        
         
         -   `hosts`: Copy the API URL from your Filebeat configuration and paste it in this field.
             
@@ -24283,7 +23738,6 @@ To receive logs, you configure collection settings for Filebeat in Cortex Cloud 
     -   A Filebeat module has stopped sending logs.
 
 ### Forcepoint DLP
-Abstract
 
 Learn more about collecting Forcepoint DLP logs using a Syslog Collector applet and content pack integration in Cortex Cloud.
 
@@ -24296,7 +23750,6 @@ You can configure collecting Corelight Zeek logs using a Broker VM Syslog Collec
 | Link to content pack/integration details | The [Forcepoint DLP](https://cortex.marketplace.pan.dev/marketplace/details/ForcepointDLP) content pack fetches security incidents from Forcepoint DLP and ingests them as events into Cortex Cloud for processing and analysis. contains the **`Forcepoint DLP Modeling Rule`**, and the **`Forcepoint DLP Parsing Rule`**. It also includes the following integration: [Forcepoint DLP Event Collector (Beta)](https://xsoar.pan.dev/docs/reference/integrations/forcepoint-dlp-event-collector): Use this integration to fetch security incidents from Forcepoint DLP as Cortex Cloud events. This integration is an event collector and utilizes parsing and modeling rules within the content pack for data normalization. |
 
 ### Fortinet Fortigate
-Abstract
 
 Learn more about collecting Fortinet Fortigate firewalls logs using a Syslog Collector applet and content pack integration in Cortex Cloud.
 
@@ -24306,11 +23759,9 @@ You can configure collecting Fortinet Fortigate firewall logs using a Broker VM 
 | --- | --- |
 | Syslog Collector applet overview | If you use Fortinet Fortigate firewalls, you can forward network connection logs to Cortex Cloud using the Broker VM Syslog Collector applet in a CEF format. |
 | Link to Syslog Collector applet instructions | Ingest logs from Fortinet Fortigate firewalls |
-| Links to content pack/integration details | The [FortiManager](https://cortex.marketplace.pan.dev/marketplace/details/FortiManager) content pack enables managing Fortinet devices through a single console central management system and provides data normalization for FortiManager event logs ingested via Syslog into Cortex Cloud. It contains the **`Fortinet FortiManager Modeling Rule`**, the **`Fortinet FortiManager Parsing Rule`**, and the FortiManager - Install Policy Package on Device playbook. It also includes the following integration:-   [FortiManager](https://xsoar.pan.dev/docs/reference/integrations/forti-manager): Use this integration to manage Fortinet devices as a single console central management system. This integration enables executing the FortiManager - Install Policy Package on Device playbook, which installs a FortiManager firewall policy package on a given device.
-; The [FortiGate](https://cortex.marketplace.pan.dev/marketplace/details/FortiGate) content pack manages FortiGate firewalls, delivering convergence and deep security visibility across diverse network environments, and facilitating data normalization for ingested event logs. It contains the **`Fortinet FortiGate Modeling Rule`**, and the **`FortiGate Parsing Rule`**. It also includes the following integration:-   [FortiGate](https://xsoar.pan.dev/docs/reference/integrations/forti-gate): Use this integration to manage Fortinet FortiGate firewall devices, leveraging the Fortinet FortiOS operating system to provide deep visibility and consistent security across environments like remote offices, campuses, and data centers. It includes commands for listing, creating, updating, moving, and deleting firewall policies, addresses (IPv4 and IPv6, including multicasts), and service groups, alongside functionalities like banning and unbanning IPs. |
+| Links to content pack/integration details | The [FortiManager](https://cortex.marketplace.pan.dev/marketplace/details/FortiManager) content pack enables managing Fortinet devices through a single console central management system and provides data normalization for FortiManager event logs ingested via Syslog into Cortex Cloud. It contains the **`Fortinet FortiManager Modeling Rule`**, the **`Fortinet FortiManager Parsing Rule`**, and the FortiManager - Install Policy Package on Device playbook. It also includes the following integration:- [FortiManager](https://xsoar.pan.dev/docs/reference/integrations/forti-manager): Use this integration to manage Fortinet devices as a single console central management system. This integration enables executing the FortiManager - Install Policy Package on Device playbook, which installs a FortiManager firewall policy package on a given device. ; The [FortiGate](https://cortex.marketplace.pan.dev/marketplace/details/FortiGate) content pack manages FortiGate firewalls, delivering convergence and deep security visibility across diverse network environments, and facilitating data normalization for ingested event logs. It contains the **`Fortinet FortiGate Modeling Rule`**, and the **`FortiGate Parsing Rule`**. It also includes the following integration:- [FortiGate](https://xsoar.pan.dev/docs/reference/integrations/forti-gate): Use this integration to manage Fortinet FortiGate firewall devices, leveraging the Fortinet FortiOS operating system to provide deep visibility and consistent security across environments like remote offices, campuses, and data centers. It includes commands for listing, creating, updating, moving, and deleting firewall policies, addresses (IPv4 and IPv6, including multicasts), and service groups, alongside functionalities like banning and unbanning IPs. |
 
 ### Google Cloud Platform
-Abstract
 
 Learn more about the Google Cloud Platform standard data source and content pack integrations in Cortex Cloud.
 
@@ -24325,7 +23776,6 @@ You can configure collecting Google Cloud Platform (GCP) logs using a standard d
 | Links to content pack/ integration details | The [Google Cloud Pub / Sub](https://cortex.marketplace.pan.dev/marketplace/details/GooglePubSub) content pack integrates with the Google Cloud Pub / Sub messaging service to enable you to send and receive messages between independent applications. It contains the following integration: [Google Cloud Pub/Sub](https://xsoar.pan.dev/docs/reference/integrations/google-pub-sub): Use this integration to enable automated security operations and issue response through a series of dedicated commands that manage messaging topics, subscriptions, and message flow. For example, there are commands for listing, creating, updating, and deleting topics and subscriptions, publishing messages, and manually pulling or seeking messages for processing. This integration requires specific elevated permissions such as Project-Owner or Pub/Sub Admin, |
 
 #### Ingest logs and data from a GCP Pub/Sub
-Abstract
 
 If you use the Pub/Sub messaging service from Global Cloud Platform (GCP), you can send logs and data from GCP to Cortex Cloud.
 
@@ -24586,7 +24036,7 @@ After you set up log collection, Cortex Cloud immediately begins receiving new l
 
 1.  Launch the GCP cloud shell terminal or use your preferred shell with gcloud installed.
     
-    [image: gcp-cli.png]
+    
     
 2.  Define your project ID.
     
@@ -24615,7 +24065,7 @@ After you set up log collection, Cortex Cloud immediately begins receiving new l
     If setup is successful, the console displays a summary of your log sink settings:
     
     ```
-    Created \[https://logging.googleapis.com/v2/projects/PROJECT\_ID/sinks/SINK\_NAME\]. Please remember to grant \`serviceAccount:LOGS\_SINK\_SERVICE\_ACCOUNT\` \\ the Pub/Sub Publisher role on the topic. More information about sinks can be found at /logging/docs/export/configure\_export
+    Created [https://logging.googleapis.com/v2/projects/PROJECT_ID/sinks/SINK_NAME]. Please remember to grant \`serviceAccount:LOGS_SINK_SERVICE_ACCOUNT\` \\ the Pub/Sub Publisher role on the topic. More information about sinks can be found at /logging/docs/export/configure_export
     ```
     
 6.  Grant log sink service account to publish to the new topic.
@@ -24643,7 +24093,6 @@ After you set up log collection, Cortex Cloud immediately begins receiving new l
 10.  After Cortex Cloud begins receiving information from the GCP Pub/Sub service, you can use the XQL Query language to search for specific data.
 
 ### Google Workspace
-Abstract
 
 Learn more about the Google Workspace Standard Collector and content pack integrations in Cortex Cloud.
 
@@ -24656,7 +24105,6 @@ You can configure collecting Google Workspace logs and data using a Standard Col
 | Links to content pack/ integration details | The [G Suite Admin](https://cortex.marketplace.pan.dev/marketplace/details/GSuiteAdmin) content pack integrates with Cortex Cloud to handle various administrative tasks for G Suite or Google Workspace Admin environments. It contains the following integration: [Google Workspace Admin](https://xsoar.pan.dev/docs/reference/integrations/g-suite-admin): Use this integration to perform actions on IT infrastructure, create users, update settings, and manage other administrative duties. It includes commands for user management, device management (Chrome browser devices), policy management, and data transfer. |
 
 #### Ingest logs and data from Google Workspace
-Abstract
 
 Ingest logs and data from Google Workspace for use in Cortex Cloud.
 
@@ -25060,7 +24508,6 @@ For the different types of data you can collect using the Google Workspace data 
 | Emails | `google_gmail_raw` | Google | Gmail | — |
 
 ### Google Kubernetes Engine
-Abstract
 
 Learn more about collecting Google Kubernetes Engine logs and data using a custom collector (standard data source) and content pack integration in Cortex Cloud.
 
@@ -25077,7 +24524,6 @@ You can configure collecting Google Kubernetes logs and data using a Custom - Fi
 | Links to content pack/integration instructions | The [Google Kubernetes Engine](https://cortex.marketplace.pan.dev/marketplace/details/GoogleKubernetesEngine/) content pack builds and manages container-based applications in Google Cloud Platform (GCP), powered by the open source Kubernetes technology. It contains the Google Kubernetes Engine Operations Generic Polling playbook as well as the following integration: [Google Kubernetes Engine](https://xsoar.pan.dev/docs/reference/integrations/google-kubernetes-engine): Use this integration to build and manage container-based applications in Google Cloud Platform (GCP), utilizing the open source Kubernetes technology. This integration is used by the Google Kubernetes Engine Operations Generic Polling playbook, which checks operation status and facilitates the waiting between steps in cluster configuration. |
 
 #### Ingest logs from Google Kubernetes Engine
-Abstract
 
 Forward your Google Kubernetes Engine (GKE) logs directly to Cortex Cloud using Elasticsearch Filebeat.
 
@@ -25111,11 +24557,11 @@ After Cortex Cloud creates the dataset, you can search your GKE logs using XQL S
         
     3.  Remove the `cloud.id` and `cloud.auth` lines.
         
-        [image: gke-filebeat-cloud.id-remove.png]
+        
         
     4.  For the `output.elasticsearch` configuration, replace the `hosts`, `username`, and `password` with environment variable references for `hosts` and `api_key`, and add a field and value for `compression_level` and `bulk_max_size`.
         
-        [image: filebeat-elasticsearch-env-vars.png]
+        
         
     5.  In the `DaemonSet` configuration, locate the `env` configuration and replace `ELASTIC_CLOUD_AUTH`, `ELASTIC_CLOUD_ID`, `ELASTICSEARCH_USERNAME`, `ELASTICSEARCH_PASSWORD`, `ELASTICSEARCH_HOST`, `ELASTICSEARCH_PORT` and their relative values with the following.
         
@@ -25126,7 +24572,7 @@ After Cortex Cloud creates the dataset, you can search your GKE logs using XQL S
         
         After you configure these settings your configuration should look like the following image.
         
-        [image: gke-filebeat-env-config.png]
+        
         
     6.  Save your changes.
         
@@ -25149,7 +24595,6 @@ After Cortex Cloud creates the dataset, you can search your GKE logs using XQL S
 6.  After Cortex Cloud begins receiving logs from GKE, you can use the XQL Search to search for logs in the new dataset.
 
 ### HTTP log collector
-Abstract
 
 Learn more about the HTTP log custom collector (standard data source) in Cortex Cloud.
 
@@ -25161,7 +24606,6 @@ You can configure collecting any vendor logs over HTTP with a Custom - HTTP base
 | Link to standard data source instructions | Set up an HTTP log collector to receive logs |
 
 #### Set up an HTTP log collector to receive logs
-Abstract
 
 You can set up Cortex Cloud to receive logs from third-party sources, and automatically parse and process these logs.
 
@@ -25203,7 +24647,7 @@ To set up an HTTP log collector to receive logs from an external source.
         
     8.  Save & Generate Token.
         
-        Click the copy icon next to the key and record it somewhere safe. You will need to provide this key when you configure your HTTP POST request and define the api\_key. If you forget to record the key and close the window you will need to generate a new key and repeat this process.
+        Click the copy icon next to the key and record it somewhere safe. You will need to provide this key when you configure your HTTP POST request and define the api_key. If you forget to record the key and close the window you will need to generate a new key and repeat this process.
         
         Click Done when finished.
         
@@ -25211,27 +24655,27 @@ To set up an HTTP log collector to receive logs from an external source.
     
     1.  Send an HTTP POST request to the URL for your HTTP Log Collector.
         
-        You can view a sample curl or python request on an HTTP collector instance by selecting [image: table-settings.png]View Example.
+        You can view a sample curl or python request on an HTTP collector instance by selecting View Example.
         
         Here is a CURL example:
         
         ```
-        curl -X POST https://api-{tenant external URL}/logs/v1/event -H 'Authorization: {api\_key}' -H 'Content-Type: text/plain' -d '{"example1": "test", "timestamp": 1609100113039}
-        {"example2": \[12321,546456,45687,1\]}'
+        curl -X POST https://api-{tenant external URL}/logs/v1/event -H 'Authorization: {api_key}' -H 'Content-Type: text/plain' -d '{"example1": "test", "timestamp": 1609100113039}
+        {"example2": [12321,546456,45687,1]}'
         ```
         
         Python 3 example:
         
         ```
         import requests
-        def test\_http\_collector(api\_key):
+        def test_http_collector(api_key):
             headers = {
-                "Authorization": api\_key,
+                "Authorization": api_key,
                 "Content-Type": "text/plain"
             }
             # Note: the logs must be separated by a new line
             body = "{'example1': 'test', 'timestamp': 1609100113039}" \\
-                   "{'example2': \[12321,546456,45687,1\]}"
+                   "{'example2': [12321,546456,45687,1]}"
             res = requests.post(url="https://api-{tenant external URL}/logs/v1/event",
                                 headers=headers,
                                 data=body)
@@ -25259,22 +24703,11 @@ To set up an HTTP log collector to receive logs from an external source.
         
         | Success/failure response code | Description | Output code displayed (if applicable) |
         | --- | --- | --- |
-        | 200 | Success code that indicates there are no errors and the request was successful. | 
-        ```
-        { "error": "false"}
-        ```
-        
-         |
+        | 200 | Success code that indicates there are no errors and the request was successful. | { "error": "false"} |
         | 401 | Unauthorized error code that indicates either an incorrect authorization token is being used or that the HTTP Collector is deleted/disabled. |  |
         | 404 | Error code 404 page not found that indicates a wrong URL. |  |
         | 413 | Error code indicating the payload is too large as the request size limit is 10 MB. |  |
-        | 500 | Error code indicating the request was not able to be processed due to an incorrect log format between the request and the HTTP collector configuration. | 
-        
-        ```
-        { "error": "error processing request, error: failed to process the request"}
-        ```
-        
-         |
+        | 500 | Error code indicating the request was not able to be processed due to an incorrect log format between the request and the HTTP collector configuration. | { "error": "error processing request, error: failed to process the request"} |
         | 429 | Error code indicating too many requests as the rate limit is 400 requests per second per customer per endpoint. |  |
         
 3.  Monitor your HTTP Log Collection integration.
@@ -25284,7 +24717,6 @@ To set up an HTTP log collector to receive logs from an external source.
 4.  After Cortex Cloud begins receiving logs, use the XQL Search to search your logs.
 
 ### Kubernetes
-Abstract
 
 Learn more about collecting Kubernetes data using a standard data source in Cortex Cloud.
 
@@ -25296,7 +24728,6 @@ You can configure collecting Kubernetes data using a standard data source with t
 | Link to standard data source instructions | Onboard the Kubernetes Connector Another relevant topic: What's new in Kubernetes Connector? |
 
 #### Onboard the Kubernetes Connector
-Abstract
 
 To onboard your Kubernetes cluster, choose the capabilities that fit your needs and download the Helm chart values. Install the Helm charts in your Kubernetes environment to grant Cortex Cloud permissions to collect the data.
 
@@ -25434,16 +24865,16 @@ This table shows the Kubernetes platform versions that have been compatibility t
 | --- | --- |
 | Unmanaged Kubernetes (k8s) | 1.30 |
 | Amazon Elastic Kubernetes Service (EKS) | 1.33 |
-|  | BottleRocket OS x86\_64 User mode agent only |  |
+|  | BottleRocket OS x86_64 User mode agent only |  |
 | BottleRocket OS aarch64 User mode agent only |  |
 | Microsoft Azure Kubernetes Service (AKS) | 1.33 |
-|  | CBL-mariner 2 x86\_64 |  |
+|  | CBL-mariner 2 x86_64 |  |
 | Google Kubernetes Engine (GKE) | 1.33 |
-|  | Google Container-Optimized OS (COS)\* x86\_64 User mode agent only |  |
+|  | Google Container-Optimized OS (COS)\* x86_64 User mode agent only |  |
 | Google Kubernetes Engine (GKE) Autopilot |  |
 | Oracle Kubernetes Engine (OKE) | 1.33 |
 | Red Hat Openshift Container Platform (OCP) | 4.16 |
-|  | RHCOS\* x86\_64 User mode agent only |  |
+|  | RHCOS\* x86_64 User mode agent only |  |
 | SUSE Rancher Kubernetes Engine 2 (RKE2) | 1.28 |
 | Talos | 1.8.3 |
 
@@ -25454,7 +24885,6 @@ In Google Container-Optimized OS release 100 and earlier, where the FANOTIFY EXE
 In RHCOS version 4.12 and earlier, the Kernel configuration may be partial for the user mode agent to properly function. In such cases, the agent will fallback to asynchronous mode.
 
 ### Microsoft Azure
-Abstract
 
 Learn more about collecting Microsoft Azure data using a Cloud Service Provider (CSP) onboarding data source in Cortex Cloud.
 
@@ -25466,7 +24896,6 @@ Follow a wizard to onboard your Microsoft Azure environment. The Azure onboardin
 | Link to basic configuration Cloud Service Provider (CSP) onboarding data source instructions for Cortex Cloud NG SIEM, Cortex Cloud Enterprise license, and Cortex Cloud Enterprise+ licenses. | Onboard Microsoft Azure with basic configuration |
 
 ### Microsoft Office 365
-Abstract
 
 Learn more about the Microsoft Office 365 Standard Collector and content pack integrations in Cortex Cloud.
 
@@ -25475,18 +24904,10 @@ You can configure collecting Microsoft Office 365 logs and data using a Standard
 | Google Workspace vendor | Description |
 | --- | --- |
 | Standard Collector overview | Forward logs and data to Cortex Cloud from Microsoft Office 365 Management Activity API and Microsoft Graph API using the Office 365 data source. |
-| Link to Standard Collector instructions | The following types of logs and data can be ingested from Microsoft Office 365 Management Activity API and Microsoft Graph API: Microsoft Office 365 audit events from Management Activity API-   Microsoft Entra ID (Azure AD); Exchange Online; SharePoint Online; DLP; General
-; Microsoft Entra ID (Azure AD) authentication and audit events from Microsoft Graph API; Microsoft 365 alerts from Microsoft Graph Security API are available for different products:-   Microsoft Graph Security API v1; Microsoft Graph Security API v2
-For more information, see Ingest logs from Microsoft Office 365. |
-| Links to content pack/integration details | The [Microsoft Defender for Cloud](https://cortex.marketplace.pan.dev/marketplace/details/AzureSecurityCenter) content pack provides unified security management and advanced threat protection across hybrid cloud workloads. The content items in this pack include a modeling rule (Defender For Cloud Microsoft Modeling Rule) and a parsing rule (Microsoft Defender For Cloud Parsing Rule), as well as the following integrations:-   [Microsoft Defender for Cloud Event Collector](https://xsoar.pan.dev/docs/reference/integrations/microsoft-defender-for-cloud-event-collector): Use this integration to collect Microsoft Defender for Cloud issues specifically for Cortex Cloud. This integration includes commands to collect issues and to reset the authentication process.; [Microsoft Defender for Cloud](https://xsoar.pan.dev/docs/reference/integrations/azure-security-center-v2) (also referred to as Azure Security Center v2): Use this integration to deliver enterprise endpoint security, including preventative protection, post-breach detection, automated investigation, and response for various device types. It includes commands to facilitate endpoint visibility and querying (for example, machine software/vulnerabilities), retrieving file statistics, running advanced hunting queries, performing remediation actions such as host isolation and file blocking/quarantine, and listing configuration permissions.
-; The [Microsoft Defender for Cloud Apps](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftCloudAppSecurity) content pack provides a multimode Cloud Access Security Broker (CASB) that offers rich visibility, control over data travel, and sophisticated analytics to identify and combat cyber threats across all connected Cloud services. The content items in this pack include various classifiers, issue types (Microsoft CAS Alert), a layout (MicrosoftCloudAppSecurity), a modeling rule (Microsoft Defender Cloud Apps Modeling Rule), and a parsing rule (Microsoft Cloud App Security Parsing Rule, as well as the following integrations:-   [Microsoft Defender for Cloud Apps Event Collector](https://xsoar.pan.dev/docs/reference/integrations/microsoft-defender-for-cloud-apps-event-collector): Use this integration to collect the event logs for issues and activities provided by the Microsoft Defender for Cloud Apps API. This integration functions as a collector for event logs relating to issues and activities, supports configuration updates to fetch specific event types, and includes infrastructure support for Microsoft Graph Application endpoints.; [Microsoft Defender for Cloud Apps](https://xsoar.pan.dev/docs/reference/integrations/microsoft-cloud-app-security): Use this integration to view and resolve issues, view activities, view files, and view user accounts. It also provides infrastructure support for Microsoft Graph Application endpoints.
-; The [Microsoft Defender for Identity](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftDefenderforIdentity) content pack is a cloud-based security solution that leverages your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization. The content item included in this pack is the Microsoft Defender for Identity modeling rule, with configurations for event collection using the Broker VM Syslog Collector.; The [Microsoft Exchange Online](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftExchangeOnline) content pack integrates with Exchange Online and Office 365 mail services to enable monitoring, searching, content retrieval, deletion of emails, and management of tenant allow/block lists. The content items in this pack include several playbooks focused on searching and deleting content, automations like GetEWSFolder and CreateCertificate, and the following integrations:-   [EWS O365](https://xsoar.pan.dev/docs/reference/integrations/ewso365): Use this integration to retrieve information on emails and activities in a target mailbox and perform operations such as deleting emails and attachments, moving email items, handling mail sending and replying including inline images, and retrieving out-of-office status information.; [O365 - Security And Compliance - Content Search v2](https://xsoar.pan.dev/docs/reference/integrations/security-and-compliance-v2): Use this integration to manage security and compliance content search across organizational assets including emails, SharePoint sites, and OneDrives, and to perform actions like previewing and deleting emails. It includes the capability to delete an email for all recipients using the **`o365-sc-email-security-search-and-delete-email-office-365-quick-action`** command.; [EWS Extension Online Powershell v3](https://xsoar.pan.dev/docs/reference/integrations/ews-extension-online-powershell-v3): Use this integration to retrieve information about mailboxes and users in your organization, and to retrieve and modify tenant allow/block lists. It includes commands that retrieve information about mailboxes and users, display client access settings, retrieve permissions, list recipient objects, and manage tenant allow/block list entries (add, remove, list, count). It also includes commands to enable or disable mail flow rules and mail forwarding, and to list message trace details.
-; The [Microsoft Graph API](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftGraphAPI) content pack provides the capability to interact with Microsoft APIs that do not have dedicated integrations in Cortex Cloud, such as Mail Single-User. It includes the following integration:-   [Microsoft Graph API](https://xsoar.pan.dev/docs/reference/integrations/microsoft-graph-api): Use this integration to interact with various Microsoft APIs, such as Mail Single-User, that currently lack dedicated integrations in Cortex Cloud. It includes commands that facilitate making specific API requests (**`msgraph-api-request`** which supports headers), managing the authentication process by generating login URLs (**`msgraph-api-generate-login-url`**) to support the OAuth consent dialog, and resetting the authentication context if needed (**`msgraph-api-auth-reset`**)
-; The [Microsoft Graph Files](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftGraphFiles) content pack enables authorized access for applications to files located in OneDrive, SharePoint, and MS Teams across your entire organization. It includes the following integration:-   [O365 File Management (Onedrive/Sharepoint/Teams](https://xsoar.pan.dev/docs/reference/integrations/microsoft-graph-files): Use this integration to enable your app to get authorized access to and perform management actions on files within OneDrive, SharePoint, and MS Teams across your organization. It includes commands that allow managing site permissions (listing, creating, updating, and deleting), downloading files, listing drives and drive content, and managing OAuth authentication through generating login URLs or resetting authorization. This integration requires admin consent.
-; The [Microsoft Graph Security](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftGraphSecurity) content pack fetches and manages issues from various Microsoft security sources using the unified Microsoft Graph Security API. It includes the Graph Security Alert classifier and issue type, multiple associated issue fields, Microsoft Graph Security modeling rules, and Microsoft Graph Security parsing rules, as well as the following integration:-   [Microsoft Graph Security](https://xsoar.pan.dev/docs/reference/integrations/microsoft-graph): Use this integration to fetch and manage issues from various Microsoft security products (such as Microsoft Defender products and Azure Security Center), correlate issues, update issue status and assignments, and automate security workflows. The integration includes commands that support managing issues (for example updating issue determination and classification), performing security investigation tasks like Advanced Hunting (**`msg-advanced-hunting`**) for up to 30 days of event data, managing security incidents (**`msg-list-security-incident`**, **`msg-update-security-incident`**), supporting threat assessment, and providing extensive commands for Microsoft Purview eDiscovery case management, custodians, searching, and purging data. |
+| Link to Standard Collector instructions | The following types of logs and data can be ingested from Microsoft Office 365 Management Activity API and Microsoft Graph API: Microsoft Office 365 audit events from Management Activity API- Microsoft Entra ID (Azure AD); Exchange Online; SharePoint Online; DLP; General ; Microsoft Entra ID (Azure AD) authentication and audit events from Microsoft Graph API; Microsoft 365 alerts from Microsoft Graph Security API are available for different products:- Microsoft Graph Security API v1; Microsoft Graph Security API v2 For more information, see Ingest logs from Microsoft Office 365. |
+| Links to content pack/integration details | The [Microsoft Defender for Cloud](https://cortex.marketplace.pan.dev/marketplace/details/AzureSecurityCenter) content pack provides unified security management and advanced threat protection across hybrid cloud workloads. The content items in this pack include a modeling rule (Defender For Cloud Microsoft Modeling Rule) and a parsing rule (Microsoft Defender For Cloud Parsing Rule), as well as the following integrations:- [Microsoft Defender for Cloud Event Collector](https://xsoar.pan.dev/docs/reference/integrations/microsoft-defender-for-cloud-event-collector): Use this integration to collect Microsoft Defender for Cloud issues specifically for Cortex Cloud. This integration includes commands to collect issues and to reset the authentication process.; [Microsoft Defender for Cloud](https://xsoar.pan.dev/docs/reference/integrations/azure-security-center-v2) (also referred to as Azure Security Center v2): Use this integration to deliver enterprise endpoint security, including preventative protection, post-breach detection, automated investigation, and response for various device types. It includes commands to facilitate endpoint visibility and querying (for example, machine software/vulnerabilities), retrieving file statistics, running advanced hunting queries, performing remediation actions such as host isolation and file blocking/quarantine, and listing configuration permissions. ; The [Microsoft Defender for Cloud Apps](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftCloudAppSecurity) content pack provides a multimode Cloud Access Security Broker (CASB) that offers rich visibility, control over data travel, and sophisticated analytics to identify and combat cyber threats across all connected Cloud services. The content items in this pack include various classifiers, issue types (Microsoft CAS Alert), a layout (MicrosoftCloudAppSecurity), a modeling rule (Microsoft Defender Cloud Apps Modeling Rule), and a parsing rule (Microsoft Cloud App Security Parsing Rule, as well as the following integrations:- [Microsoft Defender for Cloud Apps Event Collector](https://xsoar.pan.dev/docs/reference/integrations/microsoft-defender-for-cloud-apps-event-collector): Use this integration to collect the event logs for issues and activities provided by the Microsoft Defender for Cloud Apps API. This integration functions as a collector for event logs relating to issues and activities, supports configuration updates to fetch specific event types, and includes infrastructure support for Microsoft Graph Application endpoints.; [Microsoft Defender for Cloud Apps](https://xsoar.pan.dev/docs/reference/integrations/microsoft-cloud-app-security): Use this integration to view and resolve issues, view activities, view files, and view user accounts. It also provides infrastructure support for Microsoft Graph Application endpoints. ; The [Microsoft Defender for Identity](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftDefenderforIdentity) content pack is a cloud-based security solution that leverages your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization. The content item included in this pack is the Microsoft Defender for Identity modeling rule, with configurations for event collection using the Broker VM Syslog Collector.; The [Microsoft Exchange Online](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftExchangeOnline) content pack integrates with Exchange Online and Office 365 mail services to enable monitoring, searching, content retrieval, deletion of emails, and management of tenant allow/block lists. The content items in this pack include several playbooks focused on searching and deleting content, automations like GetEWSFolder and CreateCertificate, and the following integrations:- [EWS O365](https://xsoar.pan.dev/docs/reference/integrations/ewso365): Use this integration to retrieve information on emails and activities in a target mailbox and perform operations such as deleting emails and attachments, moving email items, handling mail sending and replying including inline images, and retrieving out-of-office status information.; [O365 - Security And Compliance - Content Search v2](https://xsoar.pan.dev/docs/reference/integrations/security-and-compliance-v2): Use this integration to manage security and compliance content search across organizational assets including emails, SharePoint sites, and OneDrives, and to perform actions like previewing and deleting emails. It includes the capability to delete an email for all recipients using the **`o365-sc-email-security-search-and-delete-email-office-365-quick-action`** command.; [EWS Extension Online Powershell v3](https://xsoar.pan.dev/docs/reference/integrations/ews-extension-online-powershell-v3): Use this integration to retrieve information about mailboxes and users in your organization, and to retrieve and modify tenant allow/block lists. It includes commands that retrieve information about mailboxes and users, display client access settings, retrieve permissions, list recipient objects, and manage tenant allow/block list entries (add, remove, list, count). It also includes commands to enable or disable mail flow rules and mail forwarding, and to list message trace details. ; The [Microsoft Graph API](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftGraphAPI) content pack provides the capability to interact with Microsoft APIs that do not have dedicated integrations in Cortex Cloud, such as Mail Single-User. It includes the following integration:- [Microsoft Graph API](https://xsoar.pan.dev/docs/reference/integrations/microsoft-graph-api): Use this integration to interact with various Microsoft APIs, such as Mail Single-User, that currently lack dedicated integrations in Cortex Cloud. It includes commands that facilitate making specific API requests (**`msgraph-api-request`** which supports headers), managing the authentication process by generating login URLs (**`msgraph-api-generate-login-url`**) to support the OAuth consent dialog, and resetting the authentication context if needed (**`msgraph-api-auth-reset`**) ; The [Microsoft Graph Files](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftGraphFiles) content pack enables authorized access for applications to files located in OneDrive, SharePoint, and MS Teams across your entire organization. It includes the following integration:- [O365 File Management (Onedrive/Sharepoint/Teams](https://xsoar.pan.dev/docs/reference/integrations/microsoft-graph-files): Use this integration to enable your app to get authorized access to and perform management actions on files within OneDrive, SharePoint, and MS Teams across your organization. It includes commands that allow managing site permissions (listing, creating, updating, and deleting), downloading files, listing drives and drive content, and managing OAuth authentication through generating login URLs or resetting authorization. This integration requires admin consent. ; The [Microsoft Graph Security](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftGraphSecurity) content pack fetches and manages issues from various Microsoft security sources using the unified Microsoft Graph Security API. It includes the Graph Security Alert classifier and issue type, multiple associated issue fields, Microsoft Graph Security modeling rules, and Microsoft Graph Security parsing rules, as well as the following integration:- [Microsoft Graph Security](https://xsoar.pan.dev/docs/reference/integrations/microsoft-graph): Use this integration to fetch and manage issues from various Microsoft security products (such as Microsoft Defender products and Azure Security Center), correlate issues, update issue status and assignments, and automate security workflows. The integration includes commands that support managing issues (for example updating issue determination and classification), performing security investigation tasks like Advanced Hunting (**`msg-advanced-hunting`**) for up to 30 days of event data, managing security incidents (**`msg-list-security-incident`**, **`msg-update-security-incident`**), supporting threat assessment, and providing extensive commands for Microsoft Purview eDiscovery case management, custodians, searching, and purging data. |
 
 #### Ingest logs from Microsoft Office 365
-Abstract
 
 Ingest logs and data from Microsoft Office 365 Management Activity API and Microsoft Graph API for use in Cortex Cloud.
 
@@ -25533,7 +24954,7 @@ To ingest email logs and data from Microsoft Office 365, use the dedicated data 
         -   Microsoft Defender for Cloud, Azure Active Directory Identity Protection, Microsoft Defender for Cloud Apps, Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft 365, Azure Information Protection, and Azure Sentinel.
             
         
-    -   Microsoft Graph Security API v2: Alerts (alerts\_v2) from the following products are available via the Microsoft Graph Security API v2 beta version, which is still subject to change:
+    -   Microsoft Graph Security API v2: Alerts (alerts_v2) from the following products are available via the Microsoft Graph Security API v2 beta version, which is still subject to change:
         
         -   Microsoft 365 Defender unified alerts API, which serves alerts from Microsoft 365 Defender, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Purview Data Loss Prevention (including any future new signals integrated into M365D).
             
@@ -25672,7 +25093,7 @@ To set up the Office 365 integration:
                 
                 -   Microsoft Defender for Cloud, Azure Active Directory Identity Protection, Microsoft Defender for Cloud Apps, Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft 365, Azure Information Protection, and Azure Sentinel.
                     
-                -   Use Microsoft Graph API v2: When this checkbox is also selected, alerts (alerts\_v2) from the following products are only collected via the Microsoft Graph Security API v2 beta version, which is still subject to change:
+                -   Use Microsoft Graph API v2: When this checkbox is also selected, alerts (alerts_v2) from the following products are only collected via the Microsoft Graph Security API v2 beta version, which is still subject to change:
                     
                     -   Microsoft 365 Defender unified alerts API, which serves alerts from Microsoft 365 Defender, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Purview Data Loss Prevention (including any future new signals integrated into M365D).
                         
@@ -25689,7 +25110,6 @@ To set up the Office 365 integration:
     5.  If successful, click Enable to enable Office 365 log collection.
 
 ### Microsoft Office 365 (email)
-Abstract
 
 Learn more about the Microsoft Office 365 Standard email Collector in Cortex Cloud.
 
@@ -25701,7 +25121,6 @@ You can configure collecting Microsoft Office 365 email metadata using a Standar
 | Link to Standard Collector instructions | Ingest logs and data from Microsoft 365Ingest logs and data from Microsoft 365 |
 
 #### Ingest logs and data from Microsoft 365
-Abstract
 
 Learn more about collecting logs and data from Microsoft 365.
 
@@ -25857,7 +25276,6 @@ Verification
 Once the configuration is complete, a green check mark will appear below the Microsoft 365 configuration, and the console will display the amount of data received. You can now run queries against the datasets listed above.
 
 ### Microsoft 365 (Posture)
-Abstract
 
 Learn more about the Microsoft 365 (Posture) data source in Cortex Cloud.
 
@@ -25869,7 +25287,6 @@ You can configure collecting Microsoft 365 (Posture) logs using a Cloud Posture 
 | Link to Cloud Posture and Runtime Security data source instructions | How to onboard Microsoft 365 |
 
 #### How to onboard Microsoft 365
-Abstract
 
 How to get started with the Microsoft 365 data source.
 
@@ -25914,7 +25331,6 @@ You can add Microsoft 365 as a third-party data source in Cortex Cloud Data Secu
 The Microsoft 365 integration instance should now appear in the list of data sources on the Data Sources & Integrations page.
 
 ### Okta
-Abstract
 
 Learn more about the Okta Standard Collector and content pack integrations in Cortex Cloud.
 
@@ -25926,7 +25342,6 @@ You can configure collecting Okta logs and data using a Standard Collector or wi
 | Link to Standard Collector instructions | The following types of logs can be ingested from Okta: Activity logs; Configuration data For more information, see Ingest logs and data from Okta. |
 
 #### Ingest logs and data from Okta
-Abstract
 
 Learn more about Ingesting logs and data from Okta for use in Cortex Cloud.
 
@@ -26033,7 +25448,6 @@ Configuration data (using Collect Configuration)
 -   **XQL**: Use the following dataset for CIEM (Cloud Infrastructure Entitlements Management) visibility: `ciem_permissions_with_last_access`
 
 ### OneLogin
-Abstract
 
 Learn more about the OneLogin Standard Collector and content pack integrations in Cortex Cloud.
 
@@ -26042,13 +25456,10 @@ You can configure collecting OneLogin logs and data using a Standard Collector o
 | OneLogin vendor | Description |
 | --- | --- |
 | Standard Collector overview | Forward logs and data to Cortex Cloud from OneLogin via the OneLogin REST APIs using the OneLogin data source. |
-| Link to Standard Collector instructions | The following types of data can be ingested from OneLogin: Log collection-   Events: User logins, administrative operations, provisioning, and a list of all OneLogin event types
-; Directory-   Users: Lists of users.; Groups: Lists of groups.; Apps: Lists of apps.
-For more information, see Ingest logs and data from OneLogin. |
+| Link to Standard Collector instructions | The following types of data can be ingested from OneLogin: Log collection- Events: User logins, administrative operations, provisioning, and a list of all OneLogin event types ; Directory- Users: Lists of users.; Groups: Lists of groups.; Apps: Lists of apps. For more information, see Ingest logs and data from OneLogin. |
 | Link to content pack/integration details | The [OneLogin](https://cortex.marketplace.pan.dev/marketplace/details/OneLogin) content pack provides capabilities for simple customer authentication and streamlined workforce identity operations utilizing APIs. It includes one modeling rule for data normalization and the following integration: [OneLogin Event Collector](https://xsoar.pan.dev/docs/reference/integrations/one-login-event-collector): Use this integration to gather simple customer authentication and streamlined workforce identity operations with the **`onelogin-get-events`** command. |
 
 #### Ingest logs and data from OneLogin
-Abstract
 
 Learn how to ingest different types of logs and data from OneLogin.
 
@@ -26067,11 +25478,11 @@ The following table provides a description of the different types of data you ca
 | Data type | Description | Collection method | Fetch interval | Dataset name |
 | --- | --- | --- | --- | --- |
 | **Log collection** |
-| Events | User logins, administrative operations, provisioning, and a list of all OneLogin event types | Appends data | 30 seconds | onelogin\_events\_raw |
+| Events | User logins, administrative operations, provisioning, and a list of all OneLogin event types | Appends data | 30 seconds | onelogin_events_raw |
 | **Directory** |
-| Users | Lists of users | Overwrites data | 10 minutes | onelogin\_users\_raw |
-| Groups | Lists of groups | Overwrites data | 10 minutes | onelogin\_groups\_raw |
-| Apps | Lists of apps | Overwrites data | 10 minutes | onelogin\_apps\_raw |
+| Users | Lists of users | Overwrites data | 10 minutes | onelogin_users_raw |
+| Groups | Lists of groups | Overwrites data | 10 minutes | onelogin_groups_raw |
+| Apps | Lists of apps | Overwrites data | 10 minutes | onelogin_apps_raw |
 
 Before you configure Cortex Cloud data collection from OneLogin, make sure you have the following.
 
@@ -26135,7 +25546,6 @@ Configure Cortex Cloud to receive logs and data from OneLogin.
     When events start to come in, a green check mark appears underneath the OneLogin configuration.
 
 ### Oracle Cloud Infrastructure
-Abstract
 
 Learn more about collecting Oracle Cloud Infrastructure data using a Cloud Service Provider (CSP) onboarding data source in Cortex Cloud.
 
@@ -26147,7 +25557,6 @@ Follow a wizard to onboard your Oracle Cloud Infrastructure (OCI) environment. T
 | Link to basic configuration Cloud Service Provider (CSP) onboarding data source instructions for Cortex Cloud NG SIEM, Cortex Cloud Enterprise license, and Cortex Cloud Enterprise+ licenses. | Onboard Oracle Cloud Infrastructure with basic configuration |
 
 ### PingFederate
-Abstract
 
 Learn more about collecting PingFederate authentication logs using a Syslog Collector applet in Cortex Cloud.
 
@@ -26159,7 +25568,6 @@ You can configure collecting PingFederate authentication logs using a Broker VM 
 | Link to Syslog Collector applet instructions | Ingest authentication logs from PingFederate |
 
 ### PingOne
-Abstract
 
 Learn more about the PingOne Standard Collector and content pack Integrations in Cortex Cloud.
 
@@ -26172,7 +25580,6 @@ You can configure collecting PingOne authentication logs and data using a standa
 | Link to content pack/integration details | The [PingIdentity](https://cortex.marketplace.pan.dev/marketplace/details/PingIdentity) content pack provides capabilities to utilize PingOne's cloud identity and access management services for various triggering events. It includes the following integration: [PingOne (Partner Contribution)](https://xsoar.pan.dev/docs/reference/integrations/ping-one): Use this integration to integrate with the PingOne Management API. It includes commands to unlock, create, delete, and update users. |
 
 #### Ingest authentication logs and data from PingOne
-Abstract
 
 Ingest authentication logs and data from PingOne for Enterprise for use in Cortex Cloud authentication stories.
 
@@ -26238,7 +25645,6 @@ To receive authentication logs and data from PingOne for Enterprise, you must fi
 5.  To search for specific authentication logs or data, you can Create an Authentication Query or Create an XQL Query.
 
 ### Snowflake
-Abstract
 
 Learn more about the Snowflake data source in Cortex Cloud.
 
@@ -26250,7 +25656,6 @@ You can configure collecting Snowflake data using a Cloud Posture and Runtime Se
 | Link to Cloud Posture and Runtime Security data source instructions | How to onboard Snowflake |
 
 #### How to onboard Snowflake
-Abstract
 
 How to get started with the third-party Snowflake data source.
 
@@ -26285,7 +25690,7 @@ You can add Snowflake as a third-party data source in Cortex Cloud Data Security
         
         The account identifier can be found using the user information at the bottom left. Hover over the account you wish to onboard and select the copy option at the top right. The account identifier is usually of the format: 
         
-        (organization).\[account\]
+        (organization).[account]
         
     3.  (Optional) If you have a Snowflake account that is protected by a network policy, turn on the My Snowflake account is protected by network policies toggle button. The network policies are related to the IP allow list.
         
@@ -26338,7 +25743,6 @@ You can add Snowflake as a third-party data source in Cortex Cloud Data Security
     The Snowflake instance is now removed, including all previous scans.
 
 ### Windows DHCP via Elasticsearch Filebeat
-Abstract
 
 Learn more about the Windows DHCP Standard Collector and content pack integrations in Cortex Cloud.
 
@@ -26351,7 +25755,6 @@ You can configure collecting Windows DHCP logs using a Standard Collector or wit
 | Link to content pack details | The [Microsoft DHCP](https://cortex.marketplace.pan.dev/marketplace/details/MicrosoftDHCP) content pack processes and normalizes audit logs from the Dynamic Host Configuration Protocol (DHCP) service for security analysis in Cortex Cloud. It includes modeling Rules and parsing rules for events collected using the XDR Collector via the **`microsoft_dhcp_raw dataset`**. |
 
 #### Ingest logs from Windows DHCP using Elasticsearch Filebeat
-Abstract
 
 Learn how to configure Cortex Cloud to receive Windows DHCP logs.
 
@@ -26362,8 +25765,6 @@ Requires the Data Collection add-on.
 You can configure Cortex Cloud to receive Windows DHCP logs using Elasticsearch Filebeat with the following data collectors.
 
 ##### Ingest Windows DHCP logs with an XDR Collector profile
-
-Abstract
 
 Extend Cortex Cloud visibility into logs from Windows DHCP using an XDR Collector Windows Filebeat profile.
 
@@ -26389,8 +25790,6 @@ Configure Cortex Cloud to receive logs from Windows DHCP using an XDR Collector 
     
 
 ##### Ingest Windows DHCP logs with the Windows DHCP Collector
-
-Abstract
 
 Extend Cortex Cloud visibility into logs from Windows DHCP using Elasticsearch Filebeat with the Windows DHCP data collector.
 
@@ -26443,7 +25842,7 @@ Configure Cortex Cloud to receive logs from Windows DHCP via Elasticsearch Fileb
         -   **Filebeat inputs**: Define the paths to crawl and fetch. The code below provides an example of how to configure the **Filebeat inputs** section in the `filebeat.yml` file with these paths configured.
             
             ```
-            \# ============================== Filebeat inputs ===============================
+            # ============================== Filebeat inputs ===============================
             filebeat.inputs:
               # Each - is an input. Most options can be set at the input level, so
               # you can use different inputs for various configurations.
@@ -26459,16 +25858,16 @@ Configure Cortex Cloud to receive logs from Windows DHCP via Elasticsearch Fileb
         -   **Elasticsearch Output**: Set the `hosts` and `api_key`, where both of these values are obtained when you configured the Windows DHCP Collector in Cortex Cloud as explained in **Step #1**. The code below provides an example of how to configure the **Elasticsearch Output** section in the `filebeat.yml` file and indicates which settings need to be obtained from Cortex Cloud.
             
             ```
-            \# ---------------------------- Elasticsearch Output ----------------------------
+            # ---------------------------- Elasticsearch Output ----------------------------
             output.elasticsearch:  
               enabled: true  
               # Array of hosts to connect to.    
-              hosts: \["OBTAIN THIS URL FROM CORTEX XDR"\]  
+              hosts: ["OBTAIN THIS URL FROM CORTEX XDR"]  
               # Protocol - either \`http\` (default) or \`https\`.  
               protocol: "https"  
-              compression\_level: 5  
+              compression_level: 5  
               # Authentication credentials - either API key or username/password. 
-              api\_key: "OBTAIN THIS KEY FROM CORTEX XDR"
+              api_key: "OBTAIN THIS KEY FROM CORTEX XDR"
             ```
             
         -   **Processors**: Set the `tokenizer` and add a `drop_event processor` to drop all events that do not start with an event ID. The code below provides an example of how to configure the **Processors** section in the `filebeat.yml` file and indicates which settings need to be obtained from Cortex Cloud.
@@ -26484,25 +25883,25 @@ Configure Cortex Cloud to receive logs from Windows DHCP via Elasticsearch Fileb
             For Windows Server 2012 and above, use `"%{id},%{date},%{time},%{description},%{ipAddress},%{hostName},%{macAddress},%{userName},%{transactionID},%{qResult},%{probationTime},%{correlationID},%{dhcid},%{vendorClassHex},%{vendorClassASCII},%{userClassHex},%{userClassASCII},%{relayAgentInformation},%{dnsRegError}"`
             
             ```
-            \# ================================= Processors =================================
+            # ================================= Processors =================================
             processors:  
-              - add\_host\_metadata:      
+              - add_host_metadata:      
                 when.not.contains.tags: forwarded  
-              - drop\_event.when.not.regexp.message: "^\[0-9\]+,.\*"  
+              - drop_event.when.not.regexp.message: "^[0-9]+,.\*"  
               - dissect:       
                 tokenizer: "%{id},%{date},%{time},%{description},%{ipAddress},%{hostName},%{macAddress},%{userName},%{transactionID},%{qResult},%{probationTime},%{correlationID},%{dhcid},%{vendorClassHex},%{vendorClassASCII},%{userClassHex},%{userClassASCII},%{relayAgentInformation},%{dnsRegError}"  
-              - drop\_fields:       
-                fields: \["message"\]  
-              - add\_locale: ~
+              - drop_fields:       
+                fields: ["message"]  
+              - add_locale: ~
               - rename:
                   fields:
                     - from: "event.timezone"
                       to: "dissect.timezone"
-                  ignore\_missing: true
-                  fail\_on\_error: false
-              - add\_cloud\_metadata: ~  
-              - add\_docker\_metadata: ~  
-              - add\_kubernetes\_metadata: ~
+                  ignore_missing: true
+                  fail_on_error: false
+              - add_cloud_metadata: ~  
+              - add_docker_metadata: ~  
+              - add_kubernetes_metadata: ~
             ```
             
         
@@ -26513,7 +25912,6 @@ Configure Cortex Cloud to receive logs from Windows DHCP via Elasticsearch Fileb
 4.  After Cortex Cloud begins receiving logs from Windows DHCP via Elasticsearch Filebeat, you can use the XQL Search to search for logs in the new dataset (`microsoft_dhcp_raw`).
 
 ### Workday
-Abstract
 
 Learn more about the Workday collector and content pack integrations in Cortex Cloud.
 
@@ -26526,7 +25924,6 @@ You can configure collecting Workday report data using a standard collector or w
 | Links to content pack/integration details | The [Workday](https://cortex.marketplace.pan.dev/marketplace/details/Workday) content pack provides solutions for financial management, human resources, and planning, specifically supporting the collection and modeling of user activity audit logs and sign-on events. It contains classifiers, modeling rules, and parsing rules, as well as the following integrations: [Workday Event Collector](https://xsoar.pan.dev/docs/reference/integrations/workday-event-collector): Use this integration containing the **`workday-get-activity-logging`** command to get activity logs from Workday. It requires the **`Workday Parsing Rule`** and **`Workday Modeling Rule`** for parsing and modeling ingested data.; [Workday](https://xsoar.pan.dev/docs/reference/integrations/workday): Use this integration containing the **`workday-list-workers`** command to return information for specific workers.; [Workday IAM](https://xsoar.pan.dev/docs/reference/integrations/workday-iam): Use this integration containing the **`workday-iam-get-full-report`** command to return report entries from Workday. It is part of the part of the IAM premium pack.; [Workday Sign On Event Collector](https://xsoar.pan.dev/docs/reference/integrations/workday-sign-on-event-collector): Use this integration containing the **`workday-get-sign-on-events`** command to get sign-on logs from Workday. This command is used for developing/debugging and is to be used with caution, as it can create events, leading to events duplication and exceeding the API request limitation. |
 
 #### Ingest report data from Workday
-Abstract
 
 Extend Cortex Cloud visibility into reports data from Workday.
 
@@ -26572,7 +25969,7 @@ Configure Cortex Cloud to receive report data from Workday:
         
     3.  Configure the following Create Custom Report settings:
         
-        [image: workday-create-custom-report.png]
+        
         
         -   Report Name: Specify the name of the report.
             
@@ -26600,7 +25997,7 @@ Configure Cortex Cloud to receive report data from Workday:
         -   (Optional) You can map any additional fields from the Data Source configured that you want to be able to query in XQL Search using the `workday_workday_raw` dataset. This is configured by selecting the applicable Field and leaving the default field name that is displayed in the Column Heading Override XML Alias column. This default field name is what is used in XQL Search and the dataset to view and query the data.
             
         
-        [image: workday-additional-info.png]
+        
         
         **Note:**
         
@@ -26652,7 +26049,7 @@ Configure Cortex Cloud to receive report data from Workday:
         
         Here is an example of the configured settings, where the Web Service API Version and Namespace are automatically populated and dependent on your report.
         
-        [image: workday-web-services-options.png]
+        
         
     8.  (Optional) Test the report to ensure all the fields are populated.
         
@@ -26710,7 +26107,6 @@ Configure Cortex Cloud to receive report data from Workday:
 4.  After Cortex Cloud begins receiving report data from Workday, you can use the XQL Search to search for logs in the new dataset (`workday_workday_raw`).
 
 ### Zscaler Internet Access
-Abstract
 
 Learn more about collecting Zscaler Internet Access logs using a Syslog Collector applet and content pack integrations in Cortex Cloud.
 
@@ -26723,7 +26119,6 @@ You can configure collecting Zscaler Internet Access logs using a Broker VM Sysl
 | Links to content pack/integration details | The [Zscaler Internet Access](https://cortex.marketplace.pan.dev/marketplace/details/Zscaler) content pack provides Cloud security features, including managing URL and IP address policies, managing categories, sandbox reporting, and ingestion and normalization of Zscaler Internet Access (ZIA) logs into Cortex Cloud via both VM-based NSS Feed and Cloud NSS Feed methods. It contains the **`Zscaler Internet Access Modeling Rule`**, the **`Zscaler ZIA Parsing Rule`**, and the Block Domain - Zscaler playbook. It also includes the following integration: [Zscaler Internet Access](https://xsoar.pan.dev/docs/reference/integrations/zscaler): Use this integration to manage URL and IP address allow lists and block lists, manage and update categories, retrieve Sandbox reports, and manage IP destination groups within a Zscaler session. It includes commands for blacklisting and unblacklisting URLs and IPs, managing categories (adding/removing URLs and IPs), retrieving categories, listing, creating, editing, and deleting IP destination groups, manually logging in and logging out, and activating configuration changes in Zscaler. |
 
 ### Zscaler Private Access
-Abstract
 
 Learn more about collecting Zscaler Private Access logs using a Syslog Collector applet and content pack integration in Cortex Cloud.
 
@@ -26736,7 +26131,6 @@ You can configure collecting Zscaler Private Access logs using a Broker VM Syslo
 | Link to content pack/integration instructions | The [ZscalerZPA](https://cortex.marketplace.pan.dev/marketplace/details/ZscalerZPA) content pack provides data modeling capabilities for event logs ingested from the Zscaler Private Access (ZPA) service, which enables secure access to internal applications and services. It includes the **`Zscaler Private Access Modeling Rule`**. Event collection relies on configuring the generic Syslog Collector on the Broker VM. |
 
 ## Generic on-premise data collectors
-Abstract
 
 Learn more about collecting data from generic on-premise data sources in Cortex Cloud.
 
@@ -26747,14 +26141,12 @@ You can collect data from generic on-premise data collectors that are not necess
 -   **XDR Collectors**: Enables using the XDR Collectors (XDRC) configuration that is dedicated for on-premise data collection on Windows and Linux machines to gather and process logs and events from multiple sources.
 
 ### Broker VM data collector applets
-Abstract
 
 The Broker VM has a number of data collector applets that you can configure to ingest different types of data. These data collector applets are in addition to the others that are available in the Settings → Configurations → Data Collection → Collection Integrations page with a Data Collection add-on.
 
 Some data collector applets require the Data Collection add-on.
 
 #### Activate Apache Kafka Collector
-Abstract
 
 Learn more about activating the Broker VM with an Apache Kafka Collector applet.
 
@@ -26911,7 +26303,6 @@ After you activate the Kafka Collector applet, you can collect events as dataset
     You can also Ingest Apache Kafka events as datasets.Ingest Apache Kafka events as datasets
 
 #### Activate CSV Collector
-Abstract
 
 Learn more about activating the Broker VM with a CSV Collector applet.
 
@@ -26955,7 +26346,7 @@ The Broker VM provides a CSV Collector applet that enables you to monitor and co
     | Username | Specify the username for accessing the Windows directory. |
     | Password | Specify the password for accessing the Windows directory. |
     
-    After you configure the mounted folder details, Add ([image: plus_sign_add_icon.png]) details to the applet.
+    After you configure the mounted folder details, Add () details to the applet.
     
     Mounted CSV Files
     
@@ -26987,7 +26378,6 @@ The Broker VM provides a CSV Collector applet that enables you to monitor and co
     -   Deactivate to disable the CSV Collector.
 
 #### Activate Database Collector
-Abstract
 
 Learn more about activating a Broker VM with a Database Collector applet.
 
@@ -27040,8 +26430,8 @@ The Broker VM provides a Database Collector applet that enables you to collect d
     
     | Field | Description |
     | --- | --- |
-    | Storage Method | Specify whether to append the read data to the dataset, or to replace all the data in the dataset with the newly read data. Append (default): Adds new data to an existing dataset. This mode is optimal for collecting aggregated logs or data, where new records are simply added to the end of the existing dataset.; Replace: This option is only available for Snapshot datasets and each read cycle overwrites the entire dataset with the newly collected data. This is necessary when the data that needs to be collected from the database is static data or reference data, such as a list of computers, IP addresses, or a list of users. \*\*Important:\*\* The Database Collector applet supports a single row size of up to 65 KB. Ensure your source data does not exceed this limit per record to avoid ingestion errors. Replace mode logic When using the Replace mode in the Database Collector, the following field logic is applied: **Dataset name**: Defined by the user during configuration.; **Vendor**: Set automatically to `PANW`.; **Product**: Set automatically as db\_collector followed by a unique identifier, such as `db_collector_12345`. \*\*Note:\*\* The reference data ingested using the DB Collector is counted towards license utilization. |
-    | Target Dataset | This option is only displayed when the Storage Method is Replace. Select the name of an existing Snapshot dataset or create a new Snapshot dataset by specifying the name. When you create a new target dataset name, specify a name that will be more meaningful for your users when they query the dataset. For example, if the original table name is `accssusr`, you can save the dataset as `access_per_users`. Dataset names can contain special characters from different languages, numbers (0-9) and underscores (\_). You can create dataset names using uppercase characters, but in queries, dataset names are always treated as if they are lowercase. |
+    | Storage Method | Specify whether to append the read data to the dataset, or to replace all the data in the dataset with the newly read data. Append (default): Adds new data to an existing dataset. This mode is optimal for collecting aggregated logs or data, where new records are simply added to the end of the existing dataset.; Replace: This option is only available for Snapshot datasets and each read cycle overwrites the entire dataset with the newly collected data. This is necessary when the data that needs to be collected from the database is static data or reference data, such as a list of computers, IP addresses, or a list of users. \*\*Important:\*\* The Database Collector applet supports a single row size of up to 65 KB. Ensure your source data does not exceed this limit per record to avoid ingestion errors. Replace mode logic When using the Replace mode in the Database Collector, the following field logic is applied: **Dataset name**: Defined by the user during configuration.; **Vendor**: Set automatically to `PANW`.; **Product**: Set automatically as db_collector followed by a unique identifier, such as `db_collector_12345`. \*\*Note:\*\* The reference data ingested using the DB Collector is counted towards license utilization. |
+    | Target Dataset | This option is only displayed when the Storage Method is Replace. Select the name of an existing Snapshot dataset or create a new Snapshot dataset by specifying the name. When you create a new target dataset name, specify a name that will be more meaningful for your users when they query the dataset. For example, if the original table name is `accssusr`, you can save the dataset as `access_per_users`. Dataset names can contain special characters from different languages, numbers (0-9) and underscores (_). You can create dataset names using uppercase characters, but in queries, dataset names are always treated as if they are lowercase. |
     | Rising Column | This option is only displayed when the Storage Method is Append. Specify a column for the Database Collector applet to keep track of new rows from one input execution to the next. The column name must be configured with the same column name that is returned from the database and not the aliased name used in the query. This column must also be included in the query results. |
     | Retrieval Value | This option is only displayed when the Storage Method is Append. Specify a Retrieval Value for the Database Collector applet to determine which rows are new from one input execution to the next. Cortex Cloud supports configuring this value as an integer or a string that contains a timestamp. The following string timestamp formats are supported: ISO 8601 format, RFC 2822 format, date strings with month names spelled out, such as “January 1, 2022”, date strings with abbreviated month names, such as “Jan 1, 2022", and date strings with two-digit years- MM/DD/YY. The first time the input is run, the Database Collector applet only selects those rows that contain a value higher than the value you specified in this field. Each time the input finishes running, the Database Collector applet updates the input's Retrieval Value with the value in the last row of the Rising Column. |
     | Unique IDs (Optional) | This option is only displayed when the Storage Method is Append. Specify the column name(s) to match against when multiple records have the same value in the Rising Column. This column must be included in the query results. This is a comma separated field that supports multiple values. In addition, when specifying a Unique IDs, the query should use the greater than equal to sign (`>=`) in relation to the Retrieval Value. If the Unique IDs is left empty, the user should use the greater than sign (`>`). |
@@ -27085,7 +26475,6 @@ The Broker VM provides a Database Collector applet that enables you to collect d
     -   Deactivate to disable the Database Collector.
 
 #### Activate DSPM Fileshare
-Abstract
 
 Learn more about activating a Broker VM with the DSPM Fileshare applet.
 
@@ -27170,7 +26559,6 @@ Inventory list
 Each new connection that is created correlates to an asset in the inventory. You can see the connections by clicking Inventory → All Assets → Data → Storage Buckets.
 
 #### Activate Files and Folders Collector
-Abstract
 
 Learn more about activating a Broker VM with a Files and Folders Collector applet.
 
@@ -27242,7 +26630,7 @@ Cortex Cloud only supports ingestion of files encoded in UTF-8 format.
     | Field | Description |
     | --- | --- |
     | Storage Method | This option is only displayed in Batch Mode. Specify whether to Append the read data to the dataset, or to Replace all the data in the dataset with the newly read data. Append: This mode is useful for log files where you want to keep all the log info from before.; Replace: This mode is useful for adding inventory data from CSV and JSON files which include properties, for example, a list of machines, a list of users, or a mapping of endpoints to users to create a lookup dataset. In each data collection cycle, the new data completely replaces the existing data in the dataset. You can use the records from the lookup datasets for correlation and enrichment through parsing rules, correlation rules, and queries. \*\*Note:\*\*-   When the storing method is Replace, the maximum size for the total data to be imported into a lookup dataset is 30 MB each time the data is fetched.; The inventory data ingested using the Files and Folders collector is counted towards license utilization.; When you use a JOINT function with a lookup table in a query or correlation rule, make sure you configure the conflict strategy to point to the raw dataset. This ensures that the system fields are taken from the raw dataset and not from the lookup table. |
-    | Target Dataset | This option is only displayed in Batch Mode when the storing method is Replace. Select the name of an existing Lookup dataset or create a new Lookup dataset by specifying the name. When you create a new target dataset name, specify a name that will be more meaningful for your users when they query the dataset. For example, if the original file name is `accssusr.csv`, you can save the dataset as `access_per_users`. Dataset names can contain special characters from different languages, numbers (`0-9`) and underscores (`_`). You can create dataset names using uppercase characters, but in queries, dataset names are always treated as if they are lowercase. \*\*Note:\*\* You can't specify a file name that's the same as a system file name.; The name of a dataset created from a _tsv_ file must always include the extension. If the original file name is mrkdptusrsnov23.tsv, you can name save the dataset with the name marketing\_dept\_users\_Nov\_2023.tsv. |
+    | Target Dataset | This option is only displayed in Batch Mode when the storing method is Replace. Select the name of an existing Lookup dataset or create a new Lookup dataset by specifying the name. When you create a new target dataset name, specify a name that will be more meaningful for your users when they query the dataset. For example, if the original file name is `accssusr.csv`, you can save the dataset as `access_per_users`. Dataset names can contain special characters from different languages, numbers (`0-9`) and underscores (`_`). You can create dataset names using uppercase characters, but in queries, dataset names are always treated as if they are lowercase. \*\*Note:\*\* You can't specify a file name that's the same as a system file name.; The name of a dataset created from a _tsv_ file must always include the extension. If the original file name is mrkdptusrsnov23.tsv, you can name save the dataset with the name marketing_dept_users_Nov_2023.tsv. |
     | Vendor and Product | Specify the Vendor and Product for the type of data being collected. The vendor and product are used to define the name of your Cortex Query Language (XQL) dataset (`<Vendor>_<Product>_raw`). \*\*Note:\*\* The Vendor and Product defaults to Auto-Detect when the Log Format is set to CEF or LEEF. |
     
     Generate Preview
@@ -27279,7 +26667,6 @@ Cortex Cloud only supports ingestion of files encoded in UTF-8 format.
     -   Deactivate to disable the Files and Folders Collector.
 
 #### Activate FTP Collector
-Abstract
 
 Learn more about activating a Broker VM with a FTP Collector applet.
 
@@ -27327,12 +26714,7 @@ The Broker VM provides a FTP Collector applet that enables you to monitor and co
     | Port | Enter the FTP port number. |
     | Username | Enter the username to login to the FTP server. |
     | Password | Enter the password to login to the FTP server. |
-    | SSH Key-Based Authentication | This checkbox is only displayed when setting a SFTP Collector, which works with both Username and Password authentication or SSH Key-Based Authentication. You can either leave this checkbox clear and set a Username and Password (default) or select SSH Key-Based Authentication to Browse to a Private Key. When this connection is established with a server using a Self-signed certificate, you must upload it first to the Broker VM as a Trusted CA Certificate. \*\*Note:\*\* When configuring an SFTP connection, Cortex Cloud expects the private key to be in the RSA format that is included in the **`-----BEGIN RSA PRIVATE KEY-----`** tag. Cortex Cloud does not support providing the private key in the OpenSSH format from the **`-----BEGIN OPENSSH PRIVATE KEY-----`** tag. When using **`ssh-keygen`** using a Mac, you get the OpenSSH format by default. The command for getting the RSA format is:
-    ```
-    ssh-keygen -t rsa -b 4096 -C <email address> -m PEM
-    ```
-    
-     |
+    | SSH Key-Based Authentication | This checkbox is only displayed when setting a SFTP Collector, which works with both Username and Password authentication or SSH Key-Based Authentication. You can either leave this checkbox clear and set a Username and Password (default) or select SSH Key-Based Authentication to Browse to a Private Key. When this connection is established with a server using a Self-signed certificate, you must upload it first to the Broker VM as a Trusted CA Certificate. \*\*Note:\*\* When configuring an SFTP connection, Cortex Cloud expects the private key to be in the RSA format that is included in the **`-----BEGIN RSA PRIVATE KEY-----`** tag. Cortex Cloud does not support providing the private key in the OpenSSH format from the **`-----BEGIN OPENSSH PRIVATE KEY-----`** tag. When using **`ssh-keygen`** using a Mac, you get the OpenSSH format by default. The command for getting the RSA format is: ssh-keygen -t rsa -b 4096 -C <email address> -m PEM |
     | Folder Path | Specify the path to the folder on the FTP site where the files are located that you want to collect. |
     | Recursive | Select this checkbox to configure the FTP Collector applet to recursively examine any subfolders for new files as long as the folders are readable. This is not configured by default. |
     | Test Connection | Select to validate the FTP connection. |
@@ -27393,7 +26775,6 @@ The Broker VM provides a FTP Collector applet that enables you to monitor and co
     -   Deactivate to disable the FTP Collector.
 
 #### Activate Local Agent Settings
-Abstract
 
 Learn more about activating a Local Agent Settings applet on a Broker VM.
 
@@ -27541,7 +26922,6 @@ After you configure and register your Palo Alto Networks Broker VM, proceed to s
     -   Deactivate to disable the local agent settings altogether.
 
 #### Activate NetFlow Collector
-Abstract
 
 Learn more about activating a Broker VM with a NetflFlow Collector applet.
 
@@ -27602,7 +26982,7 @@ Set up and configure Broker VM
     | Field | Description |
     | --- | --- |
     | Source Network | Specify the IP address or a Classless Inter-Domain Routing (CIDR) of the source network device that sends the flow records to Cortex Cloud . Leave the field empty to receive data from any device on the specified port (default). If you do not specify an IP address or a CIDR, Cortex Cloud can receive data from any source IP address or CIDR that transmits via the specified port. If IP addresses overlap in multiple rows in the Source Network field, such as 10.0.0.10 in the first row and 10.0.0.0/24 in the second row, the NetFlow Collector captures the IP address in the first row. |
-    | Vendor and Product | Specify a particular vendor and product to be associated with each dataset entry or leave the default IP Flow setting. The Vendor and Product values are used to define the name of your Cortex Query Language (XQL) dataset **`<Vendor>_<Product>_raw`**. If you do not define a vendor or product, Cortex Cloud uses the default values with the resulting dataset name `ip_flow_ip_flow_raw`. Consider changing the default values in order to uniquely identify the source network device. After each configuration, select [image: blue-arrow.png] to save your changes and then select Done to update the NetFlow Collector with your settings. |
+    | Vendor and Product | Specify a particular vendor and product to be associated with each dataset entry or leave the default IP Flow setting. The Vendor and Product values are used to define the name of your Cortex Query Language (XQL) dataset **`<Vendor>_<Product>_raw`**. If you do not define a vendor or product, Cortex Cloud uses the default values with the resulting dataset name `ip_flow_ip_flow_raw`. Consider changing the default values in order to uniquely identify the source network device. After each configuration, select → to save your changes and then select Done to update the NetFlow Collector with your settings. |
     
 5.  (Optional) Make additional changes to the NetFlow Collector data sources.
     
@@ -27656,7 +27036,6 @@ Set up and configure Broker VM
     You can also Ingest NetFlow flow records as datasets.Ingest NetFlow flow records as datasets
 
 #### Activate Network Mapper
-Abstract
 
 Learn more about activating the Network Mapper to scan your network.
 
@@ -27682,7 +27061,7 @@ The Network Mapper allows you to scan your network to detect and identify unmana
     | Scan Method | Select the either ICMP echo or TCP SYN scan method to identify your network hosts. When selecting TCP SYN you can enter single ports and ranges together, for example **`80-83, 443`**. |
     | Scan Requests per Second | Define the maximum number of scan requests you want to send on your network per second. By default, the number of scan requests are defined as 1000. \*\*Note:\*\* Each IP address range can receive multiple scan requests based on it's availability. |
     | Scanning Scheduler | Define when you want to run the network mapper scan. You can select either daily, weekly, or monthly at a specific time. |
-    | Scanned Ranges | Select from the list of exiting IP address ranges to scan. Make sure to [image: network-mapper-enter.png] after each selection. \*\*Note:\*\* IP address ranges are displayed according to what you defined as your Network Parameters. |
+    | Scanned Ranges | Select from the list of exiting IP address ranges to scan. Make sure to  after each selection. \*\*Note:\*\* IP address ranges are displayed according to what you defined as your Network Parameters. |
     
 4.  Activate the applet.
     
@@ -27767,7 +27146,7 @@ After the registry scanner is initialized, perform the following steps to verify
     
 4.  Select the Registry Scanner app to open a window displaying the following information:
     
-    [image: registry-scanner-applet-on-boker-vm-window-panel.png]
+    
     
     -   Connection: Shows the app's current connection status. You can also Deactivate the app.
         
@@ -27798,7 +27177,6 @@ After the registry scanner is initialized, perform the following steps to verify
     -   Manage a Sonatype connector
 
 #### Syslog Collector applet
-Abstract
 
 Learn more about the Broker VM Syslog Collector applet.
 
@@ -27812,7 +27190,6 @@ The Syslog Collector applet on a Broker VM enables you to collect Syslog data fr
 | Links to content pack/integration details | The [Syslog](https://xsoar.pan.dev/docs/reference/integrations/syslog-v2) content pack enables automated issue creation by acting as a Syslog server for incoming logs, while also allowing the platform to act as a Syslog client to send messages and mirror investigation activities to external Syslog destinations. It contains the following integrations: [Syslog Sender](https://xsoar.pan.dev/docs/reference/integrations/syslog-sender): Use this integration to send messages in RFC 5424 message format and mirror incident War Room entries to Syslog. It includes the **`mirror-investigation`**, **`send-notification`**, and **`syslog-send`** commands.; [Syslog v2](https://xsoar.pan.dev/docs/reference/integrations/syslog-v2): Use this integration to act as a long-running Syslog server, supporting RFC3164, RFC5424, and RFC6587 formats, which enables automatically opening issues from Syslog clients. This integration is configured using parameters such as Port mapping, Certificate, Private Key, and a Message Regex Filter for issue creation. |
 
 ##### Activate Syslog Collector
-Abstract
 
 Learn how to set up and activate the Syslog Collector applet on a Broker VM within your network.
 
@@ -27876,7 +27253,7 @@ Cortex Cloud supports multiple sources over a single port on a single Syslog Col
     | Vendor and Product | Specify a particular vendor and product for the Syslog format defined or leave the default Auto-Detect setting. |
     | Source Network | Specify the IP address or Classless Inter-Domain Routing (CIDR). If you leave this blank, Cortex Cloud will allow receipt of logs from any source IP address or CIDR that transmits over the specified protocol and port. When you specify overlapping addresses in the Source Network field in multiple rows, such as 10.0.0.10 in the first row and 10.0.0.0/24 in the second row, the order of the addresses matter. In this example, the IP address 10.0.0.10 is only captured from the first row definition. For more information on prioritizing the order of the syslog formats, see **Task 5**. |
     
-    After each configuration, select [image: blue-arrow.png] to save the changes and then Done to update the Syslog Collector with your settings.
+    After each configuration, select → to save the changes and then Done to update the Syslog Collector with your settings.
     
 
 ###### Task 4. Add a new Syslog Collector data source
@@ -27932,7 +27309,7 @@ Cortex Cloud supports multiple sources over a single port on a single Syslog Col
     | Vendor and Product | Enter a particular vendor and product for the Syslog format defined or leave the default Auto-Detect setting. |
     | Source Network | Specify the IP address or Classless Inter-Domain Routing (CIDR). If you leave this blank, Cortex Cloud will allow receipt of logs from any source IP address or CIDR that transmits over the specified protocol and port. When you specify overlapping addresses in the Source Network field in multiple rows, such as 10.0.0.10 in the first row and 10.0.0.0/24 in the second row, the order of the addresses matter. In this example, the IP address 10.0.0.10 is only captured from the first row definition. For more information on prioritizing the order of the syslog formats, see **Task 5**. |
     
-    After each configuration, select [image: blue-arrow.png] to save the changes and then Done to update the Syslog Collector with your settings.
+    After each configuration, select → to save the changes and then Done to update the Syslog Collector with your settings.
     
 
 ###### Task 5. Make additional changes to the Syslog Collector data sources configured
@@ -27965,7 +27342,6 @@ After the Syslog Collector has been activated, you can make additional changes t
 -   Deactivate to disable the Syslog Collector.
 
 ##### Ingest logs from a Syslog receiver
-Abstract
 
 To extend visibility, Cortex Cloud can receive Syslog from additional vendors that use CEF or LEEF formatted over Syslog (TLS not supported).
 
@@ -27986,7 +27362,6 @@ To receive Syslog from an external source:
 3.  Use the XQL Search to search your logs.
 
 ##### Check Point FW1/VPN1
-Abstract
 
 Learn more about collecting Check Point FW1/VPN1 logs using a Syslog Collector applet and content pack integration in Cortex Cloud.
 
@@ -27999,7 +27374,6 @@ You can configure collecting Check Point FW1/VPN1 logs using a Broker VM Syslog 
 | Link to content pack/integration details | The [Check Point Firewall](https://cortex.marketplace.pan.dev/marketplace/details/CheckpointFirewall/) content pack manages Check Point firewall devices via API, allowing the reading information, sending commands, and orchestrating configuration and blocking actions. It contains a modeling rule (**`CheckPoint Firewall Collection`**) and several playbooks (for example Checkpoint - Block IP - Append Group, Checkpoint - Publish&Install configuration, Checkpoint - Block IP - Custom Block Rule, and Checkpoint - Block URL). It also includes the following integration: [CheckPoint Firewall v2](https://xsoar.pan.dev/docs/reference/integrations/check-point-firewall-v2): Use this integration to read information and send commands to the Check Point Firewall server. It includes commands for handling threat protection and profiles, such as **`checkpoint-set-threat-protection`** and **`checkpoint-add-threat-profile`**. |
 
 ###### Ingest logs from Check Point firewalls
-Abstract
 
 To take advantage of Cortex Cloud investigation and detection capabilities while using Check Point firewalls, forward your firewall logs to Cortex Cloud.
 
@@ -28039,7 +27413,6 @@ When Cortex Cloud starts to receive logs, the app can begin stitching network co
     Configure your firewall policy to log all traffic and set up the Log Exporter to forward logs to the Syslog Collector. For more information on setting up Log Exporter, see the Check Point documentation.
 
 ##### Cisco ASA firewalls and AnyConnect
-Abstract
 
 Learn more about collecting Cisco ASA firewall and AnyConnect VPN logs using a Syslog Collector applet and content pack integration in Cortex Cloud.
 
@@ -28052,7 +27425,6 @@ You can configure collecting Cisco ASA firewall and AnyConnect VPN logs using a 
 | Link to content pack/integration instructions | The [Cisco ASA](https://cortex.marketplace.pan.dev/marketplace/details/CiscoASA/) content pack interacts with the Cisco Adaptive Security Appliance Software via an API to manage interfaces, rules, and network objects. The content pack includes the following integration: [Cisco Adaptive Security Appliance Software](https://xsoar.pan.dev/docs/reference/integrations/cisco-asa): Use this integration to manage interfaces, rules, and network objects on the Cisco Adaptive Security Appliance Software platform. This integration includes commands for listing and managing network object groups, local user groups, local users, time ranges, security object groups, user objects, interface information, configuration backup, and creating, listing, getting, editing, and deleting firewall rules, along with the command to save the running configuration to memory (**`cisco-asa-write-memory`**). |
 
 ###### Ingest logs from Cisco ASA firewalls and AnyConnect
-Abstract
 
 Extend Cortex Cloud visibility into logs from Cisco ASA firewalls and Cisco AnyConnect VPN.
 
@@ -28091,7 +27463,6 @@ To integrate your logs, you first need to set up an applet in a Broker VM within
     Configure your firewall and AnyConnect VPN policies to log all traffic and forward the traffic logs to the Syslog Collector in a CISCO format. By logging all traffic, you enable Cortex Cloud to detect anomalous behavior from Cisco ASA firewall logs and Cisco AnyConnect VPN logs. For more information on setting up Log Forwarding on Cisco ASA firewalls or Cisco AnyConnect VPN, see the Cisco ASA Series documentation.
 
 ##### Corelight Zeek
-Abstract
 
 Learn more about collecting Corelight Zeek logs using a Syslog Collector applet and content pack integration in Cortex Cloud.
 
@@ -28104,7 +27475,6 @@ You can configure collecting Corelight Zeek logs using a Broker VM Syslog Collec
 | Link to content pack/integration details | The [Corelight Zeek](https://cortex.marketplace.pan.dev/marketplace/details/CorelightZeek) content pack provides data normalization capabilities through rules for parsing and modeling network protocol logs that are ingested via a Syslog collector on the Broker VM into Cortex Cloud. It includes **`Corelight Zeek Modeling Rules`** and **`Corelight Zeek Parsing Rules`**. |
 
 ###### Ingest logs from Corelight Zeek
-Abstract
 
 Extend Cortex Cloud visibility into logs from Corelight Zeek.
 
@@ -28138,7 +27508,6 @@ To integrate your logs, you first need to set up an applet in a Broker VM within
     For full setup instructions, see the Corelight Zeek documentation.
 
 ##### Forcepoint DLP
-Abstract
 
 Learn more about collecting Forcepoint DLP logs using a Syslog Collector applet and content pack integration in Cortex Cloud.
 
@@ -28151,7 +27520,6 @@ You can configure collecting Corelight Zeek logs using a Broker VM Syslog Collec
 | Link to content pack/integration details | The [Forcepoint DLP](https://cortex.marketplace.pan.dev/marketplace/details/ForcepointDLP) content pack fetches security incidents from Forcepoint DLP and ingests them as events into Cortex Cloud for processing and analysis. contains the **`Forcepoint DLP Modeling Rule`**, and the **`Forcepoint DLP Parsing Rule`**. It also includes the following integration: [Forcepoint DLP Event Collector (Beta)](https://xsoar.pan.dev/docs/reference/integrations/forcepoint-dlp-event-collector): Use this integration to fetch security incidents from Forcepoint DLP as Cortex Cloud events. This integration is an event collector and utilizes parsing and modeling rules within the content pack for data normalization. |
 
 ###### Ingest logs from Forcepoint DLP
-Abstract
 
 Extend Cortex Cloud visibility into logs from Forcepoint DLP.
 
@@ -28196,7 +27564,6 @@ Configure Forcepoint DLP collection in Cortex Cloud.
 5.  After Cortex Cloud begins receiving data from Forcepoint DLP, you can use XQL Search to search your logs using the `forcepoint_dlp_endpoint` dataset.
 
 ##### Fortinet Fortigate
-Abstract
 
 Learn more about collecting Fortinet Fortigate firewalls logs using a Syslog Collector applet and content pack integration in Cortex Cloud.
 
@@ -28206,11 +27573,9 @@ You can configure collecting Fortinet Fortigate firewall logs using a Broker VM 
 | --- | --- |
 | Syslog Collector applet overview | If you use Fortinet Fortigate firewalls, you can forward network connection logs to Cortex Cloud using the Broker VM Syslog Collector applet in a CEF format. |
 | Link to Syslog Collector applet instructions | Ingest logs from Fortinet Fortigate firewalls |
-| Links to content pack/integration details | The [FortiManager](https://cortex.marketplace.pan.dev/marketplace/details/FortiManager) content pack enables managing Fortinet devices through a single console central management system and provides data normalization for FortiManager event logs ingested via Syslog into Cortex Cloud. It contains the **`Fortinet FortiManager Modeling Rule`**, the **`Fortinet FortiManager Parsing Rule`**, and the FortiManager - Install Policy Package on Device playbook. It also includes the following integration:-   [FortiManager](https://xsoar.pan.dev/docs/reference/integrations/forti-manager): Use this integration to manage Fortinet devices as a single console central management system. This integration enables executing the FortiManager - Install Policy Package on Device playbook, which installs a FortiManager firewall policy package on a given device.
-; The [FortiGate](https://cortex.marketplace.pan.dev/marketplace/details/FortiGate) content pack manages FortiGate firewalls, delivering convergence and deep security visibility across diverse network environments, and facilitating data normalization for ingested event logs. It contains the **`Fortinet FortiGate Modeling Rule`**, and the **`FortiGate Parsing Rule`**. It also includes the following integration:-   [FortiGate](https://xsoar.pan.dev/docs/reference/integrations/forti-gate): Use this integration to manage Fortinet FortiGate firewall devices, leveraging the Fortinet FortiOS operating system to provide deep visibility and consistent security across environments like remote offices, campuses, and data centers. It includes commands for listing, creating, updating, moving, and deleting firewall policies, addresses (IPv4 and IPv6, including multicasts), and service groups, alongside functionalities like banning and unbanning IPs. |
+| Links to content pack/integration details | The [FortiManager](https://cortex.marketplace.pan.dev/marketplace/details/FortiManager) content pack enables managing Fortinet devices through a single console central management system and provides data normalization for FortiManager event logs ingested via Syslog into Cortex Cloud. It contains the **`Fortinet FortiManager Modeling Rule`**, the **`Fortinet FortiManager Parsing Rule`**, and the FortiManager - Install Policy Package on Device playbook. It also includes the following integration:- [FortiManager](https://xsoar.pan.dev/docs/reference/integrations/forti-manager): Use this integration to manage Fortinet devices as a single console central management system. This integration enables executing the FortiManager - Install Policy Package on Device playbook, which installs a FortiManager firewall policy package on a given device. ; The [FortiGate](https://cortex.marketplace.pan.dev/marketplace/details/FortiGate) content pack manages FortiGate firewalls, delivering convergence and deep security visibility across diverse network environments, and facilitating data normalization for ingested event logs. It contains the **`Fortinet FortiGate Modeling Rule`**, and the **`FortiGate Parsing Rule`**. It also includes the following integration:- [FortiGate](https://xsoar.pan.dev/docs/reference/integrations/forti-gate): Use this integration to manage Fortinet FortiGate firewall devices, leveraging the Fortinet FortiOS operating system to provide deep visibility and consistent security across environments like remote offices, campuses, and data centers. It includes commands for listing, creating, updating, moving, and deleting firewall policies, addresses (IPv4 and IPv6, including multicasts), and service groups, alongside functionalities like banning and unbanning IPs. |
 
 ###### Ingest logs from Fortinet Fortigate firewalls
-Abstract
 
 Extend Cortex Cloud visibility into logs from Fortinet Fortigate firewalls.
 
@@ -28242,7 +27607,6 @@ To integrate your logs, you first need to set up an applet in a Broker VM within
     Configure your firewall policy to log all traffic and forward the traffic logs to the Syslog collector in a CEF format. By logging all traffic, you enable Cortex Cloud to detect anomalous behavior from Fortinet Fortigate firewall logs. For more information on setting up Log Forwarding on Fortinet Fortigate firewalls, see the Fortinet FortiOS documentation.
 
 ##### Next-Generation Firewall
-Abstract
 
 Learn more ingesting firewall data from your Next-Generation Firewall (NGFW) and Panorama devices in Cortex Cloud.
 
@@ -28255,7 +27619,6 @@ You can configure collecting Next-Generation Firewall logs and data using an int
 | Links to content pack/integration details | The [PAN-OS by Palo Alto Networks](https://cortex.marketplace.pan.dev/marketplace/details/PANOS/) content pack manages Palo Alto Networks Firewalls and Panorama via API, allowing users to create, modify, and manage custom security policies, perform configuration commits, manage dynamic lists, perform system upgrades, and query various log types. It contains various playbooks, a classifier (Panorama Classifier) and mapper (Panorama Mapper), issue fields, issue types, and automations/scripts. It also includes the following integration: [Palo Alto Networks PAN-OS](https://xsoar.pan.dev/docs/reference/integrations/panorama): Use this integration to manage Palo Alto Networks Firewall and Panorama, including managing Prisma Access through Panorama, creating and managing security policies, and querying logs. This integration includes commands for managing the master key, checking dynamic updates status, downloading and installing various dynamic updates (for example, AntiVirus, WildFire, GlobalProtect Clientless VPN), listing and deleting policy rules (including new types like application-override, authentication, decryption, nat, and pbf), managing addresses and URL categories, retrieving rule hit counts, disabling rules, and performing hygiene checks on various security profiles and configurations. |
 
 ###### Ingest Next-Generation Firewall logs using the Syslog collector
-Abstract
 
 Use the Syslog collector to ingest NGFW logs in CEF format. This method is useful when your firewalls are located in a different region, or bandwidth issues are encountered due to large log size.
 
@@ -28287,7 +27650,7 @@ Configure the firewall/Panorama for log forwarding to Cortex Cloud
         
     -   Transport, Port (default 514 for UDP)
         
-    -   Facility (default LOG\_USER)
+    -   Facility (default LOG_USER)
         
     
 6.  Select the Custom Log Format tab and click configure the log formats as follows:
@@ -28302,10 +27665,10 @@ Configure the firewall/Panorama for log forwarding to Cortex Cloud
     
     | Log Type | Custom Format |
     | :-- | :-- |
-    | Traffic | CEF:0|PANW|NGFW\_CEF|$sender\_sw\_version|$subtype|$type|1| \_\_firewall\_type=firewall.traffic \_\_timestamp=$start \_\_tz=$high\_res\_timestamp log\_type=$type subtype=$subtype log\_time=$cef-formatted-receive\_time time\_generated=$cef-formatted-time\_generated log\_source\_id=$serial log\_source\_name=$device\_name sequence\_no=$seqno source\_ip=$src dest\_ip=$dst source\_port=$sport dest\_port=$dport nat\_source=$natsrc nat\_dest=$natdst nat\_source\_port=$natsport nat\_dest\_port=$natdport protocol=$proto action=$action source\_user=$srcuser dest\_user=$dstuser xff\_ip=$xff\_ip app=$app app\_category=$category\_of\_app app\_sub\_category=$subcategory\_of\_app rule\_matched=$rule rule\_matched\_uuid=$rule\_uuid severity=1 vsys=$vsys vsys\_name=$vsys\_name from\_zone=$from to\_zone=$to inbound\_if=$inbound\_if outbound\_if=$outbound\_if session\_id=$sessionid source\_device\_category=$src\_category source\_device\_profile=$src\_profile source\_device\_model=$src\_model source\_device\_vendor=$src\_vendor source\_device\_osfamily=$src\_osfamily source\_device\_osversion=$src\_osversion source\_device\_mac=$src\_mac dest\_device\_category=$dst\_category dest\_device\_profile=$dst\_profile dest\_device\_model=$dst\_model dest\_device\_vendor=$dst\_vendor dest\_device\_osfamily=$dst\_osfamily dest\_device\_osversion=$dst\_osversion dest\_device\_mac=$dst\_mac bytes\_sent=$bytes\_sent bytes\_received=$bytes\_received packets\_received=$pkts\_received packets\_sent=$pkts\_sent total\_time\_elapsed=$elapsed session\_end\_reason=$session\_end\_reason url\_category=$category |
-    | Threat | CEF:0|PANW|NGFW\_CEF|$sender\_sw\_version|$threatid|$type|$number-of-severity| \_\_firewall\_type=firewall.threat \_\_timestamp=$cef-formatted-time\_generated \_\_tz=$high\_res\_timestamp log\_type=$type subtype=$subtype log\_time=$cef-formatted-receive\_time time\_generated=$cef-formatted-time\_generated log\_source\_id=$serial log\_source\_name=$device\_name sequence\_no=$seqno source\_ip=$src dest\_ip=$dst source\_port=$sport dest\_port=$dport nat\_source=$natsrc nat\_dest=$natdst nat\_source\_port=$natsport nat\_dest\_port=$natdport protocol=$proto action=$action source\_user=$srcuser dest\_user=$dstuser xff=$xff xff\_ip=$xff\_ip app=$app app\_category=$category\_of\_app app\_sub\_category=$subcategory\_of\_app rule\_matched=$rule rule\_matched\_uuid=$rule\_uuid severity=$number-of-severity vsys=$vsys vsys\_name=$vsys\_name from\_zone=$from to\_zone=$to inbound\_if=$inbound\_if outbound\_if=$outbound\_if session\_id=$sessionid source\_device\_category=$src\_category source\_device\_profile=$src\_profile source\_device\_model=$src\_model source\_device\_vendor=$src\_vendor source\_device\_osfamily=$src\_osfamily source\_device\_osversion=$src\_osversion source\_device\_mac=$src\_mac dest\_device\_category=$dst\_category dest\_device\_profile=$dst\_profile dest\_device\_model=$dst\_model dest\_device\_vendor=$dst\_vendor dest\_device\_osfamily=$dst\_osfamily dest\_device\_osversion=$dst\_osversion dest\_device\_mac=$dst\_mac misc=$misc threat\_id=$threatid threat\_name=$threat\_name threat\_category=$thr\_category direction=$direction user\_agent=$user\_agent |
-    | URL | CEF:0|PANW|NGFW\_CEF|$sender\_sw\_version|$subtype|$type|$number-of-severity| \_\_firewall\_type=firewall.url \_\_timestamp=$cef-formatted-time\_generated \_\_tz=$high\_res\_timestamp log\_type=$type subtype=$subtype log\_time=$cef-formatted-receive\_time time\_generated=$cef-formatted-time\_generated log\_source\_id=$serial log\_source\_name=$device\_name sequence\_no=$seqno source\_ip=$src dest\_ip=$dst source\_port=$sport dest\_port=$dport nat\_source=$natsrc nat\_dest=$natdst nat\_source\_port=$natsport nat\_dest\_port=$natdport protocol=$proto action=$action source\_user=$srcuser dest\_user=$dstuser xff=$xff xff\_ip=$xff\_ip app=$app app\_category=$category\_of\_app app\_sub\_category=$subcategory\_of\_app rule\_matched=$rule rule\_matched\_uuid=$rule\_uuid severity=$number-of-severity vsys=$vsys vsys\_name=$vsys\_name from\_zone=$from to\_zone=$to inbound\_if=$inbound\_if outbound\_if=$outbound\_if session\_id=$sessionid source\_device\_category=$src\_category source\_device\_profile=$src\_profile source\_device\_model=$src\_model source\_device\_vendor=$src\_vendor source\_device\_osfamily=$src\_osfamily source\_device\_osversion=$src\_osversion source\_device\_mac=$src\_mac dest\_device\_category=$dst\_category dest\_device\_profile=$dst\_profile dest\_device\_model=$dst\_model dest\_device\_vendor=$dst\_vendor dest\_device\_osfamily=$dst\_osfamily dest\_device\_osversion=$dst\_osversion dest\_device\_mac=$dst\_mac uri=$misc threat\_id=$threatid threat\_name=$threat\_name threat\_category=$thr\_category direction=$direction user\_agent=$user\_agent url\_category=$category url\_category\_list=$url\_category\_list content\_type=$contenttype http\_method=$http\_method http\_headers=$http\_headers http2\_connection=$http2\_connection referer=$referer pcap\_id=$pcap\_id |
-    | File Data | CEF:0|PANW|NGFW\_CEF|$sender\_sw\_version|$threatid|$type|$number-of-severity| \_\_firewall\_type=firewall.filedata \_\_timestamp=$cef-formatted-time\_generated \_\_tz=$high\_res\_timestamp log\_type=$type subtype=$subtype log\_time=$cef-formatted-receive\_time time\_generated=$cef-formatted-time\_generated log\_source\_id=$serial log\_source\_name=$device\_name sequence\_no=$seqno source\_ip=$src dest\_ip=$dst source\_port=$sport dest\_port=$dport nat\_source=$natsrc nat\_dest=$natdst nat\_source\_port=$natsport nat\_dest\_port=$natdport protocol=$proto action=$action source\_user=$srcuser dest\_user=$dstuser xff=$xff xff\_ip=$xff\_ip app=$app app\_category=$category\_of\_app app\_sub\_category=$subcategory\_of\_app rule\_matched=$rule rule\_matched\_uuid=$rule\_uuid severity=$number-of-severity vsys=$vsys vsys\_name=$vsys\_name from\_zone=$from to\_zone=$to inbound\_if=$inbound\_if outbound\_if=$outbound\_if session\_id=$sessionid source\_device\_category=$src\_category source\_device\_profile=$src\_profile source\_device\_model=$src\_model source\_device\_vendor=$src\_vendor source\_device\_osfamily=$src\_osfamily source\_device\_osversion=$src\_osversion source\_device\_mac=$src\_mac dest\_device\_category=$dst\_category dest\_device\_profile=$dst\_profile dest\_device\_model=$dst\_model dest\_device\_vendor=$dst\_vendor dest\_device\_osfamily=$dst\_osfamily dest\_device\_osversion=$dst\_osversion dest\_device\_mac=$dst\_mac misc=$misc threat\_id=$threatid threat\_name=$threat\_name threat\_category=$thr\_category direction=$direction user\_agent=$user\_agent file\_url=$file\_url filedigest=$filedigest filetype=$filetype pcap\_id=$pcap\_id |
+    | Traffic | CEF:0|PANW|NGFW_CEF|$sender_sw_version|$subtype|$type|1| __firewall_type=firewall.traffic __timestamp=$start __tz=$high_res_timestamp log_type=$type subtype=$subtype log_time=$cef-formatted-receive_time time_generated=$cef-formatted-time_generated log_source_id=$serial log_source_name=$device_name sequence_no=$seqno source_ip=$src dest_ip=$dst source_port=$sport dest_port=$dport nat_source=$natsrc nat_dest=$natdst nat_source_port=$natsport nat_dest_port=$natdport protocol=$proto action=$action source_user=$srcuser dest_user=$dstuser xff_ip=$xff_ip app=$app app_category=$category_of_app app_sub_category=$subcategory_of_app rule_matched=$rule rule_matched_uuid=$rule_uuid severity=1 vsys=$vsys vsys_name=$vsys_name from_zone=$from to_zone=$to inbound_if=$inbound_if outbound_if=$outbound_if session_id=$sessionid source_device_category=$src_category source_device_profile=$src_profile source_device_model=$src_model source_device_vendor=$src_vendor source_device_osfamily=$src_osfamily source_device_osversion=$src_osversion source_device_mac=$src_mac dest_device_category=$dst_category dest_device_profile=$dst_profile dest_device_model=$dst_model dest_device_vendor=$dst_vendor dest_device_osfamily=$dst_osfamily dest_device_osversion=$dst_osversion dest_device_mac=$dst_mac bytes_sent=$bytes_sent bytes_received=$bytes_received packets_received=$pkts_received packets_sent=$pkts_sent total_time_elapsed=$elapsed session_end_reason=$session_end_reason url_category=$category |
+    | Threat | CEF:0|PANW|NGFW_CEF|$sender_sw_version|$threatid|$type|$number-of-severity| __firewall_type=firewall.threat __timestamp=$cef-formatted-time_generated __tz=$high_res_timestamp log_type=$type subtype=$subtype log_time=$cef-formatted-receive_time time_generated=$cef-formatted-time_generated log_source_id=$serial log_source_name=$device_name sequence_no=$seqno source_ip=$src dest_ip=$dst source_port=$sport dest_port=$dport nat_source=$natsrc nat_dest=$natdst nat_source_port=$natsport nat_dest_port=$natdport protocol=$proto action=$action source_user=$srcuser dest_user=$dstuser xff=$xff xff_ip=$xff_ip app=$app app_category=$category_of_app app_sub_category=$subcategory_of_app rule_matched=$rule rule_matched_uuid=$rule_uuid severity=$number-of-severity vsys=$vsys vsys_name=$vsys_name from_zone=$from to_zone=$to inbound_if=$inbound_if outbound_if=$outbound_if session_id=$sessionid source_device_category=$src_category source_device_profile=$src_profile source_device_model=$src_model source_device_vendor=$src_vendor source_device_osfamily=$src_osfamily source_device_osversion=$src_osversion source_device_mac=$src_mac dest_device_category=$dst_category dest_device_profile=$dst_profile dest_device_model=$dst_model dest_device_vendor=$dst_vendor dest_device_osfamily=$dst_osfamily dest_device_osversion=$dst_osversion dest_device_mac=$dst_mac misc=$misc threat_id=$threatid threat_name=$threat_name threat_category=$thr_category direction=$direction user_agent=$user_agent |
+    | URL | CEF:0|PANW|NGFW_CEF|$sender_sw_version|$subtype|$type|$number-of-severity| __firewall_type=firewall.url __timestamp=$cef-formatted-time_generated __tz=$high_res_timestamp log_type=$type subtype=$subtype log_time=$cef-formatted-receive_time time_generated=$cef-formatted-time_generated log_source_id=$serial log_source_name=$device_name sequence_no=$seqno source_ip=$src dest_ip=$dst source_port=$sport dest_port=$dport nat_source=$natsrc nat_dest=$natdst nat_source_port=$natsport nat_dest_port=$natdport protocol=$proto action=$action source_user=$srcuser dest_user=$dstuser xff=$xff xff_ip=$xff_ip app=$app app_category=$category_of_app app_sub_category=$subcategory_of_app rule_matched=$rule rule_matched_uuid=$rule_uuid severity=$number-of-severity vsys=$vsys vsys_name=$vsys_name from_zone=$from to_zone=$to inbound_if=$inbound_if outbound_if=$outbound_if session_id=$sessionid source_device_category=$src_category source_device_profile=$src_profile source_device_model=$src_model source_device_vendor=$src_vendor source_device_osfamily=$src_osfamily source_device_osversion=$src_osversion source_device_mac=$src_mac dest_device_category=$dst_category dest_device_profile=$dst_profile dest_device_model=$dst_model dest_device_vendor=$dst_vendor dest_device_osfamily=$dst_osfamily dest_device_osversion=$dst_osversion dest_device_mac=$dst_mac uri=$misc threat_id=$threatid threat_name=$threat_name threat_category=$thr_category direction=$direction user_agent=$user_agent url_category=$category url_category_list=$url_category_list content_type=$contenttype http_method=$http_method http_headers=$http_headers http2_connection=$http2_connection referer=$referer pcap_id=$pcap_id |
+    | File Data | CEF:0|PANW|NGFW_CEF|$sender_sw_version|$threatid|$type|$number-of-severity| __firewall_type=firewall.filedata __timestamp=$cef-formatted-time_generated __tz=$high_res_timestamp log_type=$type subtype=$subtype log_time=$cef-formatted-receive_time time_generated=$cef-formatted-time_generated log_source_id=$serial log_source_name=$device_name sequence_no=$seqno source_ip=$src dest_ip=$dst source_port=$sport dest_port=$dport nat_source=$natsrc nat_dest=$natdst nat_source_port=$natsport nat_dest_port=$natdport protocol=$proto action=$action source_user=$srcuser dest_user=$dstuser xff=$xff xff_ip=$xff_ip app=$app app_category=$category_of_app app_sub_category=$subcategory_of_app rule_matched=$rule rule_matched_uuid=$rule_uuid severity=$number-of-severity vsys=$vsys vsys_name=$vsys_name from_zone=$from to_zone=$to inbound_if=$inbound_if outbound_if=$outbound_if session_id=$sessionid source_device_category=$src_category source_device_profile=$src_profile source_device_model=$src_model source_device_vendor=$src_vendor source_device_osfamily=$src_osfamily source_device_osversion=$src_osversion source_device_mac=$src_mac dest_device_category=$dst_category dest_device_profile=$dst_profile dest_device_model=$dst_model dest_device_vendor=$dst_vendor dest_device_osfamily=$dst_osfamily dest_device_osversion=$dst_osversion dest_device_mac=$dst_mac misc=$misc threat_id=$threatid threat_name=$threat_name threat_category=$thr_category direction=$direction user_agent=$user_agent file_url=$file_url filedigest=$filedigest filetype=$filetype pcap_id=$pcap_id |
     
 7.  Configure Escaping characters as follows:
     
@@ -28314,7 +27677,7 @@ Configure the firewall/Panorama for log forwarding to Cortex Cloud
     -   Escape Character: \\
         
     
-    [image: Syslog_settings_NGFW_log_collection.png]
+    
     
 
 Configure Syslog collection
@@ -28322,7 +27685,6 @@ Configure Syslog collection
 Set up a Syslog collector for the logs, as explained in Activate Syslog Collector. In Task 4, ensure that you set Format to CEF.
 
 ##### PingFederate
-Abstract
 
 Learn more about collecting PingFederate authentication logs using a Syslog Collector applet in Cortex Cloud.
 
@@ -28334,7 +27696,6 @@ You can configure collecting PingFederate authentication logs using a Broker VM 
 | Link to Syslog Collector applet instructions | Ingest authentication logs from PingFederate |
 
 ###### Ingest authentication logs from PingFederate
-Abstract
 
 Ingest authentication logs and data from PingFederate for use in Cortex Cloud authentication stories.
 
@@ -28355,7 +27716,6 @@ To receive authentication logs from PingFederate, you must first write Audit and
 3.  To search for specific authentication logs or data, you can Create an Authentication Query or use the XQL Search.
 
 ##### Zscaler Internet Access
-Abstract
 
 Learn more about collecting Zscaler Internet Access logs using a Syslog Collector applet and content pack integrations in Cortex Cloud.
 
@@ -28368,7 +27728,6 @@ You can configure collecting Zscaler Internet Access logs using a Broker VM Sysl
 | Links to content pack/integration details | The [Zscaler Internet Access](https://cortex.marketplace.pan.dev/marketplace/details/Zscaler) content pack provides Cloud security features, including managing URL and IP address policies, managing categories, sandbox reporting, and ingestion and normalization of Zscaler Internet Access (ZIA) logs into Cortex Cloud via both VM-based NSS Feed and Cloud NSS Feed methods. It contains the **`Zscaler Internet Access Modeling Rule`**, the **`Zscaler ZIA Parsing Rule`**, and the Block Domain - Zscaler playbook. It also includes the following integration: [Zscaler Internet Access](https://xsoar.pan.dev/docs/reference/integrations/zscaler): Use this integration to manage URL and IP address allow lists and block lists, manage and update categories, retrieve Sandbox reports, and manage IP destination groups within a Zscaler session. It includes commands for blacklisting and unblacklisting URLs and IPs, managing categories (adding/removing URLs and IPs), retrieving categories, listing, creating, editing, and deleting IP destination groups, manually logging in and logging out, and activating configuration changes in Zscaler. |
 
 ###### Ingest logs from Zscaler Internet Access
-Abstract
 
 Extend Cortex Cloud visibility into logs from Zscaler Internet Access (ZIA).
 
@@ -28415,7 +27774,7 @@ To ingest logs from Zscaler Internet Access (ZIA):
         
         The following image displays the fields required to add an NSS feed.
         
-        [image: zscaler_add_nss_feed.png]
+        
         
         -   NSS Type: Select either NSS for Web (default) to collect web logs or NSS for Firewall to collect firewall logs.
             
@@ -28440,7 +27799,6 @@ To ingest logs from Zscaler Internet Access (ZIA):
     5.  Click Save and activate the change according to the [Zscaler Internet Access (ZIA) documentation](https://help.zscaler.com/zia/saving-and-activating-changes-admin-portal).
 
 ##### Zscaler Private Access
-Abstract
 
 Learn more about collecting Zscaler Private Access logs using a Syslog Collector applet and content pack integration in Cortex Cloud.
 
@@ -28453,7 +27811,6 @@ You can configure collecting Zscaler Private Access logs using a Broker VM Syslo
 | Link to content pack/integration instructions | The [ZscalerZPA](https://cortex.marketplace.pan.dev/marketplace/details/ZscalerZPA) content pack provides data modeling capabilities for event logs ingested from the Zscaler Private Access (ZPA) service, which enables secure access to internal applications and services. It includes the **`Zscaler Private Access Modeling Rule`**. Event collection relies on configuring the generic Syslog Collector on the Broker VM. |
 
 ###### Ingest logs from Zscaler Private Access
-Abstract
 
 Extend Cortex Cloud visibility into logs from Zscaler Private Access (ZPA).
 
@@ -28494,7 +27851,7 @@ To ingest logs from Zscaler Private Access (ZPA):
         
     3.  In the Add Log Receiver window, configure the following fields on the Log Receiver tab:
         
-        -   Name: Specify a name for the log receiver. The name cannot contain special characters, with the exception of periods (.), hyphens (-), and underscores ( \_ ).
+        -   Name: Specify a name for the log receiver. The name cannot contain special characters, with the exception of periods (.), hyphens (-), and underscores ( _ ).
             
         -   Description: (Optional) Specify a log receiver description.
             
@@ -28534,33 +27891,10 @@ To ingest logs from Zscaler Private Access (ZPA):
             
             | Log type | Log template |
             | --- | --- |
-            | User activity | 
-            ```
-            LEEF:1.0|Zscaler|ZPA|4.1|%s{ConnectionStatus}%s{InternalReason}|cat=ZPA User Activity\\tdevTime=%s{LogTimestamp:epoch}\\tCustomer=%s{Customer}\\tSessionID=%s {SessionID}\\tConnectionID=%s{ConnectionID}\\tInternalReason=%s{InternalReason} \\tConnectionStatus=%s{ConnectionStatus}\\tproto=%d{IPProtocol} \\tDoubleEncryption=%d{DoubleEncryption}\\tusrName=%s{Username} \\tdstPort=%d{ServicePort}\\tsrc=%s{ClientPublicIP}\\tsrcPreNAT=%s{ClientPrivateIP} \\tClientLatitude=%f{ClientLatitude}\\tClientLongitude=%f{ClientLongitude} \\tClientCountryCode=%s{ClientCountryCode}\\tClientZEN=%s{ClientZEN} \\tpolicy=%s{Policy}\\tConnector=%s{Connector}\\tConnectorZEN=%s{ConnectorZEN} \\tConnectorIP=%s{ConnectorIP}\\tConnectorPort=%d{ConnectorPort} \\tApplicationName=%s{Host}\\tApplicationSegment=%s{Application}\\tAppGroup=%s{AppGroup} \\tServer=%s{Server}\\tdst=%s{ServerIP}\\tServerPort=%d{ServerPort} \\tPolicyProcessingTime=%d{PolicyProcessingTime}\\tServerSetupTime=%d{ServerSetupTime} \\tTimestampConnectionStart:iso8601=%s{TimestampConnectionStart:iso8601} \\tTimestampConnectionEnd:iso8601=%s{TimestampConnectionEnd:iso8601} \\tTimestampCATx:iso8601=%s{TimestampCATx:iso8601} \\tTimestampCARx:iso8601=%s{TimestampCARx:iso8601} \\tTimestampAppLearnStart:iso8601=%s{TimestampAppLearnStart:iso8601} \\tTimestampZENFirstRxClient:iso8601=%s{TimestampZENFirstRxClient:iso8601} \\tTimestampZENFirstTxClient:iso8601=%s{TimestampZENFirstTxClient:iso8601} \\tTimestampZENLastRxClient:iso8601=%s{TimestampZENLastRxClient:iso8601} \\tTimestampZENLastTxClient:iso8601=%s{TimestampZENLastTxClient:iso8601} \\tTimestampConnectorZENSetupComplete:iso8601=%s{TimestampConnectorZENSetupComplete:iso8601} \\tTimestampZENFirstRxConnector:iso8601=%s{TimestampZENFirstRxConnector:iso8601} \\tTimestampZENFirstTxConnector:iso8601=%s{TimestampZENFirstTxConnector:iso8601} \\tTimestampZENLastRxConnector:iso8601=%s{TimestampZENLastRxConnector:iso8601} \\tTimestampZENLastTxConnector:iso8601=%s{TimestampZENLastTxConnector:iso8601} \\tZENTotalBytesRxClient=%d{ZENTotalBytesRxClient}\\tZENBytesRxClient=%d{ZENBytesRxClient} \\tZENTotalBytesTxClient=%d{ZENTotalBytesTxClient}\\tZENBytesTxClient=%d{ZENBytesTxClient} \\tZENTotalBytesRxConnector=%d{ZENTotalBytesRxConnector} \\tZENBytesRxConnector=%d{ZENBytesRxConnector} \\tZENTotalBytesTxConnector=%d{ZENTotalBytesTxConnector} \\tZENBytesTxConnector=%d{ZENBytesTxConnector}\\tIdp=%s{Idp}\\n
-            ```
-            
-             |
-            | User status | 
-            
-            ```
-            LEEF:1.0|Zscaler|ZPA|4.1|%s{SessionStatus}|cat=ZPA User Status \\tdevTime=%s{LogTimestamp:epoch}\\tCustomer=%s{Customer} \\tusrName=%s{Username}\\tSessionID=%s{SessionID}\\tSessionStatus=%s{SessionStatus} \\tVersion=%s{Version}\\tZEN=%s{ZEN}\\tCertificateCN=%s{CertificateCN} \\tsrcPreNAT=%s{PrivateIP}\\tsrc=%s{PublicIP}\\tLatitude=%f{Latitude} \\tLongitude=%f{Longitude}\\tCountryCode=%s{CountryCode} \\tTimestampAuthentication:iso8601=%s{TimestampAuthentication:iso8601} \\tTimestampUnAuthentication:iso8601=%s{TimestampUnAuthentication:iso8601} \\tdstBytes=%d{TotalBytesRx}\\tsrcBytes=%d{TotalBytesTx}\\tIdp=%s{Idp} \\tidentHostName=%s{Hostname}\\tPlatform=%s{Platform}\\tClientType=%s{ClientType} \\tTrustedNetworks=%s(,){TrustedNetworks}\\tTrustedNetworksNames=%s(,){TrustedNetworksNames} \\tSAMLAttributes=%s{SAMLAttributes}\\tPosturesHit=%s(,){PosturesHit} \\tPosturesMiss=%s(,){PosturesMiss}\\tZENLatitude=%f{ZENLatitude} \\tZENLongitude=%f{ZENLongitude}\\tZENCountryCode=%s{ZENCountryCode}\\n
-            ```
-            
-             |
-            | App connector status | 
-            
-            ```
-            LEEF:1.0|Zscaler|ZPA|4.1|%s{SessionStatus}|cat=Connector Status \\tdevTime=%s{LogTimestamp:epoch}\\tCustomer=%s{Customer}\\tSessionID=%s{SessionID} \\tSessionType=%s{SessionType}\\tVersion=%s{Version}\\tPlatform=%s{Platform} \\tZEN=%s{ZEN}\\tConnector=%s{Connector}\\tConnectorGroup=%s{ConnectorGroup} \\tsrcPreNAT=%s{PrivateIP}\\tsrc=%s{PublicIP}\\tLatitude=%f{Latitude} \\tLongitude=%f{Longitude}\\tCountryCode=%s{CountryCode} \\tTimestampAuthentication:iso8601=%s{TimestampAuthentication:iso8601} \\tTimestampUnAuthentication:iso8601=%s{TimestampUnAuthentication:iso8601} \\tCPUUtilization=%d{CPUUtilization}\\tMemUtilization=%d{MemUtilization} \\tServiceCount=%d{ServiceCount}\\tInterfaceDefRoute=%s{InterfaceDefRoute} \\tDefRouteGW=%s{DefRouteGW}\\tPrimaryDNSResolver=%s{PrimaryDNSResolver} \\tHostStartTime=%s{HostStartTime}\\tConnectorStartTime=%s{ConnectorStartTime} \\tNumOfInterfaces=%d{NumOfInterfaces}\\tBytesRxInterface=%d{BytesRxInterface} \\tPacketsRxInterface=%d{PacketsRxInterface}\\tErrorsRxInterface=%d{ErrorsRxInterface} \\tDiscardsRxInterface=%d{DiscardsRxInterface}\\tBytesTxInterface=%d{BytesTxInterface} \\tPacketsTxInterface=%d{PacketsTxInterface}\\tErrorsTxInterface=%d{ErrorsTxInterface} \\tDiscardsTxInterface=%d{DiscardsTxInterface}\\tTotalBytesRx=%d{TotalBytesRx} \\tTotalBytesTx=%d{TotalBytesTx}\\n
-            ```
-            
-             |
-            | Audit logs | 
-            
-            ```
-            LEEF:1.0|Zscaler|ZPA|4.1|%s{auditOperationType}|cat=ZPA\_Audit\_Log\\t devTime=%s{modifiedTime:epoch}\\t creationTime=%s{creationTime:iso8601}\\t requestId=%s{requestId}\\t sessionId=%s{sessionId}\\t auditOldValue=%s{auditOldValue}\\t auditNewValue=%s{auditNewValue}\\t auditOperationType=%s{auditOperationType}\\t objectType=%s{objectType}\\t objectName=%s{objectName}\\t objectId=%d{objectId}\\t accountName=%d{customerId}\\t usrName=%s{modifiedByUser}\\n
-            ```
-            
-             |
+            | User activity | LEEF:1.0|Zscaler|ZPA|4.1|%s{ConnectionStatus}%s{InternalReason}|cat=ZPA User Activity\\tdevTime=%s{LogTimestamp:epoch}\\tCustomer=%s{Customer}\\tSessionID=%s {SessionID}\\tConnectionID=%s{ConnectionID}\\tInternalReason=%s{InternalReason} \\tConnectionStatus=%s{ConnectionStatus}\\tproto=%d{IPProtocol} \\tDoubleEncryption=%d{DoubleEncryption}\\tusrName=%s{Username} \\tdstPort=%d{ServicePort}\\tsrc=%s{ClientPublicIP}\\tsrcPreNAT=%s{ClientPrivateIP} \\tClientLatitude=%f{ClientLatitude}\\tClientLongitude=%f{ClientLongitude} \\tClientCountryCode=%s{ClientCountryCode}\\tClientZEN=%s{ClientZEN} \\tpolicy=%s{Policy}\\tConnector=%s{Connector}\\tConnectorZEN=%s{ConnectorZEN} \\tConnectorIP=%s{ConnectorIP}\\tConnectorPort=%d{ConnectorPort} \\tApplicationName=%s{Host}\\tApplicationSegment=%s{Application}\\tAppGroup=%s{AppGroup} \\tServer=%s{Server}\\tdst=%s{ServerIP}\\tServerPort=%d{ServerPort} \\tPolicyProcessingTime=%d{PolicyProcessingTime}\\tServerSetupTime=%d{ServerSetupTime} \\tTimestampConnectionStart:iso8601=%s{TimestampConnectionStart:iso8601} \\tTimestampConnectionEnd:iso8601=%s{TimestampConnectionEnd:iso8601} \\tTimestampCATx:iso8601=%s{TimestampCATx:iso8601} \\tTimestampCARx:iso8601=%s{TimestampCARx:iso8601} \\tTimestampAppLearnStart:iso8601=%s{TimestampAppLearnStart:iso8601} \\tTimestampZENFirstRxClient:iso8601=%s{TimestampZENFirstRxClient:iso8601} \\tTimestampZENFirstTxClient:iso8601=%s{TimestampZENFirstTxClient:iso8601} \\tTimestampZENLastRxClient:iso8601=%s{TimestampZENLastRxClient:iso8601} \\tTimestampZENLastTxClient:iso8601=%s{TimestampZENLastTxClient:iso8601} \\tTimestampConnectorZENSetupComplete:iso8601=%s{TimestampConnectorZENSetupComplete:iso8601} \\tTimestampZENFirstRxConnector:iso8601=%s{TimestampZENFirstRxConnector:iso8601} \\tTimestampZENFirstTxConnector:iso8601=%s{TimestampZENFirstTxConnector:iso8601} \\tTimestampZENLastRxConnector:iso8601=%s{TimestampZENLastRxConnector:iso8601} \\tTimestampZENLastTxConnector:iso8601=%s{TimestampZENLastTxConnector:iso8601} \\tZENTotalBytesRxClient=%d{ZENTotalBytesRxClient}\\tZENBytesRxClient=%d{ZENBytesRxClient} \\tZENTotalBytesTxClient=%d{ZENTotalBytesTxClient}\\tZENBytesTxClient=%d{ZENBytesTxClient} \\tZENTotalBytesRxConnector=%d{ZENTotalBytesRxConnector} \\tZENBytesRxConnector=%d{ZENBytesRxConnector} \\tZENTotalBytesTxConnector=%d{ZENTotalBytesTxConnector} \\tZENBytesTxConnector=%d{ZENBytesTxConnector}\\tIdp=%s{Idp}\\n |
+            | User status | LEEF:1.0|Zscaler|ZPA|4.1|%s{SessionStatus}|cat=ZPA User Status \\tdevTime=%s{LogTimestamp:epoch}\\tCustomer=%s{Customer} \\tusrName=%s{Username}\\tSessionID=%s{SessionID}\\tSessionStatus=%s{SessionStatus} \\tVersion=%s{Version}\\tZEN=%s{ZEN}\\tCertificateCN=%s{CertificateCN} \\tsrcPreNAT=%s{PrivateIP}\\tsrc=%s{PublicIP}\\tLatitude=%f{Latitude} \\tLongitude=%f{Longitude}\\tCountryCode=%s{CountryCode} \\tTimestampAuthentication:iso8601=%s{TimestampAuthentication:iso8601} \\tTimestampUnAuthentication:iso8601=%s{TimestampUnAuthentication:iso8601} \\tdstBytes=%d{TotalBytesRx}\\tsrcBytes=%d{TotalBytesTx}\\tIdp=%s{Idp} \\tidentHostName=%s{Hostname}\\tPlatform=%s{Platform}\\tClientType=%s{ClientType} \\tTrustedNetworks=%s(,){TrustedNetworks}\\tTrustedNetworksNames=%s(,){TrustedNetworksNames} \\tSAMLAttributes=%s{SAMLAttributes}\\tPosturesHit=%s(,){PosturesHit} \\tPosturesMiss=%s(,){PosturesMiss}\\tZENLatitude=%f{ZENLatitude} \\tZENLongitude=%f{ZENLongitude}\\tZENCountryCode=%s{ZENCountryCode}\\n |
+            | App connector status | LEEF:1.0|Zscaler|ZPA|4.1|%s{SessionStatus}|cat=Connector Status \\tdevTime=%s{LogTimestamp:epoch}\\tCustomer=%s{Customer}\\tSessionID=%s{SessionID} \\tSessionType=%s{SessionType}\\tVersion=%s{Version}\\tPlatform=%s{Platform} \\tZEN=%s{ZEN}\\tConnector=%s{Connector}\\tConnectorGroup=%s{ConnectorGroup} \\tsrcPreNAT=%s{PrivateIP}\\tsrc=%s{PublicIP}\\tLatitude=%f{Latitude} \\tLongitude=%f{Longitude}\\tCountryCode=%s{CountryCode} \\tTimestampAuthentication:iso8601=%s{TimestampAuthentication:iso8601} \\tTimestampUnAuthentication:iso8601=%s{TimestampUnAuthentication:iso8601} \\tCPUUtilization=%d{CPUUtilization}\\tMemUtilization=%d{MemUtilization} \\tServiceCount=%d{ServiceCount}\\tInterfaceDefRoute=%s{InterfaceDefRoute} \\tDefRouteGW=%s{DefRouteGW}\\tPrimaryDNSResolver=%s{PrimaryDNSResolver} \\tHostStartTime=%s{HostStartTime}\\tConnectorStartTime=%s{ConnectorStartTime} \\tNumOfInterfaces=%d{NumOfInterfaces}\\tBytesRxInterface=%d{BytesRxInterface} \\tPacketsRxInterface=%d{PacketsRxInterface}\\tErrorsRxInterface=%d{ErrorsRxInterface} \\tDiscardsRxInterface=%d{DiscardsRxInterface}\\tBytesTxInterface=%d{BytesTxInterface} \\tPacketsTxInterface=%d{PacketsTxInterface}\\tErrorsTxInterface=%d{ErrorsTxInterface} \\tDiscardsTxInterface=%d{DiscardsTxInterface}\\tTotalBytesRx=%d{TotalBytesRx} \\tTotalBytesTx=%d{TotalBytesTx}\\n |
+            | Audit logs | LEEF:1.0|Zscaler|ZPA|4.1|%s{auditOperationType}|cat=ZPA_Audit_Log\\t devTime=%s{modifiedTime:epoch}\\t creationTime=%s{creationTime:iso8601}\\t requestId=%s{requestId}\\t sessionId=%s{sessionId}\\t auditOldValue=%s{auditOldValue}\\t auditNewValue=%s{auditNewValue}\\t auditOperationType=%s{auditOperationType}\\t objectType=%s{objectType}\\t objectName=%s{objectName}\\t objectId=%d{objectId}\\t accountName=%d{customerId}\\t usrName=%s{modifiedByUser}\\n |
             
         -   (Optional) You can define a streaming Policy for the log receiver. This entails configuring the SAML Attributes, Application Segments, Segment Groups, Client Types, and Session Statuses. For more information on configuring these settings, see the [Log Stream instructions](https://help.zscaler.com/zpa/configuring-log-receiver#Step2).
             
@@ -28572,7 +27906,6 @@ To ingest logs from Zscaler Private Access (ZPA):
     8.  Click Save.
 
 #### Activate Transporter
-Abstract
 
 Activate a Broker VM with a Transporter applet.
 
@@ -28643,7 +27976,6 @@ To manage Transporter applet configurations, disable connections, or deactivate 
     All existing connections are deleted but their configurations are saved in the database. When adding a new connection, you'll be prompted if you want to reuse previous configurations.
 
 #### Activate Windows Event Collector
-Abstract
 
 Set up your Windows Event Collector to connect with the Cortex Cloud Broker VM and collect events.
 
@@ -28732,7 +28064,7 @@ Perform the following procedures in the order listed below.
     
 2.  In the Windows Event Forwarder Configuration window, perform the following tasks:
     
-    1.  In the Subscription Manager URL field, click [image: copy-icon.png] (copy) . This will be used when you configure the subscription manager in the GPO (Global Policy Object) on your domain controller.
+    1.  In the Subscription Manager URL field, click  (copy) . This will be used when you configure the subscription manager in the GPO (Global Policy Object) on your domain controller.
         
     2.  Enter a password in the Define Client Certificate Export Password field to be used to secure the downloaded WEF certificate that establishes the connection between your DC/WEF and the WEC. You will need this password when the certificate is imported to the events forwarder.
         
@@ -28777,11 +28109,11 @@ You must install the WEF certificate on every Windows Server, whether DC or not,
     
 7.  In the Permissions window, select Add and in the Enter the object name section, enter **`NETWORK SERVICE`**, and then click Check Names to verify the object name. The object name is displayed with an underline when valid. and then click OK.
     
-    [image: certificate-permission.png]
+    
     
 8.  Click OK, verify the Group or user names that are displayed, and then click Apply Permissions for private keys.
     
-    [image: verify-permissions.png]
+    
     
 
 ###### Task 4. Add the Network Service account to the domain controller Event Log Readers group.
@@ -28851,7 +28183,7 @@ You must install the WEF certificate on every Windows Server, whether DC or not,
     
 4.  Navigate to Domains → your domain name → Group Policy Objects → Windows Event Forwarding, right-click and select Edit.
     
-    [image: group-policy-management.png]
+    
     
 5.  In the Group Policy Management Editor:
     
@@ -28886,7 +28218,7 @@ You must install the WEF certificate on every Windows Server, whether DC or not,
     
     Navigate to Computer Configuration → Policies → Administrative Templates: Policy definitions → Windows Components → Event Forwarding, right-click Configure target Subscription Manager and select Edit.
     
-    [image: target-subscription-manager.png]
+    
     
     In the Configure target Subscription Manager window, perform the following:
     
@@ -28900,7 +28232,7 @@ You must install the WEF certificate on every Windows Server, whether DC or not,
     
     Select Computer Configuration → Preferences → Control Panel Settings → Local Users and Groups, right-click and select New → Local Group.
     
-    [image: event-log-readers.png]
+    
     
     In the New Local Group Properties window:
     
@@ -28991,7 +28323,6 @@ To view metrics about the Windows Event Collector, left-click the WEC connection
 -   Resources: Displays the amount of CPU, Memory, and Disk space the applet is using.
 
 ##### Activate Windows Event Collector on Windows Core
-Abstract
 
 Learn more about activating the Windrows Event Collector on Windows Core OS to connect with the Broker VM.
 
@@ -29076,7 +28407,7 @@ Perform the following procedures in the order listed below.
     
 2.  In the Windows Event Forwarder Configuration window, perform the following tasks.:
     
-    1.  In the Subscription Manager URL field, click [image: copy-icon.png] (copy) . This will be used when you configure the subscription manager in the GPO (Global Policy Object) on your domain controller.
+    1.  In the Subscription Manager URL field, click  (copy) . This will be used when you configure the subscription manager in the GPO (Global Policy Object) on your domain controller.
         
     2.  Enter a password in the Define Client Certificate Export Password field to be used to secure the downloaded WEF certificate that establishes the connection between your DC/WEF and the WEC. You will need this password when the certificate is imported to the events forwarder.
         
@@ -29220,7 +28551,7 @@ Perform the following procedures in the order listed below.
         #Open Certificate store and locate certificate based on provided thumbprint
         $store = New-Object System.Security.Cryptography.X509Certificates.X509Store("My","LocalMachine")
         $store.Open("ReadWrite")
-        $cert = $store.Certificates | where {$\_.Thumbprint -eq $thumbprint}
+        $cert = $store.Certificates | where {$_.Thumbprint -eq $thumbprint}
          
         #Create new CSP object based on existing certificate provider and key name
         #Note: Ensure this command is pasted to the same row and doesn’t break to multiple rows. 
@@ -29249,7 +28580,7 @@ Perform the following procedures in the order listed below.
         
     3.  After the script runs, validate the permissions are now set correctly.
         
-        [image: windows-core-script-permissions.png]
+        
         
 
 ###### Task 4. Add the Network Service account to the domain controller Event Log Readers group.
@@ -29337,7 +28668,7 @@ As a Group Policy Management Console is not available on Core servers, it’s no
     
 6.  Navigate to Domains → your domain name → Group Policy Objects → Windows Event Forwarding, right-click and select Edit.
     
-    [image: group-policy-management.png]
+    
     
 7.  In the Group Policy Management Editor:
     
@@ -29372,7 +28703,7 @@ As a Group Policy Management Console is not available on Core servers, it’s no
     
     Navigate to Computer Configuration → Policies → Administrative Templates: Policy definitions → Windows Components → Event Forwarding, right-click Configure target Subscription Manager and select Edit.
     
-    [image: target-subscription-manager.png]
+    
     
     In the Configure target Subscription Manager window:
     
@@ -29386,7 +28717,7 @@ As a Group Policy Management Console is not available on Core servers, it’s no
     
     Select Computer Configuration → Preferences → Control Panel Settings → Local Users and Groups, right-click and select New → Local Group.
     
-    [image: event-log-readers.png]
+    
     
     In the New Local Group Properties window:
     
@@ -29477,7 +28808,6 @@ To view metrics about the Windows Event Collector, left-click the WEC connection
 -   Resources: Displays the amount of CPU, Memory, and Disk space the applet is using.
 
 ##### Renew WEC certificates
-Abstract
 
 Learn more about renewing your WEC certificates in Cortex Cloud.
 
@@ -29515,7 +28845,7 @@ Perform the following procedures in the order listed below.
     
 3.  In the Windows Event Forwarder Configuration window, perform the following tasks:
     
-    1.  In the Subscription Manager URL field, click [image: copy-icon.png] (copy) . This will be used when you configure the subscription manager in the GPO (Global Policy Object) on your domain controller.
+    1.  In the Subscription Manager URL field, click  (copy) . This will be used when you configure the subscription manager in the GPO (Global Policy Object) on your domain controller.
         
     2.  Enter a password in the Define Client Certificate Export Password field to be used to secure the downloaded WEF certificate that establishes the connection between your DC/WEF and the WEC. You will need this password when the certificate is imported to the events forwarder.
         
@@ -29564,17 +28894,17 @@ Perform the following procedures in the order listed below.
         
     7.  In the Permissions window, select Add and in the Enter the object name section, enter **`NETWORK SERVICE`**, and then click Check Names to verify the object name. The object name is displayed with an underline when valid. and then click OK.
         
-        [image: certificate-permission.png]
+        
         
     8.  Click OK, verify the Group or user names that are displayed, and then click Apply Permissions for private keys.
         
-        [image: verify-permissions.png]
+        
         
 5.  Configure the subscription manager.
     
     1.  Navigate to Computer Configuration → Policies → Administrative Templates: Policy definitions → Windows Components → Event Forwarding, right-click Configure target Subscription Manager and select Edit.
         
-        [image: target-subscription-manager.png]
+        
         
     2.  In the Configure target Subscription Manager window, perform the following:
         
@@ -29621,10 +28951,10 @@ Only perform this step under the following conditions:
     We also suggest that you run the following XQL query to verify that your event logs are being captured:
     
     ```
-    dataset = xdr\_data 
-    | filter \_product = "Windows" 
-    | fields \_vendor,\_product,action\_evtlog\_level,action\_evtlog\_event\_id 
-    | sort desc \_time 
+    dataset = xdr_data 
+    | filter _product = "Windows" 
+    | fields _vendor,_product,action_evtlog_level,action_evtlog_event_id 
+    | sort desc _time 
     | limit 20
     ```
     
@@ -29633,7 +28963,6 @@ Only perform this step under the following conditions:
     If this query does not display results with a timestamp from after the renewal process, it could indicate that the renewal process is not complete, so wait a few minutes before running another query. If you are still having a problem, contact Technical Support.
 
 ### XDR Collectors
-Abstract
 
 Learn how XDR Collectors can be used for on-premise data collection on Windows and Linux machines.
 
@@ -29644,7 +28973,6 @@ Ingestion of log events larger than 5 MB is not supported.
 Cortex Cloud provides an XDR Collectors (XDRC) configuration that is dedicated for on-premise data collection on Windows and Linux machines. The XDRC includes a dedicated installer, a collector upgrade configuration, content updates, and policy management. The XDRC is a data collector that gathers and processes logs and events from multiple sources. It leverages Elasticsearch Filebeat, a lightweight log shipper, to collect log data from various systems and applications. Additionally, Winlogbeat gathers Windows event logs, ensuring comprehensive visibility into Windows environments. These components facilitate centralized analysis, threat detection, and investigation across the Cortex Cloud ecosystem.
 
 #### XDR Collector audit logs
-Abstract
 
 Learn more about XDR Collector audit logs.
 
@@ -29655,7 +28983,6 @@ Requires the Data Collection add-on.
 Cortex Cloud logs entries for events related to the XDR Collector monitored activities. Cortex Cloud stores the logs for 365 days. To view the XDR Collector audit logs, select Settings → XDR Collector Audit Logs.
 
 #### XDR Collector machine requirements and supported operating systems
-Abstract
 
 Learn about the supported operating systems and requirements for the collector machines used for the Cortex XDR Collectors.
 
@@ -29678,16 +29005,11 @@ You can configure XDR Collectors that are dedicated for on-premise data collecti
 | Windows | Processor | Intel Pentium 4 or later with SSE2 instruction set support; AMD Opteron/Athlon 64 or later with SSE2 instruction set support; Dual core processor (minimum) |
 |  | RAM | 2GB minimum |
 |  | Hard disk space | 200MB minimum; 20GB recommended |
-|  | Supported operating system versions | **XDR Collector (XDRC) version 1.4.3 and later** Windows 8-   8.1 (and with FIPS mode); Embedded 8.1 Professional (Supported until January 2023)
-; Windows Server-   2012 (Supported until January 2026), All editions; FIPS mode; Core option (Windows Server 2012 R2 only)
-**XDR Collector (XDRC) version 1.5.0 and later** Windows 10-   Education; Pro (CB and CBB); Enterprise (CB, CBB, and LTSB); Updates 21H2, 21H1, 20H2, 2004, 1709, 1909, 1903, 1809, 1803 (Enterprise and Professional); Updates 22H2, 22H1; Enterprise 2019 LTSC; Windows 10 IoT Core; Windows 10 IoT Enterprise
-; Windows 11-   Windows 11; Updates 22H2, 22H1; Pro/Pro Education/Pro Workstations; Enterprise; Education/Home; IoT Enterprise
-; Windows Server-   Datacenter; 2012 (Supported until October 2026), 2012 R2 (Supported until January 2026), All editions; FIPS mode; 2016 (Standard edition; Server with Desktop experience, previously known as Server with a GUI); 2016 Datacenter edition; 2019; Core option (Windows Server 2012, 2012 R2, and 2016 only); 2019 Standard (Server Core); 2022 |
+| | Supported operating system versions | **XDR Collector (XDRC) version 1.4.3 and later** Windows 8- 8.1 (and with FIPS mode); Embedded 8.1 Professional (Supported until January 2023) ; Windows Server- 2012 (Supported until January 2026), All editions; FIPS mode; Core option (Windows Server 2012 R2 only) **XDR Collector (XDRC) version 1.5.0 and later** Windows 10- Education; Pro (CB and CBB); Enterprise (CB, CBB, and LTSB); Updates 21H2, 21H1, 20H2, 2004, 1709, 1909, 1903, 1809, 1803 (Enterprise and Professional); Updates 22H2, 22H1; Enterprise 2019 LTSC; Windows 10 IoT Core; Windows 10 IoT Enterprise ; Windows 11- Windows 11; Updates 22H2, 22H1; Pro/Pro Education/Pro Workstations; Enterprise; Education/Home; IoT Enterprise ; Windows Server- Datacenter; 2012 (Supported until October 2026), 2012 R2 (Supported until January 2026), All editions; FIPS mode; 2016 (Standard edition; Server with Desktop experience, previously known as Server with a GUI); 2016 Datacenter edition; 2019; Core option (Windows Server 2012, 2012 R2, and 2016 only); 2019 Standard (Server Core); 2022 |
 |  | Networking | Allow communication from the XDR Collector TCP port to the server (the default is port 443). |
 |  | Applications and utilities | Windows Accessories (Notepad) to view logs |
 
 #### Resources required to enable access to XDR Collectors
-Abstract
 
 Depending on your network environment settings, you should enable network access to the Cortex XDR Collectors resources.
 
@@ -29731,16 +29053,15 @@ The following table lists the required resources for Federal (United States - Go
 
 | FQDN | IP addresses and port | App-ID coverage | Required for XDR Collectors |
 | --- | --- | --- | --- |
-| `distributions-prod-fed.traps.paloaltonetworks.com` Used for the first request in registration flow where the agent passes the distribution ID and obtains the `ch-.traps.paloaltonetworks.com` of its tenant. | IP address: 104.198.132.24; Port: 443 | `traps-management-service` | [image: check-mark.png] |
-| `panw-xdr-installers-prod-fr.storage.googleapis.com` Used to download installers for upgrade actions from the server. | IP ranges in GCP; Port: 443 | `cortex-xdr` | [image: check-mark.png] |
-| `global-content-profiles-policy-prod-fr.storage.googleapis.com` Used to download content updates. | IP ranges in GCP; Port: 443 | `cortex-xdr` | [image: check-mark.png] |
-| `ch-.traps.paloaltonetworks.com` Used for all other requests between the agent and its tenant server including heartbeat, uploads, action results, and scan reports. | IP address: 130.211.195.231; Port: 443 | `traps-management-service` | [image: check-mark.png] |
-| Used for API requests and responses. | IP address: 130.211.195.231; Port: 443 | \- | [image: check-mark.png] |
-| **Log forwarding to a syslog receiver** |  |
+| `distributions-prod-fed.traps.paloaltonetworks.com` Used for the first request in registration flow where the agent passes the distribution ID and obtains the `ch-.traps.paloaltonetworks.com` of its tenant. | IP address: 104.198.132.24; Port: 443 | `traps-management-service` | ✓ |
+| `panw-xdr-installers-prod-fr.storage.googleapis.com` Used to download installers for upgrade actions from the server. | IP ranges in GCP; Port: 443 | `cortex-xdr` | ✓ |
+| `global-content-profiles-policy-prod-fr.storage.googleapis.com` Used to download content updates. | IP ranges in GCP; Port: 443 | `cortex-xdr` | ✓ |
+| `ch-.traps.paloaltonetworks.com` Used for all other requests between the agent and its tenant server including heartbeat, uploads, action results, and scan reports. | IP address: 130.211.195.231; Port: 443 | `traps-management-service` | ✓ |
+| Used for API requests and responses. | IP address: 130.211.195.231; Port: 443 | \- | ✓ |
+| **Log forwarding to a syslog receiver** | |
 | See Integrate a syslog receiver for information about log forwarding IP addresses per region for syslog receivers. |  |  |  |
 
 #### Manage XDR Collectors
-Abstract
 
 Manage Cortex Cloud collectors.
 
@@ -29751,7 +29072,6 @@ Requires the Data Collection add-on.
 On the XDR Collectors Administration page, you can view the list of collectors and perform additional tasks such as changing the alias of the collector, upgrading the collector version, and setting a proxy address and port for the collector.
 
 ##### XDR Collectors installation resource for Windows and Linux
-Abstract
 
 Cortex XDR Collectors installation resource for Windows and Linux.
 
@@ -29763,15 +29083,12 @@ The following table provides important information about the XDR Collectors inst
 
 | Installation component | Default path | Description | Related files/Services |
 | --- | --- | --- | --- |
-| Installation folder | **Windows**: `%PROGRAMFILES%\Palo Alto Networks\XDR Collector`; **Linux**: `/opt/paloaltonetworks/xdr-collector` | The default installation path for the XDR Collector. Contains all Program Core files and executables. | **Windows**-   Service name: `XDR Collector`; Process name: `xdrcollectorsvc.exe`
-; **Linux**-   Service name: `xcd`; Process name: `xdr-collector.service` |
-| Logs | **Windows**: `%PROGRAMDATA%\XDR Collector\logs`; **Linux**: `/opt/paloaltonetworks/xdr-collector/logs` | **Windows**: Contains the XDR Collector application Log, the Filebeat application log, and the Winlogbeat application log. Indicates information, warnings, and errors related to the XDR Collector application.; **Linux**: Contains the XDR Collector application Log as well as the Filebeat application log. Indicates information, warnings, and errors related to the XDR Collector application. Contains the XDR Collector application Log as well as the Filebeat application log. Indicates information, warnings, and errors related to the XDR Collector application. | **Windows**-   `scouter.log`; `filebeat`; `winlogbeat`
-; **Linux**-   `scouter.log`; `filebeat` |
+| Installation folder | **Windows**: `%PROGRAMFILES%\Palo Alto Networks\XDR Collector`; **Linux**: `/opt/paloaltonetworks/xdr-collector` | The default installation path for the XDR Collector. Contains all Program Core files and executables. | **Windows**- Service name: `XDR Collector`; Process name: `xdrcollectorsvc.exe` ; **Linux**- Service name: `xcd`; Process name: `xdr-collector.service` |
+| Logs | **Windows**: `%PROGRAMDATA%\XDR Collector\logs`; **Linux**: `/opt/paloaltonetworks/xdr-collector/logs` | **Windows**: Contains the XDR Collector application Log, the Filebeat application log, and the Winlogbeat application log. Indicates information, warnings, and errors related to the XDR Collector application.; **Linux**: Contains the XDR Collector application Log as well as the Filebeat application log. Indicates information, warnings, and errors related to the XDR Collector application. Contains the XDR Collector application Log as well as the Filebeat application log. Indicates information, warnings, and errors related to the XDR Collector application. | **Windows**- `scouter.log`; `filebeat`; `winlogbeat` ; **Linux**- `scouter.log`; `filebeat` |
 | Configuration | **Windows**: `%PROGRAMFILES%\Palo Alto Networks\XDR Collector\config`; **Linux**: `/opt/paloaltonetworks/xdr-collector/config` | Contains the XML configuration file of the XDR Collector for both Windows and Linux. Any change in this XML configuration file is saved to the XDR Collector database and the settings are taken from this file. \*\*Note:\*\* In some circumstances, such as after an XDR Collectors upgrade, the configured settings in the XML configuration file can be erased. Yet, this won't affect the saved settings in the XDR Collectors database. | For both Windows and Linux, the file name is `XDR_Collector.xml`. |
 | Persistence | **Windows**: `%PROGRAMDATA%\XDR Collector\OSPersistence`; **Linux**: `/etc/panw/OSPersistence/` | Contains the Operating System persistence file for the XDR Collector, which issued as part of the registration process. | For both Windows and Linux, the file name is `.scouter.json`. |
 
 ##### Create an XDR Collector installation package
-Abstract
 
 Learn how to create an XDR Collector installation package for a Windows or Linux collector machine.
 
@@ -29789,13 +29106,13 @@ XDR Collectors cannot be moved between Cortex Cloud managing servers. In this si
 
 To create a new installation package.
 
-1.  In Cortex Cloud, select Settings [image: 403822_spr.png] → Configurations → XDR Collectors → Installers.
+1.  In Cortex Cloud, select Settings  → Configurations → XDR Collectors → Installers.
     
-    [image: xdr-collectors-installations.png]
+    
     
 2.  Click Create.
     
-    [image: create-new-installer.png]
+    
     
 3.  Enter a unique Name and an optional Description to identify the installation package.
     
@@ -29839,10 +29156,9 @@ To create a new installation package.
         
     -   Copy text to clipboard to copy the text from a specific field in the row of an installation package.
         
-    -   Hide installation packages. Using the Hide option provides a quick method to filter out results based on a specific value in the table. You can also use the filters at the top of the page to build a filter from scratch. To create a persistent filter, save ([image: save-icon.png]) it.
+    -   Hide installation packages. Using the Hide option provides a quick method to filter out results based on a specific value in the table. You can also use the filters at the top of the page to build a filter from scratch. To create a persistent filter, save () it.
 
 ##### Install the XDR Collector installation package for Windows
-Abstract
 
 Learn about the Cortex XDR Collector installation options on Windows collector machines.
 
@@ -29853,7 +29169,6 @@ Requires the Data Collection add-on.
 A standard XDR Collector installation for Windows is intended for standard physical collector machines or persistent virtual collector machines. You can perform the Windows installation for the XDR Collectors using the MSI or Msiexec.
 
 ###### Install the XDR Collector on Windows using the MSI
-Abstract
 
 Learn how to install the Cortex XDR Collector on Windows using the MSI file.
 
@@ -29888,7 +29203,6 @@ When the package is executed using the MSI, an installation log is generated in 
     If the XDR Collector does not connect to Cortex Cloud, verify your internet connection on the collector machine. If the XDR Collector still does not connect, verify that the installation package has not been removed from the Cortex Cloud tenant.
 
 ###### Install the XDR Collector on Windows using Msiexec
-Abstract
 
 Learn how to install the Cortex XDR Collectors on Windows using the Msiexec.
 
@@ -29946,7 +29260,6 @@ To install XDR Collectors using Msiexec:
     `msiexec /i XDRCollector-Win_x64.msi DATA_PATH=c:\data PROXY_LIST=2.2.2.2:8888,1.1.1.1:8080 /quiet /l*v c:\installlog.txt`
 
 ##### Install the XDR Collector installation package for Linux
-Abstract
 
 Learn how to install the Cortex XDR Collector on Linux collector machines.
 
@@ -29973,7 +29286,7 @@ To install the XDR Collectors installation package for Linux.
     user@local ~
     						$
     						**`ssh root@ubuntu.example.com`**
-    						Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-1041-aws x86\_64)
+    						Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-1041-aws x86_64)
     
     						\* Documentation:  https://help.ubuntu.com
     						\* Management:     https://landscape.canonical.com
@@ -30067,7 +29380,6 @@ If you are using `rpm` or `deb` installers, you must also add these parameters t
 | `--data-path <directory path>` | **Directory path** The path for persistence, content, Filebeat application data, and transaction data. `--data–path=/tmp/xdrLog` |
 
 ##### Configure the XDR Collector upgrade scheduler
-Abstract
 
 You can configure the Cortex XDR Collector upgrade scheduler and the number of parallel upgrades.
 
@@ -30093,7 +29405,6 @@ To define the XDR Collector upgrade scheduler and number of parallel upgrades.
 3.  Click Save.
 
 ##### Set an application proxy for XDR Collectors
-Abstract
 
 You can set an application-specific proxy for a Cortex XDR Collector without affecting the communication of other applications on the collector machine.
 
@@ -30113,7 +29424,7 @@ In environments where Cortex XDR Collectors communicate with the Cortex Cloud se
         
     2.  Right-click the collector machine, and select Set Collector proxy.
         
-    3.  You can assign up to ten different proxies per XDR Collector. For each proxy, specify the IP address and port number. After each Proxy Address and Port added, select [image: blue-arrow.png] to add the values to a list underneath these fields. Broker VMs in the same tenant can also be configured to use as a proxy, by enabling Agent proxy in the Broker VMs.
+    3.  You can assign up to ten different proxies per XDR Collector. For each proxy, specify the IP address and port number. After each Proxy Address and Port added, select → to add the values to a list underneath these fields. Broker VMs in the same tenant can also be configured to use as a proxy, by enabling Agent proxy in the Broker VMs.
         
     4.  Click Set when you’re done.
         
@@ -30122,7 +29433,6 @@ In environments where Cortex XDR Collectors communicate with the Cortex Cloud se
         When you disable the proxy configuration, all proxies associated with that XDR Collector are removed. The XDR Collector resumes communication with the Cortex Cloud server through the wide-system proxy if defined; otherwise, if a wide-system is not defined, the XDR Collector resumes communicating directly with the Cortex Cloud server. If neither a wide-system proxy nor direct communication exist and you disable the proxy, the XDR Collector disconnects from Cortex Cloud.
 
 ##### Set an alias for an XDR Collector machine
-Abstract
 
 Configure an alias to identify one or more collector machines by a name that is different from the collector machine hostname.
 
@@ -30143,7 +29453,6 @@ To identify one or more collector machines by a name that is different from the 
 5.  Use the Quick Launcher to search the collector machines by alias across the XDR Collectors console.
 
 ##### Upgrade XDR Collectors
-Abstract
 
 You can upgrade the Cortex XDR Collector software by using the appropriate method for the collector machine operating system.
 
@@ -30178,7 +29487,6 @@ After you install the Cortex XDR Collector and the XDR Collector registers with 
     Cortex Cloud distributes the installation package to the selected collector machine at the next heartbeat communication with the XDR Collector. To monitor the status of the upgrades, go to Investigation & Response → Response → Action Center. From the Action Center you can also view additional information about the upgrade (right-click the action and select Additional data) or cancel the upgrade (right-click the action and select Cancel Collector Upgrade).
 
 ##### Uninstall the XDR Collector
-Abstract
 
 You can uninstall the Cortex XDR Collector from one or more Windows or Linux collector machines at any time.
 
@@ -30212,7 +29520,6 @@ The following workflow describes how to uninstall the XDR Collector from one or 
     To monitor the status of the uninstall process, go to Investigation & Response → Response → Action Center.
 
 #### Define XDR Collector machine groups
-Abstract
 
 To easily apply policy rules and manage specific collector machines, you can define a collector machine group.
 
@@ -30281,7 +29588,6 @@ To define a collector machine static or dynamic group:
     -   Hide rows with ‘<Group name>’ to filter the group list to hide the groups for a specific group name.
 
 #### About Cortex XDR Collector content updates
-Abstract
 
 To quickly resolve any issues in policy, Palo Alto Networks can seamlessly deliver software packages called content updates.
 
@@ -30294,7 +29600,6 @@ To quickly resolve any issues in policy, Palo Alto Networks can seamlessly deliv
 When a new update is available, Cortex Cloud notifies the XDR Collectors. The XDR Collectors then randomly choose a time within a six-hour window during which they retrieve the content update from Cortex Cloud.
 
 #### XDR Collector profiles
-Abstract
 
 Add an XDR collector profile to define the type of data to collect from a Linux or Windows platform.
 
@@ -30305,7 +29610,6 @@ Requires the Data Collection add-on.
 You can add XDR collector profiles that define the type of data that is collected from Linux or Windows platforms.
 
 ##### Add an XDR Collector profile for Windows
-Abstract
 
 Add a Cortex XDR Collector profile, which defines the data that is collected from a Windows collector machine, and defines automatic XDR Collector upgrade settings.
 
@@ -30393,13 +29697,13 @@ In the Filebeat Configuration File editor, you can define the data collection fo
     
     ```
     processors:
-      - add\_fields:
+      - add_fields:
           fields:
             vendor: <Vendor>
             product: <Product>
     ```
     
-    For more information about the "Add fields" processor, see [Add\_fields](https://www.elastic.co/guide/en/beats/filebeat/current/add-fields.html).
+    For more information about the "Add fields" processor, see [Add_fields](https://www.elastic.co/guide/en/beats/filebeat/current/add-fields.html).
     
 6.  To finish creating your new profile, click Create.
     
@@ -30434,13 +29738,13 @@ In the Winlogbeat Configuration File editor, you can define the data collection 
     
     ```
     processors:
-      - add\_fields:
+      - add_fields:
           fields:
             vendor: <Vendor>
             product: <Product>
     ```
     
-    For more information about the "Add fields" processor, see [Add\_fields](https://www.elastic.co/guide/en/beats/filebeat/current/add-fields.html).
+    For more information about the "Add fields" processor, see [Add_fields](https://www.elastic.co/guide/en/beats/filebeat/current/add-fields.html).
     
 6.  To finish creating your new profile, click Create.
     
@@ -30519,7 +29823,6 @@ As needed, you can return to the XDR Collectors Profiles page to manage your XDR
 | Copy entire row | Copies the text from the entire row of a XDR Collector profile |
 
 ###### Ingest logs from Windows DHCP using Elasticsearch Filebeat
-Abstract
 
 Learn how to configure Cortex Cloud to receive Windows DHCP logs.
 
@@ -30633,7 +29936,7 @@ Configure Cortex Cloud to receive logs from Windows DHCP via Elasticsearch Fileb
             Example 144. Example
             
             ```
-            \# ============================== Filebeat inputs ===============================
+            # ============================== Filebeat inputs ===============================
             filebeat.inputs:
               # Each - is an input. Most options can be set at the input level, so
               # you can use different inputs for various configurations.
@@ -30653,16 +29956,16 @@ Configure Cortex Cloud to receive logs from Windows DHCP via Elasticsearch Fileb
             Example 145. Example
             
             ```
-            \# ---------------------------- Elasticsearch Output ----------------------------
+            # ---------------------------- Elasticsearch Output ----------------------------
             output.elasticsearch:  
               enabled: true  
               # Array of hosts to connect to.    
-              hosts: \["OBTAIN THIS URL FROM CORTEX XDR"\]  
+              hosts: ["OBTAIN THIS URL FROM CORTEX XDR"]  
               # Protocol - either \`http\` (default) or \`https\`.  
               protocol: "https"  
-              compression\_level: 5  
+              compression_level: 5  
               # Authentication credentials - either API key or username/password. 
-              api\_key: "OBTAIN THIS KEY FROM CORTEX XDR"
+              api_key: "OBTAIN THIS KEY FROM CORTEX XDR"
             ```
             
               
@@ -30683,25 +29986,25 @@ Configure Cortex Cloud to receive logs from Windows DHCP via Elasticsearch Fileb
             Example 146. Example
             
             ```
-            \# ================================= Processors =================================
+            # ================================= Processors =================================
             processors:  
-              - add\_host\_metadata:      
+              - add_host_metadata:      
                 when.not.contains.tags: forwarded  
-              - drop\_event.when.not.regexp.message: "^\[0-9\]+,.\*"  
+              - drop_event.when.not.regexp.message: "^[0-9]+,.\*"  
               - dissect:       
                 tokenizer: "%{id},%{date},%{time},%{description},%{ipAddress},%{hostName},%{macAddress},%{userName},%{transactionID},%{qResult},%{probationTime},%{correlationID},%{dhcid},%{vendorClassHex},%{vendorClassASCII},%{userClassHex},%{userClassASCII},%{relayAgentInformation},%{dnsRegError}"  
-              - drop\_fields:       
-                fields: \["message"\]  
-              - add\_locale: ~
+              - drop_fields:       
+                fields: ["message"]  
+              - add_locale: ~
               - rename:
                   fields:
                     - from: "event.timezone"
                       to: "dissect.timezone"
-                  ignore\_missing: true
-                  fail\_on\_error: false
-              - add\_cloud\_metadata: ~  
-              - add\_docker\_metadata: ~  
-              - add\_kubernetes\_metadata: ~
+                  ignore_missing: true
+                  fail_on_error: false
+              - add_cloud_metadata: ~  
+              - add_docker_metadata: ~  
+              - add_kubernetes_metadata: ~
             ```
             
               
@@ -30714,7 +30017,6 @@ Configure Cortex Cloud to receive logs from Windows DHCP via Elasticsearch Fileb
 4.  After Cortex Cloud begins receiving logs from Windows DHCP via Elasticsearch Filebeat, you can use XQL Search to search for logs in the new `microsoft_dhcp_raw` dataset.
 
 ###### Ingest Windows DNS debug logs using Elasticsearch Filebeat
-Abstract
 
 Extend Cortex Cloud visibility into Windows DNS Debug logs using Elasticsearch Filebeat with an XDR Collectors profile.
 
@@ -30777,7 +30079,7 @@ During configuration of an XDR Collector Windows Filebeat profile, you can confi
       paths:
         -  c:\\Windows\\System32\\dns\\DNS.log
       processors:
-        - add\_fields:
+        - add_fields:
             fields: 
               vendor: "microsoft"
               product: "dns"
@@ -30800,7 +30102,7 @@ During configuration of an XDR Collector Windows Filebeat profile, you can confi
       multiline.negate: true
       multiline.match: after
       processors:
-        - add\_fields:
+        - add_fields:
             fields: 
               vendor: "microsoft"
               product: "dns"
@@ -30819,7 +30121,6 @@ During configuration of an XDR Collector Windows Filebeat profile, you can confi
     -   Launch the new policy wizard from XDR Collectors → Policies → XDR Collectors Policies.
 
 ##### Add an XDR Collector profile for Linux
-Abstract
 
 Add a Cortex XDR Collector profile, which defines the data that is collected from a Linux collector machine, and defines automatic XDR Collector upgrade settings.
 
@@ -30883,13 +30184,13 @@ In the Filebeat Configuration File editor, you can define the data collection fo
     
     ```
     processors:
-      - add\_fields:
+      - add_fields:
           fields:
             vendor: <Vendor>
             product: <Product>
     ```
     
-    For more information about the "Add fields" processor, see [Add\_fields](https://www.elastic.co/guide/en/beats/filebeat/current/add-fields.html).
+    For more information about the "Add fields" processor, see [Add_fields](https://www.elastic.co/guide/en/beats/filebeat/current/add-fields.html).
     
 6.  To finish creating your new profile, click Create.
     
@@ -30968,7 +30269,6 @@ As needed, you can return to the XDR Collectors Profiles page to manage your XDR
 | Copy entire row | Copies the text from the entire row of a XDR Collector profile |
 
 #### Apply profiles to collection machine policies
-Abstract
 
 Enable a Cortex XDR Collector profile by mapping it to a policy.
 
@@ -31029,7 +30329,6 @@ As needed, you can return to the XDR Collectors Policies page to manage your XDR
 | Copy entire row | Copies the text from the entire row of a XDR Collector policy |
 
 #### XDR Collector datasets
-Abstract
 
 After Cortex Cloud begins receiving data from your XDR Collectors configuration, the app automatically creates an XQL dataset.
 
@@ -31047,7 +30346,6 @@ After Cortex Cloud begins receiving data from your XDR Collectors configuration 
 After Cortex Cloud creates the dataset, you can search for your XDR Collector data using XQL Search.
 
 #### Troubleshoot XDR Collectors errors
-Abstract
 
 Learn more about how to verify the XDR Collectors application, connectivity, and processing errors and troubleshoot.
 
@@ -31065,21 +30363,19 @@ Example 149. 
 
 This example searches for status changes related to XDR Collectors, where the `instance` is `A1786452WIN1001`:
 
-```
-dataset = collection\_auditing 
+dataset = collection_auditing 
 |filter  instance = "A1786452WIN1001"
-```
 
 Output results:
 
 The results indicate that the collector was connected on Oct 18th 2025 08:23:07. On Oct 24th 2025 11:57:38, this collector had an application error as the Winlogbeat was not running. On Oct 24th 2025 19:15:44, this collector had another application error as the Filebeat was not running. On Oct 25th 2025 09:47:03, a warning message was displayed that this collector had no incoming data for more than 7 days. All of these issues were finally resolved on Oct 27th 2025 12:53:18 when the collector was back to a connected status.
 
-| COLLECTOR\_TYPE | INSTANCE | CLASSIFICATION | DESCRIPTION | COLLECTOR\_ID | COLLECTOR\_INTERNAL\_IP | COLLECTOR-HOST\_NAME | \_TIME |
+| COLLECTOR_TYPE | INSTANCE | CLASSIFICATION | DESCRIPTION | COLLECTOR_ID | COLLECTOR_INTERNAL_IP | COLLECTOR-HOST_NAME | _TIME |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | XDRC | A1786452WIN1001 | Informational | Connected | 58999fc7ff264a3698274e40043ea829 |   | A1786452WIN1001 | Oct 27th 2025 12:53:18 |
 | XDRC | A1786452WIN1001 | Warning | No incoming data for more than 7 days | 58999fc7ff264a3698274e40043ea829 |   | A1786452WIN1001 | Oct 25th 2025 09:47:03 |
 | XDRC | A1786452WIN1001 | Error | filebeat is not running , error code: 1, b'Exiting: no modules or inputs enabled and configuration reloading disabled. What files do you want me to watch?\\n' | 58999fc7ff264a3698274e40043ea829 |   | A1786452WIN1001 | Oct 24th 2025 19:15:44 |
-| XDRC | A1786452WIN1001 | Error | winlogbeat is not running , error code: 1, b"Exiting: error reading configuration file: 1 error: at least one event log must be configured as part of event\_logs accessing 'winlogbeat' (source:'command line flag')\\n" | 58999fc7ff264a3698274e40043ea829 |  | A1786452WIN1001 | Oct 24th 2025 11:57:38 |
+| XDRC | A1786452WIN1001 | Error | winlogbeat is not running , error code: 1, b"Exiting: error reading configuration file: 1 error: at least one event log must be configured as part of event_logs accessing 'winlogbeat' (source:'command line flag')\\n" | 58999fc7ff264a3698274e40043ea829 |  | A1786452WIN1001 | Oct 24th 2025 11:57:38 |
 | XDRC | A1786452WIN1001 | Informational | Connected | 58999fc7ff264a3698274e40043ea829 |  | A1786452WIN1001 | Oct 18th 2025 08:23:07 |
 
   
@@ -31094,10 +30390,8 @@ In this example, a correlation rule triggers an issue if the collector changes t
 
 Example XQL:
 
-```
-dataset = collection\_auditing 
+dataset = collection_auditing 
 |filter classification = "Error" and instance = "A1786452WIN1001"
-```
 
 Additional fields to specify in the correlation rule:
 
@@ -31117,29 +30411,11 @@ Understand how to troubleshoot
 
 To help you troubleshoot your XDR Collectors, the table below lists some of the main possible warning and error event types, which is the description displayed in the `collection_auditing` dataset, the root cause of the problem, and the recommended action to resolve the problem. We recommend that you use this table as a first resource to troubleshoot your application, connectivity, and processing errors.
 
-| XDRC Log Collector Type | Event Type | Message in the XDR Collectors Administration Page and Description in the collection\_auditing dataset | Root Cause | Recommended Action |
+| XDRC Log Collector Type | Event Type | Message in the XDR Collectors Administration Page and Description in the collection_auditing dataset | Root Cause | Recommended Action |
 | --- | --- | --- | --- | --- |
-| Filebeat | Error | ERROR \[reader\] reader/reader.go:<line number> Line is larger than max\_bytes (10485760): <...log line content...>write error: data size (<number of bytes> bytes) is greater than the max file size (10485760 bytes) | The line in the monitored file is too long | You can set a new maximum size limit on the profile. Example 151.  This increases the maximum line size to 20 MB so `message_max_bytes` is 20971520.
-```
-filebeat.inputs: - type: filestream id: my-app-logs enabled: true paths: - /var/log/my-app/\*.log #
-```
-
-  
- |
-| Filebeat | Error | Filebeat is not running , error code: 1, b'Exiting: error loading config file: yaml: line <line number>: found unknown escape character\\n' | The filebeat YAML file contains a path that is wrapped with double quotes, but only contains single backslashes, such as: `“C:\windows\somefile.log”` | Use double backslashes after windows when using double quotes:
-
-```
-“C:\\windows\\\\somefile.log”
-```
-
-OR Put path in single quotes:
-
-```
-‘C:\\windows\\\\somefile.log’
-```
-
- |
-| Filebeat / Winlogbeat | Warning | Filebeat / Winlogbeat not installed | The Filebeat / Winlogbeat file is missing at the content folder:"C:\\ProgramData\\XDR Collector\\Data\\content\\filebeat-windows-x86\_64\\filebeat.exe""C:\\ProgramData\\XDR Collector\\Data\\content\\winlogbeat-windows-x86\_64\\winlogbeat.exe" | Stop the collector.; Delete the Data folder.; Start the collector. |
+| Filebeat | Error | ERROR [reader] reader/reader.go:<line number> Line is larger than max_bytes (10485760): <...log line content...>write error: data size (<number of bytes> bytes) is greater than the max file size (10485760 bytes) | The line in the monitored file is too long | You can set a new maximum size limit on the profile. Example 151. This increases the maximum line size to 20 MB so `message_max_bytes` is 20971520. filebeat.inputs: - type: filestream id: my-app-logs enabled: true paths: - /var/log/my-app/\*.log # |
+| Filebeat | Error | Filebeat is not running , error code: 1, b'Exiting: error loading config file: yaml: line <line number>: found unknown escape character\\n' | The filebeat YAML file contains a path that is wrapped with double quotes, but only contains single backslashes, such as: `“C:\windows\somefile.log”` | Use double backslashes after windows when using double quotes: “C:\\windows\\\\somefile.log” OR Put path in single quotes: ‘C:\\windows\\\\somefile.log’ |
+| Filebeat / Winlogbeat | Warning | Filebeat / Winlogbeat not installed | The Filebeat / Winlogbeat file is missing at the content folder:"C:\\ProgramData\\XDR Collector\\Data\\content\\filebeat-windows-x86_64\\filebeat.exe""C:\\ProgramData\\XDR Collector\\Data\\content\\winlogbeat-windows-x86_64\\winlogbeat.exe" | Stop the collector.; Delete the Data folder.; Start the collector. |
 | Filebeat / Winlogbeat | Error | Error: Filebeat.Winlogbeat is not running , error code: 1, b' Exiting: no modules or inputs enabled and configuration reloading disabled. What files do you want me to watch?\\n' | The Filebeat / Winlogbeat profile does not contain a valid YAML it can process. | Check that the policy has a valid profile with a valid YAML configuration. |
 | XDRC | Warning | No incoming data for more than 24 hours | The Filebeat / Winlogbeat didn't upload new data in the last 24 hours since the last upload. | Check why the configured files no longer receive log files to upload. |
 | XDRC | Warning | No incoming data for more than 7 days | The Filebeat / Winlogbeat didn't upload new data for the last 7 days since the last upload. | Check why the configured files no longer receive log files to upload. |
@@ -31148,7 +30424,6 @@ OR Put path in single quotes:
 | XDRC | Error | Error: HTTP POST request failed, through proxy:{'http': '<IP number>', 'https': ' | The collector is configured to use a proxy that returned a 503 HTTP error. This usually indicates a server error. | If you own the proxy, check it. If the error appears to be from a Cortex Cloud tenant, open a support ticket for the server team. |
 
 ## Palo Alto Networks integrations
-Abstract
 
 Cortex Cloud supports data ingestion from other Palo Alto Networks products.
 
@@ -31171,7 +30446,6 @@ For tenants where customers have integrated directly with Strata Logging Service
     Roll-back of Strata Logging Service integration migration is not supported.
 
 ### About Palo Alto Networks integrations
-Abstract
 
 Stream data directly from other Palo Alto Networks products to Cortex Cloud.
 
@@ -31198,7 +30472,6 @@ For tenants where customers have integrated directly with Strata Logging Service
     Roll-back of Strata Logging Service integration migration is not supported.
 
 ### Next-Generation Firewall
-Abstract
 
 Learn more ingesting firewall data from your Next-Generation Firewall (NGFW) and Panorama devices in Cortex Cloud.
 
@@ -31211,7 +30484,6 @@ You can configure collecting Next-Generation Firewall logs and data using an int
 | Links to content pack/integration details | The [PAN-OS by Palo Alto Networks](https://cortex.marketplace.pan.dev/marketplace/details/PANOS/) content pack manages Palo Alto Networks Firewalls and Panorama via API, allowing users to create, modify, and manage custom security policies, perform configuration commits, manage dynamic lists, perform system upgrades, and query various log types. It contains various playbooks, a classifier (Panorama Classifier) and mapper (Panorama Mapper), issue fields, issue types, and automations/scripts. It also includes the following integration: [Palo Alto Networks PAN-OS](https://xsoar.pan.dev/docs/reference/integrations/panorama): Use this integration to manage Palo Alto Networks Firewall and Panorama, including managing Prisma Access through Panorama, creating and managing security policies, and querying logs. This integration includes commands for managing the master key, checking dynamic updates status, downloading and installing various dynamic updates (for example, AntiVirus, WildFire, GlobalProtect Clientless VPN), listing and deleting policy rules (including new types like application-override, authentication, decryption, nat, and pbf), managing addresses and URL categories, retrieving rule hit counts, disabling rules, and performing hygiene checks on various security profiles and configurations. |
 
 #### Ingest data from Next-Generation Firewall
-Abstract
 
 Learn how to ingest detection data from Next-Generation Firewall and Panorama.
 
@@ -31322,7 +30594,7 @@ In the following procedure, general information is provided for NGFW and Panoram
      
      -   In your NGFW Standalone Firewall Devices, track the Last communication timestamp.
          
-     -   Run XQL Query: **dataset = panw\_ngfw\_system\_raw| filter log\_source\_id = "\[NGFW device SN\]"**
+     -   Run XQL Query: **dataset = panw_ngfw_system_raw| filter log_source_id = "[NGFW device SN]"**
          
      
 15.  (Optional) Manage your Instance.
@@ -31338,27 +30610,27 @@ It can take an hour or longer after connecting the firewall in Cortex Cloud unti
 
 When Cortex Cloud begins receiving detection data, the console begins stitching logs with other Palo Alto Network-generated logs to form stories. Use the XQL Search dataset `panw_ngfw_*_raw` to query your data, where the following logs are supported:
 
--   [Authentication Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-authentication-log.html): panw\_ngfw\_auth\_raw
+-   [Authentication Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-authentication-log.html): panw_ngfw_auth_raw
     
--   [File Data Logs](https://docs.paloaltonetworks.com/strata-logging-service/log-reference/network-logs/network-file-log): panw\_ngfw\_filedata\_raw
+-   [File Data Logs](https://docs.paloaltonetworks.com/strata-logging-service/log-reference/network-logs/network-file-log): panw_ngfw_filedata_raw
     
--   [Global Protect Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-globalprotect-log.html): panw\_ngfw\_globalprotect\_raw
+-   [Global Protect Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-globalprotect-log.html): panw_ngfw_globalprotect_raw
     
--   [Hipmatch Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-hip-match-log.html): panw\_ngfw\_hipmatch\_raw\*
+-   [Hipmatch Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-hip-match-log.html): panw_ngfw_hipmatch_raw\*
     
--   [System Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/common-logs/common-system-log.html): panw\_ngfw\_system\_raw
+-   [System Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/common-logs/common-system-log.html): panw_ngfw_system_raw
     
--   [Threat Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-threat-log.html): panw\_ngfw\_threat\_raw\*
+-   [Threat Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-threat-log.html): panw_ngfw_threat_raw\*
     
--   [Traffic Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-traffic-log.html): panw\_ngfw\_traffic\_raw\*
+-   [Traffic Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-traffic-log.html): panw_ngfw_traffic_raw\*
     
--   [URL Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-url-log.html): panw\_ngfw\_url\_raw\*
+-   [URL Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-url-log.html): panw_ngfw_url_raw\*
     
--   [User ID Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-userid-log.html): panw\_ngfw\_userid\_raw
+-   [User ID Logs](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference/network-logs/network-userid-log.html): panw_ngfw_userid_raw
     
--   [Configuration Logs](https://docs.paloaltonetworks.com/strata-logging-service/log-reference/common-logs/common-configuration-log): panw\_ngfw\_config\_raw
+-   [Configuration Logs](https://docs.paloaltonetworks.com/strata-logging-service/log-reference/common-logs/common-configuration-log): panw_ngfw_config_raw
     
--   [Tunnel Logs](https://docs.paloaltonetworks.com/strata-logging-service/log-reference/network-logs/network-tunnel-log): panw\_ngfw\_tunnel\_raw
+-   [Tunnel Logs](https://docs.paloaltonetworks.com/strata-logging-service/log-reference/network-logs/network-tunnel-log): panw_ngfw_tunnel_raw
     
 
 \*These datasets use the query field names as described in the [Cortex schema](https://docs.paloaltonetworks.com/cortex/cortex-data-lake/log-forwarding-schema-reference.html) documentation.
@@ -31374,7 +30646,6 @@ IOC and BIOC issues are applicable on stitched data only, and are not available 
 You can see an overview of ingestion status for all log types, and a breakdown of each log type and its daily consumption quota on the NGFW Ingestion Dashboard.
 
 #### Ingest Next-Generation Firewall logs using the Syslog collector
-Abstract
 
 Use the Syslog collector to ingest NGFW logs in CEF format. This method is useful when your firewalls are located in a different region, or bandwidth issues are encountered due to large log size.
 
@@ -31406,7 +30677,7 @@ In the following procedure, general information is provided for NGFW and Panoram
         
     -   Transport, Port (default 514 for UDP)
         
-    -   Facility (default LOG\_USER)
+    -   Facility (default LOG_USER)
         
     
 6.  Select the Custom Log Format tab and click configure the log formats as follows:
@@ -31421,10 +30692,10 @@ In the following procedure, general information is provided for NGFW and Panoram
     
     | Log Type | Custom Format |
     | :-- | :-- |
-    | Traffic | CEF:0|PANW|NGFW\_CEF|$sender\_sw\_version|$subtype|$type|1| \_\_firewall\_type=firewall.traffic \_\_timestamp=$start \_\_tz=$high\_res\_timestamp log\_type=$type subtype=$subtype log\_time=$cef-formatted-receive\_time time\_generated=$cef-formatted-time\_generated log\_source\_id=$serial log\_source\_name=$device\_name sequence\_no=$seqno source\_ip=$src dest\_ip=$dst source\_port=$sport dest\_port=$dport nat\_source=$natsrc nat\_dest=$natdst nat\_source\_port=$natsport nat\_dest\_port=$natdport protocol=$proto action=$action source\_user=$srcuser dest\_user=$dstuser xff\_ip=$xff\_ip app=$app app\_category=$category\_of\_app app\_sub\_category=$subcategory\_of\_app rule\_matched=$rule rule\_matched\_uuid=$rule\_uuid severity=1 vsys=$vsys vsys\_name=$vsys\_name from\_zone=$from to\_zone=$to inbound\_if=$inbound\_if outbound\_if=$outbound\_if session\_id=$sessionid source\_device\_category=$src\_category source\_device\_profile=$src\_profile source\_device\_model=$src\_model source\_device\_vendor=$src\_vendor source\_device\_osfamily=$src\_osfamily source\_device\_osversion=$src\_osversion source\_device\_mac=$src\_mac dest\_device\_category=$dst\_category dest\_device\_profile=$dst\_profile dest\_device\_model=$dst\_model dest\_device\_vendor=$dst\_vendor dest\_device\_osfamily=$dst\_osfamily dest\_device\_osversion=$dst\_osversion dest\_device\_mac=$dst\_mac bytes\_sent=$bytes\_sent bytes\_received=$bytes\_received packets\_received=$pkts\_received packets\_sent=$pkts\_sent total\_time\_elapsed=$elapsed session\_end\_reason=$session\_end\_reason url\_category=$category |
-    | Threat | CEF:0|PANW|NGFW\_CEF|$sender\_sw\_version|$threatid|$type|$number-of-severity| \_\_firewall\_type=firewall.threat \_\_timestamp=$cef-formatted-time\_generated \_\_tz=$high\_res\_timestamp log\_type=$type subtype=$subtype log\_time=$cef-formatted-receive\_time time\_generated=$cef-formatted-time\_generated log\_source\_id=$serial log\_source\_name=$device\_name sequence\_no=$seqno source\_ip=$src dest\_ip=$dst source\_port=$sport dest\_port=$dport nat\_source=$natsrc nat\_dest=$natdst nat\_source\_port=$natsport nat\_dest\_port=$natdport protocol=$proto action=$action source\_user=$srcuser dest\_user=$dstuser xff=$xff xff\_ip=$xff\_ip app=$app app\_category=$category\_of\_app app\_sub\_category=$subcategory\_of\_app rule\_matched=$rule rule\_matched\_uuid=$rule\_uuid severity=$number-of-severity vsys=$vsys vsys\_name=$vsys\_name from\_zone=$from to\_zone=$to inbound\_if=$inbound\_if outbound\_if=$outbound\_if session\_id=$sessionid source\_device\_category=$src\_category source\_device\_profile=$src\_profile source\_device\_model=$src\_model source\_device\_vendor=$src\_vendor source\_device\_osfamily=$src\_osfamily source\_device\_osversion=$src\_osversion source\_device\_mac=$src\_mac dest\_device\_category=$dst\_category dest\_device\_profile=$dst\_profile dest\_device\_model=$dst\_model dest\_device\_vendor=$dst\_vendor dest\_device\_osfamily=$dst\_osfamily dest\_device\_osversion=$dst\_osversion dest\_device\_mac=$dst\_mac misc=$misc threat\_id=$threatid threat\_name=$threat\_name threat\_category=$thr\_category direction=$direction user\_agent=$user\_agent |
-    | URL | CEF:0|PANW|NGFW\_CEF|$sender\_sw\_version|$subtype|$type|$number-of-severity| \_\_firewall\_type=firewall.url \_\_timestamp=$cef-formatted-time\_generated \_\_tz=$high\_res\_timestamp log\_type=$type subtype=$subtype log\_time=$cef-formatted-receive\_time time\_generated=$cef-formatted-time\_generated log\_source\_id=$serial log\_source\_name=$device\_name sequence\_no=$seqno source\_ip=$src dest\_ip=$dst source\_port=$sport dest\_port=$dport nat\_source=$natsrc nat\_dest=$natdst nat\_source\_port=$natsport nat\_dest\_port=$natdport protocol=$proto action=$action source\_user=$srcuser dest\_user=$dstuser xff=$xff xff\_ip=$xff\_ip app=$app app\_category=$category\_of\_app app\_sub\_category=$subcategory\_of\_app rule\_matched=$rule rule\_matched\_uuid=$rule\_uuid severity=$number-of-severity vsys=$vsys vsys\_name=$vsys\_name from\_zone=$from to\_zone=$to inbound\_if=$inbound\_if outbound\_if=$outbound\_if session\_id=$sessionid source\_device\_category=$src\_category source\_device\_profile=$src\_profile source\_device\_model=$src\_model source\_device\_vendor=$src\_vendor source\_device\_osfamily=$src\_osfamily source\_device\_osversion=$src\_osversion source\_device\_mac=$src\_mac dest\_device\_category=$dst\_category dest\_device\_profile=$dst\_profile dest\_device\_model=$dst\_model dest\_device\_vendor=$dst\_vendor dest\_device\_osfamily=$dst\_osfamily dest\_device\_osversion=$dst\_osversion dest\_device\_mac=$dst\_mac uri=$misc threat\_id=$threatid threat\_name=$threat\_name threat\_category=$thr\_category direction=$direction user\_agent=$user\_agent url\_category=$category url\_category\_list=$url\_category\_list content\_type=$contenttype http\_method=$http\_method http\_headers=$http\_headers http2\_connection=$http2\_connection referer=$referer pcap\_id=$pcap\_id |
-    | File Data | CEF:0|PANW|NGFW\_CEF|$sender\_sw\_version|$threatid|$type|$number-of-severity| \_\_firewall\_type=firewall.filedata \_\_timestamp=$cef-formatted-time\_generated \_\_tz=$high\_res\_timestamp log\_type=$type subtype=$subtype log\_time=$cef-formatted-receive\_time time\_generated=$cef-formatted-time\_generated log\_source\_id=$serial log\_source\_name=$device\_name sequence\_no=$seqno source\_ip=$src dest\_ip=$dst source\_port=$sport dest\_port=$dport nat\_source=$natsrc nat\_dest=$natdst nat\_source\_port=$natsport nat\_dest\_port=$natdport protocol=$proto action=$action source\_user=$srcuser dest\_user=$dstuser xff=$xff xff\_ip=$xff\_ip app=$app app\_category=$category\_of\_app app\_sub\_category=$subcategory\_of\_app rule\_matched=$rule rule\_matched\_uuid=$rule\_uuid severity=$number-of-severity vsys=$vsys vsys\_name=$vsys\_name from\_zone=$from to\_zone=$to inbound\_if=$inbound\_if outbound\_if=$outbound\_if session\_id=$sessionid source\_device\_category=$src\_category source\_device\_profile=$src\_profile source\_device\_model=$src\_model source\_device\_vendor=$src\_vendor source\_device\_osfamily=$src\_osfamily source\_device\_osversion=$src\_osversion source\_device\_mac=$src\_mac dest\_device\_category=$dst\_category dest\_device\_profile=$dst\_profile dest\_device\_model=$dst\_model dest\_device\_vendor=$dst\_vendor dest\_device\_osfamily=$dst\_osfamily dest\_device\_osversion=$dst\_osversion dest\_device\_mac=$dst\_mac misc=$misc threat\_id=$threatid threat\_name=$threat\_name threat\_category=$thr\_category direction=$direction user\_agent=$user\_agent file\_url=$file\_url filedigest=$filedigest filetype=$filetype pcap\_id=$pcap\_id |
+    | Traffic | CEF:0|PANW|NGFW_CEF|$sender_sw_version|$subtype|$type|1| __firewall_type=firewall.traffic __timestamp=$start __tz=$high_res_timestamp log_type=$type subtype=$subtype log_time=$cef-formatted-receive_time time_generated=$cef-formatted-time_generated log_source_id=$serial log_source_name=$device_name sequence_no=$seqno source_ip=$src dest_ip=$dst source_port=$sport dest_port=$dport nat_source=$natsrc nat_dest=$natdst nat_source_port=$natsport nat_dest_port=$natdport protocol=$proto action=$action source_user=$srcuser dest_user=$dstuser xff_ip=$xff_ip app=$app app_category=$category_of_app app_sub_category=$subcategory_of_app rule_matched=$rule rule_matched_uuid=$rule_uuid severity=1 vsys=$vsys vsys_name=$vsys_name from_zone=$from to_zone=$to inbound_if=$inbound_if outbound_if=$outbound_if session_id=$sessionid source_device_category=$src_category source_device_profile=$src_profile source_device_model=$src_model source_device_vendor=$src_vendor source_device_osfamily=$src_osfamily source_device_osversion=$src_osversion source_device_mac=$src_mac dest_device_category=$dst_category dest_device_profile=$dst_profile dest_device_model=$dst_model dest_device_vendor=$dst_vendor dest_device_osfamily=$dst_osfamily dest_device_osversion=$dst_osversion dest_device_mac=$dst_mac bytes_sent=$bytes_sent bytes_received=$bytes_received packets_received=$pkts_received packets_sent=$pkts_sent total_time_elapsed=$elapsed session_end_reason=$session_end_reason url_category=$category |
+    | Threat | CEF:0|PANW|NGFW_CEF|$sender_sw_version|$threatid|$type|$number-of-severity| __firewall_type=firewall.threat __timestamp=$cef-formatted-time_generated __tz=$high_res_timestamp log_type=$type subtype=$subtype log_time=$cef-formatted-receive_time time_generated=$cef-formatted-time_generated log_source_id=$serial log_source_name=$device_name sequence_no=$seqno source_ip=$src dest_ip=$dst source_port=$sport dest_port=$dport nat_source=$natsrc nat_dest=$natdst nat_source_port=$natsport nat_dest_port=$natdport protocol=$proto action=$action source_user=$srcuser dest_user=$dstuser xff=$xff xff_ip=$xff_ip app=$app app_category=$category_of_app app_sub_category=$subcategory_of_app rule_matched=$rule rule_matched_uuid=$rule_uuid severity=$number-of-severity vsys=$vsys vsys_name=$vsys_name from_zone=$from to_zone=$to inbound_if=$inbound_if outbound_if=$outbound_if session_id=$sessionid source_device_category=$src_category source_device_profile=$src_profile source_device_model=$src_model source_device_vendor=$src_vendor source_device_osfamily=$src_osfamily source_device_osversion=$src_osversion source_device_mac=$src_mac dest_device_category=$dst_category dest_device_profile=$dst_profile dest_device_model=$dst_model dest_device_vendor=$dst_vendor dest_device_osfamily=$dst_osfamily dest_device_osversion=$dst_osversion dest_device_mac=$dst_mac misc=$misc threat_id=$threatid threat_name=$threat_name threat_category=$thr_category direction=$direction user_agent=$user_agent |
+    | URL | CEF:0|PANW|NGFW_CEF|$sender_sw_version|$subtype|$type|$number-of-severity| __firewall_type=firewall.url __timestamp=$cef-formatted-time_generated __tz=$high_res_timestamp log_type=$type subtype=$subtype log_time=$cef-formatted-receive_time time_generated=$cef-formatted-time_generated log_source_id=$serial log_source_name=$device_name sequence_no=$seqno source_ip=$src dest_ip=$dst source_port=$sport dest_port=$dport nat_source=$natsrc nat_dest=$natdst nat_source_port=$natsport nat_dest_port=$natdport protocol=$proto action=$action source_user=$srcuser dest_user=$dstuser xff=$xff xff_ip=$xff_ip app=$app app_category=$category_of_app app_sub_category=$subcategory_of_app rule_matched=$rule rule_matched_uuid=$rule_uuid severity=$number-of-severity vsys=$vsys vsys_name=$vsys_name from_zone=$from to_zone=$to inbound_if=$inbound_if outbound_if=$outbound_if session_id=$sessionid source_device_category=$src_category source_device_profile=$src_profile source_device_model=$src_model source_device_vendor=$src_vendor source_device_osfamily=$src_osfamily source_device_osversion=$src_osversion source_device_mac=$src_mac dest_device_category=$dst_category dest_device_profile=$dst_profile dest_device_model=$dst_model dest_device_vendor=$dst_vendor dest_device_osfamily=$dst_osfamily dest_device_osversion=$dst_osversion dest_device_mac=$dst_mac uri=$misc threat_id=$threatid threat_name=$threat_name threat_category=$thr_category direction=$direction user_agent=$user_agent url_category=$category url_category_list=$url_category_list content_type=$contenttype http_method=$http_method http_headers=$http_headers http2_connection=$http2_connection referer=$referer pcap_id=$pcap_id |
+    | File Data | CEF:0|PANW|NGFW_CEF|$sender_sw_version|$threatid|$type|$number-of-severity| __firewall_type=firewall.filedata __timestamp=$cef-formatted-time_generated __tz=$high_res_timestamp log_type=$type subtype=$subtype log_time=$cef-formatted-receive_time time_generated=$cef-formatted-time_generated log_source_id=$serial log_source_name=$device_name sequence_no=$seqno source_ip=$src dest_ip=$dst source_port=$sport dest_port=$dport nat_source=$natsrc nat_dest=$natdst nat_source_port=$natsport nat_dest_port=$natdport protocol=$proto action=$action source_user=$srcuser dest_user=$dstuser xff=$xff xff_ip=$xff_ip app=$app app_category=$category_of_app app_sub_category=$subcategory_of_app rule_matched=$rule rule_matched_uuid=$rule_uuid severity=$number-of-severity vsys=$vsys vsys_name=$vsys_name from_zone=$from to_zone=$to inbound_if=$inbound_if outbound_if=$outbound_if session_id=$sessionid source_device_category=$src_category source_device_profile=$src_profile source_device_model=$src_model source_device_vendor=$src_vendor source_device_osfamily=$src_osfamily source_device_osversion=$src_osversion source_device_mac=$src_mac dest_device_category=$dst_category dest_device_profile=$dst_profile dest_device_model=$dst_model dest_device_vendor=$dst_vendor dest_device_osfamily=$dst_osfamily dest_device_osversion=$dst_osversion dest_device_mac=$dst_mac misc=$misc threat_id=$threatid threat_name=$threat_name threat_category=$thr_category direction=$direction user_agent=$user_agent file_url=$file_url filedigest=$filedigest filetype=$filetype pcap_id=$pcap_id |
     
 7.  Configure Escaping characters as follows:
     
@@ -31433,7 +30704,7 @@ In the following procedure, general information is provided for NGFW and Panoram
     -   Escape Character: \\
         
     
-    [image: Syslog_settings_NGFW_log_collection.png]
+    
     
 
 ##### Configure Syslog collection
@@ -31441,7 +30712,6 @@ In the following procedure, general information is provided for NGFW and Panoram
 Set up a Syslog collector for the logs, as explained in Activate Syslog Collector. In Task 4, ensure that you set Format to CEF.
 
 ### Ingest data from Prisma Access
-Abstract
 
 Learn how to ingest detection data from Prisma Access.
 
@@ -31502,7 +30772,6 @@ To ingest detection data from Prisma Access:
     After you create the Prisma Access instance, on the Data Sources & Integrations page, expand the Prisma Access integration to track the connection, or, if you want, to Delete the instance.
 
 ### Ingest logs from Prisma Access Browser
-Abstract
 
 Ingest Prisma Browser logs into Cortex Cloud.
 
@@ -31532,7 +30801,6 @@ Only one instance of this collector can be created per Cortex Cloud tenant.
 After you have created a Prisma Browser instance, you can use the Data Sources & Integrations page to view information about the integration, or delete the instance.
 
 ### Ingest detection data from Strata Logging Service
-Abstract
 
 Learn how to ingest detection data from Strata Logging Service.
 
@@ -31573,7 +30841,6 @@ To ingest detection data from Strata Logging Service.
 7.  After Cortex Cloud begins receiving data from a Strata Logging Service, you can use XQL Search to search for specific data, using the `xdr_data` dataset.
 
 ### IoT Security
-Abstract
 
 Learn more about the IoT Security content pack integration in Cortex Cloud.
 
@@ -31586,7 +30853,6 @@ You can configure collecting IoT Security logs and data using an integration con
 | Links to content pack/integration details | The [IoT by Palo Alto Networks](https://cortex.marketplace.pan.dev/marketplace/details/PaloAltoNetworks_IoT/) content pack enables Cortex Cloud to integrate with the Palo Alto Networks IoT Security Portal for retrieving device details, listing and managing alerts and vulnerabilities, and integrating with ticketing systems like ServiceNow for streamlined incident response. It contains the PANW IoT ServiceNow Tickets Check playbook, the PANW IoT Incident Handling with ServiceNow playbook, the PANW IoT Alert Handling with ServiceNow playbook, the **`iot-security-get-raci`** automation script, the iot-security-alert-post-processing automation script, the **`iot-security-check-servicenow`** automation script, and the **`iot-security-vuln-post-processing`** automation script, along with the IoT Alert and IoT Vulnerability issue types and custom issue fields. [Palo Alto Networks IoT](https://xsoar.pan.dev/docs/reference/integrations/palo-alto-networks-io-t): Use this integration to wrap around the IoT Security Portal APIs for operations such as getting a device detail by ID, listing devices, listing alerts and vulnerabilities, and resolving alerts and vulnerabilities. The integration provides the API wrapper that supports actions for retrieving device information and managing IoT alerts and vulnerabilities. |
 
 #### Ingest alerts and assets from IoT Security
-Abstract
 
 Ingest alerts and device data from IoT Security.
 
@@ -31648,7 +30914,6 @@ Configure the IoT Security alerts and assets collection in Cortex Cloud.
 6.  After Cortex Cloud begins receiving data from IOT Security, you can use the XQL Search to search for logs in the new datasets, `panw_iot_security_devices_raw` for device activities, and `panw_iot_security_alerts_raw` for issues.
 
 ### Collecting URL and File log types
-Abstract
 
 Learn about the implications of turning off or on collection of URL and File logs.
 
@@ -31661,7 +30926,6 @@ You can also calculate the amount of ingestion that URL and File log types are c
 You can turn on or off URL and File log types collection on the page.
 
 ## Cloud Posture and Runtime Security data sources
-Abstract
 
 Learn more about the Cloud Posture and Runtime Security data sources in Cortex Cloud.
 
@@ -31680,7 +30944,6 @@ Relevant Cloud Posture and Runtime data source types:
 -   **Cloud data security (DSPM)**: Discovers and classifies sensitive data across managed storage, such as S3 and Cloud SQL, and self-managed databases.
 
 ### How to onboard Databricks
-Abstract
 
 How to get started with the third-party Databricks data source.
 
@@ -31797,7 +31060,6 @@ At the end of the onboarding process, a pending request for Databricks approval 
 For more information, see Egress configurations.Egress configurations
 
 ### How to onboard on-premise file shares to Cortex Cloud Data Security
-Abstract
 
 Set up Data Security for on-premise file shares using Broker VM.
 
@@ -31829,7 +31091,6 @@ Once configured, this applet continuously:
 For information about activating the DSPM Fileshare applet, see Activate DSPM Fileshare.
 
 #### Activate DSPM Fileshare
-Abstract
 
 Learn more about activating a Broker VM with the DSPM Fileshare applet.
 
@@ -31914,7 +31175,6 @@ Inventory list
 Each new connection that is created correlates to an asset in the inventory. You can see the connections by clicking Inventory → All Assets → Data → Storage Buckets.
 
 ### How to onboard Microsoft 365
-Abstract
 
 How to get started with the Microsoft 365 data source.
 
@@ -31959,7 +31219,6 @@ You can add Microsoft 365 as a third-party data source in Cortex Cloud Data Secu
 The Microsoft 365 integration instance should now appear in the list of data sources on the Data Sources & Integrations page.
 
 ### Ingest logs and data from Okta
-Abstract
 
 Learn more about Ingesting logs and data from Okta for use in Cortex Cloud.
 
@@ -32116,7 +31375,7 @@ After the registry scanner is initialized, perform the following steps to verify
     
 4.  Select the Registry Scanner app to open a window displaying the following information:
     
-    [image: registry-scanner-applet-on-boker-vm-window-panel.png]
+    
     
     -   Connection: Shows the app's current connection status. You can also Deactivate the app.
         
@@ -32147,7 +31406,6 @@ After the registry scanner is initialized, perform the following steps to verify
     -   Manage a Sonatype connector
 
 ### How to onboard Snowflake
-Abstract
 
 How to get started with the third-party Snowflake data source.
 
@@ -32182,7 +31440,7 @@ You can add Snowflake as a third-party data source in Cortex Cloud Data Security
         
         The account identifier can be found using the user information at the bottom left. Hover over the account you wish to onboard and select the copy option at the top right. The account identifier is usually of the format: 
         
-        (organization).\[account\]
+        (organization).[account]
         
     3.  (Optional) If you have a Snowflake account that is protected by a network policy, turn on the My Snowflake account is protected by network policies toggle button. The network policies are related to the IP allow list.
         
@@ -32235,7 +31493,6 @@ You can add Snowflake as a third-party data source in Cortex Cloud Data Security
     The Snowflake instance is now removed, including all previous scans.
 
 ### Activate Transporter
-Abstract
 
 Activate a Broker VM with a Transporter applet.
 
@@ -32306,7 +31563,6 @@ To manage Transporter applet configurations, disable connections, or deactivate 
     All existing connections are deleted but their configurations are saved in the database. When adding a new connection, you'll be prompted if you want to reuse previous configurations.
 
 ## Administration and troubleshooting
-Abstract
 
 Learn more about the administration and troubleshooting of the different data collector integrations in Cortex Cloud.
 
@@ -32332,7 +31588,6 @@ You can manage the instances configured for a data source on the Data Sources & 
         If you delete all the instances for a Data Source, the Data Source is not listed on the Data Sources & Integrations page.
 
 #### Add a new data source or instance
-Abstract
 
 Use the Data Source Onboarder to add a new data source or instance in Cortex Cloud.
 
@@ -32407,7 +31662,6 @@ You can add a new data source with the Data Source Onboarder. The Onboarder inst
 10.  Click Finish to return to the Data Sources & Integrations page.
 
 #### How to configure the scanning settings for supported services
-Abstract
 
 How to edit a cloud instance, including data asset types.
 
@@ -32437,7 +31691,6 @@ How to edit a cloud instance, including data asset types.
     For more information about supported assets in Cortex Cloud Data Security, see Supported assets in Cortex Cloud Data Security.
 
 #### Manage cloud instances
-Abstract
 
 You can manage the cloud instances configured for a CSP on the Data Sources & Integrations page. You can check the status, edit, delete, enable, or disable instances, and initiate discovery scan.
 
@@ -32481,7 +31734,6 @@ Monitoring cloud integration instance health ensures continuous, reliable operat
         Currently, automation permission errors or missing automation permissions do not affect the Automation health status. You can view any permission errors or missing permissions in the the Permissions health status.
 
 #### Update cloud permissions after Cortex release updates
-Abstract
 
 Manage permission updates for your cloud instances following new feature releases or bug fixes.
 
@@ -32547,7 +31799,6 @@ There are some actions that can be performed specifically on cloud instances wit
 | Delete | To delete a pending instance, right-click the pending instance and select Delete. |
 
 #### Troubleshoot errors on cloud instances
-Abstract
 
 You can troubleshoot errors on cloud instances by drilling down on an instance from the Data Sources & Integrations page.
 
@@ -32631,13 +31882,13 @@ Example 152. Examples of Outpost queries
 -   Identify Outpost errors on all Outpost accounts in the eu-west-3 region:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Outpost" and classification = "Error" and region = "eu-west-3"
+    dataset = cloud_health_auditing | filter capability = "Outpost" and classification = "Error" and region = "eu-west-3"
     ```
     
--   See all entries (error, warning, and recovery) for Outpost\_1 on cloud account Account\_A:
+-   See all entries (error, warning, and recovery) for Outpost_1 on cloud account Account_A:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Outpost" and resource\_id = “Outpost\_1” and account = "Account\_A"
+    dataset = cloud_health_auditing | filter capability = "Outpost" and resource_id = “Outpost_1” and account = "Account_A"
     ```
     
 
@@ -32690,16 +31941,16 @@ The following table describes the fields for Discovery engine entries:
 
 Example 153. Examples of Discovery engine queries
 
--   Identify API exec errors on the Discovery engine for all accounts on the AWS\_1 connector:
+-   Identify API exec errors on the Discovery engine for all accounts on the AWS_1 connector:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Discovery" and connector = "AWS\_1" and classification = “Error”
+    dataset = cloud_health_auditing | filter capability = "Discovery" and connector = "AWS_1" and classification = “Error”
     ```
     
--   See all Discovery engine activity on connector AWS\_1 for Account\_ A in the af-south-1 region:
+-   See all Discovery engine activity on connector AWS_1 for Account_ A in the af-south-1 region:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Discovery" and connector = "AWS\_1" and account = "accountA" and region = "af-south-1"
+    dataset = cloud_health_auditing | filter capability = "Discovery" and connector = "AWS_1" and account = "accountA" and region = "af-south-1"
     ```
     
 
@@ -32737,13 +31988,13 @@ Example 154. Examples of ADS queries
 -   Identify failed ADS scans on connector "a8df43e848dd42778ae7efd5a706a0fc" for EC2 assets at the asset scope level, filtered by region (northamerica-northeast2-a):
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "ADS" and classification = "failed" and connector = “a8df43e848dd42778ae7efd5a706a0fc” and type = "EC2\_INSTANCE" and scope = "Asset" and region = "northamerica-northeast2-a" 
+    dataset = cloud_health_auditing | filter capability = "ADS" and classification = "failed" and connector = “a8df43e848dd42778ae7efd5a706a0fc” and type = "EC2_INSTANCE" and scope = "Asset" and region = "northamerica-northeast2-a" 
     ```
     
--   See all ADS scans (failed and successful) on connector "a8df43e848dd42778ae7efd5a706a0fc" for EC2 assets belonging to Account\_A:
+-   See all ADS scans (failed and successful) on connector "a8df43e848dd42778ae7efd5a706a0fc" for EC2 assets belonging to Account_A:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "ADS" and connector = “a8df43e848dd42778ae7efd5a706a0fc” and type = "EC2" and account = “Account\_A”
+    dataset = cloud_health_auditing | filter capability = "ADS" and connector = “a8df43e848dd42778ae7efd5a706a0fc” and type = "EC2" and account = “Account_A”
     ```
     
 
@@ -32776,16 +32027,16 @@ The following table describes the fields for DSPM entries:
 
 Example 155. Examples of DSPM queries
 
--   Identify failed DSPM scans on the AWS\_1 connector for S3 asset types, filtered by region (ap-east-1):
+-   Identify failed DSPM scans on the AWS_1 connector for S3 asset types, filtered by region (ap-east-1):
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "DSPM" and classification = “Error” and connector = “AWS\_1” and type = "S3\_BUCKET" and region = "ap-east-1"
+    dataset = cloud_health_auditing | filter capability = "DSPM" and classification = “Error” and connector = “AWS_1” and type = "S3_BUCKET" and region = "ap-east-1"
     ```
     
--   See all DSPM scans (failed and successful) on the AWS\_1 connector, for all scanned assets on Account\_A:
+-   See all DSPM scans (failed and successful) on the AWS_1 connector, for all scanned assets on Account_A:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "DSPM" and account = "Account\_A" and connector = “AWS\_1”
+    dataset = cloud_health_auditing | filter capability = "DSPM" and account = "Account_A" and connector = “AWS_1”
     ```
     
 
@@ -32814,16 +32065,16 @@ The following table describes the fields for Registry scanning entries:
 
 Example 156. Examples of Registry scanning queries
 
--   Identify failed scans on connector GCP\_1:
+-   Identify failed scans on connector GCP_1:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Registry" and classification = “error” and connector = “GCP\_1”
+    dataset = cloud_health_auditing | filter capability = "Registry" and classification = “error” and connector = “GCP_1”
     ```
     
--   Review all registry scans (failed and successful) on connector GCP\_1 for asset Asset\_A:
+-   Review all registry scans (failed and successful) on connector GCP_1 for asset Asset_A:
     
     ```
-    dataset = cloud\_health\_auditing | filter capability = "Registry" and connector = “GCP\_1” and ressource\_id = "Asset\_A"
+    dataset = cloud_health_auditing | filter capability = "Registry" and connector = “GCP_1” and ressource_id = "Asset_A"
     ```
     
 
@@ -32845,11 +32096,9 @@ The following table describes the fields for Audit logs entries:
 
 Example 157. Audit logs query example
 
-Identify disruptions (errors) in audit log collection on connector AWS\_1:
+Identify disruptions (errors) in audit log collection on connector AWS_1:
 
-```
-dataset = collection\_auditing | filter instance = “AWS\_1” and log\_type = "Audit Logs" and classification = “Error”
-```
+dataset = collection_auditing | filter instance = “AWS_1” and log_type = "Audit Logs" and classification = “Error”
 
   
 
@@ -32859,13 +32108,11 @@ The following examples show how to set up correlation rules to trigger Health Co
 
 Example rule for DSPM errors
 
-In this example, a correlation rule will trigger a Health Collection issue if a DSPM scan fails on an AWS\_S3 asset on the AWS\_1 connector.
+In this example, a correlation rule will trigger a Health Collection issue if a DSPM scan fails on an AWS_S3 asset on the AWS_1 connector.
 
 Example XQL:
 
-```
-dataset = cloud\_health\_auditing | filter capability = "DSPM" and classification = “Error” and type = "AWS\_S3" and scope = "Asset" and connector = “AWS\_1”
-```
+dataset = cloud_health_auditing | filter capability = "DSPM" and classification = “Error” and type = "AWS_S3" and scope = "Asset" and connector = “AWS_1”
 
 Additional fields to specify in the correlation rule:
 
@@ -32881,13 +32128,11 @@ Additional fields to specify in the correlation rule:
 
 Example rule for Outpost errors
 
-In this example, a correlation rule will trigger a Health Collection issue if an error is recorded on account Outpost\_A in the us-east-1 region.
+In this example, a correlation rule will trigger a Health Collection issue if an error is recorded on account Outpost_A in the us-east-1 region.
 
 Example XQL:
 
-```
-dataset = cloud\_health\_auditing | filter capability = "Outpost" and account = "Outpost\_A" and region = "eu-west-3" and classification = "Error"
-```
+dataset = cloud_health_auditing | filter capability = "Outpost" and account = "Outpost_A" and region = "eu-west-3" and classification = "Error"
 
 Additional fields to specify in the correlation rule:
 
@@ -32902,7 +32147,6 @@ Additional fields to specify in the correlation rule:
 | Category | Collection |
 
 #### Manage Kubernetes Connector instances
-Abstract
 
 You can manage the Kubernetes Connector instances on the Data Sources & Integrations page. You can check the status, edit, or delete Kubernetes Connector instances.
 
@@ -32933,7 +32177,6 @@ Navigate to Settings → Data Sources & Integrations and find the Kubernetes ins
 After uninstalling the Kubernetes connector, the connector status updates to Not connected 48 hours after the uninstall process is initiated.
 
 ### Integrations
-Abstract
 
 Set up an integration instance and start ingesting cases/indicators.
 
@@ -32987,10 +32230,10 @@ From the Data Sources & Integrations page, you can perform actions on an integra
 | Action | Description |
 | --- | --- |
 | Add an instance | Configure an integration instance to connect and communicate with other products. For more information, see Add an integration instance. After configuring the instance, you can also enable/disable the integration instance, copy the instance, and view the integration fetch history. |
-| View the integration's source | View the integration settings and source code. To access this functionality, select an integration from the table and click [image: three-dots-dark.png]. |
+| View the integration's source | View the integration settings and source code. To access this functionality, select an integration from the table and click ⋮. |
 | Edit the integration's source code | Edit the integration settings and source code. For more information about editing the integration's source code, see [Create an Integration](https://xsoar.pan.dev/docs/tutorials/tut-integration-ui). \*\*Note:\*\* If the integration was installed from a content pack, you need to duplicate the integration before editing. |
-| Duplicate the integration | If you want to change the source code, and settings, or download the integration, you need to duplicate the integration. To access this functionality, select an integration from the table and click [image: three-dots-dark.png]. |
-| Show integration commands | Show the commands the integration contains. To access this functionality, select an integration from the table and click [image: three-dots-dark.png]. |
+| Duplicate the integration | If you want to change the source code, and settings, or download the integration, you need to duplicate the integration. To access this functionality, select an integration from the table and click ⋮. |
+| Show integration commands | Show the commands the integration contains. To access this functionality, select an integration from the table and click ⋮. |
 | Delete an integration instance | Although you cannot delete an integration installed from a content pack (unless a duplicate), you can delete an integration instance by either right-clicking an instance and either selecting Delete or by right-clicking an instance and selecting Settings and then deleting from the settings configuration pane. |
 | Set an integration instance to run always whenever the integration is called or on demand | For each integration instance, you have the option of setting the instance to be used only On Demand, when it is specified with the `using` argument in a playbook or the CLI. By default, the settings is Always and the integration instance is used whenever the integration is called. |
 
@@ -33015,7 +32258,6 @@ When running the command, the results are returned in the War Room or Playground
 In the Playground, you can clear the context data, if needed, which deletes everything in the Playground context data, but does not affect the actual issue or case. To clear the context, run `!DeleteContext all=yes'` from the CLI or click Clear Context Data while viewing the context data.
 
 #### Integration use cases
-Abstract
 
 Common integration use cases for Cortex Cloud, including analytics and SIEM, authentication, case management, data enrichment, threat intelligence, forensics and malware.
 
@@ -33225,7 +32467,6 @@ Top use cases:
 Vulnerability Management integration example: Tenable.sc
 
 #### Add an integration instance
-Abstract
 
 Configure an integration instance to use integration commands in playbooks, the case and issue War Rooms, and the Playground.
 
@@ -33257,7 +32498,6 @@ Before you begin:
 6.  By default, the integration instance is used whenever the integration is called. If you want to only use the integration instance when specified with the `using` argument in a playbook or the CLI, change the integration instance setting from Always to On Demand. For example, you might have two instances of an integration and want to use one instance as the default and the other instance only for manual testing on demand.
 
 #### Configure integration permissions
-Abstract
 
 Integration permissions enable you to restrict running commands to specific roles in integrations.
 
@@ -33309,7 +32549,6 @@ To view or edit integration permissions:
 4.  Save the integration permissions.
 
 #### Fetch issues from an integration instance
-Abstract
 
 Configure a third-party integration instance to fetch issues into Cortex Cloud cases for investigation.
 
@@ -33361,18 +32600,17 @@ How to fetch issues
     Some content packs include preconfigured correlation rules, but you should review them to see if they suit your use case and duplicate them if required. Go to Threat Management → Detection Rules → Correlations, search for the relevant rule, right-click, and select Preview Rule. For example, the ServiceNow v2 Alerts (automatically generated) correlation rule uses the following XQL Query:
     
     ```
-    dataset = servicenow\_v2\_generic\_alert\_raw
-    | filter \_alert\_data != null
-    | alter alert\_severity = json\_extract\_scalar(\_alert\_data, "$.severity")
-    | alter alert\_category = json\_extract\_scalar(\_alert\_data, "$.alert\_category")
-    | alter alert\_name = json\_extract\_scalar(\_alert\_data, "$.alert\_name")
-    | alter alert\_description = json\_extract\_scalar(\_alert\_data, "$.alert\_description")
+    dataset = servicenow_v2_generic_alert_raw
+    | filter _alert_data != null
+    | alter alert_severity = json_extract_scalar(_alert_data, "$.severity")
+    | alter alert_category = json_extract_scalar(_alert_data, "$.alert_category")
+    | alter alert_name = json_extract_scalar(_alert_data, "$.alert_name")
+    | alter alert_description = json_extract_scalar(_alert_data, "$.alert_description")
     ```
     
     You may want to update the query by defining complex, multi-source detection logic or add filters, such as alert severity or assignee.
 
 ##### Map fields to issue types
-Abstract
 
 You can create independent mappers for integrations.
 
@@ -33420,7 +32658,6 @@ You can use this procedure for creating a classifier or duplicating an existing 
     2.  In the integration settings, under Mapper (incoming) select the mapper you created and click Save.
 
 ##### Classify events using a classifier for issue types
-Abstract
 
 Classify events using a classification key in an integration ingestion.
 
@@ -33451,7 +32688,7 @@ You can use this procedure for creating a classifier or duplicating an existing 
     
     You can optionally choose a default issue type for unclassified issues from Direct unclassified events to: Select.
     
-    [image: classifier.png]
+    
     
 7.  Click Save.
     
@@ -33462,7 +32699,6 @@ You can use this procedure for creating a classifier or duplicating an existing 
     2.  In the integration settings, under Classifier, select the classifier you created and click Save.
 
 #### Troubleshoot Integrations
-Abstract
 
 Learn how to troubleshoot your integration in Cortex Cloud.
 
@@ -33476,7 +32712,7 @@ The Troubleshooting Instances dashboard provides you with insight into command e
     
     In the following example, you receive a 401 unauthorized error code after testing the integration.
     
-    [image: integration-error.png]
+    
     
     Click Run Test & Download Debug Log, to download the debug file locally. You can verify what server the URL request is being forwarded to and any other reasons as to why you received this error code. The 401 unauthorized error code usually relates to invalid error credentials, expired tokens, or incorrect API settings.
     
@@ -33486,7 +32722,6 @@ The Troubleshooting Instances dashboard provides you with insight into command e
 If you are unable to fix the integration, contact Customer Support for further assistance.
 
 #### Forward requests to long-running integrations
-Abstract
 
 Configure and manage long-running integrations to export internal data from Cortex Cloud.
 
@@ -33537,9 +32772,9 @@ Users with sufficient permissions can set the username and password for specific
     
     **Tenant URL**: https://crtx-cnt-onr-xsiam-dran-9c0.xdr-qa2-uat.us.com
     
-    **Request URL**: https://ext-crtx-cnt-onr-xsiam-dran-9c0.crtx-qa2-uat.us.com/xsoar/instance/execute/edl\_instance\_01\\?q\\=type:ip
+    **Request URL**: https://ext-crtx-cnt-onr-xsiam-dran-9c0.crtx-qa2-uat.us.com/xsoar/instance/execute/edl_instance_01\\?q\\=type:ip
     
-    **CURL**: curl -v -u user:pass https://ext-crtx-cnt-onr-xsiam-dran-9c0.crtx-qa2-uat.us.com/xsoar/instance/execute/edl\_instance\_01\\?q\\=type:ip
+    **CURL**: curl -v -u user:pass https://ext-crtx-cnt-onr-xsiam-dran-9c0.crtx-qa2-uat.us.com/xsoar/instance/execute/edl_instance_01\\?q\\=type:ip
     
 -   **Integration instance running on an engine**
     
@@ -33582,7 +32817,6 @@ When configuring a long-running integration instance, you may need to define a l
     You must set the Listen Port for access when configuring a long-running integration instance on an engine. Use a unique port for each long-running integration instance. Do not use the same port for multiple instances.
 
 ### Verify collector connectivity
-Abstract
 
 Verify collector connectivity and troubleshoot collector errors.
 
@@ -33606,13 +32840,10 @@ Example 158. 
 
 This example searches for status changes on Strata IOT integrations:
 
-```
-dataset = collection\_auditing 
-|filter collector\_type = "STRATA\_IOT"
-```
+dataset = collection_auditing 
+|filter collector_type = "STRATA_IOT"
 
 ### Overview of data ingestion metrics
-Abstract
 
 Learn more about the data ingestion health metrics in the `metrics_source` dataset and the `metrics_view` preset.
 
@@ -33624,10 +32855,10 @@ The data ingestion metrics are calculated in 5-minute aggregation periods and sa
 
 | Metric | Description |
 | --- | --- |
-| total\_size\_bytes | Total size (in bytes) of the logs collected during the aggregation period. |
-| total\_size\_rate | Average size (in bytes per second) of the logs collected during the aggregation period. |
-| total\_event\_count | Total number of logs collected during the aggregation period |
-| total\_event\_rate | Average number (in count per second) of logs collected during the aggregation period. |
+| total_size_bytes | Total size (in bytes) of the logs collected during the aggregation period. |
+| total_size_rate | Average size (in bytes per second) of the logs collected during the aggregation period. |
+| total_event_count | Total number of logs collected during the aggregation period |
+| total_event_rate | Average number (in count per second) of logs collected during the aggregation period. |
 
 In the `metrics_source` dataset, the data ingestion metrics are saved alongside additional fields that describe the data source associated with the metrics. Only entries with ingestion metric values greater than zero are saved in the dataset. Entries with zero values are not saved in this dataset.
 
@@ -33641,33 +32872,32 @@ Read more...
 
 | Field | Type | Description |
 | --- | --- | --- |
-| total\_size\_bytes | Integer | Total size (in bytes) of the logs collected during the aggregation period. |
-| total\_size\_rate | Integer | Average size (in bytes per second) of the logs collected during the aggregation period. |
-| total\_event\_count | Integer | Total number of logs collected during the aggregation period. |
-| total\_event\_rate | Integer | Average number (in count per second) of logs collected during the aggregation period. |
-| data\_freshness\_max\_delay | Float | Maximum delay value from all log entries in a record between log creation at the source and ingestion into Cortex Cloud (in seconds). |
-| data\_freshness\_median | Float | Median delay value from all log entries in a record between log creation at the source and ingestion into Cortex Cloud (in seconds). |
-| data\_freshness\_ninetieth\_percentile | Float | Ninetieth percentile of delay values from all log entries in a record between log creation at the source and ingestion into Cortex Cloud (in seconds). |
-| last\_seen | Datetime | Time that the last logs were collected. |
-| \_vendor | String | Vendor of the observing data source. |
-| \_product | String | Product name of the observing data source. |
-| \_device\_id | String | (For firewall devices) Device ID |
-| \_log\_type | String | (For firewall devices) Log type |
-| \_collector\_name | String | (Event Metadata) Name of the collector instance. |
-| \_collector\_id | String | (Event Metadata) ID of the XDR Collector. |
-| \_collector\_ip | String | (Event Metadata) IP address of the XDR Collector. |
-| \_reporting\_device\_name | String | (Event Metadata) Host name of the device where the log originated. |
-| \_reporting\_device\_ip | String | (Event Metadata) IP Address of the device where the log originated. |
-| \_final\_reporting\_device\_name | String | (Event Metadata) Hostname of the device that the log was extracted from. |
-| \_final\_reporting\_device\_ip | String | (Event Metadata) IP of the device that the log was extracted from. |
-| \_broker\_device\_name | String | (Event Metadata) Host name of the Broker VM. |
-| \_broker\_device\_ip | String | (Event Metadata) IP address of the Broker VM. |
-| \_broker\_device\_id | String | (Event Metadata) ID of the Broker VM. |
-| \_time | Datetime | Timestamp of the interval. |
-| \_insert\_timestamp | Datetime | Recorded time of the entry. |
+| total_size_bytes | Integer | Total size (in bytes) of the logs collected during the aggregation period. |
+| total_size_rate | Integer | Average size (in bytes per second) of the logs collected during the aggregation period. |
+| total_event_count | Integer | Total number of logs collected during the aggregation period. |
+| total_event_rate | Integer | Average number (in count per second) of logs collected during the aggregation period. |
+| data_freshness_max_delay | Float | Maximum delay value from all log entries in a record between log creation at the source and ingestion into Cortex Cloud (in seconds). |
+| data_freshness_median | Float | Median delay value from all log entries in a record between log creation at the source and ingestion into Cortex Cloud (in seconds). |
+| data_freshness_ninetieth_percentile | Float | Ninetieth percentile of delay values from all log entries in a record between log creation at the source and ingestion into Cortex Cloud (in seconds). |
+| last_seen | Datetime | Time that the last logs were collected. |
+| _vendor | String | Vendor of the observing data source. |
+| _product | String | Product name of the observing data source. |
+| _device_id | String | (For firewall devices) Device ID |
+| _log_type | String | (For firewall devices) Log type |
+| _collector_name | String | (Event Metadata) Name of the collector instance. |
+| _collector_id | String | (Event Metadata) ID of the XDR Collector. |
+| _collector_ip | String | (Event Metadata) IP address of the XDR Collector. |
+| _reporting_device_name | String | (Event Metadata) Host name of the device where the log originated. |
+| _reporting_device_ip | String | (Event Metadata) IP Address of the device where the log originated. |
+| _final_reporting_device_name | String | (Event Metadata) Hostname of the device that the log was extracted from. |
+| _final_reporting_device_ip | String | (Event Metadata) IP of the device that the log was extracted from. |
+| _broker_device_name | String | (Event Metadata) Host name of the Broker VM. |
+| _broker_device_ip | String | (Event Metadata) IP address of the Broker VM. |
+| _broker_device_id | String | (Event Metadata) ID of the Broker VM. |
+| _time | Datetime | Timestamp of the interval. |
+| _insert_timestamp | Datetime | Recorded time of the entry. |
 
 #### Creating correlation rules to monitor data ingestion health
-Abstract
 
 See examples of correlation rules for monitoring data ingestion health.
 
@@ -33681,13 +32911,11 @@ In this example, the correlation runs every hour and calculates the number of lo
 
 Example XQL:
 
-```
-preset = metrics\_view  
-| comp sum(total\_event\_count) as total\_event\_count\_sum by \_collector\_id, \_collector\_ip, 
-\_collector\_name, \_collector\_type, \_final\_reporting\_device\_ip, \_final\_reporting\_device\_name,
- \_broker\_device\_id, \_vendor, \_product 
-| filter total\_event\_count\_sum = 0
-```
+preset = metrics_view  
+| comp sum(total_event_count) as total_event_count_sum by _collector_id, _collector_ip, 
+_collector_name, _collector_type, _final_reporting_device_ip, _final_reporting_device_name,
+ _broker_device_id, _vendor, _product 
+| filter total_event_count_sum = 0
 
 Addition fields to specify in the correlation rule:
 
@@ -33709,13 +32937,11 @@ In this example, the correlation runs every 20 minutes and calculates the number
 
 Example XQL:
 
-```
-preset = metrics\_view  
-| join conflict\_strategy = left  type = inner (dataset = ngfw\_device\_Id\_keepalive 
-| fields \_device\_id) as devices devices.\_device\_id = \_device\_id  | comp sum(total\_event\_count)
- as total\_event\_count\_sum by \_device\_id, \_product,\_vendor 
-| filter total\_event\_count\_sum = 0
-```
+preset = metrics_view  
+| join conflict_strategy = left  type = inner (dataset = ngfw_device_Id_keepalive 
+| fields _device_id) as devices devices._device_id = _device_id  | comp sum(total_event_count)
+ as total_event_count_sum by _device_id, _product,_vendor 
+| filter total_event_count_sum = 0
 
 Addition fields to specify in the correlation rule:
 
@@ -33732,7 +32958,6 @@ Addition fields to specify in the correlation rule:
 | Issues Fields Mapping | Select Use preconfigured fields to map the fields that are relevant to data ingestion health. |
 
 #### Measuring data freshness
-Abstract
 
 Learn more about the data freshness metrics collected by Cortex Cloud.
 
@@ -33755,24 +32980,23 @@ Metrics are collected and calculated per data source during five-minute aggregat
 
 | Metric | Description |
 | --- | --- |
-| data\_freshness\_max\_delay | Maximum freshness delay value among all log entries in an aggregation period. This reflects the worst case. |
-| data\_freshness\_median | Median freshness delay value among all log entries in an aggregation period. 50% of values are smaller than the median, and 50% of values are higher or equal to the median. |
-| data\_freshness\_ninetieth\_percentile | Ninetieth percentile of delay values among all log entries in an aggregation period. This delay value is 90% higher than other log entry differences. It reflects the worst case, but eliminates the spikes. |
+| data_freshness_max_delay | Maximum freshness delay value among all log entries in an aggregation period. This reflects the worst case. |
+| data_freshness_median | Median freshness delay value among all log entries in an aggregation period. 50% of values are smaller than the median, and 50% of values are higher or equal to the median. |
+| data_freshness_ninetieth_percentile | Ninetieth percentile of delay values among all log entries in an aggregation period. This delay value is 90% higher than other log entry differences. It reflects the worst case, but eliminates the spikes. |
 
 The metrics are saved to the `metrics_source` dataset and are also available in the `metrics_view` preset.
 
 **Note:**
 
--   The max\_delay metric is taken from the maximum bucket value with a restricted limit; therefore, metrics show whole numbers.
+-   The max_delay metric is taken from the maximum bucket value with a restricted limit; therefore, metrics show whole numbers.
     
--   The median and ninetieth\_percentile metrics are statistical calculations that give an approximation of the real value; therefore, metrics show decimal numbers.
+-   The median and ninetieth_percentile metrics are statistical calculations that give an approximation of the real value; therefore, metrics show decimal numbers.
     
 -   Time slots with a zero log count or zero byte count display records with zero values. Subsequently, the data freshness metrics will also have zero values.
     
 -   Timezone differences between `_TIME` and `_INSERT_TIME` might cause time skews with negative differences. Negative differences are rounded to zero values.
 
 ### About health issues
-Abstract
 
 Cortex Cloud provides health issues to help you monitor the health and integrity of supported Cortex Cloud resources. Health issues comprise ingestion, collection, correlation, and event forwarding errors.
 
@@ -33811,9 +33035,7 @@ Cortex Cloud enforces the dedup logic to health issues. This logic reduces the l
 
 Health issues are associated with the Health domain. To query health issue data, use the following XQL:
 
-```
-dataset = alerts | filter alert\_domain = "DOMAIN\_HEALTH"
-```
+dataset = alerts | filter alert_domain = "DOMAIN_HEALTH"
 
 #### Health issue field descriptions
 
@@ -33852,7 +33074,6 @@ The following table describes the health issue fields.
 | XDR Collector Name | Host name of the XDR Collector. |
 
 #### Investigate and resolve health issues
-Abstract
 
 You can investigate and take action on health issues from the Health Issues page and the Issues Table.
 
@@ -33908,7 +33129,6 @@ Automation issues identify potential misconfigurations in automations, enabling 
 3.  Based on the details of the automation health issue, review any related automations, such as playbooks and integrations, for possible misconfigurations.
 
 #### Monitor data ingestion health
-Abstract
 
 Learn more about data ingestion health monitoring.
 
@@ -33929,7 +33149,6 @@ In addition, Cortex Cloud has a built-in data ingestion monitoring and issues me
 -   About health issues
 
 #### Monitor correlation rules
-Abstract
 
 You can monitor your correlation executions with the `correlations_auditing` dataset.
 
@@ -33946,16 +33165,16 @@ In the `correlations_auditing` dataset, audit entries are added as follows:
 
 **Note:**
 
-In the dataset, the Query start time and Query end time indicate the timeframe of the data that was queried. The actual start and end times of the correlation rule execution are recorded in the \_time field for the Initiated and Completed entries.
+In the dataset, the Query start time and Query end time indicate the timeframe of the data that was queried. The actual start and end times of the correlation rule execution are recorded in the _time field for the Initiated and Completed entries.
 
-##### Field descriptions for the correlations\_auditing dataset
+##### Field descriptions for the correlations_auditing dataset
 
-The following table describes the fields in the correlations\_auditing dataset:
+The following table describes the fields in the correlations_auditing dataset:
 
 | Field | Description |
 | --- | --- |
-| \_time | Timestamp of the audit. For entries with an Initiated or Initiated Manually status, this is the start time of the correlation rule execution. For entries with a Completed or Error status, this is the end time of the rule execution. |
-| \_id | Unique identifier of the audit entry. |
+| _time | Timestamp of the audit. For entries with an Initiated or Initiated Manually status, this is the start time of the correlation rule execution. For entries with a Completed or Error status, this is the end time of the rule execution. |
+| _id | Unique identifier of the audit entry. |
 | Rule ID | Unique identification number for the correlation rule. |
 | Name | Correlation rule name. |
 | Status | The status of the correlation rule query. Possible values are Initiated, Initiated Manually, Completed, and Error. |
@@ -34002,7 +33221,7 @@ Runtime protection for serverless functions is available for Cortex Cloud Runtim
 
 -   Supported runtime environments: Python, Node.js.
     
--   Supported architecture: x86\_64
+-   Supported architecture: x86_64
     
 -   Supported cloud provider: Amazon Web Services (AWS)
     
