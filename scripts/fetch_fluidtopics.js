@@ -115,8 +115,15 @@ function flattenCellContent(inner) {
   // Strip note/admonition headings: <h3 class="title">Note</h3> → " **Note:** "
   inner = inner.replace(/<h[1-6][^>]*>\s*(Note|Tip|Danger|Warning|Important|Prerequisite|Prerequisites)\s*<\/h[1-6]>/gi, " **$1:** ");
 
-  // Insert semicolons between consecutive list items before stripping tags
-  inner = inner.replace(/<\/li>\s*<li/g, "</li>; <li");
+  // Insert numbered markers between consecutive list items before stripping tags
+  let itemNum = 1;
+  inner = inner.replace(/<\/li>\s*<li\b/g, () => {
+    itemNum++;
+    return `</li> (${itemNum}) <li`;
+  });
+  if (itemNum > 1) {
+    inner = inner.replace(/<li\b/, "(1) <li");
+  }
 
   // Unwrap <p> inside <li>: <li><p>text</p></li> → <li>text</li>
   inner = inner.replace(/<li[^>]*>\s*<p>([\s\S]*?)<\/p>\s*<\/li>/g, "<li>$1</li>");

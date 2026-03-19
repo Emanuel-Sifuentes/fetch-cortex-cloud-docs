@@ -61,3 +61,23 @@ describe("extractTopLevelTables", () => {
     assert.equal(segments[0].html, '<table class="wide"><tr><td>A</td></tr></table>');
   });
 });
+
+describe("flattenCellContent", () => {
+  it("replaces semicolons between list items with numbered markers", () => {
+    const input = "<ul><li>Windows</li><li>MacOS</li><li>Linux</li></ul>";
+    const result = flattenCellContent(input);
+
+    assert.ok(result.includes("(1)"));
+    assert.ok(result.includes("(2)"));
+    assert.ok(result.includes("(3)"));
+    assert.ok(!result.includes(";"));
+  });
+
+  it("does not add numbers for a single list item", () => {
+    const input = "<ul><li>Only one</li></ul>";
+    const result = flattenCellContent(input);
+
+    assert.ok(!result.includes("(1)"));
+    assert.ok(result.includes("Only one"));
+  });
+});
