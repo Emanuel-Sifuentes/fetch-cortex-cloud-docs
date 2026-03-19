@@ -22,10 +22,22 @@
     "fix:xsiam": "node scripts/fix.js --product xsiam",
     "fix:gateway": "node scripts/fix.js --product gateway",
     "fix:agentix": "node scripts/fix.js --product agentix",
+    "check": "node scripts/check.js",
+    "check:cloud": "node scripts/check.js --product cloud",
+    "check:xdr": "node scripts/check.js --product xdr",
+    "check:xsiam": "node scripts/check.js --product xsiam",
+    "check:gateway": "node scripts/check.js --product gateway",
+    "check:agentix": "node scripts/check.js --product agentix",
+    "snapshot": "node scripts/snapshot.js",
+    "snapshot:cloud": "node scripts/snapshot.js --product cloud",
+    "snapshot:xdr": "node scripts/snapshot.js --product xdr",
+    "snapshot:xsiam": "node scripts/snapshot.js --product xsiam",
+    "snapshot:gateway": "node scripts/snapshot.js --product gateway",
+    "snapshot:agentix": "node scripts/snapshot.js --product agentix",
     "audit:headings": "node scripts/audit_headings.js",
     "audit:toc": "node scripts/audit_toc_vs_headings.js",
     "toc:table": "node scripts/generate_toc_table.js",
-    "test": "node --test scripts/generate_combined.test.js scripts/fetch_fluidtopics.test.js"
+    "test": "node --test scripts/generate_combined.test.js scripts/fetch_fluidtopics.test.js scripts/snapshot.test.js scripts/check.test.js"
   },
   "dependencies": {
     "turndown": "^7.2.0",
