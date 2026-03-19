@@ -182,7 +182,7 @@ describe("analyzeTable", () => {
     const sections = new Map();
     const result = analyzeTable(html, sections);
     // Both rows extracted → result should be placeholders
-    assert.ok(result.includes("<!--EXTRACTED:"));
+    assert.ok(result.includes("EXTRACTED-"));
     assert.equal(sections.size, 2);
   });
 
@@ -214,7 +214,7 @@ describe("analyzeTable", () => {
     // Should have 2 sub-tables (rows 1 and 3) and 1 extracted section (row 2)
     const tableCount = (result.match(/<thead>/g) || []).length;
     assert.equal(tableCount, 2);
-    assert.ok(result.includes("<!--EXTRACTED:"));
+    assert.ok(result.includes("EXTRACTED-"));
     assert.equal(sections.size, 1);
   });
 });
@@ -227,7 +227,7 @@ describe("extractToSections", () => {
 
     const placeholder = extractToSections(row, headerRow, sections);
 
-    assert.match(placeholder, /<!--EXTRACTED:[a-z0-9-]+-->/);
+    assert.match(placeholder, /<p>EXTRACTED-[a-z0-9-]+<\/p>/);
     const content = [...sections.values()][0];
     assert.ok(content.includes("### IN"));
     assert.ok(content.includes("Check membership."));
@@ -292,7 +292,7 @@ describe("cleanTableHtml integration", () => {
 
     const result = cleanTableHtml(html, sections);
 
-    assert.ok(result.includes("<!--EXTRACTED:"));
+    assert.ok(result.includes("EXTRACTED-"));
     assert.ok(sections.size > 0);
   });
 
@@ -329,6 +329,49 @@ describe("convertAdmonitionHeadings", () => {
   });
   it("handles indented admonition headings", () => {
     assert.equal(convertAdmonitionHeadings("  ### Note"), "  **Note:**");
+  });
+});
+
+describe("placeholder round-trip", () => {
+  it("extracted markdown survives cleanTableHtml → turndown → replacement", () => {
+    const TurndownService = require("turndown");
+    const { gfm } = require("turndown-plugin-gfm");
+    const td = new TurndownService({ headingStyle: "atx", codeBlockStyle: "fenced" });
+    td.use(gfm);
+
+    const html = "<p>Before table.</p>" +
+      "<table><tbody>" +
+      "<tr><td>Op</td><td>Desc</td></tr>" +
+      "<tr><td>=</td><td>Equals</td></tr>" +
+      "<tr><td>IN</td><td><p>Check membership.</p><pre><code>filter IN</code></pre></td></tr>" +
+      "<tr><td>!=</td><td>Not equals</td></tr>" +
+      "</tbody></table>" +
+      "<p>After table.</p>";
+
+    const sections = new Map();
+    const processed = cleanTableHtml(html, sections);
+
+    // Verify placeholders are in processed HTML
+    assert.ok(processed.includes("EXTRACTED-") || sections.size === 0,
+      "Complex rows should produce placeholders or table should be all-simple");
+
+    // Run turndown
+    let md = td.turndown(processed);
+
+    // Replace placeholders
+    for (const [id, content] of sections) {
+      md = md.replace(`EXTRACTED-${id}`, content);
+    }
+
+    // The final markdown should contain the extracted heading
+    if (sections.size > 0) {
+      assert.ok(md.includes("### IN"), "Extracted heading should appear in final markdown");
+      assert.ok(md.includes("filter IN"), "Code content should survive round-trip");
+    }
+
+    // Non-table content should survive
+    assert.ok(md.includes("Before table"));
+    assert.ok(md.includes("After table"));
   });
 });
 

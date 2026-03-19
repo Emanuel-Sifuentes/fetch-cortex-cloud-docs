@@ -319,7 +319,7 @@ function extractToSections(row, headerRow, extractedSections) {
     const markdown = parts.join("\n");
     const id = crypto.randomUUID();
     extractedSections.set(id, markdown);
-    return `<!--EXTRACTED:${id}-->`;
+    return `<p>EXTRACTED-${id}</p>`;
   } catch {
     return row;
   }
@@ -618,7 +618,7 @@ async function fetchTopic(topic, index, total, mapId, sourceMap) {
 
     // 5. Replace extracted-section placeholders (LAST — after all markdown post-processing)
     for (const [id, content] of extractedSections) {
-      md = md.replace(`<!--EXTRACTED:${id}-->`, content);
+      md = md.replace(`EXTRACTED-${id}`, content);
     }
 
     // Prepend metadata header
