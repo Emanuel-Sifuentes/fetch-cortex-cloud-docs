@@ -26,9 +26,9 @@ function formatTextReport(report) {
   let changedCount = 0;
 
   for (const [product, data] of Object.entries(report.products)) {
-    const errorMaps = Object.entries(data.maps).filter(([, m]) => m.error);
+    const hasErrors = Object.values(data.maps).some((m) => m.error);
 
-    if (!data.changed && errorMaps.length === 0) {
+    if (!data.changed && !hasErrors) {
       lines.push(`[${product}] no changes`);
       continue;
     }

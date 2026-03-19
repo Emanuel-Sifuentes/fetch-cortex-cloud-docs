@@ -54,8 +54,12 @@ async function fetchMapToc(mapId) {
 
 function readSnapshot(product) {
   const filePath = path.join(METADATA_DIR, `${product}.json`);
-  if (!fs.existsSync(filePath)) return null;
-  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  try {
+    return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  } catch (err) {
+    if (err.code === "ENOENT") return null;
+    throw err;
+  }
 }
 
 function writeSnapshot(product, snapshot) {
