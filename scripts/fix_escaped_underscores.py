@@ -25,10 +25,13 @@ def fix_file(filepath: str, *, dry_run: bool) -> int:
     body = content[body_start:]
 
     new_body = body.replace(r"\_", "_")
+    new_body = new_body.replace(r"\[", "[")
+    new_body = new_body.replace(r"\]", "]")
     new_body = new_body.replace("\u2028", "")
     underscore_count = body.count(r"\_")
+    bracket_count = body.count(r"\[") + body.count(r"\]")
     ls_count = body.count("\u2028")
-    total = underscore_count + ls_count
+    total = underscore_count + bracket_count + ls_count
 
     if total == 0:
         return 0
@@ -42,6 +45,8 @@ def fix_file(filepath: str, *, dry_run: bool) -> int:
     details = []
     if underscore_count:
         details.append(f"{underscore_count} escaped underscores")
+    if bracket_count:
+        details.append(f"{bracket_count} escaped brackets")
     if ls_count:
         details.append(f"{ls_count} U+2028 line separators")
     print(f"{prefix} {filename} ({', '.join(details)})")
