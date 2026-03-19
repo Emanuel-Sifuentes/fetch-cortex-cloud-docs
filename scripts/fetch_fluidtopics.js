@@ -716,15 +716,15 @@ async function main() {
 
 module.exports = {
   extractTopLevelTables,
-  isCellComplex,
   analyzeTable,
-  extractCells,
   extractToSections,
+  extractCells,
   flattenCellContent,
   cleanTableHtml,
   normalizeHeadings,
   removeDuplicateSeparators,
   convertAdmonitionHeadings,
+  isCellComplex,
 };
 
 if (require.main === module) {
