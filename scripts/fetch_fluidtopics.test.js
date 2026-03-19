@@ -191,6 +191,37 @@ describe("extractToSections", () => {
     assert.ok(content.includes("```xql"));
     assert.ok(content.includes("filter x IN (1,2,3)"));
   });
+
+  it("extracts a row with a list to heading + markdown list", () => {
+    const row = '<tr><td>Platforms</td><td><ul><li>Windows</li><li>Mac</li><li>Linux</li><li>Docker</li></ul></td></tr>';
+    const headerRow = "<tr><th>Feature</th><th>Details</th></tr>";
+    const sections = new Map();
+    extractToSections(row, headerRow, sections);
+    const content = [...sections.values()][0];
+    assert.ok(content.includes("### Platforms"));
+    assert.ok(content.includes("- Windows"));
+    assert.ok(content.includes("- Docker"));
+  });
+
+  it("extracts plain text as a paragraph", () => {
+    const row = '<tr><td>Name</td><td>A long description that is just plain text.</td></tr>';
+    const headerRow = "<tr><th>Key</th><th>Value</th></tr>";
+    const sections = new Map();
+    extractToSections(row, headerRow, sections);
+    const content = [...sections.values()][0];
+    assert.ok(content.includes("### Name"));
+    assert.ok(content.includes("A long description"));
+  });
+
+  it("returns original row when no cells found (early return)", () => {
+    const row = "not-valid-html";
+    const headerRow = "<tr><th>A</th></tr>";
+    const sections = new Map();
+    const result = extractToSections(row, headerRow, sections);
+    // Tests the "no cells found" early return path.
+    assert.equal(result, "not-valid-html");
+    assert.equal(sections.size, 0);
+  });
 });
 
 describe("removeDuplicateSeparators", () => {
