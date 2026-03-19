@@ -512,7 +512,7 @@ function cleanTableHtml(html, extractedSections = new Map()) {
     // Step 7: Flatten remaining simple table cells.
     // Safe to use non-greedy [\s\S]*? here: analyzeTable (step 6) already extracted
     // all cells containing nested <td> tags, so remaining cells are flat.
-    tableHtml = tableHtml.replace(/<(td|th)([^>]*)>([\s\S]*?)<\/(td|th)>/g, (match, tag, attrs, inner, closeTag) => {
+    tableHtml = tableHtml.replace(/<(td|th)\b([^>]*)>([\s\S]*?)<\/(td|th)>/g, (match, tag, attrs, inner, closeTag) => {
       return `<${tag}${attrs}>${flattenCellContent(inner)}</${closeTag}>`;
     });
 
