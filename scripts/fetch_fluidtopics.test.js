@@ -185,6 +185,21 @@ describe("analyzeTable", () => {
     assert.ok(result.includes("<!--EXTRACTED:"));
     assert.equal(sections.size, 2);
   });
+
+  it("splits table at section-divider rows", () => {
+    const html = "<table><thead><tr><th>A</th><th>B</th></tr></thead>" +
+      '<tbody><tr><td>1</td><td>2</td></tr><tr><td colspan="2">Section</td></tr>' +
+      "<tr><td>3</td><td>4</td></tr></tbody></table>";
+    const sections = new Map();
+
+    const result = analyzeTable(html, sections);
+
+    // Should produce two tables with a bold heading between
+    assert.ok(result.includes("<strong>Section</strong>"));
+    // Both sub-tables should have the header row
+    const tableCount = (result.match(/<thead>/g) || []).length;
+    assert.equal(tableCount, 2);
+  });
 });
 
 describe("extractToSections", () => {

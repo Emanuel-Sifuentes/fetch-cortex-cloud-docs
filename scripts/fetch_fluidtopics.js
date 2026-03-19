@@ -197,8 +197,53 @@ function extractAllRows(classified, headerRow, tableAttrs, extractedSections) {
 }
 
 function splitAtDividers(classified, headerRow, tableAttrs, extractedSections) {
-  // Stub — implemented in Task 7
-  return classified.map((r) => r.row).join("");
+  const segments = [];
+  let currentRowHtmls = [];
+
+  const flushTable = () => {
+    if (currentRowHtmls.length === 0) return;
+    segments.push(analyzeSubTable(currentRowHtmls, headerRow, tableAttrs, extractedSections));
+    currentRowHtmls = [];
+  };
+
+  for (const { row, type } of classified) {
+    if (type === "divider") {
+      flushTable();
+      const text = row.replace(/<[^>]+>/g, "").trim();
+      segments.push(`<p><strong>${text}</strong></p>`);
+    } else {
+      currentRowHtmls.push(row);
+    }
+  }
+  flushTable();
+
+  return segments.join("\n\n");
+}
+
+// Re-analyzes rows in a sub-table after divider splitting.
+// Divider rows are not possible here — they were already split at the parent level.
+function analyzeSubTable(rowHtmls, headerRow, tableAttrs, extractedSections) {
+  const classified = rowHtmls.map((row) => {
+    const tds = row.match(/<td[\s\S]*?<\/td>/g) || [];
+    const isComplex = tds.some((td) => {
+      const inner = td.replace(/^<td[^>]*>/, "").replace(/<\/td>$/, "");
+      return isCellComplex(inner);
+    });
+    return { row, type: isComplex ? "complex" : "simple" };
+  });
+
+  const complexCount = classified.filter((r) => r.type === "complex").length;
+
+  if (complexCount === 0) {
+    const tbody = rowHtmls.join("");
+    return `<table${tableAttrs}><thead>${headerRow}</thead><tbody>${tbody}</tbody></table>`;
+  }
+
+  if (classified.length > 0 && complexCount / classified.length > COMPLEX_ROW_THRESHOLD) {
+    return extractAllRows(classified, headerRow, tableAttrs, extractedSections);
+  }
+
+  return splitAtComplexRows(classified, headerRow, tableAttrs, extractedSections);
 }
 
 function splitAtComplexRows(classified, headerRow, tableAttrs, extractedSections) {
