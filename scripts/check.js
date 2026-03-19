@@ -141,16 +141,21 @@ async function main() {
     if (Object.values(result.maps).some((m) => m.error)) hasErrors = true;
 
     if (!apply && Object.keys(freshData).length > 0) {
-      const updatedMaps = {};
-      for (const mapName of PRODUCTS[product]) {
-        updatedMaps[mapName] = freshData[mapName] || snapshot.maps[mapName];
+      try {
+        const updatedMaps = {};
+        for (const mapName of PRODUCTS[product]) {
+          updatedMaps[mapName] = freshData[mapName] || snapshot.maps[mapName];
+        }
+        writeSnapshot(product, {
+          version: SNAPSHOT_VERSION,
+          product,
+          lastChecked: new Date().toISOString(),
+          maps: updatedMaps,
+        });
+      } catch (err) {
+        console.error(`WARNING: snapshot update failed for ${product}: ${err.message}`);
+        hasErrors = true;
       }
-      writeSnapshot(product, {
-        version: SNAPSHOT_VERSION,
-        product,
-        lastChecked: new Date().toISOString(),
-        maps: updatedMaps,
-      });
     }
   }
 
