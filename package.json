@@ -40,10 +40,11 @@
     "split:xsiam": "python scripts/split_combined.py --product xsiam",
     "split:gateway": "python scripts/split_combined.py --product gateway",
     "split:agentix": "python scripts/split_combined.py --product agentix",
+    "ownership": "node scripts/compute_ownership.js",
     "audit:headings": "node scripts/audit_headings.js",
     "audit:toc": "node scripts/audit_toc_vs_headings.js",
     "toc:table": "node scripts/generate_toc_table.js",
-    "test": "node --test scripts/generate_combined.test.js scripts/fetch_fluidtopics.test.js scripts/snapshot.test.js scripts/check.test.js"
+    "test": "node --test scripts/generate_combined.test.js scripts/fetch_fluidtopics.test.js scripts/snapshot.test.js scripts/check.test.js scripts/compute_ownership.test.js"
   },
   "dependencies": {
     "turndown": "^7.2.0",
