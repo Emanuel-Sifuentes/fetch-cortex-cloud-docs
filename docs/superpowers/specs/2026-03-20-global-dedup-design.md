@@ -88,7 +88,12 @@ A standalone step that computes global topic ownership and writes a manifest.
 
 Parameters:
 - `tocsByProduct` — `{ cloud: [...flatEntries], xdr: [...], xsiam: [...], agentix: [...] }`
-  where Cloud entries are the merged set of all 3 Cloud maps (appsec + posture + runtime)
+  Product keys map to map keys via the existing `PRODUCTS` config in `map_config.js`:
+  `xdr` → `xdr_5`, `cloud` → `appsec + posture + runtime`, `xsiam` → `xsiam_3`,
+  `agentix` → `agentix`. The Cloud entry is the union of all 3 Cloud map TOCs,
+  deduplicated by contentId (first occurrence wins — title and depth come from the
+  first map that contains the contentId). Duplicate contentIds within a single
+  product's merged TOC are collapsed to a single entry for ownership purposes.
 - `hierarchy` — `["xdr", "cloud", "xsiam", "agentix"]` (priority order)
 
 Returns: `{ owned, titleMatched, stats }`
@@ -100,6 +105,9 @@ claimed      = Map<contentId, owningProduct>
 claimedTitles = Map<normalizedTitle, { product, contentId }>
 
 For each product in hierarchy order:
+  Merge all maps for this product into one flat array
+  Deduplicate by contentId (keep first occurrence)
+
   For each unique contentId in this product's merged TOC:
     normalizedTitle = normalize(title)
 
@@ -109,6 +117,20 @@ For each product in hierarchy order:
 ```
 
 Title normalization: `title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()`
+
+This is intentionally more aggressive than the Cloud-internal title matching
+in `computeBuckets()`, which uses exact string equality. Global dedup normalizes
+because cross-product titles often differ only in casing or punctuation. The two
+matching strategies do not conflict — global dedup runs first and removes
+cross-product duplicates; Cloud-internal dedup runs second on the reduced set
+using its own exact matching.
+
+**Note on generic titles:** Titles like "Overview" appear in multiple unrelated
+products. The highest-priority product claims the title, and lower-priority
+products with the same title get dropped. This is intentionally aggressive —
+a topic titled "Overview" in Agentix that also exists in XDR is assumed to be
+the same content. If this proves too aggressive in practice, a future iteration
+can scope title matching by TOC subtree or content similarity.
 
 ### Manifest: `metadata/ownership.json`
 
@@ -130,16 +152,24 @@ Title normalization: `title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()`
   },
   "stats": {
     "xdr":     { "total": 1108, "owned": 1108, "droppedById": 0, "droppedByTitle": 0 },
-    "cloud":   { "total": 1365, "owned": 980,  "droppedById": 378, "droppedByTitle": 7 },
-    "xsiam":   { "total": 1594, "owned": 500,  "droppedById": 668, "droppedByTitle": 426 },
-    "agentix": { "total": 551,  "owned": 45,   "droppedById": 42, "droppedByTitle": 464 }
+    "cloud":   { "total": 1365, "owned": "~980", "droppedById": "~378", "droppedByTitle": "~7" },
+    "xsiam":   { "total": 1594, "owned": "~500", "droppedById": "~668", "droppedByTitle": "~426" },
+    "agentix": { "total": 551,  "owned": "~45",  "droppedById": "~42",  "droppedByTitle": "~464" }
   }
 }
 ```
 
-The `titleMatched` map records which lower-priority contentId maps to which
-higher-priority contentId, enabling file resolution from the owning product's
-fetched content.
+Stats values for non-XDR products are approximate (indicated with `~` in the
+example). The exact numbers depend on the live TOC state at computation time.
+The Cloud `droppedById` count reflects contentIds shared between XDR and any
+of the 3 Cloud maps (appsec, posture, runtime). Every Posture-XDR overlap is
+a subset of Runtime-XDR overlap (since Posture's contentId set is largely a
+subset of Runtime's), so the count roughly equals the XDR-Runtime overlap.
+
+The `titleMatched` map is diagnostic/informational — it records which
+lower-priority contentId was dropped and which higher-priority contentId it
+matched to. The combine step does not use `titleMatched` for file resolution.
+Dropped topics simply do not appear in the lower-priority product's output.
 
 ### Integration with `generate_combined.js`
 
@@ -151,9 +181,11 @@ The combine step changes minimally:
    filter all 3 TOCs to only include contentIds in `owned.cloud`. The existing
    PRA/PR/R/P/A internal split runs unchanged on the reduced set.
 3. **XDR, XSIAM, Agentix:** Filter each map's TOC to only include contentIds in
-   that product's `owned` set. For title-matched topics, use the `titleMatched`
-   map to resolve files from the owning product's directory. Then combine
-   normally (same as current simple-map path).
+   that product's `owned` set. These maps remain in the existing "simple map"
+   code path — the only change is a pre-filter on the TOC before combining.
+   Manifest keys map to map keys via `PRODUCTS` in `map_config.js`:
+   `owned.xdr` filters `xdr_5`, `owned.xsiam` filters `xsiam_3`,
+   `owned.agentix` filters `agentix`.
 4. **Gateway, XDR Compatibility:** Unchanged. Straight TOC combine, no filtering.
 
 `computeBuckets()` is not modified. It still receives 3 Cloud TOCs and produces
@@ -171,20 +203,44 @@ ownership.
 **Pipeline order:**
 
 ```
-npm run ownership    →  metadata/ownership.json
-npm run fetch        →  sources_fetch/{product}/*.md
-npm run fix          →  fixes + combined files (reads ownership.json)
+npm run ownership  ─┐
+                    ├→  npm run fix (fixes + combined files)
+npm run fetch      ─┘
 ```
 
-`ownership` is lightweight (TOC fetches only, no content downloads) and runs
-independently. `fix` (which calls `combine`) requires both fetched files and
-`ownership.json`.
+`ownership` and `fetch` are independent and can run in parallel. The strict
+dependency is: **both `ownership` and `fetch` must complete before `fix`** (which
+calls `combine`, which reads `ownership.json` and the fetched files).
 
-The `check --apply` flow runs `ownership` before `fetch + fix` to ensure the
-manifest is fresh when TOC changes are detected.
+`ownership` always fetches fresh TOCs from the Fluid Topics API using the same
+`fetch()` and `flattenToc()` helpers already in `generate_combined.js`. It does
+not read from cached snapshots in `metadata/*.json` — ownership must reflect the
+live state of all TOCs. The TOC fetches are lightweight (small JSON payloads,
+no content downloads).
 
 `compute_ownership.js` always processes all dedup maps — a `--product` flag
 would not make sense since ownership requires the full cross-product picture.
+
+**`check --apply` integration:**
+
+When `check` detects TOC changes for any product, the `--apply` flow:
+
+1. Runs `npm run ownership` once globally (re-fetches all TOCs, recomputes
+   manifest). This runs even if only one product changed, because ownership
+   of topics can shift when any product's TOC changes.
+2. For each changed product: runs `npm run fetch:{product} && npm run fix:{product}`
+   as today.
+
+This means a XSIAM-only TOC change still triggers a full ownership recompute,
+but only XSIAM's content is re-fetched and re-combined.
+
+**Logging:** `compute_ownership.js` prints a per-product summary to stdout:
+```
+[ownership] xdr:     1108 total, 1108 owned,    0 droppedById,   0 droppedByTitle
+[ownership] cloud:   1365 total,  980 owned,  378 droppedById,   7 droppedByTitle
+[ownership] xsiam:   1594 total,  500 owned,  668 droppedById, 426 droppedByTitle
+[ownership] agentix:  551 total,   45 owned,   42 droppedById, 464 droppedByTitle
+```
 
 ### Configuration in `map_config.js`
 
@@ -230,9 +286,16 @@ Pure-function tests for `computeOwnership()` using fixture TOC arrays:
 - Title normalization handles case, punctuation, whitespace
 
 **Edge cases:**
-- Generic title "Overview" appearing in 4+ maps → highest-priority product claims it
+- Generic title "Overview" appearing in 4+ maps → highest-priority product claims
+  it; lower-priority products with genuinely different "Overview" pages lose them
+  (intentionally aggressive — see note in Architecture section)
 - Topic with no title match and unique contentId → stays in its product
 - Empty TOC for a product → no crash, other products unaffected
+- Cloud sub-map merging: contentId in appsec + posture + runtime counts as a
+  single Cloud entry (not triple-counted)
+- Duplicate contentIds within a single product's TOC do not cause double-counting
+- Hierarchy with fewer than 4 products (e.g., `["xdr", "cloud"]`) works correctly
+  — algorithm is not hardcoded to exactly 4 products
 
 ### Updated: `scripts/generate_combined.test.js`
 
