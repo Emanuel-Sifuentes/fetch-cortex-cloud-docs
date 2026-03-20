@@ -652,9 +652,10 @@ Note: The `require` statements for `https`, `fs`, `path`, and `map_config` shoul
 5. `if (require.main === module)` guard
 
 **Known duplication:** `fetchJson` and `flattenToc` duplicate logic from
-`generate_combined.js`. This is intentional — extracting shared utilities into a
-common module is planned in `tasks/todo.md` ("Shared config module") but is out
-of scope for this change. Both implementations are identical and small.
+`generate_combined.js` (where the equivalent function is named `fetch`). The
+rename to `fetchJson` is intentional for clarity. Extracting shared utilities
+into a common module is planned in `tasks/todo.md` ("Shared config module") but
+is out of scope for this change. Both implementations are identical and small.
 
 - [ ] **Step 2: Add ownership npm script to package.json**
 
@@ -666,7 +667,7 @@ Add after the `"split:agentix"` line (line 42):
 
 - [ ] **Step 3: Add ownership to the test runner in package.json**
 
-Update the `"test"` script on line 46 to include the new test file:
+Update the `"test"` script (currently on line 46, shifts to line 47 after Step 2 adds a line) to include the new test file:
 
 ```json
 "test": "node --test scripts/generate_combined.test.js scripts/fetch_fluidtopics.test.js scripts/snapshot.test.js scripts/check.test.js scripts/compute_ownership.test.js"
@@ -765,7 +766,38 @@ module.exports = { promoteKeywordsToHeadings, computeBuckets, resolveFile, filte
 Run: `node --test scripts/generate_combined.test.js`
 Expected: PASS (all tests including new ones)
 
-- [ ] **Step 5: Add test — computeBuckets works correctly on pre-filtered TOCs**
+- [ ] **Step 5: Add test — normalizeTitle handles edge cases**
+
+Add to `scripts/compute_ownership.test.js`:
+
+```js
+const { normalizeTitle } = require("./compute_ownership.js");
+
+describe("normalizeTitle", () => {
+  it("lowercases and strips non-alphanumeric characters", () => {
+    assert.equal(normalizeTitle("Set Up  Users & Roles!"), "set up users roles");
+  });
+
+  it("normalizes hyphens and mixed whitespace", () => {
+    assert.equal(normalizeTitle("set-up users & roles"), "set up users roles");
+  });
+
+  it("handles empty string", () => {
+    assert.equal(normalizeTitle(""), "");
+  });
+
+  it("handles string with only special characters", () => {
+    assert.equal(normalizeTitle("---!!!"), "");
+  });
+});
+```
+
+- [ ] **Step 6: Run test — should pass**
+
+Run: `node --test scripts/compute_ownership.test.js`
+Expected: PASS
+
+- [ ] **Step 7: Add test — computeBuckets works correctly on pre-filtered TOCs**
 
 ```js
   it("computeBuckets produces correct results on pre-filtered (reduced) TOCs", () => {
@@ -787,19 +819,19 @@ Expected: PASS (all tests including new ones)
   });
 ```
 
-- [ ] **Step 6: Run test to verify it passes**
+- [ ] **Step 8: Run test to verify it passes**
 
 Run: `node --test scripts/generate_combined.test.js`
 Expected: PASS
 
-- [ ] **Step 7: Commit**
+- [ ] **Step 9: Commit**
 
 ```bash
-git add scripts/generate_combined.js scripts/generate_combined.test.js
-git commit -m "feat: add filterTocByOwnership function and pre-filtered buckets test"
+git add scripts/generate_combined.js scripts/generate_combined.test.js scripts/compute_ownership.test.js
+git commit -m "feat: add filterTocByOwnership function, normalizeTitle tests, and pre-filtered buckets test"
 ```
 
-- [ ] **Step 8: Add ownership manifest loading to main() in generate_combined.js**
+- [ ] **Step 10: Add ownership manifest loading to main() in generate_combined.js**
 
 First, update the top-level require on line 4 to include the new config constants:
 
@@ -807,7 +839,7 @@ First, update the top-level require on line 4 to include the new config constant
 const { MAP_IDS, COMBINED_FILES, PRODUCTS, VALID_MAPS, DEDUP_HIERARCHY, DEDUP_EXCLUDED, resolveTargetMaps } = require("./map_config.js");
 ```
 
-Then add at the top of `main()` (after line 218, before the file loading):
+Then add at the top of `main()`, immediately after the `const targets = resolveTargetMaps();` line (originally line 218, but shifted after Step 3), before the file loading:
 
 ```js
   // Load ownership manifest
@@ -837,7 +869,7 @@ Then add at the top of `main()` (after line 218, before the file loading):
   }
 ```
 
-- [ ] **Step 9: Apply ownership pre-filter to Cloud dedup path**
+- [ ] **Step 11: Apply ownership pre-filter to Cloud dedup path**
 
 In the Cloud dedup section (around line 259-313), after fetching and flattening the 3 TOCs but before calling `computeBuckets()`, filter by ownership:
 
@@ -851,7 +883,7 @@ Replace lines 267-270 with:
     console.log(`TOCs after ownership filter: appsec=${appsecFlat.length}, posture=${postureFlat.length}, runtime=${runtimeFlat.length}`);
 ```
 
-- [ ] **Step 10: Apply ownership pre-filter to simple maps path**
+- [ ] **Step 12: Apply ownership pre-filter to simple maps path**
 
 In the simple maps section (around line 317-342), after flattening the TOC, filter by ownership if the map participates in dedup:
 
@@ -866,12 +898,12 @@ Replace line 320-321 with:
     console.log(`[${target}] ${tocFlat.length} entries${product ? " after ownership filter" : ""}`);
 ```
 
-- [ ] **Step 11: Run all tests**
+- [ ] **Step 13: Run all tests**
 
 Run: `npm test`
 Expected: All pass. The ownership manifest loading is inside `main()` which only runs via CLI, not during tests.
 
-- [ ] **Step 12: Commit**
+- [ ] **Step 14: Commit**
 
 ```bash
 git add scripts/generate_combined.js
@@ -883,7 +915,7 @@ git commit -m "feat: integrate ownership manifest filtering into generate_combin
 ### Task 5: Update check.js --apply flow to run ownership first
 
 **Files:**
-- Modify: `scripts/check.js:168-184`
+- Modify: `scripts/check.js:168-185`
 
 - [ ] **Step 1: Add ownership step before product re-fetches**
 
@@ -973,9 +1005,14 @@ Expected: XSIAM combined file is generated with ~500 topics (down from ~1594). C
 Run: `npm run combine`
 Expected: All products generate combined files. Cloud maps show reduced topic counts. XDR is unchanged. Gateway and XDR Compatibility are unaffected.
 
-- [ ] **Step 7: Final commit**
+- [ ] **Step 7: Final commit (if any unstaged changes remain)**
 
 ```bash
-git add -A
+git status
+```
+
+Stage only relevant changed files explicitly (e.g. `git add sources_combined/...`), then:
+
+```bash
 git commit -m "feat: global cross-product deduplication complete"
 ```

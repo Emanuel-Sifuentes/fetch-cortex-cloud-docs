@@ -2,7 +2,7 @@ node_modules/
 .worktrees/
 scripts/__pycache__/
 
-# Ignore individual fetched markdown files (numbered), keep combined files and README
-sources_fetch/*/[0-9]*.md
-!sources_fetch/*/README.md
-!sources_fetch/*-combined.md
+# Generated content — re-created by fetch/fix/ownership/snapshot commands
+sources_fetch/
+metadata/
+overlap_report*.csv
