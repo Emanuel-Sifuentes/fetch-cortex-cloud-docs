@@ -264,7 +264,55 @@ Expected: PASS
 Run: `node --test scripts/compute_ownership.test.js`
 Expected: PASS
 
-- [ ] **Step 13: Add test — title normalization handles case/punctuation**
+- [ ] **Step 13: Add test — XDR vs XSIAM title match**
+
+```js
+  it("drops XSIAM topic with same title as XDR (different contentId)", () => {
+    const tocsByProduct = {
+      xdr: [entry("xdr-1", "Endpoint Agent")],
+      cloud: [],
+      xsiam: [entry("xs-1", "Endpoint Agent")],
+      agentix: [],
+    };
+
+    const result = computeOwnership(tocsByProduct, hierarchy);
+
+    assert.ok(result.owned.xdr.includes("xdr-1"));
+    assert.equal(result.owned.xsiam.length, 0);
+    assert.equal(result.stats.xsiam.droppedByTitle, 1);
+  });
+```
+
+- [ ] **Step 14: Run test — should pass**
+
+Run: `node --test scripts/compute_ownership.test.js`
+Expected: PASS
+
+- [ ] **Step 15: Add test — Cloud vs XSIAM title match**
+
+```js
+  it("drops XSIAM topic with same title as Cloud (different contentId)", () => {
+    const tocsByProduct = {
+      xdr: [],
+      cloud: [entry("cloud-1", "Compliance Dashboard")],
+      xsiam: [entry("xs-1", "Compliance Dashboard")],
+      agentix: [],
+    };
+
+    const result = computeOwnership(tocsByProduct, hierarchy);
+
+    assert.ok(result.owned.cloud.includes("cloud-1"));
+    assert.equal(result.owned.xsiam.length, 0);
+    assert.equal(result.stats.xsiam.droppedByTitle, 1);
+  });
+```
+
+- [ ] **Step 16: Run test — should pass**
+
+Run: `node --test scripts/compute_ownership.test.js`
+Expected: PASS
+
+- [ ] **Step 17: Add test — title normalization handles case/punctuation
 
 ```js
   it("normalizes titles for matching (case, punctuation, whitespace)", () => {
@@ -283,12 +331,12 @@ Expected: PASS
   });
 ```
 
-- [ ] **Step 14: Run test — should pass**
+- [ ] **Step 18: Run test — should pass**
 
 Run: `node --test scripts/compute_ownership.test.js`
 Expected: PASS
 
-- [ ] **Step 15: Add test — generic "Overview" title, highest priority claims it**
+- [ ] **Step 19: Add test — generic "Overview" title, highest priority claims it**
 
 ```js
   it("generic 'Overview' title — highest priority product claims it", () => {
@@ -308,12 +356,12 @@ Expected: PASS
   });
 ```
 
-- [ ] **Step 16: Run test — should pass**
+- [ ] **Step 20: Run test — should pass**
 
 Run: `node --test scripts/compute_ownership.test.js`
 Expected: PASS
 
-- [ ] **Step 17: Add test — Cloud sub-map merging deduplicates by contentId**
+- [ ] **Step 21: Add test — Cloud sub-map merging deduplicates by contentId**
 
 ```js
   it("Cloud sub-map merging: same contentId in appsec+posture+runtime counts once", () => {
@@ -335,12 +383,12 @@ Expected: PASS
   });
 ```
 
-- [ ] **Step 18: Run test — should pass**
+- [ ] **Step 22: Run test — should pass**
 
 Run: `node --test scripts/compute_ownership.test.js`
 Expected: PASS
 
-- [ ] **Step 19: Add test — empty TOC for a product**
+- [ ] **Step 23: Add test — empty TOC for a product**
 
 ```js
   it("handles empty TOC for a product without crashing", () => {
@@ -360,12 +408,12 @@ Expected: PASS
   });
 ```
 
-- [ ] **Step 20: Run test — should pass**
+- [ ] **Step 24: Run test — should pass**
 
 Run: `node --test scripts/compute_ownership.test.js`
 Expected: PASS
 
-- [ ] **Step 21: Add test — reduced hierarchy (fewer than 4 products)**
+- [ ] **Step 25: Add test — reduced hierarchy (fewer than 4 products)**
 
 ```js
   it("works with a reduced hierarchy of 2 products", () => {
@@ -382,12 +430,12 @@ Expected: PASS
   });
 ```
 
-- [ ] **Step 22: Run test — should pass**
+- [ ] **Step 26: Run test — should pass**
 
 Run: `node --test scripts/compute_ownership.test.js`
 Expected: PASS
 
-- [ ] **Step 23: Add test — duplicate contentIds within single product TOC**
+- [ ] **Step 27: Add test — duplicate contentIds within single product TOC**
 
 ```js
   it("duplicate contentIds within a single product TOC are collapsed", () => {
@@ -409,12 +457,12 @@ Expected: PASS
   });
 ```
 
-- [ ] **Step 24: Run test — should pass**
+- [ ] **Step 28: Run test — should pass**
 
 Run: `node --test scripts/compute_ownership.test.js`
 Expected: PASS
 
-- [ ] **Step 25: Add comprehensive integration test**
+- [ ] **Step 29: Add comprehensive integration test**
 
 ```js
   it("assigns a mixed set of topics to correct products", () => {
@@ -461,12 +509,12 @@ Expected: PASS
   });
 ```
 
-- [ ] **Step 26: Run all tests**
+- [ ] **Step 30: Run all tests**
 
 Run: `node --test scripts/compute_ownership.test.js`
 Expected: All PASS
 
-- [ ] **Step 27: Commit**
+- [ ] **Step 31: Commit**
 
 ```bash
 git add scripts/compute_ownership.js scripts/compute_ownership.test.js
@@ -530,19 +578,33 @@ function flattenToc(nodes, depth = 0) {
 }
 
 async function main() {
-  const tocsByProduct = {};
-
+  // Build list of all maps to fetch (excluding DEDUP_EXCLUDED)
+  const fetchTargets = [];
   for (const product of DEDUP_HIERARCHY) {
-    const mapNames = PRODUCTS[product].filter((m) => !DEDUP_EXCLUDED.includes(m));
-    const entries = [];
-
-    for (const mapName of mapNames) {
-      console.log(`Fetching ${mapName} TOC...`);
-      const toc = await fetchJson(`/api/khub/maps/${MAP_IDS[mapName]}/toc`);
-      entries.push(...flattenToc(toc));
+    for (const mapName of PRODUCTS[product]) {
+      if (!DEDUP_EXCLUDED.includes(mapName)) {
+        fetchTargets.push({ product, mapName });
+      }
     }
+  }
 
-    tocsByProduct[product] = entries;
+  // Fetch all TOCs in parallel
+  console.log(`Fetching ${fetchTargets.length} TOCs...`);
+  const results = await Promise.all(
+    fetchTargets.map(async ({ product, mapName }) => {
+      const toc = await fetchJson(`/api/khub/maps/${MAP_IDS[mapName]}/toc`);
+      console.log(`  ${mapName}: ${toc.length} top-level nodes`);
+      return { product, entries: flattenToc(toc) };
+    })
+  );
+
+  // Group by product
+  const tocsByProduct = {};
+  for (const product of DEDUP_HIERARCHY) {
+    tocsByProduct[product] = [];
+  }
+  for (const { product, entries } of results) {
+    tocsByProduct[product].push(...entries);
   }
 
   const result = computeOwnership(tocsByProduct, DEDUP_HIERARCHY);
@@ -588,6 +650,11 @@ Note: The `require` statements for `https`, `fs`, `path`, and `map_config` shoul
 3. `module.exports = { computeOwnership, normalizeTitle };`
 4. `fetchJson()`, `flattenToc()`, `main()` — CLI-only code
 5. `if (require.main === module)` guard
+
+**Known duplication:** `fetchJson` and `flattenToc` duplicate logic from
+`generate_combined.js`. This is intentional — extracting shared utilities into a
+common module is planned in `tasks/todo.md` ("Shared config module") but is out
+of scope for this change. Both implementations are identical and small.
 
 - [ ] **Step 2: Add ownership npm script to package.json**
 
@@ -696,20 +763,52 @@ module.exports = { promoteKeywordsToHeadings, computeBuckets, resolveFile, filte
 Run: `node --test scripts/generate_combined.test.js`
 Expected: PASS (all tests including new ones)
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 5: Add test — computeBuckets works correctly on pre-filtered TOCs**
+
+```js
+  it("computeBuckets produces correct results on pre-filtered (reduced) TOCs", () => {
+    const entry = (contentId, title, depth) => ({ contentId, title, depth });
+
+    // Simulate a pre-filtered Cloud TOC where XDR-owned topics have been removed
+    const posture = [entry("pr-1", "Platform Topic", 0), entry("p-1", "Posture Only", 1)];
+    const runtime = [entry("pr-1", "Platform Topic", 0), entry("r-1", "Runtime Only", 1)];
+    const appsec = [entry("pra-1", "All Three", 0)];
+
+    // pra-1 is NOT in posture or runtime (simulating it was removed by global dedup)
+    // This should still work — computeBuckets sees it as AppSec-only
+    const result = computeBuckets(posture, runtime, appsec);
+
+    assert.ok(result.A.has("pra-1"));
+    assert.ok(result.PR.has("pr-1"));
+    assert.ok(result.R.has("r-1"));
+    assert.ok(result.P.has("p-1"));
+  });
+```
+
+- [ ] **Step 6: Run test to verify it passes**
+
+Run: `node --test scripts/generate_combined.test.js`
+Expected: PASS
+
+- [ ] **Step 7: Commit**
 
 ```bash
 git add scripts/generate_combined.js scripts/generate_combined.test.js
-git commit -m "feat: add filterTocByOwnership function"
+git commit -m "feat: add filterTocByOwnership function and pre-filtered buckets test"
 ```
 
-- [ ] **Step 6: Add ownership manifest loading to main() in generate_combined.js**
+- [ ] **Step 8: Add ownership manifest loading to main() in generate_combined.js**
 
-Add at the top of `main()` (after line 218, before the file loading):
+First, update the top-level require on line 4 to include the new config constants:
+
+```js
+const { MAP_IDS, COMBINED_FILES, PRODUCTS, VALID_MAPS, DEDUP_HIERARCHY, DEDUP_EXCLUDED, resolveTargetMaps } = require("./map_config.js");
+```
+
+Then add at the top of `main()` (after line 218, before the file loading):
 
 ```js
   // Load ownership manifest
-  const { DEDUP_HIERARCHY, DEDUP_EXCLUDED } = require("./map_config.js");
   const ownershipPath = path.join(__dirname, "..", "metadata", "ownership.json");
   let ownership;
   try {
@@ -728,7 +827,6 @@ Add at the top of `main()` (after line 218, before the file loading):
   // Build map -> product lookup for filtering
   const mapToProduct = {};
   for (const product of DEDUP_HIERARCHY) {
-    const { PRODUCTS } = require("./map_config.js");
     for (const mapName of PRODUCTS[product]) {
       if (!DEDUP_EXCLUDED.includes(mapName)) {
         mapToProduct[mapName] = product;
@@ -737,9 +835,7 @@ Add at the top of `main()` (after line 218, before the file loading):
   }
 ```
 
-Note: Move the `DEDUP_HIERARCHY` and `DEDUP_EXCLUDED` import to the top-level require block on line 4 instead of inside main(). Also import `PRODUCTS` there (it's already available via `map_config.js`). The `mapToProduct` and `ownedByProduct` construction stays inside `main()`.
-
-- [ ] **Step 7: Apply ownership pre-filter to Cloud dedup path**
+- [ ] **Step 9: Apply ownership pre-filter to Cloud dedup path**
 
 In the Cloud dedup section (around line 259-313), after fetching and flattening the 3 TOCs but before calling `computeBuckets()`, filter by ownership:
 
@@ -753,7 +849,7 @@ Replace lines 267-270 with:
     console.log(`TOCs after ownership filter: appsec=${appsecFlat.length}, posture=${postureFlat.length}, runtime=${runtimeFlat.length}`);
 ```
 
-- [ ] **Step 8: Apply ownership pre-filter to simple maps path**
+- [ ] **Step 10: Apply ownership pre-filter to simple maps path**
 
 In the simple maps section (around line 317-342), after flattening the TOC, filter by ownership if the map participates in dedup:
 
@@ -768,12 +864,12 @@ Replace line 320-321 with:
     console.log(`[${target}] ${tocFlat.length} entries${product ? " after ownership filter" : ""}`);
 ```
 
-- [ ] **Step 9: Run all tests**
+- [ ] **Step 11: Run all tests**
 
 Run: `npm test`
 Expected: All pass. The ownership manifest loading is inside `main()` which only runs via CLI, not during tests.
 
-- [ ] **Step 10: Commit**
+- [ ] **Step 12: Commit**
 
 ```bash
 git add scripts/generate_combined.js
