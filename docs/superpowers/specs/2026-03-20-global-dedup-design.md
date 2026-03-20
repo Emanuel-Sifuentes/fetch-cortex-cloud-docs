@@ -247,9 +247,17 @@ but only XSIAM's content is re-fetched and re-combined.
 Add two constants:
 
 ```js
+// Product keys — same keys used in PRODUCTS
 const DEDUP_HIERARCHY = ["xdr", "cloud", "xsiam", "agentix"];
+
+// Map keys — specific maps excluded from the dedup hierarchy
 const DEDUP_EXCLUDED = ["cortex_gateway", "xdr_compatibility"];
 ```
+
+`DEDUP_HIERARCHY` uses product keys (matching `PRODUCTS` in `map_config.js`).
+For the XDR product, only `xdr_5` feeds into the ownership algorithm;
+`xdr_compatibility` is listed in `DEDUP_EXCLUDED` (a map-key list) and is
+processed as a simple map with no filtering.
 
 `compute_ownership.js` and `generate_combined.js` import these instead of
 hardcoding the priority chain.
