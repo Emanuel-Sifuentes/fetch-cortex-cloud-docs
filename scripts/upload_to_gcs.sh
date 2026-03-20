@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
 # scripts/upload_to_gcs.sh
-# Uploads combined product files and H1 split files to GCS for RAG ingestion.
+# Uploads H1 split files to GCS for RAG ingestion.
 # Usage: bash scripts/upload_to_gcs.sh [--bucket <name>] [--dry-run] [--product <name>]
 #
 # Bucket layout:
 #   gs://<bucket>/
-#     agentix/cortex-agentix-combined.md
-#     agentix/h1_split/learn-about-cortex-agentix.md
-#     agentix/h1_split/onboard-cortex-agentix.md
-#     posture/cortex-cloud-posture-combined.md
-#     posture/h1_split/get-started-with-cortex-cloud.md
+#     agentix/learn-about-cortex-agentix.md
+#     agentix/onboard-cortex-agentix.md
+#     posture/get-started-with-cortex-cloud.md
 #     ...
 
 set -euo pipefail
@@ -47,19 +45,12 @@ for product_dir in "$SOURCES_DIR"/*/; do
     continue
   fi
 
-  # Upload combined file
-  combined=$(find "$product_dir" -maxdepth 1 -name '*-combined.md' -print -quit)
-  if [[ -n "$combined" ]]; then
-    upload "$combined" "$BUCKET/$product/$(basename "$combined")"
-    uploaded=$((uploaded + 1))
-  fi
-
   # Upload H1 split files
   split_dir="$product_dir/${product}_split_h1"
   if [[ -d "$split_dir" ]]; then
     for f in "$split_dir"/*.md; do
       [[ -f "$f" ]] || continue
-      upload "$f" "$BUCKET/$product/h1_split/$(basename "$f")"
+      upload "$f" "$BUCKET/$product/$(basename "$f")"
       uploaded=$((uploaded + 1))
     done
   fi
