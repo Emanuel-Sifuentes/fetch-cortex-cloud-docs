@@ -312,7 +312,7 @@ Expected: PASS
 Run: `node --test scripts/compute_ownership.test.js`
 Expected: PASS
 
-- [ ] **Step 17: Add test — title normalization handles case/punctuation
+- [ ] **Step 17: Add test — title normalization handles case/punctuation**
 
 ```js
   it("normalizes titles for matching (case, punctuation, whitespace)", () => {
