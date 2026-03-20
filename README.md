@@ -15,7 +15,8 @@ Fetch Cortex documentation from the Palo Alto Networks [Fluid Topics](https://do
 ## Quick start
 
 ```bash
-npm install              # install turndown + turndown-plugin-gfm
+npm install              # install dependencies
+npm run ownership        # compute cross-product topic ownership
 npm run fetch            # fetch all products → sources_fetch/{product}/
 npm run fix              # apply all post-fetch fixes + generate combined files
 ```
@@ -37,7 +38,7 @@ npm run fix:cloud        # fix + combine only Cortex Cloud
 6. Post-fetch fix scripts clean up remaining conversion artifacts
 7. Generates a combined file per map with hierarchical headings (driven by the live TOC API)
 
-Cortex Cloud maps (appsec, posture, runtime) are deduplicated against each other since they share significant content overlap. All other products are fetched independently.
+Topics are globally deduplicated across all products using a fixed priority hierarchy (XDR > Cloud > XSIAM > Agentix). Each topic appears in exactly one product's combined output, owned by the highest-priority product that contains it. Matching is by `contentId` first, then by normalized title. Cortex Cloud maps (appsec, posture, runtime) are additionally deduplicated against each other using PRA/PR/R/P/A bucketing. Gateway and XDR Compatibility are excluded from global dedup (100% isolated content).
 
 No authentication required.
 
@@ -48,11 +49,13 @@ No authentication required.
 | `npm run fetch` | Fetch all products (or `fetch:{product}` for one) |
 | `npm run fix` | Run all fix scripts + combine (or `fix:{product}` for one) |
 | `npm run combine` | Generate combined files only (or `combine:{product}` for one) |
+| `npm run ownership` | Compute cross-product topic ownership manifest (`metadata/ownership.json`) |
 | `npm run snapshot` | Snapshot API metadata for all products (or `snapshot:{product}` for one) |
 | `npm run check` | Detect changes vs stored snapshots (or `check:{product}` for one) |
 | `npm run audit:headings` | Audit heading levels vs TOC depth + h6 cap simulation |
 | `npm run audit:toc` | Full TOC-to-file structure audit + combined file validation |
 | `npm run toc:table` | Print TOC as indented tree from live API |
+| `node scripts/overlap_report.js` | Generate cross-product overlap report (CSV) |
 | `npm test` | Run unit tests |
 
 `npm run fix` chains all fix scripts per product directory, generates the combined files, and updates metadata snapshots.
@@ -68,7 +71,16 @@ npm run check -- --format text   # human-readable output
 npm run check -- --apply     # detect changes + re-fetch affected products
 ```
 
-Snapshots are stored in `metadata/{product}.json` and track each map's `lastPublication` timestamp and TOC structure. When `check` detects a change, it reports added/removed/reordered topics per map. The `--apply` flag triggers a full `fetch` + `fix` cycle for affected products only.
+Snapshots are stored in `metadata/{product}.json` and track each map's `lastPublication` timestamp and TOC structure. When `check` detects a change, it reports added/removed/reordered topics per map. The `--apply` flag recomputes topic ownership and then triggers a full `fetch` + `fix` cycle for affected products only.
+
+## Overlap report
+
+`node scripts/overlap_report.js` reads all product metadata and individual topic files to produce a pairwise overlap report across all maps. It outputs two CSVs:
+
+- **`overlap_report.csv`** — one row per overlapping topic pair, sorted by heading depth. Columns: match type (`contentId` or `title`), depths, Jaccard bag-of-words similarity score (1.0 for contentId matches; computed from file content for title matches), products, maps, titles, and content IDs.
+- **`overlap_report_summary.csv`** — product-pair breakdown, similarity distribution, and depth distribution.
+
+Use `--out path/to/file.csv` to change the output location.
 
 ## Output
 
@@ -111,14 +123,16 @@ fetch-cortex-docs/
 │   ├── fix_escaped_underscores.py     # post-fetch fix
 │   ├── fix_images_and_fences.py       # post-fetch fix
 │   ├── fix_broken_tables.py           # post-fetch fix
-│   ├── generate_combined.js           # combined file builder
+│   ├── generate_combined.js           # combined file builder (reads ownership manifest)
+│   ├── compute_ownership.js           # cross-product topic ownership (XDR > Cloud > XSIAM > Agentix)
 │   ├── split_combined.py              # split combined files by H1 heading
 │   ├── snapshot.js                    # metadata snapshot builder
 │   ├── check.js                      # change detection (compare snapshots vs API)
+│   ├── overlap_report.js              # cross-product overlap CSV report
 │   ├── audit_headings.js              # audit tool
 │   ├── audit_toc_vs_headings.js       # audit tool
 │   └── generate_toc_table.js          # utility
-├── metadata/                          # per-product snapshot JSON files
+├── metadata/                          # per-product snapshots + ownership.json
 ├── sources_fetch/
 │   ├── appsec/                        # Cortex Cloud AppSec
 │   ├── posture/                       # Cortex Cloud Posture

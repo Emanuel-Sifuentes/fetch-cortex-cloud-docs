@@ -1,0 +1,38 @@
+section,key,value
+overview,total_topics,6077
+overview,total_overlap_rows,8163
+overview,contentId_matches,3691
+overview,title_matches,4472
+overview,title_with_content_sim,3198
+overview,title_without_content,1274
+
+section,product_pair,contentId_overlap,title_overlap,total
+product_pairs,agentix <-> cloud,56,723,779
+product_pairs,agentix <-> gateway,0,3,3
+product_pairs,agentix <-> xdr,6,389,395
+product_pairs,agentix <-> xsiam,42,455,497
+product_pairs,cloud <-> cloud,1293,151,1444
+product_pairs,cloud <-> gateway,0,2,2
+product_pairs,cloud <-> xdr,636,895,1531
+product_pairs,cloud <-> xsiam,1399,1078,2477
+product_pairs,gateway <-> xdr,0,1,1
+product_pairs,gateway <-> xsiam,0,1,1
+product_pairs,xdr <-> xsiam,259,774,1033
+
+section,similarity_range,count,percentage
+similarity_dist,0.00-0.20,52,1.6%
+similarity_dist,0.20-0.40,38,1.2%
+similarity_dist,0.40-0.60,55,1.7%
+similarity_dist,0.60-0.80,113,3.5%
+similarity_dist,0.80-0.95,425,13.3%
+similarity_dist,0.95-1.00,2515,78.6%
+
+section,depth,contentId_count,title_count,total
+depth_dist,0,85,33,118
+depth_dist,1,546,264,810
+depth_dist,2,1248,1582,2830
+depth_dist,3,959,1442,2401
+depth_dist,4,591,837,1428
+depth_dist,5,190,223,413
+depth_dist,6,57,67,124
+depth_dist,7,15,24,39
