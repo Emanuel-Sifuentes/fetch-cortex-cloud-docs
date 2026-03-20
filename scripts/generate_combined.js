@@ -227,7 +227,11 @@ async function main() {
   try {
     ownership = JSON.parse(fs.readFileSync(ownershipPath, "utf-8"));
   } catch (err) {
-    console.error("Error: metadata/ownership.json not found — run `npm run ownership` first");
+    if (err.code === "ENOENT") {
+      console.error("Error: metadata/ownership.json not found — run `npm run ownership` first");
+    } else {
+      console.error("Error: metadata/ownership.json is malformed:", err.message);
+    }
     process.exit(1);
   }
 

@@ -40,7 +40,7 @@ function computeOwnership(tocsByProduct, hierarchy) {
         continue;
       }
 
-      if (claimedTitles.has(norm)) {
+      if (claimedTitles.has(norm) && claimedTitles.get(norm).product !== product) {
         droppedByTitle++;
         const owner = claimedTitles.get(norm);
         titleMatched[e.contentId] = {

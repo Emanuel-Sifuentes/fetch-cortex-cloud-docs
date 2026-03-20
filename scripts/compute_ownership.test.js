@@ -146,6 +146,20 @@ describe("computeOwnership", () => {
     assert.equal(result.owned.agentix.length, 0);
   });
 
+  it("keeps both topics when same title appears twice in the same product", () => {
+    const tocsByProduct = {
+      xdr: [entry("xdr-ov1", "Overview"), entry("xdr-ov2", "Overview")],
+      cloud: [],
+      xsiam: [],
+      agentix: [],
+    };
+    const result = computeOwnership(tocsByProduct, hierarchy);
+    assert.equal(result.owned.xdr.length, 2);
+    assert.ok(result.owned.xdr.includes("xdr-ov1"));
+    assert.ok(result.owned.xdr.includes("xdr-ov2"));
+    assert.equal(result.stats.xdr.droppedByTitle, 0);
+  });
+
   it("Cloud sub-map merging: same contentId in appsec+posture+runtime counts once", () => {
     const tocsByProduct = {
       xdr: [],
