@@ -533,7 +533,7 @@ This adds the script wrapper that fetches TOCs from the API and writes `metadata
 
 - [ ] **Step 1: Add main() function and CLI entrypoint to compute_ownership.js**
 
-Add after the `module.exports` line:
+Restructure the file into its final layout. Move the `require` statements to the top of the file (before the pure functions), keep `module.exports` in the middle, and add the CLI code after it. The final file structure is shown below — the `require` block goes at the **top**, not after `module.exports`:
 
 ```js
 const https = require("https");
@@ -691,6 +691,8 @@ git commit -m "feat: add compute_ownership CLI script and npm ownership command"
 **Files:**
 - Modify: `scripts/generate_combined.js:1-353`
 - Modify: `scripts/generate_combined.test.js`
+
+**Note:** All line numbers below reference the original file before any Task 4 modifications. After Step 3 adds `filterTocByOwnership` (~3 lines after line 215), subsequent line numbers shift by ~3. Use the surrounding code context (function names, comments) to locate the correct insertion points.
 
 - [ ] **Step 1: Write failing test — combine step filters TOC by ownership manifest**
 
@@ -885,7 +887,7 @@ git commit -m "feat: integrate ownership manifest filtering into generate_combin
 
 - [ ] **Step 1: Add ownership step before product re-fetches**
 
-In `main()`, in the `--apply` block (line 168), add an ownership recompute before the per-product loop. Replace lines 168-184 with:
+In `main()`, in the `--apply` block (line 168), add an ownership recompute before the per-product loop. Replace lines 168-185 (the entire `if (apply) { ... }` block) with:
 
 ```js
   if (apply) {
