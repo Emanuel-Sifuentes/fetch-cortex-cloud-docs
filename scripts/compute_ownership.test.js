@@ -1,9 +1,27 @@
 // scripts/compute_ownership.test.js
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { computeOwnership } = require("./compute_ownership.js");
+const { computeOwnership, normalizeTitle } = require("./compute_ownership.js");
 
 const entry = (contentId, title, depth = 0) => ({ contentId, title, depth });
+
+describe("normalizeTitle", () => {
+  it("lowercases and strips non-alphanumeric characters", () => {
+    assert.equal(normalizeTitle("Set Up  Users & Roles!"), "set up users roles");
+  });
+
+  it("normalizes hyphens and mixed whitespace", () => {
+    assert.equal(normalizeTitle("set-up users & roles"), "set up users roles");
+  });
+
+  it("handles empty string", () => {
+    assert.equal(normalizeTitle(""), "");
+  });
+
+  it("handles string with only special characters", () => {
+    assert.equal(normalizeTitle("---!!!"), "");
+  });
+});
 
 describe("computeOwnership", () => {
   const hierarchy = ["xdr", "cloud", "xsiam", "agentix"];

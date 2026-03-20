@@ -214,6 +214,10 @@ function resolveFile(contentId, titleMatchMap, fileMap) {
   return null;
 }
 
+function filterTocByOwnership(toc, ownedSet) {
+  return toc.filter((e) => ownedSet.has(e.contentId));
+}
+
 async function main() {
   const targets = resolveTargetMaps();
 
@@ -342,7 +346,7 @@ async function main() {
   }
 }
 
-module.exports = { promoteKeywordsToHeadings, computeBuckets, resolveFile };
+module.exports = { promoteKeywordsToHeadings, computeBuckets, resolveFile, filterTocByOwnership };
 
 if (require.main === module) {
   main().catch((err) => {
