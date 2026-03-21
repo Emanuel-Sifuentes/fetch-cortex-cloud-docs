@@ -218,6 +218,61 @@ def identify_atomic_units(body_text: str) -> list[str]:
     return units
 
 
+def pack_leaf(
+    section: HeadingSection,
+    raw_text: str,
+    max_size: int,
+    display_name: str,
+) -> list[Segment]:
+    section_text = raw_text[section.start_offset : section.end_offset]
+    breadcrumb = format_breadcrumb(display_name, section.breadcrumb, section.title)
+
+    # Separate heading from body
+    heading_match = re.match(r"(#{1,6} .+\n)", section_text)
+    if heading_match:
+        heading_text = heading_match.group(1).rstrip("\n")
+        body_start = heading_match.end()
+        body_text = section_text[body_start:].lstrip("\n")
+    else:
+        heading_text = ""
+        body_text = section_text
+
+    units = identify_atomic_units(body_text)
+
+    if not units:
+        return [Segment(text=breadcrumb + "\n\n" + section_text.strip(), title=section.title)]
+
+    segments: list[Segment] = []
+    current_units: list[str] = []
+    current_size = 0
+
+    for unit in units:
+        unit_size = len(unit)
+
+        if current_size + unit_size > max_size and current_units:
+            chunk_text = "\n\n".join(current_units)
+            if not segments:
+                chunk_text = heading_text + "\n\n" + chunk_text
+            segments.append(
+                Segment(text=breadcrumb + "\n\n" + chunk_text.strip(), title=section.title)
+            )
+            current_units = []
+            current_size = 0
+
+        current_units.append(unit)
+        current_size += unit_size
+
+    if current_units:
+        chunk_text = "\n\n".join(current_units)
+        if not segments:
+            chunk_text = heading_text + "\n\n" + chunk_text
+        segments.append(
+            Segment(text=breadcrumb + "\n\n" + chunk_text.strip(), title=section.title)
+        )
+
+    return segments
+
+
 def emit_segments(
     section: HeadingSection,
     raw_text: str,
@@ -232,11 +287,7 @@ def emit_segments(
         return [Segment(text=breadcrumb + "\n\n" + section_text, title=section.title)]
 
     if not section.children:
-        # Leaf section too large — will be handled by pack_leaf (Task 9)
-        # For now, emit as single oversized segment
-        section_text = raw_text[section.start_offset : section.end_offset].strip()
-        breadcrumb = format_breadcrumb(display_name, section.breadcrumb, section.title)
-        return [Segment(text=breadcrumb + "\n\n" + section_text, title=section.title)]
+        return pack_leaf(section, raw_text, max_size, display_name)
 
     segments: list[Segment] = []
 

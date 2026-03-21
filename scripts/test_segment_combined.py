@@ -335,3 +335,62 @@ def test_atomic_unordered_list_is_separate_unit():
     # Unordered lists are NOT atomic (only ordered lists are)
     # They are treated as standalone units (separate from "Features:")
     assert len(units) >= 2
+
+
+from segment_combined import pack_leaf
+
+
+def test_pack_leaf_splits_into_chunks():
+    # Build a leaf section with lots of paragraphs, each ~100 chars
+    paragraphs = [f"Paragraph {i}. " + "x" * 80 for i in range(20)]
+    body = "\n\n".join(paragraphs) + "\n"
+    raw_text = "## Big Leaf\n\n" + body
+    section = make_heading_section(
+        level=2, title="Big Leaf", start=0, end=len(raw_text), breadcrumb=["Root"]
+    )
+    segments = pack_leaf(section, raw_text, max_size=500, display_name="Product")
+    assert len(segments) > 1
+    # First segment should include the heading
+    assert "## Big Leaf" in segments[0].text
+    # All segments should have breadcrumbs
+    for seg in segments:
+        assert seg.text.startswith("> Product > Root > Big Leaf")
+        assert seg.title == "Big Leaf"
+
+
+def test_pack_leaf_heading_only_in_first_segment():
+    paragraphs = ["Content block. " + "y" * 80 for _ in range(20)]
+    body = "\n\n".join(paragraphs) + "\n"
+    raw_text = "### Deep Leaf\n\n" + body
+    section = make_heading_section(
+        level=3, title="Deep Leaf", start=0, end=len(raw_text), breadcrumb=["A", "B"]
+    )
+    segments = pack_leaf(section, raw_text, max_size=500, display_name="Product")
+    assert len(segments) > 1
+    assert "### Deep Leaf" in segments[0].text
+    for seg in segments[1:]:
+        assert "### Deep Leaf" not in seg.text
+
+
+def test_pack_leaf_oversized_atomic_unit_emitted_standalone():
+    # A single huge table that exceeds max_size
+    rows = "\n".join(f"| cell{i} | {'data ' * 20}|" for i in range(30))
+    table = "| Col A | Col B |\n| --- | --- |\n" + rows
+    raw_text = "## Table Section\n\n" + table + "\n"
+    section = make_heading_section(
+        level=2, title="Table Section", start=0, end=len(raw_text), breadcrumb=[]
+    )
+    segments = pack_leaf(section, raw_text, max_size=500, display_name="Product")
+    # Table is one atomic unit > max_size, emitted as standalone
+    assert len(segments) >= 1
+    assert "| Col A | Col B |" in segments[0].text
+
+
+def test_emit_leaf_over_max_size_uses_pack_leaf():
+    paragraphs = [f"Para {i}. " + "z" * 80 for i in range(20)]
+    body = "\n\n".join(paragraphs) + "\n"
+    raw_text = "## Leaf\n\n" + body
+    section = make_heading_section(level=2, title="Leaf", start=0, end=len(raw_text))
+    segments = emit_segments(section, raw_text, max_size=500, display_name="Product")
+    assert len(segments) > 1
+    assert "## Leaf" in segments[0].text
