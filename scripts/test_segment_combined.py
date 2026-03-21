@@ -512,3 +512,25 @@ def test_segment_combined_file_breadcrumbs_use_display_name(tmp_path):
     segment_combined_file(combined, output_dir, "xdr_5", max_size=8000)
     content = list(output_dir.glob("*.md"))[0].read_text(encoding="utf-8")
     assert "> Cortex XDR >" in content
+
+
+# Task 11: CLI validation tests
+
+from segment_combined import PRODUCTS, COMBINED_FILES, DISPLAY_NAMES
+
+
+def test_cli_product_choices_match_products_dict():
+    assert set(PRODUCTS.keys()) == {"cloud", "xdr", "xsiam", "gateway", "agentix"}
+
+
+def test_combined_files_has_all_maps():
+    all_maps = []
+    for maps in PRODUCTS.values():
+        all_maps.extend(maps)
+    for map_name in all_maps:
+        assert map_name in COMBINED_FILES, f"{map_name} missing from COMBINED_FILES"
+
+
+def test_display_names_has_all_maps():
+    for map_name in COMBINED_FILES:
+        assert map_name in DISPLAY_NAMES, f"{map_name} missing from DISPLAY_NAMES"
