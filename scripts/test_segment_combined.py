@@ -262,3 +262,76 @@ def test_emit_small_own_content_merged_into_first_child():
     child_segment = segments[0]
     assert "Short intro." in child_segment.text
     assert "Child content." in child_segment.text
+
+
+from segment_combined import identify_atomic_units
+
+
+def test_atomic_paragraphs_are_separate_units():
+    body = "First paragraph.\n\nSecond paragraph.\n\nThird paragraph.\n"
+    units = identify_atomic_units(body)
+    assert len(units) == 3
+    assert "First paragraph." in units[0]
+    assert "Second paragraph." in units[1]
+    assert "Third paragraph." in units[2]
+
+
+def test_atomic_table_is_one_unit():
+    body = (
+        "Intro text.\n\n"
+        "| A | B |\n"
+        "| --- | --- |\n"
+        "| 1 | 2 |\n"
+        "| 3 | 4 |\n\n"
+        "After table.\n"
+    )
+    units = identify_atomic_units(body)
+    # Table should be one unit (not split across rows)
+    table_units = [u for u in units if "|" in u]
+    assert len(table_units) == 1
+    assert "| A | B |" in table_units[0]
+    assert "| 3 | 4 |" in table_units[0]
+
+
+def test_atomic_code_block_is_one_unit():
+    body = "Before code.\n\n```python\ndef hello():\n    pass\n```\n\nAfter code.\n"
+    units = identify_atomic_units(body)
+    code_units = [u for u in units if "```" in u]
+    assert len(code_units) == 1
+    assert "def hello():" in code_units[0]
+
+
+def test_atomic_code_block_groups_with_preceding_paragraph():
+    body = "Run the following command:\n\n```bash\npip install mistune\n```\n\nNext step.\n"
+    units = identify_atomic_units(body)
+    # "Run the following command:" + code block = one unit
+    assert len(units) == 2
+    assert "Run the following command:" in units[0]
+    assert "pip install mistune" in units[0]
+    assert "Next step." in units[1]
+
+
+def test_atomic_ordered_list_is_one_unit():
+    body = "Steps:\n\n1. First step\n2. Second step\n3. Third step\n\nDone.\n"
+    units = identify_atomic_units(body)
+    list_units = [u for u in units if "1." in u]
+    assert len(list_units) == 1
+    assert "1. First step" in list_units[0]
+    assert "3. Third step" in list_units[0]
+
+
+def test_atomic_admonition_groups_with_preceding_paragraph():
+    body = "Configure the setting below.\n\n**Note:** This requires admin access.\n\nNext section.\n"
+    units = identify_atomic_units(body)
+    assert len(units) == 2
+    assert "Configure the setting below." in units[0]
+    assert "**Note:**" in units[0]
+    assert "Next section." in units[1]
+
+
+def test_atomic_unordered_list_is_separate_unit():
+    body = "Features:\n\n- Item A\n- Item B\n- Item C\n\nMore text.\n"
+    units = identify_atomic_units(body)
+    # Unordered lists are NOT atomic (only ordered lists are)
+    # They are treated as standalone units (separate from "Features:")
+    assert len(units) >= 2

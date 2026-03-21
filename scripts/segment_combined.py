@@ -8,6 +8,8 @@ prepended with a breadcrumb for retrieval context.
 import re
 from dataclasses import dataclass, field
 
+import mistune
+
 
 DEFAULT_MAX_SIZE = 8000
 
@@ -108,6 +110,112 @@ def _fix_end_offsets(sections: list[HeadingSection]) -> None:
 def format_breadcrumb(display_name: str, breadcrumb: list[str], title: str) -> str:
     parts = [display_name] + breadcrumb + [title]
     return "> " + " > ".join(parts)
+
+
+def _scan_raw_blocks(text: str) -> list[str]:
+    blocks: list[str] = []
+    current_lines: list[str] = []
+    in_code_fence = False
+
+    for line in text.split("\n"):
+        stripped = line.strip()
+
+        if stripped.startswith("```"):
+            if in_code_fence:
+                current_lines.append(line)
+                in_code_fence = False
+                continue
+            else:
+                in_code_fence = True
+                if not current_lines:
+                    current_lines = []
+                current_lines.append(line)
+                continue
+
+        if in_code_fence:
+            current_lines.append(line)
+            continue
+
+        if stripped == "":
+            if current_lines:
+                blocks.append("\n".join(current_lines))
+                current_lines = []
+            continue
+
+        current_lines.append(line)
+
+    if current_lines:
+        blocks.append("\n".join(current_lines))
+
+    return blocks
+
+
+def _classify_block_ast(ast_node: dict) -> str:
+    return ast_node.get("type", "paragraph")
+
+
+def _is_admonition(text: str) -> bool:
+    stripped = text.strip()
+    for prefix in ("**Note:**", "**Warning:**", "**Important:**", "**Tip:**", "**Caution:**"):
+        if stripped.startswith(prefix):
+            return True
+    return False
+
+
+def identify_atomic_units(body_text: str) -> list[str]:
+    raw_blocks = _scan_raw_blocks(body_text)
+    if not raw_blocks:
+        return []
+
+    md = mistune.create_markdown(renderer="ast", plugins=["table"])
+    ast_nodes = md(body_text)
+    block_ast_nodes = [n for n in ast_nodes if n.get("type") != "blank_line"]
+
+    # Classify each raw block using AST where possible
+    block_types: list[str] = []
+    for i, block in enumerate(raw_blocks):
+        if i < len(block_ast_nodes):
+            block_types.append(_classify_block_ast(block_ast_nodes[i]))
+        else:
+            # Fallback: classify by content
+            stripped = block.strip()
+            if stripped.startswith("```"):
+                block_types.append("block_code")
+            elif stripped.startswith("|"):
+                block_types.append("table")
+            elif re.match(r"^\d+\.", stripped):
+                block_types.append("list")
+            else:
+                block_types.append("paragraph")
+
+    # Apply grouping rules
+    units: list[str] = []
+    i = 0
+    while i < len(raw_blocks):
+        block = raw_blocks[i]
+        block_type = block_types[i]
+
+        # Check if next block should be grouped with this one
+        if i + 1 < len(raw_blocks):
+            next_type = block_types[i + 1]
+            next_block = raw_blocks[i + 1]
+
+            # Code block preceded by paragraph → group together
+            if block_type == "paragraph" and next_type == "block_code":
+                units.append(block + "\n\n" + next_block)
+                i += 2
+                continue
+
+            # Admonition paragraph preceded by paragraph → group together
+            if block_type == "paragraph" and next_type == "paragraph" and _is_admonition(next_block):
+                units.append(block + "\n\n" + next_block)
+                i += 2
+                continue
+
+        units.append(block)
+        i += 1
+
+    return units
 
 
 def emit_segments(
