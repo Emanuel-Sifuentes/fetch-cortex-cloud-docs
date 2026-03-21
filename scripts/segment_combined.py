@@ -34,3 +34,25 @@ def slugify(title: str) -> str:
     slug = re.sub(r"[\s_]+", "-", slug)
     slug = re.sub(r"-+", "-", slug)
     return slug.strip("-")
+
+
+def scan_heading_offsets(raw_text: str) -> list[tuple[int, str, int]]:
+    headings = []
+    offset = 0
+    in_code_block = False
+
+    for line in raw_text.split("\n"):
+        stripped = line.strip()
+        if stripped.startswith("```"):
+            in_code_block = not in_code_block
+
+        if not in_code_block:
+            match = re.match(r"^(#{1,6}) (.+)$", line)
+            if match:
+                level = len(match.group(1))
+                title = match.group(2).strip()
+                headings.append((level, title, offset))
+
+        offset += len(line) + 1
+
+    return headings
