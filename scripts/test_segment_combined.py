@@ -198,3 +198,44 @@ def test_emit_preserves_exact_raw_text():
     section = make_heading_section(level=1, title="Title", start=0, end=len(raw_text))
     segments = emit_segments(section, raw_text, max_size=8000, display_name="Product")
     assert "Paragraph with **bold** and `code`." in segments[0].text
+
+
+def test_emit_splits_large_section_at_h2_boundaries():
+    # Build a section with two children, total > max_size
+    # Each child is small enough to be one segment
+    raw_text = (
+        "# Root\n\n"
+        "Root intro paragraph.\n\n"
+        "## Child A\n\n"
+        + "A content. " * 50 + "\n\n"
+        + "## Child B\n\n"
+        + "B content. " * 50 + "\n"
+    )
+    headings = scan_heading_offsets(raw_text)
+    tree = build_heading_tree(headings, len(raw_text))
+    root = tree[0]
+
+    # max_size small enough that root is too big, but each child fits
+    segments = emit_segments(root, raw_text, max_size=800, display_name="Product")
+    assert len(segments) >= 2
+    titles = [s.title for s in segments]
+    assert "Child A" in titles
+    assert "Child B" in titles
+
+
+def test_emit_own_content_emitted_when_over_500_chars():
+    raw_text = (
+        "# Root\n\n"
+        + "Root content. " * 50 + "\n\n"  # >500 chars of own content
+        + "## Child\n\n"
+        + "Child content.\n"
+    )
+    headings = scan_heading_offsets(raw_text)
+    tree = build_heading_tree(headings, len(raw_text))
+    root = tree[0]
+    segments = emit_segments(root, raw_text, max_size=800, display_name="Product")
+
+    # Root's own content should be a separate segment
+    root_segments = [s for s in segments if s.title == "Root"]
+    assert len(root_segments) >= 1
+    assert "Root content." in root_segments[0].text

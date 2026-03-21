@@ -123,4 +123,27 @@ def emit_segments(
         breadcrumb = format_breadcrumb(display_name, section.breadcrumb, section.title)
         return [Segment(text=breadcrumb + "\n\n" + section_text, title=section.title)]
 
-    return []
+    if not section.children:
+        # Leaf section too large — will be handled by pack_leaf (Task 9)
+        # For now, emit as single oversized segment
+        section_text = raw_text[section.start_offset : section.end_offset].strip()
+        breadcrumb = format_breadcrumb(display_name, section.breadcrumb, section.title)
+        return [Segment(text=breadcrumb + "\n\n" + section_text, title=section.title)]
+
+    segments: list[Segment] = []
+
+    # Own content: text between section start and first child start
+    own_start = section.start_offset
+    own_end = section.children[0].start_offset
+    own_size = own_end - own_start
+
+    if own_size >= 500:
+        own_text = raw_text[own_start:own_end].strip()
+        breadcrumb = format_breadcrumb(display_name, section.breadcrumb, section.title)
+        segments.append(Segment(text=breadcrumb + "\n\n" + own_text, title=section.title))
+
+    # Recurse into children
+    for child in section.children:
+        segments.extend(emit_segments(child, raw_text, max_size, display_name))
+
+    return segments
