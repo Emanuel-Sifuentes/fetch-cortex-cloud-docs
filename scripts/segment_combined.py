@@ -273,6 +273,37 @@ def pack_leaf(
     return segments
 
 
+SMALL_SIBLING_THRESHOLD = 2000
+
+
+def merge_small_siblings(segments: list[Segment], max_size: int) -> list[Segment]:
+    if len(segments) <= 1:
+        return segments
+
+    merged: list[Segment] = []
+    current = segments[0]
+
+    for next_seg in segments[1:]:
+        current_is_small = len(current.text) < SMALL_SIBLING_THRESHOLD
+        next_is_small = len(next_seg.text) < SMALL_SIBLING_THRESHOLD
+        combined_size = len(current.text) + len(next_seg.text)
+
+        if current_is_small and next_is_small and combined_size <= max_size:
+            # Extract body from next segment (strip its breadcrumb line)
+            next_lines = next_seg.text.split("\n", 1)
+            next_body = next_lines[1] if len(next_lines) > 1 else ""
+            current = Segment(
+                text=current.text + "\n" + next_body,
+                title=current.title,
+            )
+        else:
+            merged.append(current)
+            current = next_seg
+
+    merged.append(current)
+    return merged
+
+
 def emit_segments(
     section: HeadingSection,
     raw_text: str,
@@ -320,4 +351,5 @@ def emit_segments(
             )
         segments.extend(child_segments)
 
+    segments = merge_small_siblings(segments, max_size)
     return segments

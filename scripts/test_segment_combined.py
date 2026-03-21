@@ -394,3 +394,70 @@ def test_emit_leaf_over_max_size_uses_pack_leaf():
     segments = emit_segments(section, raw_text, max_size=500, display_name="Product")
     assert len(segments) > 1
     assert "## Leaf" in segments[0].text
+
+
+from segment_combined import merge_small_siblings
+
+
+def test_merge_small_siblings_combines_under_threshold():
+    segments = [
+        Segment(text="> BC\n\n## A\n\nShort A.", title="A"),
+        Segment(text="> BC\n\n## B\n\nShort B.", title="B"),
+        Segment(text="> BC\n\n## C\n\nShort C.", title="C"),
+    ]
+    # Each segment < 2000 chars, all should merge
+    merged = merge_small_siblings(segments, max_size=8000)
+    assert len(merged) < len(segments)
+    assert "Short A." in merged[0].text
+    assert "Short B." in merged[0].text
+
+
+def test_merge_preserves_large_segments():
+    small = Segment(text="> BC\n\n## S\n\nSmall.", title="S")
+    large = Segment(text="> BC\n\n## L\n\n" + "x" * 3000, title="L")
+    merged = merge_small_siblings([small, large, small], max_size=8000)
+    # Large segment should not merge with neighbors
+    assert len(merged) >= 2
+
+
+def test_merge_respects_max_size():
+    segments = [
+        Segment(text="> BC\n\n" + "a" * 1500, title="A"),
+        Segment(text="> BC\n\n" + "b" * 1500, title="B"),
+        Segment(text="> BC\n\n" + "c" * 1500, title="C"),
+        Segment(text="> BC\n\n" + "d" * 1500, title="D"),
+    ]
+    # Each < 2000, but merging all 4 would exceed max_size=4000
+    merged = merge_small_siblings(segments, max_size=4000)
+    assert len(merged) >= 2
+    for seg in merged:
+        assert len(seg.text) <= 4000 or seg == merged[-1]  # last may be under
+
+
+def test_merge_uses_first_siblings_breadcrumb():
+    segments = [
+        Segment(text="> Product > A\n\nContent A", title="A"),
+        Segment(text="> Product > B\n\nContent B", title="B"),
+    ]
+    merged = merge_small_siblings(segments, max_size=8000)
+    assert merged[0].text.startswith("> Product > A")
+    assert merged[0].title == "A"
+
+
+def test_emit_merges_small_sibling_sections():
+    # Each child has ~200 chars of content so root total exceeds max_size,
+    # forcing recursion. Individual children are < 2000 chars so they merge.
+    raw_text = (
+        "# Root\n\n"
+        "## A\n\n" + "a " * 100 + "\n\n"
+        "## B\n\n" + "b " * 100 + "\n\n"
+        "## C\n\n" + "c " * 100 + "\n\n"
+        "## D\n\n" + "d " * 100 + "\n"
+    )
+    headings = scan_heading_offsets(raw_text)
+    tree = build_heading_tree(headings, len(raw_text))
+    # Root is ~900+ chars > max_size=800, so it recurses into children.
+    # Each child is ~210 chars < 2000, so siblings merge.
+    segments = emit_segments(tree[0], raw_text, max_size=800, display_name="Product")
+    assert len(segments) < 4
+    assert len(segments) >= 1
