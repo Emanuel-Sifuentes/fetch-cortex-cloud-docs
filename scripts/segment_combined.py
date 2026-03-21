@@ -275,14 +275,20 @@ def pack_leaf(
     if not units:
         return [Segment(text=breadcrumb + "\n\n" + section_text.strip(), title=section.title)]
 
+    # Reserve space for breadcrumb + newlines + heading (first chunk only)
+    overhead = len(breadcrumb) + 2  # breadcrumb + "\n\n"
+    heading_overhead = len(heading_text) + 2 if heading_text else 0  # heading + "\n\n"
+    effective_max = max_size - overhead - heading_overhead
+
     segments: list[Segment] = []
     current_units: list[str] = []
     current_size = 0
 
     for unit in units:
         unit_size = len(unit)
+        budget = effective_max if not segments else max_size - overhead
 
-        if current_size + unit_size > max_size and current_units:
+        if current_size + unit_size > budget and current_units:
             chunk_text = "\n\n".join(current_units)
             if not segments:
                 chunk_text = heading_text + "\n\n" + chunk_text
