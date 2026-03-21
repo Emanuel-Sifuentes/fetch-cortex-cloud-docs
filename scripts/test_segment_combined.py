@@ -247,7 +247,7 @@ def test_emit_small_own_content_merged_into_first_child():
         "# Root\n\n"
         "Short intro.\n\n"  # < 500 chars of own content
         "## Child\n\n"
-        + "Child content. " * 30 + "\n"
+        + "Child content. " * 60 + "\n"
     )
     headings = scan_heading_offsets(raw_text)
     tree = build_heading_tree(headings, len(raw_text))

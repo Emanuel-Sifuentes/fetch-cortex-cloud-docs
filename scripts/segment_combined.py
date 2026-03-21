@@ -118,6 +118,11 @@ def emit_segments(
 ) -> list[Segment]:
     total_size = section.end_offset - section.start_offset
 
+    if total_size <= max_size:
+        section_text = raw_text[section.start_offset : section.end_offset].strip()
+        breadcrumb = format_breadcrumb(display_name, section.breadcrumb, section.title)
+        return [Segment(text=breadcrumb + "\n\n" + section_text, title=section.title)]
+
     if not section.children:
         # Leaf section too large — will be handled by pack_leaf (Task 9)
         # For now, emit as single oversized segment
