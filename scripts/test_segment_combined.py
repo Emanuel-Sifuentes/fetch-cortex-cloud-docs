@@ -239,3 +239,26 @@ def test_emit_own_content_emitted_when_over_500_chars():
     root_segments = [s for s in segments if s.title == "Root"]
     assert len(root_segments) >= 1
     assert "Root content." in root_segments[0].text
+
+
+def test_emit_small_own_content_merged_into_first_child():
+    # Own content < 500 chars should be prepended to first child, not standalone
+    raw_text = (
+        "# Root\n\n"
+        "Short intro.\n\n"  # < 500 chars of own content
+        "## Child\n\n"
+        + "Child content. " * 30 + "\n"
+    )
+    headings = scan_heading_offsets(raw_text)
+    tree = build_heading_tree(headings, len(raw_text))
+    root = tree[0]
+    segments = emit_segments(root, raw_text, max_size=800, display_name="Product")
+
+    # No segment should have title "Root" — the intro was merged into Child
+    root_segments = [s for s in segments if s.title == "Root"]
+    assert len(root_segments) == 0
+
+    # First child segment should contain the intro text
+    child_segment = segments[0]
+    assert "Short intro." in child_segment.text
+    assert "Child content." in child_segment.text

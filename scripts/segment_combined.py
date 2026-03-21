@@ -118,11 +118,6 @@ def emit_segments(
 ) -> list[Segment]:
     total_size = section.end_offset - section.start_offset
 
-    if total_size <= max_size:
-        section_text = raw_text[section.start_offset : section.end_offset].strip()
-        breadcrumb = format_breadcrumb(display_name, section.breadcrumb, section.title)
-        return [Segment(text=breadcrumb + "\n\n" + section_text, title=section.title)]
-
     if not section.children:
         # Leaf section too large — will be handled by pack_leaf (Task 9)
         # For now, emit as single oversized segment
@@ -136,14 +131,29 @@ def emit_segments(
     own_start = section.start_offset
     own_end = section.children[0].start_offset
     own_size = own_end - own_start
+    prepend_text = ""
 
-    if own_size >= 500:
-        own_text = raw_text[own_start:own_end].strip()
-        breadcrumb = format_breadcrumb(display_name, section.breadcrumb, section.title)
-        segments.append(Segment(text=breadcrumb + "\n\n" + own_text, title=section.title))
+    if own_size > 0:
+        if own_size < 500:
+            prepend_text = raw_text[own_start:own_end].strip()
+        else:
+            own_text = raw_text[own_start:own_end].strip()
+            breadcrumb = format_breadcrumb(display_name, section.breadcrumb, section.title)
+            segments.append(Segment(text=breadcrumb + "\n\n" + own_text, title=section.title))
 
     # Recurse into children
-    for child in section.children:
-        segments.extend(emit_segments(child, raw_text, max_size, display_name))
+    for i, child in enumerate(section.children):
+        child_segments = emit_segments(child, raw_text, max_size, display_name)
+        if i == 0 and prepend_text and child_segments:
+            first = child_segments[0]
+            breadcrumb_line = format_breadcrumb(
+                display_name, child.breadcrumb, child.title
+            )
+            body = first.text[len(breadcrumb_line) + 2 :]  # strip breadcrumb + \n\n
+            child_segments[0] = Segment(
+                text=breadcrumb_line + "\n\n" + prepend_text + "\n\n" + body,
+                title=first.title,
+            )
+        segments.extend(child_segments)
 
     return segments
