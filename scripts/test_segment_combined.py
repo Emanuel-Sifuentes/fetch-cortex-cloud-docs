@@ -166,3 +166,35 @@ def test_breadcrumb_root_section_only():
 def test_breadcrumb_deep_nesting():
     result = format_breadcrumb("Cortex XSIAM", ["A", "B", "C", "D", "E"], "F")
     assert result == "> Cortex XSIAM > A > B > C > D > E > F"
+
+
+from segment_combined import emit_segments
+
+
+def make_heading_section(level=1, title="Test", start=0, end=100, children=None, breadcrumb=None):
+    return HeadingSection(
+        level=level,
+        title=title,
+        start_offset=start,
+        end_offset=end,
+        children=children or [],
+        breadcrumb=breadcrumb or [],
+    )
+
+
+def test_emit_small_section_produces_one_segment():
+    raw_text = "## Overview\n\nThis is a small section.\n"
+    section = make_heading_section(level=2, title="Overview", start=0, end=len(raw_text), breadcrumb=["Root"])
+    segments = emit_segments(section, raw_text, max_size=8000, display_name="Cortex XDR")
+    assert len(segments) == 1
+    assert segments[0].title == "Overview"
+    assert segments[0].text.startswith("> Cortex XDR > Root > Overview")
+    assert "## Overview" in segments[0].text
+    assert "This is a small section." in segments[0].text
+
+
+def test_emit_preserves_exact_raw_text():
+    raw_text = "# Title\n\nParagraph with **bold** and `code`.\n"
+    section = make_heading_section(level=1, title="Title", start=0, end=len(raw_text))
+    segments = emit_segments(section, raw_text, max_size=8000, display_name="Product")
+    assert "Paragraph with **bold** and `code`." in segments[0].text

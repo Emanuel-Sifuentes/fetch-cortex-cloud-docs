@@ -108,3 +108,19 @@ def _fix_end_offsets(sections: list[HeadingSection]) -> None:
 def format_breadcrumb(display_name: str, breadcrumb: list[str], title: str) -> str:
     parts = [display_name] + breadcrumb + [title]
     return "> " + " > ".join(parts)
+
+
+def emit_segments(
+    section: HeadingSection,
+    raw_text: str,
+    max_size: int,
+    display_name: str,
+) -> list[Segment]:
+    total_size = section.end_offset - section.start_offset
+
+    if total_size <= max_size:
+        section_text = raw_text[section.start_offset : section.end_offset].strip()
+        breadcrumb = format_breadcrumb(display_name, section.breadcrumb, section.title)
+        return [Segment(text=breadcrumb + "\n\n" + section_text, title=section.title)]
+
+    return []
