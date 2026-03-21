@@ -461,3 +461,54 @@ def test_emit_merges_small_sibling_sections():
     segments = emit_segments(tree[0], raw_text, max_size=800, display_name="Product")
     assert len(segments) < 4
     assert len(segments) >= 1
+
+
+# Task 11: File I/O tests
+
+from pathlib import Path
+from segment_combined import segment_combined_file
+
+
+def test_segment_combined_file_writes_segments(tmp_path):
+    combined = tmp_path / "cortex-test-combined.md"
+    combined.write_text(
+        "# Section One\n\nContent one.\n\n# Section Two\n\nContent two.\n",
+        encoding="utf-8",
+    )
+    output_dir = tmp_path / "test_segments"
+    stats = segment_combined_file(combined, output_dir, "xdr_5", max_size=8000)
+    files = sorted(output_dir.glob("*.md"))
+    assert len(files) == 2
+    assert files[0].name.startswith("segment-001-")
+    assert files[1].name.startswith("segment-002-")
+    assert stats["count"] == 2
+
+
+def test_segment_combined_file_clears_output_dir(tmp_path):
+    combined = tmp_path / "cortex-test-combined.md"
+    combined.write_text("# Only\n\nContent.\n", encoding="utf-8")
+    output_dir = tmp_path / "test_segments"
+    output_dir.mkdir()
+    (output_dir / "stale-file.md").write_text("old data", encoding="utf-8")
+    segment_combined_file(combined, output_dir, "xdr_5", max_size=8000)
+    files = list(output_dir.glob("*.md"))
+    assert len(files) == 1
+    assert "stale-file.md" not in [f.name for f in files]
+
+
+def test_segment_combined_file_uses_utf8(tmp_path):
+    combined = tmp_path / "cortex-test-combined.md"
+    combined.write_text("# Über Section\n\nCafé résumé.\n", encoding="utf-8")
+    output_dir = tmp_path / "test_segments"
+    segment_combined_file(combined, output_dir, "agentix", max_size=8000)
+    content = list(output_dir.glob("*.md"))[0].read_text(encoding="utf-8")
+    assert "Café résumé." in content
+
+
+def test_segment_combined_file_breadcrumbs_use_display_name(tmp_path):
+    combined = tmp_path / "cortex-test-combined.md"
+    combined.write_text("# My Section\n\nBody text.\n", encoding="utf-8")
+    output_dir = tmp_path / "test_segments"
+    segment_combined_file(combined, output_dir, "xdr_5", max_size=8000)
+    content = list(output_dir.glob("*.md"))[0].read_text(encoding="utf-8")
+    assert "> Cortex XDR >" in content

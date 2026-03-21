@@ -5,13 +5,46 @@ markdown structure (headings, tables, code blocks, lists). Each segment is
 prepended with a breadcrumb for retrieval context.
 """
 
+import argparse
 import re
+import shutil
 from dataclasses import dataclass, field
+from pathlib import Path
 
 import mistune
 
 
 DEFAULT_MAX_SIZE = 8000
+
+COMBINED_FILES = {
+    "appsec": "cortex-cloud-appsec-combined.md",
+    "posture": "cortex-cloud-posture-combined.md",
+    "runtime": "cortex-cloud-runtime-combined.md",
+    "cortex_gateway": "cortex-gateway-combined.md",
+    "xdr_5": "cortex-xdr-5-combined.md",
+    "xdr_compatibility": "cortex-xdr-compatibility-combined.md",
+    "xsiam_3": "cortex-xsiam-3-combined.md",
+    "agentix": "cortex-agentix-combined.md",
+}
+
+PRODUCTS = {
+    "cloud": ["appsec", "posture", "runtime"],
+    "xdr": ["xdr_5", "xdr_compatibility"],
+    "xsiam": ["xsiam_3"],
+    "gateway": ["cortex_gateway"],
+    "agentix": ["agentix"],
+}
+
+DISPLAY_NAMES = {
+    "agentix": "Cortex AgentiX",
+    "appsec": "Cortex Cloud Application Security",
+    "cortex_gateway": "Cortex Gateway",
+    "posture": "Cortex Cloud Posture Management",
+    "runtime": "Cortex Cloud Runtime Security",
+    "xdr_5": "Cortex XDR",
+    "xdr_compatibility": "Cortex XDR Compatibility",
+    "xsiam_3": "Cortex XSIAM",
+}
 
 
 @dataclass
@@ -353,3 +386,94 @@ def emit_segments(
 
     segments = merge_small_siblings(segments, max_size)
     return segments
+
+
+def segment_combined_file(
+    combined_path: Path, output_dir: Path, map_name: str, max_size: int
+) -> dict:
+    raw_text = combined_path.read_text(encoding="utf-8")
+    display_name = DISPLAY_NAMES[map_name]
+
+    headings = scan_heading_offsets(raw_text)
+    tree = build_heading_tree(headings, len(raw_text))
+
+    segments: list[Segment] = []
+    for root_section in tree:
+        segments.extend(emit_segments(root_section, raw_text, max_size, display_name))
+
+    # Clear and recreate output directory
+    if output_dir.exists():
+        shutil.rmtree(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Write segments
+    sizes: list[int] = []
+    for i, segment in enumerate(segments, 1):
+        slug = slugify(segment.title)
+        filename = f"segment-{i:03d}-{slug}.md"
+        (output_dir / filename).write_text(segment.text, encoding="utf-8")
+        sizes.append(len(segment.text))
+
+    oversized = sum(1 for s in sizes if s > max_size)
+
+    return {
+        "count": len(segments),
+        "avg_size": sum(sizes) // len(sizes) if sizes else 0,
+        "max_size": max(sizes) if sizes else 0,
+        "oversized": oversized,
+    }
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Pre-segment combined markdown files for RAG Engine ingestion"
+    )
+    parser.add_argument(
+        "--product",
+        choices=list(PRODUCTS.keys()),
+        help="Segment only this product's maps",
+    )
+    parser.add_argument(
+        "--max-size",
+        type=int,
+        default=DEFAULT_MAX_SIZE,
+        help=f"Target max segment size in chars (default: {DEFAULT_MAX_SIZE})",
+    )
+    args = parser.parse_args()
+
+    sources_dir = Path(__file__).resolve().parent.parent / "sources_fetch"
+
+    if args.product:
+        maps = PRODUCTS[args.product]
+    else:
+        maps = list(COMBINED_FILES.keys())
+
+    total_segments = 0
+    total_oversized = 0
+    map_count = 0
+
+    for map_name in maps:
+        combined_name = COMBINED_FILES[map_name]
+        combined_path = sources_dir / map_name / combined_name
+        if not combined_path.exists():
+            print(f"Skipping {map_name} ({combined_name} not found)")
+            continue
+
+        output_dir = sources_dir / map_name / f"{map_name}_segments"
+        stats = segment_combined_file(combined_path, output_dir, map_name, args.max_size)
+
+        print(
+            f"{map_name}: {stats['count']} segments "
+            f"(avg {stats['avg_size']:,} chars, max {stats['max_size']:,} chars)"
+        )
+        total_segments += stats["count"]
+        total_oversized += stats["oversized"]
+        map_count += 1
+
+    print(f"\nTotal: {total_segments} segments across {map_count} maps")
+    if total_oversized:
+        print(f"Oversized segments (>{args.max_size} chars): {total_oversized} (all single atomic units)")
+
+
+if __name__ == "__main__":
+    main()
