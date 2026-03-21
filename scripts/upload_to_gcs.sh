@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # scripts/upload_to_gcs.sh
-# Uploads H1 split files to GCS for RAG ingestion.
+# Uploads pre-segmented files to GCS for RAG ingestion.
 # Usage: bash scripts/upload_to_gcs.sh [--bucket <name>] [--dry-run] [--product <name>]
 #
 # Bucket layout:
 #   gs://<bucket>/
-#     agentix/learn-about-cortex-agentix.md
-#     agentix/onboard-cortex-agentix.md
-#     posture/get-started-with-cortex-cloud.md
+#     agentix/segment-001-learn-about-cortex-agentix.md
+#     agentix/segment-002-onboard-cortex-agentix.md
+#     posture/segment-001-get-started-with-cortex-cloud.md
 #     ...
 
 set -euo pipefail
@@ -27,15 +27,6 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-upload() {
-  local src="$1" dest="$2"
-  if $DRY_RUN; then
-    echo "[dry-run] $src -> $dest"
-  else
-    gcloud storage cp "$src" "$dest"
-  fi
-}
-
 uploaded=0
 
 for product_dir in "$SOURCES_DIR"/*/; do
@@ -45,15 +36,25 @@ for product_dir in "$SOURCES_DIR"/*/; do
     continue
   fi
 
-  # Upload H1 split files
-  split_dir="$product_dir/${product}_split_h1"
-  if [[ -d "$split_dir" ]]; then
-    for f in "$split_dir"/*.md; do
-      [[ -f "$f" ]] || continue
-      upload "$f" "$BUCKET/$product/$(basename "$f")"
-      uploaded=$((uploaded + 1))
-    done
+  segments_dir="$product_dir/${product}_segments"
+  if [[ ! -d "$segments_dir" ]]; then
+    continue
   fi
+
+  file_count=$(find "$segments_dir" -name '*.md' -type f | wc -l)
+  if [[ "$file_count" -eq 0 ]]; then
+    continue
+  fi
+
+  if $DRY_RUN; then
+    echo "[dry-run] $product: $file_count files -> $BUCKET/$product/"
+  else
+    echo "Uploading $product ($file_count files)..."
+    gcloud storage rsync "$segments_dir" "$BUCKET/$product/" --delete-unmatched-destination-objects
+    echo "  $product done."
+  fi
+
+  uploaded=$((uploaded + file_count))
 done
 
 echo ""
