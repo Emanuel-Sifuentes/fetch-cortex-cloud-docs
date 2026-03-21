@@ -103,3 +103,8 @@ def _fix_end_offsets(sections: list[HeadingSection]) -> None:
             section.end_offset = max(
                 section.end_offset, section.children[-1].end_offset
             )
+
+
+def format_breadcrumb(display_name: str, breadcrumb: list[str], title: str) -> str:
+    parts = [display_name] + breadcrumb + [title]
+    return "> " + " > ".join(parts)

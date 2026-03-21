@@ -148,3 +148,21 @@ def test_tree_multiple_h1_roots():
 
 def test_tree_empty_headings():
     assert build_heading_tree([], 100) == []
+
+
+from segment_combined import format_breadcrumb
+
+
+def test_breadcrumb_with_ancestors():
+    result = format_breadcrumb("Cortex XDR", ["Configure Cortex XDR", "Broker VM"], "AWS Setup")
+    assert result == "> Cortex XDR > Configure Cortex XDR > Broker VM > AWS Setup"
+
+
+def test_breadcrumb_root_section_only():
+    result = format_breadcrumb("Cortex XDR", [], "Learn about Cortex XDR")
+    assert result == "> Cortex XDR > Learn about Cortex XDR"
+
+
+def test_breadcrumb_deep_nesting():
+    result = format_breadcrumb("Cortex XSIAM", ["A", "B", "C", "D", "E"], "F")
+    assert result == "> Cortex XSIAM > A > B > C > D > E > F"
