@@ -23,7 +23,7 @@ for (const dir of dirs) {
   console.log(`\n=== Fixing ${path.basename(dir)}/ (${files.length} files) ===\n`);
 
   const cmds = [
-    `bash scripts/fix_abstract_lines.sh --sources "${dir}"`,
+    `python scripts/fix_abstract_lines.py --sources "${dir}"`,
     `python scripts/fix_escaped_chars_in_fences.py "${dir}"`,
     `python scripts/fix_escaped_underscores.py --sources "${dir}"`,
     `python scripts/fix_images_and_fences.py --sources "${dir}"`,
