@@ -22,6 +22,7 @@ def main():
     pattern = os.path.join(sources_dir, "[0-9]*.md")
     files = sorted(glob.glob(pattern))
     count = 0
+    modified_files = []
 
     for filepath in files:
         with open(filepath, "r", encoding="utf-8") as f:
@@ -33,6 +34,7 @@ def main():
             with open(filepath, "w", encoding="utf-8") as f:
                 f.writelines(filtered)
             print(os.path.basename(filepath))
+            modified_files.append(filepath)
             count += 1
 
     print(f"Fixed {count} files.")
@@ -41,7 +43,7 @@ def main():
     print("=== Step 2: Verify no remaining standalone 'Abstract' lines ===")
     remaining = 0
     bad_files = []
-    for filepath in files:
+    for filepath in modified_files:
         with open(filepath, "r", encoding="utf-8") as f:
             for line in f:
                 if line.rstrip("\n") == "Abstract":
