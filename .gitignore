@@ -1,7 +1,9 @@
 node_modules/
 .venv/
 .worktrees/
-scripts/__pycache__/
+__pycache__/
+.DS_Store
+firebase-debug.log
 
 # Generated content — re-created by fetch/fix/ownership/snapshot commands
 sources_fetch/
