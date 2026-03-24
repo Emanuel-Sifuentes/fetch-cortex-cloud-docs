@@ -5,14 +5,14 @@
 #
 # Bucket layout:
 #   gs://<bucket>/
-#     agentix/segment-001-learn-about-cortex-agentix.md
-#     agentix/segment-002-onboard-cortex-agentix.md
-#     posture/segment-001-get-started-with-cortex-cloud.md
+#     agentix/public/segment-001-learn-about-cortex-agentix.md
+#     agentix/public/segment-002-onboard-cortex-agentix.md
+#     posture/public/segment-001-get-started-with-cortex-cloud.md
 #     ...
 
 set -euo pipefail
 
-BUCKET="${GCS_RAG_BUCKET:-gs://esifuentes-rag-engine-bucket}"
+BUCKET="${GCS_RAG_BUCKET:-gs://esifuentes-cortex-combined-rag}"
 SOURCES_DIR="$(cd "$(dirname "$0")/.." && pwd)/sources_fetch"
 
 DRY_RUN=false
@@ -36,7 +36,7 @@ for product_dir in "$SOURCES_DIR"/*/; do
     continue
   fi
 
-  segments_dir="$product_dir/${product}_segments"
+  segments_dir="$product_dir/public"
   if [[ ! -d "$segments_dir" ]]; then
     continue
   fi
@@ -47,10 +47,10 @@ for product_dir in "$SOURCES_DIR"/*/; do
   fi
 
   if $DRY_RUN; then
-    echo "[dry-run] $product: $file_count files -> $BUCKET/$product/"
+    echo "[dry-run] $product: $file_count files -> $BUCKET/$product/public"
   else
     echo "Uploading $product ($file_count files)..."
-    gcloud storage rsync "$segments_dir" "$BUCKET/$product/" --delete-unmatched-destination-objects
+    gcloud storage rsync "$segments_dir" "$BUCKET/$product/public" --delete-unmatched-destination-objects
     echo "  $product done."
   fi
 
