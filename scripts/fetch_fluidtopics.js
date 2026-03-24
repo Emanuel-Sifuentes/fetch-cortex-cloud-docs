@@ -7,7 +7,7 @@ const { MAP_IDS, resolveTargetMaps } = require("./map_config.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
-const CONCURRENCY = 5;
+const CONCURRENCY = 10;
 const DELAY_MS = 200;
 
 const turndown = new TurndownService({
