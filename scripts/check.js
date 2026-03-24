@@ -170,19 +170,6 @@ async function main() {
       .filter(([, data]) => data.changed)
       .map(([name]) => name);
 
-    if (changed.length > 0) {
-      console.log("\n=== Recomputing ownership ===\n");
-      try {
-        execSync("npm run ownership", {
-          cwd: path.join(__dirname, ".."),
-          stdio: "inherit",
-        });
-      } catch (err) {
-        console.error("FAILED: ownership recompute");
-        hasErrors = true;
-      }
-    }
-
     for (const product of changed) {
       console.log(`\n=== Re-fetching ${product} ===\n`);
       try {
