@@ -41,6 +41,7 @@ The global dedup aggressively filters topics from lower-priority products (e.g.,
 - Ownership pre-filtering on Cloud TOCs — `flattenToc` results feed directly into `computeBuckets`
 - Ownership pre-filtering on simple maps — `flattenToc` result is used directly without filtering
 - `filterTocByOwnership` from `module.exports`
+- `PRODUCTS` from the require import (becomes unused after removing `mapToProduct` builder)
 
 **Keep unchanged:**
 - Cloud bucketing logic (`computeBuckets`, `resolveFile`, `titleMatchToRuntime`, `buildTocMap`)
@@ -55,6 +56,10 @@ The global dedup aggressively filters topics from lower-priority products (e.g.,
 - Remove `filterTocByOwnership` from the require/import
 - Remove the entire `filterTocByOwnership` describe block
 - Keep all `promoteKeywordsToHeadings`, `computeBuckets`, and `resolveFile` tests
+
+### `scripts/check.js`
+
+- Remove the "Recomputing ownership" block in the `--apply` path (the `if (changed.length > 0)` block that calls `execSync("npm run ownership", ...)`)
 
 ### `package.json`
 
