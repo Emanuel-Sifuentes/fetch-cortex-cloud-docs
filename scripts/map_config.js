@@ -28,12 +28,6 @@ const PRODUCTS = {
   agentix: ["agentix"],
 };
 
-// Product keys — priority order for global dedup (highest first)
-const DEDUP_HIERARCHY = ["xdr", "cloud", "xsiam", "agentix"];
-
-// Map keys — excluded from dedup, processed as simple maps
-const DEDUP_EXCLUDED = ["cortex_gateway", "xdr_compatibility"];
-
 const VALID_MAPS = Object.keys(MAP_IDS);
 const VALID_PRODUCTS = Object.keys(PRODUCTS);
 
@@ -65,4 +59,4 @@ function parseMapFlag(defaultValue) {
   return value;
 }
 
-module.exports = { MAP_IDS, COMBINED_FILES, PRODUCTS, VALID_MAPS, VALID_PRODUCTS, DEDUP_HIERARCHY, DEDUP_EXCLUDED, parseMapFlag, parseProductFlag, resolveTargetMaps };
+module.exports = { MAP_IDS, COMBINED_FILES, PRODUCTS, VALID_MAPS, VALID_PRODUCTS, parseMapFlag, parseProductFlag, resolveTargetMaps };
