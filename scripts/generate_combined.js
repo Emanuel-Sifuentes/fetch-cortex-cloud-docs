@@ -1,7 +1,7 @@
 const https = require("https");
 const fs = require("fs");
 const path = require("path");
-const { MAP_IDS, COMBINED_FILES, PRODUCTS, VALID_MAPS, DEDUP_HIERARCHY, DEDUP_EXCLUDED, resolveTargetMaps } = require("./map_config.js");
+const { MAP_IDS, COMBINED_FILES, VALID_MAPS, resolveTargetMaps } = require("./map_config.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
@@ -214,42 +214,8 @@ function resolveFile(contentId, titleMatchMap, fileMap) {
   return null;
 }
 
-function filterTocByOwnership(toc, ownedSet) {
-  return toc.filter((e) => ownedSet.has(e.contentId));
-}
-
 async function main() {
   const targets = resolveTargetMaps();
-
-  // Load ownership manifest
-  const ownershipPath = path.join(__dirname, "..", "metadata", "ownership.json");
-  let ownership;
-  try {
-    ownership = JSON.parse(fs.readFileSync(ownershipPath, "utf-8"));
-  } catch (err) {
-    if (err.code === "ENOENT") {
-      console.error("Error: metadata/ownership.json not found — run `npm run ownership` first");
-    } else {
-      console.error("Error: metadata/ownership.json is malformed:", err.message);
-    }
-    process.exit(1);
-  }
-
-  // Build product -> Set<ownedContentId> lookup
-  const ownedByProduct = {};
-  for (const [product, ids] of Object.entries(ownership.owned)) {
-    ownedByProduct[product] = new Set(ids);
-  }
-
-  // Build map -> product lookup for filtering
-  const mapToProduct = {};
-  for (const product of DEDUP_HIERARCHY) {
-    for (const mapName of PRODUCTS[product]) {
-      if (!DEDUP_EXCLUDED.includes(mapName)) {
-        mapToProduct[mapName] = product;
-      }
-    }
-  }
 
   // Build contentId -> file content map from per-map subdirectories
   const fileMap = {};
@@ -298,11 +264,10 @@ async function main() {
       fetch(`/api/khub/maps/${MAP_IDS.runtime}/toc`),
     ]);
 
-    const cloudOwned = ownedByProduct["cloud"] || new Set();
-    const appsecFlat  = filterTocByOwnership(flattenToc(appsecToc), cloudOwned);
-    const postureFlat = filterTocByOwnership(flattenToc(postureToc), cloudOwned);
-    const runtimeFlat = filterTocByOwnership(flattenToc(runtimeToc), cloudOwned);
-    console.log(`TOCs after ownership filter: appsec=${appsecFlat.length}, posture=${postureFlat.length}, runtime=${runtimeFlat.length}`);
+    const appsecFlat  = flattenToc(appsecToc);
+    const postureFlat = flattenToc(postureToc);
+    const runtimeFlat = flattenToc(runtimeToc);
+    console.log(`TOCs: appsec=${appsecFlat.length}, posture=${postureFlat.length}, runtime=${runtimeFlat.length}`);
 
     const buckets = computeBuckets(postureFlat, runtimeFlat, appsecFlat);
 
@@ -352,12 +317,8 @@ async function main() {
   for (const target of simpleTargets) {
     console.log(`\nFetching ${target} TOC...`);
     const toc = await fetch(`/api/khub/maps/${MAP_IDS[target]}/toc`);
-    const tocRaw = flattenToc(toc);
-    const product = mapToProduct[target];
-    const tocFlat = product && ownedByProduct[product]
-      ? filterTocByOwnership(tocRaw, ownedByProduct[product])
-      : tocRaw;
-    console.log(`[${target}] ${tocFlat.length} entries${product ? " after ownership filter" : ""}`);
+    const tocFlat = flattenToc(toc);
+    console.log(`[${target}] ${tocFlat.length} entries`);
 
     const sections = [];
     for (const entry of tocFlat) {
@@ -381,7 +342,7 @@ async function main() {
   }
 }
 
-module.exports = { promoteKeywordsToHeadings, computeBuckets, resolveFile, filterTocByOwnership };
+module.exports = { promoteKeywordsToHeadings, computeBuckets, resolveFile };
 
 if (require.main === module) {
   main().catch((err) => {
