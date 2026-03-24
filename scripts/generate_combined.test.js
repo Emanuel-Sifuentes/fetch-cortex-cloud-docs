@@ -4,7 +4,6 @@ const {
   promoteKeywordsToHeadings,
   computeBuckets,
   resolveFile,
-  filterTocByOwnership,
 } = require("./generate_combined.js");
 
 describe("promoteKeywordsToHeadings", () => {
@@ -430,36 +429,5 @@ describe("resolveFile", () => {
     const titleMatchMap = new Map();
     const result = resolveFile("missing-id", titleMatchMap, fileMap);
     assert.equal(result, null);
-  });
-});
-
-describe("filterTocByOwnership", () => {
-  const entry = (contentId, title, depth) => ({ contentId, title, depth });
-
-  it("filters TOC to only include owned contentIds", () => {
-    const toc = [
-      entry("id-1", "Owned Topic", 0),
-      entry("id-2", "Dropped Topic", 1),
-      entry("id-3", "Also Owned", 1),
-    ];
-    const ownedSet = new Set(["id-1", "id-3"]);
-    const result = filterTocByOwnership(toc, ownedSet);
-    assert.equal(result.length, 2);
-    assert.equal(result[0].contentId, "id-1");
-    assert.equal(result[1].contentId, "id-3");
-  });
-
-  it("returns empty array when no contentIds are owned", () => {
-    const toc = [entry("id-1", "Topic", 0)];
-    const ownedSet = new Set();
-    const result = filterTocByOwnership(toc, ownedSet);
-    assert.equal(result.length, 0);
-  });
-
-  it("passes through all entries when all are owned", () => {
-    const toc = [entry("id-1", "A", 0), entry("id-2", "B", 1)];
-    const ownedSet = new Set(["id-1", "id-2"]);
-    const result = filterTocByOwnership(toc, ownedSet);
-    assert.equal(result.length, 2);
   });
 });
