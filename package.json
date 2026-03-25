@@ -45,7 +45,7 @@
     "toc:table": "node scripts/generate_toc_table.js",
     "fetch-api": "node scripts/fetch_stoplight.js",
     "fetch-api:cloud": "node scripts/fetch_stoplight.js --product cloud",
-    "test": "node --test scripts/generate_combined.test.js scripts/fetch_fluidtopics.test.js scripts/snapshot.test.js scripts/check.test.js"
+    "test": "node --test scripts/generate_combined.test.js scripts/fetch_fluidtopics.test.js scripts/snapshot.test.js scripts/check.test.js scripts/render_stoplight_node.test.js"
   },
   "dependencies": {
     "@playwright/test": "^1.58.2",
