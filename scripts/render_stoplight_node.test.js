@@ -359,6 +359,179 @@ describe("renderHttpService", () => {
   });
 });
 
+describe("renderHttpOperation edge cases", () => {
+  it("uses operation-level serverUrl over fallback", () => {
+    const node = makeOperationNode();
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "https://fallback",
+    });
+    assert.ok(result.includes('serverUrl: "https://api-yourfqdn"'));
+    assert.ok(!result.includes("fallback"));
+  });
+
+  it("falls back to passed serverUrl when operation has no servers", () => {
+    const data = JSON.parse(makeOperationNode().data);
+    delete data.servers;
+    const node = makeOperationNode({ data: JSON.stringify(data) });
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "https://fallback-url",
+    });
+    assert.ok(result.includes('serverUrl: "https://fallback-url"'));
+  });
+
+  it("omits service from frontmatter when serviceName is null", () => {
+    const node = makeOperationNode();
+    const result = renderHttpOperation(node, {
+      serviceName: null,
+      serverUrl: "",
+    });
+    assert.ok(!result.includes("service:"));
+  });
+
+  it("handles operation with no request body", () => {
+    const data = JSON.parse(makeOperationNode().data);
+    delete data.request.body;
+    const node = makeOperationNode({ data: JSON.stringify(data) });
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(!result.includes("## Request Body"));
+    assert.ok(result.includes("## Request Headers"));
+  });
+
+  it("handles operation with no headers", () => {
+    const data = JSON.parse(makeOperationNode().data);
+    data.request.headers = [];
+    const node = makeOperationNode({ data: JSON.stringify(data) });
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(!result.includes("## Request Headers"));
+  });
+
+  it("handles operation with no examples", () => {
+    const data = JSON.parse(makeOperationNode().data);
+    delete data.request.body.content["application/json"].examples;
+    const node = makeOperationNode({ data: JSON.stringify(data) });
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(!result.includes("### Request Example"));
+  });
+
+  it("renders [nested object] when schema depth exceeds 5", () => {
+    const deepSchema = {
+      type: "object",
+      properties: {
+        a: {
+          type: "object",
+          properties: {
+            b: {
+              type: "object",
+              properties: {
+                c: {
+                  type: "object",
+                  properties: {
+                    d: {
+                      type: "object",
+                      properties: {
+                        e: {
+                          type: "object",
+                          properties: {
+                            f: {
+                              type: "object",
+                              properties: { g: { type: "string" } },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    };
+    const data = {
+      method: "post",
+      path: "/deep",
+      description: "",
+      request: {
+        headers: [],
+        body: {
+          content: { "application/json": { schema: deepSchema } },
+        },
+      },
+      responses: {},
+      __bundled__: {},
+    };
+    const node = makeOperationNode({ data: JSON.stringify(data) });
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(result.includes("[nested object]"));
+  });
+
+  it("handles missing $ref targets gracefully", () => {
+    const data = {
+      method: "get",
+      path: "/missing-ref",
+      description: "",
+      request: {
+        headers: [{ $ref: "#/__bundled__/nonexistent" }],
+      },
+      responses: {},
+      __bundled__: {},
+    };
+    const node = makeOperationNode({ data: JSON.stringify(data) });
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(result.includes("[unresolved ref: nonexistent]"));
+  });
+
+  it("renders anyOf types as pipe-separated", () => {
+    const data = JSON.parse(makeOperationNode().data);
+    data.__bundled__.req_body.properties.request_data.properties.filters.items.properties.value = {
+      anyOf: [{ type: "string" }, { type: "number" }],
+    };
+    const node = makeOperationNode({ data: JSON.stringify(data) });
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(result.includes("string \\| number"));
+  });
+
+  it("handles operation with no request at all", () => {
+    const data = {
+      method: "get",
+      path: "/simple",
+      description: "A simple GET.",
+      responses: {},
+      __bundled__: {},
+    };
+    const node = makeOperationNode({ data: JSON.stringify(data) });
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(result.includes("# Get existing API keys"));
+    assert.ok(result.includes("A simple GET."));
+    assert.ok(!result.includes("## Request Headers"));
+    assert.ok(!result.includes("## Request Body"));
+  });
+});
+
 describe("renderHttpOperation", () => {
   it("renders frontmatter with method, path, service, and serverUrl", () => {
     const node = makeOperationNode();
