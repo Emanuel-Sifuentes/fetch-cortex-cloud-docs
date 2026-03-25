@@ -43,9 +43,12 @@
     "audit:headings": "node scripts/audit_headings.js",
     "audit:toc": "node scripts/audit_toc_vs_headings.js",
     "toc:table": "node scripts/generate_toc_table.js",
+    "fetch-api": "node scripts/fetch_stoplight.js",
+    "fetch-api:cloud": "node scripts/fetch_stoplight.js --product cloud",
     "test": "node --test scripts/generate_combined.test.js scripts/fetch_fluidtopics.test.js scripts/snapshot.test.js scripts/check.test.js"
   },
   "dependencies": {
+    "@playwright/test": "^1.58.2",
     "turndown": "^7.2.0",
     "turndown-plugin-gfm": "^1.0.2"
   }
