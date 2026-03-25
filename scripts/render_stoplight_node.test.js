@@ -157,3 +157,67 @@ describe("renderArticle", () => {
     assert.ok(result.includes('title: "Use the \\"advanced\\" mode"'));
   });
 });
+
+describe("renderHttpService", () => {
+  it("renders service overview with frontmatter, description, and categories", () => {
+    const node = {
+      type: "http_service",
+      title: "Cortex Cloud Platform APIs",
+      slug: "f70loiyd8u1m2-cortex-cloud-platform-ap-is",
+      sourceProject: "cortex-cloud",
+      data: JSON.stringify({
+        name: "Cortex Cloud Platform APIs",
+        description: "You can configure and manage authentication settings.",
+        tags: [
+          { name: "API Keys", description: "APIs for managing API keys" },
+          { name: "Asset groups", description: "APIs for managing asset groups" },
+        ],
+        servers: [{ url: "https://api-yourfqdn" }],
+      }),
+    };
+    const result = renderHttpService(node);
+    assert.ok(result.includes('title: "Cortex Cloud Platform APIs"'));
+    assert.ok(result.includes("type: http_service"));
+    assert.ok(result.includes('serverUrl: "https://api-yourfqdn"'));
+    assert.ok(result.includes("sourceProject: cortex-cloud"));
+    assert.ok(result.includes("# Cortex Cloud Platform APIs"));
+    assert.ok(result.includes("You can configure and manage"));
+    assert.ok(result.includes("## API Categories"));
+    assert.ok(result.includes("- **API Keys** \u2014 APIs for managing API keys"));
+    assert.ok(result.includes("- **Asset groups** \u2014 APIs for managing asset groups"));
+  });
+
+  it("omits categories section when tags are empty", () => {
+    const node = {
+      type: "http_service",
+      title: "Minimal Service",
+      slug: "min-svc",
+      sourceProject: "cortex-cloud",
+      data: JSON.stringify({
+        name: "Minimal Service",
+        description: "A minimal service.",
+        tags: [],
+        servers: [{ url: "https://api-yourfqdn" }],
+      }),
+    };
+    const result = renderHttpService(node);
+    assert.ok(!result.includes("## API Categories"));
+  });
+
+  it("omits serverUrl when no servers present", () => {
+    const node = {
+      type: "http_service",
+      title: "No Server",
+      slug: "no-srv",
+      sourceProject: "cortex-cloud",
+      data: JSON.stringify({
+        name: "No Server",
+        description: "Desc.",
+        tags: [],
+        servers: [],
+      }),
+    };
+    const result = renderHttpService(node);
+    assert.ok(!result.includes("serverUrl"));
+  });
+});
