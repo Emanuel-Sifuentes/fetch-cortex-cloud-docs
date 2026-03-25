@@ -1,6 +1,7 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
 const { hashContent, filterTocNodes } = require("./fetch_stoplight.js");
+const { renderArticle, renderHttpService } = require("./render_stoplight_node.js");
 
 describe("hashContent", () => {
   it("returns a sha256-prefixed hex digest", () => {
@@ -122,5 +123,37 @@ describe("filterTocNodes", () => {
     const result = filterTocNodes(items);
     const op = result.find((n) => n.slug === "deep-op");
     assert.equal(op.serviceName, "Top Service");
+  });
+});
+
+describe("renderArticle", () => {
+  it("wraps markdown data with correct frontmatter", () => {
+    const node = {
+      type: "article",
+      title: "Create a new API key",
+      slug: "28fuy7kt57f4d-create-a-new-api-key",
+      data: "# Create a new API key\n\n1. In Cortex, navigate to **Settings** > API Keys.",
+      sourceProject: "cortex-cloud",
+    };
+    const result = renderArticle(node);
+    assert.ok(result.startsWith("---\n"));
+    assert.ok(result.includes('title: "Create a new API key"'));
+    assert.ok(result.includes("type: article"));
+    assert.ok(result.includes('slug: "28fuy7kt57f4d-create-a-new-api-key"'));
+    assert.ok(result.includes("sourceProject: cortex-cloud"));
+    assert.ok(result.includes("# Create a new API key"));
+    assert.ok(result.includes("1. In Cortex"));
+  });
+
+  it("escapes double quotes in title", () => {
+    const node = {
+      type: "article",
+      title: 'Use the "advanced" mode',
+      slug: "test-slug",
+      data: "Content here.",
+      sourceProject: "cortex-cloud",
+    };
+    const result = renderArticle(node);
+    assert.ok(result.includes('title: "Use the \\"advanced\\" mode"'));
   });
 });
