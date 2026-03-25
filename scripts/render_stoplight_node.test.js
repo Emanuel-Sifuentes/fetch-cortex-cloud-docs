@@ -1,7 +1,144 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
 const { hashContent, filterTocNodes } = require("./fetch_stoplight.js");
-const { renderArticle, renderHttpService } = require("./render_stoplight_node.js");
+const { renderArticle, renderHttpService, renderHttpOperation } = require("./render_stoplight_node.js");
+
+function makeOperationNode(overrides = {}) {
+  const defaults = {
+    type: "http_operation",
+    title: "Get existing API keys",
+    slug: "c3ehigek4t4fk-get-existing-api-keys",
+    sourceProject: "cortex-cloud",
+    data: JSON.stringify({
+      method: "post",
+      path: "/public_api/v1/api_keys/get_api_keys",
+      description:
+        "Get a list of API keys filtered by expiration date, role, or ID.",
+      servers: [{ url: "https://api-yourfqdn" }],
+      request: {
+        headers: [
+          { $ref: "#/__bundled__/header_auth" },
+          { $ref: "#/__bundled__/header_auth_id" },
+        ],
+        body: {
+          content: {
+            "application/json": {
+              schema: { $ref: "#/__bundled__/req_body" },
+              examples: {
+                "Get API keys and filter by expiration": {
+                  value: {
+                    request_data: {
+                      filters: [
+                        {
+                          field: "expiration",
+                          operator: "gte",
+                          value: 1721149909250,
+                        },
+                      ],
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      responses: {
+        200: {
+          description: "OK",
+          content: {
+            "application/json": {
+              schema: { $ref: "#/__bundled__/resp_body" },
+              examples: {
+                default: {
+                  value: {
+                    reply: { DATA: [], FILTER_COUNT: 3, TOTAL_COUNT: 70 },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      __bundled__: {
+        header_auth: {
+          name: "authorization",
+          description: "api_key",
+          required: true,
+          schema: { $ref: "#/__bundled__/string_type" },
+        },
+        header_auth_id: {
+          name: "x-xdr-auth-id",
+          description: "api_key_id",
+          required: true,
+          schema: { type: "string" },
+        },
+        string_type: { type: "string" },
+        req_body: {
+          type: "object",
+          required: ["request_data"],
+          properties: {
+            request_data: {
+              type: "object",
+              properties: {
+                filters: {
+                  type: "array",
+                  description: "An array of filter fields.",
+                  items: {
+                    type: "object",
+                    properties: {
+                      field: {
+                        type: "string",
+                        enum: ["expiration", "roles", "id"],
+                      },
+                      operator: {
+                        type: "string",
+                        enum: ["gte", "lte", "contains", "in"],
+                      },
+                      value: {
+                        oneOf: [{ type: "integer" }, { type: "array" }],
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+        resp_body: {
+          type: "object",
+          properties: {
+            reply: {
+              type: "object",
+              properties: {
+                data: {
+                  type: "array",
+                  items: {
+                    type: "object",
+                    properties: {
+                      id: { type: "integer" },
+                      roles: {
+                        type: "array",
+                        items: { type: "string" },
+                      },
+                    },
+                  },
+                },
+                filter_count: { type: "integer" },
+                total_count: {
+                  type: "integer",
+                  description:
+                    "Note: contains all API Keys, including expired.",
+                },
+              },
+            },
+          },
+        },
+      },
+    }),
+  };
+  return { ...defaults, ...overrides };
+}
 
 describe("hashContent", () => {
   it("returns a sha256-prefixed hex digest", () => {
@@ -219,5 +356,106 @@ describe("renderHttpService", () => {
     };
     const result = renderHttpService(node);
     assert.ok(!result.includes("serverUrl"));
+  });
+});
+
+describe("renderHttpOperation", () => {
+  it("renders frontmatter with method, path, service, and serverUrl", () => {
+    const node = makeOperationNode();
+    const result = renderHttpOperation(node, {
+      serviceName: "Cortex Cloud Platform APIs",
+      serverUrl: "",
+    });
+    assert.ok(result.includes('title: "Get existing API keys"'));
+    assert.ok(result.includes("type: http_operation"));
+    assert.ok(result.includes("method: post"));
+    assert.ok(result.includes('path: "/public_api/v1/api_keys/get_api_keys"'));
+    assert.ok(result.includes('service: "Cortex Cloud Platform APIs"'));
+    assert.ok(result.includes('serverUrl: "https://api-yourfqdn"'));
+    assert.ok(result.includes("sourceProject: cortex-cloud"));
+    assert.ok(result.includes("# Get existing API keys"));
+    assert.ok(
+      result.includes("**`POST /public_api/v1/api_keys/get_api_keys`**")
+    );
+    assert.ok(result.includes("Get a list of API keys"));
+  });
+
+  it("renders request headers table from bundled refs", () => {
+    const node = makeOperationNode();
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(result.includes("## Request Headers"));
+    assert.ok(result.includes("| Name | Required | Description |"));
+    assert.ok(result.includes("| authorization | yes | api_key |"));
+    assert.ok(result.includes("| x-xdr-auth-id | yes | api_key_id |"));
+  });
+
+  it("renders request body schema as flattened dot-notation table", () => {
+    const node = makeOperationNode();
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(result.includes("## Request Body (`application/json`)"));
+    assert.ok(result.includes("| Field | Type | Required | Description |"));
+    assert.ok(result.includes("| request_data | object | yes |"));
+    assert.ok(
+      result.includes(
+        "| request_data.filters | array | no | An array of filter fields. |"
+      )
+    );
+    assert.ok(result.includes("| request_data.filters[].field | string | no |"));
+    assert.ok(
+      result.includes("enum: `expiration`, `roles`, `id`")
+    );
+    assert.ok(
+      result.includes("| request_data.filters[].operator | string | no |")
+    );
+  });
+
+  it("renders oneOf types as pipe-separated in request body", () => {
+    const node = makeOperationNode();
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(result.includes("integer \\| array"));
+  });
+
+  it("renders named request examples as code blocks", () => {
+    const node = makeOperationNode();
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(
+      result.includes(
+        "### Request Example \u2014 Get API keys and filter by expiration"
+      )
+    );
+    assert.ok(result.includes("```json"));
+    assert.ok(result.includes('"field": "expiration"'));
+  });
+
+  it("renders response schema and examples", () => {
+    const node = makeOperationNode();
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(result.includes("## Response (200 OK)"));
+    assert.ok(result.includes("| Field | Type | Description |"));
+    assert.ok(result.includes("| reply.data | array |"));
+    assert.ok(result.includes("| reply.data[].id | integer |"));
+    assert.ok(result.includes("| reply.data[].roles | array of strings |"));
+    assert.ok(
+      result.includes(
+        "| reply.total_count | integer | Note: contains all API Keys, including expired. |"
+      )
+    );
+    assert.ok(result.includes("### Response Example"));
+    assert.ok(result.includes('"TOTAL_COUNT": 70'));
   });
 });
