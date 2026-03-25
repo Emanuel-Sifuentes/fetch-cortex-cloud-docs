@@ -80,10 +80,6 @@ function httpGet(url) {
           }
           const chunks = [];
           res.on("data", (c) => chunks.push(c));
-          // Note: JSON.parse preserves string-typed fields. The Stoplight API
-          // returns `data` as a JSON string value (not embedded JSON), so after
-          // parsing the outer response, `data` remains a string — suitable for
-          // deterministic hashing via hashContent().
           res.on("end", () =>
             resolve(JSON.parse(Buffer.concat(chunks).toString()))
           );
@@ -93,9 +89,6 @@ function httpGet(url) {
   });
 }
 
-// Retries on 5xx/network errors (individual request). 429 is handled at
-// the batch level in fetchProduct() per the spec: "pause 5s and retry
-// the entire batch."
 async function httpGetWithRetry(url) {
   try {
     return await httpGet(url);
@@ -105,7 +98,6 @@ async function httpGetWithRetry(url) {
       return await httpGet(url);
     }
     if (!(err instanceof HttpError)) {
-      // Network error — retry once
       await sleep(1000);
       return await httpGet(url);
     }
@@ -138,7 +130,6 @@ async function fetchProduct(productKey, force) {
   const outDir = path.join(OUT_BASE, `api_specs_${productKey}`);
   const state = readState(productKey);
 
-  // --- Tier 1: branch commit hash ---
   console.log(`\nFetching branch info for ${productKey}...`);
   const branchUrl = `${config.host}/api/v1/projects/${config.projectId}/branches`;
   const branchData = await httpGetWithRetry(branchUrl);
@@ -154,13 +145,11 @@ async function fetchProduct(productKey, force) {
   }
   console.log(`  ${productKey}: changes detected, fetching TOC...`);
 
-  // --- Fetch TOC ---
   const tocUrl = `${config.host}/api/v1/projects/${config.projectId}/table-of-contents`;
   const toc = await httpGetWithRetry(tocUrl);
   const tocNodes = filterTocNodes(toc.items || []);
   console.log(`  Found ${tocNodes.length} nodes to process`);
 
-  // --- Fetch all nodes in batches ---
   const fetchedNodes = [];
   const failedSlugs = new Set();
 
@@ -178,7 +167,6 @@ async function fetchProduct(productKey, force) {
     const batch = tocNodes.slice(i, i + CONCURRENCY);
     let results = await fetchBatch(batch);
 
-    // Spec: "On HTTP 429, pause 5s and retry the entire batch."
     const has429 = results.some(
       (r) => r.status === "rejected" && r.reason?.statusCode === 429
     );
@@ -201,7 +189,6 @@ async function fetchProduct(productKey, force) {
     if (i + CONCURRENCY < tocNodes.length) await sleep(DELAY_MS);
   }
 
-  // --- Build service serverUrl map ---
   const serviceServerUrls = {};
   for (const node of fetchedNodes) {
     if (node.type === "http_service") {
@@ -214,12 +201,10 @@ async function fetchProduct(productKey, force) {
     }
   }
 
-  // --- Tier 2: per-node content hashing ---
   const oldNodes = state?.nodes || {};
   const newNodes = {};
   const changedNodes = [];
 
-  // Determine max existing file number for incremental numbering
   let maxNumber = 0;
   for (const entry of Object.values(oldNodes)) {
     const match = entry.outputFile?.match(/^(\d+)-/);
@@ -229,7 +214,6 @@ async function fetchProduct(productKey, force) {
   fs.mkdirSync(outDir, { recursive: true });
 
   if (force) {
-    // Wipe and renumber from scratch
     const existing = fs.readdirSync(outDir).filter((f) => f.endsWith(".md"));
     for (const f of existing) fs.unlinkSync(path.join(outDir, f));
     maxNumber = 0;
@@ -243,16 +227,11 @@ async function fetchProduct(productKey, force) {
     const isChanged =
       !oldEntry || oldEntry.contentHash !== contentHash || force;
 
-    // Assign output filename (stable numbering)
     let outputFile;
-    if (force) {
-      fileNumber++;
-      outputFile = `${String(fileNumber).padStart(4, "0")}-${sanitizeFilename(node.title)}.md`;
-    } else if (oldEntry?.outputFile) {
+    if (!force && oldEntry?.outputFile) {
       outputFile = oldEntry.outputFile;
     } else {
-      fileNumber = Math.max(fileNumber, maxNumber) + 1;
-      maxNumber = fileNumber;
+      fileNumber++;
       outputFile = `${String(fileNumber).padStart(4, "0")}-${sanitizeFilename(node.title)}.md`;
     }
 
@@ -266,7 +245,6 @@ async function fetchProduct(productKey, force) {
     if (!isChanged) continue;
     changedNodes.push(node);
 
-    // Render
     const enrichedNode = { ...node, sourceProject: config.slug };
     let md;
     if (node.type === "article") {
@@ -285,19 +263,18 @@ async function fetchProduct(productKey, force) {
     console.log(`  [${node.type}] ${outputFile}`);
   }
 
-  // --- Remove files for deleted nodes ---
   const currentSlugs = new Set(fetchedNodes.map((n) => n.slug));
   for (const [slug, entry] of Object.entries(oldNodes)) {
     if (!currentSlugs.has(slug) && !failedSlugs.has(slug)) {
-      const filepath = path.join(outDir, entry.outputFile);
-      if (fs.existsSync(filepath)) {
-        fs.unlinkSync(filepath);
+      try {
+        fs.unlinkSync(path.join(outDir, entry.outputFile));
         console.log(`  Removed: ${entry.outputFile}`);
+      } catch (err) {
+        if (err.code !== "ENOENT") throw err;
       }
     }
   }
 
-  // --- Write state ---
   const renderedCount = Object.keys(newNodes).length;
   writeState(productKey, {
     version: 1,

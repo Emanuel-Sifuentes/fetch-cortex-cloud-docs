@@ -33,7 +33,7 @@ function renderHttpService(node) {
   if (data.tags && data.tags.length > 0) {
     lines.push("## API Categories", "");
     for (const tag of data.tags) {
-      lines.push(`- **${tag.name}** \u2014 ${tag.description}`);
+      lines.push(`- **${tag.name}** \u2014 ${tag.description || ""}`);
     }
     lines.push("");
   }
@@ -61,48 +61,42 @@ function resolveRefDeep(obj, bundled, depth = 0) {
   return obj;
 }
 
-function flattenSchema(schema, bundled, prefix = "", depth = 0) {
+function flattenSchemaFields(schema, bundled, { trackRequired = false, prefix = "", depth = 0 } = {}) {
   if (depth > 5) {
-    return [
-      {
-        field: prefix || "(root)",
-        type: "[nested object]",
-        required: false,
-        description: "",
-      },
-    ];
+    const row = { field: prefix || "(root)", type: "[nested object]", description: "" };
+    if (trackRequired) row.required = false;
+    return [row];
   }
   const rows = [];
   const resolved = resolveRefDeep(schema, bundled);
   if (!resolved || !resolved.properties) return rows;
 
-  const requiredSet = new Set(resolved.required || []);
+  const requiredSet = trackRequired ? new Set(resolved.required || []) : null;
+
   for (const [name, prop] of Object.entries(resolved.properties)) {
     const fieldPath = prefix ? `${prefix}.${name}` : name;
     const resolvedProp = resolveRefDeep(prop, bundled);
-    const isRequired = requiredSet.has(name);
+    const isRequired = requiredSet ? requiredSet.has(name) : undefined;
     let desc = resolvedProp.description || "";
+    const childOpts = { trackRequired, depth: depth + 1 };
 
     if (resolvedProp.type === "object" && resolvedProp.properties) {
-      rows.push({
-        field: fieldPath,
-        type: "object",
-        required: isRequired,
-        description: desc,
-      });
-      rows.push(...flattenSchema(resolvedProp, bundled, fieldPath, depth + 1));
+      const row = { field: fieldPath, type: "object", description: desc };
+      if (trackRequired) row.required = isRequired;
+      rows.push(row);
+      rows.push(...flattenSchemaFields(resolvedProp, bundled, { ...childOpts, prefix: fieldPath }));
     } else if (resolvedProp.type === "array") {
-      rows.push({
-        field: fieldPath,
-        type: "array",
-        required: isRequired,
-        description: desc,
-      });
       const items = resolveRefDeep(resolvedProp.items || {}, bundled);
       if (items.type === "object" && items.properties) {
-        rows.push(
-          ...flattenSchema(items, bundled, `${fieldPath}[]`, depth + 1)
-        );
+        const row = { field: fieldPath, type: "array", description: desc };
+        if (trackRequired) row.required = isRequired;
+        rows.push(row);
+        rows.push(...flattenSchemaFields(items, bundled, { ...childOpts, prefix: `${fieldPath}[]` }));
+      } else if (!trackRequired) {
+        const itemType = items.type || "any";
+        rows.push({ field: fieldPath, type: `array of ${itemType}s`, description: desc });
+      } else {
+        rows.push({ field: fieldPath, type: "array", required: isRequired, description: desc });
       }
     } else {
       let type = resolvedProp.type || "any";
@@ -112,60 +106,13 @@ function flattenSchema(schema, bundled, prefix = "", depth = 0) {
         );
         type = variants.join(" \\| ");
       }
-      if (resolvedProp.enum) {
+      if (trackRequired && resolvedProp.enum) {
         const enumStr = resolvedProp.enum.map((e) => `\`${e}\``).join(", ");
         desc = desc ? `${desc} enum: ${enumStr}` : `enum: ${enumStr}`;
       }
-      rows.push({ field: fieldPath, type, required: isRequired, description: desc });
-    }
-  }
-  return rows;
-}
-
-function flattenResponseSchema(schema, bundled, prefix = "", depth = 0) {
-  if (depth > 5) {
-    return [
-      { field: prefix || "(root)", type: "[nested object]", description: "" },
-    ];
-  }
-  const rows = [];
-  const resolved = resolveRefDeep(schema, bundled);
-  if (!resolved || !resolved.properties) return rows;
-
-  for (const [name, prop] of Object.entries(resolved.properties)) {
-    const fieldPath = prefix ? `${prefix}.${name}` : name;
-    const resolvedProp = resolveRefDeep(prop, bundled);
-    const desc = resolvedProp.description || "";
-
-    if (resolvedProp.type === "object" && resolvedProp.properties) {
-      rows.push({ field: fieldPath, type: "object", description: desc });
-      rows.push(
-        ...flattenResponseSchema(resolvedProp, bundled, fieldPath, depth + 1)
-      );
-    } else if (resolvedProp.type === "array") {
-      const items = resolveRefDeep(resolvedProp.items || {}, bundled);
-      if (items.type === "object" && items.properties) {
-        rows.push({ field: fieldPath, type: "array", description: desc });
-        rows.push(
-          ...flattenResponseSchema(items, bundled, `${fieldPath}[]`, depth + 1)
-        );
-      } else {
-        const itemType = items.type || "any";
-        rows.push({
-          field: fieldPath,
-          type: `array of ${itemType}s`,
-          description: desc,
-        });
-      }
-    } else {
-      let type = resolvedProp.type || "any";
-      if (resolvedProp.oneOf || resolvedProp.anyOf) {
-        const variants = (resolvedProp.oneOf || resolvedProp.anyOf).map(
-          (v) => resolveRefDeep(v, bundled).type || "any"
-        );
-        type = variants.join(" \\| ");
-      }
-      rows.push({ field: fieldPath, type, description: desc });
+      const row = { field: fieldPath, type, description: desc };
+      if (trackRequired) row.required = isRequired;
+      rows.push(row);
     }
   }
   return rows;
@@ -193,7 +140,6 @@ function renderHttpOperation(node, { serviceName, serverUrl }) {
   lines.push(`**\`${method.toUpperCase()} ${data.path}\`**`, "");
   if (data.description) lines.push(data.description, "");
 
-  // Request headers
   const headers = data.request?.headers || [];
   if (headers.length > 0) {
     lines.push("## Request Headers", "");
@@ -213,7 +159,6 @@ function renderHttpOperation(node, { serviceName, serverUrl }) {
     lines.push("");
   }
 
-  // Request body
   const bodyContent = data.request?.body?.content;
   if (bodyContent) {
     const contentType = Object.keys(bodyContent)[0] || "application/json";
@@ -222,7 +167,7 @@ function renderHttpOperation(node, { serviceName, serverUrl }) {
       lines.push(`## Request Body (\`${contentType}\`)`, "");
       lines.push("| Field | Type | Required | Description |");
       lines.push("|-------|------|----------|-------------|");
-      const rows = flattenSchema(mediaType.schema, bundled);
+      const rows = flattenSchemaFields(mediaType.schema, bundled, { trackRequired: true });
       for (const row of rows) {
         lines.push(
           `| ${row.field} | ${row.type} | ${row.required ? "yes" : "no"} | ${row.description} |`
@@ -231,7 +176,6 @@ function renderHttpOperation(node, { serviceName, serverUrl }) {
       lines.push("");
     }
 
-    // Request examples
     if (mediaType?.examples) {
       for (const [name, example] of Object.entries(mediaType.examples)) {
         lines.push(`### Request Example \u2014 ${name}`, "");
@@ -242,7 +186,6 @@ function renderHttpOperation(node, { serviceName, serverUrl }) {
     }
   }
 
-  // Responses
   if (data.responses) {
     for (const [status, response] of Object.entries(data.responses)) {
       const statusText = response.description || "";
@@ -257,7 +200,7 @@ function renderHttpOperation(node, { serviceName, serverUrl }) {
         if (respMedia?.schema) {
           lines.push("| Field | Type | Description |");
           lines.push("|-------|------|-------------|");
-          const respRows = flattenResponseSchema(respMedia.schema, bundled);
+          const respRows = flattenSchemaFields(respMedia.schema, bundled);
           for (const row of respRows) {
             lines.push(`| ${row.field} | ${row.type} | ${row.description} |`);
           }
