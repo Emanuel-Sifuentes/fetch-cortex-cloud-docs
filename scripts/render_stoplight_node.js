@@ -40,25 +40,13 @@ function renderHttpService(node) {
   return lines.join("\n");
 }
 
-function resolveRefDeep(obj, bundled, depth = 0) {
-  if (depth > 10) return obj;
-  if (obj && obj.$ref) {
-    const key = obj.$ref.replace("#/__bundled__/", "");
-    const resolved = bundled[key];
-    if (!resolved) return { _unresolved: key };
-    return resolveRefDeep(resolved, bundled, depth + 1);
-  }
-  if (Array.isArray(obj)) {
-    return obj.map((item) => resolveRefDeep(item, bundled, depth));
-  }
-  if (obj && typeof obj === "object") {
-    const result = {};
-    for (const [k, v] of Object.entries(obj)) {
-      result[k] = k === "__bundled__" ? v : resolveRefDeep(v, bundled, depth);
-    }
-    return result;
-  }
-  return obj;
+function resolveRef(obj, bundled, depth = 0) {
+  if (depth > 10 || !obj || !obj.$ref) return obj;
+  const key = obj.$ref.replace("#/__bundled__/", "");
+  const resolved = bundled[key];
+  if (!resolved) return { _unresolved: key };
+  if (resolved.$ref) return resolveRef(resolved, bundled, depth + 1);
+  return resolved;
 }
 
 function flattenSchemaFields(schema, bundled, { trackRequired = false, prefix = "", depth = 0 } = {}) {
@@ -68,14 +56,14 @@ function flattenSchemaFields(schema, bundled, { trackRequired = false, prefix = 
     return [row];
   }
   const rows = [];
-  const resolved = resolveRefDeep(schema, bundled);
+  const resolved = resolveRef(schema, bundled);
   if (!resolved || !resolved.properties) return rows;
 
   const requiredSet = trackRequired ? new Set(resolved.required || []) : null;
 
   for (const [name, prop] of Object.entries(resolved.properties)) {
     const fieldPath = prefix ? `${prefix}.${name}` : name;
-    const resolvedProp = resolveRefDeep(prop, bundled);
+    const resolvedProp = resolveRef(prop, bundled);
     const isRequired = requiredSet ? requiredSet.has(name) : undefined;
     let desc = resolvedProp.description || "";
     const childOpts = { trackRequired, depth: depth + 1 };
@@ -86,7 +74,7 @@ function flattenSchemaFields(schema, bundled, { trackRequired = false, prefix = 
       rows.push(row);
       rows.push(...flattenSchemaFields(resolvedProp, bundled, { ...childOpts, prefix: fieldPath }));
     } else if (resolvedProp.type === "array") {
-      const items = resolveRefDeep(resolvedProp.items || {}, bundled);
+      const items = resolveRef(resolvedProp.items || {}, bundled);
       if (items.type === "object" && items.properties) {
         const row = { field: fieldPath, type: "array", description: desc };
         if (trackRequired) row.required = isRequired;
@@ -102,7 +90,7 @@ function flattenSchemaFields(schema, bundled, { trackRequired = false, prefix = 
       let type = resolvedProp.type || "any";
       if (resolvedProp.oneOf || resolvedProp.anyOf) {
         const variants = (resolvedProp.oneOf || resolvedProp.anyOf).map(
-          (v) => resolveRefDeep(v, bundled).type || "any"
+          (v) => resolveRef(v, bundled).type || "any"
         );
         type = variants.join(" \\| ");
       }
@@ -146,7 +134,7 @@ function renderHttpOperation(node, { serviceName, serverUrl }) {
     lines.push("| Name | Required | Description |");
     lines.push("|------|----------|-------------|");
     for (const headerRef of headers) {
-      const header = resolveRefDeep(headerRef, bundled);
+      const header = resolveRef(headerRef, bundled);
       if (header._unresolved) {
         lines.push(
           `| [unresolved ref: ${header._unresolved}] | - | - |`
@@ -159,15 +147,17 @@ function renderHttpOperation(node, { serviceName, serverUrl }) {
     lines.push("");
   }
 
-  const bodyContent = data.request?.body?.content;
-  if (bodyContent) {
-    const contentType = Object.keys(bodyContent)[0] || "application/json";
-    const mediaType = bodyContent[contentType];
-    if (mediaType?.schema) {
+  const resolvedBody = resolveRef(data.request?.body, bundled);
+  const bodyContents = resolvedBody?.contents || [];
+  for (const contentRef of bodyContents) {
+    const media = resolveRef(contentRef, bundled);
+    if (!media) continue;
+    const contentType = media.mediaType || "application/json";
+    if (media.schema) {
       lines.push(`## Request Body (\`${contentType}\`)`, "");
       lines.push("| Field | Type | Required | Description |");
       lines.push("|-------|------|----------|-------------|");
-      const rows = flattenSchemaFields(mediaType.schema, bundled, { trackRequired: true });
+      const rows = flattenSchemaFields(media.schema, bundled, { trackRequired: true });
       for (const row of rows) {
         lines.push(
           `| ${row.field} | ${row.type} | ${row.required ? "yes" : "no"} | ${row.description} |`
@@ -176,48 +166,54 @@ function renderHttpOperation(node, { serviceName, serverUrl }) {
       lines.push("");
     }
 
-    if (mediaType?.examples) {
-      for (const [name, example] of Object.entries(mediaType.examples)) {
-        lines.push(`### Request Example \u2014 ${name}`, "");
-        lines.push("```json");
-        lines.push(JSON.stringify(example.value, null, 2));
-        lines.push("```", "");
-      }
+    const examples = media.examples || [];
+    for (const exRef of examples) {
+      const example = resolveRef(exRef, bundled);
+      if (!example?.value) continue;
+      const name = example.key || "default";
+      lines.push(`### Request Example \u2014 ${name}`, "");
+      lines.push("```json");
+      lines.push(JSON.stringify(example.value, null, 2));
+      lines.push("```", "");
     }
   }
 
-  if (data.responses) {
-    for (const [status, response] of Object.entries(data.responses)) {
-      const statusText = response.description || "";
-      lines.push(
-        `## Response (${status}${statusText ? " " + statusText : ""})`,
-        ""
-      );
-      const respContent = response.content;
-      if (respContent) {
-        const respContentType = Object.keys(respContent)[0];
-        const respMedia = respContent[respContentType];
-        if (respMedia?.schema) {
-          lines.push("| Field | Type | Description |");
-          lines.push("|-------|------|-------------|");
-          const respRows = flattenSchemaFields(respMedia.schema, bundled);
-          for (const row of respRows) {
-            lines.push(`| ${row.field} | ${row.type} | ${row.description} |`);
-          }
-          lines.push("");
+  const responses = data.responses || [];
+  for (const respRef of responses) {
+    const response = resolveRef(respRef, bundled);
+    if (!response) continue;
+    const status = response.code || "";
+    const statusText = response.description || "";
+    lines.push(
+      `## Response (${status}${statusText ? " " + statusText : ""})`,
+      ""
+    );
+    const respContents = response.contents || [];
+    for (const contentRef of respContents) {
+      const respMedia = resolveRef(contentRef, bundled);
+      if (!respMedia) continue;
+      if (respMedia.schema) {
+        lines.push("| Field | Type | Description |");
+        lines.push("|-------|------|-------------|");
+        const respRows = flattenSchemaFields(respMedia.schema, bundled);
+        for (const row of respRows) {
+          lines.push(`| ${row.field} | ${row.type} | ${row.description} |`);
         }
-        if (respMedia?.examples) {
-          for (const [name, example] of Object.entries(respMedia.examples)) {
-            const label =
-              name === "default"
-                ? "Response Example"
-                : `Response Example \u2014 ${name}`;
-            lines.push(`### ${label}`, "");
-            lines.push("```json");
-            lines.push(JSON.stringify(example.value, null, 2));
-            lines.push("```", "");
-          }
-        }
+        lines.push("");
+      }
+      const respExamples = respMedia.examples || [];
+      for (const exRef of respExamples) {
+        const example = resolveRef(exRef, bundled);
+        if (!example?.value) continue;
+        const name = example.key || "default";
+        const label =
+          name === "default"
+            ? "Response Example"
+            : `Response Example \u2014 ${name}`;
+        lines.push(`### ${label}`, "");
+        lines.push("```json");
+        lines.push(JSON.stringify(example.value, null, 2));
+        lines.push("```", "");
       }
     }
   }

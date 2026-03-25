@@ -20,46 +20,11 @@ function makeOperationNode(overrides = {}) {
           { $ref: "#/__bundled__/header_auth" },
           { $ref: "#/__bundled__/header_auth_id" },
         ],
-        body: {
-          content: {
-            "application/json": {
-              schema: { $ref: "#/__bundled__/req_body" },
-              examples: {
-                "Get API keys and filter by expiration": {
-                  value: {
-                    request_data: {
-                      filters: [
-                        {
-                          field: "expiration",
-                          operator: "gte",
-                          value: 1721149909250,
-                        },
-                      ],
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
+        body: { $ref: "#/__bundled__/req_body_wrapper" },
       },
-      responses: {
-        200: {
-          description: "OK",
-          content: {
-            "application/json": {
-              schema: { $ref: "#/__bundled__/resp_body" },
-              examples: {
-                default: {
-                  value: {
-                    reply: { DATA: [], FILTER_COUNT: 3, TOTAL_COUNT: 70 },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
+      responses: [
+        { $ref: "#/__bundled__/resp_200" },
+      ],
       __bundled__: {
         header_auth: {
           name: "authorization",
@@ -74,7 +39,33 @@ function makeOperationNode(overrides = {}) {
           schema: { type: "string" },
         },
         string_type: { type: "string" },
-        req_body: {
+        req_body_wrapper: {
+          id: "body1",
+          contents: [{ $ref: "#/__bundled__/req_body_content" }],
+        },
+        req_body_content: {
+          id: "c1",
+          mediaType: "application/json",
+          schema: { $ref: "#/__bundled__/req_body_schema" },
+          examples: [{ $ref: "#/__bundled__/req_example_1" }],
+          encodings: [],
+        },
+        req_example_1: {
+          id: "ex1",
+          key: "Get API keys and filter by expiration",
+          value: {
+            request_data: {
+              filters: [
+                {
+                  field: "expiration",
+                  operator: "gte",
+                  value: 1721149909250,
+                },
+              ],
+            },
+          },
+        },
+        req_body_schema: {
           type: "object",
           required: ["request_data"],
           properties: {
@@ -103,6 +94,27 @@ function makeOperationNode(overrides = {}) {
                 },
               },
             },
+          },
+        },
+        resp_200: {
+          id: "r1",
+          code: 200,
+          description: "OK",
+          headers: [],
+          contents: [{ $ref: "#/__bundled__/resp_content" }],
+        },
+        resp_content: {
+          id: "rc1",
+          mediaType: "application/json",
+          schema: { $ref: "#/__bundled__/resp_body" },
+          examples: [{ $ref: "#/__bundled__/resp_example" }],
+          encodings: [],
+        },
+        resp_example: {
+          id: "rex1",
+          key: "default",
+          value: {
+            reply: { DATA: [], FILTER_COUNT: 3, TOTAL_COUNT: 70 },
           },
         },
         resp_body: {
@@ -393,6 +405,9 @@ describe("renderHttpOperation edge cases", () => {
   it("handles operation with no request body", () => {
     const data = JSON.parse(makeOperationNode().data);
     delete data.request.body;
+    delete data.__bundled__.req_body_wrapper;
+    delete data.__bundled__.req_body_content;
+    delete data.__bundled__.req_example_1;
     const node = makeOperationNode({ data: JSON.stringify(data) });
     const result = renderHttpOperation(node, {
       serviceName: "Svc",
@@ -415,7 +430,7 @@ describe("renderHttpOperation edge cases", () => {
 
   it("handles operation with no examples", () => {
     const data = JSON.parse(makeOperationNode().data);
-    delete data.request.body.content["application/json"].examples;
+    data.__bundled__.req_body_content.examples = [];
     const node = makeOperationNode({ data: JSON.stringify(data) });
     const result = renderHttpOperation(node, {
       serviceName: "Svc",
@@ -466,10 +481,19 @@ describe("renderHttpOperation edge cases", () => {
       request: {
         headers: [],
         body: {
-          content: { "application/json": { schema: deepSchema } },
+          id: "b1",
+          contents: [
+            {
+              id: "c1",
+              mediaType: "application/json",
+              schema: deepSchema,
+              examples: [],
+              encodings: [],
+            },
+          ],
         },
       },
-      responses: {},
+      responses: [],
       __bundled__: {},
     };
     const node = makeOperationNode({ data: JSON.stringify(data) });
@@ -488,7 +512,7 @@ describe("renderHttpOperation edge cases", () => {
       request: {
         headers: [{ $ref: "#/__bundled__/nonexistent" }],
       },
-      responses: {},
+      responses: [],
       __bundled__: {},
     };
     const node = makeOperationNode({ data: JSON.stringify(data) });
@@ -501,7 +525,7 @@ describe("renderHttpOperation edge cases", () => {
 
   it("renders anyOf types as pipe-separated", () => {
     const data = JSON.parse(makeOperationNode().data);
-    data.__bundled__.req_body.properties.request_data.properties.filters.items.properties.value = {
+    data.__bundled__.req_body_schema.properties.request_data.properties.filters.items.properties.value = {
       anyOf: [{ type: "string" }, { type: "number" }],
     };
     const node = makeOperationNode({ data: JSON.stringify(data) });
@@ -517,7 +541,7 @@ describe("renderHttpOperation edge cases", () => {
       method: "get",
       path: "/simple",
       description: "A simple GET.",
-      responses: {},
+      responses: [],
       __bundled__: {},
     };
     const node = makeOperationNode({ data: JSON.stringify(data) });
@@ -529,6 +553,69 @@ describe("renderHttpOperation edge cases", () => {
     assert.ok(result.includes("A simple GET."));
     assert.ok(!result.includes("## Request Headers"));
     assert.ok(!result.includes("## Request Body"));
+  });
+
+  it("handles large schemas with many cross-referenced bundled entries without OOM", () => {
+    const bundled = {};
+    for (let i = 0; i < 50; i++) {
+      bundled[`variant_${i}`] = {
+        type: "object",
+        properties: {
+          kind: { type: "string", enum: [`type_${i}`] },
+          value: { $ref: `#/__bundled__/variant_${(i + 1) % 50}` },
+          nested: {
+            type: "object",
+            properties: {
+              ref_back: { $ref: `#/__bundled__/variant_${(i + 25) % 50}` },
+            },
+          },
+        },
+      };
+    }
+    bundled.big_schema = {
+      type: "object",
+      properties: {
+        match_criteria: {
+          type: "object",
+          properties: {
+            search_type: {
+              oneOf: Array.from({ length: 50 }, (_, i) => ({
+                $ref: `#/__bundled__/variant_${i}`,
+              })),
+            },
+          },
+        },
+      },
+    };
+    bundled.resp_ok = {
+      id: "r1",
+      code: 200,
+      description: "OK",
+      headers: [],
+      contents: [{ $ref: "#/__bundled__/resp_ct" }],
+    };
+    bundled.resp_ct = {
+      id: "rc1",
+      mediaType: "application/json",
+      schema: { $ref: "#/__bundled__/big_schema" },
+      examples: [],
+      encodings: [],
+    };
+    const data = {
+      method: "get",
+      path: "/policy/{id}",
+      description: "Get policy by ID",
+      request: { headers: [] },
+      responses: [{ $ref: "#/__bundled__/resp_ok" }],
+      __bundled__: bundled,
+    };
+    const node = makeOperationNode({ data: JSON.stringify(data) });
+    const result = renderHttpOperation(node, {
+      serviceName: "Svc",
+      serverUrl: "",
+    });
+    assert.ok(result.includes("## Response (200 OK)"));
+    assert.ok(result.includes("| match_criteria | object |"));
   });
 });
 
