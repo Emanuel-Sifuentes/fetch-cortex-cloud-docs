@@ -26,14 +26,8 @@ function parseStoplightFlags() {
   return { product, force };
 }
 
-function resolveTargetProducts() {
-  const { product } = parseStoplightFlags();
-  return product ? [product] : VALID_PRODUCTS;
-}
-
 module.exports = {
   STOPLIGHT_PROJECTS,
   VALID_PRODUCTS,
   parseStoplightFlags,
-  resolveTargetProducts,
 };

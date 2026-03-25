@@ -208,7 +208,9 @@ async function fetchProduct(productKey, force) {
       try {
         const svcData = JSON.parse(node.data);
         serviceServerUrls[node.title] = svcData.servers?.[0]?.url || "";
-      } catch {}
+      } catch (err) {
+        console.warn(`  WARNING: could not parse server URL for service "${node.title}": ${err.message}`);
+      }
     }
   }
 

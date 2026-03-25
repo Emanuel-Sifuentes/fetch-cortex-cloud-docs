@@ -232,9 +232,8 @@ function renderHttpOperation(node, { serviceName, serverUrl }) {
     }
 
     // Request examples
-    const mediaTypeForExamples = bodyContent[Object.keys(bodyContent)[0]];
-    if (mediaTypeForExamples?.examples) {
-      for (const [name, example] of Object.entries(mediaTypeForExamples.examples)) {
+    if (mediaType?.examples) {
+      for (const [name, example] of Object.entries(mediaType.examples)) {
         lines.push(`### Request Example \u2014 ${name}`, "");
         lines.push("```json");
         lines.push(JSON.stringify(example.value, null, 2));
