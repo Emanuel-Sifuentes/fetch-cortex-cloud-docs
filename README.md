@@ -1,6 +1,6 @@
 # fetch-cortex-docs
 
-Fetch Cortex documentation from the Palo Alto Networks [Fluid Topics](https://docs-cortex.paloaltonetworks.com) portal and convert to clean Markdown.
+Fetch Cortex documentation from the Palo Alto Networks [Fluid Topics](https://docs-cortex.paloaltonetworks.com) portal and [Stoplight](https://cortex-panw.stoplight.io) API specs, and convert to clean Markdown.
 
 ## Products
 
@@ -12,11 +12,20 @@ Fetch Cortex documentation from the Palo Alto Networks [Fluid Topics](https://do
 | Cortex Gateway | `npm run fetch:gateway` | cortex_gateway | [Gateway Admin Guide](https://docs-cortex.paloaltonetworks.com/r/Cortex/Cortex-Gateway-Administrator-Guide/) |
 | Cortex AgentiX | `npm run fetch:agentix` | agentix | [AgentiX](https://docs-cortex.paloaltonetworks.com/r/Cortex-AgentiX/Cortex-AgentiX-Documentation/) |
 
+### API specs (Stoplight)
+
+| Product | Command | Output dir | Source |
+|---------|---------|------------|--------|
+| Cortex Cloud | `npm run fetch-api:cloud` | `api_specs_cloud/` | [Stoplight](https://cortex-panw.stoplight.io) |
+
+`npm run fetch-api` fetches all configured Stoplight projects. Use `--force` to bypass change detection and re-fetch everything.
+
 ## Quick start
 
 ```bash
 npm install              # install dependencies
 npm run fetch            # fetch all products → sources_fetch/{product}/
+npm run fetch-api        # fetch API specs → sources_fetch/api_specs_{product}/
 npm run fix              # apply all post-fetch fixes + generate combined files
 ```
 
@@ -41,11 +50,22 @@ Cortex Cloud maps (appsec, posture, runtime) are deduplicated against each other
 
 No authentication required.
 
+### API specs (`fetch-api`)
+
+1. Fetches branch info from the Stoplight API to get the current commit hash
+2. Compares against stored state (`metadata/api_specs_{product}.json`) — skips if unchanged
+3. Fetches the table of contents and filters to `article`, `http_service`, and `http_operation` nodes
+4. Downloads each node's data (10 concurrent, with 429 rate-limit retry)
+5. Renders to Markdown: services get description + API categories, operations get method/path, request headers, request body schema, examples, and response schemas
+6. Writes numbered files to `sources_fetch/api_specs_{product}/`
+7. Removes files for nodes that no longer exist in the API
+
 ## Scripts
 
 | Command | Purpose |
 |---------|---------|
 | `npm run fetch` | Fetch all products (or `fetch:{product}` for one) |
+| `npm run fetch-api` | Fetch Stoplight API specs (or `fetch-api:{product}` for one; `--force` to bypass cache) |
 | `npm run fix` | Run all fix scripts + combine (or `fix:{product}` for one) |
 | `npm run combine` | Generate combined files only (or `combine:{product}` for one) |
 | `npm run snapshot` | Snapshot API metadata for all products (or `snapshot:{product}` for one) |
@@ -71,6 +91,10 @@ npm run check -- --apply     # detect changes + re-fetch affected products
 
 Snapshots are stored in `metadata/{product}.json` and track each map's `lastPublication` timestamp and TOC structure. When `check` detects a change, it reports added/removed/reordered topics per map. The `--apply` flag triggers a full `fetch` + `fix` cycle for affected products only.
 
+### API spec change detection
+
+`fetch-api` has its own two-tier change detection. Tier 1 compares the Stoplight branch commit hash — if unchanged, the entire product is skipped. Tier 2 compares per-node content hashes (SHA-256) so only changed nodes are re-rendered. State is stored in `metadata/api_specs_{product}.json`.
+
 ## Output
 
 ### Individual files (`sources_fetch/{product}/0001-*.md`)
@@ -90,6 +114,41 @@ depth: 2
 
 Content here...
 ```
+
+### API spec files (`sources_fetch/api_specs_{product}/0001-*.md`)
+
+Each file has YAML frontmatter with type-specific fields:
+
+```markdown
+---
+title: "Create Alert"
+type: http_operation
+method: post
+path: "/public_api/v1/alerts/create"
+service: "Cortex Cloud APIs"
+slug: "create-alert"
+sourceProject: cortex-cloud
+serverUrl: "https://api.example.com"
+---
+
+# Create Alert
+
+**`POST /public_api/v1/alerts/create`**
+
+## Request Headers
+| Name | Required | Description |
+|------|----------|-------------|
+
+## Request Body (`application/json`)
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+
+## Response (200 OK)
+| Field | Type | Description |
+|-------|------|-------------|
+```
+
+Node types: `article` (prose docs), `http_service` (API overview + categories), `http_operation` (endpoint with method, path, headers, body schema, examples, responses).
 
 ### Combined files (`sources_fetch/{product}/*-combined.md`)
 
@@ -119,7 +178,10 @@ Running `npm run fetch` again will overwrite all files. Turndown re-introduces `
 fetch-cortex-docs/
 ├── scripts/
 │   ├── map_config.js                  # product/map definitions + CLI flag parsing
-│   ├── fetch_fluidtopics.js           # main fetcher
+│   ├── fetch_fluidtopics.js           # Fluid Topics fetcher
+│   ├── fetch_stoplight.js            # Stoplight API spec fetcher
+│   ├── stoplight_config.js           # Stoplight project definitions
+│   ├── render_stoplight_node.js      # Stoplight node → Markdown renderer
 │   ├── fix.js                         # fix pipeline orchestrator
 │   ├── fix_abstract_lines.sh          # post-fetch fix
 │   ├── fix_escaped_chars_in_fences.py # post-fetch fix
@@ -144,6 +206,7 @@ fetch-cortex-docs/
 │   ├── xdr_compatibility/             # Cortex XDR Compatibility Matrix
 │   ├── xsiam_3/                       # Cortex XSIAM 3.x
 │   ├── agentix/                       # Cortex AgentiX
+│   ├── api_specs_cloud/              # Cortex Cloud API specs (Stoplight)
 │   └── README.md
 ├── package.json
 └── .gitignore
