@@ -2,7 +2,7 @@
 
 import os
 
-PROJECT_ID = os.environ.get("GCP_PROJECT_ID", "prod-fmgwyc4skrrt")
+PROJECT_ID = os.environ.get("GCP_PROJECT_ID", "prod-zj54oka8feta")
 LOCATION = "global"
 DATA_STORE_ID = os.environ.get("DATA_STORE_ID", "cortex-docs-store-v1")
 ENGINE_ID = os.environ.get("ENGINE_ID", "cortex-docs-engine-v1")

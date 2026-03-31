@@ -465,7 +465,7 @@ def main():
             print(f"Skipping {map_name} ({combined_name} not found)")
             continue
 
-        output_dir = sources_dir / map_name / f"{map_name}_segments"
+        output_dir = sources_dir / map_name / "public"
         stats = segment_combined_file(combined_path, output_dir, map_name, args.max_size)
 
         print(
