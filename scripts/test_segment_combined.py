@@ -520,7 +520,7 @@ from segment_combined import PRODUCTS, COMBINED_FILES, DISPLAY_NAMES
 
 
 def test_cli_product_choices_match_products_dict():
-    assert set(PRODUCTS.keys()) == {"cloud", "xdr", "xsiam", "gateway", "agentix"}
+    assert set(PRODUCTS.keys()) == {"cloud", "xdr", "xsiam", "gateway", "agentix", "sase"}
 
 
 def test_combined_files_has_all_maps():

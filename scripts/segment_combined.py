@@ -25,6 +25,7 @@ COMBINED_FILES = {
     "xdr_compatibility": "cortex-xdr-compatibility-combined.md",
     "xsiam_3": "cortex-xsiam-3-combined.md",
     "agentix": "cortex-agentix-combined.md",
+    "prisma_access": "prisma-access-combined.md",
 }
 
 PRODUCTS = {
@@ -33,6 +34,7 @@ PRODUCTS = {
     "xsiam": ["xsiam_3"],
     "gateway": ["cortex_gateway"],
     "agentix": ["agentix"],
+    "sase": ["prisma_access"],
 }
 
 DISPLAY_NAMES = {
@@ -44,6 +46,7 @@ DISPLAY_NAMES = {
     "xdr_5": "Cortex XDR",
     "xdr_compatibility": "Cortex XDR Compatibility",
     "xsiam_3": "Cortex XSIAM",
+    "prisma_access": "Prisma Access",
 }
 
 
