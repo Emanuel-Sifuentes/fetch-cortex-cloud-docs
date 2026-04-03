@@ -102,6 +102,25 @@ describe("extractContent", () => {
     assert.ok(!content.includes("Previous"));
     assert.ok(!content.includes("Next"));
   });
+
+  it("extracts content from section tag (real AEM structure)", () => {
+    const html = `
+<html><body>
+<nav>Nav</nav>
+<section id="frameMaker" class="td-split-banner framemaker-book-detail-page doc-set-dita-content-well td-body__content">
+  <h1>Prisma Access Overview</h1>
+  <p>Documentation content.</p>
+  <section class="nested"><p>Nested section</p></section>
+</section>
+<footer>Footer</footer>
+</body></html>`;
+    const content = extractContent(html);
+    assert.ok(content.includes("Prisma Access Overview"));
+    assert.ok(content.includes("Documentation content"));
+    assert.ok(content.includes("Nested section"));
+    assert.ok(!content.includes("Nav"));
+    assert.ok(!content.includes("Footer"));
+  });
 });
 
 describe("extractTitle", () => {
