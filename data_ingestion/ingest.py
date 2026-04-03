@@ -28,7 +28,7 @@ from config import (
     BRANCH_PARENT,
     FILTERABLE_FIELDS,
     MAP_TO_PRODUCT,
-    PRODUCT_FAMILY,
+    MAP_TO_PRODUCT_FAMILY,
     SCHEMA_NAME,
 )
 
@@ -55,7 +55,7 @@ def discover_segments(product_filter: str | None = None) -> list[dict]:
             documents.append({
                 "id": doc_id,
                 "path": filepath,
-                "product_family": PRODUCT_FAMILY,
+                "product_family": MAP_TO_PRODUCT_FAMILY.get(map_name, "cortex"),
                 "product": product,
                 "audience": "public",
             })

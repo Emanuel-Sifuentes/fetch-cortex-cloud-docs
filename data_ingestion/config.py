@@ -14,7 +14,17 @@ SCHEMA_NAME = f"{DATA_STORE_RESOURCE}/schemas/default_schema"
 
 FILTERABLE_FIELDS = {"product_family", "product", "audience"}
 
-PRODUCT_FAMILY = "cortex"
+MAP_TO_PRODUCT_FAMILY = {
+    "appsec": "cortex",
+    "posture": "cortex",
+    "runtime": "cortex",
+    "cortex_gateway": "cortex",
+    "xdr_5": "cortex",
+    "xdr_compatibility": "cortex",
+    "xsiam_3": "cortex",
+    "agentix": "cortex",
+    "prisma_access": "sase",
+}
 
 # Map directory names to product metadata values for struct_data.
 # Keys match the folder names in sources_fetch/ and GCS bucket.
@@ -28,4 +38,5 @@ MAP_TO_PRODUCT = {
     "xdr_compatibility": "xdr",
     "xsiam_3": "xsiam",
     "agentix": "agentix",
+    "prisma_access": "prisma_access",
 }
