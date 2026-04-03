@@ -71,7 +71,8 @@ def slugify(title: str) -> str:
     slug = re.sub(r"[^\w\s-]", "", slug)
     slug = re.sub(r"[\s_]+", "-", slug)
     slug = re.sub(r"-+", "-", slug)
-    return slug.strip("-")
+    slug = slug.strip("-")
+    return slug[:120]
 
 
 def scan_heading_offsets(raw_text: str) -> list[tuple[int, str, int]]:
