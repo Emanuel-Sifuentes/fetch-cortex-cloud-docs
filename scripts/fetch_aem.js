@@ -41,4 +41,60 @@ function computeDepth(pathname, pathPrefix) {
   return Math.max(0, segments.length - 1);
 }
 
-module.exports = { parseSitemap, filterUrls, computeDepth, OUT_DIR, METADATA_DIR, CONCURRENCY, DELAY_MS };
+function extractContent(html) {
+  const openTagMatch = html.match(
+    /<div[^>]*class="[^"]*doc-set-dita-content-well[^"]*"[^>]*>/
+  );
+  if (!openTagMatch) return "";
+
+  const startIndex = openTagMatch.index + openTagMatch[0].length;
+  let depth = 1;
+  let i = startIndex;
+  while (i < html.length && depth > 0) {
+    const nextOpen = html.indexOf("<div", i);
+    const nextClose = html.indexOf("</div>", i);
+    if (nextClose === -1) break;
+    if (nextOpen !== -1 && nextOpen < nextClose) {
+      depth++;
+      i = nextOpen + 4;
+    } else {
+      depth--;
+      if (depth === 0) {
+        let content = html.slice(startIndex, nextClose);
+
+        content = content.replace(
+          /<div[^>]*class="[^"]*td-previous-next-links[^"]*"[^>]*>[\s\S]*?<\/div>/g,
+          ""
+        );
+        content = content.replace(
+          /<div[^>]*class="[^"]*version-selector[^"]*"[^>]*>[\s\S]*?<\/div>/g,
+          ""
+        );
+        content = content.replace(
+          /<div[^>]*class="[^"]*language-selector[^"]*"[^>]*>[\s\S]*?<\/div>/g,
+          ""
+        );
+        content = content.replace(
+          /<a[^>]*href="[^"]*\.pdf"[^>]*>[\s\S]*?<\/a>/g,
+          ""
+        );
+
+        return content.trim();
+      }
+      i = nextClose + 6;
+    }
+  }
+  return "";
+}
+
+function extractTitle(html, pathname) {
+  const match = html.match(/webData\.pageName\s*=\s*'[^:]*:[^:]*:([^']+)'/);
+  if (match) return match[1].trim();
+  if (pathname) {
+    const segments = pathname.split("/").filter(Boolean);
+    return segments[segments.length - 1];
+  }
+  return "Untitled";
+}
+
+module.exports = { parseSitemap, filterUrls, computeDepth, extractContent, extractTitle, OUT_DIR, METADATA_DIR, CONCURRENCY, DELAY_MS };

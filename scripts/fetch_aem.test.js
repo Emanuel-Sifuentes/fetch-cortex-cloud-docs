@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { parseSitemap, filterUrls, computeDepth } = require("./fetch_aem.js");
+const { parseSitemap, filterUrls, computeDepth, extractContent, extractTitle } = require("./fetch_aem.js");
 
 const SAMPLE_SITEMAP = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -63,5 +63,57 @@ describe("computeDepth", () => {
     assert.equal(computeDepth("/prisma-access/administration", "/prisma-access/"), 0);
     assert.equal(computeDepth("/prisma-access/administration/overview", "/prisma-access/"), 1);
     assert.equal(computeDepth("/prisma-access/administration/overview/sub", "/prisma-access/"), 2);
+  });
+});
+
+describe("extractContent", () => {
+  it("extracts content from doc-set-dita-content-well container", () => {
+    const html = `
+<html><body>
+<nav>Navigation here</nav>
+<div class="td-split-banner framemaker-book-detail-page doc-set-dita-content-well td-body__content">
+  <h1>Prisma Access Overview</h1>
+  <p>Some documentation content here.</p>
+  <table><tr><th>Column</th></tr><tr><td>Value</td></tr></table>
+</div>
+<footer>Footer here</footer>
+</body></html>`;
+    const content = extractContent(html);
+    assert.ok(content.includes("Prisma Access Overview"));
+    assert.ok(content.includes("Some documentation content here"));
+    assert.ok(!content.includes("Navigation here"));
+    assert.ok(!content.includes("Footer here"));
+  });
+
+  it("returns empty string when content container not found", () => {
+    const html = "<html><body><p>No content well here</p></body></html>";
+    const content = extractContent(html);
+    assert.equal(content, "");
+  });
+
+  it("strips prev/next navigation links", () => {
+    const html = `
+<div class="doc-set-dita-content-well">
+  <p>Real content</p>
+  <div class="td-previous-next-links"><a href="/prev">Previous</a><a href="/next">Next</a></div>
+</div>`;
+    const content = extractContent(html);
+    assert.ok(content.includes("Real content"));
+    assert.ok(!content.includes("Previous"));
+    assert.ok(!content.includes("Next"));
+  });
+});
+
+describe("extractTitle", () => {
+  it("extracts title from webData.pageName", () => {
+    const html = `<script>webData.pageName = 'en_US:prisma-access:Prisma Access Overview';</script>`;
+    const title = extractTitle(html);
+    assert.equal(title, "Prisma Access Overview");
+  });
+
+  it("falls back to last URL segment when webData not found", () => {
+    const html = "<html><body></body></html>";
+    const title = extractTitle(html, "/prisma-access/administration/prisma-access-overview");
+    assert.equal(title, "prisma-access-overview");
   });
 });
