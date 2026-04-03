@@ -2,11 +2,26 @@ const { execSync } = require("child_process");
 const path = require("path");
 const fs = require("fs");
 const { resolveTargetMaps } = require("./map_config.js");
+const { SASE_PRODUCTS, PRODUCT_FAMILIES } = require("./aem_config.js");
 
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
 
 const targets = resolveTargetMaps();
 const dirs = [...new Set(targets.map((t) => path.join(OUT_DIR, t)))];
+
+const productIdx = process.argv.indexOf("--product");
+const productValue = productIdx !== -1 ? process.argv[productIdx + 1] : null;
+
+if (!productValue || PRODUCT_FAMILIES[productValue] || SASE_PRODUCTS[productValue]) {
+  const aemTargets = PRODUCT_FAMILIES[productValue]
+    ? PRODUCT_FAMILIES[productValue]
+    : productValue && SASE_PRODUCTS[productValue]
+      ? [productValue]
+      : Object.keys(SASE_PRODUCTS);
+  for (const t of aemTargets) {
+    dirs.push(path.join(OUT_DIR, t));
+  }
+}
 
 for (const dir of dirs) {
   if (!fs.existsSync(dir)) {
@@ -44,7 +59,6 @@ for (const dir of dirs) {
 }
 
 // Run combine with same --product flag
-const productIdx = process.argv.indexOf("--product");
 const productArgs = productIdx !== -1 ? ` --product ${process.argv[productIdx + 1]}` : "";
 console.log("\n=== Generating combined files ===\n");
 try {

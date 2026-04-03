@@ -2,7 +2,7 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const { MAP_IDS, COMBINED_FILES, VALID_MAPS, resolveTargetMaps } = require("./map_config.js");
-const { SASE_PRODUCTS } = require("./aem_config.js");
+const { SASE_PRODUCTS, PRODUCT_FAMILIES } = require("./aem_config.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
@@ -222,7 +222,7 @@ async function main() {
 
   // Check whether the --product value targets an AEM product or family
   const isAemProduct = productValue && SASE_PRODUCTS[productValue];
-  const isAemFamily = productValue === "sase";
+  const isAemFamily = productValue && PRODUCT_FAMILIES[productValue];
   const skipCortex = isAemProduct || isAemFamily;
 
   // --- Cortex (Fluid Topics) section ---
@@ -360,8 +360,8 @@ async function main() {
     aemTargets = Object.keys(SASE_PRODUCTS);
   } else if (SASE_PRODUCTS[productValue]) {
     aemTargets = [productValue];
-  } else if (productValue === "sase") {
-    aemTargets = Object.keys(SASE_PRODUCTS);
+  } else if (PRODUCT_FAMILIES[productValue]) {
+    aemTargets = PRODUCT_FAMILIES[productValue];
   }
 
   for (const target of aemTargets) {
