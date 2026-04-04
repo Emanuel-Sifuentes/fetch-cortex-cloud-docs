@@ -29,7 +29,25 @@ def find_content_end(body, search_from=0):
     return len(body)
 
 
+UPDATED_ON = re.compile(r"^Updated on\s*\n\s*\n.+$", re.MULTILINE)
+DOWNLOAD_PDF = re.compile(r"^Download PDF\s*$", re.MULTILINE)
+PREV_NEXT = re.compile(r"\[\s*(?:Previous|Next)\s*\n[\s\S]*?\]\([^\)]+\)")
+HR_DIVIDER = re.compile(r"^\* \* \*\s*$", re.MULTILINE)
+MULTI_BLANK = re.compile(r"\n{3,}")
+
+
 def clean_patterns(body):
+    body = UPDATED_ON.sub("", body)
+    body = DOWNLOAD_PDF.sub("", body)
+    body = PREV_NEXT.sub("", body)
+    body = HR_DIVIDER.sub("", body)
+    first_h1 = re.search(r"^# (.+)$", body, re.MULTILINE)
+    if first_h1 and re.match(r"[a-z][a-z0-9:\-]+$", first_h1.group(1).strip()):
+        end = first_h1.end()
+        if end < len(body) and body[end] == "\n":
+            end += 1
+        body = body[: first_h1.start()] + body[end:]
+    body = MULTI_BLANK.sub("\n\n", body)
     return body
 
 

@@ -4,7 +4,7 @@ import sys
 import unittest
 
 sys.path.insert(0, os.path.dirname(__file__))
-from fix_aem_chrome import strip_chrome
+from fix_aem_chrome import strip_chrome, clean_patterns
 
 
 HEADER_CHROME = (
@@ -82,6 +82,68 @@ class TestStripChrome(unittest.TestCase):
         result = strip_chrome(body)
         self.assertTrue(result.endswith("\n"))
         self.assertFalse(result.endswith("\n\n"))
+
+
+class TestCleanPatterns(unittest.TestCase):
+    def test_removes_updated_on_timestamp(self):
+        body = "Content before.\n\nUpdated on\n\nThu Mar 26 14:01:29 PDT 2026\n\nContent after.\n"
+        result = clean_patterns(body)
+        self.assertNotIn("Updated on", result)
+        self.assertNotIn("Thu Mar", result)
+        self.assertIn("Content before.", result)
+        self.assertIn("Content after.", result)
+
+    def test_removes_download_pdf(self):
+        body = "Content before.\n\nDownload PDF\n\nContent after.\n"
+        result = clean_patterns(body)
+        self.assertNotIn("Download PDF", result)
+        self.assertIn("Content before.", result)
+        self.assertIn("Content after.", result)
+
+    def test_removes_previous_next_navigation(self):
+        body = (
+            "Content before.\n\n"
+            "[\n\nPrevious\n\nSome Previous Title\n\n\n\n"
+            "](/content/techdocs/en_US/prev-page.html)\n\n"
+            "[\n\nNext\n\nSome Next Title\n\n"
+            "](/content/techdocs/en_US/next-page.html)\n\n"
+            "Content after.\n"
+        )
+        result = clean_patterns(body)
+        self.assertNotIn("Previous", result)
+        self.assertNotIn("Next", result)
+        self.assertNotIn("prev-page", result)
+        self.assertIn("Content before.", result)
+        self.assertIn("Content after.", result)
+
+    def test_removes_horizontal_rule_dividers(self):
+        body = "Content before.\n\n* * *\n\nContent after.\n"
+        result = clean_patterns(body)
+        self.assertNotIn("* * *", result)
+        self.assertIn("Content before.", result)
+        self.assertIn("Content after.", result)
+
+    def test_removes_slug_style_h1_at_start(self):
+        body = "# prisma-access:admin:topic-name\nSome subtitle\n\nContent.\n"
+        result = clean_patterns(body)
+        self.assertNotIn("prisma-access:admin:topic-name", result)
+        self.assertIn("Some subtitle", result)
+        self.assertIn("Content.", result)
+
+    def test_preserves_normal_h1(self):
+        body = "# Configure ADFS as a SAML Provider\n\nContent.\n"
+        result = clean_patterns(body)
+        self.assertIn("# Configure ADFS as a SAML Provider", result)
+
+    def test_collapses_excessive_blank_lines(self):
+        body = "Before.\n\n\n\n\nAfter.\n"
+        result = clean_patterns(body)
+        self.assertEqual(result, "Before.\n\nAfter.\n")
+
+    def test_preserves_normal_content_unchanged(self):
+        body = "# Title\n\nParagraph one.\n\nParagraph two.\n"
+        result = clean_patterns(body)
+        self.assertEqual(result, body)
 
 
 if __name__ == "__main__":
