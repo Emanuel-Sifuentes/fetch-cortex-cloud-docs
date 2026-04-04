@@ -37,13 +37,23 @@ for (const dir of dirs) {
 
   console.log(`\n=== Fixing ${path.basename(dir)}/ (${files.length} files) ===\n`);
 
-  const cmds = [
-    `python scripts/fix_abstract_lines.py --sources "${dir}"`,
-    `python scripts/fix_escaped_chars_in_fences.py "${dir}"`,
-    `python scripts/fix_escaped_underscores.py --sources "${dir}"`,
-    `python scripts/fix_images_and_fences.py --sources "${dir}"`,
-    `python scripts/fix_broken_tables.py --sources "${dir}"`,
-  ];
+  const dirName = path.basename(dir);
+  const isAEM = !!SASE_PRODUCTS[dirName];
+
+  const cmds = isAEM
+    ? [
+        `python scripts/fix_aem_chrome.py --sources "${dir}"`,
+        `python scripts/fix_aem_links.py --sources "${dir}"`,
+        `python scripts/fix_escaped_underscores.py --sources "${dir}"`,
+        `python scripts/fix_broken_tables.py --sources "${dir}"`,
+      ]
+    : [
+        `python scripts/fix_abstract_lines.py --sources "${dir}"`,
+        `python scripts/fix_escaped_chars_in_fences.py "${dir}"`,
+        `python scripts/fix_escaped_underscores.py --sources "${dir}"`,
+        `python scripts/fix_images_and_fences.py --sources "${dir}"`,
+        `python scripts/fix_broken_tables.py --sources "${dir}"`,
+      ];
 
   for (const cmd of cmds) {
     try {
