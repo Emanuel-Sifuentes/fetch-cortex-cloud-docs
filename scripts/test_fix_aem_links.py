@@ -4,7 +4,7 @@ import sys
 import unittest
 
 sys.path.insert(0, os.path.dirname(__file__))
-from fix_aem_links import clean_body
+from fix_aem_links import clean_body, fix_file
 
 
 class TestCleanBody(unittest.TestCase):
@@ -78,6 +78,66 @@ class TestCleanBody(unittest.TestCase):
 
     def test_handles_empty_body(self):
         self.assertEqual(clean_body(""), "")
+
+
+import tempfile
+
+
+class TestFixFile(unittest.TestCase):
+    def test_preserves_frontmatter(self):
+        content = '---\ntitle: "test"\n---\n![img](url)\nSome text\n'
+        result = self._fix(content)
+        self.assertTrue(result.startswith('---\ntitle: "test"\n---\n'))
+        self.assertNotIn("![", result)
+        self.assertIn("Some text", result)
+
+    def test_returns_zero_when_no_changes(self):
+        content = '---\ntitle: "test"\n---\nJust plain text.\n'
+        count = self._fix_count(content)
+        self.assertEqual(count, 0)
+
+    def test_returns_nonzero_when_changes_made(self):
+        content = '---\ntitle: "test"\n---\n![img](url)\nText\n'
+        count = self._fix_count(content)
+        self.assertGreater(count, 0)
+
+    def test_dry_run_does_not_modify_file(self):
+        content = '---\ntitle: "test"\n---\n![img](url)\n'
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".md", delete=False, encoding="utf-8"
+        ) as f:
+            f.write(content)
+            path = f.name
+        try:
+            fix_file(path, dry_run=True)
+            with open(path, "r", encoding="utf-8") as f2:
+                self.assertEqual(f2.read(), content)
+        finally:
+            os.unlink(path)
+
+    def _fix(self, content):
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".md", delete=False, encoding="utf-8"
+        ) as f:
+            f.write(content)
+            path = f.name
+        try:
+            fix_file(path, dry_run=False)
+            with open(path, "r", encoding="utf-8") as f2:
+                return f2.read()
+        finally:
+            os.unlink(path)
+
+    def _fix_count(self, content):
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".md", delete=False, encoding="utf-8"
+        ) as f:
+            f.write(content)
+            path = f.name
+        try:
+            return fix_file(path, dry_run=False)
+        finally:
+            os.unlink(path)
 
 
 if __name__ == "__main__":
