@@ -4,7 +4,8 @@ import sys
 import unittest
 
 sys.path.insert(0, os.path.dirname(__file__))
-from fix_aem_chrome import strip_chrome, clean_patterns
+import tempfile
+from fix_aem_chrome import strip_chrome, clean_patterns, fix_file
 
 
 HEADER_CHROME = (
@@ -144,6 +145,72 @@ class TestCleanPatterns(unittest.TestCase):
         body = "# Title\n\nParagraph one.\n\nParagraph two.\n"
         result = clean_patterns(body)
         self.assertEqual(result, body)
+
+
+class TestFixFile(unittest.TestCase):
+    def test_preserves_frontmatter(self):
+        content = (
+            "---\ntitle: \"test\"\n---\n"
+            + HEADER_CHROME + CONTENT + FOOTER_USABILLA
+        )
+        result = self._fix(content)
+        self.assertTrue(result.startswith("---\ntitle: \"test\"\n---\n"))
+        self.assertIn("This is the actual content.", result)
+        self.assertNotIn("Nav item", result)
+
+    def test_returns_zero_when_no_changes(self):
+        content = "---\ntitle: \"test\"\n---\n# Title\n\nPlain content.\n"
+        count = self._fix_count(content)
+        self.assertEqual(count, 0)
+
+    def test_returns_nonzero_when_chrome_stripped(self):
+        content = (
+            "---\ntitle: \"test\"\n---\n"
+            + HEADER_CHROME + CONTENT + FOOTER_USABILLA
+        )
+        count = self._fix_count(content)
+        self.assertGreater(count, 0)
+
+    def test_dry_run_does_not_modify_file(self):
+        content = (
+            "---\ntitle: \"test\"\n---\n"
+            + HEADER_CHROME + CONTENT + FOOTER_USABILLA
+        )
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".md", delete=False, encoding="utf-8"
+        ) as f:
+            f.write(content)
+            path = f.name
+        try:
+            fix_file(path, dry_run=True)
+            with open(path, "r", encoding="utf-8") as f2:
+                self.assertEqual(f2.read(), content)
+        finally:
+            os.unlink(path)
+
+    def _fix(self, content):
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".md", delete=False, encoding="utf-8"
+        ) as f:
+            f.write(content)
+            path = f.name
+        try:
+            fix_file(path, dry_run=False)
+            with open(path, "r", encoding="utf-8") as f2:
+                return f2.read()
+        finally:
+            os.unlink(path)
+
+    def _fix_count(self, content):
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".md", delete=False, encoding="utf-8"
+        ) as f:
+            f.write(content)
+            path = f.name
+        try:
+            return fix_file(path, dry_run=False)
+        finally:
+            os.unlink(path)
 
 
 if __name__ == "__main__":
