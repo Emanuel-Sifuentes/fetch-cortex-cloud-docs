@@ -137,5 +137,67 @@ class TestConvertHtmlTables(unittest.TestCase):
         self.assertIn("**Network** > **Zones**", result)
 
 
+    def test_list_items_semicolon_separated(self):
+        body = (
+            "<table><tbody>"
+            "<tr><td><b>Col</b></td></tr>"
+            "<tr><td><ul><li>First</li><li>Second</li><li>Third</li></ul></td></tr>"
+            "</tbody></table>"
+        )
+        result, _ = convert_html_tables(body)
+        self.assertIn("First; Second; Third", result)
+
+    def test_single_column_note_table_becomes_plain_text(self):
+        body = (
+            '<table class="table"><tbody>'
+            '<tr><td class="entry"><div class="note">Important: configure TLS first.</div></td></tr>'
+            "</tbody></table>"
+        )
+        result, count = convert_html_tables(body)
+        self.assertEqual(count, 1)
+        self.assertIn("Important: configure TLS first.", result)
+        self.assertNotIn("| ---", result)
+
+    def test_figure_dropped_entirely(self):
+        body = (
+            "<table><tbody>"
+            "<tr><td><b>Col</b></td></tr>"
+            "<tr><td>Text<figure><img src='x.png'/><figcaption>Cap</figcaption></figure>more</td></tr>"
+            "</tbody></table>"
+        )
+        result, _ = convert_html_tables(body)
+        self.assertIn("Text more", result)
+        self.assertNotIn("Cap", result)
+        self.assertNotIn("figure", result)
+
+    def test_literal_pipe_escaped(self):
+        body = (
+            "<table><tbody>"
+            "<tr><td><b>Col</b></td></tr>"
+            "<tr><td>A | B</td></tr>"
+            "</tbody></table>"
+        )
+        result, _ = convert_html_tables(body)
+        self.assertIn("A \\| B", result)
+
+    def test_multiple_tables_converted_independently(self):
+        body = (
+            '<table class="table"><tbody>'
+            "<tr><td><b>A</b></td></tr>"
+            "<tr><td>1</td></tr>"
+            "</tbody></table>"
+            "\n\nSome text.\n\n"
+            '<table class="table"><tbody>'
+            "<tr><td><b>B</b></td></tr>"
+            "<tr><td>2</td></tr>"
+            "</tbody></table>"
+        )
+        result, count = convert_html_tables(body)
+        self.assertEqual(count, 2)
+        self.assertIn("| **A** |", result)
+        self.assertIn("| **B** |", result)
+        self.assertIn("Some text.", result)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -35,7 +35,11 @@ class _CellConverter(HTMLParser):
         a = dict(attrs)
         cls = a.get("class") or ""
 
-        if tag in ("b", "strong"):
+        if tag == "figure":
+            self._stack.append((tag, "figure", None))
+        elif self._role_active("figure"):
+            self._stack.append((tag, "skip", None))
+        elif tag in ("b", "strong"):
             self._cell_parts.append("**")
             self._stack.append((tag, "bold", None))
         elif tag in ("i", "em"):
@@ -62,6 +66,16 @@ class _CellConverter(HTMLParser):
                 self._stack.append((tag, "uicontrol", None))
         elif tag == "span" and "menucascade" in cls:
             self._stack.append((tag, "menucascade", 0))
+        elif tag in ("ul", "ol"):
+            self._stack.append((tag, "list", 0))
+        elif tag == "li":
+            for j in range(len(self._stack) - 1, -1, -1):
+                if self._stack[j][1] == "list":
+                    if self._stack[j][2] > 0:
+                        self._cell_parts.append("; ")
+                    self._stack[j] = (self._stack[j][0], "list", self._stack[j][2] + 1)
+                    break
+            self._stack.append((tag, "list_item", None))
         else:
             self._stack.append((tag, "other", None))
 
@@ -80,7 +94,9 @@ class _CellConverter(HTMLParser):
             return
 
         _, role, extra = self._stack.pop()
-        if role in ("bold", "uicontrol", "mc_child"):
+        if role == "figure":
+            self._cell_parts.append(" ")
+        elif role in ("bold", "uicontrol", "mc_child"):
             self._cell_parts.append("**")
         elif role == "italic":
             self._cell_parts.append("*")
@@ -90,7 +106,7 @@ class _CellConverter(HTMLParser):
             self._cell_parts.append("`")
 
     def handle_data(self, data):
-        if not self._in_cell:
+        if not self._in_cell or self._role_active("figure"):
             return
         self._cell_parts.append(data)
 
@@ -104,6 +120,9 @@ def parse_html_table(html):
 def build_markdown_table(rows):
     if not rows:
         return ""
+
+    if len(rows) == 1 and len(rows[0]) == 1:
+        return rows[0][0]
 
     col_count = max(len(r) for r in rows)
 
