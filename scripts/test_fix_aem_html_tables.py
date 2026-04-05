@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import sys
+import tempfile
 import unittest
 
 sys.path.insert(0, os.path.dirname(__file__))
@@ -197,9 +198,6 @@ class TestConvertHtmlTables(unittest.TestCase):
         self.assertIn("| **A** |", result)
         self.assertIn("| **B** |", result)
         self.assertIn("Some text.", result)
-
-
-import tempfile
 
 
 class TestFixFile(unittest.TestCase):
