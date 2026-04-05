@@ -112,13 +112,19 @@ function extractTitle(html, pathname) {
   return "Untitled";
 }
 
-function fetchUrl(url) {
+function fetchUrl(url, maxRedirects = 5) {
   return new Promise((resolve, reject) => {
     const parsed = new URL(url);
     https
       .get(
         { hostname: parsed.hostname, path: parsed.pathname + parsed.search, headers: { "User-Agent": "Mozilla/5.0" } },
         (res) => {
+          if ((res.statusCode === 301 || res.statusCode === 302) && res.headers.location) {
+            res.resume();
+            if (maxRedirects <= 0) return reject(new Error(`Too many redirects for ${url}`));
+            const target = new URL(res.headers.location, url).href;
+            return resolve(fetchUrl(target, maxRedirects - 1));
+          }
           if (res.statusCode !== 200) {
             res.resume();
             return reject(new Error(`HTTP ${res.statusCode} for ${url}`));
