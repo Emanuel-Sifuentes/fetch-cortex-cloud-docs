@@ -81,5 +81,61 @@ class TestConvertHtmlTables(unittest.TestCase):
         self.assertIn("| alice | admin |", result)
 
 
+    def test_italic_preserved(self):
+        body = (
+            "<table><tbody>"
+            "<tr><td><b>Col</b></td></tr>"
+            "<tr><td><i>emphasis</i></td></tr>"
+            "</tbody></table>"
+        )
+        result, _ = convert_html_tables(body)
+        self.assertIn("*emphasis*", result)
+
+    def test_link_preserved(self):
+        body = (
+            "<table><tbody>"
+            "<tr><td><b>Col</b></td></tr>"
+            '<tr><td>See <a class="xref" href="/docs/setup">setup guide</a></td></tr>'
+            "</tbody></table>"
+        )
+        result, _ = convert_html_tables(body)
+        self.assertIn("[setup guide](/docs/setup)", result)
+
+    def test_code_span_from_systemoutput(self):
+        body = (
+            "<table><tbody>"
+            "<tr><td><b>Col</b></td></tr>"
+            '<tr><td>Run <span class="ph systemoutput">curl -X GET</span></td></tr>'
+            "</tbody></table>"
+        )
+        result, _ = convert_html_tables(body)
+        self.assertIn("`curl -X GET`", result)
+
+    def test_uicontrol_renders_bold(self):
+        body = (
+            "<table><tbody>"
+            "<tr><td><b>Col</b></td></tr>"
+            '<tr><td>Click <span class="ph uicontrol">Save</span></td></tr>'
+            "</tbody></table>"
+        )
+        result, _ = convert_html_tables(body)
+        self.assertIn("**Save**", result)
+
+    def test_menucascade_joined_with_angle_brackets(self):
+        body = (
+            "<table><tbody>"
+            "<tr><td><b>Col</b></td></tr>"
+            "<tr><td>"
+            '<span class="ph menucascade">'
+            '<span class="ph uicontrol">Network</span>'
+            '<span class="ph uicontrol">Zones</span>'
+            "</span>"
+            "</td></tr>"
+            "</tbody></table>"
+        )
+        result, _ = convert_html_tables(body)
+        self.assertIn("**Network** > **Zones**", result)
+
+
 if __name__ == "__main__":
     unittest.main()

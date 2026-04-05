@@ -18,6 +18,9 @@ class _CellConverter(HTMLParser):
         self._in_cell = False
         self._stack = []
 
+    def _role_active(self, role):
+        return any(r == role for _, r, _ in self._stack)
+
     def handle_starttag(self, tag, attrs):
         if tag == "tr":
             self._row = []
@@ -29,11 +32,38 @@ class _CellConverter(HTMLParser):
         if not self._in_cell:
             return
 
+        a = dict(attrs)
+        cls = a.get("class") or ""
+
         if tag in ("b", "strong"):
             self._cell_parts.append("**")
-            self._stack.append((tag, "bold"))
+            self._stack.append((tag, "bold", None))
+        elif tag in ("i", "em"):
+            self._cell_parts.append("*")
+            self._stack.append((tag, "italic", None))
+        elif tag == "a":
+            self._cell_parts.append("[")
+            self._stack.append((tag, "link", a.get("href") or ""))
+        elif tag == "span" and "systemoutput" in cls:
+            self._cell_parts.append("`")
+            self._stack.append((tag, "code", None))
+        elif tag == "span" and "uicontrol" in cls:
+            if self._role_active("menucascade"):
+                for j in range(len(self._stack) - 1, -1, -1):
+                    if self._stack[j][1] == "menucascade":
+                        if self._stack[j][2] > 0:
+                            self._cell_parts.append(" > ")
+                        self._stack[j] = (self._stack[j][0], "menucascade", self._stack[j][2] + 1)
+                        break
+                self._cell_parts.append("**")
+                self._stack.append((tag, "mc_child", None))
+            else:
+                self._cell_parts.append("**")
+                self._stack.append((tag, "uicontrol", None))
+        elif tag == "span" and "menucascade" in cls:
+            self._stack.append((tag, "menucascade", 0))
         else:
-            self._stack.append((tag, "other"))
+            self._stack.append((tag, "other", None))
 
     def handle_endtag(self, tag):
         if tag == "tr":
@@ -49,9 +79,15 @@ class _CellConverter(HTMLParser):
         if not self._in_cell or not self._stack:
             return
 
-        _, role = self._stack.pop()
-        if role == "bold":
+        _, role, extra = self._stack.pop()
+        if role in ("bold", "uicontrol", "mc_child"):
             self._cell_parts.append("**")
+        elif role == "italic":
+            self._cell_parts.append("*")
+        elif role == "link":
+            self._cell_parts.append(f"]({extra})")
+        elif role == "code":
+            self._cell_parts.append("`")
 
     def handle_data(self, data):
         if not self._in_cell:
