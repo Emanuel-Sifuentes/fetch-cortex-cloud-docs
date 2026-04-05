@@ -113,3 +113,89 @@ def fix_broken_rows(md):
         i += 1
 
     return "\n".join(result)
+
+
+def find_frontmatter_end(text):
+    if not text.startswith("---\n"):
+        return 0
+    second_fence = text.find("\n---\n", 4)
+    if second_fence == -1:
+        return 0
+    return second_fence + len("\n---\n")
+
+
+def fix_file(filepath, *, dry_run):
+    with open(filepath, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    body_start = find_frontmatter_end(content)
+    frontmatter = content[:body_start]
+    body = content[body_start:]
+
+    new_body = fix_broken_rows(body)
+
+    if new_body == body:
+        return 0
+
+    orig_lines = body.split("\n")
+    new_lines = new_body.split("\n")
+    collapsed = len(orig_lines) - len(new_lines)
+
+    if not dry_run:
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(frontmatter + new_body)
+
+    filename = os.path.basename(filepath)
+    prefix = "[DRY RUN] Would fix" if dry_run else "Fixed"
+    print(f"{prefix} {filename} ({collapsed} lines collapsed)")
+    return collapsed
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Rejoin broken markdown table rows in AEM-sourced files"
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Report what would change without writing",
+    )
+    parser.add_argument(
+        "--sources",
+        type=str,
+        default=None,
+        help="Custom source directory",
+    )
+    args = parser.parse_args()
+
+    if args.sources:
+        source_dir = args.sources
+    else:
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        source_dir = os.path.join(os.path.dirname(script_dir), "sources_fetch")
+
+    if not os.path.isdir(source_dir):
+        print(f"Error: source directory not found: {source_dir}", file=sys.stderr)
+        sys.exit(1)
+
+    pattern = os.path.join(source_dir, "[0-9]*.md")
+    files = sorted(glob.glob(pattern))
+
+    if not files:
+        print(f"No [0-9]*.md files found in {source_dir}")
+        sys.exit(0)
+
+    total_files = 0
+    total_collapsed = 0
+
+    for filepath in files:
+        count = fix_file(filepath, dry_run=args.dry_run)
+        if count > 0:
+            total_files += 1
+            total_collapsed += count
+
+    print(f"Fixed {total_files} files, {total_collapsed} lines collapsed")
+
+
+if __name__ == "__main__":
+    main()

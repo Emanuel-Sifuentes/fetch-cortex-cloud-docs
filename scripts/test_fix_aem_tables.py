@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 import os
 import sys
+import tempfile
 import unittest
 
 sys.path.insert(0, os.path.dirname(__file__))
-from fix_aem_tables import fix_broken_rows
+from fix_aem_tables import fix_broken_rows, fix_file
 
 
 class TestFixBrokenRows(unittest.TestCase):
@@ -182,6 +183,86 @@ class TestFixBrokenRows(unittest.TestCase):
         )
         result = fix_broken_rows(md)
         self.assertIn("# New Section", result)
+
+
+class TestFixFile(unittest.TestCase):
+    def test_preserves_frontmatter(self):
+        content = (
+            "---\ntitle: test\n---\n"
+            "| A | B |\n"
+            "| --- | --- |\n"
+            "| X |\n"
+            "Y\n"
+            " |\n"
+        )
+        result = self._fix(content)
+        self.assertTrue(result.startswith("---\ntitle: test\n---\n"))
+        self.assertIn("| X | Y |", result)
+
+    def test_returns_zero_for_no_changes(self):
+        content = (
+            "---\ntitle: test\n---\n"
+            "| A | B |\n"
+            "| --- | --- |\n"
+            "| 1 | 2 |\n"
+        )
+        self.assertEqual(self._fix_count(content), 0)
+
+    def test_returns_nonzero_for_changes(self):
+        content = (
+            "---\ntitle: test\n---\n"
+            "| A | B |\n"
+            "| --- | --- |\n"
+            "| X |\n"
+            "Y\n"
+            " |\n"
+        )
+        self.assertGreater(self._fix_count(content), 0)
+
+    def test_dry_run_does_not_modify_file(self):
+        content = (
+            "---\ntitle: test\n---\n"
+            "| A | B |\n"
+            "| --- | --- |\n"
+            "| X |\n"
+            "Y\n"
+            " |\n"
+        )
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".md", delete=False, encoding="utf-8"
+        ) as f:
+            f.write(content)
+            path = f.name
+        try:
+            fix_file(path, dry_run=True)
+            with open(path, "r", encoding="utf-8") as f2:
+                self.assertEqual(f2.read(), content)
+        finally:
+            os.unlink(path)
+
+    def _fix(self, content):
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".md", delete=False, encoding="utf-8"
+        ) as f:
+            f.write(content)
+            path = f.name
+        try:
+            fix_file(path, dry_run=False)
+            with open(path, "r", encoding="utf-8") as f2:
+                return f2.read()
+        finally:
+            os.unlink(path)
+
+    def _fix_count(self, content):
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".md", delete=False, encoding="utf-8"
+        ) as f:
+            f.write(content)
+            path = f.name
+        try:
+            return fix_file(path, dry_run=False)
+        finally:
+            os.unlink(path)
 
 
 if __name__ == "__main__":
