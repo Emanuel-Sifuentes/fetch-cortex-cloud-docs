@@ -31,6 +31,8 @@ def _join_broken_header(result, expected_pipes):
     for j in range(len(result) - 1, -1, -1):
         s = result[j].strip()
         if "|" in s:
+            if count_pipes(s) >= expected_pipes:
+                break
             pipe_indices.append(j)
         elif s == "":
             continue
@@ -63,7 +65,8 @@ def _join_broken_header(result, expected_pipes):
 def _lookahead_for_continuation(lines, start):
     """Check if lines from start form overflow content ending with a closing pipe.
 
-    Matches: optional blanks, non-pipe content, optional blanks, then ` |` or `|`.
+    Matches: optional blanks, non-pipe content, optional blanks, then a line
+    ending with `|` (bare pipe, or text + pipe like `(Default) |`).
     Returns index past the closing pipe if found, else -1.
     """
     j = start
@@ -82,6 +85,8 @@ def _lookahead_for_continuation(lines, start):
             return -1
         if stripped.startswith("|") and count_pipes(s) > 1:
             return -1
+        if not stripped.startswith("|") and stripped.endswith("|") and found_content:
+            return j + 1
         found_content = True
         j += 1
     return -1
@@ -111,16 +116,20 @@ def fix_broken_rows(md):
                 continue
 
             parts = [stripped]
+            total_pipes = pipes
             i += 1
             while i < len(lines):
                 ns = lines[i].rstrip()
-                if ns.startswith("|") and count_pipes(ns) >= expected_pipes:
+                if ns.startswith("|") and ns.strip() != "|":
                     break
                 if SEPARATOR_PATTERN.match(ns):
                     break
                 if ns.strip() != "" and _is_collection_terminator(ns.strip()):
                     break
+                if total_pipes >= expected_pipes and ns.strip() == "":
+                    break
                 parts.append(ns)
+                total_pipes += count_pipes(ns)
                 i += 1
 
             joined = " ".join(p for p in parts if p.strip())
@@ -136,6 +145,10 @@ def fix_broken_rows(md):
                     s = lines[k].strip()
                     if s and s != "|":
                         content_parts.append(s)
+                if content_parts and content_parts[-1].endswith("|"):
+                    content_parts[-1] = content_parts[-1][:-1].rstrip()
+                    if not content_parts[-1]:
+                        content_parts.pop()
                 content_text = " ".join(content_parts)
                 result[-1] = result[-1].rstrip() + " " + content_text + " |"
                 i = end

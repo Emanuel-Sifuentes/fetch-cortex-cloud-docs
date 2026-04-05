@@ -148,7 +148,7 @@ class TestFixBrokenRows(unittest.TestCase):
         result = fix_broken_rows(md)
         self.assertIn("| X | Y |", result)
         self.assertIn("| P | Q |", result)
-        self.assertIn("Paragraph between tables.", result)
+        self.assertIn("\nParagraph between tables.\n", result)
 
     def test_non_table_content_preserved_around_tables(self):
         md = (
@@ -187,6 +187,38 @@ class TestFixBrokenRows(unittest.TestCase):
         result = fix_broken_rows(md)
         self.assertIn("| X | Y | Z | \u221a |", result)
         self.assertIn("| D | E | F |", result)
+
+    def test_rowspan_rows_not_merged_across_row_boundaries(self):
+        md = (
+            "| A | B | C |\n"
+            "| --- | --- | --- |\n"
+            "| Group 1 |\n"
+            "\n"
+            "\u221a\n"
+            "\n"
+            "(Default) |\n"
+            "\n"
+            "\u221a\n"
+            "\n"
+            "(Default) |\n"
+            "| Group 2 |\n"
+            "\n"
+            "\u221a\n"
+            "\n"
+            " |\n"
+            "\n"
+            "\u221a\n"
+            "\n"
+            " |\n"
+        )
+        result = fix_broken_rows(md)
+        lines = [l for l in result.split("\n") if l.strip()]
+        table_rows = [l for l in lines if l.startswith("|")]
+        self.assertTrue(any("Group 1" in r for r in table_rows))
+        self.assertTrue(any("Group 2" in r for r in table_rows))
+        group1_row = next(r for r in table_rows if "Group 1" in r)
+        group2_row = next(r for r in table_rows if "Group 2" in r)
+        self.assertNotIn("Group 2", group1_row)
 
     def test_multiple_consecutive_overflows(self):
         md = (
