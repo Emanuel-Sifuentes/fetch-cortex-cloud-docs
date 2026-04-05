@@ -60,6 +60,33 @@ def _join_broken_header(result, expected_pipes):
         result.append(joined)
 
 
+def _lookahead_for_continuation(lines, start):
+    """Check if lines from start form overflow content ending with a closing pipe.
+
+    Matches: optional blanks, non-pipe content, optional blanks, then ` |` or `|`.
+    Returns index past the closing pipe if found, else -1.
+    """
+    j = start
+    found_content = False
+    while j < len(lines):
+        s = lines[j].rstrip()
+        stripped = s.strip()
+        if stripped == "":
+            j += 1
+            continue
+        if stripped == "|":
+            if found_content:
+                return j + 1
+            return -1
+        if _is_collection_terminator(stripped):
+            return -1
+        if stripped.startswith("|") and count_pipes(s) > 1:
+            return -1
+        found_content = True
+        j += 1
+    return -1
+
+
 def fix_broken_rows(md):
     lines = md.split("\n")
     result = []
@@ -99,6 +126,22 @@ def fix_broken_rows(md):
             joined = " ".join(p for p in parts if p.strip())
             joined = re.sub(r"\s+", " ", joined).strip()
             result.append(joined)
+            continue
+
+        if expected_pipes > 0 and stripped == "":
+            end = _lookahead_for_continuation(lines, i + 1)
+            if end != -1 and result and result[-1].rstrip().endswith("|"):
+                content_parts = []
+                for k in range(i, end):
+                    s = lines[k].strip()
+                    if s and s != "|":
+                        content_parts.append(s)
+                content_text = " ".join(content_parts)
+                result[-1] = result[-1].rstrip() + " " + content_text + " |"
+                i = end
+                continue
+            result.append(lines[i])
+            i += 1
             continue
 
         if stripped == "":

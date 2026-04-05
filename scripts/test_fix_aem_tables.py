@@ -173,6 +173,42 @@ class TestFixBrokenRows(unittest.TestCase):
         )
         self.assertEqual(fix_broken_rows(md), md)
 
+    def test_overflow_after_complete_row(self):
+        md = (
+            "| A | B | C |\n"
+            "| --- | --- | --- |\n"
+            "| X | Y | Z |\n"
+            "\n"
+            "\u221a\n"
+            "\n"
+            " |\n"
+            "| D | E | F |\n"
+        )
+        result = fix_broken_rows(md)
+        self.assertIn("| X | Y | Z | \u221a |", result)
+        self.assertIn("| D | E | F |", result)
+
+    def test_multiple_consecutive_overflows(self):
+        md = (
+            "| A | B | C |\n"
+            "| --- | --- | --- |\n"
+            "| X | Y | Z |\n"
+            "\n"
+            "\u221a\n"
+            "\n"
+            " |\n"
+            "| P | Q | R |\n"
+            "\n"
+            "\u221a\n"
+            "\n"
+            " |\n"
+            "| D | E | F |\n"
+        )
+        result = fix_broken_rows(md)
+        self.assertIn("| X | Y | Z | \u221a |", result)
+        self.assertIn("| P | Q | R | \u221a |", result)
+        self.assertIn("| D | E | F |", result)
+
     def test_heading_terminates_collection(self):
         md = (
             "| A | B |\n"
