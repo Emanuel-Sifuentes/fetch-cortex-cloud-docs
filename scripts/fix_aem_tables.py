@@ -92,6 +92,44 @@ def _lookahead_for_continuation(lines, start):
     return -1
 
 
+def _pad_table_headers(result):
+    """Pad header and separator rows when data rows have more columns."""
+    i = 0
+    while i < len(result):
+        stripped = result[i].rstrip()
+        if not SEPARATOR_PATTERN.match(stripped):
+            i += 1
+            continue
+
+        sep_pipes = count_pipes(stripped)
+
+        max_pipes = sep_pipes
+        j = i + 1
+        while j < len(result):
+            row = result[j].rstrip()
+            if row == "" or not row.startswith("|"):
+                break
+            if SEPARATOR_PATTERN.match(row):
+                break
+            row_pipes = count_pipes(row)
+            if row_pipes > max_pipes:
+                max_pipes = row_pipes
+            j += 1
+
+        if max_pipes > sep_pipes:
+            extra = max_pipes - sep_pipes
+            sep = result[i].rstrip()
+            last_pipe = sep.rindex("|")
+            result[i] = sep[:last_pipe] + ("| --- " * extra) + "|"
+
+            if i > 0 and result[i - 1].rstrip().startswith("|"):
+                header = result[i - 1].rstrip()
+                first_pipe = header.index("|", 1)
+                result[i - 1] = header[:first_pipe] + ("| " * extra) + header[first_pipe:]
+
+        i += 1
+
+
 def fix_broken_rows(md):
     lines = md.split("\n")
     result = []
@@ -168,6 +206,7 @@ def fix_broken_rows(md):
         result.append(lines[i])
         i += 1
 
+    _pad_table_headers(result)
     return "\n".join(result)
 
 

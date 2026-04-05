@@ -5,7 +5,7 @@ import tempfile
 import unittest
 
 sys.path.insert(0, os.path.dirname(__file__))
-from fix_aem_tables import fix_broken_rows, fix_file
+from fix_aem_tables import fix_broken_rows, fix_file, count_pipes
 
 
 class TestFixBrokenRows(unittest.TestCase):
@@ -240,6 +240,33 @@ class TestFixBrokenRows(unittest.TestCase):
         self.assertIn("| X | Y | Z | \u221a |", result)
         self.assertIn("| P | Q | R | \u221a |", result)
         self.assertIn("| D | E | F |", result)
+
+    def test_header_padded_when_data_rows_have_more_columns(self):
+        md = (
+            "| Crypto Profiles | Prisma Access | Aryaka |\n"
+            "| --- | --- | --- |\n"
+            "| **Tunnel Type** | IPSec | \u221a | \u221a |\n"
+            "| GRE | \u2014 | \u2014 |\n"
+        )
+        result = fix_broken_rows(md)
+        lines = result.strip().split("\n")
+        header = lines[0]
+        separator = lines[1]
+        # Header and separator should now have 5 pipes (4 columns)
+        self.assertEqual(count_pipes(header), 5)
+        self.assertEqual(count_pipes(separator), 5)
+        # Data rows unchanged
+        self.assertIn("| **Tunnel Type** | IPSec | \u221a | \u221a |", result)
+        self.assertIn("| GRE | \u2014 | \u2014 |", result)
+
+    def test_no_padding_when_columns_match(self):
+        md = (
+            "| A | B |\n"
+            "| --- | --- |\n"
+            "| 1 | 2 |\n"
+            "| 3 | 4 |\n"
+        )
+        self.assertEqual(fix_broken_rows(md), md)
 
     def test_heading_terminates_collection(self):
         md = (
