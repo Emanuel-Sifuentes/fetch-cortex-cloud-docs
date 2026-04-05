@@ -44,6 +44,8 @@ for (const dir of dirs) {
     ? [
         `python scripts/fix_aem_chrome.py --sources "${dir}"`,
         `python scripts/fix_aem_links.py --sources "${dir}"`,
+        `python scripts/fix_aem_html_tables.py --sources "${dir}"`,
+        `python scripts/fix_aem_tables.py --sources "${dir}"`,
         `python scripts/fix_escaped_underscores.py --sources "${dir}"`,
         `python scripts/fix_broken_tables.py --sources "${dir}"`,
       ]
