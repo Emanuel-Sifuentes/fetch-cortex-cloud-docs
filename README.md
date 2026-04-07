@@ -68,8 +68,8 @@ No authentication required.
 | `npm run fetch-api` | Fetch Stoplight API specs (or `fetch-api:{product}` for one; `--force` to bypass cache) |
 | `npm run fix` | Run all fix scripts + combine (or `fix:{product}` for one) |
 | `npm run combine` | Generate combined files only (or `combine:{product}` for one) |
-| `npm run snapshot` | Snapshot API metadata for all products (or `snapshot:{product}` for one) |
-| `npm run check` | Detect changes vs stored snapshots (or `check:{product}` for one) |
+| `npm run snapshot:cortex` | Snapshot API metadata for all products (or `snapshot:cortex:{product}` for one) |
+| `npm run check:cortex` | Detect changes vs stored snapshots (or `check:cortex:{product}`; `--exit-code`, `--apply`, `--format text`) |
 | `npm run audit:headings` | Audit heading levels vs TOC depth + h6 cap simulation |
 | `npm run audit:toc` | Full TOC-to-file structure audit + combined file validation |
 | `npm run toc:table` | Print TOC as indented tree from live API |
@@ -80,16 +80,34 @@ No authentication required.
 
 ## Change detection
 
-The pipeline can detect when documentation has changed without doing a full re-fetch. This uses lightweight API calls to compare stored metadata snapshots against the live FluidTopics API.
+The pipeline detects when documentation has changed without doing a full re-fetch. It uses two levels of detection:
+
+1. **Map-level**: compares `lastPublication` timestamps to detect full map republications (added/removed/reordered topics)
+2. **Per-topic**: compares `ft:lastTechChangeTimestamp` for every topic to detect individual page edits that don't trigger a map republication
 
 ```bash
-npm run snapshot             # bootstrap snapshots for all products (first time)
-npm run check                # compare live API vs stored snapshots (JSON output)
-npm run check -- --format text   # human-readable output
-npm run check -- --apply     # detect changes + re-fetch affected products
+npm run snapshot:cortex              # bootstrap v2 snapshots (first time / after upgrade)
+npm run check:cortex                 # compare live API vs snapshots (JSON output)
+npm run check:cortex -- --format text    # human-readable output
+npm run check:cortex -- --exit-code      # exit 2 if changes detected, 0 if up to date
+npm run check:cortex -- --apply          # detect changes + re-fetch + snapshot affected products
 ```
 
-Snapshots are stored in `metadata/{product}.json` and track each map's `lastPublication` timestamp and TOC structure. When `check` detects a change, it reports added/removed/reordered topics per map. The `--apply` flag triggers a full `fetch` + `fix` cycle for affected products only.
+Snapshots are stored in `metadata/{product}.json` (schema v2) and track each map's `lastPublication` timestamp, TOC structure, and per-topic `lastTechChangeTimestamp`. The `--apply` flag triggers a `fetch:cortex:{product}` + `fix:cortex:{product}` + `snapshot:cortex:{product}` cycle for affected products only.
+
+**Exit codes** (with `--exit-code`): `0` = no changes, `1` = errors, `2` = changes detected.
+
+### Daily automation
+
+```bash
+# Check for changes; if any are found, re-fetch and snapshot
+npm run check:cortex -- --format text --exit-code
+if [ $? -eq 2 ]; then
+  npm run check:cortex -- --apply
+fi
+```
+
+The first run after upgrading to v2 snapshots requires `npm run snapshot:cortex` to seed per-topic timestamps. After that, the check + apply loop is self-sustaining.
 
 ### API spec change detection
 
