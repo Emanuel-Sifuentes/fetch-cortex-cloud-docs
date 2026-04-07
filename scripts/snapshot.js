@@ -5,7 +5,13 @@ const { MAP_IDS, PRODUCTS, VALID_PRODUCTS, parseProductFlag } = require("./map_c
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
 const METADATA_DIR = path.join(__dirname, "..", "metadata");
-const SNAPSHOT_VERSION = 1;
+const SNAPSHOT_VERSION = 2;
+const CONCURRENCY = 10;
+const DELAY_MS = 200;
+
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
 
 function httpGet(urlPath) {
   return new Promise((resolve, reject) => {
@@ -52,6 +58,31 @@ async function fetchMapToc(mapId) {
   return flattenToc(toc);
 }
 
+function parseTopicMeta(data) {
+  const entry = data.metadata.find((m) => m.key === "ft:lastTechChangeTimestamp");
+  return { lastTechChangeTimestamp: entry ? entry.values[0] : null };
+}
+
+async function fetchTopicMeta(mapId, contentId) {
+  const body = await httpGet(`/api/khub/maps/${mapId}/topics/${contentId}`);
+  return parseTopicMeta(JSON.parse(body));
+}
+
+async function batchFetchTopicTimestamps(mapId, topics) {
+  const timestamps = {};
+  for (let i = 0; i < topics.length; i += CONCURRENCY) {
+    const batch = topics.slice(i, i + CONCURRENCY);
+    const results = await Promise.all(
+      batch.map((t) => fetchTopicMeta(mapId, t.contentId))
+    );
+    for (let j = 0; j < batch.length; j++) {
+      timestamps[batch[j].contentId] = results[j].lastTechChangeTimestamp;
+    }
+    if (i + CONCURRENCY < topics.length) await sleep(DELAY_MS);
+  }
+  return timestamps;
+}
+
 function readSnapshot(product) {
   const filePath = path.join(METADATA_DIR, `${product}.json`);
   try {
@@ -79,6 +110,12 @@ async function snapshotProduct(product) {
 
     console.log(`  ${mapName}: fetching TOC...`);
     const topics = await fetchMapToc(mapId);
+
+    console.log(`  ${mapName}: fetching per-topic timestamps (${topics.length} topics)...`);
+    const timestamps = await batchFetchTopicTimestamps(mapId, topics);
+    for (const topic of topics) {
+      topic.lastTechChangeTimestamp = timestamps[topic.contentId] ?? null;
+    }
 
     maps[mapName] = {
       mapId,
@@ -116,6 +153,9 @@ module.exports = {
   httpGet,
   fetchMapMeta,
   fetchMapToc,
+  parseTopicMeta,
+  fetchTopicMeta,
+  batchFetchTopicTimestamps,
   readSnapshot,
   writeSnapshot,
   snapshotProduct,

@@ -1,7 +1,7 @@
 const { execSync } = require("child_process");
 const path = require("path");
 const { MAP_IDS, PRODUCTS, VALID_PRODUCTS, parseProductFlag } = require("./map_config.js");
-const { fetchMapMeta, fetchMapToc, readSnapshot, writeSnapshot, SNAPSHOT_VERSION } = require("./snapshot.js");
+const { fetchMapMeta, fetchMapToc, batchFetchTopicTimestamps, readSnapshot, writeSnapshot, SNAPSHOT_VERSION } = require("./snapshot.js");
 
 function diffTopics(oldTopics, newTopics) {
   const oldIds = oldTopics.map((t) => t.contentId);
@@ -46,14 +46,25 @@ function formatTextReport(report) {
         continue;
       }
       if (!data.changed) continue;
-      if (!mapData.republished) continue;
+
       const parts = [];
-      if (mapData.added > 0 || mapData.removed > 0) {
-        parts.push(`${mapData.added} added, ${mapData.removed} removed`);
+      if (mapData.republished) {
+        if (mapData.added > 0 || mapData.removed > 0) {
+          parts.push(`${mapData.added} added, ${mapData.removed} removed`);
+        }
+        if (mapData.reordered) parts.push("reordered");
       }
-      if (mapData.reordered) parts.push("reordered");
-      if (parts.length === 0) parts.push("no TOC changes");
-      lines.push(`  ${mapName}: ${parts.join(", ")}`);
+      if (mapData.topicsUpdated > 0) {
+        parts.push(`${mapData.topicsUpdated} topics updated`);
+      }
+      if (mapData.republished && parts.length === 0) {
+        parts.push("no TOC changes");
+      }
+      if (parts.length === 0) {
+        lines.push(`  ${mapName}: no changes`);
+      } else {
+        lines.push(`  ${mapName}: ${parts.join(", ")}`);
+      }
     }
   }
 
@@ -71,9 +82,22 @@ function formatTextReport(report) {
 function parseFlags() {
   const product = parseProductFlag();
   const apply = process.argv.includes("--apply");
+  const exitCode = process.argv.includes("--exit-code");
   const formatIdx = process.argv.indexOf("--format");
   const format = formatIdx !== -1 && process.argv[formatIdx + 1] === "text" ? "text" : "json";
-  return { product, apply, format };
+  return { product, apply, exitCode, format };
+}
+
+async function checkTopicTimestamps(mapId, snapshotTopics) {
+  const freshTimestamps = await batchFetchTopicTimestamps(mapId, snapshotTopics);
+  let updatedCount = 0;
+  for (const topic of snapshotTopics) {
+    const fresh = freshTimestamps[topic.contentId];
+    if (!topic.lastTechChangeTimestamp || topic.lastTechChangeTimestamp !== fresh) {
+      updatedCount++;
+    }
+  }
+  return { updatedCount, freshTimestamps };
 }
 
 async function checkProduct(product, snapshot) {
@@ -89,29 +113,43 @@ async function checkProduct(product, snapshot) {
       }
 
       const meta = await fetchMapMeta(mapId);
+      const snapshotTopics = snapshot.maps[mapName].topics;
 
-      if (meta.lastPublication === snapshot.maps[mapName].lastPublication) {
-        result.maps[mapName] = { republished: false, added: 0, removed: 0, reordered: false };
-        continue;
+      let republished = false;
+      let diff = { added: [], removed: [], reordered: false };
+      let newTopics = null;
+
+      if (meta.lastPublication !== snapshot.maps[mapName].lastPublication) {
+        republished = true;
+        newTopics = await fetchMapToc(mapId);
+        diff = diffTopics(snapshotTopics, newTopics);
       }
 
-      const newTopics = await fetchMapToc(mapId);
-      const diff = diffTopics(snapshot.maps[mapName].topics, newTopics);
+      console.log(`  ${mapName}: checking ${snapshotTopics.length} topics for updates...`);
+      const { updatedCount, freshTimestamps } = await checkTopicTimestamps(mapId, snapshotTopics);
 
+      const mapChanged = republished || updatedCount > 0;
       result.maps[mapName] = {
-        republished: true,
+        republished,
         added: diff.added.length,
         removed: diff.removed.length,
         reordered: diff.reordered,
+        topicsUpdated: updatedCount,
       };
-      result.changed = true;
 
-      freshData[mapName] = {
-        mapId,
-        lastPublication: meta.lastPublication,
-        topicCount: newTopics.length,
-        topics: newTopics,
-      };
+      if (mapChanged) {
+        result.changed = true;
+        const topicsForSnapshot = (newTopics || snapshotTopics).map((t) => ({
+          ...t,
+          lastTechChangeTimestamp: freshTimestamps[t.contentId] ?? t.lastTechChangeTimestamp ?? null,
+        }));
+        freshData[mapName] = {
+          mapId,
+          lastPublication: meta.lastPublication,
+          topicCount: topicsForSnapshot.length,
+          topics: topicsForSnapshot,
+        };
+      }
     } catch (err) {
       console.error(`Error checking ${mapName}: ${err.message}`);
       result.maps[mapName] = { error: true, message: err.message };
@@ -122,7 +160,7 @@ async function checkProduct(product, snapshot) {
 }
 
 async function main() {
-  const { product: targetProduct, apply, format } = parseFlags();
+  const { product: targetProduct, apply, exitCode, format } = parseFlags();
   const products = targetProduct ? [targetProduct] : VALID_PRODUCTS;
   const report = { timestamp: new Date().toISOString(), products: {} };
   let hasErrors = false;
@@ -173,7 +211,7 @@ async function main() {
     for (const product of changed) {
       console.log(`\n=== Re-fetching ${product} ===\n`);
       try {
-        execSync(`npm run fetch:${product} && npm run fix:${product}`, {
+        execSync(`npm run fetch:cortex:${product} && npm run fix:cortex:${product} && npm run snapshot:cortex:${product}`, {
           cwd: path.join(__dirname, ".."),
           stdio: "inherit",
         });
@@ -185,6 +223,11 @@ async function main() {
   }
 
   if (hasErrors) process.exit(1);
+
+  if (exitCode) {
+    const hasChanges = Object.values(report.products).some((p) => p.changed);
+    if (hasChanges) process.exit(2);
+  }
 }
 
 if (require.main === module) {

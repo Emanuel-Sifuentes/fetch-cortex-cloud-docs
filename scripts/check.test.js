@@ -197,4 +197,53 @@ describe("formatTextReport", () => {
     const text = formatTextReport(report);
     assert.ok(text.includes("cortex_gateway: error"));
   });
+
+  it("shows topic update count for a map with only topic updates", () => {
+    const report = {
+      timestamp: "2026-04-06T08:00:00.000Z",
+      products: {
+        cloud: {
+          changed: true,
+          maps: {
+            runtime: { republished: false, added: 0, removed: 0, reordered: false, topicsUpdated: 3 },
+          },
+        },
+      },
+    };
+    const text = formatTextReport(report);
+    assert.ok(text.includes("[cloud] changed"));
+    assert.ok(text.includes("runtime: 3 topics updated"));
+  });
+
+  it("shows both TOC diff and topic updates when map has both", () => {
+    const report = {
+      timestamp: "2026-04-06T08:00:00.000Z",
+      products: {
+        gateway: {
+          changed: true,
+          maps: {
+            cortex_gateway: { republished: true, added: 2, removed: 0, reordered: false, topicsUpdated: 5 },
+          },
+        },
+      },
+    };
+    const text = formatTextReport(report);
+    assert.ok(text.includes("cortex_gateway: 2 added, 0 removed, 5 topics updated"));
+  });
+
+  it("shows no changes for a map with zero topicsUpdated and no republication", () => {
+    const report = {
+      timestamp: "2026-04-06T08:00:00.000Z",
+      products: {
+        xdr: {
+          changed: false,
+          maps: {
+            xdr_5: { republished: false, added: 0, removed: 0, reordered: false, topicsUpdated: 0 },
+          },
+        },
+      },
+    };
+    const text = formatTextReport(report);
+    assert.ok(text.includes("[xdr] no changes"));
+  });
 });

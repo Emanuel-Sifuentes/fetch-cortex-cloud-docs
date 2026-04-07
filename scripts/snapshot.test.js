@@ -1,6 +1,6 @@
 const { describe, it } = require("node:test");
 const assert = require("node:assert/strict");
-const { flattenToc } = require("./snapshot.js");
+const { flattenToc, parseTopicMeta } = require("./snapshot.js");
 
 describe("flattenToc", () => {
   it("flattens a single-level list to depth-0 entries with 4 fields", () => {
@@ -56,5 +56,33 @@ describe("flattenToc", () => {
 
   it("returns empty array for empty input", () => {
     assert.deepEqual(flattenToc([]), []);
+  });
+});
+
+describe("parseTopicMeta", () => {
+  it("extracts lastTechChangeTimestamp from metadata array", () => {
+    const apiResponse = {
+      title: "Some Topic",
+      id: "abc123",
+      metadata: [
+        { key: "ft:title", values: ["Some Topic"] },
+        { key: "ft:lastTechChangeTimestamp", values: ["1773659738129"] },
+        { key: "ft:lastEdition", values: ["2026-01-25"] },
+      ],
+    };
+    const result = parseTopicMeta(apiResponse);
+    assert.deepEqual(result, { lastTechChangeTimestamp: "1773659738129" });
+  });
+
+  it("returns null timestamp when key is missing from metadata", () => {
+    const apiResponse = {
+      title: "Some Topic",
+      id: "abc123",
+      metadata: [
+        { key: "ft:title", values: ["Some Topic"] },
+      ],
+    };
+    const result = parseTopicMeta(apiResponse);
+    assert.deepEqual(result, { lastTechChangeTimestamp: null });
   });
 });
