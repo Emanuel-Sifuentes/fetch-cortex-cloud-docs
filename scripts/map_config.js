@@ -35,15 +35,16 @@ function parseProductFlag() {
   const idx = process.argv.indexOf("--product");
   if (idx === -1 || idx + 1 >= process.argv.length) return null;
   const value = process.argv[idx + 1];
+  if (value === "cortex") return null;
   if (!PRODUCTS[value]) {
-    console.error(`Error: unknown product "${value}" -- choose from: ${VALID_PRODUCTS.join(", ")}`);
-    process.exit(1);
+    return "__skip__";
   }
   return value;
 }
 
 function resolveTargetMaps() {
   const product = parseProductFlag();
+  if (product === "__skip__") return [];
   if (product) return PRODUCTS[product];
   return VALID_MAPS;
 }
