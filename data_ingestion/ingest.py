@@ -75,30 +75,41 @@ def discover_segments(product_filter: str | None = None) -> list[dict]:
     return documents
 
 
-def ingest_document(doc_client, doc: dict) -> tuple[str, str]:
-    """Ingest a single document. Returns (doc_id, status)."""
+def _build_document(doc: dict) -> tuple[str, discoveryengine.Document]:
+    """Build a Document proto and read file content. Returns (content_text, Document)."""
     with open(doc["path"], "r", encoding="utf-8") as f:
         content = f.read()
 
-    request = discoveryengine.CreateDocumentRequest(
-        parent=BRANCH_PARENT,
-        document_id=doc["id"],
-        document=discoveryengine.Document(
-            struct_data={
-                "product_family": doc["product_family"],
-                "product": doc["product"],
-                "audience": doc["audience"],
-            },
-            content=discoveryengine.Document.Content(
-                mime_type="text/plain",
-                raw_bytes=content.encode("utf-8"),
-            ),
+    return content, discoveryengine.Document(
+        name=f"{BRANCH_PARENT}/documents/{doc['id']}",
+        struct_data={
+            "product_family": doc["product_family"],
+            "product": doc["product"],
+            "audience": doc["audience"],
+        },
+        content=discoveryengine.Document.Content(
+            mime_type="text/plain",
+            raw_bytes=content.encode("utf-8"),
         ),
     )
 
+
+def ingest_document(doc_client, doc: dict, upsert: bool = False) -> tuple[str, str]:
+    """Ingest a single document. Returns (doc_id, status).
+
+    When *upsert* is False (default), uses CreateDocument which skips
+    documents that already exist.  When True, uses UpdateDocument with
+    allow_missing so documents are created or replaced.
+    """
+    _, document = _build_document(doc)
+
     try:
-        _create_with_retry(doc_client, request)
-        return (doc["id"], "created")
+        if upsert:
+            _upsert_with_retry(doc_client, document)
+            return (doc["id"], "upserted")
+        else:
+            _create_with_retry(doc_client, doc["id"], document)
+            return (doc["id"], "created")
     except AlreadyExists:
         return (doc["id"], "exists")
     except Exception as e:
@@ -111,9 +122,31 @@ def ingest_document(doc_client, doc: dict) -> tuple[str, str]:
     maximum=30.0,
     multiplier=2.0,
 )
-def _create_with_retry(doc_client, request):
+def _create_with_retry(doc_client, doc_id, document):
     """CreateDocument with exponential backoff on transient errors."""
-    return doc_client.create_document(request=request)
+    return doc_client.create_document(
+        request=discoveryengine.CreateDocumentRequest(
+            parent=BRANCH_PARENT,
+            document_id=doc_id,
+            document=document,
+        )
+    )
+
+
+@retry.Retry(
+    predicate=retry.if_exception_type(ResourceExhausted, ServiceUnavailable),
+    initial=1.0,
+    maximum=30.0,
+    multiplier=2.0,
+)
+def _upsert_with_retry(doc_client, document):
+    """UpdateDocument (allow_missing) with exponential backoff on transient errors."""
+    return doc_client.update_document(
+        request=discoveryengine.UpdateDocumentRequest(
+            document=document,
+            allow_missing=True,
+        )
+    )
 
 
 def update_schema():
@@ -174,6 +207,7 @@ def main():
     parser = argparse.ArgumentParser(description="Ingest document segments into Vertex AI Search.")
     parser.add_argument("--dry-run", action="store_true", help="List documents without ingesting")
     parser.add_argument("--product", default=None, help="Filter to a specific product (e.g. cloud, xdr, xsiam)")
+    parser.add_argument("--upsert", action="store_true", help="Update existing documents instead of skipping them")
     parser.add_argument("--workers", type=int, default=10, help="Number of concurrent workers (default: 10)")
     parser.add_argument("--skip-schema", action="store_true", help="Skip the schema update step")
     args = parser.parse_args()
@@ -196,41 +230,42 @@ def main():
         print("Dry run — no documents will be ingested.")
         return
 
-    print(f"Ingesting {len(documents)} documents with {args.workers} workers...")
+    mode = "upsert" if args.upsert else "create"
+    print(f"Ingesting {len(documents)} documents ({mode} mode) with {args.workers} workers...")
     doc_client = discoveryengine.DocumentServiceClient()
 
-    created = 0
-    existed = 0
+    succeeded = 0
+    skipped = 0
     errors = 0
 
     with ThreadPoolExecutor(max_workers=args.workers) as executor:
         futures = {
-            executor.submit(ingest_document, doc_client, doc): doc
+            executor.submit(ingest_document, doc_client, doc, args.upsert): doc
             for doc in documents
         }
 
         for i, future in enumerate(as_completed(futures), 1):
             doc_id, status = future.result()
-            if status == "created":
-                created += 1
+            if status in ("created", "upserted"):
+                succeeded += 1
             elif status == "exists":
-                existed += 1
+                skipped += 1
             else:
                 errors += 1
                 print(f"  FAILED: {doc_id} — {status}")
 
             if i % 100 == 0 or i == len(documents):
-                print(f"  progress: {i}/{len(documents)} (created={created}, exists={existed}, errors={errors})")
+                print(f"  progress: {i}/{len(documents)} ({mode}d={succeeded}, skipped={skipped}, errors={errors})")
 
-    print(f"\nIngestion complete: {created} created, {existed} already existed, {errors} errors")
+    print(f"\nIngestion complete: {succeeded} {mode}d, {skipped} skipped, {errors} errors")
 
     if errors > 0:
         print(f"WARNING: {errors} documents failed to ingest.")
 
-    if not args.skip_schema and created > 0:
+    if not args.skip_schema and succeeded > 0:
         update_schema()
-    elif not args.skip_schema and created == 0:
-        print("\nSkipping schema update: no new documents were created.")
+    elif not args.skip_schema and succeeded == 0:
+        print("\nSkipping schema update: no new documents were ingested.")
 
 
 if __name__ == "__main__":
