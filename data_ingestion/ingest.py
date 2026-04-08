@@ -174,7 +174,8 @@ def main():
 
     product_counts = {}
     for doc in documents:
-        product_counts[doc["product"]] = product_counts.get(doc["product"], 0) + 1
+        for p in doc["product"]:
+            product_counts[p] = product_counts.get(p, 0) + 1
     print("Segments discovered:")
     for product, count in sorted(product_counts.items()):
         print(f"  {product}: {count}")
