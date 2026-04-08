@@ -6,11 +6,11 @@ Fetch Cortex documentation from the Palo Alto Networks [Fluid Topics](https://do
 
 | Product | Command | Maps | Source |
 |---------|---------|------|--------|
-| Cortex Cloud | `npm run fetch:cloud` | appsec, posture, runtime | [Cortex Cloud](https://docs-cortex.paloaltonetworks.com/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Cortex-Cloud-Application-Security) |
-| Cortex XDR | `npm run fetch:xdr` | xdr_5, xdr_compatibility | [XDR 5.x](https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-5.x-Documentation), [Compatibility Matrix](https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Compatibility-Matrix/) |
-| Cortex XSIAM | `npm run fetch:xsiam` | xsiam_3 | [XSIAM 3.x](https://docs-cortex.paloaltonetworks.com/r/Cortex-XSIAM/Cortex-XSIAM-3.x-Documentation/) |
-| Cortex Gateway | `npm run fetch:gateway` | cortex_gateway | [Gateway Admin Guide](https://docs-cortex.paloaltonetworks.com/r/Cortex/Cortex-Gateway-Administrator-Guide/) |
-| Cortex AgentiX | `npm run fetch:agentix` | agentix | [AgentiX](https://docs-cortex.paloaltonetworks.com/r/Cortex-AgentiX/Cortex-AgentiX-Documentation/) |
+| Cortex Cloud | `npm run fetch:cortex:cloud` | appsec, posture, runtime | [Cortex Cloud](https://docs-cortex.paloaltonetworks.com/r/Cortex-Cloud-Posture-Management/Cortex-Cloud-Application-Security/Cortex-Cloud-Application-Security) |
+| Cortex XDR | `npm run fetch:cortex:xdr` | xdr_5, xdr_compatibility, xdr_agent_admin | [XDR 5.x](https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-5.x-Documentation), [Compatibility Matrix](https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Compatibility-Matrix/), [Agent Admin Guide](https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/9.1/Cortex-XDR-Agent-Administrator-Guide) |
+| Cortex XSIAM | `npm run fetch:cortex:xsiam` | xsiam_3 | [XSIAM 3.x](https://docs-cortex.paloaltonetworks.com/r/Cortex-XSIAM/Cortex-XSIAM-3.x-Documentation/) |
+| Cortex Gateway | `npm run fetch:cortex:gateway` | cortex_gateway | [Gateway Admin Guide](https://docs-cortex.paloaltonetworks.com/r/Cortex/Cortex-Gateway-Administrator-Guide/) |
+| Cortex AgentiX | `npm run fetch:cortex:agentix` | agentix | [AgentiX](https://docs-cortex.paloaltonetworks.com/r/Cortex-AgentiX/Cortex-AgentiX-Documentation/) |
 
 ### API specs (Stoplight)
 
@@ -24,16 +24,16 @@ Fetch Cortex documentation from the Palo Alto Networks [Fluid Topics](https://do
 
 ```bash
 npm install              # install dependencies
-npm run fetch            # fetch all products → sources_fetch/{product}/
+npm run fetch:cortex     # fetch all Cortex products → sources_fetch/{product}/
 npm run fetch-api        # fetch API specs → sources_fetch/api_specs_{product}/
-npm run fix              # apply all post-fetch fixes + generate combined files
+npm run fix:cortex       # apply all post-fetch fixes + generate combined files
 ```
 
 To target a single product:
 
 ```bash
-npm run fetch:cloud      # fetch only Cortex Cloud maps
-npm run fix:cloud        # fix + combine only Cortex Cloud
+npm run fetch:cortex:cloud      # fetch only Cortex Cloud maps
+npm run fix:cortex:cloud        # fix + combine only Cortex Cloud
 ```
 
 ## What it does
@@ -64,16 +64,18 @@ No authentication required.
 
 | Command | Purpose |
 |---------|---------|
-| `npm run fetch` | Fetch all products (or `fetch:{product}` for one) |
-| `npm run fetch-api` | Fetch Stoplight API specs (or `fetch-api:{product}` for one; `--force` to bypass cache) |
-| `npm run fix` | Run all fix scripts + combine (or `fix:{product}` for one) |
-| `npm run combine` | Generate combined files only (or `combine:{product}` for one) |
+| `npm run fetch:cortex` | Fetch all Cortex products (or `fetch:cortex:{product}` for one) |
+| `npm run fetch-api:cortex` | Fetch Stoplight API specs (or `fetch-api:cortex:{product}` for one; `--force` to bypass cache) |
+| `npm run fix:cortex` | Run all fix scripts + combine (or `fix:cortex:{product}` for one) |
+| `npm run combine:cortex` | Generate combined files only (or `combine:cortex:{product}` for one) |
 | `npm run snapshot:cortex` | Snapshot API metadata for all products (or `snapshot:cortex:{product}` for one) |
 | `npm run check:cortex` | Detect changes vs stored snapshots (or `check:cortex:{product}`; `--exit-code`, `--apply`, `--format text`) |
 | `npm run audit:headings` | Audit heading levels vs TOC depth + h6 cap simulation |
 | `npm run audit:toc` | Full TOC-to-file structure audit + combined file validation |
 | `npm run toc:table` | Print TOC as indented tree from live API |
 | `python scripts/segment_combined.py` | Pre-segment combined files for RAG ingestion (~4-8KB segments) |
+| `python data_ingestion/ingest.py` | Ingest segments into Vertex AI Search (`--upsert` to update existing, `--product` to filter) |
+| `python data_ingestion/purge_stale_docs.py` | Delete orphaned documents from data store that no longer match local segments |
 | `npm test` | Run unit tests |
 
 `npm run fix` chains all fix scripts per product directory, generates the combined files, and updates metadata snapshots.
@@ -172,7 +174,7 @@ Node types: `article` (prose docs), `http_service` (API overview + categories), 
 
 All topics concatenated in TOC order with hierarchical heading levels. Topic titles use heading levels matching their TOC depth (depth 0 = `#`, depth 1 = `##`, etc.), and sub-headings within each topic are shifted accordingly (capped at h6).
 
-### RAG segments (`sources_fetch/{product}/{product}_segments/`)
+### RAG segments (`sources_fetch/{product}/public/`)
 
 Pre-segmented files (~4-8KB each) for RAG Engine ingestion. Generated by `python scripts/segment_combined.py`. Each segment starts with a breadcrumb line for retrieval context:
 
@@ -185,6 +187,42 @@ Content here...
 ```
 
 Segments respect markdown structure — tables, code blocks, and ordered lists are never split mid-block. Use `--product` to target one product, `--max-size` to override the default 8000-char target.
+
+## Data ingestion
+
+Segments are ingested into a Vertex AI Search data store with product metadata for filtered retrieval.
+
+### Multi-product tagging
+
+Some maps are relevant across multiple products. The `xdr_compatibility` and `xdr_agent_admin` maps are tagged with `["xdr", "cloud", "xsiam"]` in `data_ingestion/config.py`. During ingestion, these maps are ingested once per product with a product-suffixed document ID (e.g., `xdr_compatibility__segment-001-foo__cloud`), keeping the schema's `product` field as a scalar string.
+
+### Ingestion commands
+
+```bash
+# First-time ingestion (create-only, skips existing)
+python data_ingestion/ingest.py
+
+# After re-fetching changed docs (upsert: create or replace)
+python data_ingestion/ingest.py --product xdr --upsert
+
+# Dry run to preview what would be ingested
+python data_ingestion/ingest.py --dry-run
+
+# Purge stale documents no longer matching local segments
+python data_ingestion/purge_stale_docs.py --dry-run    # preview
+python data_ingestion/purge_stale_docs.py               # delete
+python data_ingestion/purge_stale_docs.py --product xdr  # filter by product
+```
+
+### Typical update workflow
+
+```bash
+npm run check:cortex -- --format text     # detect changes
+npm run check:cortex -- --apply           # re-fetch changed products
+python scripts/segment_combined.py        # re-segment
+python data_ingestion/purge_stale_docs.py # remove orphaned docs
+python data_ingestion/ingest.py --upsert  # upsert all segments
+```
 
 ## Re-fetching
 
@@ -214,6 +252,13 @@ fetch-cortex-docs/
 │   ├── audit_headings.js              # audit tool
 │   ├── audit_toc_vs_headings.js       # audit tool
 │   └── generate_toc_table.js          # utility
+├── data_ingestion/
+│   ├── config.py                      # GCP project, data store, product metadata config
+│   ├── provision.py                   # Vertex AI Search resource provisioning
+│   ├── ingest.py                      # document ingestion (create / upsert)
+│   ├── query.py                       # search testing
+│   ├── purge_stale_docs.py            # purge orphaned documents
+│   └── cleanup_old_xdr_compat_docs.py # one-time migration cleanup
 ├── metadata/                          # per-product snapshots
 ├── sources_fetch/
 │   ├── appsec/                        # Cortex Cloud AppSec
@@ -222,6 +267,7 @@ fetch-cortex-docs/
 │   ├── cortex_gateway/                # Cortex Gateway
 │   ├── xdr_5/                         # Cortex XDR 5.x
 │   ├── xdr_compatibility/             # Cortex XDR Compatibility Matrix
+│   ├── xdr_agent_admin/               # Cortex XDR Agent Administrator Guide
 │   ├── xsiam_3/                       # Cortex XSIAM 3.x
 │   ├── agentix/                       # Cortex AgentiX
 │   ├── api_specs_cloud/              # Cortex Cloud API specs (Stoplight)
