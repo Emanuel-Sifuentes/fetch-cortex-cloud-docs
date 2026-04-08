@@ -40,7 +40,8 @@ def discover_segments(product_filter: str | None = None) -> list[dict]:
     documents = []
 
     for map_name, product in MAP_TO_PRODUCT.items():
-        if product_filter and product != product_filter:
+        products = product if isinstance(product, list) else [product]
+        if product_filter and product_filter not in products:
             continue
 
         segments_dir = os.path.join(SOURCES_DIR, map_name, "public")
@@ -56,7 +57,7 @@ def discover_segments(product_filter: str | None = None) -> list[dict]:
                 "id": doc_id,
                 "path": filepath,
                 "product_family": MAP_TO_PRODUCT_FAMILY.get(map_name, "cortex"),
-                "product": product,
+                "product": products,
                 "audience": "public",
             })
 

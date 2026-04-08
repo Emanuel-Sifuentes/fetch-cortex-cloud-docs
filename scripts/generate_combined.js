@@ -262,7 +262,7 @@ async function main() {
     // Maps that use the cross-map dedup logic
     const dedupMaps = ["appsec", "posture", "runtime"];
     // Maps that combine straight from their own TOC
-    const simpleMaps = ["cortex_gateway", "xdr_5", "xdr_compatibility", "xsiam_3", "agentix"];
+    const simpleMaps = ["cortex_gateway", "xdr_5", "xdr_compatibility", "xdr_agent_admin", "xsiam_3", "agentix"];
 
     const dedupTargets = targets.filter((t) => dedupMaps.includes(t));
     const simpleTargets = targets.filter((t) => simpleMaps.includes(t));

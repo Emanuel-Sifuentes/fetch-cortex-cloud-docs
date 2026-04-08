@@ -23,6 +23,7 @@ COMBINED_FILES = {
     "cortex_gateway": "cortex-gateway-combined.md",
     "xdr_5": "cortex-xdr-5-combined.md",
     "xdr_compatibility": "cortex-xdr-compatibility-combined.md",
+    "xdr_agent_admin": "cortex-xdr-agent-admin-combined.md",
     "xsiam_3": "cortex-xsiam-3-combined.md",
     "agentix": "cortex-agentix-combined.md",
     "prisma_access": "prisma-access-combined.md",
@@ -30,7 +31,7 @@ COMBINED_FILES = {
 
 PRODUCTS = {
     "cloud": ["appsec", "posture", "runtime"],
-    "xdr": ["xdr_5", "xdr_compatibility"],
+    "xdr": ["xdr_5", "xdr_compatibility", "xdr_agent_admin"],
     "xsiam": ["xsiam_3"],
     "gateway": ["cortex_gateway"],
     "agentix": ["agentix"],
@@ -44,6 +45,7 @@ DISPLAY_NAMES = {
     "posture": "Cortex Cloud Posture Management",
     "runtime": "Cortex Cloud Runtime Security",
     "xdr_5": "Cortex XDR",
+    "xdr_agent_admin": "Cortex XDR Agent Administrator Guide",
     "xdr_compatibility": "Cortex XDR Compatibility",
     "xsiam_3": "Cortex XSIAM",
     "prisma_access": "Prisma Access",

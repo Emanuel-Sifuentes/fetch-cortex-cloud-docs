@@ -5,6 +5,7 @@ const MAP_IDS = {
   cortex_gateway:    "ZWXhaub16NEvT6KqtDECXg",
   xdr_5:             "GD6sG6FlxDWxAn13_eZuUQ",
   xdr_compatibility: "8lDOhBUPTpk2LO5DciMLSQ",
+  xdr_agent_admin:   "Uc5vEgeJD0gZXHrWzOI7GA",
   xsiam_3:           "5CAbsl8idaK8R43ZLhoTOw",
   agentix:           "2iKvnhFnGXeKYHSA2AFcVw",
 };
@@ -16,13 +17,14 @@ const COMBINED_FILES = {
   cortex_gateway:    "cortex-gateway-combined.md",
   xdr_5:             "cortex-xdr-5-combined.md",
   xdr_compatibility: "cortex-xdr-compatibility-combined.md",
+  xdr_agent_admin:   "cortex-xdr-agent-admin-combined.md",
   xsiam_3:           "cortex-xsiam-3-combined.md",
   agentix:           "cortex-agentix-combined.md",
 };
 
 const PRODUCTS = {
   cloud:   ["appsec", "posture", "runtime"],
-  xdr:     ["xdr_5", "xdr_compatibility"],
+  xdr:     ["xdr_5", "xdr_compatibility", "xdr_agent_admin"],
   xsiam:   ["xsiam_3"],
   gateway: ["cortex_gateway"],
   agentix: ["agentix"],
