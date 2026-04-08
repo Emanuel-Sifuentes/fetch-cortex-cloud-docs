@@ -24,14 +24,13 @@ def list_old_xdr_compat_docs(doc_client) -> list[str]:
     old_docs = []
     request = discoveryengine.ListDocumentsRequest(
         parent=BRANCH_PARENT,
-        page_size=100,
+        page_size=1000,
     )
 
     for doc in doc_client.list_documents(request=request):
         doc_id = doc.name.rsplit("/", 1)[-1]
         if not doc_id.startswith("xdr_compatibility__"):
             continue
-        # New docs end with __xdr, __cloud, or __xsiam
         if doc_id.endswith(("__xdr", "__cloud", "__xsiam")):
             continue
         old_docs.append(doc.name)

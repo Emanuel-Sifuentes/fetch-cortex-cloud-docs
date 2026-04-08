@@ -75,12 +75,12 @@ def discover_segments(product_filter: str | None = None) -> list[dict]:
     return documents
 
 
-def _build_document(doc: dict) -> tuple[str, discoveryengine.Document]:
-    """Build a Document proto and read file content. Returns (content_text, Document)."""
+def _build_document(doc: dict) -> discoveryengine.Document:
+    """Build a Document proto from a segment dict, reading file content from disk."""
     with open(doc["path"], "r", encoding="utf-8") as f:
         content = f.read()
 
-    return content, discoveryengine.Document(
+    return discoveryengine.Document(
         name=f"{BRANCH_PARENT}/documents/{doc['id']}",
         struct_data={
             "product_family": doc["product_family"],
@@ -94,6 +94,14 @@ def _build_document(doc: dict) -> tuple[str, discoveryengine.Document]:
     )
 
 
+_RETRY = retry.Retry(
+    predicate=retry.if_exception_type(ResourceExhausted, ServiceUnavailable),
+    initial=1.0,
+    maximum=30.0,
+    multiplier=2.0,
+)
+
+
 def ingest_document(doc_client, doc: dict, upsert: bool = False) -> tuple[str, str]:
     """Ingest a single document. Returns (doc_id, status).
 
@@ -101,7 +109,7 @@ def ingest_document(doc_client, doc: dict, upsert: bool = False) -> tuple[str, s
     documents that already exist.  When True, uses UpdateDocument with
     allow_missing so documents are created or replaced.
     """
-    _, document = _build_document(doc)
+    document = _build_document(doc)
 
     try:
         if upsert:
@@ -116,14 +124,8 @@ def ingest_document(doc_client, doc: dict, upsert: bool = False) -> tuple[str, s
         return (doc["id"], f"error: {e}")
 
 
-@retry.Retry(
-    predicate=retry.if_exception_type(ResourceExhausted, ServiceUnavailable),
-    initial=1.0,
-    maximum=30.0,
-    multiplier=2.0,
-)
+@_RETRY
 def _create_with_retry(doc_client, doc_id, document):
-    """CreateDocument with exponential backoff on transient errors."""
     return doc_client.create_document(
         request=discoveryengine.CreateDocumentRequest(
             parent=BRANCH_PARENT,
@@ -133,14 +135,8 @@ def _create_with_retry(doc_client, doc_id, document):
     )
 
 
-@retry.Retry(
-    predicate=retry.if_exception_type(ResourceExhausted, ServiceUnavailable),
-    initial=1.0,
-    maximum=30.0,
-    multiplier=2.0,
-)
+@_RETRY
 def _upsert_with_retry(doc_client, document):
-    """UpdateDocument (allow_missing) with exponential backoff on transient errors."""
     return doc_client.update_document(
         request=discoveryengine.UpdateDocumentRequest(
             document=document,
