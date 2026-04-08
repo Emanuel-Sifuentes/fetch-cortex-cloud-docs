@@ -36,7 +36,12 @@ SOURCES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "so
 
 
 def discover_segments(product_filter: str | None = None) -> list[dict]:
-    """Find all segment files and build document metadata for each."""
+    """Find all segment files and build document metadata for each.
+
+    Maps tagged with multiple products (list values in MAP_TO_PRODUCT) are
+    ingested once per product with a product-suffixed doc ID, keeping the
+    schema's ``product`` field as a scalar string.
+    """
     documents = []
 
     for map_name, product in MAP_TO_PRODUCT.items():
@@ -48,18 +53,24 @@ def discover_segments(product_filter: str | None = None) -> list[dict]:
         if not os.path.isdir(segments_dir):
             continue
 
+        product_family = MAP_TO_PRODUCT_FAMILY.get(map_name, "cortex")
+        multi = len(products) > 1
+
         pattern = os.path.join(segments_dir, "segment-*.md")
         for filepath in sorted(glob.glob(pattern)):
             filename = os.path.basename(filepath)
-            doc_id = f"{map_name}__{filename.removesuffix('.md')}"
+            base_id = f"{map_name}__{filename.removesuffix('.md')}"
 
-            documents.append({
-                "id": doc_id,
-                "path": filepath,
-                "product_family": MAP_TO_PRODUCT_FAMILY.get(map_name, "cortex"),
-                "product": products,
-                "audience": "public",
-            })
+            for p in products:
+                if product_filter and p != product_filter:
+                    continue
+                documents.append({
+                    "id": f"{base_id}__{p}" if multi else base_id,
+                    "path": filepath,
+                    "product_family": product_family,
+                    "product": p,
+                    "audience": "public",
+                })
 
     return documents
 
@@ -174,8 +185,7 @@ def main():
 
     product_counts = {}
     for doc in documents:
-        for p in doc["product"]:
-            product_counts[p] = product_counts.get(p, 0) + 1
+        product_counts[doc["product"]] = product_counts.get(doc["product"], 0) + 1
     print("Segments discovered:")
     for product, count in sorted(product_counts.items()):
         print(f"  {product}: {count}")
