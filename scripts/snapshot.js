@@ -1,7 +1,7 @@
-const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const { MAP_IDS, PRODUCTS, VALID_PRODUCTS, parseProductFlag } = require("./map_config.js");
+const { httpGetWithRetry, sleep } = require("./http_retry.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
 const METADATA_DIR = path.join(__dirname, "..", "metadata");
@@ -9,31 +9,7 @@ const SNAPSHOT_VERSION = 2;
 const CONCURRENCY = 10;
 const DELAY_MS = 200;
 
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
-}
-
-function httpGet(urlPath) {
-  return new Promise((resolve, reject) => {
-    const url = new URL(urlPath, BASE);
-    const opts = {
-      hostname: url.hostname,
-      path: url.pathname + url.search,
-      headers: { Accept: "application/json" },
-    };
-    https
-      .get(opts, (res) => {
-        if (res.statusCode !== 200) {
-          res.resume();
-          return reject(new Error(`HTTP ${res.statusCode} for ${urlPath}`));
-        }
-        const chunks = [];
-        res.on("data", (c) => chunks.push(c));
-        res.on("end", () => resolve(Buffer.concat(chunks).toString()));
-      })
-      .on("error", reject);
-  });
-}
+const httpGet = (urlPath) => httpGetWithRetry(urlPath, { base: BASE });
 
 function flattenToc(nodes, depth = 0) {
   const result = [];
@@ -70,17 +46,25 @@ async function fetchTopicMeta(mapId, contentId) {
 
 async function batchFetchTopicTimestamps(mapId, topics) {
   const timestamps = {};
+  const errors = [];
   for (let i = 0; i < topics.length; i += CONCURRENCY) {
     const batch = topics.slice(i, i + CONCURRENCY);
-    const results = await Promise.all(
+    const results = await Promise.allSettled(
       batch.map((t) => fetchTopicMeta(mapId, t.contentId))
     );
     for (let j = 0; j < batch.length; j++) {
-      timestamps[batch[j].contentId] = results[j].lastTechChangeTimestamp;
+      const { contentId } = batch[j];
+      const r = results[j];
+      if (r.status === "fulfilled") {
+        timestamps[contentId] = r.value.lastTechChangeTimestamp;
+      } else {
+        timestamps[contentId] = null;
+        errors.push({ contentId, message: r.reason.message });
+      }
     }
     if (i + CONCURRENCY < topics.length) await sleep(DELAY_MS);
   }
-  return timestamps;
+  return { timestamps, errors };
 }
 
 function readSnapshot(product) {
@@ -112,7 +96,10 @@ async function snapshotProduct(product) {
     const topics = await fetchMapToc(mapId);
 
     console.log(`  ${mapName}: fetching per-topic timestamps (${topics.length} topics)...`);
-    const timestamps = await batchFetchTopicTimestamps(mapId, topics);
+    const { timestamps, errors } = await batchFetchTopicTimestamps(mapId, topics);
+    for (const err of errors) {
+      console.error(`  ${mapName}: topic ${err.contentId} — ${err.message}`);
+    }
     for (const topic of topics) {
       topic.lastTechChangeTimestamp = timestamps[topic.contentId] ?? null;
     }

@@ -246,4 +246,40 @@ describe("formatTextReport", () => {
     const text = formatTextReport(report);
     assert.ok(text.includes("[xdr] no changes"));
   });
+
+  it("shows 'not in snapshot' for a map pending initial fetch", () => {
+    const report = {
+      timestamp: "2026-04-20T08:00:00.000Z",
+      products: {
+        xdr: {
+          changed: true,
+          maps: {
+            xdr_5: { republished: false, added: 0, removed: 0, reordered: false, topicsUpdated: 0 },
+            xdr_agent_admin: { needsInitialFetch: true },
+          },
+        },
+      },
+    };
+    const text = formatTextReport(report);
+    assert.ok(text.includes("[xdr] changed"));
+    assert.ok(text.includes("xdr_agent_admin: not in snapshot"));
+    assert.ok(text.includes("1 product"));
+  });
+
+  it("shows stale-topic count when topics 404'd during check", () => {
+    const report = {
+      timestamp: "2026-04-20T08:00:00.000Z",
+      products: {
+        cloud: {
+          changed: true,
+          maps: {
+            runtime: { republished: false, added: 0, removed: 0, reordered: false, topicsUpdated: 0, staleTopics: 1 },
+          },
+        },
+      },
+    };
+    const text = formatTextReport(report);
+    assert.ok(text.includes("[cloud] changed"));
+    assert.ok(text.includes("runtime: 1 stale topic"));
+  });
 });

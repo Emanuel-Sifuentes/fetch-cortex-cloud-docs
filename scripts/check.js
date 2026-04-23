@@ -45,6 +45,10 @@ function formatTextReport(report) {
         lines.push(`  ${mapName}: error — ${mapData.message}`);
         continue;
       }
+      if (mapData.needsInitialFetch) {
+        lines.push(`  ${mapName}: not in snapshot — will fetch on --apply`);
+        continue;
+      }
       if (!data.changed) continue;
 
       const parts = [];
@@ -56,6 +60,10 @@ function formatTextReport(report) {
       }
       if (mapData.topicsUpdated > 0) {
         parts.push(`${mapData.topicsUpdated} topics updated`);
+      }
+      if (mapData.staleTopics > 0) {
+        const noun = mapData.staleTopics === 1 ? "stale topic" : "stale topics";
+        parts.push(`${mapData.staleTopics} ${noun}`);
       }
       if (mapData.republished && parts.length === 0) {
         parts.push("no TOC changes");
@@ -89,15 +97,17 @@ function parseFlags() {
 }
 
 async function checkTopicTimestamps(mapId, snapshotTopics) {
-  const freshTimestamps = await batchFetchTopicTimestamps(mapId, snapshotTopics);
+  const { timestamps: freshTimestamps, errors } = await batchFetchTopicTimestamps(mapId, snapshotTopics);
+  const staleIds = new Set(errors.map((e) => e.contentId));
   let updatedCount = 0;
   for (const topic of snapshotTopics) {
+    if (staleIds.has(topic.contentId)) continue;
     const fresh = freshTimestamps[topic.contentId];
     if (!topic.lastTechChangeTimestamp || topic.lastTechChangeTimestamp !== fresh) {
       updatedCount++;
     }
   }
-  return { updatedCount, freshTimestamps };
+  return { updatedCount, freshTimestamps, topicErrors: errors };
 }
 
 async function checkProduct(product, snapshot) {
@@ -109,7 +119,10 @@ async function checkProduct(product, snapshot) {
     const mapId = MAP_IDS[mapName];
     try {
       if (!snapshot.maps[mapName]) {
-        throw new Error(`map "${mapName}" not in snapshot — run: npm run snapshot:${product}`);
+        console.log(`  ${mapName}: not in snapshot — will fetch on --apply`);
+        result.maps[mapName] = { needsInitialFetch: true };
+        result.changed = true;
+        continue;
       }
 
       const meta = await fetchMapMeta(mapId);
@@ -126,15 +139,20 @@ async function checkProduct(product, snapshot) {
       }
 
       console.log(`  ${mapName}: checking ${snapshotTopics.length} topics for updates...`);
-      const { updatedCount, freshTimestamps } = await checkTopicTimestamps(mapId, snapshotTopics);
+      const { updatedCount, freshTimestamps, topicErrors } = await checkTopicTimestamps(mapId, snapshotTopics);
 
-      const mapChanged = republished || updatedCount > 0;
+      for (const err of topicErrors) {
+        console.error(`  ${mapName}: topic ${err.contentId} — ${err.message} (will refetch)`);
+      }
+
+      const mapChanged = republished || updatedCount > 0 || topicErrors.length > 0;
       result.maps[mapName] = {
         republished,
         added: diff.added.length,
         removed: diff.removed.length,
         reordered: diff.reordered,
         topicsUpdated: updatedCount,
+        staleTopics: topicErrors.length,
       };
 
       if (mapChanged) {
@@ -168,7 +186,7 @@ async function main() {
   for (const product of products) {
     const snapshot = readSnapshot(product);
     if (!snapshot) {
-      console.error(`[${product}] no snapshot — run: npm run snapshot:${product}`);
+      console.error(`[${product}] no snapshot — run: npm run snapshot:cortex:${product}`);
       hasErrors = true;
       continue;
     }

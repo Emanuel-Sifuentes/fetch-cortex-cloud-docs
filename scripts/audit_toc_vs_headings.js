@@ -1,27 +1,14 @@
 const fs = require("fs");
 const path = require("path");
-const https = require("https");
 const { MAP_IDS, COMBINED_FILES, parseMapFlag } = require("./map_config.js");
+const { httpGetWithRetry } = require("./http_retry.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
 const mapFlag = parseMapFlag("runtime");
 const MAP_ID = MAP_IDS[mapFlag];
 const DIR = path.join(__dirname, "..", "sources_fetch");
 
-function fetch(urlPath) {
-  return new Promise((resolve, reject) => {
-    const url = new URL(urlPath, BASE);
-    https.get({ hostname: url.hostname, path: url.pathname, headers: { Accept: "application/json" } }, (res) => {
-      if (res.statusCode !== 200) {
-        res.resume();
-        return reject(new Error(`HTTP ${res.statusCode} for ${urlPath}`));
-      }
-      const chunks = [];
-      res.on("data", (c) => chunks.push(c));
-      res.on("end", () => resolve(JSON.parse(Buffer.concat(chunks).toString())));
-    }).on("error", reject);
-  });
-}
+const fetch = async (urlPath) => JSON.parse(await httpGetWithRetry(urlPath, { base: BASE }));
 
 function flattenToc(nodes, depth = 0) {
   const result = [];

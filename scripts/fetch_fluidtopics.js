@@ -1,9 +1,9 @@
-const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const TurndownService = require("turndown");
 const { gfm } = require("turndown-plugin-gfm");
 const { MAP_IDS, resolveTargetMaps } = require("./map_config.js");
+const { httpGetWithRetry, sleep } = require("./http_retry.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
@@ -28,31 +28,7 @@ turndown.addRule("preWithoutCode", {
   },
 });
 
-function fetch(urlPath, accept) {
-  return new Promise((resolve, reject) => {
-    const url = new URL(urlPath, BASE);
-    const opts = {
-      hostname: url.hostname,
-      path: url.pathname + url.search,
-      headers: { Accept: accept || "application/json" },
-    };
-    https
-      .get(opts, (res) => {
-        if (res.statusCode !== 200) {
-          res.resume();
-          return reject(new Error(`HTTP ${res.statusCode} for ${urlPath}`));
-        }
-        const chunks = [];
-        res.on("data", (c) => chunks.push(c));
-        res.on("end", () => resolve(Buffer.concat(chunks).toString()));
-      })
-      .on("error", reject);
-  });
-}
-
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
-}
+const fetch = (urlPath, accept) => httpGetWithRetry(urlPath, { base: BASE, accept });
 
 function sanitizeFilename(title) {
   return title
