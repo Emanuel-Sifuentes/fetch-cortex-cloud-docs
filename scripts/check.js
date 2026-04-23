@@ -119,7 +119,6 @@ async function checkProduct(product, snapshot) {
     const mapId = MAP_IDS[mapName];
     try {
       if (!snapshot.maps[mapName]) {
-        console.log(`  ${mapName}: not in snapshot — will fetch on --apply`);
         result.maps[mapName] = { needsInitialFetch: true };
         result.changed = true;
         continue;
