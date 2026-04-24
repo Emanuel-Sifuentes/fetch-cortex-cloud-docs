@@ -24,6 +24,7 @@ MAP_TO_PRODUCT_FAMILY = {
     "xdr_agent_admin": "cortex",
     "xsiam_3": "cortex",
     "agentix": "cortex",
+    "koi": "cortex",
     "prisma_access": "sase",
 }
 
@@ -40,5 +41,14 @@ MAP_TO_PRODUCT = {
     "xdr_agent_admin": ["xdr", "cloud", "xsiam"],
     "xsiam_3": "xsiam",
     "agentix": "agentix",
+    "koi": "koi",
     "prisma_access": "prisma_access",
+}
+
+# Glob pattern override per map for segment discovery.
+# Default is `segment-*.md` (produced by scripts/segment_combined.py).
+# Maps whose source docs arrive pre-segmented (not via segment_combined.py)
+# override the pattern here.
+MAP_TO_GLOB = {
+    "koi": "*.md",
 }
