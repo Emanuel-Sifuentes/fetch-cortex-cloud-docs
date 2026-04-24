@@ -11,6 +11,7 @@ Fetch Cortex documentation from the Palo Alto Networks [Fluid Topics](https://do
 | Cortex XSIAM | `npm run fetch:cortex:xsiam` | xsiam_3 | [XSIAM 3.x](https://docs-cortex.paloaltonetworks.com/r/Cortex-XSIAM/Cortex-XSIAM-3.x-Documentation/) |
 | Cortex Gateway | `npm run fetch:cortex:gateway` | cortex_gateway | [Gateway Admin Guide](https://docs-cortex.paloaltonetworks.com/r/Cortex/Cortex-Gateway-Administrator-Guide/) |
 | Cortex AgentiX | `npm run fetch:cortex:agentix` | agentix | [AgentiX](https://docs-cortex.paloaltonetworks.com/r/Cortex-AgentiX/Cortex-AgentiX-Documentation/) |
+| Koi | _(no fetch command — docs sourced externally)_ | koi | External (GitBook) |
 
 ### API specs (Stoplight)
 
@@ -196,6 +197,8 @@ Segments are ingested into a Vertex AI Search data store with product metadata f
 
 Some maps are relevant across multiple products. The `xdr_compatibility` and `xdr_agent_admin` maps are tagged with `["xdr", "cloud", "xsiam"]` in `data_ingestion/config.py`. During ingestion, these maps are ingested once per product with a product-suffixed document ID (e.g., `xdr_compatibility__segment-001-foo__cloud`), keeping the schema's `product` field as a scalar string.
 
+The `koi` map is single-product — it's tagged with `product: "koi"` (not multi-tagged) and uses a `*.md` glob override in `MAP_TO_GLOB` since its source files arrive pre-segmented, not via `segment_combined.py`.
+
 ### Ingestion commands
 
 ```bash
@@ -270,6 +273,7 @@ fetch-cortex-docs/
 │   ├── xdr_agent_admin/               # Cortex XDR Agent Administrator Guide
 │   ├── xsiam_3/                       # Cortex XSIAM 3.x
 │   ├── agentix/                       # Cortex AgentiX
+│   ├── koi/                           # Koi (sourced externally; ingestion only)
 │   ├── api_specs_cloud/              # Cortex Cloud API specs (Stoplight)
 │   └── README.md
 ├── package.json
