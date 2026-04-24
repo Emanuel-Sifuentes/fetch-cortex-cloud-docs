@@ -27,6 +27,7 @@ from google.cloud import discoveryengine
 from config import (
     BRANCH_PARENT,
     FILTERABLE_FIELDS,
+    MAP_TO_GLOB,
     MAP_TO_PRODUCT,
     MAP_TO_PRODUCT_FAMILY,
     SCHEMA_NAME,
@@ -56,7 +57,8 @@ def discover_segments(product_filter: str | None = None) -> list[dict]:
         product_family = MAP_TO_PRODUCT_FAMILY.get(map_name, "cortex")
         multi = len(products) > 1
 
-        pattern = os.path.join(segments_dir, "segment-*.md")
+        pattern_name = MAP_TO_GLOB.get(map_name, "segment-*.md")
+        pattern = os.path.join(segments_dir, pattern_name)
         for filepath in sorted(glob.glob(pattern)):
             filename = os.path.basename(filepath)
             base_id = f"{map_name}__{filename.removesuffix('.md')}"
