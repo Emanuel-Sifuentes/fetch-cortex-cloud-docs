@@ -18,7 +18,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from google.api_core.exceptions import NotFound
 from google.cloud import discoveryengine
 
-from config import BRANCH_PARENT, MAP_TO_PRODUCT
+from config import BRANCH_PARENT, MAP_TO_GLOB, MAP_TO_PRODUCT
 
 SOURCES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sources_fetch")
 
@@ -38,7 +38,8 @@ def local_doc_ids(product_filter: str | None = None) -> set[str]:
 
         multi = len(products) > 1
 
-        for filepath in sorted(glob.glob(os.path.join(segments_dir, "segment-*.md"))):
+        pattern_name = MAP_TO_GLOB.get(map_name, "segment-*.md")
+        for filepath in sorted(glob.glob(os.path.join(segments_dir, pattern_name))):
             filename = os.path.basename(filepath)
             base_id = f"{map_name}__{filename.removesuffix('.md')}"
 
