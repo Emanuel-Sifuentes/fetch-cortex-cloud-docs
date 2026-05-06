@@ -96,14 +96,17 @@ function parseFlags() {
   return { product, apply, exitCode, format };
 }
 
-async function checkTopicTimestamps(mapId, snapshotTopics) {
-  const { timestamps: freshTimestamps, errors } = await batchFetchTopicTimestamps(mapId, snapshotTopics);
-  const staleIds = new Set(errors.map((e) => e.contentId));
+async function checkTopicTimestamps(mapId, topicsToCheck, snapshotTopics) {
+  const { timestamps: freshTimestamps, errors } = await batchFetchTopicTimestamps(mapId, topicsToCheck);
+  const erroredIds = new Set(errors.map((e) => e.contentId));
+  const snapshotTimestamps = new Map(snapshotTopics.map((t) => [t.contentId, t.lastTechChangeTimestamp]));
   let updatedCount = 0;
-  for (const topic of snapshotTopics) {
-    if (staleIds.has(topic.contentId)) continue;
+  for (const topic of topicsToCheck) {
+    if (erroredIds.has(topic.contentId)) continue;
+    if (!snapshotTimestamps.has(topic.contentId)) continue;
+    const old = snapshotTimestamps.get(topic.contentId);
     const fresh = freshTimestamps[topic.contentId];
-    if (!topic.lastTechChangeTimestamp || topic.lastTechChangeTimestamp !== fresh) {
+    if (!old || old !== fresh) {
       updatedCount++;
     }
   }
@@ -137,21 +140,28 @@ async function checkProduct(product, snapshot) {
         diff = diffTopics(snapshotTopics, newTopics);
       }
 
-      console.log(`  ${mapName}: checking ${snapshotTopics.length} topics for updates...`);
-      const { updatedCount, freshTimestamps, topicErrors } = await checkTopicTimestamps(mapId, snapshotTopics);
+      const topicsToCheck = newTopics ?? snapshotTopics;
+      console.log(`  ${mapName}: checking ${topicsToCheck.length} topics for updates...`);
+      const { updatedCount, freshTimestamps, topicErrors } = await checkTopicTimestamps(mapId, topicsToCheck, snapshotTopics);
 
-      for (const err of topicErrors) {
+      const removedErrors = topicErrors.filter((e) => e.statusCode === 404);
+      const transientErrors = topicErrors.filter((e) => e.statusCode !== 404);
+
+      for (const err of removedErrors) {
+        console.error(`  ${mapName}: topic ${err.contentId} — ${err.message} (removed from map)`);
+      }
+      for (const err of transientErrors) {
         console.error(`  ${mapName}: topic ${err.contentId} — ${err.message} (will refetch)`);
       }
 
-      const mapChanged = republished || updatedCount > 0 || topicErrors.length > 0;
+      const mapChanged = republished || updatedCount > 0 || transientErrors.length > 0;
       result.maps[mapName] = {
         republished,
         added: diff.added.length,
         removed: diff.removed.length,
         reordered: diff.reordered,
         topicsUpdated: updatedCount,
-        staleTopics: topicErrors.length,
+        staleTopics: transientErrors.length,
       };
 
       if (mapChanged) {

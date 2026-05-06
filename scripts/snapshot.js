@@ -59,7 +59,7 @@ async function batchFetchTopicTimestamps(mapId, topics) {
         timestamps[contentId] = r.value.lastTechChangeTimestamp;
       } else {
         timestamps[contentId] = null;
-        errors.push({ contentId, message: r.reason.message });
+        errors.push({ contentId, message: r.reason.message, statusCode: r.reason.statusCode });
       }
     }
     if (i + CONCURRENCY < topics.length) await sleep(DELAY_MS);
