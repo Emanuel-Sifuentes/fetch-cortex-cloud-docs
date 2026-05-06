@@ -33,14 +33,16 @@ const PRODUCTS = {
 const VALID_MAPS = Object.keys(MAP_IDS);
 const VALID_PRODUCTS = Object.keys(PRODUCTS);
 
+function parseStringFlag(name, defaultValue = null) {
+  const idx = process.argv.indexOf(name);
+  if (idx === -1 || idx + 1 >= process.argv.length) return defaultValue;
+  return process.argv[idx + 1];
+}
+
 function parseProductFlag() {
-  const idx = process.argv.indexOf("--product");
-  if (idx === -1 || idx + 1 >= process.argv.length) return null;
-  const value = process.argv[idx + 1];
-  if (value === "cortex") return null;
-  if (!PRODUCTS[value]) {
-    return "__skip__";
-  }
+  const value = parseStringFlag("--product");
+  if (value === null || value === "cortex") return null;
+  if (!PRODUCTS[value]) return "__skip__";
   return value;
 }
 
@@ -52,14 +54,12 @@ function resolveTargetMaps() {
 }
 
 function parseMapFlag(defaultValue) {
-  const idx = process.argv.indexOf("--map");
-  if (idx === -1 || idx + 1 >= process.argv.length) return defaultValue;
-  const value = process.argv[idx + 1];
-  if (value !== "all" && !MAP_IDS[value]) {
+  const value = parseStringFlag("--map", defaultValue);
+  if (value !== defaultValue && value !== "all" && !MAP_IDS[value]) {
     console.error(`Error: unknown map "${value}" -- choose from: ${VALID_MAPS.join(", ")}, all`);
     process.exit(1);
   }
   return value;
 }
 
-module.exports = { MAP_IDS, COMBINED_FILES, PRODUCTS, VALID_MAPS, VALID_PRODUCTS, parseMapFlag, parseProductFlag, resolveTargetMaps };
+module.exports = { MAP_IDS, COMBINED_FILES, PRODUCTS, VALID_MAPS, VALID_PRODUCTS, parseStringFlag, parseMapFlag, parseProductFlag, resolveTargetMaps };

@@ -119,6 +119,7 @@ async function checkProduct(product, snapshot) {
   const mapNames = PRODUCTS[product];
   const result = { changed: false, maps: {} };
   const freshData = {};
+  const deltas = {};
 
   for (const mapName of mapNames) {
     const mapId = MAP_IDS[mapName];
@@ -170,8 +171,10 @@ async function checkProduct(product, snapshot) {
       }
 
       const mapChanged = republished || updatedIds.length > 0 || transientErrors.length > 0;
-      const fetchIds = [...diff.added, ...updatedIds, ...transientErrors.map((e) => e.contentId)];
-      const removeIds = [...diff.removed, ...removedErrors.map((e) => e.contentId)];
+      deltas[mapName] = {
+        fetch: [...diff.added, ...updatedIds, ...transientErrors.map((e) => e.contentId)],
+        remove: [...diff.removed, ...removedErrors.map((e) => e.contentId)],
+      };
 
       result.maps[mapName] = {
         republished,
@@ -180,7 +183,6 @@ async function checkProduct(product, snapshot) {
         reordered: diff.reordered,
         topicsUpdated: updatedIds.length,
         staleTopics: transientErrors.length,
-        delta: { fetch: fetchIds, remove: removeIds },
       };
 
       if (mapChanged) {
@@ -202,7 +204,7 @@ async function checkProduct(product, snapshot) {
     }
   }
 
-  return { result, freshData };
+  return { result, freshData, deltas };
 }
 
 async function main() {
@@ -233,9 +235,9 @@ async function main() {
       continue;
     }
 
-    const { result, freshData } = await checkProduct(product, snapshot);
+    const { result, freshData, deltas } = await checkProduct(product, snapshot);
     report.products[product] = result;
-    freshDataByProduct.set(product, { snapshot, freshData });
+    freshDataByProduct.set(product, { snapshot, freshData, deltas });
 
     if (Object.values(result.maps).some((m) => m.error)) hasErrors = true;
 
@@ -264,12 +266,16 @@ async function main() {
       console.log(`\n=== Re-fetching ${product} ===\n`);
 
       const productData = report.products[product];
+      const cachedDeltas = freshDataByProduct.get(product)?.deltas ?? {};
       const delta = {};
       for (const [mapName, mapData] of Object.entries(productData.maps)) {
         if (mapData.needsInitialFetch) {
           delta[mapName] = { initial: true };
-        } else if (mapData.delta && (mapData.delta.fetch.length > 0 || mapData.delta.remove.length > 0)) {
-          delta[mapName] = mapData.delta;
+          continue;
+        }
+        const d = cachedDeltas[mapName];
+        if (d && (d.fetch.length > 0 || d.remove.length > 0)) {
+          delta[mapName] = d;
         }
       }
 

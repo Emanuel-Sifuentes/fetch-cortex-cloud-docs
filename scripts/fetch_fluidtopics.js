@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const TurndownService = require("turndown");
 const { gfm } = require("turndown-plugin-gfm");
-const { MAP_IDS, resolveTargetMaps } = require("./map_config.js");
+const { MAP_IDS, PRODUCTS, parseStringFlag, resolveTargetMaps } = require("./map_config.js");
 const { httpGetWithRetry, sleep } = require("./http_retry.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
@@ -269,7 +269,22 @@ async function fetchSimpleMap(mapKey) {
   console.log(`\n${mapKey}: ${topics.length} topics saved to ${outDir}`);
 }
 
-async function fetchSimpleMapDelta(mapKey, delta) {
+function postureSupplementFilter(runtimeToc) {
+  const runtimeIds = new Set(runtimeToc.map((e) => e.contentId));
+  const runtimeTitles = new Set(runtimeToc.map((e) => e.title));
+  return (topics) => {
+    const seen = new Set();
+    return topics.filter((t) => {
+      if (runtimeIds.has(t.contentId) || runtimeTitles.has(t.title)) return false;
+      if (seen.has(t.contentId)) return false;
+      seen.add(t.contentId);
+      return true;
+    });
+  };
+}
+
+async function fetchSimpleMapDelta(mapKey, delta, options = {}) {
+  const { sourceMap, topicFilter, tocTopics } = options;
   const outDir = outDirForMap(mapKey);
   fs.mkdirSync(outDir, { recursive: true });
 
@@ -281,56 +296,22 @@ async function fetchSimpleMapDelta(mapKey, delta) {
     return;
   }
 
-  console.log(`Fetching ${mapKey} TOC for delta (${delta.fetch.length} topic(s))...`);
-  const tocJson = await fetch(`/api/khub/maps/${MAP_IDS[mapKey]}/toc`);
-  const allTopics = flattenToc(JSON.parse(tocJson));
-  const fetchSet = new Set(delta.fetch);
-  const topics = allTopics.filter((t) => fetchSet.has(t.contentId));
-  const missing = delta.fetch.length - topics.length;
-  if (missing > 0) console.log(`${mapKey}: ${missing} delta ID(s) not in TOC, skipping`);
-
-  await fetchTopicsBatch(topics, MAP_IDS[mapKey], outDir);
-  console.log(`${mapKey}: ${topics.length} topic(s) saved to ${outDir}`);
-}
-
-async function fetchPostureSupplementDelta(delta) {
-  const outDir = outDirForMap("posture");
-  fs.mkdirSync(outDir, { recursive: true });
-
-  const removed = applyDeltaRemovals(outDir, delta.remove);
-  if (removed > 0) console.log(`posture: removed ${removed} file(s)`);
-
-  if (!delta.fetch || delta.fetch.length === 0) {
-    console.log("posture: no topics to fetch");
-    return;
+  let allTopics = tocTopics;
+  if (!allTopics) {
+    console.log(`Fetching ${mapKey} TOC for delta (${delta.fetch.length} topic(s))...`);
+    const tocJson = await fetch(`/api/khub/maps/${MAP_IDS[mapKey]}/toc`);
+    allTopics = flattenToc(JSON.parse(tocJson));
   }
 
-  console.log(`Fetching posture + runtime TOCs for delta (${delta.fetch.length} topic(s))...`);
-  const [postureTocJson, runtimeTocJson] = await Promise.all([
-    fetch(`/api/khub/maps/${MAP_IDS.posture}/toc`),
-    fetch(`/api/khub/maps/${MAP_IDS.runtime}/toc`),
-  ]);
-  const postureToc = flattenToc(JSON.parse(postureTocJson));
-  const runtimeToc = flattenToc(JSON.parse(runtimeTocJson));
-
-  const runtimeIds = new Set(runtimeToc.map((e) => e.contentId));
-  const runtimeTitles = new Set(runtimeToc.map((e) => e.title));
   const fetchSet = new Set(delta.fetch);
-
-  const seen = new Set();
-  const topics = postureToc.filter((t) => {
-    if (!fetchSet.has(t.contentId)) return false;
-    if (runtimeIds.has(t.contentId) || runtimeTitles.has(t.title)) return false;
-    if (seen.has(t.contentId)) return false;
-    seen.add(t.contentId);
-    return true;
-  });
+  let topics = allTopics.filter((t) => fetchSet.has(t.contentId));
+  if (topicFilter) topics = topicFilter(topics);
 
   const skipped = delta.fetch.length - topics.length;
-  if (skipped > 0) console.log(`posture: ${skipped} delta ID(s) skipped (in runtime by id/title or missing)`);
+  if (skipped > 0) console.log(`${mapKey}: ${skipped} delta ID(s) skipped`);
 
-  await fetchTopicsBatch(topics, MAP_IDS.posture, outDir, "posture");
-  console.log(`posture supplement: ${topics.length} topic(s) saved to ${outDir}`);
+  await fetchTopicsBatch(topics, MAP_IDS[mapKey], outDir, sourceMap);
+  console.log(`${mapKey}: ${topics.length} topic(s) saved to ${outDir}`);
 }
 
 async function fetchCloudMaps(targets) {
@@ -340,17 +321,10 @@ async function fetchCloudMaps(targets) {
 
     console.log("Fetching Runtime TOC...");
     const tocJson = await fetch(`/api/khub/maps/${MAP_IDS.runtime}/toc`);
-    const toc = JSON.parse(tocJson);
-    const topics = flattenToc(toc);
+    const topics = flattenToc(JSON.parse(tocJson));
     console.log(`Found ${topics.length} Runtime topics. Fetching content...\n`);
 
-    for (let i = 0; i < topics.length; i += CONCURRENCY) {
-      const batch = topics.slice(i, i + CONCURRENCY);
-      await Promise.all(
-        batch.map((topic, j) => fetchTopic(topic, i + j, topics.length, MAP_IDS.runtime, runtimeDir))
-      );
-      if (i + CONCURRENCY < topics.length) await sleep(DELAY_MS);
-    }
+    await fetchTopicsBatch(topics, MAP_IDS.runtime, runtimeDir);
     console.log(`\nRuntime: ${topics.length} topics saved to ${runtimeDir}`);
   }
 
@@ -366,66 +340,49 @@ async function fetchCloudMaps(targets) {
     const postureToc = flattenToc(JSON.parse(postureTocJson));
     const runtimeToc = flattenToc(JSON.parse(runtimeTocJson));
 
-    const runtimeIds = new Set(runtimeToc.map((e) => e.contentId));
-    const runtimeTitles = new Set(runtimeToc.map((e) => e.title));
-    const postureUnique = postureToc.filter(
-      (e) => !runtimeIds.has(e.contentId) && !runtimeTitles.has(e.title)
-    );
-    const seen = new Set();
-    const deduped = postureUnique.filter((e) => {
-      if (seen.has(e.contentId)) return false;
-      seen.add(e.contentId);
-      return true;
-    });
-
+    const deduped = postureSupplementFilter(runtimeToc)(postureToc);
     if (deduped.length === 0) {
       console.log("No Posture-unique topics to fetch.");
     } else {
-      const existingFiles = fs.readdirSync(postureDir).filter((f) => f.endsWith(".md") && !f.endsWith("-combined.md"));
-      const startIndex = existingFiles.length;
-
       console.log(`Found ${deduped.length} Posture-unique topics. Fetching...\n`);
-      for (let i = 0; i < deduped.length; i += CONCURRENCY) {
-        const batch = deduped.slice(i, i + CONCURRENCY);
-        await Promise.all(
-          batch.map((topic, j) =>
-            fetchTopic(topic, startIndex + i + j, startIndex + deduped.length, MAP_IDS.posture, postureDir, "posture")
-          )
-        );
-        if (i + CONCURRENCY < deduped.length) await sleep(DELAY_MS);
-      }
+      await fetchTopicsBatch(deduped, MAP_IDS.posture, postureDir, "posture");
       console.log(`\nPosture supplement: ${deduped.length} topics saved to ${postureDir}`);
     }
   }
-}
-
-function parseDeltaFlag() {
-  const idx = process.argv.indexOf("--delta");
-  if (idx === -1 || idx + 1 >= process.argv.length) return null;
-  return process.argv[idx + 1];
 }
 
 async function main() {
   const targets = resolveTargetMaps();
   fs.mkdirSync(OUT_DIR, { recursive: true });
 
-  const deltaPath = parseDeltaFlag();
+  const deltaPath = parseStringFlag("--delta");
   const deltas = deltaPath ? JSON.parse(fs.readFileSync(deltaPath, "utf-8")) : null;
 
-  const cloudMaps = ["appsec", "posture", "runtime"];
-  const cloudTargets = targets.filter((t) => cloudMaps.includes(t));
-  const simpleTargets = targets.filter((t) => !cloudMaps.includes(t));
+  const cloudTargets = targets.filter((t) => PRODUCTS.cloud.includes(t));
+  const simpleTargets = targets.filter((t) => !PRODUCTS.cloud.includes(t));
 
   if (deltas) {
+    const runtimeNeedsToc =
+      (deltas.runtime && !deltas.runtime.initial && deltas.runtime.fetch?.length > 0) ||
+      (deltas.posture && !deltas.posture.initial && deltas.posture.fetch?.length > 0);
+    let runtimeToc = null;
+    if (runtimeNeedsToc) {
+      console.log("Fetching runtime TOC (shared)...");
+      runtimeToc = flattenToc(JSON.parse(await fetch(`/api/khub/maps/${MAP_IDS.runtime}/toc`)));
+    }
+
     if (cloudTargets.includes("runtime")) {
       const d = deltas.runtime;
       if (d?.initial) await fetchSimpleMap("runtime");
-      else if (d) await fetchSimpleMapDelta("runtime", d);
+      else if (d) await fetchSimpleMapDelta("runtime", d, { tocTopics: runtimeToc });
     }
     if (cloudTargets.includes("posture")) {
       const d = deltas.posture;
       if (d?.initial) await fetchCloudMaps(["posture"]);
-      else if (d) await fetchPostureSupplementDelta(d);
+      else if (d) await fetchSimpleMapDelta("posture", d, {
+        sourceMap: "posture",
+        topicFilter: postureSupplementFilter(runtimeToc),
+      });
     }
     for (const key of simpleTargets) {
       const d = deltas[key];
