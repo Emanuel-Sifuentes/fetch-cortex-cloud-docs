@@ -1,4 +1,6 @@
 const { execSync } = require("child_process");
+const fs = require("fs");
+const os = require("os");
 const path = require("path");
 const { MAP_IDS, PRODUCTS, VALID_PRODUCTS, parseProductFlag } = require("./map_config.js");
 const { fetchMapMeta, fetchMapToc, batchFetchTopicTimestamps, readSnapshot, writeSnapshot, SNAPSHOT_VERSION } = require("./snapshot.js");
@@ -100,17 +102,17 @@ async function checkTopicTimestamps(mapId, topicsToCheck, snapshotTopics) {
   const { timestamps: freshTimestamps, errors } = await batchFetchTopicTimestamps(mapId, topicsToCheck);
   const erroredIds = new Set(errors.map((e) => e.contentId));
   const snapshotTimestamps = new Map(snapshotTopics.map((t) => [t.contentId, t.lastTechChangeTimestamp]));
-  let updatedCount = 0;
+  const updatedIds = [];
   for (const topic of topicsToCheck) {
     if (erroredIds.has(topic.contentId)) continue;
     if (!snapshotTimestamps.has(topic.contentId)) continue;
     const old = snapshotTimestamps.get(topic.contentId);
     const fresh = freshTimestamps[topic.contentId];
     if (!old || old !== fresh) {
-      updatedCount++;
+      updatedIds.push(topic.contentId);
     }
   }
-  return { updatedCount, freshTimestamps, topicErrors: errors };
+  return { updatedIds, freshTimestamps, topicErrors: errors };
 }
 
 async function checkProduct(product, snapshot) {
@@ -142,7 +144,7 @@ async function checkProduct(product, snapshot) {
 
       const topicsToCheck = newTopics ?? snapshotTopics;
       console.log(`  ${mapName}: checking ${topicsToCheck.length} topics for updates...`);
-      const { updatedCount, freshTimestamps, topicErrors } = await checkTopicTimestamps(mapId, topicsToCheck, snapshotTopics);
+      const { updatedIds, freshTimestamps, topicErrors } = await checkTopicTimestamps(mapId, topicsToCheck, snapshotTopics);
 
       const removedErrors = topicErrors.filter((e) => e.statusCode === 404);
       const transientErrors = topicErrors.filter((e) => e.statusCode !== 404);
@@ -154,14 +156,18 @@ async function checkProduct(product, snapshot) {
         console.error(`  ${mapName}: topic ${err.contentId} — ${err.message} (will refetch)`);
       }
 
-      const mapChanged = republished || updatedCount > 0 || transientErrors.length > 0;
+      const mapChanged = republished || updatedIds.length > 0 || transientErrors.length > 0;
+      const fetchIds = [...diff.added, ...updatedIds, ...transientErrors.map((e) => e.contentId)];
+      const removeIds = [...diff.removed, ...removedErrors.map((e) => e.contentId)];
+
       result.maps[mapName] = {
         republished,
         added: diff.added.length,
         removed: diff.removed.length,
         reordered: diff.reordered,
-        topicsUpdated: updatedCount,
+        topicsUpdated: updatedIds.length,
         staleTopics: transientErrors.length,
+        delta: { fetch: fetchIds, remove: removeIds },
       };
 
       if (mapChanged) {
@@ -237,14 +243,30 @@ async function main() {
 
     for (const product of changed) {
       console.log(`\n=== Re-fetching ${product} ===\n`);
+
+      const productData = report.products[product];
+      const delta = {};
+      for (const [mapName, mapData] of Object.entries(productData.maps)) {
+        if (mapData.needsInitialFetch) {
+          delta[mapName] = { initial: true };
+        } else if (mapData.delta && (mapData.delta.fetch.length > 0 || mapData.delta.remove.length > 0)) {
+          delta[mapName] = mapData.delta;
+        }
+      }
+
+      const deltaPath = path.join(os.tmpdir(), `cortex-delta-${product}.json`);
+      fs.writeFileSync(deltaPath, JSON.stringify(delta));
+
       try {
-        execSync(`npm run fetch:cortex:${product} && npm run fix:cortex:${product} && npm run snapshot:cortex:${product}`, {
+        execSync(`node scripts/fetch_fluidtopics.js --product ${product} --delta "${deltaPath}" && npm run fix:cortex:${product} && npm run snapshot:cortex:${product}`, {
           cwd: path.join(__dirname, ".."),
           stdio: "inherit",
         });
       } catch (err) {
         console.error(`FAILED: re-fetch for ${product}`);
         hasErrors = true;
+      } finally {
+        try { fs.unlinkSync(deltaPath); } catch {}
       }
     }
   }

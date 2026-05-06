@@ -229,6 +229,32 @@ function outDirForMap(mapKey) {
   return path.join(OUT_DIR, mapKey);
 }
 
+function applyDeltaRemovals(outDir, removeIds) {
+  if (!removeIds || removeIds.length === 0) return 0;
+  let count = 0;
+  const files = fs.readdirSync(outDir);
+  for (const cid of removeIds) {
+    const suffix = `--${cid}.md`;
+    for (const f of files) {
+      if (f.endsWith(suffix)) {
+        fs.unlinkSync(path.join(outDir, f));
+        count++;
+      }
+    }
+  }
+  return count;
+}
+
+async function fetchTopicsBatch(topics, mapId, outDir, sourceMap) {
+  for (let i = 0; i < topics.length; i += CONCURRENCY) {
+    const batch = topics.slice(i, i + CONCURRENCY);
+    await Promise.all(
+      batch.map((topic, j) => fetchTopic(topic, i + j, topics.length, mapId, outDir, sourceMap))
+    );
+    if (i + CONCURRENCY < topics.length) await sleep(DELAY_MS);
+  }
+}
+
 async function fetchSimpleMap(mapKey) {
   const outDir = outDirForMap(mapKey);
   fs.mkdirSync(outDir, { recursive: true });
@@ -239,14 +265,72 @@ async function fetchSimpleMap(mapKey) {
   const topics = flattenToc(toc);
   console.log(`Found ${topics.length} ${mapKey} topics. Fetching content...\n`);
 
-  for (let i = 0; i < topics.length; i += CONCURRENCY) {
-    const batch = topics.slice(i, i + CONCURRENCY);
-    await Promise.all(
-      batch.map((topic, j) => fetchTopic(topic, i + j, topics.length, MAP_IDS[mapKey], outDir))
-    );
-    if (i + CONCURRENCY < topics.length) await sleep(DELAY_MS);
-  }
+  await fetchTopicsBatch(topics, MAP_IDS[mapKey], outDir);
   console.log(`\n${mapKey}: ${topics.length} topics saved to ${outDir}`);
+}
+
+async function fetchSimpleMapDelta(mapKey, delta) {
+  const outDir = outDirForMap(mapKey);
+  fs.mkdirSync(outDir, { recursive: true });
+
+  const removed = applyDeltaRemovals(outDir, delta.remove);
+  if (removed > 0) console.log(`${mapKey}: removed ${removed} file(s)`);
+
+  if (!delta.fetch || delta.fetch.length === 0) {
+    console.log(`${mapKey}: no topics to fetch`);
+    return;
+  }
+
+  console.log(`Fetching ${mapKey} TOC for delta (${delta.fetch.length} topic(s))...`);
+  const tocJson = await fetch(`/api/khub/maps/${MAP_IDS[mapKey]}/toc`);
+  const allTopics = flattenToc(JSON.parse(tocJson));
+  const fetchSet = new Set(delta.fetch);
+  const topics = allTopics.filter((t) => fetchSet.has(t.contentId));
+  const missing = delta.fetch.length - topics.length;
+  if (missing > 0) console.log(`${mapKey}: ${missing} delta ID(s) not in TOC, skipping`);
+
+  await fetchTopicsBatch(topics, MAP_IDS[mapKey], outDir);
+  console.log(`${mapKey}: ${topics.length} topic(s) saved to ${outDir}`);
+}
+
+async function fetchPostureSupplementDelta(delta) {
+  const outDir = outDirForMap("posture");
+  fs.mkdirSync(outDir, { recursive: true });
+
+  const removed = applyDeltaRemovals(outDir, delta.remove);
+  if (removed > 0) console.log(`posture: removed ${removed} file(s)`);
+
+  if (!delta.fetch || delta.fetch.length === 0) {
+    console.log("posture: no topics to fetch");
+    return;
+  }
+
+  console.log(`Fetching posture + runtime TOCs for delta (${delta.fetch.length} topic(s))...`);
+  const [postureTocJson, runtimeTocJson] = await Promise.all([
+    fetch(`/api/khub/maps/${MAP_IDS.posture}/toc`),
+    fetch(`/api/khub/maps/${MAP_IDS.runtime}/toc`),
+  ]);
+  const postureToc = flattenToc(JSON.parse(postureTocJson));
+  const runtimeToc = flattenToc(JSON.parse(runtimeTocJson));
+
+  const runtimeIds = new Set(runtimeToc.map((e) => e.contentId));
+  const runtimeTitles = new Set(runtimeToc.map((e) => e.title));
+  const fetchSet = new Set(delta.fetch);
+
+  const seen = new Set();
+  const topics = postureToc.filter((t) => {
+    if (!fetchSet.has(t.contentId)) return false;
+    if (runtimeIds.has(t.contentId) || runtimeTitles.has(t.title)) return false;
+    if (seen.has(t.contentId)) return false;
+    seen.add(t.contentId);
+    return true;
+  });
+
+  const skipped = delta.fetch.length - topics.length;
+  if (skipped > 0) console.log(`posture: ${skipped} delta ID(s) skipped (in runtime by id/title or missing)`);
+
+  await fetchTopicsBatch(topics, MAP_IDS.posture, outDir, "posture");
+  console.log(`posture supplement: ${topics.length} topic(s) saved to ${outDir}`);
 }
 
 async function fetchCloudMaps(targets) {
@@ -315,20 +399,46 @@ async function fetchCloudMaps(targets) {
   }
 }
 
+function parseDeltaFlag() {
+  const idx = process.argv.indexOf("--delta");
+  if (idx === -1 || idx + 1 >= process.argv.length) return null;
+  return process.argv[idx + 1];
+}
+
 async function main() {
   const targets = resolveTargetMaps();
   fs.mkdirSync(OUT_DIR, { recursive: true });
+
+  const deltaPath = parseDeltaFlag();
+  const deltas = deltaPath ? JSON.parse(fs.readFileSync(deltaPath, "utf-8")) : null;
 
   const cloudMaps = ["appsec", "posture", "runtime"];
   const cloudTargets = targets.filter((t) => cloudMaps.includes(t));
   const simpleTargets = targets.filter((t) => !cloudMaps.includes(t));
 
-  if (cloudTargets.length > 0) {
-    await fetchCloudMaps(cloudTargets);
-  }
-
-  for (const key of simpleTargets) {
-    await fetchSimpleMap(key);
+  if (deltas) {
+    if (cloudTargets.includes("runtime")) {
+      const d = deltas.runtime;
+      if (d?.initial) await fetchSimpleMap("runtime");
+      else if (d) await fetchSimpleMapDelta("runtime", d);
+    }
+    if (cloudTargets.includes("posture")) {
+      const d = deltas.posture;
+      if (d?.initial) await fetchCloudMaps(["posture"]);
+      else if (d) await fetchPostureSupplementDelta(d);
+    }
+    for (const key of simpleTargets) {
+      const d = deltas[key];
+      if (d?.initial) await fetchSimpleMap(key);
+      else if (d) await fetchSimpleMapDelta(key, d);
+    }
+  } else {
+    if (cloudTargets.length > 0) {
+      await fetchCloudMaps(cloudTargets);
+    }
+    for (const key of simpleTargets) {
+      await fetchSimpleMap(key);
+    }
   }
 }
 
