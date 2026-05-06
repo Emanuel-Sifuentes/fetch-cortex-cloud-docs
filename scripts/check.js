@@ -124,6 +124,19 @@ async function checkProduct(product, snapshot) {
     const mapId = MAP_IDS[mapName];
     try {
       if (!snapshot.maps[mapName]) {
+        console.log(`  ${mapName}: not in snapshot, building initial snapshot data...`);
+        const meta = await fetchMapMeta(mapId);
+        const newTopics = await fetchMapToc(mapId);
+        const { timestamps: freshTimestamps } = await batchFetchTopicTimestamps(mapId, newTopics);
+        freshData[mapName] = {
+          mapId,
+          lastPublication: meta.lastPublication,
+          topicCount: newTopics.length,
+          topics: newTopics.map((t) => ({
+            ...t,
+            lastTechChangeTimestamp: freshTimestamps[t.contentId] ?? null,
+          })),
+        };
         result.maps[mapName] = { needsInitialFetch: true };
         result.changed = true;
         continue;
@@ -196,7 +209,21 @@ async function main() {
   const { product: targetProduct, apply, exitCode, format } = parseFlags();
   const products = targetProduct ? [targetProduct] : VALID_PRODUCTS;
   const report = { timestamp: new Date().toISOString(), products: {} };
+  const freshDataByProduct = new Map();
   let hasErrors = false;
+
+  const writeMergedSnapshot = (product, snapshot, freshData) => {
+    const updatedMaps = {};
+    for (const mapName of PRODUCTS[product]) {
+      updatedMaps[mapName] = freshData[mapName] || snapshot.maps[mapName];
+    }
+    writeSnapshot(product, {
+      version: SNAPSHOT_VERSION,
+      product,
+      lastChecked: new Date().toISOString(),
+      maps: updatedMaps,
+    });
+  };
 
   for (const product of products) {
     const snapshot = readSnapshot(product);
@@ -208,21 +235,13 @@ async function main() {
 
     const { result, freshData } = await checkProduct(product, snapshot);
     report.products[product] = result;
+    freshDataByProduct.set(product, { snapshot, freshData });
 
     if (Object.values(result.maps).some((m) => m.error)) hasErrors = true;
 
     if (!apply && Object.keys(freshData).length > 0) {
       try {
-        const updatedMaps = {};
-        for (const mapName of PRODUCTS[product]) {
-          updatedMaps[mapName] = freshData[mapName] || snapshot.maps[mapName];
-        }
-        writeSnapshot(product, {
-          version: SNAPSHOT_VERSION,
-          product,
-          lastChecked: new Date().toISOString(),
-          maps: updatedMaps,
-        });
+        writeMergedSnapshot(product, snapshot, freshData);
       } catch (err) {
         console.error(`WARNING: snapshot update failed for ${product}: ${err.message}`);
         hasErrors = true;
@@ -258,10 +277,19 @@ async function main() {
       fs.writeFileSync(deltaPath, JSON.stringify(delta));
 
       try {
-        execSync(`node scripts/fetch_fluidtopics.js --product ${product} --delta "${deltaPath}" && npm run fix:cortex:${product} && npm run snapshot:cortex:${product}`, {
+        execSync(`node scripts/fetch_fluidtopics.js --product ${product} --delta "${deltaPath}" && npm run fix:cortex:${product}`, {
           cwd: path.join(__dirname, ".."),
           stdio: "inherit",
         });
+        const cached = freshDataByProduct.get(product);
+        if (cached && Object.keys(cached.freshData).length > 0) {
+          try {
+            writeMergedSnapshot(product, cached.snapshot, cached.freshData);
+          } catch (err) {
+            console.error(`WARNING: snapshot update failed for ${product}: ${err.message}`);
+            hasErrors = true;
+          }
+        }
       } catch (err) {
         console.error(`FAILED: re-fetch for ${product}`);
         hasErrors = true;
