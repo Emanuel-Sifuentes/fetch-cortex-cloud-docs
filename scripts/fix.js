@@ -29,7 +29,7 @@ for (const dir of dirs) {
     continue;
   }
 
-  const files = fs.readdirSync(dir).filter((f) => /^\d+-/.test(f) && f.endsWith(".md"));
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".md") && !f.endsWith("-combined.md"));
   if (files.length === 0) {
     console.log(`Skipping ${path.basename(dir)}/ (no source files)`);
     continue;

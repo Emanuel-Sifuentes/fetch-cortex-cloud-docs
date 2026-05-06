@@ -217,7 +217,7 @@ async function fetchTopic(topic, index, total, mapId, outDir, sourceMap) {
 
     md = header + md;
 
-    const filename = `${String(index + 1).padStart(4, "0")}-${sanitizeFilename(topic.title)}.md`;
+    const filename = `${sanitizeFilename(topic.title)}--${topic.contentId}.md`;
     fs.writeFileSync(path.join(outDir, filename), md, "utf-8");
     console.log(`[${index + 1}/${total}] ${filename}`);
   } catch (err) {
@@ -297,7 +297,7 @@ async function fetchCloudMaps(targets) {
     if (deduped.length === 0) {
       console.log("No Posture-unique topics to fetch.");
     } else {
-      const existingFiles = fs.readdirSync(postureDir).filter((f) => /^\d+-/.test(f));
+      const existingFiles = fs.readdirSync(postureDir).filter((f) => f.endsWith(".md") && !f.endsWith("-combined.md"));
       const startIndex = existingFiles.length;
 
       console.log(`Found ${deduped.length} Posture-unique topics. Fetching...\n`);

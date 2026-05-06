@@ -215,7 +215,7 @@ async function main() {
       if (!fs.existsSync(dir)) return;
       const files = fs
         .readdirSync(dir)
-        .filter((f) => /^\d+-/.test(f) && f.endsWith(".md"))
+        .filter((f) => f.endsWith(".md") && !f.endsWith("-combined.md"))
         .sort();
       for (const f of files) {
         const content = fs.readFileSync(path.join(dir, f), "utf-8");
