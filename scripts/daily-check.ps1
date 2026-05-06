@@ -41,48 +41,29 @@ try {
 
 Set-Location $ProjectDir
 
-# Phase 1: Check for changes
-$checkOutput = & npm run check:cortex -- --format text --exit-code 2>&1
+# Single check+apply pass: --apply does the fetch when changes are found,
+# --exit-code surfaces the result (0 = no changes, 2 = changes applied, 1 = error).
+$output = & npm run check:cortex -- --apply --exit-code --format text 2>&1
 $exitCode = $LASTEXITCODE
 
-"[$timestamp] Check output:" | Add-Content $LogFile
-$checkOutput | Add-Content $LogFile
-$checkOutput | Write-Host
+$output | Add-Content $LogFile
+$output | Write-Host
 
-if ($exitCode -eq 2) {
-    "[$timestamp] Changes detected. Running --apply..." | Tee-Object -FilePath $LogFile -Append
+$doneTimestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
-    try {
-        Send-Toast "Cortex Docs Check" "Changes detected! Re-fetching..."
-    } catch {}
-
-    $applyOutput = & npm run check:cortex -- --apply 2>&1
-    $applyExit = $LASTEXITCODE
-
-    $applyOutput | Add-Content $LogFile
-    $applyOutput | Write-Host
-
-    $doneTimestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-
-    if ($applyExit -eq 0) {
-        "[$doneTimestamp] Apply completed successfully." | Tee-Object -FilePath $LogFile -Append
-        try {
-            Send-Toast "Cortex Docs Check" "Re-fetch complete. Documentation updated."
-        } catch {}
-    } else {
-        "[$doneTimestamp] Apply failed with exit code $applyExit." | Tee-Object -FilePath $LogFile -Append
-        try {
-            Send-Toast "Cortex Docs Check" "Re-fetch FAILED (exit code $applyExit). Check logs."
-        } catch {}
-    }
-} elseif ($exitCode -eq 0) {
-    "[$timestamp] No changes detected. All up to date." | Tee-Object -FilePath $LogFile -Append
+if ($exitCode -eq 0) {
+    "[$doneTimestamp] No changes detected. All up to date." | Tee-Object -FilePath $LogFile -Append
     try {
         Send-Toast "Cortex Docs Check" "No changes detected. All up to date."
     } catch {}
-} else {
-    "[$timestamp] Check failed with exit code $exitCode." | Tee-Object -FilePath $LogFile -Append
+} elseif ($exitCode -eq 2) {
+    "[$doneTimestamp] Changes detected and applied successfully." | Tee-Object -FilePath $LogFile -Append
     try {
-        Send-Toast "Cortex Docs Check" "Check FAILED (exit code $exitCode). Check logs."
+        Send-Toast "Cortex Docs Check" "Re-fetch complete. Documentation updated."
+    } catch {}
+} else {
+    "[$doneTimestamp] Failed with exit code $exitCode." | Tee-Object -FilePath $LogFile -Append
+    try {
+        Send-Toast "Cortex Docs Check" "FAILED (exit code $exitCode). Check logs."
     } catch {}
 }
