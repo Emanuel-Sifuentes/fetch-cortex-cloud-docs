@@ -103,16 +103,18 @@ async function checkTopicTimestamps(mapId, topicsToCheck, snapshotTopics) {
   const erroredIds = new Set(errors.map((e) => e.contentId));
   const snapshotTimestamps = new Map(snapshotTopics.map((t) => [t.contentId, t.lastTechChangeTimestamp]));
   const updatedIds = [];
+  let checkedCount = 0;
   for (const topic of topicsToCheck) {
     if (erroredIds.has(topic.contentId)) continue;
     if (!snapshotTimestamps.has(topic.contentId)) continue;
+    checkedCount++;
     const old = snapshotTimestamps.get(topic.contentId);
     const fresh = freshTimestamps[topic.contentId];
     if (!old || old !== fresh) {
       updatedIds.push(topic.contentId);
     }
   }
-  return { updatedIds, freshTimestamps, topicErrors: errors };
+  return { updatedIds, freshTimestamps, topicErrors: errors, checkedCount };
 }
 
 async function checkProduct(product, snapshot) {
@@ -171,10 +173,10 @@ async function checkProduct(product, snapshot) {
 
       const topicsToCheck = newTopics ?? snapshotTopics;
       console.log(`  ${mapName}: checking ${topicsToCheck.length} topics for updates...`);
-      const { updatedIds, freshTimestamps, topicErrors } = await checkTopicTimestamps(mapId, topicsToCheck, snapshotTopics);
+      const { updatedIds, freshTimestamps, topicErrors, checkedCount } = await checkTopicTimestamps(mapId, topicsToCheck, snapshotTopics);
 
-      if (updatedIds.length > 0 && updatedIds.length === topicsToCheck.length) {
-        console.log(`  ${mapName}: bulk republish detected (${updatedIds.length}/${topicsToCheck.length} topics updated — likely an upstream republish, not granular changes)`);
+      if (updatedIds.length > 0 && updatedIds.length === checkedCount) {
+        console.log(`  ${mapName}: bulk republish detected (${updatedIds.length}/${checkedCount} topics updated — likely an upstream republish, not granular changes)`);
       }
 
       const removedErrors = topicErrors.filter((e) => e.statusCode === 404);
