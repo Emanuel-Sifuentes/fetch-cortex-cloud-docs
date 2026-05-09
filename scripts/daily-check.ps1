@@ -2,7 +2,7 @@
 # Runs npm run check:cortex, and if changes are detected, re-fetches with --apply
 
 $ProjectDir = "C:\Users\emanu\Repos\fetch-cortex-cloud-docs"
-$LogFile = Join-Path $ProjectDir "logs\daily-check.log"
+$LogFile = Join-Path $ProjectDir "logs\daily-check_$(Get-Date -Format 'yyyy-MM-dd_HHmmss').log"
 
 # Ensure log directory exists
 New-Item -ItemType Directory -Force -Path (Split-Path $LogFile) | Out-Null
