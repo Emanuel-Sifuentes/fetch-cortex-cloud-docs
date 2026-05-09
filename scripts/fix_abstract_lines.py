@@ -19,8 +19,8 @@ def main():
 
     print("=== Step 1: Remove standalone 'Abstract' lines from individual files ===")
 
-    pattern = os.path.join(sources_dir, "[0-9]*.md")
-    files = sorted(glob.glob(pattern))
+    pattern = os.path.join(sources_dir, "*.md")
+    files = sorted(f for f in glob.glob(pattern) if not f.endswith("-combined.md"))
     count = 0
     modified_files = []
 

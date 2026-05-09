@@ -1,6 +1,6 @@
 const https = require("https");
 
-const MAX_RETRIES = 5;
+const MAX_RETRIES = 7;
 const BASE_BACKOFF_MS = 1000;
 const MAX_BACKOFF_MS = 60000;
 

@@ -25,7 +25,7 @@ function flattenToc(nodes, depth = 0) {
 async function fetchMapMeta(mapId) {
   const body = await httpGet(`/api/khub/maps/${mapId}`);
   const data = JSON.parse(body);
-  return { lastPublication: data["ft:lastPublication"] };
+  return { lastPublication: data.lastPublication };
 }
 
 async function fetchMapToc(mapId) {

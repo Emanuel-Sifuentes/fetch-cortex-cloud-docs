@@ -80,11 +80,11 @@ def main() -> None:
         print(f"Error: source directory not found: {source_dir}", file=sys.stderr)
         sys.exit(1)
 
-    pattern = os.path.join(source_dir, "[0-9]*.md")
-    files = sorted(glob.glob(pattern))
+    pattern = os.path.join(source_dir, "*.md")
+    files = sorted(f for f in glob.glob(pattern) if not f.endswith("-combined.md"))
 
     if not files:
-        print(f"No [0-9]*.md files found in {source_dir}")
+        print(f"No .md files found in {source_dir}")
         sys.exit(0)
 
     total_files = 0

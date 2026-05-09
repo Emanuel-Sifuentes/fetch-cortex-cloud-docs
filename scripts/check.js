@@ -156,9 +156,26 @@ async function checkProduct(product, snapshot) {
         diff = diffTopics(snapshotTopics, newTopics);
       }
 
+      if (!republished && meta.lastPublication) {
+        console.log(`  ${mapName}: lastPublication unchanged, skipping per-topic check`);
+        result.maps[mapName] = {
+          republished: false,
+          added: 0,
+          removed: 0,
+          reordered: false,
+          topicsUpdated: 0,
+          staleTopics: 0,
+        };
+        continue;
+      }
+
       const topicsToCheck = newTopics ?? snapshotTopics;
       console.log(`  ${mapName}: checking ${topicsToCheck.length} topics for updates...`);
       const { updatedIds, freshTimestamps, topicErrors } = await checkTopicTimestamps(mapId, topicsToCheck, snapshotTopics);
+
+      if (updatedIds.length > 0 && updatedIds.length === topicsToCheck.length) {
+        console.log(`  ${mapName}: bulk republish detected (${updatedIds.length}/${topicsToCheck.length} topics updated — likely an upstream republish, not granular changes)`);
+      }
 
       const removedErrors = topicErrors.filter((e) => e.statusCode === 404);
       const transientErrors = topicErrors.filter((e) => e.statusCode !== 404);

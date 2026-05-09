@@ -7,8 +7,9 @@ const { httpGetWithRetry, sleep } = require("./http_retry.js");
 
 const BASE = "https://docs-cortex.paloaltonetworks.com";
 const OUT_DIR = path.join(__dirname, "..", "sources_fetch");
-const CONCURRENCY = 10;
+const CONCURRENCY = 5;
 const DELAY_MS = 200;
+const DRY_RUN_RECONCILE = process.argv.includes("--dry-run-reconcile");
 
 const turndown = new TurndownService({
   headingStyle: "atx",
@@ -229,6 +230,27 @@ function outDirForMap(mapKey) {
   return path.join(OUT_DIR, mapKey);
 }
 
+function reconcileOrphans(mapDir, validContentIds) {
+  if (validContentIds.size === 0) {
+    console.log(`reconcile: skipping ${mapDir} (empty TOC)`);
+    return 0;
+  }
+  const orphans = fs.readdirSync(mapDir)
+    .filter((f) => f.endsWith(".md") && f.includes("--"))
+    .map((f) => ({ file: f, contentId: f.split("--").pop().replace(/\.md$/, "") }))
+    .filter(({ contentId }) => contentId && !validContentIds.has(contentId));
+
+  for (const { file } of orphans) {
+    if (DRY_RUN_RECONCILE) console.log(`reconcile: would delete ${file}`);
+    else fs.unlinkSync(path.join(mapDir, file));
+  }
+  if (orphans.length > 0 || DRY_RUN_RECONCILE) {
+    const verb = DRY_RUN_RECONCILE ? "would delete" : "reconciled";
+    console.log(`${verb} ${orphans.length} orphan(s) in ${mapDir}`);
+  }
+  return orphans.length;
+}
+
 function applyDeltaRemovals(outDir, removeIds) {
   if (!removeIds || removeIds.length === 0) return 0;
   let count = 0;
@@ -267,6 +289,8 @@ async function fetchSimpleMap(mapKey) {
 
   await fetchTopicsBatch(topics, MAP_IDS[mapKey], outDir);
   console.log(`\n${mapKey}: ${topics.length} topics saved to ${outDir}`);
+
+  reconcileOrphans(outDir, new Set(topics.map((t) => t.contentId)));
 }
 
 function postureSupplementFilter(runtimeToc) {
@@ -312,6 +336,9 @@ async function fetchSimpleMapDelta(mapKey, delta, options = {}) {
 
   await fetchTopicsBatch(topics, MAP_IDS[mapKey], outDir, sourceMap);
   console.log(`${mapKey}: ${topics.length} topic(s) saved to ${outDir}`);
+
+  const validTopics = topicFilter ? topicFilter(allTopics) : allTopics;
+  reconcileOrphans(outDir, new Set(validTopics.map((t) => t.contentId)));
 }
 
 async function fetchCloudMaps(targets) {
@@ -326,6 +353,8 @@ async function fetchCloudMaps(targets) {
 
     await fetchTopicsBatch(topics, MAP_IDS.runtime, runtimeDir);
     console.log(`\nRuntime: ${topics.length} topics saved to ${runtimeDir}`);
+
+    reconcileOrphans(runtimeDir, new Set(topics.map((t) => t.contentId)));
   }
 
   if (targets.includes("posture")) {
@@ -348,6 +377,8 @@ async function fetchCloudMaps(targets) {
       await fetchTopicsBatch(deduped, MAP_IDS.posture, postureDir, "posture");
       console.log(`\nPosture supplement: ${deduped.length} topics saved to ${postureDir}`);
     }
+
+    reconcileOrphans(postureDir, new Set(deduped.map((t) => t.contentId)));
   }
 }
 
